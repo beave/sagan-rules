@@ -1,0 +1,52 @@
+# Sagan bash.rules
+# Copyright (c) 2009-2010, Softwink, Inc.
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+# 
+# The following rules require bash to be compiled with syslog history support.  With out this,  there is no way
+# for sagan to "see" what users type.  For more information,  see: 
+# 
+# http://blog.rootshell.be/2009/02/28/bash-history-to-syslog/
+#
+# Gentoo users can rebuild bash with the "logger" USE flag.
+#
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] ./a.out execution attempt"; content:"./a.out"; content:"HISTORY";classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000000; program: "bash|-bash"; sid:5000000; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] gcc execution"; content:"gcc "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000001; program: "bash|-bash"; sid:5000001; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] telnet execution"; content:"telnet "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000002; program: "bash|-bash"; sid:5000002; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] nmap execution"; content:"nmap "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000003; program: "bash|-bash"; sid:5000003; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /etc/passwd access"; content:"/etc/passwd"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000004; program: "bash|-bash"; sid:5000004; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /etc/shadow access"; content:"/etc/shadow"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000005; program: "bash|-bash"; sid:5000005; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] make execution"; content:"make"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000006; program: "bash|-bash"; sid:5000006; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] make execution"; content:"make "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000007; program: "bash|-bash"; sid:5000007; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /bin/sh command line call"; content:"/bin/sh"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000008; program: "bash|-bash"; sid:5000008; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /bin/bash command line call"; content:"/bin/bash"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000009; program: "bash|-bash"; sid:5000009; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] HISTORY=/dev/null"; content:"HISTORY=/dev/null"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000010; program: "bash|-bash"; sid:5000010; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] .bash_history access"; content:".bash_history"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000011; program: "bash|-bash"; sid:5000011; level: info; rev:2;) 
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /tmp/sh access"; content:"/tmp/sh"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000012; program: "bash|-bash"; sid:5000012; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] suidperl access"; content:"suidperl"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000013; program: "bash|-bash"; sid:5000013; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] histfile=/dev/null"; content:"histfile=/dev/null"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000014; program: "bash|-bash"; sid:5000014; level: info; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] iptables command access"; content:"iptables"; content: "HISTORY"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000385; program: "bash|-bash"; sid:5000385; level: info; rev:2;)
+

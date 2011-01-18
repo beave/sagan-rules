@@ -1,0 +1,35 @@
+# Sagan nginx.rules
+# Copyright (c) 2009-2010, Softwink, Inc.
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx error message"; pcre: "/^\S+ \S+ [error]/i"; classtype: program-error; program: nginx; reference: url,wiki.softwink.com/bin/view/Main/5000168; sid: 5000168; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx warning message"; pcre: "/^\S+ \S+ [warn]/i"; classtype: program-error; program: nginx; reference: url,wiki.softwink.com/bin/view/Main/5000169; sid:5000169; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx critical message"; pcre: "/^\S+ \S+ [crit]/i"; classtype: program-error; program: nginx; reference: url,wiki.softwink.com/bin/view/Main/5000170; sid:5000170; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx 404 error"; pcre: "/no such file or directory|is not found/i"; classtype: suspicious-filename-detect; program: nginx; reference: url,wiki.softwink.com/bin/view/Main/5000171; sid:5000171; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx Incomplete client request"; content: "Software caused connection abort"; classtype: suspicious-traffic; program: nginx; reference: url,wiki.softwink.com/bin/view/Main/5000172; sid:5000172; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx Initial 401 authentication request"; content: "no user/password was provided for basic authentication"; classtype: unsuccessful-user; program: nginx; reference: url,wiki.softwink.com/bin/view/Main/5000173; sid:5000173; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx Web authentication failed"; pcre: "/password mismatch, client|was not found in/i"; classtype: unsuccessful-user; program: nginx; reference: url,wiki.softwink.com/bin/view/Main/5000174; sid:5000174; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx Invalid URI, file name too long"; content: "File name too long"; classtype: suspicious-filename-detect; program: nginx; reference: url,wiki.softwink.com/bin/view/Main/5000175; sid:5000175; rev:1;)

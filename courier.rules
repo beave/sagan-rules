@@ -1,0 +1,32 @@
+# Sagan courier.rules
+# Copyright (c) 2009-2010, Softwink, Inc.
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Connection established"; content: "Connection,"; classtype: not-suspicious; program: courierlogger; reference: url,wiki.softwink.com/bin/view/Main/5000258; sid:5000258; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] IMAP/POP3 authentication failure"; content: "LOGIN FAILED,"; classtype: unsuccessful-user; program: courierlogger; reference: url,wiki.softwink.com/bin/view/Main/5000259; sid:5000259; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Logout/timeout"; pcre: "/LOGOUT|DISCONNECTED/"; classtype: not-suspicious; program: courierlogger; reference: url,wiki.softwink.com/bin/view/Main/5000260; sid:5000260; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] User login"; content: "LOGIN"; classtype: successful-user; program: courierlogger; reference: url,wiki.softwink.com/bin/view/Main/5000261; sid:5000261; rev:1;)
+

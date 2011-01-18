@@ -1,0 +1,43 @@
+# Sagan ossec.rules
+# Copyright (c) 2009-2010, Softwink, Inc.
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Agent started"; content: "Agent started"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000285; sid: 5000285; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Ossec started"; content: "Ossec started"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000287; sid: 5000287; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Agent disconnect"; content: "Agent disconnected"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000288; sid: 5000288; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Ignored common NTFS ADS entries"; pcre: "/Zone.Identifier|Exchsrvrr/Mailroot|vsi|encryptable/i"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000289; sid: 5000289; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Windows Audit"; content: "Windows Audit"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000290; sid: 5000290; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Windows Malware"; content: "Windows Malware"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000291; sid: 5000291; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Windows application monitor event"; content: "Application Found"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000292; sid: 5000292; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Ignoring rootcheck/syscheck scan messages"; pcre: "/^Starting rootcheck scan|^Ending rootcheck scan|^Starting syscheck scan|^Ending syscheck scan/i"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000293; sid: 5000293; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] System Audit"; content: "System Audit"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000294; sid: 5000294; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Windows Adware/Spyware application found"; pcre: "/Adware|Spyware/i"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000295; sid: 5000295; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Partition usage reached 100% [disk space monitor]"; content: "output"; content: "dh -h"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000296; sid: 5000296; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Ignoring external medias"; pcre: "/\/cdrom|\/media|usb|\/mount|floppy|dvd/"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000297; sid: 5000297; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Integrity checksum for agentless device changed"; content: "agentless"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000298; sid: 5000298; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Log file rotated"; content: "File rotated"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000299; sid: 5000299; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] File size reduced"; content: "File size reduced"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000300; sid: 5000300; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Microsoft event log cleared"; content: "Event log cleared"; classtype: system-event; program: ossec; reference: url,wiki.softwink.com/bin/view/Main/5000301; sid: 5000301; rev:1;)

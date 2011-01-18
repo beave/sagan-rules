@@ -1,0 +1,63 @@
+# Sagan snort.rules
+# Copyright (c) 2009-2010, Softwink, Inc.
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+# alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Snort syslog message"; program: snort; content: "Classification"; content: "Priority"; classtype: suspicious-command; reference: url,wiki.softwink.com/bin/view/Main/5000386; sid: 5000386; rev:1;)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Not Suspicious Traffic"; program: snort; content: "Classification: Not Suspicious Traffic"; classtype: not-suspicious; reference: url,wiki.softwink.com/bin/view/Main/5000976; sid: 5000976; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Unknown Traffic"; program: snort; content: "Classification: Unknown Traffic"; classtype: unknown; reference: url,wiki.softwink.com/bin/view/Main/5000977; sid: 5000977; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Bad Traffic"; program: snort; content: "Classification: Bad Traffic"; classtype: bad-unknown; reference: url,wiki.softwink.com/bin/view/Main/5000978; sid: 5000978; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted Information Leak"; program: snort; content: "Classification: Attempted Information Leak"; classtype: attempted-recon; reference: url,wiki.softwink.com/bin/view/Main/5000979; sid: 5000979; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Information Leak"; program: snort; content: "Classification: Information Leak"; classtype: successful-recon-limited; reference: url,wiki.softwink.com/bin/view/Main/5000980; sid: 5000980; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Large Scale Information Leak"; program: snort; content: "Classification: Large Scale Information Leak"; classtype: successful-recon-largescale; reference: url,wiki.softwink.com/bin/view/Main/5000981; sid: 5000981; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted Denial of Service"; program: snort; content: "Classification: Attempted Denial of Service"; classtype: attempted-dos; reference: url,wiki.softwink.com/bin/view/Main/5000982; sid: 5000982; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Denial of Service"; program: snort; content: "Classification: Denial of Service"; classtype: successful-dos; reference: url,wiki.softwink.com/bin/view/Main/5000983; sid: 5000983; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted User Privilege Gain"; program: snort; content: "Classification: Attempted User Privilege Gain"; classtype: attempted-user; reference: url,wiki.softwink.com/bin/view/Main/5000984; sid: 5000984; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Unsuccessful User Privilege Gain"; program: snort; content: "Classification: Unsuccessful User Privilege Gain"; classtype: unsuccessful-user; reference: url,wiki.softwink.com/bin/view/Main/5000985; sid: 5000985; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Successful User Privilege Gain"; program: snort; content: "Classification: Successful User Privilege Gain"; classtype: successful-user; reference: url,wiki.softwink.com/bin/view/Main/5000986; sid: 5000986; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted Administrator Privilege Gain"; program: snort; content: "Classification: Attempted Administrator Privilege Gain"; classtype: attempted-admin; reference: url,wiki.softwink.com/bin/view/Main/5000987; sid: 5000987; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Successful Administrator Privilege Gain"; program: snort; content: "Classification: Successful Administrator Privilege Gain"; classtype: successful-admin; reference: url,wiki.softwink.com/bin/view/Main/5000988; sid: 5000988; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Decode of an RPC Query"; program: snort; content: "Classification: Decode of an RPC Query"; classtype: rpc-portmap-decode; reference: url,wiki.softwink.com/bin/view/Main/5000989; sid: 5000989; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Executable code was detected"; program: snort; content: "Classification: Executable code was detected"; classtype: shellcode-detect; reference: url,wiki.softwink.com/bin/view/Main/5000990; sid: 5000990; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A suspicious string was detected"; program: snort; content: "Classification: A suspicious string was detected"; classtype: string-detect; reference: url,wiki.softwink.com/bin/view/Main/5000991; sid: 5000991; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A suspicious filename was detected"; program: snort; content: "Classification: A suspicious filename was detected"; classtype: suspicious-filename-detect; reference: url,wiki.softwink.com/bin/view/Main/5000992; sid: 5000992; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] An attempted login using a suspicious username was detected"; program: snort; content: "Classification: An attempted login using a suspicious username was detected"; classtype: suspicious-login; reference: url,wiki.softwink.com/bin/view/Main/5000993; sid: 5000993; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A system call was detected"; program: snort; content: "Classification: A system call was detected"; classtype: system-call-detect; reference: url,wiki.softwink.com/bin/view/Main/5000995; sid: 5000995; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A TCP connection was detected"; program: snort; content: "Classification: A TCP connection was detected"; classtype: tcp-connection; reference: url,wiki.softwink.com/bin/view/Main/5000996; sid: 5000996; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A Network Trojan was detected"; program: snort; content: "Classification: A Network Trojan was detected"; classtype: trojan-activity; reference: url,wiki.softwink.com/bin/view/Main/5000997; sid: 5000997; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A client was using an unusual port"; program: snort; content: "Classification: A client was using an unusual port"; classtype: unusual-client-port-connection; reference: url,wiki.softwink.com/bin/view/Main/5000998; sid: 5000998; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Detection of a Network Scan"; program: snort; content: "Classification: Detection of a Network Scan"; classtype: network-scan; reference: url,wiki.softwink.com/bin/view/Main/5000999; sid: 5000999; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Detection of a Denial of Service Attack"; program: snort; content: "Classification: Detection of a Denial of Service Attack"; classtype: denial-of-service; reference: url,wiki.softwink.com/bin/view/Main/5001000; sid: 5001000; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Detection of a non-standard protocol or event"; program: snort; content: "Classification: Detection of a non-standard protocol or event"; classtype: non-standard-protocol; reference: url,wiki.softwink.com/bin/view/Main/5001001; sid: 5001001; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Generic Protocol Command Decode"; program: snort; content: "Classification: Generic Protocol Command Decode"; classtype: protocol-command-decode; reference: url,wiki.softwink.com/bin/view/Main/5001002; sid: 5001002; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] access to a potentially vulnerable web application"; program: snort; content: "Classification: access to a potentially vulnerable web application"; classtype: web-application-activity; reference: url,wiki.softwink.com/bin/view/Main/5001003; sid: 5001003; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Web Application Attack"; program: snort; content: "Classification: Web Application Attack"; classtype: web-application-activity; reference: url,wiki.softwink.com/bin/view/Main/5001004; sid: 5001004; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Misc activity"; program: snort; content: "Classification: Misc activity"; classtype: misc-activity; reference: url,wiki.softwink.com/bin/view/Main/5001005; sid: 5001005; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Misc Attack"; program: snort; content: "Classification: Misc Attack"; classtype: misc-attack; reference: url,wiki.softwink.com/bin/view/Main/5001006; sid: 5001006; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Generic ICMP event"; program: snort; content: "Classification: Generic ICMP event"; classtype: icmp-event; reference: url,wiki.softwink.com/bin/view/Main/5001007; sid: 5001007; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] SCORE! Get the lotion! [Porn]"; program: snort; content: "Classification: SCORE! Get the lotion!"; classtype: kickass-porn; reference: url,wiki.softwink.com/bin/view/Main/5001008; sid: 5001008; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Potential Corporate Privacy Violation"; program: snort; content: "Classification: Potential Corporate Privacy Violation"; classtype: policy-violation; reference: url,wiki.softwink.com/bin/view/Main/5001009; sid: 5001009; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempt to login by a default username and password"; program: snort; content: "Classification: Attempt to login by a default username and password"; classtype: default-login-attempt; reference: url,wiki.softwink.com/bin/view/Main/5001010; sid: 5001010; rev:1;)

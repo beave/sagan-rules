@@ -1,0 +1,37 @@
+# Sagan postgresql.rules
+# Copyright (c) 2009-2010, Softwink, Inc.
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5432 (msg: "[POSTGRESQL] Log message"; content: "LOG"; classtype:  program-error; program: postgres; reference: url,wiki.softwink.com/bin/view/Main/5000229; sid: 5000229; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5432 (msg: "[POSTGRESQL] Informational message"; pcre: "/NOTICE|INFO/"; classtype: program-error; program: postgres; reference: url,wiki.softwink.com/bin/view/Main/5000373; sid: 5000373; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5432 (msg: "[POSTGRESQL] Error message"; content: "ERROR"; classtype: program-error; program: postgres; reference: url,wiki.softwink.com/bin/view/Main/5000230; sid: 5000230; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5432 (msg: "[POSTGRESQL] Fatal error message"; content: "FATAL"; classtype: program-error; program: postgres; reference: url,wiki.softwink.com/bin/view/Main/5000231; sid: 5000231; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5432 (msg: "[POSTGRESQL] Debug message"; content: "DEBUG"; classtype: program-error; program: postgres; reference: url,wiki.softwink.com/bin/view/Main/5000232; sid: 5000232; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5432 (msg: "[POSTGRESQL] Database authentication success"; content: "connection authorized"; classtype: successful-user; program: postgres; reference: url,wiki.softwink.com/bin/view/Main/5000233; sid: 5000233; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5432 (msg: "[POSTGRESQL] Database authentication failure"; content: "authentication failed"; classtype: unsuccessful-user; program: postgres; reference: url,wiki.softwink.com/bin/view/Main/5000234; sid: 5000234; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5432 (msg: "[POSTGRESQL] Database shutdown message"; pcre: "/terminating connection due|aborting any active transactions|shutting down/i"; classtype: not-suspicious; program: postgres; reference: url,wiki.softwink.com/bin/view/Main/5000235; sid: 5000235; rev:1;)
+
+

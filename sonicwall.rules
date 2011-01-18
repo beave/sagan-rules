@@ -1,0 +1,14 @@
+#Jan 12 13:56:30 10.176.24.252 id=firewall sn=0017C519BD34 time="2011-01-12 13:56:30" fw=69.74.213.122 pri=1 c=32 m=82 msg="Possible port scan detected" n=0 src=70.37.129.101:80:X1 dst=69.74.213.122:9726:X1 note="TCP scanned port list, 3139, 3731, 63231, 24239, 49638"
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] Possible TCP Port Scan"; content: "Possible port scan detected"; content: "TCP scanned port list"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.softwink.com/bin/view/Main/5001083; sid: 5001083; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] Possible UDP Port Scan"; content: "Possible port scan detected"; content: "UDP scanned port list"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.softwink.com/bin/view/Main/5001085; sid: 5001085; rev:1;)
+
+# Jan 11 16:20:42 10.176.24.252 id=firewall sn=0017C519BD34 time="2011-01-11 16:20:42" fw=69.74.213.122 pri=1 c=32 m=608  msg="IPS Detection Alert: INFRASTRUCTURE Syslog -- Client Traffic" sid=1926 ipscat=INFRASTRUCTURE ipspri=3 n=0 src=10.176.24.54:514:X1 dst=10.176.24.248:514:X0 
+
+# alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert"; content: "IPS Detection Alert"; content: "ICMP PING"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.softwink.com/bin/view/Main/5001084; sid: 5001084; rev:1;)
+
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert"; content: "IPS Detection Alert"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.softwink.com/bin/view/Main/5001084; sid: 5001084; rev:1;)
+
+
+

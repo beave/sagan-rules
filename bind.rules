@@ -1,0 +1,39 @@
+# Sagan bind.rules
+# Copyright (c) 2009-2010, Softwink, Inc.
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg: "[BIND] Invalid DNS packet.  Possible attack" ; content: "dropping source port zero packet from"; classtype: exploit-attempt; program: named; parse_port; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000101; sid:5000101; rev:3;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg: "[BIND] Denied zone transfer attempt"; content: "denied AXFR from"; classtype: attempted-recon; program: named; parse_port; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000102; sid:5000102; rev:3;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg: "[BIND] DNS update denied"; pcre: "/denied update from|unapproved update from/"; classtype: attempted-recon; program: named; parse_port; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000103; sid:5000103; rev:3;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg: "[BIND] Log permission misconfiguration"; content: "unable to rename log file"; classtype: program-error; program: named; parse_port; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000104; sid:5000104; rev:3;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg: "[BIND] Unexpected error [RCODE] while resolving domain"; content: "unexpected RCODE"; classtype: suspicious-traffic; program: named; normalize: dns; reference: url,wiki.softwink.com/bin/view/Main/5000164; sid:5000164; rev:3;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg: "[BIND] Refused notify from non-master"; content: "refused notify from non-master"; parse_port; classtype: attempted-recon; program: named; parse_port; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000105; sid:5000105; rev:3;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg: "[BIND] DNS update using RFC2136 Dynamic protocol denied"; pcre: "/update \S+ denied/"; classtype: suspicious-traffic; program: named; normalize: dns; reference: url,wiki.softwink.com/bin/view/Main/5000106; sid:5000106; rev:3;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg: "[BIND] Query cache denied"; content: "query"; content: "cache"; content: "denied"; classtype: attempted-recon; program: named; parse_ip; parse_port; reference: url,wiki.softwink.com/bin/view/Main/5000107; sid:5000107; rev:3;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg: "[BIND] Named fatal error.  DNS service is going down"; content: "exiting"; content: "due to fatal error"; classtype: program-error; program: named; reference: url,wiki.softwink.com/bin/view/Main/5000108; sid:5000108; rev: 3;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg: "[BIND] Serial number from master is lower than stored"; pcre: "/^zone \S+ serial number \S+ received from master \S+ \S ours/"; classtype: configuration-error; program: named; parse_port; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000109; sid:5000109; rev: 3;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg: "[BIND] Zone transfer error"; pcre: "/^zone \S+: expired/"; classtype: configuration-error; program: named; parse_port; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000110; sid:5000110; rev: 3;)
+

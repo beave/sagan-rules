@@ -1,0 +1,41 @@
+# Sagan ftpd.rules
+# Copyright (c) 2009-2010, Softwink, Inc.
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] FTP Login refused"; content: "FTP LOGIN REFUSED"; classtype: unsuccessful-user; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000182; sid:5000182; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] File created"; content: " created "; classtype: not-suspicious; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000183; sid:5000183; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] File deleted"; content: " deleted "; classtype: not-suspicious; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000184; sid:5000184; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] User uploaded a file to server"; content: "IMPORT file"; classtype: not-suspicious; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000185; sid:5000185; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] User downloaded a file to server"; content: "EXPORT file"; classtype: not-suspicious; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000186; sid:5000186; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] Remote host connected to FTP server"; pcre: "/FTP LOGIN FROM|connection from|connect from/"; classtype: successful-user; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000187; sid:5000187; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] Connection blocked by TCP Wrappers"; content: "refused connect from"; classtype: tcp-connection; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000188; sid:5000188; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] Reverse lookup failure"; pcre: "/can't verify hostname|gethostbyaddr/"; classtype: not-suspicious; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000189; sid:5000189; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] Multiple failed login attempts"; content: "repeated login failures"; classtype: misc-attack; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000190; sid:5000190; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] User disconnected due to time out"; content: "timed out after"; classtype: not-suspicious; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000191; sid:5000191; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] Attempted access to a disabled account"; content: "Account is disabled"; classtype: unsuccessful-user; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000192; sid:5000192; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[FTPD] Failed authentication"; content: "failed authentication from"; nocase; classtype: unsuccessful-user; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000193; sid:5000193; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg: "[FTPD] User logged into an disabled account"; content: "FTP LOGIN FROM"; pcre: "/^apache$|^mysql$|^www$|^nobody$|^nogroup$|^portmap$|^named$|^rpc$|^mail$|^ftp$|^shutdown$|^halt$|^daemon$|^bin$|^postfix$|^shell$|^info$|^guest$|^psql$|^user$|^users$|^console$|^uucp$|^lp$|^sync$|^sshd$|^cdrom$|^ossec$|^sagan$/"; classtype: successful-user; reference: url,wiki.softwink.com/bin/view/Main/5000412; program: sshd; sid: 5000412; rev:1;)
+

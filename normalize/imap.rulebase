@@ -1,0 +1,7 @@
+prefix=imapd[%pid:word%]
+rule= Logout user=%username:word% host=%host:word% [%src-ip:ipv4%]
+
+#%pid:word% Logout user=%username:word% host=%src-host:word% [src-ip:ipv4%]
+#rule=: Login excessive login failures user=%username:word% auth=%auth:word% host=%src-host:word% [%src-ip:ipv4]]
+#rule=: Login failed user=%username:word% auth=%auth:word% host=%src-host:word% [%src-ip:ipv4%]
+#rule=: authentication failure; logname= uid=%uid:word% euid=%euid:word% tty=%tty:word% ruser=%ruser:word% rhost=%src-ip:ipv4% user=%username:word%

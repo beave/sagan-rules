@@ -1,0 +1,45 @@
+# Sagan sendmail.rules
+# Copyright (c) 2009-2010, Softwink, Inc.
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+drop tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] VRFY or EXPN root attempt"; content: " root"; nocase; pcre: "/vrfy|expn/i"; classtype: attempted-recon; program: sm-mta|sendmail; reference: url,wiki.softwink.com/bin/view/Main/5000034; normalize: smtp; reference:arachnids,31; reference:cve,1999-0531; reference:nessus,10249; sid: 5000034; rev:3;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] EXPN command - rejected"; content:"expn "; nocase; content:"[rejected]"; classtype: attempted-recon; program: sm-mta|sendmail; reference: url,wiki.softwink.com/bin/view/Main/5000035; normalize: smtp; reference:arachnids,31; reference:cve,1999-0531; reference:nessus,10249; sid: 5000035; rev:3;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] VRFY command - rejected"; content:"vrfy "; nocase; content:"[rejected]"; classtype: attempted-recon; program: sm-mta|sendmail; reference: url,wiki.softwink.com/bin/view/Main/5000036; normalize: smtp; reference:arachnids,31; reference:cve,1999-0531; reference:nessus,10249; sid: 5000036; rev:3;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] EXPN command - [not rejected]"; content:"expn "; nocase; normalize: smtp; classtype: attempted-recon; program: sm-mta|sendmail; reference: url,wiki.softwink.com/bin/view/Main/5000035; normalize: smtp; reference:arachnids,31; reference:cve,1999-0531; reference:nessus,10249; sid: 5000223; rev:3;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] VRFY command - [not rejected]"; content:"vrfy "; nocase; classtype: attempted-recon; program: sm-mta|sendmail; reference: url,wiki.softwink.com/bin/view/Main/5000036; normalize: smtp; reference:arachnids,31; reference:cve,1999-0531; reference:nessus,10249; sid: 5000224; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] Relaying denied"; content: "Relaying denied|reject=550 5.7.1"; classtype: suspicious-traffic;program: sm-mta|sendmail; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000037; sid: 5000037; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] Relaying denied [reject=550 5.7.1]"; content: "reject=550 5.7.1"; classtype: suspicious-traffic;program: sm-mta|sendmail; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000144; sid: 5000144; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] Domain of sender does not resolve"; content:"reject=451 4.1.8"; classtype: suspicious-traffic; program: sm-mta|sendmail; normalize: smtp; reference: url,wiki.softwink.com/bin/view/Main/5000136; sid: 5000136; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] Rejected by access list"; pcre: "/reject=550 5.0.0|reject=553 5.3.0/"; classtype: suspicious-traffic; program: sm-mta|sendmail; reference: url,wiki.softwink.com/bin/view/Main/5000137; sid: 5000137; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SENDMAIL] Sender address does not have domain"; content:"reject=553 5.5.4 "; classtype: suspicious-traffic; program: sm-mta|sendmail; reference: url,wiki.softwink.com/bin/view/Main/5000138; sid: 5000138; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] Rejecting due to pre-greet"; content: "rejecting commands from"; classtype: spam; program: sm-mta|sendmail; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000139; sid: 5000139; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] Save mail panic"; content: "savemail panic"; classtype: program-error; program: sm-mta|sendmail; reference: url,wiki.softwink.com/bin/view/Main/5000140; sid: 5000140; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] Sendmail Spamassassin X-Spam-Score"; content: "X-Spam-Score"; classtype: spam; program: sm-mta|sendmail; reference: url,wiki.softwink.com/bin/view/Main/5000141; sid: 5000141; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] Possible SMTP RCPT flood, throttling"; content: "Possible SMTP RCPT flood, throttling"; classtype: spam; program: sm-mta|sendmail; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000142; sid: 5000142; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[SENDMAIL] Username with pipe symbol"; content: "|"; content: "to=<"; classtype: exploit-attempt; program: sm-mta|sendmail; reference: url,wiki.softwink.com/bin/view/Main/5000357; sid: 5000357; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SENDMAIL] SpamAssassin Milter Plugin Remote Arbitrary Command Injection Attempt"; program: "sm-mta|sendmail"; content: "+"; content: "|"; content: "sh "; classtype: system-event; reference: url, wiki.softwink.com/bin/view/Main/5000881; reference: url,http://www.securityfocus.com/bid/38578; sid: 5000881; rev: 1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SENDMAIL] Possible open proxy"; program: "sm-mta|sendmail"; content: "probable open proxy:"; classtype: suspicious-traffic; reference: url, wiki.softwink.com/bin/view/Main/5001013; sid: 5001013; rev: 1;)
+

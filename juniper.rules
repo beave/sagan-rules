@@ -1,0 +1,52 @@
+# Sagan juniper.rules
+# Copyright (c) 2009-2010, Softwink, Inc.
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+# Submitted by Brad Doctor (July 2nd, 2010).  
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] AS group missing"; content: "no group for"; content:"from AS"; classtype: network-event; sid: 5000888; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] Duplicate IP address"; content: "KERN_ARP_DUPLICATE_ADDR"; classtype: network-event; sid: 5000889; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] BGP missing MD5 digest"; content: "missing MD5 digest"; classtype: network-event; sid: 5000890; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] ARP address change"; content: "KERN_ARP_ADDR_CHANGE"; classtype: network-event; sid: 5000891; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] BGP no route to host"; content: "bgp_connect_start"; content:"No route to host"; classtype: network-event; sid: 5000892; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] Login authentication error"; content: "LOGIN_PAM_AUTHENTICATION_ERROR"; content:"PAM authentication error for user"; classtype: network-event; sid: 5000893; threshold:type limit, track by_src, count 5, seconds 120; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] Possible authentication dictionary attack"; content: "LOGIN_INVALID_LOCAL_USER"; content:"No entry in local password"; classtype: network-event; sid: 5000894; threshold:type limit, track by_src, count 5, seconds 120; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] SONET Alarm"; content: "Asserting SONET alarm"; classtype: network-event; sid: 5000895; threshold:type limit, track by_src, count 5, seconds 120; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] Possible SONET ring failure"; content: "Major alarm set"; content:"SONET path remote failure indicator";classtype: network-event; sid: 5000896; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] SDH Alarm"; content: "Asserting SDH alarm"; classtype: network-event; sid: 5000897; threshold:type limit, track by_src, count 5, seconds 120; rev:1;)
+
+# Juniper Netscreens
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Fragmented traffic"; program: Netscreen; content: "Fragmented traffic"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000396; sid: 5000396; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] FIN but no ACK bit"; program: Netscreen; content: "FIN but no ACK bit"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000397; sid: 5000397; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Port scan!"; program: Netscreen; content: "Port scan"; classtype: network-scan; reference: url,wiki.softwink.com/bin/view/Main/5000398; sid: 5000398; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] ICMP fragment"; program: Netscreen; content: "ICMP fragment"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000399; sid: 5000399; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Malicious URL"; program: Netscreen; content: "Malicious URL"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000400; sid: 5000400; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Large ICMP packet"; program: Netscreen; content: "Large ICMP packet"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000401; sid: 5000401; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] No tcp flag has been detected"; program: Netscreen; content: "No tcp flag has been detected"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000402; sid: 5000402; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Denied traffic"; program: Netscreen; content: "action=Deny"; classtype: network-event; reference: url,wiki.softwink.com/bin/view/Main/5000403; sid: 5000403; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Syslog enabled"; program: Netscreen; content: "Syslog has been enabled"; classtype: system-event; reference: url,wiki.softwink.com/bin/view/Main/5000404; sid:5000404; rev:1;)
+
