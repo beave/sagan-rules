@@ -25,7 +25,7 @@
 #
 #*************************************************************
 
-alert udp $EXTERNAL_NET any -> $HOME_NET 161 (msg: "[CISCO-IOS] SNMP Authentication Failure"; content: "SNMP-3-AUTHFAIL"; classtype: attempted-recon; reference: url,wiki.softwink.com/bin/view/Main/5000051; sid: 5000051; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 161 (msg: "[CISCO-IOS] SNMP Authentication Failure"; content: "SNMP-3-AUTHFAIL"; classtype: attempted-recon; normalize: cisco; reference: url,wiki.softwink.com/bin/view/Main/5000051; sid: 5000051; rev:1;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 514 (msg: "[CISCO-IOS] Attempted RSHELL connection"; content: "RCMD-4-RSHPORTATTEMPT"; classtype: unsuccessful-user; reference: url,wiki.softwink.com/bin/view/Main/5000052; sid: 5000052; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Line protocol changed state up/down"; content: "LINK-3-UPDOWN"; classtype: network-event; reference: url,wiki.softwink.com/bin/view/Main/5000053; sid: 5000053; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Line protocol changed state up/down"; content: "LINEPROTO-5-UPDOWN"; classtype: network-event; reference: url,wiki.softwink.com/bin/view/Main/5000054; sid: 5000054; rev:2;)

@@ -1,4 +1,10 @@
-prefix=%date:date-rfc3164% %host:word% %seqnum:number%: %othseq:char-to:\x3a%: %%%tag:char-to:\x3a%:
+prefix=
+#
+#  1w3d: %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host 192.168.0.1
+
+rule=: %uptime:word% %authfail:word% Authentication failure for SNMP req from host %src-ip:ipv4%
+#rule=: %uptime:word% %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host %src-ip:ipv4%
+
 rule=: Configured from console by %tty:word:% (%ip:ipv4%)
 rule=: Authentication failure for %proto:word% req from host %ip:ipv4%
 rule=: Attempted to connect to %servname:word% from %ip:ipv4%
