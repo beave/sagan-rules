@@ -32,12 +32,27 @@ prefix=
 #  1w3d: %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host 192.168.0.1
 
 rule=: %uptime:word% %authfail:word% Authentication failure for SNMP req from host %src-ip:ipv4%
-#rule=: %uptime:word% %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host %src-ip:ipv4%
+
+# Access denied URL http://www.example.com/somethings.txt SRC 192.168.0.1 DEST 10.10.10.10 on interface inside
+
+rule=: Access denied URL %url:word% SRC %src-ip:ipv4% DEST %dst-ip:ipv4% on interface %interface:word%
+
+# Caused by WebVPN or IPSec
+# AAA user authentication Successful : server =  10.10.10.10 : user = domain\bob
+
+rule=: AAA user authentication Successful : server =  %ip-src:ipv4% : user = %username:word%
+rule=: AAA user authentication Rejected : reason = %reason:word% : server = %ip-src:ipv4% : user = %username:word%
+
+# User authentication failed: Uname: timothy
+
+rule=: User authentication failed: Uname: %username:word% 
+
+# Space at the end of this line! 
+# %ASA-6-315011: SSH session from 192.168.0.1  on interface Outside2 for user "test" disconnected by SSH server, reason: "Internal error" (0x00)
+
+rule=: SSH session from %src-ip:ipv4% on interface %interface:word% for user %username:quoted-string% disconnected by SSH server, reason: %reason:quoted-string% %code:word% 
 
 rule=: Configured from console by %tty:word:% (%ip:ipv4%)
 rule=: Authentication failure for %proto:word% req from host %ip:ipv4%
 rule=: Attempted to connect to %servname:word% from %ip:ipv4%
-# too-generic syntaces (like %port:word% below) cause problems.
-# Best is to have very specific syntaxes, but as an
-# interim solution we may need to backtrack if there is no other way to handle it.
-#: %port:word% transmit error
+
