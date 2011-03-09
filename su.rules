@@ -34,5 +34,3 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] Three failed attempts
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] Successful sudo to ROOT executed"; content: "USER=root"; content: "COMMAND="; classtype: successful-admin;program: sudo; reference: url,wiki.softwink.com/bin/view/Main/5000133; sid: 5000133; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] su as 'root' suceeded"; content: "su root"; content: "succeeded for root"; classtype: successful-admin; program: su; reference: url,wiki.softwink.com/bin/view/Main/5000409; sid: 5000409; rev:1;)
 
-
-

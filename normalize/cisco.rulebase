@@ -49,8 +49,10 @@ rule=: User authentication failed: Uname: %username:word%
 
 # Space at the end of this line! 
 # %ASA-6-315011: SSH session from 192.168.0.1  on interface Outside2 for user "test" disconnected by SSH server, reason: "Internal error" (0x00)
+#                SSH session from 10.20.10.200 on interface Outside2 for user "root" disconnected by SSH server, reason: "Internal error" (0x00)
 
 rule=: SSH session from %src-ip:ipv4% on interface %interface:word% for user %username:quoted-string% disconnected by SSH server, reason: %reason:quoted-string% %code:word% 
+rule=: SSH session from %src-ip:ipv4%  on interface %interface:word% for user %username:quoted-string% disconnected by SSH server, reason: %reason:quoted-string% %code:word%
 
 rule=: Configured from console by %tty:word:% (%ip:ipv4%)
 rule=: Authentication failure for %proto:word% req from host %ip:ipv4%
