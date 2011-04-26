@@ -1,4 +1,4 @@
-# Sagan cisco-normalize.rulebase
+# Sagan misc-normalize.rulebase
 # Copyright (c) 2009-2011, Softwink, Inc.
 # All rights reserved.
 #
@@ -29,32 +29,8 @@
 
 prefix=
 #
-#  1w3d: %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host 192.168.0.1
+# For Weblabyrinth syslog(LOG_WARNING, "ALERT, message=[$message], src_ip=[{$_SERVER['REMOTE_ADDR']}], user_agent=[{$_SERVER['HTTP_USER_AGENT']}]");
+#
 
-rule=: %uptime:word% %authfail:word% Authentication failure for SNMP req from host %src-ip:ipv4%
-
-# Access denied URL http://www.example.com/somethings.txt SRC 192.168.0.1 DEST 10.10.10.10 on interface inside
-
-rule=: Access denied URL %url:word% SRC %src-ip:ipv4% DEST %dst-ip:ipv4% on interface %interface:word%
-
-# Caused by WebVPN or IPSec
-# AAA user authentication Successful : server =  10.10.10.10 : user = domain\bob
-
-rule=: AAA user authentication Successful : server =  %ip-src:ipv4% : user = %username:word%
-rule=: AAA user authentication Rejected : reason = %reason:word% : server = %ip-src:ipv4% : user = %username:word%
-
-# User authentication failed: Uname: timothy
-
-rule=: User authentication failed: Uname: %username:word% 
-
-# Space at the end of this line! 
-# %ASA-6-315011: SSH session from 192.168.0.1  on interface Outside2 for user "test" disconnected by SSH server, reason: "Internal error" (0x00)
-#                SSH session from 10.20.10.200 on interface Outside2 for user "root" disconnected by SSH server, reason: "Internal error" (0x00)
-
-rule=: SSH session from %src-ip:ipv4% on interface %interface:word% for user %username:quoted-string% disconnected by SSH server, reason: %reason:quoted-string% %code:word% 
-rule=: SSH session from %src-ip:ipv4%  on interface %interface:word% for user %username:quoted-string% disconnected by SSH server, reason: %reason:quoted-string% %code:word%
-
-rule=: Configured from console by %tty:word:% (%ip:ipv4%)
-rule=: Authentication failure for %proto:word% req from host %ip:ipv4%
-rule=: Attempted to connect to %servname:word% from %ip:ipv4%
+rule=: ALERT, message=%url:word%, src_ip=%src-ip:ipv4%, user_agent=%user_agent:word%
 
