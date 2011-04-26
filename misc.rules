@@ -28,5 +28,5 @@
 
 # Detect Weblabrinth traffic.  See Ben Jackson's https://code.google.com/p/weblabyrinth/
 #
-alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[MISC] Weblabyrinth traffic"; classtype: misc-activity; normalize: misc.rulebase; program: weblabyrinth; reference: url,wiki.softwink.com/bin/view/Main/5001093; sid: 5001093; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[MISC] Weblabyrinth traffic"; classtype: misc-activity; normalize: misc.rulebase; program: weblabyrinth; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.softwink.com/bin/view/Main/5001093; sid: 5001093; rev:2;)
 
