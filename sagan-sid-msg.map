@@ -295,7 +295,7 @@
 5000305 || [WINDOWS] Successful user logon || url,wiki.softwink.com/bin/view/Main/5000305
 5000306 || [WINDOWS] Detection of net listening application || url,wiki.softwink.com/bin/view/Main/5000306
 5000307 || [WINDOWS] Privileged Service Called || url,wiki.softwink.com/bin/view/Main/5000307
-5000308 || [WINDOWS] Apple	Bonjour service detect [iTunes installed?] || url,wiki.softwink.com/bin/view/Main/5000308
+5000308 || [WINDOWS] Apple Bonjour service detect [iTunes installed?] || url,wiki.softwink.com/bin/view/Main/5000308
 5000309 || [WINDOWS] Application error || url,wiki.softwink.com/bin/view/Main/5000309
 5000310 || [WINDOWS] Application hang || url,wiki.softwink.com/bin/view/Main/5000310
 5000311 || [WINDOWS] Application popup || url,wiki.softwink.com/bin/view/Main/5000311
@@ -1055,6 +1055,9 @@
 5001090 || [SONICWALL] IPS Detection Alert || url,wiki.softwink.com/bin/view/Main/5001090
 5001091 || [CISCO-PIXASA] Access denied URL - HTTPS || url, wiki.softwink.com/bin/view/Main/5001091
 5001092 || [CISCO-PIXASA] AAA user authentication Reject || url, wiki.softwink.com/bin/view/Main/5001092
+5001093 || [MISC] Weblabyrinth - New host logged! || url,wiki.softwink.com/bin/view/Main/5001093
+5001094 || [SENDMAIL] Insufficient system resources [Remote] || url, wiki.softwink.com/bin/view/Main/5001094
+5001095 || [MISC] Weblabyrinth - Crawler Ensnared! || url,wiki.softwink.com/bin/view/Main/5001095
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
