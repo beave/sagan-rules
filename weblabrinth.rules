@@ -24,7 +24,6 @@
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #*************************************************************
-# Rules that don't quite fit anywhere alse 
 
 # Detect Weblabrinth traffic.  See Ben Jackson's https://code.google.com/p/weblabyrinth/
 #
