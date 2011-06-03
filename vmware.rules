@@ -33,3 +33,11 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine b
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine state change to ON"; content: "VM_STATE_ON"; classtype: system-event; reference: url,wiki.softwink.com/bin/view/Main/5000209; sid: 5000209; rev:1; )
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine being reconfigured"; content: "VM_STATE_RECONFIGURING"; classtype: configuration-change; reference: url,wiki.softwink.com/bin/view/Main/5000210; sid: 5000210; rev:1; )
 
+# VMWare ESXi 4.1 (Champ Clark III 06/02/2011)
+#
+# Jun  3 01:23:12 10.10.10.10 Hostd: [2011-06-03 01:23:12.139 2351BB90 info 'ha-eventmgr' opID=58D44130-00000003] Event 285 : User root@10.10.10.1 logged in
+# Jun  3 01:23:20 10.10.10.10 Hostd: [2011-06-03 01:23:20.106 2351BB90 info 'ha-eventmgr' opID=58D44130-00000030] Event 286 : User root logged out
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: "Event 285 : "; classtype: successful-admin; program: Hostd; reference: url,wiki.softwink.com/bin/view/Main/5001097; sid: 5001097; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User logoff successful"; content: "Event 286 : "; classtype: successful-admin; program: Hostd; reference: url,wiki.softwink.com/bin/view/Main/5001098; sid: 5001098; rev:1;)
+
