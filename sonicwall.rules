@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,9 +25,9 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] Possible TCP Port Scan"; content: "Possible port scan detected"; content: "TCP scanned port list"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.softwink.com/bin/view/Main/5001083; sid: 5001083; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] Possible UDP Port Scan"; content: "Possible port scan detected"; content: "UDP scanned port list"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.softwink.com/bin/view/Main/5001085; sid: 5001085; rev:1;)
-alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert"; content: "IPS Detection Alert"; content: "ICMP PING"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.softwink.com/bin/view/Main/5001084; sid: 5001084; rev:1;)
-alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert"; content: "IPS Detection Alert"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.softwink.com/bin/view/Main/5001090; sid: 5001090; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] Possible TCP Port Scan"; content: "Possible port scan detected"; content: "TCP scanned port list"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.quadrantsec.com/bin/view/Main/5001083; sid: 5001083; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] Possible UDP Port Scan"; content: "Possible port scan detected"; content: "UDP scanned port list"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.quadrantsec.com/bin/view/Main/5001085; sid: 5001085; rev:1;)
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert"; content: "IPS Detection Alert"; content: "ICMP PING"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.quadrantsec.com/bin/view/Main/5001084; sid: 5001084; rev:1;)
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert"; content: "IPS Detection Alert"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.quadrantsec.com/bin/view/Main/5001090; sid: 5001090; rev:2;)
 
 

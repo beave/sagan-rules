@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -29,6 +29,6 @@
 # see these alerts.  For more information,  see: http://www.grsecurity.net/ 
 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"GRSEC Time set"; content:"time set by";classtype: not-suspcious; program: grsec; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000029; sid: 5000029; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"GRSEC Signal 11 sent"; content:"signal 11 sent";classtype: program-error; parse_ip; program: grsec; reference: url,wiki.softwink.com/bin/view/Main/5000030; sid: 5000030; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"GRSEC Denied resource overstep"; content:"denied resource overstep"; classtype: exploit-attempt; program: grsec; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5000042; sid: 5000042; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"GRSEC Time set"; content:"time set by";classtype: not-suspcious; program: grsec; parse_ip; reference: url,wiki.quadrantsec.com/bin/view/Main/5000029; sid: 5000029; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"GRSEC Signal 11 sent"; content:"signal 11 sent";classtype: program-error; parse_ip; program: grsec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000030; sid: 5000030; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"GRSEC Denied resource overstep"; content:"denied resource overstep"; classtype: exploit-attempt; program: grsec; parse_ip; reference: url,wiki.quadrantsec.com/bin/view/Main/5000042; sid: 5000042; rev:2;)

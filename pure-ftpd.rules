@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,11 +25,11 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] New FTP connection"; content: "[INFO] New connection from"; classtype: not-suspicious; program: pure-ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000216; sid: 5000216; rev:1; )
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] Authentication failed"; content: "[WARNING] Authentication failed for user"; classtype: unsuccessful-user; program: pure-ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000217; sid: 5000217; rev:1; )
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] FTP user logout or timeout"; pcre: "/[INFO] Logout|[INFO] Timeout/"; classtype: not-suspicious; program: pure-ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000219; sid: 5000219; rev:1; )
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] FTP notice message"; content: "[NOTICE]"; classtype: program-error; program: pure-ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000220; sid: 5000220; rev:1; )
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] Attempting to access invalid directory"; content: "[INFO] Can't change directory to"; classtype: suspicious-filename-detect; program: pure-ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000221; sid: 5000221; rev:1; )
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] FTP Authentication successful"; pcre: "/[INFO] \S+ is now logged in/"; classtype: successful-user; program: pure-ftpd; reference : url,wiki.softwink.com/bin/view/Main/5000222; sid: 5000222; rev:1; )
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg: "[PUREFTPD] User logged into an disabled account"; pcre: "/[INFO] \S+ is now logged in/";; pcre: "/^apache$|^mysql$|^www$|^nobody$|^nogroup$|^portmap$|^named$|^rpc$|^mail$|^ftp$|^shutdown$|^halt$|^daemon$|^bin$|^postfix$|^shell$|^info$|^guest$|^psql$|^user$|^users$|^console$|^uucp$|^lp$|^sync$|^sshd$|^cdrom$|^ossec$|^sagan$/"; classtype: successful-user; reference: url,wiki.softwink.com/bin/view/Main/5000414; program: sshd; sid: 5000414; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] New FTP connection"; content: "[INFO] New connection from"; classtype: not-suspicious; program: pure-ftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000216; sid: 5000216; rev:1; )
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] Authentication failed"; content: "[WARNING] Authentication failed for user"; classtype: unsuccessful-user; program: pure-ftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000217; sid: 5000217; rev:1; )
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] FTP user logout or timeout"; pcre: "/[INFO] Logout|[INFO] Timeout/"; classtype: not-suspicious; program: pure-ftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000219; sid: 5000219; rev:1; )
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] FTP notice message"; content: "[NOTICE]"; classtype: program-error; program: pure-ftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000220; sid: 5000220; rev:1; )
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] Attempting to access invalid directory"; content: "[INFO] Can't change directory to"; classtype: suspicious-filename-detect; program: pure-ftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000221; sid: 5000221; rev:1; )
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[PUREFTPD] FTP Authentication successful"; pcre: "/[INFO] \S+ is now logged in/"; classtype: successful-user; program: pure-ftpd; reference : url,wiki.quadrantsec.com/bin/view/Main/5000222; sid: 5000222; rev:1; )
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg: "[PUREFTPD] User logged into an disabled account"; pcre: "/[INFO] \S+ is now logged in/";; pcre: "/^apache$|^mysql$|^www$|^nobody$|^nogroup$|^portmap$|^named$|^rpc$|^mail$|^ftp$|^shutdown$|^halt$|^daemon$|^bin$|^postfix$|^shell$|^info$|^guest$|^psql$|^user$|^users$|^console$|^uucp$|^lp$|^sync$|^sshd$|^cdrom$|^ossec$|^sagan$/"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000414; program: sshd; sid: 5000414; rev:1;)
 

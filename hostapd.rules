@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,13 +25,13 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] Possible downgrade attack"; program: hostapd; content: "downgrade attack"; classtype: suspicious-traffic; reference: url, wiki.softwink.com/bin/view/Main/5001041; sid: 5001041; rev: 1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] Possible downgrade attack"; program: hostapd; content: "TLSv1"; content: "Failed to decrypt"; classtype: unsuccessful-user ; reference: url, wiki.softwink.com/bin/view/Main/5001042; sid: 5001042; rev: 1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] UPnP DoS excessive addresses [DoS]"; program: hostapd; content: "UPnP"; content: "Ignoring excessive addresses"; classtype: attempted-dos; reference: url, wiki.softwink.com/bin/view/Main/5001043; sid: 5001043; rev: 1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] Radius - Starting accounting session"; program: hostapd; content: "RADIUS"; content: "starting accounting session"; classtype: not-suspicious; reference: url, wiki.softwink.com/bin/view/Main/5001044; sid: 5001044; rev: 1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] WPA pairwise key handshake complete"; program: hostapd; content: "WPA"; content: "pairwise key handshake completed"; classtype: not-suspicious; reference: url, wiki.softwink.com/bin/view/Main/5001045; sid: 5001045; rev: 1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] IEEE 802.11 - Disassociated"; program: hostapd; content: "IEEE 802.11"; content: "disassociated"; classtype: not-suspicious; reference: url, wiki.softwink.com/bin/view/Main/5001046; sid: 5001046; rev: 1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] IEEE 802.11 - Associated"; program: hostapd; content: "IEEE 802.11"; content: " associated"; classtype: successful-user; reference: url, wiki.softwink.com/bin/view/Main/5001047; sid: 5001047; rev: 1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] WPA - group key handshake complete [RSN]"; program: hostapd; content: "WPA"; content: "group key handshake completed"; classtype: not-suspicious; reference: url, wiki.softwink.com/bin/view/Main/5001048; sid: 5001048; rev: 1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] IEEE 802.11 - deauthenticated due to local deauth request"; program: hostapd; content: "IEEE 802.11"; content: "deauthenticated due to local deauth request"; classtype: not-suspicious; reference: url, wiki.softwink.com/bin/view/Main/5001049; sid: 5001049; rev: 1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] Possible downgrade attack"; program: hostapd; content: "downgrade attack"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001041; sid: 5001041; rev: 1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] Possible downgrade attack"; program: hostapd; content: "TLSv1"; content: "Failed to decrypt"; classtype: unsuccessful-user ; reference: url, wiki.quadrantsec.com/bin/view/Main/5001042; sid: 5001042; rev: 1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] UPnP DoS excessive addresses [DoS]"; program: hostapd; content: "UPnP"; content: "Ignoring excessive addresses"; classtype: attempted-dos; reference: url, wiki.quadrantsec.com/bin/view/Main/5001043; sid: 5001043; rev: 1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] Radius - Starting accounting session"; program: hostapd; content: "RADIUS"; content: "starting accounting session"; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5001044; sid: 5001044; rev: 1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] WPA pairwise key handshake complete"; program: hostapd; content: "WPA"; content: "pairwise key handshake completed"; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5001045; sid: 5001045; rev: 1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] IEEE 802.11 - Disassociated"; program: hostapd; content: "IEEE 802.11"; content: "disassociated"; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5001046; sid: 5001046; rev: 1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] IEEE 802.11 - Associated"; program: hostapd; content: "IEEE 802.11"; content: " associated"; classtype: successful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5001047; sid: 5001047; rev: 1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] WPA - group key handshake complete [RSN]"; program: hostapd; content: "WPA"; content: "group key handshake completed"; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5001048; sid: 5001048; rev: 1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] IEEE 802.11 - deauthenticated due to local deauth request"; program: hostapd; content: "IEEE 802.11"; content: "deauthenticated due to local deauth request"; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5001049; sid: 5001049; rev: 1;)
 

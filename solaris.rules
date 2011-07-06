@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,6 +25,6 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] kcfd - Unable to open certificate file"; program: kcfd; content: "unable to open certificate file"; classtype: program-error; reference: url,wiki.softwink.com/bin/view/Main/5000393; sid: 5000393; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] rmclomv - Power Supply FAULT!"; program: rmclomv; content: "PSU"; content: "has FAULTED"; classtype: hardware-event; reference: url,wiki.softwink.com/bin/view/Main/5000405; sid: 5000405; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] kcfd - Unable to open certificate file"; program: kcfd; content: "unable to open certificate file"; classtype: program-error; reference: url,wiki.quadrantsec.com/bin/view/Main/5000393; sid: 5000393; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] rmclomv - Power Supply FAULT!"; program: rmclomv; content: "PSU"; content: "has FAULTED"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000405; sid: 5000405; rev:1;)
 

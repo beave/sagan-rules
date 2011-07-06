@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,9 +25,9 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[VSFTPD] Session opened"; content: "CONNECT"; classtype: not-suspicious; program: vsftpd; reference: url,wiki.softwink.com/bin/view/Main/5000194; sid: 5000194; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[VSFTPD] Authentication successful"; content: "OK LOGIN"; classtype: successful-user; program: vsftpd; reference: url,wiki.softwink.com/bin/view/Main/5000195; sid: 5000195; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[VSFTPD] Login failed"; content: "FAIL LOGIN"; classtype: unsuccessful-user; program: vsftpd; reference: url,wiki.softwink.com/bin/view/Main/5000196; sid: 5000196; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[VSFTPD] File uploaded"; content: "OK UPLOAD"; classtype: not-suspicious; program: vsftpd; reference: url,wiki.softwink.com/bin/view/Main/5000197; sid: 5000197; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg: "[FTPD] User logged into an disabled account"; content: "OK LOGIN"; pcre: "/^apache$|^mysql$|^www$|^nobody$|^nogroup$|^portmap$|^named$|^rpc$|^mail$|^ftp$|^shutdown$|^halt$|^daemon$|^bin$|^postfix$|^shell$|^info$|^guest$|^psql$|^user$|^users$|^console$|^uucp$|^lp$|^sync$|^sshd$|^cdrom$|^ossec$|^sagan$/"; classtype: successful-user; reference: url,wiki.softwink.com/bin/view/Main/5000415; program: sshd; sid: 5000415; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[VSFTPD] Session opened"; content: "CONNECT"; classtype: not-suspicious; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000194; sid: 5000194; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[VSFTPD] Authentication successful"; content: "OK LOGIN"; classtype: successful-user; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000195; sid: 5000195; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[VSFTPD] Login failed"; content: "FAIL LOGIN"; classtype: unsuccessful-user; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000196; sid: 5000196; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[VSFTPD] File uploaded"; content: "OK UPLOAD"; classtype: not-suspicious; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000197; sid: 5000197; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg: "[FTPD] User logged into an disabled account"; content: "OK LOGIN"; pcre: "/^apache$|^mysql$|^www$|^nobody$|^nogroup$|^portmap$|^named$|^rpc$|^mail$|^ftp$|^shutdown$|^halt$|^daemon$|^bin$|^postfix$|^shell$|^info$|^guest$|^psql$|^user$|^users$|^console$|^uucp$|^lp$|^sync$|^sshd$|^cdrom$|^ossec$|^sagan$/"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000415; program: sshd; sid: 5000415; rev:1;)
 

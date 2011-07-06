@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -40,13 +40,13 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] SDH Alarm"; conten
 
 # Juniper Netscreens
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Fragmented traffic"; program: Netscreen; content: "Fragmented traffic"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000396; sid: 5000396; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] FIN but no ACK bit"; program: Netscreen; content: "FIN but no ACK bit"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000397; sid: 5000397; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Port scan!"; program: Netscreen; content: "Port scan"; classtype: network-scan; reference: url,wiki.softwink.com/bin/view/Main/5000398; sid: 5000398; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] ICMP fragment"; program: Netscreen; content: "ICMP fragment"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000399; sid: 5000399; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Malicious URL"; program: Netscreen; content: "Malicious URL"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000400; sid: 5000400; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Large ICMP packet"; program: Netscreen; content: "Large ICMP packet"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000401; sid: 5000401; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] No tcp flag has been detected"; program: Netscreen; content: "No tcp flag has been detected"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000402; sid: 5000402; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Denied traffic"; program: Netscreen; content: "action=Deny"; classtype: network-event; reference: url,wiki.softwink.com/bin/view/Main/5000403; sid: 5000403; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Syslog enabled"; program: Netscreen; content: "Syslog has been enabled"; classtype: system-event; reference: url,wiki.softwink.com/bin/view/Main/5000404; sid:5000404; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Fragmented traffic"; program: Netscreen; content: "Fragmented traffic"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000396; sid: 5000396; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] FIN but no ACK bit"; program: Netscreen; content: "FIN but no ACK bit"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000397; sid: 5000397; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Port scan!"; program: Netscreen; content: "Port scan"; classtype: network-scan; reference: url,wiki.quadrantsec.com/bin/view/Main/5000398; sid: 5000398; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] ICMP fragment"; program: Netscreen; content: "ICMP fragment"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000399; sid: 5000399; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Malicious URL"; program: Netscreen; content: "Malicious URL"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000400; sid: 5000400; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Large ICMP packet"; program: Netscreen; content: "Large ICMP packet"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000401; sid: 5000401; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] No tcp flag has been detected"; program: Netscreen; content: "No tcp flag has been detected"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000402; sid: 5000402; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Denied traffic"; program: Netscreen; content: "action=Deny"; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000403; sid: 5000403; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Syslog enabled"; program: Netscreen; content: "Syslog has been enabled"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000404; sid:5000404; rev:1;)
 

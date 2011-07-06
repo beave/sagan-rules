@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,11 +25,11 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Authentication failure"; content: "Authentication failure"; classtype: unsuccessful-user; program: zeus; reference: url,wiki.softwink.com/bin/view/Main/5000279; sid: 5000279; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Configuration warning [ignored]"; content: "Unknown directive; classtype: system-event; program: zeus; reference: url,wiki.softwink.com/bin/view/Main/5000280; sid: 5000280; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Informational message"; pcre: "/^[\S+ \S+] INFO|^[\S+ \S+] SSL/"; classtype: system-event; program: zeus; reference: url,wiki.softwink.com/bin/view/Main/5000281; sid: 5000281; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Warning message"; pcre: "/^[\S+ \S+] WARN/"; classtype: system-event; program: zeus; reference: url,wiki.softwink.com/bin/view/Main/5000282; sid: 5000282; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Serious message"; pcre: "/^[\S+ \S+] SERIOUS/"; classtype: system-event; program: zeus; reference: url,wiki.softwink.com/bin/view/Main/5000283; sid: 5000283; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Fatal message"; pcre: "/^[\S+ \S+] FATAL/"; classtype: system-event; program: zeus; reference: url,wiki.softwink.com/bin/view/Main/5000284; sid: 5000284; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Authentication failure"; content: "Authentication failure"; classtype: unsuccessful-user; program: zeus; reference: url,wiki.quadrantsec.com/bin/view/Main/5000279; sid: 5000279; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Configuration warning [ignored]"; content: "Unknown directive; classtype: system-event; program: zeus; reference: url,wiki.quadrantsec.com/bin/view/Main/5000280; sid: 5000280; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Informational message"; pcre: "/^[\S+ \S+] INFO|^[\S+ \S+] SSL/"; classtype: system-event; program: zeus; reference: url,wiki.quadrantsec.com/bin/view/Main/5000281; sid: 5000281; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Warning message"; pcre: "/^[\S+ \S+] WARN/"; classtype: system-event; program: zeus; reference: url,wiki.quadrantsec.com/bin/view/Main/5000282; sid: 5000282; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Serious message"; pcre: "/^[\S+ \S+] SERIOUS/"; classtype: system-event; program: zeus; reference: url,wiki.quadrantsec.com/bin/view/Main/5000283; sid: 5000283; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Fatal message"; pcre: "/^[\S+ \S+] FATAL/"; classtype: system-event; program: zeus; reference: url,wiki.quadrantsec.com/bin/view/Main/5000284; sid: 5000284; rev:1;)
 
 

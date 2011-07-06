@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,11 +25,11 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Buffer overflow attempt on rpc.statd"; pcre: "/gethostbyname error for \W+/"; classtype: exploit-attempt; program: rpc.statd; reference: url,wiki.softwink.com/bin/view/Main/5000095; sid:5000095; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Buffer overflow attempt on WU-FTPD version prior to 2.6" ; pcre: "/\S+ FTP LOGIN FROM \.+ 0bin0sh/"; classtype: exploit-attempt; program: ftpd; reference: url,wiki.softwink.com/bin/view/Main/5000096; sid:5000096; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Possible buffer overflow attempt"; content: "?????????????????????"; classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000097; sid:5000097; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] 'Null' user change some information"; content: "changed by"; content: "null";  classtype: exploit-attempt; reference: url,wiki.softwink.com/bin/view/Main/5000098; sid:5000098; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Possible buffer overflow attempt [yppasswd?]" ; content: "@@@@@@@@@@@@@@@@@@@@@@@@@"; classtype: exploit-attempt; reference: url,wiki.softwink.com/bin/view/Main/5000356; sid:5000365; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Heap overflow in the Solaris cachefsd service" ; content: "Segmentation Fault"; content: "core dumped";  program: cachefsd; classtype: exploit-attempt; reference: url,wiki.softwink.com/bin/view/Main/5000366; sid:5000366; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Stack overflow attempt with SEGV [Solaris]"; content: "attempt to execute code on stack by"; nocase; classtype: exploit-attempt; reference: url,wiki.softwink.com/bin/view/Main/5000099; sid:5000099; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Possible buffer overflow attempt [NOOP]" ; content: "AAAAAAAAAAAAAAAAAAAAAAAAA";  classtype: suspicious-traffic; reference: url,wiki.softwink.com/bin/view/Main/5000100; sid:5000100; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Buffer overflow attempt on rpc.statd"; pcre: "/gethostbyname error for \W+/"; classtype: exploit-attempt; program: rpc.statd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000095; sid:5000095; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Buffer overflow attempt on WU-FTPD version prior to 2.6" ; pcre: "/\S+ FTP LOGIN FROM \.+ 0bin0sh/"; classtype: exploit-attempt; program: ftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000096; sid:5000096; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Possible buffer overflow attempt"; content: "?????????????????????"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000097; sid:5000097; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] 'Null' user change some information"; content: "changed by"; content: "null";  classtype: exploit-attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/5000098; sid:5000098; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Possible buffer overflow attempt [yppasswd?]" ; content: "@@@@@@@@@@@@@@@@@@@@@@@@@"; classtype: exploit-attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/5000356; sid:5000365; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Heap overflow in the Solaris cachefsd service" ; content: "Segmentation Fault"; content: "core dumped";  program: cachefsd; classtype: exploit-attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/5000366; sid:5000366; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Stack overflow attempt with SEGV [Solaris]"; content: "attempt to execute code on stack by"; nocase; classtype: exploit-attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/5000099; sid:5000099; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Possible buffer overflow attempt [NOOP]" ; content: "AAAAAAAAAAAAAAAAAAAAAAAAA";  classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000100; sid:5000100; rev:1;)

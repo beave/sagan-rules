@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,6 +25,6 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[MILTER] Milter error state"; content:"Milter"; content:"to error state";classtype: program-error; program: sm-mta; reference: url,wiki.softwink.com/bin/view/Main/5000038; sid: 5000038; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[MILTER] Mimedefang - No response from slave"; content: "No response from slave"; classtype: program-error; program: mimedefang; reference: url,wiki.softwink.com/bin/view/Main/5000039; sid: 5000039; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[MILTER] SMF-SAV sendmail milter unable to verify"; pcre: "/sender check failed|sender check tempfailed/i"; classtype: program-error; program: smf-sav; reference: url,wiki.softwink.com/bin/view/Main/5000143; sid: 5000143; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[MILTER] Milter error state"; content:"Milter"; content:"to error state";classtype: program-error; program: sm-mta; reference: url,wiki.quadrantsec.com/bin/view/Main/5000038; sid: 5000038; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[MILTER] Mimedefang - No response from slave"; content: "No response from slave"; classtype: program-error; program: mimedefang; reference: url,wiki.quadrantsec.com/bin/view/Main/5000039; sid: 5000039; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[MILTER] SMF-SAV sendmail milter unable to verify"; pcre: "/sender check failed|sender check tempfailed/i"; classtype: program-error; program: smf-sav; reference: url,wiki.quadrantsec.com/bin/view/Main/5000143; sid: 5000143; rev:1;)

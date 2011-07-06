@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,11 +25,11 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Warning message"; content: "WARN"; classtype: program-error; program: asterisk; reference: url,wiki.softwink.com/bin/view/Main/5000176; sid:5000176; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Warning message"; content: "ERROR"; classtype: program-error; program: asterisk; reference: url,wiki.softwink.com/bin/view/Main/5000177; sid:5000177; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Notice message"; content: "NOTICE"; classtype: program-error; program: asterisk; reference: url,wiki.softwink.com/bin/view/Main/5000178; sid:5000178; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Login session failed"; content: "Wrong password"; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.softwink.com/bin/view/Main/5000179; sid:5000179; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Login session failed [invalid user]"; content: "Username/auth name mismatch"; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.softwink.com/bin/view/Main/5000180; sid:5000180; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Login session failed [invalid extension]"; content: "No matching peer found"; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.softwink.com/bin/view/Main/5000181; sid:5000181; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Invalid to address"; content: "Invalid to address"; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.softwink.com/bin/view/Main/5001065; sid: 5001065; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Warning message"; content: "WARN"; classtype: program-error; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5000176; sid:5000176; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Warning message"; content: "ERROR"; classtype: program-error; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5000177; sid:5000177; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Notice message"; content: "NOTICE"; classtype: program-error; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5000178; sid:5000178; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Login session failed"; content: "Wrong password"; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5000179; sid:5000179; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Login session failed [invalid user]"; content: "Username/auth name mismatch"; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5000180; sid:5000180; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Login session failed [invalid extension]"; content: "No matching peer found"; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5000181; sid:5000181; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Invalid to address"; content: "Invalid to address"; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5001065; sid: 5001065; rev:1;)
 

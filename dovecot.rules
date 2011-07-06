@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,9 +25,9 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Authentication success"; content: "login"; content: "Login"; classtype: successful-user; program: dovecot; reference: url,wiki.softwink.com/bin/view/Main/5000264; sid:5000264; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Failed login"; content: "Password mismatch"; classtype: unsuccessful-user; program: dovecot; reference: url,wiki.softwink.com/bin/view/Main/5000265; sid:5000265; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Starting up"; content: "starting up"; classtype: system-event; program: dovecot; reference: url,wiki.softwink.com/bin/view/Main/5000266; sid:5000266; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Fatal error"; content: "Fatal"; classtype: program-error; program: dovecot; reference: url,wiki.softwink.com/bin/view/Main/5000267; sid:5000267; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Invalid username"; pcre: "/user not found|User not known|unknown user/i"; classtype: unsuccessful-user; program: dovecot; reference: url,wiki.softwink.com/bin/view/Main/5000268; sid:5000268; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Authentication success"; content: "login"; content: "Login"; classtype: successful-user; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000264; sid:5000264; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Failed login"; content: "Password mismatch"; classtype: unsuccessful-user; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000265; sid:5000265; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Starting up"; content: "starting up"; classtype: system-event; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000266; sid:5000266; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Fatal error"; content: "Fatal"; classtype: program-error; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000267; sid:5000267; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Invalid username"; pcre: "/user not found|User not known|unknown user/i"; classtype: unsuccessful-user; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000268; sid:5000268; rev:1;)
 

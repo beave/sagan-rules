@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,13 +25,13 @@
 #
 #*************************************************************
 
-alert udp $EXTERNAL_NET any -> $HOME_NET 161 (msg: "[CISCO-IOS] SNMP Authentication Failure"; content: "SNMP-3-AUTHFAIL"; classtype: attempted-recon; normalize: cisco; reference: url,wiki.softwink.com/bin/view/Main/5000051; sid: 5000051; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 514 (msg: "[CISCO-IOS] Attempted RSHELL connection"; content: "RCMD-4-RSHPORTATTEMPT"; classtype: unsuccessful-user; reference: url,wiki.softwink.com/bin/view/Main/5000052; sid: 5000052; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Line protocol changed state up/down"; content: "LINK-3-UPDOWN"; classtype: network-event; reference: url,wiki.softwink.com/bin/view/Main/5000053; sid: 5000053; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Line protocol changed state up/down"; content: "LINEPROTO-5-UPDOWN"; classtype: network-event; reference: url,wiki.softwink.com/bin/view/Main/5000054; sid: 5000054; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Configuration from console"; content: "SYS-5-CONFIG_I"; classtype: configuration-change; reference: url,wiki.softwink.com/bin/view/Main/5000055; sid: 5000055; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] ISO configuration changed"; content: "SYS-5-CONFIG"; classtype: configuration-change; reference: url,wiki.softwink.com/bin/view/Main/5000111; sid:5000111; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Successful login"; content: "SEC_LOGIN-5-LOGIN_SUCCESS"; classtype: successful-admin; reference: url,wiki.softwink.com/bin/view/Main/5000112; sid:5000112; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Failed login"; content: "SEC_LOGIN-4-LOGIN_FAILED"; classtype: unsuccessful-admin; reference: url,wiki.softwink.com/bin/view/Main/5000113; sid:5000113; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Fan failure - Fan not rotating"; content: "ENVMON-3-FAN_FAILED"; classtype: hardware-event; reference: url,wiki.softwink.com/bin/view/Main/5000388; sid:5000388; rev:2;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 161 (msg: "[CISCO-IOS] SNMP Authentication Failure"; content: "SNMP-3-AUTHFAIL"; classtype: attempted-recon; normalize: cisco; reference: url,wiki.quadrantsec.com/bin/view/Main/5000051; sid: 5000051; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 514 (msg: "[CISCO-IOS] Attempted RSHELL connection"; content: "RCMD-4-RSHPORTATTEMPT"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000052; sid: 5000052; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Line protocol changed state up/down"; content: "LINK-3-UPDOWN"; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000053; sid: 5000053; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Line protocol changed state up/down"; content: "LINEPROTO-5-UPDOWN"; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000054; sid: 5000054; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Configuration from console"; content: "SYS-5-CONFIG_I"; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000055; sid: 5000055; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] ISO configuration changed"; content: "SYS-5-CONFIG"; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000111; sid:5000111; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Successful login"; content: "SEC_LOGIN-5-LOGIN_SUCCESS"; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5000112; sid:5000112; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Failed login"; content: "SEC_LOGIN-4-LOGIN_FAILED"; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5000113; sid:5000113; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Fan failure - Fan not rotating"; content: "ENVMON-3-FAN_FAILED"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000388; sid:5000388; rev:2;)
 

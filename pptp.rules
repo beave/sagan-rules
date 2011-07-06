@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,7 +25,7 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 1723 (msg:"[PPTP] Failed message [communications error]"; pcre: "/GRE: \S+ from \S+ failed: status = -1/"; classtype: network-event; program: pptpd; reference: url,wiki.softwink.com/bin/view/Main/5000134; sid: 5000134; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 1723 (msg:"[PPTP] Connection established"; content: "control connection started"; classtype: successful-user; program: pptpd; reference: url,wiki.softwink.com/bin/view/Main/5000135; sid:5000135; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 1723 (msg:"[PPTP] Failed message [communications error]"; pcre: "/GRE: \S+ from \S+ failed: status = -1/"; classtype: network-event; program: pptpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000134; sid: 5000134; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 1723 (msg:"[PPTP] Connection established"; content: "control connection started"; classtype: successful-user; program: pptpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000135; sid:5000135; rev:1;)
 
 

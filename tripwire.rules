@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,4 +25,4 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[TRIPWIRE] Integrity Check failed"; content: "Integrity Check failed"; content: "File could not"; classtype: system-event; program: tripwire; reference: url,wiki.softwink.com/bin/view/Main/5000129; sid: 5000129; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[TRIPWIRE] Integrity Check failed"; content: "Integrity Check failed"; content: "File could not"; classtype: system-event; program: tripwire; reference: url,wiki.quadrantsec.com/bin/view/Main/5000129; sid: 5000129; rev:1;)

@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,6 +25,6 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET 110 (msg:"[VMPOP3D] Authentication failure for POP3"; content: "failed auth"; classtype: unsuccessful-user; program: vm-pop3d; reference: url,wiki.softwink.com/bin/view/Main/5000215; sid: 5000215; rev:1; )
+alert syslog $EXTERNAL_NET any -> $HOME_NET 110 (msg:"[VMPOP3D] Authentication failure for POP3"; content: "failed auth"; classtype: unsuccessful-user; program: vm-pop3d; reference: url,wiki.quadrantsec.com/bin/view/Main/5000215; sid: 5000215; rev:1; )
 
 

@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -27,7 +27,7 @@
 
 # Detect Weblabrinth traffic.  See Ben Jackson's https://code.google.com/p/weblabyrinth/
 #
-alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[MISC] Weblabyrinth - New host logged!"; classtype: misc-activity; program: weblabyrinth; content: "New host logged!"; parse_ip; reference: url,wiki.softwink.com/bin/view/Main/5001093; sid: 5001093; rev:3;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[MISC] Weblabyrinth - Crawler Ensnared!"; classtype: misc-activity; program: weblabyrinth; content: "Crawler Ensnared!"; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.softwink.com/bin/view/Main/5001095; sid: 5001095; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[MISC] Weblabyrinth - New host logged!"; classtype: misc-activity; program: weblabyrinth; content: "New host logged!"; parse_ip; reference: url,wiki.quadrantsec.com/bin/view/Main/5001093; sid: 5001093; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[MISC] Weblabyrinth - Crawler Ensnared!"; classtype: misc-activity; program: weblabyrinth; content: "Crawler Ensnared!"; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001095; sid: 5001095; rev:1;)
 
 

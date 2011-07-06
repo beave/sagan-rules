@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,8 +25,8 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Connection established"; content: "Connection,"; classtype: not-suspicious; program: courierlogger; reference: url,wiki.softwink.com/bin/view/Main/5000258; sid:5000258; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] IMAP/POP3 authentication failure"; content: "LOGIN FAILED,"; classtype: unsuccessful-user; program: courierlogger; reference: url,wiki.softwink.com/bin/view/Main/5000259; sid:5000259; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Logout/timeout"; pcre: "/LOGOUT|DISCONNECTED/"; classtype: not-suspicious; program: courierlogger; reference: url,wiki.softwink.com/bin/view/Main/5000260; sid:5000260; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] User login"; content: "LOGIN"; classtype: successful-user; program: courierlogger; reference: url,wiki.softwink.com/bin/view/Main/5000261; sid:5000261; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Connection established"; content: "Connection,"; classtype: not-suspicious; program: courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000258; sid:5000258; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] IMAP/POP3 authentication failure"; content: "LOGIN FAILED,"; classtype: unsuccessful-user; program: courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000259; sid:5000259; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Logout/timeout"; pcre: "/LOGOUT|DISCONNECTED/"; classtype: not-suspicious; program: courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000260; sid:5000260; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] User login"; content: "LOGIN"; classtype: successful-user; program: courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000261; sid:5000261; rev:1;)
 

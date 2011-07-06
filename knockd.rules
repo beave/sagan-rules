@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,6 +25,6 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[KNOCKD] Open Sesame"; content: "OPEN SESAME"; classtype: successful-user; program: knockd; parse_ip; reference:url,wiki.softwink.com/bin/view/Main/5000383; sid:5000383; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[KNOCKD] Sequence timeout"; content: "sequence timeout"; classtype: unsuccessful-user; program: knockd; reference: url,wiki.softwink.com/bin/view/Main/5000384; sid:5000384; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[KNOCKD] Open Sesame"; content: "OPEN SESAME"; classtype: successful-user; program: knockd; parse_ip; reference:url,wiki.quadrantsec.com/bin/view/Main/5000383; sid:5000383; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[KNOCKD] Sequence timeout"; content: "sequence timeout"; classtype: unsuccessful-user; program: knockd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000384; sid:5000384; rev:1;)
 

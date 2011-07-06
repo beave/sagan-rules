@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,6 +25,6 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ROUNDCUBE] - Authentication failed"; content: "failed"; content: "LOGIN"; classtype: unsuccessful-user; program: roundcube; reference: url,wiki.softwink.com/bin/view/Main/5000277; sid: 5000277; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ROUNDCUBE] - Authentication success"; content: "Successful login"; classtype: successful-user; program: roundcube; reference: url,wiki.softwink.com/bin/view/Main/5000278; sid: 5000278; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ROUNDCUBE] - Authentication failed"; content: "failed"; content: "LOGIN"; classtype: unsuccessful-user; program: roundcube; reference: url,wiki.quadrantsec.com/bin/view/Main/5000277; sid: 5000277; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ROUNDCUBE] - Authentication success"; content: "Successful login"; classtype: successful-user; program: roundcube; reference: url,wiki.quadrantsec.com/bin/view/Main/5000278; sid: 5000278; rev:1;)
 

@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -25,9 +25,9 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 23 (msg: "[TELNET] Connection refused by TCP Wrappers"; content: "refused connect from"; classtype: tcp-connection; program: telnetd; reference: url,wiki.softwink.com/bin/view/Main/5000243; sid: 5000243; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 23 (msg: "[TELNET] Remote host established a telnet connection"; content: "connection from"; classtype: not-suspicious; program: telnetd; reference: url,wiki.softwink.com/bin/view/Main/5000244; sid: 5000244; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 23 (msg: "[TELNET] Remote host invalid connection"; content: "ttloop"; pcre: "/peer died|read/i"; classtype: network-event; program: telnetd; reference: url,wiki.softwink.com/bin/view/Main/5000245; sid: 5000245; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 23 (msg: "[TELNET] Reverse lookup error"; content: "can't verify hostname"; classtype: network-event; program: telnetd; reference: url,wiki.softwink.com/bin/view/Main/5000246; sid: 5000246; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 23 (msg: "[TELNET] Attempt to login with an option"; content: "Attempt to login with an option"; classtype: exploit-attempt; program: telnetd; reference: url,wiki.softwink.com/bin/view/Main/5000392; sid: 5000392; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 23 (msg: "[TELNET] Connection refused by TCP Wrappers"; content: "refused connect from"; classtype: tcp-connection; program: telnetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000243; sid: 5000243; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 23 (msg: "[TELNET] Remote host established a telnet connection"; content: "connection from"; classtype: not-suspicious; program: telnetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000244; sid: 5000244; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 23 (msg: "[TELNET] Remote host invalid connection"; content: "ttloop"; pcre: "/peer died|read/i"; classtype: network-event; program: telnetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000245; sid: 5000245; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 23 (msg: "[TELNET] Reverse lookup error"; content: "can't verify hostname"; classtype: network-event; program: telnetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000246; sid: 5000246; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 23 (msg: "[TELNET] Attempt to login with an option"; content: "Attempt to login with an option"; classtype: exploit-attempt; program: telnetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000392; sid: 5000392; rev:1;)
 

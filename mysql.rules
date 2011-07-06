@@ -2,7 +2,7 @@
 # Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
-# Please submit any custom rules or ideas to sagan-submit@softwink.com or the sagan-sigs mailing list
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
 #
 #*************************************************************
 #  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -27,10 +27,10 @@
 #
 # see: http://dev.mysql.com/doc/refman/5.1/en/error-log.html
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] Access denied for user"; content: "Access denied for user"; classtype: unsuccessful-user; program: mysqld; reference: url,wiki.softwink.com/bin/view/Main/5000149; sid: 5000149; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] Access denied for user"; pcre: "/\d+ \S+ \d+ Connect/i"; classtype: unsuccessful-user; program: mysqld; reference: url,wiki.softwink.com/bin/view/Main/5000150; sid: 5000150; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] User disconnected from database"; pcre: "/\d+ \S+ \d+ Quit/i"; classtype: not-suspicious; program: mysqld; reference: url,wiki.softwink.com/bin/view/Main/5000151; sid: 5000151; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] Database startup or restart"; pcre: "/mysqld started|mysqld restarted/i"; classtype: system-event; program: mysqld; reference:softwink,5000152; sid:5000152; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] Database error"; pcre: "/\d+ \S+ \d+ [ERROR]/"; classtype: program-error; program: mysqld; reference: url,wiki.softwink.com/bin/view/Main/5000153; sid: 5000153; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] Database fatal error"; content: "Fatal error"; classtype: program-error; program: mysqld; reference: url,wiki.softwink.com/bin/view/Main/5000154; sid: 5000154; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] Access denied for user"; content: "Access denied for user"; classtype: unsuccessful-user; program: mysqld; reference: url,wiki.quadrantsec.com/bin/view/Main/5000149; sid: 5000149; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] Access denied for user"; pcre: "/\d+ \S+ \d+ Connect/i"; classtype: unsuccessful-user; program: mysqld; reference: url,wiki.quadrantsec.com/bin/view/Main/5000150; sid: 5000150; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] User disconnected from database"; pcre: "/\d+ \S+ \d+ Quit/i"; classtype: not-suspicious; program: mysqld; reference: url,wiki.quadrantsec.com/bin/view/Main/5000151; sid: 5000151; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] Database startup or restart"; pcre: "/mysqld started|mysqld restarted/i"; classtype: system-event; program: mysqld; reference:quadrantsec,5000152; sid:5000152; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] Database error"; pcre: "/\d+ \S+ \d+ [ERROR]/"; classtype: program-error; program: mysqld; reference: url,wiki.quadrantsec.com/bin/view/Main/5000153; sid: 5000153; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 3306 (msg:"[MYSQL] Database fatal error"; content: "Fatal error"; classtype: program-error; program: mysqld; reference: url,wiki.quadrantsec.com/bin/view/Main/5000154; sid: 5000154; rev:1;)
 
