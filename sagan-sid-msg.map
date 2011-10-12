@@ -1061,6 +1061,11 @@
 5001096 || [WINDOWS] MSSQLServer I/O error || url,wiki.quadrantsec.com/bin/view/Main/5001096
 5001097 || [VMWARE] User login successful || url,wiki.quadrantsec.com/bin/view/Main/5001097
 5001098 || [VMWARE] User logoff successful || url,wiki.quadrantsec.com/bin/view/Main/5001098
+5001099 || [VMWARE] Lost access to volume || url,wiki.quadrantsec.com/bin/view/Main/5001098
+5001100 || [VMWARE] Possible HD/Datastore failure || url,wiki.quadrantsec.com/bin/view/Main/5001100
+5001101 || [VMWARE] User login successful || url,wiki.quadrantsec.com/bin/view/Main/5001101
+5001102 || [XINETD] Courierpassd|Poppassd - Old password is incorrect || url,wiki.quadrantsec.com/bin/view/Main/5001102
+5001103 || [COURIER] Courierpassd|Poppassd - Changed user password || url,wiki.quadrantsec.com/bin/view/Main/5001103
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

@@ -38,3 +38,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET 993 (msg: "[XINETD] POP3S [SSL] connect
 alert tcp $EXTERNAL_NET any -> $HOME_NET 993 (msg: "[XINETD] POP3S [SSL] connection exit"; content: "EXIT"; content: "pop3s"; classtype: not-suspicious; program: xinetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000254; sid: 5000254; rev:1;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 993 (msg: "[XINETD] POP3S [SSL] User login "; content: "USERID"; content: "pop3s"; classtype: successful-user; program: xinetd; parse_ip; reference: url,wiki.quadrantsec.com/bin/view/Main/5000255; sid: 5000255; rev:1;)
 
+# courierpassd rules 10/11/2011 - Champ Clark
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[XINETD] Courierpassd|Poppassd - Old password is incorrect"; content: "old password"; classtype: unsuccessful-user; program: courierpassd|poppassd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001102; sid: 5001102; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Courierpassd|Poppassd - Changed user password"; content: "changed POP3"; classtype: successful-user; program: courierpassd|poppassd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001103; sid: 5001103; rev:1;)

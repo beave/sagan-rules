@@ -30,3 +30,4 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] IMAP/POP3 authe
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Logout/timeout"; pcre: "/LOGOUT|DISCONNECTED/"; classtype: not-suspicious; program: courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000260; sid:5000260; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] User login"; content: "LOGIN"; classtype: successful-user; program: courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000261; sid:5000261; rev:1;)
 
+
