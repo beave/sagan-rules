@@ -1,0 +1,47 @@
+# Sagan linux-kernel-normalize.rulebase
+# Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# This file is used in conjunction with liblognorm.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+prefix=
+
+# Rulebase notes: 
+#
+# iptables TCP : iptables flags "--state NEW,INVALID -j LOG"  (NOTE: no --prefix!)
+#
+#
+# [6251572.861709] IN=fire OUT=fire PHYSIN=eth0 PHYSOUT=eth1 SRC=X.X.X.X DST=X.X.X.X LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=9133 DF PROTO=TCP SPT=50661 DPT=113 WINDOW=5840 RES=0x00 SYN URGP=0
+
+rule=: %unusedtime:word% IN=%in:word% OUT=%out:word% PHYSIN=%physin:word% PHYSOUT=%phyout:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%len:number% TOS=%tos:word% PREC=%prec:word% TTL=%ttl:number% ID=%id:number% %DF:word% PROTO=%proto:word% SPT=%src-port:number% DPT=%dst-port:number% WINDOW=%window:number% RES=%res:word% %pkt-type:word% URGP=%urgp:number% 
+
+# iptables UDP : iptables flags "--state NEW,INVALID -j LOG"  (NOTE: no --prefix!)
+#
+# [6252395.294134] IN=fire OUT=fire PHYSIN=eth1 PHYSOUT=eth0 SRC=X.X.X.X DST=X.X.X.X LEN=78 TOS=0x00 PREC=0x00 TTL=50 ID=8658 DF PROTO=UDP SPT=137 DPT=137 LEN=52
+
+rule=: %unusedtime:word% IN=%in:word% OUT=%out:word% PHYSIN=%phyin:word% PHYSOUT=%phyout:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%len:number% TOS=%tos:word% PREC=%prec:word% TTL=%tos:word% ID=%id:number% PROTO=%proto:word% SPT=%src-port:number% DPT=%dst-port:number% LEN=%len:number% 
+
+
