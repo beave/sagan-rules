@@ -41,7 +41,12 @@ rule=: %unusedtime:word% IN=%in:word% OUT=%out:word% PHYSIN=%physin:word% PHYSOU
 # iptables UDP : iptables flags "--state NEW,INVALID -j LOG"  (NOTE: no --prefix!)
 #
 # [6252395.294134] IN=fire OUT=fire PHYSIN=eth1 PHYSOUT=eth0 SRC=X.X.X.X DST=X.X.X.X LEN=78 TOS=0x00 PREC=0x00 TTL=50 ID=8658 DF PROTO=UDP SPT=137 DPT=137 LEN=52
+# [6255730.106539] IN=fire OUT=fire PHYSIN=eth0 SRC=10.2.25.101 DST=173.165.207.19 LEN=76 TOS=0x00 PREC=0xC0 TTL=63 ID=34162 PROTO=UDP SPT=123 DPT=123 LEN=56 
+# [6256275.991117] IN=fire OUT=fire PHYSIN=eth0 PHYSOUT=eth1 SRC=X.X.X.X DST=X.X.X.X LEN=241 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=138 DPT=138 LEN=221 
 
 rule=: %unusedtime:word% IN=%in:word% OUT=%out:word% PHYSIN=%phyin:word% PHYSOUT=%phyout:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%len:number% TOS=%tos:word% PREC=%prec:word% TTL=%tos:word% ID=%id:number% PROTO=%proto:word% SPT=%src-port:number% DPT=%dst-port:number% LEN=%len:number% 
+
+rule=: %unusedtime:word% IN=%in:word% OUT=%out:word% PHYSIN=%phyin:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%len:number% TOS=%tos:word% PREC=%prec:word% TTL=%ttl:number% ID=%id:number%2 PROTO=%proto:word% SPT=%src-port:number% DPT=%dst-port:number% LEN=%len:number% 
+
 
 
