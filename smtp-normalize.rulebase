@@ -28,15 +28,15 @@
 #*************************************************************
 
 prefix=
-rule=: %msgid:word% %hostname:word% [%src-ip:ipv4%]: expn %username:word%
+rule=: %-:word% %hostname:word% [%src-ip:ipv4%]: expn %username:word%
 
 
 # p0IGs29E022795: ruleset=check_rcpt, arg1=<bob@example.com>, relay=mailhost.example.com [192.168.0.1], reject=553 5.1.8 <frank@example.com>... Domain of sender address bogus@example.com does not exist
 
-rule=: %msgid:word% ruleset=check_rcpt, %e1:word% relay=%relay:word% [%src-ip:ipv4%] (may be forged), reject=%reject:number% 4.1.8 Domain of sender address info@superassociation.com does not %reason:word%
+rule=: %-:word% ruleset=check_rcpt, %e1:word% relay=%relay:word% [%src-ip:ipv4%] (may be forged), reject=%reject:number% 4.1.8 Domain of sender address info@superassociation.com does not %reason:word%
 
 
 # p0I3FCpA013475: [192.168.0.1]: Possible SMTP RCPT flood, throttling.
 
-#rule=: %msgid:word%: [%src-ip:ipv4%]: Possible SMTP RCPT flood, throttling.
+#rule=: %-:word%: [%src-ip:ipv4%]: Possible SMTP RCPT flood, throttling.
 

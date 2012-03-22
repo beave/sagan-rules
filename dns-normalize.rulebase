@@ -30,8 +30,10 @@
 prefix=
 
 
-rule=: client %src-ip:ipv4%#%src-port:number%: update '%type:char-to:\x27%' denied
-rule=: client %src-ip:ipv4%#%src-port:number%: query (cache) '%type:char-to:\x27%' denied
-
-rule=: unexpected RCODE %failcode:word% resolving '%type:char-to:\x27%': %src-ip:ipv4%#%src-port:number%
+rule=: client %src-ip:ipv4%#%src-port:number%: update '%-:char-to:\x27%' denied
+rule=: client %src-ip:ipv4%#%src-port:number%: query (cache) '%-:char-to:\x27%' denied
+rule=: unexpected RCODE %-:word% resolving '%-:char-to:\x27%': %src-ip:ipv4%#%src-port:number%
+#rule=: error (unexpected RCODE REFUSED) resolving '%-:char-to:\x27%': %src-ip:ipv4%#%src-port:number%
+#rule=: error (unexpected RCODE SERVFAIL) resolving '%-:char-to:\x27%': %src-ip:ipv4%#%src-port:number%
+rule=: error (unexpected RCODE %-:word% resolving '%-:char-to:\x27%': %src-ip:ipv4%#%src-port:number%
 
