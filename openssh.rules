@@ -68,14 +68,9 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Invalid or illegal u
 
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Invalid or illegal user [apache]"; pcre: "/invalid user|illegal user/i"; content: "user apache "; classtype: attempted-user; program: sshd; normalize: openssh; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001119; sid: 5001119; rev:1;)
 
-
-
-
-
-
 # Champ Clark (Quadrant Information Security) - Jan 27th 2010 - Out of band challenge - for more info see: http://sourceforge.net/projects/pamobc/
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg: "[OPENSSH] Out-of-Band challenge failure"; content: "Failed auth"; content: "out-of-band challenge"; content: "pam_obc"; classtype: unsuccessful-user;program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000023; sid: 5000023; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg: "[OPENSSH] Out-of-Band challenge failure"; content: "Failed auth"; content: "out-of-band challenge"; content: "pam_obc"; classtype: unsuccessful-user;program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000023; sid: 5000023; rev:3;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg: "[OPENSSH] Bad protocol version - possible attack"; content: "Bad protocol version identification"; parse_ip;  classtype: non-standard-protocol; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000068; sid: 5000068; rev:2;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 ( msg: "[OPENSSH] Timeout while logging in"; content:"Timeout before authentication" ;classtype: unsuccessful-user; program: sshd; parse_ip; reference: url,wiki.quadrantsec.com/bin/view/Main/5000069; sid: 5000069; rev:2;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg: "[OPENSSH] No identification string - possible scan"; content:"Did not receive identification string"; classtype: network-scan; program: sshd; parse_ip; reference: url,wiki.quadrantsec.com/bin/view/Main/5000070; sid: 5000070; rev:2;)
