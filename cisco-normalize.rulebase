@@ -58,3 +58,23 @@ rule=: Configured from console by %tty:word:% (%ip:ipv4%)
 rule=: Authentication failure for %proto:word% req from host %ip:ipv4%
 rule=: Attempted to connect to %servname:word% from %ip:ipv4%
 
+# 02:19:47.007 UTC: %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host 10.10.10.10
+#
+rule=: %-:word% %-:word% %-:word% %-:word% %%SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host %src-ip:ipv4%
+
+# Deny TCP (no connection) from perforce/139 to 192.168.73.1/2048 flags RST ACK  on interface INSIDE
+#
+rule=: Deny TCP (no connection) from %src-ip:ipv4%/%src-port:number% to %dst-ip:ipv4%/%dst-port:number% flags %-:word% %-:word%  on interface %-:word%
+rule=: Deny TCP (no connection) from %src-ip:ipv4%/%src-port:number% to %dst-ip:ipv4%/%dst-port:number% flags %-:word%  on interface %-:word%
+
+# Mar 31 02:30:42.815 UTC: %SYS-5-CONFIG_I: Configured from console by sachen on vty0 (10.32.23.63)
+#
+rule=: %-:word% %-:word% %-:word% %-:word% %%SYS-5-CONFIG_I: Configured from console by %username:word% on %-:word% (%src-ip:ipv4%)
+
+# Deny inbound UDP from 46.161.166.49/63905 to 214.20.10.211/65257 on interface OUTSIDE
+#
+rule=: Deny inbound UDP from %src-ip:ipv4%/%src-port:number% to %dst-ip:ipv4%/%dst-port:number% on interface %-:word%
+
+# Denied ICMP type=8, code=0 from 159.101.118.111 on interface INSIDE
+#
+rule=: Denied ICMP type=%-:number%, code=%-:number% from %src-ip:ipv4% on interface %-:word%
