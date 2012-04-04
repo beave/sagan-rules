@@ -1,5 +1,5 @@
 # Sagan openssh.rules
-# Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2012, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -30,9 +30,10 @@
 # need to set that to "No" so Sagan can "find" the source IP addresses and
 # port information.
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] PAM Authentication failure"; content: "Authentication failure"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000015; normalize: openssh; program: sshd; threshold:type limit, track by_src, count 5, seconds 300; sid: 5000015; rev:2;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Authentication failure"; content: "authentication failure"; classtype: unsuccessful-user;program: sshd; threshold:type limit, track by_src, count 5, seconds 300; normalize: openssh; reference: url,wiki.quadrantsec.com/bin/view/Main/5000016; sid: 5000016; rev:2;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Authentication failure for root"; content: "Authentication failure for root"; classtype: unsuccessful-admin;program: sshd; threshold:type limit, track by_src, count 5, seconds 300; parse_ip; parse_port; reference: url,wiki.quadrantsec.com/bin/view/Main/5000017; sid: 5000017; rev:2;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] PAM Authentication failure"; content: "Authentication failure"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000015; normalize: openssh; program: sshd; after: track by_src, count 3, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; sid: 5000015; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Authentication failure"; content: "authentication failure"; classtype: unsuccessful-user;program: sshd; after: track by_src, count 3, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; normalize: openssh; reference: url,wiki.quadrantsec.com/bin/view/Main/5000016; sid: 5000016; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Authentication failure for root"; content: "Authentication failure for root"; classtype: unsuccessful-admin;program: sshd; after: track by_src, count 3, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; normalize: openssh; reference: url,wiki.quadrantsec.com/bin/view/Main/5000017; sid: 5000017; rev:3;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Possible break-in attempt"; content: "POSSIBLE BREAK-IN ATTEMPT"; classtype: unsuccessful-user; program: sshd; threshold: type limit, track by_src, count 5, seconds 300; parse_ip; parse_port; reference: url,wiki.quadrantsec.com/bin/view/Main/5000018; sid: 5000018; rev:2;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Not executable shell - login attempt"; content: "is not executable"; classtype: unsuccessful-user; program: sshd; parse_ip; reference: url,wiki.quadrantsec.com/bin/view/Main/5000020; sid: 5000020; rev:2;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Message send write error"; content: "ssh_msg_send";classtype: network-event; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000021; sid:5000021; rev:1;)
@@ -85,5 +86,4 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Accepted publickey";
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Session closed"; content: "session closed for" ; classtype: not-suspicious; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000407; sid:5000407; rev:1;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Received disconnect"; content: "Received disconnect from"; classtype: not-suspicious; program: sshd; parse_ip; reference: url,wiki.quadrantsec.com/bin/view/Main/5000408; sid:5000408; rev:2;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg: "[OPENSSH] User logged into a disabled account"; pcre: "/accepted|authenticated/i"; pcre: "/^apache$|^mysql$|^www$|^nobody$|^nogroup$|^portmap$|^named$|^rpc$|^mail$|^ftp$|^shutdown$|^halt$|^daemon$|^bin$|^postfix$|^shell$|^info$|^guest$|^psql$|^user$|^users$|^console$|^uucp$|^lp$|^sync$|^sshd$|^cdrom$|^ossec$|^sagan$/"; parse_ip; parse_port; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000411; program: sshd; sid: 5000411; rev:2;)
-
 

@@ -1,5 +1,5 @@
 # Sagan windows.rules
-# Copyright (c) 2009-2011, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2012, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -28,7 +28,7 @@
 # Eventlog to syslog service.  This is what we primarily use.
 # http://code.google.com/p/eventlog-to-syslog/
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] Unknown user name or bad password"; content: " 529: "; classtype: unsuccessful-user; program: Security; threshold:type limit, track by_src, count 5, seconds 120; parse_ip; reference: url,wiki.quadrantsec.com/bin/view/Main/5000302; sid: 5000302; rev:3;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] Unknown user name or bad password"; content: " 529: "; classtype: unsuccessful-user; program: Security; after: track by_src, count 3, seconds 120; threshold:type limit, track by_src, count 5, seconds 120; normalize: windows; reference: url,wiki.quadrantsec.com/bin/view/Main/5000302; sid: 5000302; rev:4;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] Account logon time restriction violation"; content: " 530: "; classtype: unsuccessful-user; program: Userenv; reference: url,wiki.quadrantsec.com/bin/view/Main/5000303; sid: 5000303; rev:3;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] Account locked out"; content: " 539: "; classtype: unsuccessful-user; program: Security;  threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000358; sid:5000358; rev:3;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] Successful user logoff"; content: " 538: "; classtype: not-suspicious; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5000304; sid:5000304; rev:1;)
