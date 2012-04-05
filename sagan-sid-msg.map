@@ -1066,6 +1066,22 @@
 5001101 || [VMWARE] User login successful || url,wiki.quadrantsec.com/bin/view/Main/5001101
 5001102 || [XINETD] Courierpassd|Poppassd - Old password is incorrect || url,wiki.quadrantsec.com/bin/view/Main/5001102
 5001103 || [COURIER] Courierpassd|Poppassd - Changed user password || url,wiki.quadrantsec.com/bin/view/Main/5001103
+5001104 || [LINUX-KERNEL] IPTABLES TCP || url,wiki.quadrantsec.com/bin/view/Main/5001104
+5001105 || [LINUX-KERNEL] IPTABLES TCP || url,wiki.quadrantsec.com/bin/view/Main/5001105
+5001106 || [OPENSSH] Invalid or illegal user [a] || url,wiki.quadrantsec.com/bin/view/Main/5001106
+5001107 || [OPENSSH] Invalid or illegal user [admin] || url,wiki.quadrantsec.com/bin/view/Main/5001107
+5001108 || [OPENSSH] Invalid or illegal user [ftp] || url,wiki.quadrantsec.com/bin/view/Main/5001108
+5001109 || [OPENSSH] Invalid or illegal user [guest] || url,wiki.quadrantsec.com/bin/view/Main/5001109
+5001110 || [OPENSSH] Invalid or illegal user [info] || url,wiki.quadrantsec.com/bin/view/Main/5001110
+5001111 || [OPENSSH] Invalid or illegal user [mysql] || url,wiki.quadrantsec.com/bin/view/Main/5001111
+5001112 || [OPENSSH] Invalid or illegal user [nagios] || url,wiki.quadrantsec.com/bin/view/Main/5001112
+5001113 || [OPENSSH] Invalid or illegal user [oracle] || url,wiki.quadrantsec.com/bin/view/Main/5001113
+5001114 || [OPENSSH] Invalid or illegal user [postgres] || url,wiki.quadrantsec.com/bin/view/Main/5001114
+5001115 || [OPENSSH] Invalid or illegal user [test] || url,wiki.quadrantsec.com/bin/view/Main/5001115
+5001116 || [OPENSSH] Invalid or illegal user [user] || url,wiki.quadrantsec.com/bin/view/Main/5001116
+5001117 || [OPENSSH] Invalid or illegal user [web] || url,wiki.quadrantsec.com/bin/view/Main/5001117
+5001118 || [OPENSSH] Invalid or illegal user [webmaster] || url,wiki.quadrantsec.com/bin/view/Main/5001118
+5001119 || [OPENSSH] Invalid or illegal user [apache] || url,wiki.quadrantsec.com/bin/view/Main/5001119
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
