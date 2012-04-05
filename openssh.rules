@@ -40,7 +40,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Message send write e
 
 # General "illegal user" 
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Invalid or illegal user"; pcre: "/invalid user|illegal user/i"; classtype: attempted-user; program: sshd; normalize: openssh; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5000022; sid: 5000022; rev:6;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Invalid or illegal user"; pcre: "/invalid user|illegal user/i"; classtype: attempted-user; program: sshd; normalize: openssh; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000022; sid: 5000022; rev:6;)
 
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Invalid or illegal user [a]"; pcre: "/invalid user|illegal user/i"; content: "user a "; classtype: attempted-user; program: sshd; normalize: openssh; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001106; sid: 5001106; rev:2;)
 
