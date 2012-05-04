@@ -1082,6 +1082,8 @@
 5001117 || [OPENSSH] Invalid or illegal user [web] || url,wiki.quadrantsec.com/bin/view/Main/5001117
 5001118 || [OPENSSH] Invalid or illegal user [webmaster] || url,wiki.quadrantsec.com/bin/view/Main/5001118
 5001119 || [OPENSSH] Invalid or illegal user [apache] || url,wiki.quadrantsec.com/bin/view/Main/5001119
+6000004 || [ADTRAN] TCP INTERNAL BLOCK
+6000005 || [ADTRAN] UDP INTERNAL BLOCK
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

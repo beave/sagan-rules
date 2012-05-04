@@ -1,0 +1,7 @@
+# GENERATORS -> msg map
+# Format: generatorid || alertid || MSG
+
+1 || 1 || Sagan general alert
+100 || 100 || sagan_track_clients: No log activity from remote agent in timeout period!
+100 || 101 || sagan_track_clients: Log activity resumed. 
+

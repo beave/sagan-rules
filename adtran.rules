@@ -1,0 +1,2 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[ADTRAN] TCP INTERNAL BLOCK"; content: "Access Policy"; content: "tcp"; program: FIREWALL; normalize: adtran; classtype: bad-unknown; sid: 6000004; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[ADTRAN] UDP INTERNAL BLOCK"; content: "Access Policy"; content: "udp"; program: FIREWALL; normalize: adtran; classtype: bad-unknown; sid: 6000005; rev:1;) 
