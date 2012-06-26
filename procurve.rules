@@ -1,0 +1,42 @@
+# Sagan procurve.rules
+# Copyright (c) 2009-2012, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+
+# The rules below are based on SWITCH and L3-SWITCH.  The L3 switches are 
+# the 5300/8200 model chassis switches.  The plain E-series are the L2
+# access/edge switches.  - John Babio / ESU
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] Invalid username/password"; program: auth; content:"Invalid user name/password"; classtype: unsuccessful-user; sid: 5001120; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] port is off-line"; program: ports; content:"is now off-line; classtype: network-event; sid: 5001121; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] System went down:"; program: system; content:"System went down:"; classtype: network-event; sid: 5001122; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] Port Security Violation"; program: FFI; pcre: "/Security Violation/i"; normalize: procurve; classtype: policy-violation; sid: 5001123; rev:1;)
+
+# The "program" becomes the alert ID.   So no "content:" is needed - Champ Clark III 06/25/2012
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-L3-SWITCH] port is off-line"; program: 00077; classtype: network-event; sid: 5001124; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-L3-SWITCH] Invalid username/password"; program: 00419; classtype: unsuccessful-user; sid: 5001125; rev:1;)
+
