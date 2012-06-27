@@ -30,13 +30,13 @@
 # the 5300/8200 model chassis switches.  The plain E-series are the L2
 # access/edge switches.  - John Babio / ESU
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] Invalid username/password"; program: auth; content:"Invalid user name/password"; classtype: unsuccessful-user; sid: 5001120; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] port is off-line"; program: ports; content:"is now off-line; classtype: network-event; sid: 5001121; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] System went down:"; program: system; content:"System went down:"; classtype: network-event; sid: 5001122; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] Port Security Violation"; program: FFI; pcre: "/Security Violation/i"; normalize: procurve; classtype: policy-violation; sid: 5001123; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] Invalid username/password"; program: auth; content:"Invalid user name/password"; classtype: unsuccessful-user; sid:5001120; reference: url,wiki.quadrantsec.com/bin/view/Main/5001120; rev:3;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] port is off-line"; program: ports; content:"is now off-line; classtype: network-event; sid: 5001121; reference: url,wiki.quadrantsec.com/bin/view/Main/5001121; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] System went down:"; program: system; content:"System went down:"; classtype: network-event; sid: 5001122; reference: url,wiki.quadrantsec.com/bin/view/Main/5001122; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] Port Security Violation"; program: FFI; pcre: "/Security Violation/i"; normalize: procurve; classtype: policy-violation; sid: 5001123; reference: url,wiki.quadrantsec.com/bin/view/Main/5001123; rev:1;)
 
 # The "program" becomes the alert ID.   So no "content:" is needed - Champ Clark III 06/25/2012
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-L3-SWITCH] port is off-line"; program: 00077; classtype: network-event; sid: 5001124; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-L3-SWITCH] Invalid username/password"; program: 00419; classtype: unsuccessful-user; sid: 5001125; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-L3-SWITCH] port is off-line"; program: 00077; classtype: network-event; sid: 5001124; reference: url,wiki.quadrantsec.com/bin/view/Main/5001124; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-L3-SWITCH] Invalid username/password"; program: 00419; classtype: unsuccessful-user; sid: 5001125; reference: url,wiki.quadrantsec.com/bin/view/Main/5001125; rev:1;)
 

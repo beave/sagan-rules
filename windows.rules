@@ -86,4 +86,6 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET 5900 (msg: "[WINDOWS] WinVNC4 HTTPServe
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] Crypt32 Failed to extract third-party root list"; content: " 4107: "; classtype: program-error; program: crypt32; reference: url,wiki.quadrantsec.com/bin/view/Main/5000356; sid: 5000356; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] Disk corruption"; content: " 55: "; classtype: hardware-event; program: Ntfs; reference: url,wiki.quadrantsec.com/bin/view/Main/5001056; sid: 5001056; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] MSSQLServer I/O error"; content: " 823: "; classtype: hardware-event; program: Ntfs; reference: url,wiki.quadrantsec.com/bin/view/Main/5001096; sid: 5001096; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] RDP maximum allowed failed logon attempts"; content: " 1012: "; classtype: unsuccessful-user; program: TermService; reference: url,wiki.quadrantsec.com/bin/view/Main/5001128; sid: 5001128; rev:1;)
+
 
