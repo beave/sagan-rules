@@ -109,9 +109,9 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] General ac
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] DC  - Integrity check on decrypted"; pcre: "/ 675: | 676: | 681: /"; content "Failure Code: 0x1F"; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001195; sid: 5001195; rev:1;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] DC - Possible replay attack"; pcre: "/ 675: | 676: | 681: /"; content "Failure Code: 0x22"; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001195; sid: 5001195; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] DC - Possible replay attack"; pcre: "/ 675: | 676: | 681: /"; content "Failure Code: 0x22"; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001196; sid: 5001196; rev:1;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] DC - Clock skew too great"; pcre: "/ 675: | 676: | 681: /"; content "Failure Code: 0x25"; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001195; sid: 5001195; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] DC - Clock skew too great"; pcre: "/ 675: | 676: | 681: /"; content "Failure Code: 0x25"; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001197; sid: 5001197; rev:1;)
 
 
 # Tied to SIDs.
