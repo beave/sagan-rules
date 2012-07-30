@@ -1,0 +1,5 @@
+
+
+# DigitalPersona_Pro: 1025: NT AUTHORITY\SYSTEM: User name: bob Domain: MASTER Credentials verified for logon: Password: No Fingerprint: Yes Smartcard: No Fingerprint PIN: No
+
+alert syslog  any ->  any (msg: "[DIGITALPERSONA] User login"; content: " 1024: "; classtype: successful-user; program: DigitalPersona_Pro; reference: url,wiki.quadrantsec.com/bin/view/Main/5001433; sid: 5001433; rev:1;)
