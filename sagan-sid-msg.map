@@ -1388,7 +1388,46 @@
 5001430 || [CITRIX] Netscaler - VRID changes state to backup || url,wiki.quadrantsec.com/bin/view/Main/5001430 || url,support.citrix.com/article/CTX123875
 5001431 || [CITRIX] Netscaler - VRID changes state to INIT || url,wiki.quadrantsec.com/bin/view/Main/5001431 || url,support.citrix.com/article/CTX123875
 5001432 || [CITRIX] Netscaler - VRID changes state to master || url,wiki.quadrantsec.com/bin/view/Main/5001432 || url,support.citrix.com/article/CTX123875
-5001433 || [DIGITALPERSONA] User login || url,wiki.quadrantsec.com/bin/view/Main/5001433
+5001435 || [DIGITALPERSONA] User login || url,wiki.quadrantsec.com/bin/view/Main/5001435
+5001436 || [DIGITALPERSONA] OTS Started || url,wiki.quadrantsec.com/bin/view/Main/5001436
+5001437 || [DIGITALPERSONA] Fingerprint reader connected || url,wiki.quadrantsec.com/bin/view/Main/5001437
+5001438 || [DIGITALPERSONA] Fingerprint reader disconnected || url,wiki.quadrantsec.com/bin/view/Main/5001438
+5001439 || [DIGITALPERSONA] One-to-one fingerprint match failed || url,wiki.quadrantsec.com/bin/view/Main/5001439
+5001440 || [DIGITALPERSONA] System unlocked || url,wiki.quadrantsec.com/bin/view/Main/5001440
+5001441 || [DIGITALPERSONA] Kiosk Login || url,wiki.quadrantsec.com/bin/view/Main/5001441
+5001442 || [DIGITALPERSONA] Logoff || url,wiki.quadrantsec.com/bin/view/Main/5001442
+5001443 || [DIGITALPERSONA] Kiosk Logoff || url,wiki.quadrantsec.com/bin/view/Main/5001443
+5001444 || [DIGITALPERSONA] System locked || url,wiki.quadrantsec.com/bin/view/Main/5001444
+5001445 || [DIGITALPERSONA] Kiosk locked || url,wiki.quadrantsec.com/bin/view/Main/5001445
+5001446 || [DIGITALPERSONA] System unlocked || url,wiki.quadrantsec.com/bin/view/Main/5001446
+5001447 || [DIGITALPERSONA] Kiosk unlocked || url,wiki.quadrantsec.com/bin/view/Main/5001447
+5001448 || [DIGITALPERSONA] Registered PIN || url,wiki.quadrantsec.com/bin/view/Main/5001448
+5001449 || [DIGITALPERSONA] Changed PIN || url,wiki.quadrantsec.com/bin/view/Main/5001449
+5001450 || [DIGITALPERSONA] FP used to unlocked smart card || url,wiki.quadrantsec.com/bin/view/Main/5001450
+5001451 || [DIGITALPERSONA] Shared account problem || url,wiki.quadrantsec.com/bin/view/Main/5001451
+5001452 || [DIGITALPERSONA] Shared account missing || url,wiki.quadrantsec.com/bin/view/Main/5001452
+5001453 || [DIGITALPERSONA] OTS Stopped || url,wiki.quadrantsec.com/bin/view/Main/5001453
+5001454 || [DIGITALPERSONA] Agent cannot start || url,wiki.quadrantsec.com/bin/view/Main/5001454
+5001455 || [DIGITALPERSONA] Password changed canceled by user || url,wiki.quadrantsec.com/bin/view/Main/5001455
+5001456 || [DIGITALPERSONA] Inital fillin was preformed || url,wiki.quadrantsec.com/bin/view/Main/5001456
+5001457 || [DIGITALPERSONA] Fillin was preformed || url,wiki.quadrantsec.com/bin/view/Main/5001457
+5001458 || [DIGITALPERSONA] Account data could not be modified || url,wiki.quadrantsec.com/bin/view/Main/5001458
+5001459 || [DIGITALPERSONA] Account data successfully modified || url,wiki.quadrantsec.com/bin/view/Main/5001459
+5001460 || [DIGITALPERSONA] CRC check failure || url,wiki.quadrantsec.com/bin/view/Main/5001460
+5001461 || [DIGITALPERSONA] User added to Kiosk ID list || url,wiki.quadrantsec.com/bin/view/Main/5001461
+5001462 || [DIGITALPERSONA] User deleted to Kiosk ID list || url,wiki.quadrantsec.com/bin/view/Main/5001462
+5001463 || [DIGITALPERSONA] User pushed out of the User ID list || url,wiki.quadrantsec.com/bin/view/Main/5001463
+5001464 || [DIGITALPERSONA] Kiosk ID list created || url,wiki.quadrantsec.com/bin/view/Main/5001464
+5001465 || [DIGITALPERSONA] Kiosk ID list deleted || url,wiki.quadrantsec.com/bin/view/Main/5001465
+5001466 || [DIGITALPERSONA] DPHost started || url,wiki.quadrantsec.com/bin/view/Main/5001466
+5001467 || [DIGITALPERSONA] DPHost cannot started || url,wiki.quadrantsec.com/bin/view/Main/5001467
+5001468 || [DIGITALPERSONA] Connection to server succeeded || url,wiki.quadrantsec.com/bin/view/Main/5001468
+5001469 || [DIGITALPERSONA] Connection to server failed || url,wiki.quadrantsec.com/bin/view/Main/5001469
+5001470 || [DIGITALPERSONA] Server busy || url,wiki.quadrantsec.com/bin/view/Main/5001470
+5001471 || [DIGITALPERSONA] One-to-many matched failed || url,wiki.quadrantsec.com/bin/view/Main/5001471
+5001472 || [DIGITALPERSONA] Account locked out || url,wiki.quadrantsec.com/bin/view/Main/5001472
+5001473 || [DIGITALPERSONA] License quota exceeded || url,wiki.quadrantsec.com/bin/view/Main/5001473
+5001474 || [DIGITALPERSONA] License quota near limit || url,wiki.quadrantsec.com/bin/view/Main/5001474
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
