@@ -289,61 +289,56 @@
 5000299 || [OSSEC] Log file rotated || url,wiki.quadrantsec.com/bin/view/Main/5000299
 5000300 || [OSSEC] File size reduced || url,wiki.quadrantsec.com/bin/view/Main/5000300
 5000301 || [OSSEC] Microsoft event log cleared || url,wiki.quadrantsec.com/bin/view/Main/5000301
-5000302 || [WINDOWS] Unknown user name or bad password || url,wiki.quadrantsec.com/bin/view/Main/5000302
-5000303 || [WINDOWS] Account logon time restriction violation || url,wiki.quadrantsec.com/bin/view/Main/5000303
-5000304 || [WINDOWS] Successful user logoff || url,wiki.quadrantsec.com/bin/view/Main/5000304
-5000305 || [WINDOWS] Successful user logon || url,wiki.quadrantsec.com/bin/view/Main/5000305
-5000306 || [WINDOWS] Detection of net listening application || url,wiki.quadrantsec.com/bin/view/Main/5000306
-5000307 || [WINDOWS] Privileged Service Called || url,wiki.quadrantsec.com/bin/view/Main/5000307
-5000308 || [WINDOWS] Apple Bonjour service detect [iTunes installed?] || url,wiki.quadrantsec.com/bin/view/Main/5000308
-5000309 || [WINDOWS] Application error || url,wiki.quadrantsec.com/bin/view/Main/5000309
-5000310 || [WINDOWS] Application hang || url,wiki.quadrantsec.com/bin/view/Main/5000310
-5000311 || [WINDOWS] Application popup || url,wiki.quadrantsec.com/bin/view/Main/5000311
-5000312 || [WINDOWS] Backup Exec - Job completed with exceptions || url,wiki.quadrantsec.com/bin/view/Main/5000312
-5000313 || [WINDOWS] Backup Exec - Job cancellation || url,wiki.quadrantsec.com/bin/view/Main/5000313
-5000314 || [WINDOWS] Backup Exec - Alert - insert media || url,wiki.quadrantsec.com/bin/view/Main/5000314
-5000315 || [WINDOWS] Backup Exec - Service started || url,wiki.quadrantsec.com/bin/view/Main/5000315
-5000316 || [WINDOWS] SCSI bug fault occurred || url,wiki.quadrantsec.com/bin/view/Main/5000316
-5000317 || [WINDOWS] Citrix message || url,wiki.quadrantsec.com/bin/view/Main/5000317
-5000318 || [WINDOWS] Trusted Platform Module [TPM] Error.  User name not found || url,wiki.quadrantsec.com/bin/view/Main/5000318
-5000319 || [WINDOWS] Eventlog service was corrupted || url,wiki.quadrantsec.com/bin/view/Main/5000319
-5000320 || [WINDOWS] Eventlog service was stopped || url,wiki.quadrantsec.com/bin/view/Main/5000320
-5000322 || [WINDOWS] Eventlog service returned error || url,wiki.quadrantsec.com/bin/view/Main/5000322
-5000323 || [WINDOWS] Eventlog service reporting uptime [in seconds] || url,wiki.quadrantsec.com/bin/view/Main/5000323
-5000324 || [WINDOWS] IPSec message || url,wiki.quadrantsec.com/bin/view/Main/5000324
-5000325 || [WINDOWS] MS-SQL - Server started || url,wiki.quadrantsec.com/bin/view/Main/5000325
-5000326 || [WINDOWS] MS-SQL - Server listening on network || url,wiki.quadrantsec.com/bin/view/Main/5000326
-5000327 || [WINDOWS] MsiInstaller - Client successfully installed software || url,wiki.quadrantsec.com/bin/view/Main/5000327
-5000328 || [WINDOWS] MsiInstaller - Google Toolbar installed || url,wiki.quadrantsec.com/bin/view/Main/5000328
-5000329 || [WINDOWS] MsiInstaller - Google Toolbar updated || url,wiki.quadrantsec.com/bin/view/Main/5000329
-5000330 || [WINDOWS] MsiInstaller - RegWork - Registry clearner || url,wiki.quadrantsec.com/bin/view/Main/5000330
-5000331 || [WINDOWS] MsiInstaller - Google Toolbar updated || url,wiki.quadrantsec.com/bin/view/Main/5000331
-5000332 || [WINDOWS] MsiInstaller - Client successfully updated software || url,wiki.quadrantsec.com/bin/view/Main/5000332
-5000334 || [WINDOWS] NtServicePack messsage - package or hotfix installed || url,wiki.quadrantsec.com/bin/view/Main/5000334
-5000335 || [WINDOWS] SNMP Service has started successfully || url,wiki.quadrantsec.com/bin/view/Main/5000335
-5000336 || [WINDOWS] Google Software Updater service is active || url,wiki.quadrantsec.com/bin/view/Main/5000336
-5000337 || [WINDOWS] Google update service is active || url,wiki.quadrantsec.com/bin/view/Main/5000337
-5000338 || [WINDOWS] Google update service is active || url,wiki.quadrantsec.com/bin/view/Main/5000338
-5000339 || [WINDOWS] Tenable Nessus service is active [pen-test tool] || url,wiki.quadrantsec.com/bin/view/Main/5000339
-5000340 || [WINDOWS] Remote Access Connection Manager service is active || url,wiki.quadrantsec.com/bin/view/Main/5000340
-5000341 || [WINDOWS] Symantec AntiVirus startup successful || url,wiki.quadrantsec.com/bin/view/Main/5000341
-5000342 || [WINDOWS] Symantec AntiVirus couldn't scan some files or directories || url,wiki.quadrantsec.com/bin/view/Main/5000342
-5000343 || [WINDOWS] Symantec AntiVirus New virus definition file loaded || url,wiki.quadrantsec.com/bin/view/Main/5000343
-5000344 || [WINDOWS] Symantec AntiVirus Successful remote connect by administrator || url,wiki.quadrantsec.com/bin/view/Main/5000344
-5000345 || [WINDOWS] Tenable Nessus started [pen-test tool] || url,wiki.quadrantsec.com/bin/view/Main/5000345
-5000346 || [WINDOWS] WinRM [Windows Remote Management] is started and listening || url,wiki.quadrantsec.com/bin/view/Main/5000346
-5000347 || [WINDOWS] WinVNC4 Connection accepted || url,wiki.quadrantsec.com/bin/view/Main/5000347
-5000348 || [WINDOWS] WinVNC4 Connection closed - Requested security type not available || url,wiki.quadrantsec.com/bin/view/Main/5000348
-5000349 || [WINDOWS] WinVNC4 Connection blacklisted || url,wiki.quadrantsec.com/bin/view/Main/5000349
-5000350 || [WINDOWS] WinVNC4 Connection Authenticaiton failure || url,wiki.quadrantsec.com/bin/view/Main/5000350
-5000351 || [WINDOWS] WinVNC4 Connection close - reset by peer || url,wiki.quadrantsec.com/bin/view/Main/5000351
-5000352 || [WINDOWS] WinVNC4 Connection close - reset by peer [Non-shared] || url,wiki.quadrantsec.com/bin/view/Main/5000352
-5000353 || [WINDOWS] WinVNC4 Connection close - reading version failed || url,wiki.quadrantsec.com/bin/view/Main/5000353
-5000354 || [WINDOWS] WinVNC4 Connection closed || url,wiki.quadrantsec.com/bin/view/Main/5000354
-5000355 || [WINDOWS] WinVNC4 HTTPServer event || url,wiki.quadrantsec.com/bin/view/Main/5000355
-5000356 || [WINDOWS] Crypt32 Failed to extract third-party root list || url,wiki.quadrantsec.com/bin/view/Main/5000356
+5000306 || [WINDOWS-MISC] Detection of net listening application || url,wiki.quadrantsec.com/bin/view/Main/5000306
+5000307 || [WINDOWS-MISC] Privileged Service Called || url,wiki.quadrantsec.com/bin/view/Main/5000307
+5000308 || [WINDOWS-MISC] Apple Bonjour service detect [iTunes installed?] || url,wiki.quadrantsec.com/bin/view/Main/5000308
+5000309 || [WINDOWS-MISC] Application error || url,wiki.quadrantsec.com/bin/view/Main/5000309
+5000310 || [WINDOWS-MISC] Application hang || url,wiki.quadrantsec.com/bin/view/Main/5000310
+5000311 || [WINDOWS-MISC] Application popup || url,wiki.quadrantsec.com/bin/view/Main/5000311
+5000312 || [WINDOWS-MISC] Backup Exec - Job completed with exceptions || url,wiki.quadrantsec.com/bin/view/Main/5000312
+5000313 || [WINDOWS-MISC] Backup Exec - Job cancellation || url,wiki.quadrantsec.com/bin/view/Main/5000313
+5000314 || [WINDOWS-MISC] Backup Exec - Alert - insert media || url,wiki.quadrantsec.com/bin/view/Main/5000314
+5000315 || [WINDOWS-MISC] Backup Exec - Service started || url,wiki.quadrantsec.com/bin/view/Main/5000315
+5000316 || [WINDOWS-MISC] SCSI bug fault occurred || url,wiki.quadrantsec.com/bin/view/Main/5000316
+5000317 || [WINDOWS-MISC] Citrix message || url,wiki.quadrantsec.com/bin/view/Main/5000317
+5000318 || [WINDOWS-MISC] Trusted Platform Module [TPM] Error.  User name not found || url,wiki.quadrantsec.com/bin/view/Main/5000318
+5000319 || [WINDOWS-MISC] Eventlog service was corrupted || url,wiki.quadrantsec.com/bin/view/Main/5000319
+5000320 || [WINDOWS-MISC] Eventlog service was stopped || url,wiki.quadrantsec.com/bin/view/Main/5000320
+5000322 || [WINDOWS-MISC] Eventlog service returned error || url,wiki.quadrantsec.com/bin/view/Main/5000322
+5000323 || [WINDOWS-MISC] Eventlog service reporting uptime [in seconds] || url,wiki.quadrantsec.com/bin/view/Main/5000323
+5000324 || [WINDOWS-MISC] IPSec message || url,wiki.quadrantsec.com/bin/view/Main/5000324
+5000325 || [WINDOWS-MISC] MS-SQL - Server started || url,wiki.quadrantsec.com/bin/view/Main/5000325
+5000326 || [WINDOWS-MISC] MS-SQL - Server listening on network || url,wiki.quadrantsec.com/bin/view/Main/5000326
+5000327 || [WINDOWS-MISC] MsiInstaller - Client successfully installed software || url,wiki.quadrantsec.com/bin/view/Main/5000327
+5000328 || [WINDOWS-MISC] MsiInstaller - Google Toolbar installed || url,wiki.quadrantsec.com/bin/view/Main/5000328
+5000329 || [WINDOWS-MISC] MsiInstaller - Google Toolbar updated || url,wiki.quadrantsec.com/bin/view/Main/5000329
+5000330 || [WINDOWS-MISC] MsiInstaller - RegWork - Registry clearner || url,wiki.quadrantsec.com/bin/view/Main/5000330
+5000331 || [WINDOWS-MISC] MsiInstaller - Google Toolbar updated || url,wiki.quadrantsec.com/bin/view/Main/5000331
+5000332 || [WINDOWS-MISC] MsiInstaller - Client successfully updated software || url,wiki.quadrantsec.com/bin/view/Main/5000332
+5000334 || [WINDOWS-MISC] NtServicePack messsage - package or hotfix installed || url,wiki.quadrantsec.com/bin/view/Main/5000334
+5000335 || [WINDOWS-MISC] SNMP Service has started successfully || url,wiki.quadrantsec.com/bin/view/Main/5000335
+5000336 || [WINDOWS-MISC] Google Software Updater service is active || url,wiki.quadrantsec.com/bin/view/Main/5000336
+5000337 || [WINDOWS-MISC] Google update service is active || url,wiki.quadrantsec.com/bin/view/Main/5000337
+5000338 || [WINDOWS-MISC] Google update service is active || url,wiki.quadrantsec.com/bin/view/Main/5000338
+5000339 || [WINDOWS-MISC] Tenable Nessus service is active [pen-test tool] || url,wiki.quadrantsec.com/bin/view/Main/5000339
+5000340 || [WINDOWS-MISC] Remote Access Connection Manager service is active || url,wiki.quadrantsec.com/bin/view/Main/5000340
+5000341 || [WINDOWS-MISC] Symantec AntiVirus startup successful || url,wiki.quadrantsec.com/bin/view/Main/5000341
+5000342 || [WINDOWS-MISC] Symantec AntiVirus couldn't scan some files or directories || url,wiki.quadrantsec.com/bin/view/Main/5000342
+5000343 || [WINDOWS-MISC] Symantec AntiVirus New virus definition file loaded || url,wiki.quadrantsec.com/bin/view/Main/5000343
+5000344 || [WINDOWS-MISC] Symantec AntiVirus Successful remote connect by administrator || url,wiki.quadrantsec.com/bin/view/Main/5000344
+5000345 || [WINDOWS-MISC] Tenable Nessus started [pen-test tool] || url,wiki.quadrantsec.com/bin/view/Main/5000345
+5000346 || [WINDOWS-MISC] WinRM [Windows Remote Management] is started and listening || url,wiki.quadrantsec.com/bin/view/Main/5000346
+5000347 || [WINDOWS-MISC] WinVNC4 Connection accepted || url,wiki.quadrantsec.com/bin/view/Main/5000347
+5000348 || [WINDOWS-MISC] WinVNC4 Connection closed - Requested security type not available || url,wiki.quadrantsec.com/bin/view/Main/5000348
+5000349 || [WINDOWS-MISC] WinVNC4 Connection blacklisted || url,wiki.quadrantsec.com/bin/view/Main/5000349
+5000350 || [WINDOWS-MISC] WinVNC4 Connection Authenticaiton failure || url,wiki.quadrantsec.com/bin/view/Main/5000350
+5000351 || [WINDOWS-MISC] WinVNC4 Connection close - reset by peer || url,wiki.quadrantsec.com/bin/view/Main/5000351
+5000352 || [WINDOWS-MISC] WinVNC4 Connection close - reset by peer [Non-shared] || url,wiki.quadrantsec.com/bin/view/Main/5000352
+5000353 || [WINDOWS-MISC] WinVNC4 Connection close - reading version failed || url,wiki.quadrantsec.com/bin/view/Main/5000353
+5000354 || [WINDOWS-MISC] WinVNC4 Connection closed || url,wiki.quadrantsec.com/bin/view/Main/5000354
+5000355 || [WINDOWS-MISC] WinVNC4 HTTPServer event || url,wiki.quadrantsec.com/bin/view/Main/5000355
+5000356 || [WINDOWS-MISC] Crypt32 Failed to extract third-party root list || url,wiki.quadrantsec.com/bin/view/Main/5000356
 5000357 || [SENDMAIL] Username with pipe symbol || url,wiki.quadrantsec.com/bin/view/Main/5000357
-5000358 || [WINDOWS] Account locked out || url,wiki.quadrantsec.com/bin/view/Main/5000358
 5000359 || [APACHE] Apache directory attempt || url,wiki.quadrantsec.com/bin/view/Main/5000359
 5000360 || [APACHE] Apache directory attempt || url,wiki.quadrantsec.com/bin/view/Main/5000360
 5000361 || [APACHE] Apache robots.txt access || url,wiki.quadrantsec.com/bin/view/Main/5000361
@@ -365,8 +360,8 @@
 5000378 || [APACHE] Apache Attempt to access a non-existent file or stream || url,wiki.quadrantsec.com/bin/view/Main/5000378
 5000379 || [XINETD] Excessive number connections to a service || url,wiki.quadrantsec.com/bin/view/Main/5000379
 5000380 || [VMWARE] Virtual machine being turned ON || url,wiki.quadrantsec.com/bin/view/Main/5000380
-5000381 || [WINDOWS] LSASRV - Could not establish a secure connection || url,wiki.quadrantsec.com/bin/view/Main/5000381
-5000382 || [WINDOWS] Bonjour service is active [iTunes installed?] || url,wiki.quadrantsec.com/bin/view/Main/5000382
+5000381 || [WINDOWS-MISC] LSASRV - Could not establish a secure connection || url,wiki.quadrantsec.com/bin/view/Main/5000381
+5000382 || [WINDOWS-MISC] Bonjour service is active [iTunes installed?] || url,wiki.quadrantsec.com/bin/view/Main/5000382
 5000383 || [KNOCKD] Open Sesame || url,wiki.quadrantsec.com/bin/view/Main/5000383
 5000384 || [KNOCKD] Sequence timeout || url,wiki.quadrantsec.com/bin/view/Main/5000384
 5000385 || [BASH] iptables command access || url,wiki.quadrantsec.com/bin/view/Main/5000385
@@ -1019,7 +1014,7 @@
 5001053 || [RSYNC] Connection closed stats || url, wiki.quadrantsec.com/bin/view/Main/5001053
 5001054 || [RSYNC] Authentication failure || url, wiki.quadrantsec.com/bin/view/Main/5001054
 5001055 || [RSYNC] Some files could not be transferred || url, wiki.quadrantsec.com/bin/view/Main/5001055
-5001056 || [WINDOWS] Disk corruption || url,wiki.quadrantsec.com/bin/view/Main/5001056
+5001056 || [WINDOWS-MISC] Disk corruption || url,wiki.quadrantsec.com/bin/view/Main/5001056
 5001057 || [APC-EMU] Humidity violation || url,wiki.quadrantsec.com/bin/view/Main/5001057
 5001058 || [APC-EMU] Humidity violation cleared || url,wiki.quadrantsec.com/bin/view/Main/5001058
 5001059 || [APC-EMU] Front door opened || url,wiki.quadrantsec.com/bin/view/Main/5001059
@@ -1058,7 +1053,7 @@
 5001093 || [MISC] Weblabyrinth - New host logged! || url,wiki.quadrantsec.com/bin/view/Main/5001093
 5001094 || [SENDMAIL] Insufficient system resources [Remote] || url, wiki.quadrantsec.com/bin/view/Main/5001094
 5001095 || [MISC] Weblabyrinth - Crawler Ensnared! || url,wiki.quadrantsec.com/bin/view/Main/5001095
-5001096 || [WINDOWS] MSSQLServer I/O error || url,wiki.quadrantsec.com/bin/view/Main/5001096
+5001096 || [WINDOWS-MISC] MSSQLServer I/O error || url,wiki.quadrantsec.com/bin/view/Main/5001096
 5001097 || [VMWARE] User login successful || url,wiki.quadrantsec.com/bin/view/Main/5001097
 5001098 || [VMWARE] User logoff successful || url,wiki.quadrantsec.com/bin/view/Main/5001098
 5001099 || [VMWARE] Lost access to volume || url,wiki.quadrantsec.com/bin/view/Main/5001098
@@ -1082,8 +1077,529 @@
 5001117 || [OPENSSH] Invalid or illegal user [web] || url,wiki.quadrantsec.com/bin/view/Main/5001117
 5001118 || [OPENSSH] Invalid or illegal user [webmaster] || url,wiki.quadrantsec.com/bin/view/Main/5001118
 5001119 || [OPENSSH] Invalid or illegal user [apache] || url,wiki.quadrantsec.com/bin/view/Main/5001119
-6000004 || [ADTRAN] TCP INTERNAL BLOCK
-6000005 || [ADTRAN] UDP INTERNAL BLOCK
+5001120 || [HP-E-SERIES-SWITCH] Invalid username/password || url,wiki.quadrantsec.com/bin/view/Main/5001120
+5001121 || [HP-E-SERIES-SWITCH] port is off-line || url,wiki.quadrantsec.com/bin/view/Main/5001121
+5001122 || [HP-E-SERIES-SWITCH] System went down: || url,wiki.quadrantsec.com/bin/view/Main/5001122
+5001123 || [HP-E-SERIES-SWITCH] Port Security Violation || url,wiki.quadrantsec.com/bin/view/Main/5001123
+5001124 || [HP-E-SERIES-L3-SWITCH] port is off-line || url,wiki.quadrantsec.com/bin/view/Main/5001124
+5001125 || [HP-E-SERIES-L3-SWITCH] Invalid username/password || url,wiki.quadrantsec.com/bin/view/Main/5001125
+5001126 || [ADTRAN] TCP INTERNAL BLOCK || url,wiki.quadrantsec.com/bin/view/Main/5001126
+5001127 || [ADTRAN] UDP INTERNAL BLOCK || url,wiki.quadrantsec.com/bin/view/Main/5001127
+5001129 || [JUNIPER] The scheduled IDP security package update failed to start || url,wiki.quadrantsec.com/bin/view/Main/5001129
+5001130 || [JUNIPER] IDP daemon encountered an internal error || url,wiki.quadrantsec.com/bin/view/Main/5001130
+5001131 || [JUNIPER] An attempt to start IDP policy daemon failed || url,wiki.quadrantsec.com/bin/view/Main/5001131
+5001132 || [JUNIPER] IDP Attack log generated for attack || url,wiki.quadrantsec.com/bin/view/Main/5001132
+5001133 || [JUNIPER] IDP Attack log generated for attack in a logical system || url,wiki.quadrantsec.com/bin/view/Main/5001133
+5001134 || [JUNIPER] IDP policy commit has completed || url,wiki.quadrantsec.com/bin/view/Main/5001134
+5001135 || [JUNIPER] There was an error while trying to commit the active policy in IDPD || url,wiki.quadrantsec.com/bin/view/Main/5001135
+5001136 || [JUNIPER] IDP IPv6 support is not enabled for the rulebase || url,wiki.quadrantsec.com/bin/view/Main/5001136
+5001137 || [JUNIPER] IDP policy compiler encountered an error while compiling or packaging the policy || url,wiki.quadrantsec.com/bin/view/Main/5001137
+5001138 || [JUNIPER] A compiled and optimized IDP policy could not be loaded into IDP engine || url,wiki.quadrantsec.com/bin/view/Main/5001138
+5001139 || [JUNIPER] A compiled and optimized IDP policy was loaded successfully into the IDP engine || url,wiki.quadrantsec.com/bin/view/Main/5001139
+5001140 || [JUNIPER] A running IDP policy could not be unloaded from IDP engine || url,wiki.quadrantsec.com/bin/view/Main/5001140
+5001141 || [JUNIPER] A running IDP policy was unloaded successfully from the IDP engine || url,wiki.quadrantsec.com/bin/view/Main/5001141
+5001142 || [JUNIPER] The scheduled IDP security package update has started || url,wiki.quadrantsec.com/bin/view/Main/5001142
+5001143 || [JUNIPER] IDP background process has returned the security package install result || url,wiki.quadrantsec.com/bin/view/Main/5001143
+5001144 || [JUNIPER] IDP session threshold crossing event || url,wiki.quadrantsec.com/bin/view/Main/5001144
+5001145 || [JUNIPER] IDP session threshold crossing event in a logical system || url,wiki.quadrantsec.com/bin/view/Main/5001145
+5001146 || [JUNIPER] IDP signature update license key has expired || url,wiki.quadrantsec.com/bin/view/Main/5001146
+5001147 || [JUNIPER] application-level distributed denial-of-service (AppDDoS) state transition occurred || url,wiki.quadrantsec.com/bin/view/Main/5001147
+5001148 || [JUNIPER] application-level distributed denial-of-service (AppDDoS) state transition occurred in logical system || url,wiki.quadrantsec.com/bin/view/Main/5001148
+5001149 || [JUNIPER] Application-level distributed denial-of-service (AppDDoS) attack in a logical system || url,wiki.quadrantsec.com/bin/view/Main/5001149
+5001150 || [JUNIPER] Application-level distributed denial-of-service (AppDDoS) attack || url,wiki.quadrantsec.com/bin/view/Main/5001150
+5001151 || [WINDOWS-AUTH] Login failure - Unknown username or bad password || url,wiki.quadrantsec.com/bin/view/Main/5001151
+5001152 || [WINDOWS-AUTH] Login failure - Account login time restriction || url,wiki.quadrantsec.com/bin/view/Main/5001152
+5001153 || [WINDOWS-AUTH] Login failure - Account currently disabled || url,wiki.quadrantsec.com/bin/view/Main/5001153
+5001154 || [WINDOWS-AUTH] Login failure - Specified account expired || url,wiki.quadrantsec.com/bin/view/Main/5001154
+5001155 || [WINDOWS-AUTH] Login failure - User not allowed to login at this computer || url,wiki.quadrantsec.com/bin/view/Main/5001155
+5001156 || [WINDOWS-AUTH] Login failure - User not granted login type || url,wiki.quadrantsec.com/bin/view/Main/5001156
+5001157 || [WINDOWS-AUTH] Login failure - Account password is expired || url,wiki.quadrantsec.com/bin/view/Main/5001157
+5001158 || [WINDOWS-AUTH] Login failure - Internal error || url,wiki.quadrantsec.com/bin/view/Main/5001158
+5001159 || [WINDOWS-AUTH] Login failure - Account locked || url,wiki.quadrantsec.com/bin/view/Main/5001159
+5001160 || [WINDOWS-AUTH] Windows DC Logon Failure || url,wiki.quadrantsec.com/bin/view/Main/5001160
+5001161 || [WINDOWS-AUTH] User account unlocked || url,wiki.quadrantsec.com/bin/view/Main/5001161
+5001162 || [WINDOWS-AUTH] Security enabled group created || url,wiki.quadrantsec.com/bin/view/Main/5001162
+5001163 || [WINDOWS-AUTH] Security enabled group deleted || url,wiki.quadrantsec.com/bin/view/Main/5001163
+5001164 || [WINDOWS-AUTH] Group account created || url,wiki.quadrantsec.com/bin/view/Main/5001164
+5001165 || [WINDOWS-AUTH] Group account deleted || url,wiki.quadrantsec.com/bin/view/Main/5001165
+5001166 || [WINDOWS-AUTH] Security enabled global group member added || url,wiki.quadrantsec.com/bin/view/Main/5001166
+5001167 || [WINDOWS-AUTH] Security enabled global group member removed || url,wiki.quadrantsec.com/bin/view/Main/5001167
+5001168 || [WINDOWS-AUTH] Security enabled global group deleted || url,wiki.quadrantsec.com/bin/view/Main/5001168
+5001169 || [WINDOWS-AUTH] Security enabled global group created || url,wiki.quadrantsec.com/bin/view/Main/5001169
+5001170 || [WINDOWS-AUTH] Security enabled local group member added || url,wiki.quadrantsec.com/bin/view/Main/5001170
+5001171 || [WINDOWS-AUTH] Security enabled local group member removed || url,wiki.quadrantsec.com/bin/view/Main/5001171
+5001172 || [WINDOWS-AUTH] Security enabled local group deleted || url,wiki.quadrantsec.com/bin/view/Main/5001172
+5001173 || [WINDOWS-AUTH] Security enabled local group changed || url,wiki.quadrantsec.com/bin/view/Main/5001173
+5001174 || [WINDOWS-AUTH] Security enabled group changed || url,wiki.quadrantsec.com/bin/view/Main/5001174
+5001176 || [WINDOWS-AUTH] Security enabled universal group created || url,wiki.quadrantsec.com/bin/view/Main/5001176
+5001177 || [WINDOWS-AUTH] Security enabled universal group changed || url,wiki.quadrantsec.com/bin/view/Main/5001177
+5001178 || [WINDOWS-AUTH] Security enabled universal group member added || url,wiki.quadrantsec.com/bin/view/Main/5001178
+5001179 || [WINDOWS-AUTH] Security enabled group member removed || url,wiki.quadrantsec.com/bin/view/Main/5001179
+5001180 || [WINDOWS-AUTH] Security enabled group member deleted || url,wiki.quadrantsec.com/bin/view/Main/5001180
+5001181 || [WINDOWS-AUTH] RDP maximum allowed failed logon attempts || url,wiki.quadrantsec.com/bin/view/Main/5001181
+5001182 || [WINDOWS-MISC] Application uninstall || url,wiki.quadrantsec.com/bin/view/Main/5001182
+5001183 || [WINDOWS-MISC] Application install || url,wiki.quadrantsec.com/bin/view/Main/5001183
+5001184 || [WINDOWS-MISC] Windows is shutting down || url,wiki.quadrantsec.com/bin/view/Main/5001184
+5001185 || [WINDOWS-AUTH] Windows audit log was cleared || url,wiki.quadrantsec.com/bin/view/Main/5001185
+5001186 || [WINDOWS-AUTH] Windows login attempt (ignored). Duplicated || url,wiki.quadrantsec.com/bin/view/Main/5001186
+5001187 || [WINDOWS-AUTH] Remote access login failure || url,wiki.quadrantsec.com/bin/view/Main/5001187
+5001188 || [WINDOWS-AUTH] Remote access login success || url,wiki.quadrantsec.com/bin/view/Main/5001188
+5001189 || [WINDOWS-AUTH] Computer account changed/deleted || url,wiki.quadrantsec.com/bin/view/Main/5001189
+5001190 || [WINDOWS-AUTH] Computer account changed/deleted || url,wiki.quadrantsec.com/bin/view/Main/5001190
+5001191 || [WINDOWS-MISC] File system full || url,wiki.quadrantsec.com/bin/view/Main/5001191
+5001192 || [WINDOWS-AUTH] Account locked out (multiple login errors) || url,wiki.quadrantsec.com/bin/view/Main/5001192
+5001193 || [WINDOWS-AUTH] General account database changed || url,wiki.quadrantsec.com/bin/view/Main/5001193
+5001194 || [WINDOWS-MISC] System time has changed || url,wiki.quadrantsec.com/bin/view/Main/5001194
+5001195 || [WINDOWS-AUTH] DC  - Integrity check on decrypted || url,wiki.quadrantsec.com/bin/view/Main/5001195
+5001196 || [WINDOWS-AUTH] DC - Possible replay attack || url,wiki.quadrantsec.com/bin/view/Main/5001196
+5001197 || [WINDOWS-AUTH] DC - Clock skew too great || url,wiki.quadrantsec.com/bin/view/Main/5001197
+5001198 || [CISCO-IOS] Fans had a rotation error reported || url,wiki.quadrantsec.com/bin/view/Main/5001198
+5001199 || [CISCO-IOS] Power Controller reports power Imax error detected || url,wiki.quadrantsec.com/bin/view/Main/5001190
+5001200 || [CITRIX] Netscaler - The AAA module failed to login the user || url,wiki.quadrantsec.com/bin/view/Main/5001200 || url,support.citrix.com/article/CTX123875
+5001201 || [CITRIX] Netscaler - Group for the user has been extracted || url,wiki.quadrantsec.com/bin/view/Main/5001201 || url,support.citrix.com/article/CTX123875
+5001202 || [CITRIX] Netscaler - NSCLI/GUI command executed || url,wiki.quadrantsec.com/bin/view/Main/5001202 || url,support.citrix.com/article/CTX123875
+5001203 || [CITRIX] Netscaler - SSLVPN login success || url,wiki.quadrantsec.com/bin/view/Main/5001203 || url,support.citrix.com/article/CTX123875
+5001204 || [CITRIX] Netscaler - SSLVPN session logged out || url,wiki.quadrantsec.com/bin/view/Main/5001204 || url,support.citrix.com/article/CTX123875
+5001205 || [CITRIX] Netscaler - ICA application launch has started || url,wiki.quadrantsec.com/bin/view/Main/5001205 || url,support.citrix.com/article/CTX123875
+5001206 || [CITRIX] Netscaler - ICA application has terminated || url,wiki.quadrantsec.com/bin/view/Main/5001206 || url,support.citrix.com/article/CTX123875
+5001207 || [CITRIX] Netscaler - TCP connection related information for SSLVPN logged || url,wiki.quadrantsec.com/bin/view/Main/5001207 || url,support.citrix.com/article/CTX123875
+5001208 || [CITRIX] Netscaler - An SSLVPN connection timed out || url,wiki.quadrantsec.com/bin/view/Main/5001208 || url,support.citrix.com/article/CTX123875
+5001209 || [CITRIX] Netscaler - "UDP flow || url,wiki.quadrantsec.com/bin/view/Main/5001209 || url,support.citrix.com/article/CTX123875
+5001210 || [CITRIX] Netscaler - SSLVPN session receives a HTTP request || url,wiki.quadrantsec.com/bin/view/Main/5001210 || url,support.citrix.com/article/CTX123875
+5001211 || [CITRIX] Netscaler - Non-http resource access is denied by policy engine || url,wiki.quadrantsec.com/bin/view/Main/5001211 || url,support.citrix.com/article/CTX123875
+5001212 || [CITRIX] Netscaler - HTTP resource access is denied by policy engine || url,wiki.quadrantsec.com/bin/view/Main/5001212 || url,support.citrix.com/article/CTX123875
+5001213 || [CITRIX] Netscaler - SSLVPN license limit reached || url,wiki.quadrantsec.com/bin/view/Main/5001213 || url,support.citrix.com/article/CTX123875
+5001214 || [CITRIX] Netscaler - "Security check for a SSLVPN session fails || url,wiki.quadrantsec.com/bin/view/Main/5001214 || url,support.citrix.com/article/CTX123875
+5001215 || [CITRIX] Netscaler - "Client security expression evaluates to False || url,wiki.quadrantsec.com/bin/view/Main/5001215 || url,support.citrix.com/article/CTX123875
+5001216 || [CITRIX] Netscaler - Group for the user has been extracted || url,wiki.quadrantsec.com/bin/view/Main/5001216 || url,support.citrix.com/article/CTX123875
+5001217 || [CITRIX] Netscaler - SNMP module alarm || url,wiki.quadrantsec.com/bin/view/Main/5001217 || url,support.citrix.com/article/CTX123875
+5001218 || [CITRIX] Netscaler - SNMP module stoped alarm || url,wiki.quadrantsec.com/bin/view/Main/5001218 || url,support.citrix.com/article/CTX123875
+5001219 || [CITRIX] Netscaler - Startup/Boots || url,wiki.quadrantsec.com/bin/view/Main/5001219 || url,support.citrix.com/article/CTX123875
+5001220 || [CITRIX] Netscaler - CPU start/boot || url,wiki.quadrantsec.com/bin/view/Main/5001220 || url,support.citrix.com/article/CTX123875
+5001221 || [CITRIX] Netscaler - Device is down || url,wiki.quadrantsec.com/bin/view/Main/5001221 || url,support.citrix.com/article/CTX123875
+5001222 || [CITRIX] Netscaler - Device is out of service || url,wiki.quadrantsec.com/bin/view/Main/5001222 || url,support.citrix.com/article/CTX123875
+5001223 || [CITRIX] Netscaler - device is up || url,wiki.quadrantsec.com/bin/view/Main/5001223 || url,support.citrix.com/article/CTX123875
+5001224 || [CITRIX] Netscaler - Network interface is started || url,wiki.quadrantsec.com/bin/view/Main/5001224 || url,support.citrix.com/article/CTX123875
+5001225 || [CITRIX] Netscaler - Network interface is stopped || url,wiki.quadrantsec.com/bin/view/Main/5001225 || url,support.citrix.com/article/CTX123875
+5001226 || [CITRIX] Netscaler - Network interface is in hung state || url,wiki.quadrantsec.com/bin/view/Main/5001226 || url,support.citrix.com/article/CTX123875
+5001227 || [CITRIX] Netscaler - Network interface is reset || url,wiki.quadrantsec.com/bin/view/Main/5001227 || url,support.citrix.com/article/CTX123875
+5001228 || [CITRIX] Netscaler - Interface is bound or unbound from a channel || url,wiki.quadrantsec.com/bin/view/Main/5001228 || url,support.citrix.com/article/CTX123875
+5001229 || [CITRIX] Netscaler - System is stopped || url,wiki.quadrantsec.com/bin/view/Main/5001229 || url,support.citrix.com/article/CTX123875
+5001230 || [CITRIX] Netscaler - Bad memory is freed (internal error) || url,wiki.quadrantsec.com/bin/view/Main/5001230 || url,support.citrix.com/article/CTX123875
+5001231 || [CITRIX] Netscaler - Duplicate memory free occurs (internal error) || url,wiki.quadrantsec.com/bin/view/Main/5001231 || url,support.citrix.com/article/CTX123875
+5001232 || [CITRIX] Netscaler - Memory is freed from a wrong pool (internal error) || url,wiki.quadrantsec.com/bin/view/Main/5001232 || url,support.citrix.com/article/CTX123875
+5001233 || [CITRIX] Netscaler - HA propagation is successful || url,wiki.quadrantsec.com/bin/view/Main/5001233 || url,support.citrix.com/article/CTX123875
+5001234 || [CITRIX] Netscaler - HA propagation fails || url,wiki.quadrantsec.com/bin/view/Main/5001234 || url,support.citrix.com/article/CTX123875
+5001235 || [CITRIX] Netscaler - HA State has changed || url,wiki.quadrantsec.com/bin/view/Main/5001235 || url,support.citrix.com/article/CTX123875
+5001236 || [CITRIX] Netscaler - Cache flush starts || url,wiki.quadrantsec.com/bin/view/Main/5001236 || url,support.citrix.com/article/CTX123875
+5001237 || [CITRIX] Netscaler - Cache flush is complete || url,wiki.quadrantsec.com/bin/view/Main/5001237 || url,support.citrix.com/article/CTX123875
+5001238 || [CITRIX] Netscaler - Monitor bound to the service has hit threshold limit || url,wiki.quadrantsec.com/bin/view/Main/5001238 || url,support.citrix.com/article/CTX123875
+5001239 || [CITRIX] Netscaler - Monitor bound to the service is down. || url,wiki.quadrantsec.com/bin/view/Main/5001239 || url,support.citrix.com/article/CTX123875
+5001240 || [CITRIX] Netscaler - Monitor bound to the service is up. || url,wiki.quadrantsec.com/bin/view/Main/5001240 || url,support.citrix.com/article/CTX123875
+5001241 || [CITRIX] Netscaler - Route is down || url,wiki.quadrantsec.com/bin/view/Main/5001241 || url,support.citrix.com/article/CTX123875
+5001242 || [CITRIX] Netscaler - Route is up || url,wiki.quadrantsec.com/bin/view/Main/5001242 || url,support.citrix.com/article/CTX123875
+5001243 || [CITRIX] Netscaler - VRID changes state to backup || url,wiki.quadrantsec.com/bin/view/Main/5001243 || url,support.citrix.com/article/CTX123875
+5001244 || [CITRIX] Netscaler - VRID changes state to backup || url,wiki.quadrantsec.com/bin/view/Main/5001244 || url,support.citrix.com/article/CTX123875
+5001245 || [CITRIX] Netscaler - VRID changes state to master || url,wiki.quadrantsec.com/bin/view/Main/5001245 || url,support.citrix.com/article/CTX123875
+5001246 || [CITRIX] Netscaler - VRID changes state to INIT || url,wiki.quadrantsec.com/bin/view/Main/5001246 || url,support.citrix.com/article/CTX123875
+5001247 || [CITRIX] Netscaler - RHI state of VIP changes to up || url,wiki.quadrantsec.com/bin/view/Main/5001247 || url,support.citrix.com/article/CTX123875
+5001248 || [CITRIX] Netscaler - RHI state of VIP changes to down || url,wiki.quadrantsec.com/bin/view/Main/5001248 || url,support.citrix.com/article/CTX123875
+5001249 || [CITRIX] Netscaler - Save configuration started || url,wiki.quadrantsec.com/bin/view/Main/5001249 || url,support.citrix.com/article/CTX123875
+5001250 || [CITRIX] Netscaler - Save configuration has stopped || url,wiki.quadrantsec.com/bin/view/Main/5001250 || url,support.citrix.com/article/CTX123875
+5001251 || [CITRIX] Netscaler - Read the configuration from ns.conf file (during boot-up) || url,wiki.quadrantsec.com/bin/view/Main/5001251 || url,support.citrix.com/article/CTX123875
+5001252 || [CITRIX] Netscaler - Completed reading the configuration from ns.conf file (during boot-up) || url,wiki.quadrantsec.com/bin/view/Main/5001252 || url,support.citrix.com/article/CTX123875
+5001254 || [CITRIX] Netscaler - Interface's throughput is less than the min required || url,wiki.quadrantsec.com/bin/view/Main/5001254 || url,support.citrix.com/article/CTX123875
+5001255 || [CITRIX] Netscaler - Interface's throughput is equal or greater than the min required || url,wiki.quadrantsec.com/bin/view/Main/5001255 || url,support.citrix.com/article/CTX123875
+5001256 || [CITRIX] Netscaler - Unknown error  || url,wiki.quadrantsec.com/bin/view/Main/5001256 || url,support.citrix.com/article/CTX123875
+5001257 || [CITRIX] Netscaler - SSL Handshake Failure || url,wiki.quadrantsec.com/bin/view/Main/5001257 || url,support.citrix.com/article/CTX123875
+5001258 || [CITRIX] Netscaler - SSL Handshake Success || url,wiki.quadrantsec.com/bin/view/Main/5001258 || url,support.citrix.com/article/CTX123875
+5001259 || [CITRIX] Netscaler - SSL Certificate Expiry Imminent || url,wiki.quadrantsec.com/bin/view/Main/5001259 || url,support.citrix.com/article/CTX123875
+5001260 || [CITRIX] Netscaler - SSL Client Certificate IssueName || url,wiki.quadrantsec.com/bin/view/Main/5001260 || url,support.citrix.com/article/CTX123875
+5001261 || [CITRIX] Netscaler - SSL Client Certificate SubjectName || url,wiki.quadrantsec.com/bin/view/Main/5001261 || url,support.citrix.com/article/CTX123875
+5001262 || [CITRIX] Netscaler - SSL CRL Update Success || url,wiki.quadrantsec.com/bin/view/Main/5001262 || url,support.citrix.com/article/CTX123875
+5001263 || [CITRIX] Netscaler - SSL CRL Update Failure || url,wiki.quadrantsec.com/bin/view/Main/5001263 || url,support.citrix.com/article/CTX123875
+5001264 || [CITRIX] Netscaler - AppFw StartURL violation || url,wiki.quadrantsec.com/bin/view/Main/5001264 || url,support.citrix.com/article/CTX123875
+5001265 || [CITRIX] Netscaler - AppFw DenyURL violation || url,wiki.quadrantsec.com/bin/view/Main/5001265 || url,support.citrix.com/article/CTX123875
+5001266 || [CITRIX] Netscaler - AppFw Referer header violation || url,wiki.quadrantsec.com/bin/view/Main/5001266 || url,support.citrix.com/article/CTX123875
+5001267 || [CITRIX] Netscaler - AppFw CSRF tag violation || url,wiki.quadrantsec.com/bin/view/Main/5001267 || url,support.citrix.com/article/CTX123875
+5001268 || [CITRIX] Netscaler - AppFw XSS violation || url,wiki.quadrantsec.com/bin/view/Main/5001268 || url,support.citrix.com/article/CTX123875
+5001269 || [CITRIX] Netscaler - AppFw XSS violation in XML || url,wiki.quadrantsec.com/bin/view/Main/5001269 || url,support.citrix.com/article/CTX123875
+5001270 || [CITRIX] Netscaler - AppFw SQL Injection violation || url,wiki.quadrantsec.com/bin/view/Main/5001270 || url,support.citrix.com/article/CTX123875
+5001271 || [CITRIX] Netscaler - AppFw SQL Injection violation in XML || url,wiki.quadrantsec.com/bin/view/Main/5001271 || url,support.citrix.com/article/CTX123875
+5001272 || [CITRIX] Netscaler - AppFw Cookie Consistency violation || url,wiki.quadrantsec.com/bin/view/Main/5001272 || url,support.citrix.com/article/CTX123875
+5001273 || [CITRIX] Netscaler - AppFw Field Consistency violation || url,wiki.quadrantsec.com/bin/view/Main/5001273 || url,support.citrix.com/article/CTX123875
+5001274 || [CITRIX] Netscaler - AppFw Buffer Overflow violation in URL || url,wiki.quadrantsec.com/bin/view/Main/5001274 || url,support.citrix.com/article/CTX123875
+5001275 || [CITRIX] Netscaler - AppFw Buffer Overflow violation in Cookie || url,wiki.quadrantsec.com/bin/view/Main/5001275 || url,support.citrix.com/article/CTX123875
+5001276 || [CITRIX] Netscaler - AppFw Buffer Overflow violation in HTTP Headers || url,wiki.quadrantsec.com/bin/view/Main/5001276 || url,support.citrix.com/article/CTX123875
+5001277 || [CITRIX] Netscaler - AppFw Field Format violation || url,wiki.quadrantsec.com/bin/view/Main/5001277 || url,support.citrix.com/article/CTX123875
+5001278 || [CITRIX] Netscaler - AppFw Safe Commerce violation || url,wiki.quadrantsec.com/bin/view/Main/5001278 || url,support.citrix.com/article/CTX123875
+5001279 || [CITRIX] Netscaler - AppFw Safe Commerce violation detected and transformed || url,wiki.quadrantsec.com/bin/view/Main/5001279 || url,support.citrix.com/article/CTX123875
+5001280 || [CITRIX] Netscaler - AppFw Safe Object violation || url,wiki.quadrantsec.com/bin/view/Main/5001280 || url,support.citrix.com/article/CTX123875
+5001281 || [CITRIX] Netscaler - AppFw profile invoked || url,wiki.quadrantsec.com/bin/view/Main/5001281 || url,support.citrix.com/article/CTX123875
+5001282 || [CITRIX] Netscaler - AppFw built-in profile invoked || url,wiki.quadrantsec.com/bin/view/Main/5001282 || url,support.citrix.com/article/CTX123875
+5001283 || [CITRIX] Netscaler - AppFw rule bound to HTML profile || url,wiki.quadrantsec.com/bin/view/Main/5001283 || url,support.citrix.com/article/CTX123875
+5001284 || [CITRIX] Netscaler - AppFw rule bound to XML profile || url,wiki.quadrantsec.com/bin/view/Main/5001284 || url,support.citrix.com/article/CTX123875
+5001285 || [CITRIX] Netscaler - Add an AppFw Field Type || url,wiki.quadrantsec.com/bin/view/Main/5001285 || url,support.citrix.com/article/CTX123875
+5001286 || [CITRIX] Netscaler - Add an AppFw profile || url,wiki.quadrantsec.com/bin/view/Main/5001286 || url,support.citrix.com/article/CTX123875
+5001287 || [CITRIX] Netscaler - Remove an Appfw Field Type || url,wiki.quadrantsec.com/bin/view/Main/5001287 || url,support.citrix.com/article/CTX123875
+5001288 || [CITRIX] Netscaler - Remove an AppFw profile || url,wiki.quadrantsec.com/bin/view/Main/5001288 || url,support.citrix.com/article/CTX123875
+5001289 || [CITRIX] Netscaler - Add a confidential field || url,wiki.quadrantsec.com/bin/view/Main/5001289 || url,support.citrix.com/article/CTX123875
+5001290 || [CITRIX] Netscaler - Remove a confidential field || url,wiki.quadrantsec.com/bin/view/Main/5001290 || url,support.citrix.com/article/CTX123875
+5001291 || [CITRIX] Netscaler - AppFw Request error. Generated 400 Response || url,wiki.quadrantsec.com/bin/view/Main/5001291 || url,support.citrix.com/article/CTX123875
+5001292 || [CITRIX] Netscaler - Memory allocation request for %lu bytes failed || url,wiki.quadrantsec.com/bin/view/Main/5001292 || url,support.citrix.com/article/CTX123875
+5001293 || [CITRIX] Netscaler - Appsecure uthread had a stack error || url,wiki.quadrantsec.com/bin/view/Main/5001293 || url,support.citrix.com/article/CTX123875
+5001294 || [CITRIX] Netscaler - Attachment Found in the XML Message. || url,wiki.quadrantsec.com/bin/view/Main/5001294 || url,support.citrix.com/article/CTX123875
+5001295 || [CITRIX] Netscaler - XML Attachment CallBack is NULL but HTTP message is MIME Attachment message. || url,wiki.quadrantsec.com/bin/view/Main/5001295 || url,support.citrix.com/article/CTX123875
+5001296 || [CITRIX] Netscaler - String is supposed to be MIME Header. But it is not. || url,wiki.quadrantsec.com/bin/view/Main/5001296 || url,support.citrix.com/article/CTX123875
+5001297 || [CITRIX] Netscaler - HTTP Content type should be 'application/xop+xml' or '^(text|application)/([a-zA-Z]*+xml|xml)' || url,wiki.quadrantsec.com/bin/view/Main/5001297 || url,support.citrix.com/article/CTX123875
+5001298 || [CITRIX] Netscaler - Boundary mismatch in mime message. || url,wiki.quadrantsec.com/bin/view/Main/5001298 || url,support.citrix.com/article/CTX123875
+5001299 || [CITRIX] Netscaler - The message having content-type as 'Multipart/Related' and not having a boundary is invalid. || url,wiki.quadrantsec.com/bin/view/Main/5001299 || url,support.citrix.com/article/CTX123875
+5001300 || [CITRIX] Netscaler - XML Message has an Attachment with size greater than the Configured Max Attachment Size. || url,wiki.quadrantsec.com/bin/view/Main/5001300 || url,support.citrix.com/article/CTX123875
+5001301 || [CITRIX] Netscaler - XML Message has an Attachment with Illegal Content-Type || url,wiki.quadrantsec.com/bin/view/Main/5001301 || url,support.citrix.com/article/CTX123875
+5001302 || [CITRIX] Netscaler - AppFw XML DDoS Send Fail Error. || url,wiki.quadrantsec.com/bin/view/Main/5001302 || url,support.citrix.com/article/CTX123875
+5001303 || [CITRIX] Netscaler - Exceeds max character data length. || url,wiki.quadrantsec.com/bin/view/Main/5001303 || url,support.citrix.com/article/CTX123875
+5001304 || [CITRIX] Netscaler - DTD present in the XML message. || url,wiki.quadrantsec.com/bin/view/Main/5001304 || url,support.citrix.com/article/CTX123875
+5001305 || [CITRIX] Netscaler - External entities present in the XML message. || url,wiki.quadrantsec.com/bin/view/Main/5001305 || url,support.citrix.com/article/CTX123875
+5001306 || [CITRIX] Netscaler - AppFw XML DoS Maximum Error || url,wiki.quadrantsec.com/bin/view/Main/5001306 || url,support.citrix.com/article/CTX123875
+5001307 || [CITRIX] Netscaler - Element exceeds maximum attributes per element. || url,wiki.quadrantsec.com/bin/view/Main/5001307 || url,support.citrix.com/article/CTX123875
+5001308 || [CITRIX] Netscaler - Element an attribute exceeds maximum name length. || url,wiki.quadrantsec.com/bin/view/Main/5001308 || url,support.citrix.com/article/CTX123875
+5001309 || [CITRIX] Netscaler - Eelement attribute '%s' exceeds maximum attribute value length. || url,wiki.quadrantsec.com/bin/view/Main/5001309 || url,support.citrix.com/article/CTX123875
+5001310 || [CITRIX] Netscaler - Element exceeds maximum elements per message. || url,wiki.quadrantsec.com/bin/view/Main/5001310 || url,support.citrix.com/article/CTX123875
+5001311 || [CITRIX] Netscaler - Parent of element exceeds maximum children at element '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001311 || url,support.citrix.com/article/CTX123875
+5001312 || [CITRIX] Netscaler - Element exceeds maximum element depth. || url,wiki.quadrantsec.com/bin/view/Main/5001312 || url,support.citrix.com/article/CTX123875
+5001313 || [CITRIX] Netscaler - Element exceeds maximum element name length. || url,wiki.quadrantsec.com/bin/view/Main/5001313 || url,support.citrix.com/article/CTX123875
+5001314 || [CITRIX] Netscaler - Message size exceeds max size. || url,wiki.quadrantsec.com/bin/view/Main/5001314 || url,support.citrix.com/article/CTX123875
+5001315 || [CITRIX] Netscaler - Node exceeds maximum nodes per message. || url,wiki.quadrantsec.com/bin/view/Main/5001315 || url,support.citrix.com/article/CTX123875
+5001316 || [CITRIX] Netscaler - Message size less than min size. || url,wiki.quadrantsec.com/bin/view/Main/5001316 || url,support.citrix.com/article/CTX123875
+5001317 || [CITRIX] Netscaler - Message is not a well-formed XML. || url,wiki.quadrantsec.com/bin/view/Main/5001317 || url,support.citrix.com/article/CTX123875
+5001318 || [CITRIX] Netscaler - Processing instructions present in the XML message. || url,wiki.quadrantsec.com/bin/view/Main/5001318 || url,support.citrix.com/article/CTX123875
+5001319 || [CITRIX] Netscaler - Element exceeds maximum active namespaces. || url,wiki.quadrantsec.com/bin/view/Main/5001319 || url,support.citrix.com/article/CTX123875
+5001320 || [CITRIX] Netscaler - In element a namespace exceeds maximum URI length. || url,wiki.quadrantsec.com/bin/view/Main/5001320 || url,support.citrix.com/article/CTX123875
+5001321 || [CITRIX] Netscaler - Exceeds max entity expansion depth || url,wiki.quadrantsec.com/bin/view/Main/5001321 || url,support.citrix.com/article/CTX123875
+5001322 || [CITRIX] Netscaler - Exceeds max number of entity expansions || url,wiki.quadrantsec.com/bin/view/Main/5001322 || url,support.citrix.com/article/CTX123875
+5001323 || [CITRIX] Netscaler - AppFw XML internal error || url,wiki.quadrantsec.com/bin/view/Main/5001323 || url,support.citrix.com/article/CTX123875
+5001324 || [CITRIX] Netscaler - AppFw XML DDoS Connect to Server Failed. || url,wiki.quadrantsec.com/bin/view/Main/5001324 || url,support.citrix.com/article/CTX123875
+5001325 || [CITRIX] Netscaler - AppFw XML DDoS Interaction socket open Failed. || url,wiki.quadrantsec.com/bin/view/Main/5001325 || url,support.citrix.com/article/CTX123875
+5001326 || [CITRIX] Netscaler - AppFw XML DDoS Invalid Config File. || url,wiki.quadrantsec.com/bin/view/Main/5001326 || url,support.citrix.com/article/CTX123875
+5001327 || [CITRIX] Netscaler - AppFw XML DDoS No Folder Installation Path. || url,wiki.quadrantsec.com/bin/view/Main/5001327 || url,support.citrix.com/article/CTX123875
+5001328 || [CITRIX] Netscaler - AppFw XML DDoS Failure to Open Config File. || url,wiki.quadrantsec.com/bin/view/Main/5001328 || url,support.citrix.com/article/CTX123875
+5001329 || [CITRIX] Netscaler - Denial of Service Error. || url,wiki.quadrantsec.com/bin/view/Main/5001329 || url,support.citrix.com/article/CTX123875
+5001330 || [CITRIX] Netscaler - Environment variable QTHOME not set. || url,wiki.quadrantsec.com/bin/view/Main/5001330 || url,support.citrix.com/article/CTX123875
+5001331 || [CITRIX] Netscaler - Problems inserting a namespace into the hash table. || url,wiki.quadrantsec.com/bin/view/Main/5001331 || url,support.citrix.com/article/CTX123875
+5001332 || [CITRIX] Netscaler - Problems getting the key of a namespace from the hash table. || url,wiki.quadrantsec.com/bin/view/Main/5001332 || url,support.citrix.com/article/CTX123875
+5001333 || [CITRIX] Netscaler - Unable to initialize XML tokenizer. || url,wiki.quadrantsec.com/bin/view/Main/5001333 || url,support.citrix.com/article/CTX123875
+5001334 || [CITRIX] Netscaler - Unable to open the file. || url,wiki.quadrantsec.com/bin/view/Main/5001334 || url,support.citrix.com/article/CTX123875
+5001335 || [CITRIX] Netscaler - AppFw XML Internal State Invalid. || url,wiki.quadrantsec.com/bin/view/Main/5001335 || url,support.citrix.com/article/CTX123875
+5001336 || [CITRIX] Netscaler - Invalid XPath. || url,wiki.quadrantsec.com/bin/view/Main/5001336 || url,support.citrix.com/article/CTX123875
+5001337 || [CITRIX] Netscaler - AppFw XML Low memory. || url,wiki.quadrantsec.com/bin/view/Main/5001337 || url,support.citrix.com/article/CTX123875
+5001338 || [CITRIX] Netscaler - Malformed address || url,wiki.quadrantsec.com/bin/view/Main/5001338 || url,support.citrix.com/article/CTX123875
+5001339 || [CITRIX] Netscaler - "NS-XML APPFW supports SwA and MTOM SOAP attachments || url,wiki.quadrantsec.com/bin/view/Main/5001339 || url,support.citrix.com/article/CTX123875
+5001340 || [CITRIX] Netscaler - Problems registering callbacks for operations. || url,wiki.quadrantsec.com/bin/view/Main/5001340 || url,support.citrix.com/article/CTX123875
+5001341 || [CITRIX] Netscaler - "Prefix length exceeded || url,wiki.quadrantsec.com/bin/view/Main/5001341 || url,support.citrix.com/article/CTX123875
+5001342 || [CITRIX] Netscaler - AppFw XML Read Failure || url,wiki.quadrantsec.com/bin/view/Main/5001342 || url,support.citrix.com/article/CTX123875
+5001343 || [CITRIX] Netscaler - Problems during pop of the node out of the XML stream. || url,wiki.quadrantsec.com/bin/view/Main/5001343 || url,support.citrix.com/article/CTX123875
+5001344 || [CITRIX] Netscaler - Problems during push of the node into the XML stream. || url,wiki.quadrantsec.com/bin/view/Main/5001344 || url,support.citrix.com/article/CTX123875
+5001345 || [CITRIX] Netscaler - Port in address is greater than 65535. || url,wiki.quadrantsec.com/bin/view/Main/5001345 || url,support.citrix.com/article/CTX123875
+5001346 || [CITRIX] Netscaler - Unsupported protocol || url,wiki.quadrantsec.com/bin/view/Main/5001346 || url,support.citrix.com/article/CTX123875
+5001347 || [CITRIX] Netscaler - AppFw XML Validation Failed || url,wiki.quadrantsec.com/bin/view/Main/5001347 || url,support.citrix.com/article/CTX123875
+5001348 || [CITRIX] Netscaler - AppFw XML Context is NULL. || url,wiki.quadrantsec.com/bin/view/Main/5001348 || url,support.citrix.com/article/CTX123875
+5001349 || [CITRIX] Netscaler - Context user state is NULL; internal error. || url,wiki.quadrantsec.com/bin/view/Main/5001349 || url,support.citrix.com/article/CTX123875
+5001350 || [CITRIX] Netscaler - Message config struct is NULL. || url,wiki.quadrantsec.com/bin/view/Main/5001350 || url,support.citrix.com/article/CTX123875
+5001351 || [CITRIX] Netscaler - Cannot instantiate abstract element || url,wiki.quadrantsec.com/bin/view/Main/5001351 || url,support.citrix.com/article/CTX123875
+5001352 || [CITRIX] Netscaler - "Cannot instantiate abstract type || url,wiki.quadrantsec.com/bin/view/Main/5001352 || url,support.citrix.com/article/CTX123875
+5001353 || [CITRIX] Netscaler - Additional soap header present in soap message. || url,wiki.quadrantsec.com/bin/view/Main/5001353 || url,support.citrix.com/article/CTX123875
+5001354 || [CITRIX] Netscaler - Attribute appears more than once in element || url,wiki.quadrantsec.com/bin/view/Main/5001354 || url,support.citrix.com/article/CTX123875
+5001355 || [CITRIX] Netscaler - Required attribute missing in element || url,wiki.quadrantsec.com/bin/view/Main/5001355 || url,support.citrix.com/article/CTX123875
+5001356 || [CITRIX] Netscaler - Compiled WSDL file is corrupt. || url,wiki.quadrantsec.com/bin/view/Main/5001356 || url,support.citrix.com/article/CTX123875
+5001357 || [CITRIX] Netscaler - Content model of element not satisfied. || url,wiki.quadrantsec.com/bin/view/Main/5001357 || url,support.citrix.com/article/CTX123875
+5001358 || [CITRIX] Netscaler - Compiled WSDL file is corrupt. || url,wiki.quadrantsec.com/bin/view/Main/5001358 || url,support.citrix.com/article/CTX123875
+5001359 || [CITRIX] Netscaler - Error compiling the schema || url,wiki.quadrantsec.com/bin/view/Main/5001359 || url,support.citrix.com/article/CTX123875
+5001360 || [CITRIX] Netscaler - Initialization of the data type engine failed. || url,wiki.quadrantsec.com/bin/view/Main/5001360 || url,support.citrix.com/article/CTX123875
+5001361 || [CITRIX] Netscaler - Internal corruption of WSDL in-memory structure. || url,wiki.quadrantsec.com/bin/view/Main/5001361 || url,support.citrix.com/article/CTX123875
+5001362 || [CITRIX] Netscaler - Attribute is invalid. || url,wiki.quadrantsec.com/bin/view/Main/5001362 || url,support.citrix.com/article/CTX123875
+5001363 || [CITRIX] Netscaler - Invalid configuration for soap validation. || url,wiki.quadrantsec.com/bin/view/Main/5001363 || url,support.citrix.com/article/CTX123875
+5001364 || [CITRIX] Netscaler - Not able to open compiled WSDL. || url,wiki.quadrantsec.com/bin/view/Main/5001364 || url,support.citrix.com/article/CTX123875
+5001365 || [CITRIX] Netscaler - Element has invalid content model. || url,wiki.quadrantsec.com/bin/view/Main/5001365 || url,support.citrix.com/article/CTX123875
+5001366 || [CITRIX] Netscaler - Data type is invalid. || url,wiki.quadrantsec.com/bin/view/Main/5001366 || url,support.citrix.com/article/CTX123875
+5001367 || [CITRIX] Netscaler - Invalid element. || url,wiki.quadrantsec.com/bin/view/Main/5001367 || url,support.citrix.com/article/CTX123875
+5001368 || [CITRIX] Netscaler - Not able to open the file. || url,wiki.quadrantsec.com/bin/view/Main/5001368 || url,support.citrix.com/article/CTX123875
+5001369 || [CITRIX] Netscaler - "Did not get expected type for element || url,wiki.quadrantsec.com/bin/view/Main/5001369 || url,support.citrix.com/article/CTX123875
+5001370 || [CITRIX] Netscaler - Unable to load validation engine. || url,wiki.quadrantsec.com/bin/view/Main/5001370 || url,support.citrix.com/article/CTX123875
+5001371 || [CITRIX] Netscaler - AppFw XML Validation Max Error. || url,wiki.quadrantsec.com/bin/view/Main/5001371 || url,support.citrix.com/article/CTX123875
+5001372 || [CITRIX] Netscaler - Service URL is not present or NULL. || url,wiki.quadrantsec.com/bin/view/Main/5001372 || url,support.citrix.com/article/CTX123875
+5001373 || [CITRIX] Netscaler - Feature not supported. || url,wiki.quadrantsec.com/bin/view/Main/5001373 || url,support.citrix.com/article/CTX123875
+5001374 || [CITRIX] Netscaler - Soap Body structure check failed. || url,wiki.quadrantsec.com/bin/view/Main/5001374 || url,support.citrix.com/article/CTX123875
+5001375 || [CITRIX] Netscaler - Soap Envelope structure check failed. || url,wiki.quadrantsec.com/bin/view/Main/5001375 || url,support.citrix.com/article/CTX123875
+5001376 || [CITRIX] Netscaler - Soap Header structure check failed. || url,wiki.quadrantsec.com/bin/view/Main/5001376 || url,support.citrix.com/article/CTX123875
+5001377 || [CITRIX] Netscaler - Prefix is unbounded. || url,wiki.quadrantsec.com/bin/view/Main/5001377 || url,support.citrix.com/article/CTX123875
+5001378 || [CITRIX] Netscaler - Element cannot be nil. || url,wiki.quadrantsec.com/bin/view/Main/5001378 || url,support.citrix.com/article/CTX123875
+5001379 || [CITRIX] Netscaler - "Element is nil || url,wiki.quadrantsec.com/bin/view/Main/5001379 || url,support.citrix.com/article/CTX123875
+5001380 || [CITRIX] Netscaler - Level of recursion more than maximum allowed depth. || url,wiki.quadrantsec.com/bin/view/Main/5001380 || url,support.citrix.com/article/CTX123875
+5001381 || [CITRIX] Netscaler - Trying to pop from an empty stack. || url,wiki.quadrantsec.com/bin/view/Main/5001381 || url,support.citrix.com/article/CTX123875
+5001382 || [CITRIX] Netscaler - Both SOAP Body and SOAP Header are empty in the SOAP request. || url,wiki.quadrantsec.com/bin/view/Main/5001382 || url,support.citrix.com/article/CTX123875
+5001383 || [CITRIX] Netscaler - Value should be of type || url,wiki.quadrantsec.com/bin/view/Main/5001383 || url,support.citrix.com/article/CTX123875
+5001384 || [CITRIX] Netscaler - Element cannot appear at this location. || url,wiki.quadrantsec.com/bin/view/Main/5001384 || url,support.citrix.com/article/CTX123875
+5001385 || [CITRIX] Netscaler - Facet mismatch. || url,wiki.quadrantsec.com/bin/view/Main/5001385 || url,support.citrix.com/article/CTX123875
+5001386 || [CITRIX] Netscaler - AppFw XML Validator Load Failed. || url,wiki.quadrantsec.com/bin/view/Main/5001386 || url,support.citrix.com/article/CTX123875
+5001387 || [CITRIX] Netscaler - Attribute has invalid value || url,wiki.quadrantsec.com/bin/view/Main/5001387 || url,support.citrix.com/article/CTX123875
+5001388 || [CITRIX] Netscaler - Invalid schema data type. || url,wiki.quadrantsec.com/bin/view/Main/5001388 || url,support.citrix.com/article/CTX123875
+5001389 || [CITRIX] Netscaler - Invalid schema node type. || url,wiki.quadrantsec.com/bin/view/Main/5001389 || url,support.citrix.com/article/CTX123875
+5001390 || [CITRIX] Netscaler - Value does not match FIXED constraint || url,wiki.quadrantsec.com/bin/view/Main/5001390 || url,support.citrix.com/article/CTX123875
+5001391 || [CITRIX] Netscaler - List length is greater than max allowed. || url,wiki.quadrantsec.com/bin/view/Main/5001391 || url,support.citrix.com/article/CTX123875
+5001392 || [CITRIX] Netscaler - List length is invalid. || url,wiki.quadrantsec.com/bin/view/Main/5001392 || url,support.citrix.com/article/CTX123875
+5001393 || [CITRIX] Netscaler - List length is lesser than min allowed. || url,wiki.quadrantsec.com/bin/view/Main/5001393 || url,support.citrix.com/article/CTX123875
+5001394 || [CITRIX] Netscaler - AppFw XML Validation Maximum Load Error. || url,wiki.quadrantsec.com/bin/view/Main/5001394 || url,support.citrix.com/article/CTX123875
+5001395 || [CITRIX] Netscaler - Missing require attribute in element || url,wiki.quadrantsec.com/bin/view/Main/5001395 || url,support.citrix.com/article/CTX123875
+5001396 || [CITRIX] Netscaler - Error code in the compiled Schema is being ignored. || url,wiki.quadrantsec.com/bin/view/Main/5001396 || url,support.citrix.com/article/CTX123875
+5001397 || [CITRIX] Netscaler - Error code in the compiled WSDL is being ignored. || url,wiki.quadrantsec.com/bin/view/Main/5001397 || url,support.citrix.com/article/CTX123875
+5001398 || [CITRIX] Netscaler - R2735: A MESSAGE described with an RPC-literal binding MUST place the part accessor elements for parameters and return value in no namespace. || url,wiki.quadrantsec.com/bin/view/Main/5001398 || url,support.citrix.com/article/CTX123875
+5001399 || [CITRIX] Netscaler - R2113: A MESSAGE containing serialized arrays MUST NOT include the soapenc:arrayType attribute. Element must not include the soapenc:arrayType attribute. || url,wiki.quadrantsec.com/bin/view/Main/5001399 || url,support.citrix.com/article/CTX123875
+5001400 || [CITRIX] Netscaler - "R1015: A RECEIVER MUST generate a fault if they encounter a message whose document element has a local name of ""Envelope"" but a namespace name that is not ""http://schemas.xmlsoap.org/ soap/envelope/"" or ""http://www.w3.org/2003/05/ soap-envelope"". We got namespace in SOAP Request." || url,wiki.quadrantsec.com/bin/view/Main/5001400 || url,support.citrix.com/article/CTX123875
+5001401 || [CITRIX] Netscaler - "R2740: The response envelope contained soap:Fault element(s) || url,wiki.quadrantsec.com/bin/view/Main/5001401 || url,support.citrix.com/article/CTX123875
+5001402 || [CITRIX] Netscaler - R1014: The children of the soap:Body element in a MESSAGE MUST be namespace qualified. Unqualified children of soap:Body is || url,wiki.quadrantsec.com/bin/view/Main/5001402 || url,support.citrix.com/article/CTX123875
+5001403 || [CITRIX] Netscaler - "BP1201: The envelope does not use SOAP 1.1 or SOAP 1.2 || url,wiki.quadrantsec.com/bin/view/Main/5001403 || url,support.citrix.com/article/CTX123875
+5001404 || [CITRIX] Netscaler - R1011: A MESSAGE MUST NOT have any element children of soap:Envelope following the soap:Body element. Element should not appear after 'soap:Body' element. || url,wiki.quadrantsec.com/bin/view/Main/5001404 || url,support.citrix.com/article/CTX123875
+5001405 || [CITRIX] Netscaler - R0007: A SENDER MUST NOT use the soap:mustUnderstand attribute when sending a SOAP header block containing a conformance claim. soap:mustUnderstand attribute is present on element || url,wiki.quadrantsec.com/bin/view/Main/5001405 || url,support.citrix.com/article/CTX123875
+5001406 || [CITRIX] Netscaler - AppFw XML WSI Internal Context NULL || url,wiki.quadrantsec.com/bin/view/Main/5001406 || url,support.citrix.com/article/CTX123875
+5001407 || [CITRIX] Netscaler - R1008: A MESSAGE MUST NOT contain a Document Type Declaration. DOCTYPE name is || url,wiki.quadrantsec.com/bin/view/Main/5001407 || url,support.citrix.com/article/CTX123875
+5001408 || [CITRIX] Netscaler - "R1031: When a MESSAGE contains a faultcode element the content of that element SHOULD NOT use of the SOAP 1.1 ""dot"" notation to refine the meaning of the Fault. Data should not contain 'DOT'(.) in it." || url,wiki.quadrantsec.com/bin/view/Main/5001408 || url,support.citrix.com/article/CTX123875
+5001409 || [CITRIX] Netscaler - R1005: A MESSAGE MUST NOT contain soap:encodingStyle attribute on any of the elements whose namespace is the same as the namespace of the qualified document element 'Envelope'. 'soap:encodingStyle' attribute should not be present on element || url,wiki.quadrantsec.com/bin/view/Main/5001409 || url,support.citrix.com/article/CTX123875
+5001410 || [CITRIX] Netscaler - R1006: A MESSAGE MUST NOT contain soap:encodingStyle attributes on any element that is a child of soap:Body. 'soap:encodingStyle' attribute should not be present on immidiate child of soap:Body. || url,wiki.quadrantsec.com/bin/view/Main/5001410 || url,support.citrix.com/article/CTX123875
+5001411 || [CITRIX] Netscaler - R1007: A MESSAGE described in an rpc-literal binding MUST NOT contain soap:encodingStyle attribute on any elements are grandchildren of soap:Body. 'soap:encodingStyle' attribute should not be present on grandchild of soap:Body. || url,wiki.quadrantsec.com/bin/view/Main/5001411 || url,support.citrix.com/article/CTX123875
+5001412 || [CITRIX] Netscaler - "R1032: The soap:Envelope || url,wiki.quadrantsec.com/bin/view/Main/5001412 || url,support.citrix.com/article/CTX123875
+5001413 || [CITRIX] Netscaler - "R1033: An ENVELOPE SHOULD NOT contain the namespace declaration xmlns:xml=""http://www.w3.org/XML/ 1998/namespace""." || url,wiki.quadrantsec.com/bin/view/Main/5001413 || url,support.citrix.com/article/CTX123875
+5001414 || [CITRIX] Netscaler - "R1111: An INSTANCE SHOULD use a ""200 OK"" HTTP status code for responses that contain a SOAP message that is not a SOAP fault. We should not get 'soap:Fault' element when HTTP response code is '200 OK'." || url,wiki.quadrantsec.com/bin/view/Main/5001414 || url,support.citrix.com/article/CTX123875
+5001415 || [CITRIX] Netscaler - R0005: A MESSAGE's conformance claims MUST be carried as SOAP header blocks. Element should be immediate children of soap:Header. || url,wiki.quadrantsec.com/bin/view/Main/5001415 || url,support.citrix.com/article/CTX123875
+5001416 || [CITRIX] Netscaler - AppFw XML WSI HTTP Error || url,wiki.quadrantsec.com/bin/view/Main/5001416 || url,support.citrix.com/article/CTX123875
+5001417 || [CITRIX] Netscaler - R1132: An HTTP request MESSAGE must use the HTTP POST method. We got HTTP method. || url,wiki.quadrantsec.com/bin/view/Main/5001417 || url,support.citrix.com/article/CTX123875
+5001418 || [CITRIX] Netscaler - R1012: A MESSAGE MUST be serialized as either UTF-8 or UTF-16. We got encoding || url,wiki.quadrantsec.com/bin/view/Main/5001418 || url,support.citrix.com/article/CTX123875
+5001419 || [CITRIX] Netscaler - R2738: A MESSAGE MUST include all soapbind:headers specified on a wsdl:input or wsdl:output of a wsdl:operation of a wsdl:binding that describes it.Wsdl header is not present in soap message. || url,wiki.quadrantsec.com/bin/view/Main/5001419 || url,support.citrix.com/article/CTX123875
+5001420 || [CITRIX] Netscaler - "R1013: A MESSAGE containing a soap:mustUnderstand attribute MUST only use the lexical forms ""0"" and ""1"". Value of 'soap:mustUnderstand' || url,wiki.quadrantsec.com/bin/view/Main/5001420 || url,support.citrix.com/article/CTX123875
+5001421 || [CITRIX] Netscaler - Resource id of deployment is NULL. || url,wiki.quadrantsec.com/bin/view/Main/5001421 || url,support.citrix.com/article/CTX123875
+5001422 || [CITRIX] Netscaler - BP1701: The envelope does not conform to the SOAP schema located at 'http://schemas.xmlsoap.org/ soap/envelope/' or 'http://www.w3.org/2003/05/ soap-envelope'. || url,wiki.quadrantsec.com/bin/view/Main/5001422 || url,support.citrix.com/article/CTX123875
+5001423 || [CITRIX] Netscaler - "R1114: An INSTANCE SHOULD use a ""405 Method not Allowed"" HTTP status code if the request method was not ""POST"". We got '%d' HTTP status code." || url,wiki.quadrantsec.com/bin/view/Main/5001423 || url,support.citrix.com/article/CTX123875
+5001424 || [CITRIX] Netscaler - "R1115: An INSTANCE SHOULD use a ""415 Unsupported Media Type"" HTTP status code if a HTTP request message's Content-Type header field-value is not permitted by its WSDL description. we got '%d' HTTP status code." || url,wiki.quadrantsec.com/bin/view/Main/5001424 || url,support.citrix.com/article/CTX123875
+5001425 || [CITRIX] Netscaler - Port URL is NULL. || url,wiki.quadrantsec.com/bin/view/Main/5001425 || url,support.citrix.com/article/CTX123875
+5001426 || [CITRIX] Netscaler - BP1011: The content of the request envelope does not match the wsdl:message definition. || url,wiki.quadrantsec.com/bin/view/Main/5001426 || url,support.citrix.com/article/CTX123875
+5001427 || [CITRIX] Netscaler - BP1013 The content of the response envelope does not match the wsdl:message definition. || url,wiki.quadrantsec.com/bin/view/Main/5001427 || url,support.citrix.com/article/CTX123875
+5001428 || [CITRIX] Netscaler - Deployed resource is not WSDL. || url,wiki.quadrantsec.com/bin/view/Main/5001428 || url,support.citrix.com/article/CTX123875
+5001429 || [CITRIX] Netscaler - "R2714: For one-way operations || url,wiki.quadrantsec.com/bin/view/Main/5001429 || url,support.citrix.com/article/CTX123875
+5001430 || [CITRIX] Netscaler - "R1112: An INSTANCE SHOULD use either a ""200 OK"" or ""202 Accepted"" HTTP status code for a response that does do not contain a SOAP message but indicates successful HTTP outcome of a request. We got '%d' HTTP response code." || url,wiki.quadrantsec.com/bin/view/Main/5001430 || url,support.citrix.com/article/CTX123875
+5001431 || [CITRIX] Netscaler - "R2729: A MESSAGE described with an RPC-literal binding. || url,wiki.quadrantsec.com/bin/view/Main/5001431 || url,support.citrix.com/article/CTX123875
+5001432 || [CITRIX] Netscaler - "R2744: A HTTP request MESSAGE MUST contain a SOAPAction HTTP header field with a quoted value equal to the value of the soapAction attribute of soapbind:operation || url,wiki.quadrantsec.com/bin/view/Main/5001432 || url,support.citrix.com/article/CTX123875
+5001433 || [CITRIX] Netscaler - R1109: The value of the SOAPAction HTTP header field in a HTTP request MESSAGE MUST be a quoted string || url,wiki.quadrantsec.com/bin/view/Main/5001433 || url,support.citrix.com/article/CTX123875
+5001434 || [CITRIX] Netscaler - "R1000: When a MESSAGE contains a soap:Fault element || url,wiki.quadrantsec.com/bin/view/Main/5001434 || url,support.citrix.com/article/CTX123875
+5001435 || [CITRIX] Netscaler - R1001: When a MESSAGE contains a soap:Fault element its element children MUST be unqualified. 'soap:Fault' child should be unqualified. || url,wiki.quadrantsec.com/bin/view/Main/5001435 || url,support.citrix.com/article/CTX123875
+5001436 || [CITRIX] Netscaler - "R1126: An INSTANCE MUST use a ""500 Internal Server Error"" HTTP status code if the response message is a SOAP Fault. We got HTTP response code. || url,wiki.quadrantsec.com/bin/view/Main/5001436 || url,support.citrix.com/article/CTX123875
+5001437 || [CITRIX] Netscaler - "R1003: A RECEIVER MUST accept fault messages that have any number of qualified or unqualified attributes || url,wiki.quadrantsec.com/bin/view/Main/5001437 || url,support.citrix.com/article/CTX123875
+5001438 || [CITRIX] Netscaler - BP1601: The soap:Envelope or soap:Body does not conform to XML 1.0. || url,wiki.quadrantsec.com/bin/view/Main/5001438 || url,support.citrix.com/article/CTX123875
+5001439 || [CITRIX] Netscaler - R1004: When a MESSAGE contains a faultcode element the content of that element SHOULD be one of the fault codes defined || url,wiki.quadrantsec.com/bin/view/Main/5001439 || url,support.citrix.com/article/CTX123875
+5001440 || [CITRIX] Netscaler - R1141: A MESSAGE MUST be sent using either HTTP/1.1 or HTTP/1.0. We got HTTP version '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001440 || url,support.citrix.com/article/CTX123875
+5001441 || [CITRIX] Netscaler - R1140: A MESSAGE SHOULD be sent using HTTP/1.1 || url,wiki.quadrantsec.com/bin/view/Main/5001441 || url,support.citrix.com/article/CTX123875
+5001442 || [CITRIX] Netscaler - "R0004: A MESSAGE MAY contain conformance claims || url,wiki.quadrantsec.com/bin/view/Main/5001442 || url,support.citrix.com/article/CTX123875
+5001443 || [CITRIX] Netscaler - AppFw XML WSI List Null. || url,wiki.quadrantsec.com/bin/view/Main/5001443 || url,support.citrix.com/article/CTX123875
+5001444 || [CITRIX] Netscaler - R1009: A MESSAGE MUST NOT contain Processing Instructions. Name of Processing Instruction is '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001444 || url,support.citrix.com/article/CTX123875
+5001445 || [CITRIX] Netscaler - "R2211: A MESSAGE described with an rpc-literal binding MUST NOT have the xsi:nil attribute with a value of ""1"" or ""true"" on the part accessors. Element '%s' must not have the xsi:nil attribute." || url,wiki.quadrantsec.com/bin/view/Main/5001445 || url,support.citrix.com/article/CTX123875
+5001446 || [CITRIX] Netscaler - Error during initialization || url,wiki.quadrantsec.com/bin/view/Main/5001446 || url,support.citrix.com/article/CTX123875
+5001447 || [CITRIX] Netscaler - AppFw XML XSDLOAD Failed during Compile || url,wiki.quadrantsec.com/bin/view/Main/5001447 || url,support.citrix.com/article/CTX123875
+5001448 || [CITRIX] Netscaler - No XSModel to print || url,wiki.quadrantsec.com/bin/view/Main/5001448 || url,support.citrix.com/article/CTX123875
+5001449 || [CITRIX] Netscaler - Error during parsing || url,wiki.quadrantsec.com/bin/view/Main/5001449 || url,support.citrix.com/article/CTX123875
+5001450 || [CITRIX] Netscaler - Unexpected exception during parsing || url,wiki.quadrantsec.com/bin/view/Main/5001450 || url,support.citrix.com/article/CTX123875
+5001451 || [CITRIX] Netscaler - Message contains SOAP Fault. || url,wiki.quadrantsec.com/bin/view/Main/5001451 || url,support.citrix.com/article/CTX123875
+5001452 || [CITRIX] Netscaler - Dumps the SOAP Fault contents to Audit log. || url,wiki.quadrantsec.com/bin/view/Main/5001452 || url,support.citrix.com/article/CTX123875
+5001453 || [CITRIX] Netscaler - When a server side and a client side TCP connection is delinked. These are the connections which are being tracked by NetScaler like HTTP. || url,wiki.quadrantsec.com/bin/view/Main/5001453 || url,support.citrix.com/article/CTX123875
+5001454 || [CITRIX] Netscaler - When a TCP connection terminates. The logged data indicates the number of bytes transmitted and received over the connection and LSO the connection start and end time || url,wiki.quadrantsec.com/bin/view/Main/5001454 || url,support.citrix.com/article/CTX123875
+5001455 || [CITRIX] Netscaler - "When a server side and a client side TCP connection is delinked. These are the connections which are not being tracked by NetScaler like FTP || url,wiki.quadrantsec.com/bin/view/Main/5001455 || url,support.citrix.com/article/CTX123875
+5001456 || [CITRIX] Netscaler -   || url,wiki.quadrantsec.com/bin/view/Main/5001456 || url,support.citrix.com/article/CTX123875
+5001457 || [CITRIX] Netscaler -   || url,wiki.quadrantsec.com/bin/view/Main/5001457 || url,support.citrix.com/article/CTX123875
+5001458 || [CITRIX] Netscaler -   || url,wiki.quadrantsec.com/bin/view/Main/5001458 || url,support.citrix.com/article/CTX123875
+5001459 || [CITRIX] Netscaler - URL Transformation profile invoked || url,wiki.quadrantsec.com/bin/view/Main/5001459 || url,support.citrix.com/article/CTX123875
+5001460 || [CITRIX] Netscaler - URL Transformation parsing error || url,wiki.quadrantsec.com/bin/view/Main/5001460 || url,support.citrix.com/article/CTX123875
+5001461 || [CITRIX] Netscaler - URL Transformation in a request header || url,wiki.quadrantsec.com/bin/view/Main/5001461 || url,support.citrix.com/article/CTX123875
+5001462 || [CITRIX] Netscaler - URL Transformation in a response header || url,wiki.quadrantsec.com/bin/view/Main/5001462 || url,support.citrix.com/article/CTX123875
+5001463 || [CITRIX] Netscaler - URL Transformation in a response body || url,wiki.quadrantsec.com/bin/view/Main/5001463 || url,support.citrix.com/article/CTX123875
+5001464 || [CITRIX] Netscaler - URL Transformation action matched URL || url,wiki.quadrantsec.com/bin/view/Main/5001464 || url,support.citrix.com/article/CTX123875
+5001465 || [CITRIX] Netscaler - URL Transformation action didn't match URL || url,wiki.quadrantsec.com/bin/view/Main/5001465 || url,support.citrix.com/article/CTX123875
+5001466 || [CITRIX] Netscaler - URL Transformation regex error || url,wiki.quadrantsec.com/bin/view/Main/5001466 || url,support.citrix.com/article/CTX123875
+5001467 || [CITRIX] Netscaler - URL Transformation error in a request header || url,wiki.quadrantsec.com/bin/view/Main/5001467 || url,support.citrix.com/article/CTX123875
+5001468 || [CITRIX] Netscaler - AppFw XSS violation in XML || url,wiki.quadrantsec.com/bin/view/Main/5001468 || url,support.citrix.com/article/CTX123875
+5001469 || [CITRIX] Netscaler - AppFw SQL Injection violation in XML || url,wiki.quadrantsec.com/bin/view/Main/5001469 || url,support.citrix.com/article/CTX123875
+5001470 || [CITRIX] Netscaler - Attachment Found in the XML Message. || url,wiki.quadrantsec.com/bin/view/Main/5001470 || url,support.citrix.com/article/CTX123875
+5001471 || [CITRIX] Netscaler - XML Attachment CallBack is NULL but HTTP message is MIME Attachment message. || url,wiki.quadrantsec.com/bin/view/Main/5001471 || url,support.citrix.com/article/CTX123875
+5001472 || [CITRIX] Netscaler - String %s is supposed to be MIME Header. But it is not according to the format of Mime Header HeaderName:HeaderValue || url,wiki.quadrantsec.com/bin/view/Main/5001472 || url,support.citrix.com/article/CTX123875
+5001473 || [CITRIX] Netscaler - HTTP Content type should be 'application/xop+xml' or '^(text|application)/([a-zA-Z]*+ xml|xml)' but we got %s. || url,wiki.quadrantsec.com/bin/view/Main/5001473 || url,support.citrix.com/article/CTX123875
+5001474 || [CITRIX] Netscaler - Boundary mismatch in mime message. || url,wiki.quadrantsec.com/bin/view/Main/5001474 || url,support.citrix.com/article/CTX123875
+5001475 || [CITRIX] Netscaler - The message having content-type as 'Multipart/Related' and not having a boundary is invalid. || url,wiki.quadrantsec.com/bin/view/Main/5001475 || url,support.citrix.com/article/CTX123875
+5001476 || [CITRIX] Netscaler - XML Message has an Attachment with size greater than the Configured Max Attachment Size. || url,wiki.quadrantsec.com/bin/view/Main/5001476 || url,support.citrix.com/article/CTX123875
+5001477 || [CITRIX] Netscaler - XML Message has an Attachment with Illegal Content-Type || url,wiki.quadrantsec.com/bin/view/Main/5001477 || url,support.citrix.com/article/CTX123875
+5001478 || [CITRIX] Netscaler - AppFw XML DDoS Send Fail Error. || url,wiki.quadrantsec.com/bin/view/Main/5001478 || url,support.citrix.com/article/CTX123875
+5001479 || [CITRIX] Netscaler - Exceeds max character data length. || url,wiki.quadrantsec.com/bin/view/Main/5001479 || url,support.citrix.com/article/CTX123875
+5001480 || [CITRIX] Netscaler - DTD present in the XML message. || url,wiki.quadrantsec.com/bin/view/Main/5001480 || url,support.citrix.com/article/CTX123875
+5001481 || [CITRIX] Netscaler - External entities present in the XML message. || url,wiki.quadrantsec.com/bin/view/Main/5001481 || url,support.citrix.com/article/CTX123875
+5001482 || [CITRIX] Netscaler - AppFw XML DoS Maximum Error || url,wiki.quadrantsec.com/bin/view/Main/5001482 || url,support.citrix.com/article/CTX123875
+5001483 || [CITRIX] Netscaler - Element '%s' exceeds maximum attributes per element. || url,wiki.quadrantsec.com/bin/view/Main/5001483 || url,support.citrix.com/article/CTX123875
+5001484 || [CITRIX] Netscaler - In element '%s' an attribute exceeds maximum name length. || url,wiki.quadrantsec.com/bin/view/Main/5001484 || url,support.citrix.com/article/CTX123875
+5001485 || [CITRIX] Netscaler - In element '%s' attribute '%s' exceeds maximum attribute value length. || url,wiki.quadrantsec.com/bin/view/Main/5001485 || url,support.citrix.com/article/CTX123875
+5001486 || [CITRIX] Netscaler - Element '%s' exceeds maximum elements per message. || url,wiki.quadrantsec.com/bin/view/Main/5001486 || url,support.citrix.com/article/CTX123875
+5001487 || [CITRIX] Netscaler - Parent of element '%s' exceeds maximum children at element '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001487 || url,support.citrix.com/article/CTX123875
+5001488 || [CITRIX] Netscaler - Element '%s' exceeds maximum element depth. || url,wiki.quadrantsec.com/bin/view/Main/5001488 || url,support.citrix.com/article/CTX123875
+5001489 || [CITRIX] Netscaler - Element '%s' exceeds maximum element name length. || url,wiki.quadrantsec.com/bin/view/Main/5001489 || url,support.citrix.com/article/CTX123875
+5001490 || [CITRIX] Netscaler - Message size exceeds max size. || url,wiki.quadrantsec.com/bin/view/Main/5001490 || url,support.citrix.com/article/CTX123875
+5001491 || [CITRIX] Netscaler - Node '%s' exceeds maximum nodes per message. || url,wiki.quadrantsec.com/bin/view/Main/5001491 || url,support.citrix.com/article/CTX123875
+5001492 || [CITRIX] Netscaler - Message size less than min size. || url,wiki.quadrantsec.com/bin/view/Main/5001492 || url,support.citrix.com/article/CTX123875
+5001493 || [CITRIX] Netscaler - Message is not a well-formed XML. || url,wiki.quadrantsec.com/bin/view/Main/5001493 || url,support.citrix.com/article/CTX123875
+5001494 || [CITRIX] Netscaler - Processing instructions present in the XML message. || url,wiki.quadrantsec.com/bin/view/Main/5001494 || url,support.citrix.com/article/CTX123875
+5001495 || [CITRIX] Netscaler - Element '%s' exceeds maximum active namespaces. || url,wiki.quadrantsec.com/bin/view/Main/5001495 || url,support.citrix.com/article/CTX123875
+5001496 || [CITRIX] Netscaler - In element '%s' a namespace exceeds maximum URI length. || url,wiki.quadrantsec.com/bin/view/Main/5001496 || url,support.citrix.com/article/CTX123875
+5001497 || [CITRIX] Netscaler - Exceeds max entity expansion depth || url,wiki.quadrantsec.com/bin/view/Main/5001497 || url,support.citrix.com/article/CTX123875
+5001498 || [CITRIX] Netscaler - Exceeds max number of entity expansions || url,wiki.quadrantsec.com/bin/view/Main/5001498 || url,support.citrix.com/article/CTX123875
+5001499 || [CITRIX] Netscaler - AppFw XML internal error || url,wiki.quadrantsec.com/bin/view/Main/5001499 || url,support.citrix.com/article/CTX123875
+5001500 || [CITRIX] Netscaler - AppFw XML DDoS Connect to Server Failed. || url,wiki.quadrantsec.com/bin/view/Main/5001500 || url,support.citrix.com/article/CTX123875
+5001501 || [CITRIX] Netscaler - AppFw XML DDoS Interaction socket open Failed. || url,wiki.quadrantsec.com/bin/view/Main/5001501 || url,support.citrix.com/article/CTX123875
+5001502 || [CITRIX] Netscaler - AppFw XML DDoS Invalid Config File. || url,wiki.quadrantsec.com/bin/view/Main/5001502 || url,support.citrix.com/article/CTX123875
+5001503 || [CITRIX] Netscaler - AppFw XML DDoS No Folder Installation Path. || url,wiki.quadrantsec.com/bin/view/Main/5001503 || url,support.citrix.com/article/CTX123875
+5001504 || [CITRIX] Netscaler - AppFw XML DDoS Failure to Open Config File. || url,wiki.quadrantsec.com/bin/view/Main/5001504 || url,support.citrix.com/article/CTX123875
+5001505 || [CITRIX] Netscaler - Denial of Service Error. || url,wiki.quadrantsec.com/bin/view/Main/5001505 || url,support.citrix.com/article/CTX123875
+5001506 || [CITRIX] Netscaler - Environment variable QTHOME not set. || url,wiki.quadrantsec.com/bin/view/Main/5001506 || url,support.citrix.com/article/CTX123875
+5001507 || [CITRIX] Netscaler - Problems inserting a namespace into the hash table. || url,wiki.quadrantsec.com/bin/view/Main/5001507 || url,support.citrix.com/article/CTX123875
+5001508 || [CITRIX] Netscaler - Problems getting the key of a namespace from the hash table. || url,wiki.quadrantsec.com/bin/view/Main/5001508 || url,support.citrix.com/article/CTX123875
+5001509 || [CITRIX] Netscaler - Unable to initialize XML tokenizer. || url,wiki.quadrantsec.com/bin/view/Main/5001509 || url,support.citrix.com/article/CTX123875
+5001510 || [CITRIX] Netscaler - Unable to open the file. || url,wiki.quadrantsec.com/bin/view/Main/5001510 || url,support.citrix.com/article/CTX123875
+5001511 || [CITRIX] Netscaler - AppFw XML Internal State Invalid. || url,wiki.quadrantsec.com/bin/view/Main/5001511 || url,support.citrix.com/article/CTX123875
+5001512 || [CITRIX] Netscaler - Invalid XPath. || url,wiki.quadrantsec.com/bin/view/Main/5001512 || url,support.citrix.com/article/CTX123875
+5001513 || [CITRIX] Netscaler - AppFw XML Low memory. || url,wiki.quadrantsec.com/bin/view/Main/5001513 || url,support.citrix.com/article/CTX123875
+5001514 || [CITRIX] Netscaler - Malformed address || url,wiki.quadrantsec.com/bin/view/Main/5001514 || url,support.citrix.com/article/CTX123875
+5001515 || [CITRIX] Netscaler - "NS-XML APPFW supports SwA and MTOM SOAP attachments || url,wiki.quadrantsec.com/bin/view/Main/5001515 || url,support.citrix.com/article/CTX123875
+5001516 || [CITRIX] Netscaler - Problems registering callbacks for operations. || url,wiki.quadrantsec.com/bin/view/Main/5001516 || url,support.citrix.com/article/CTX123875
+5001517 || [CITRIX] Netscaler - "Prefix length %d exceeded || url,wiki.quadrantsec.com/bin/view/Main/5001517 || url,support.citrix.com/article/CTX123875
+5001518 || [CITRIX] Netscaler - AppFw XML Read Failure || url,wiki.quadrantsec.com/bin/view/Main/5001518 || url,support.citrix.com/article/CTX123875
+5001519 || [CITRIX] Netscaler - Problems during pop of the node out of the XML stream. || url,wiki.quadrantsec.com/bin/view/Main/5001519 || url,support.citrix.com/article/CTX123875
+5001520 || [CITRIX] Netscaler - Problems during push of the node into the XML stream. || url,wiki.quadrantsec.com/bin/view/Main/5001520 || url,support.citrix.com/article/CTX123875
+5001521 || [CITRIX] Netscaler - Port in address %s is greater than 65535. || url,wiki.quadrantsec.com/bin/view/Main/5001521 || url,support.citrix.com/article/CTX123875
+5001522 || [CITRIX] Netscaler - Unsupported protocol || url,wiki.quadrantsec.com/bin/view/Main/5001522 || url,support.citrix.com/article/CTX123875
+5001523 || [CITRIX] Netscaler - AppFw XML Validation Failed || url,wiki.quadrantsec.com/bin/view/Main/5001523 || url,support.citrix.com/article/CTX123875
+5001524 || [CITRIX] Netscaler - AppFw XML Context is NULL. || url,wiki.quadrantsec.com/bin/view/Main/5001524 || url,support.citrix.com/article/CTX123875
+5001525 || [CITRIX] Netscaler - Context user state is NULL; internal error. || url,wiki.quadrantsec.com/bin/view/Main/5001525 || url,support.citrix.com/article/CTX123875
+5001526 || [CITRIX] Netscaler - Message config struct is NULL. || url,wiki.quadrantsec.com/bin/view/Main/5001526 || url,support.citrix.com/article/CTX123875
+5001527 || [CITRIX] Netscaler - Cannot instantiate abstract element || url,wiki.quadrantsec.com/bin/view/Main/5001527 || url,support.citrix.com/article/CTX123875
+5001528 || [CITRIX] Netscaler - "Cannot instantiate abstract type '%s' || url,wiki.quadrantsec.com/bin/view/Main/5001528 || url,support.citrix.com/article/CTX123875
+5001529 || [CITRIX] Netscaler - Additional soap header %s present in soap message. || url,wiki.quadrantsec.com/bin/view/Main/5001529 || url,support.citrix.com/article/CTX123875
+5001530 || [CITRIX] Netscaler - Attribute '%s' appears more than once in element '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001530 || url,support.citrix.com/article/CTX123875
+5001531 || [CITRIX] Netscaler - Required attribute missing in element || url,wiki.quadrantsec.com/bin/view/Main/5001531 || url,support.citrix.com/article/CTX123875
+5001532 || [CITRIX] Netscaler - Compiled WSDL file is corrupt. || url,wiki.quadrantsec.com/bin/view/Main/5001532 || url,support.citrix.com/article/CTX123875
+5001533 || [CITRIX] Netscaler - Content model of element '%s' not satisfied. || url,wiki.quadrantsec.com/bin/view/Main/5001533 || url,support.citrix.com/article/CTX123875
+5001534 || [CITRIX] Netscaler - Compiled WSDL file is corrupt. || url,wiki.quadrantsec.com/bin/view/Main/5001534 || url,support.citrix.com/article/CTX123875
+5001535 || [CITRIX] Netscaler - Error compiling the schema || url,wiki.quadrantsec.com/bin/view/Main/5001535 || url,support.citrix.com/article/CTX123875
+5001536 || [CITRIX] Netscaler - Initialization of the data type engine failed. || url,wiki.quadrantsec.com/bin/view/Main/5001536 || url,support.citrix.com/article/CTX123875
+5001537 || [CITRIX] Netscaler - Internal corruption of WSDL in-memory structure. || url,wiki.quadrantsec.com/bin/view/Main/5001537 || url,support.citrix.com/article/CTX123875
+5001538 || [CITRIX] Netscaler - Attribute '%s' is invalid. || url,wiki.quadrantsec.com/bin/view/Main/5001538 || url,support.citrix.com/article/CTX123875
+5001539 || [CITRIX] Netscaler - Invalid configuration for soap validation. || url,wiki.quadrantsec.com/bin/view/Main/5001539 || url,support.citrix.com/article/CTX123875
+5001540 || [CITRIX] Netscaler - Not able to open compiled WSDL. || url,wiki.quadrantsec.com/bin/view/Main/5001540 || url,support.citrix.com/article/CTX123875
+5001541 || [CITRIX] Netscaler - Element '%s' has invalid content model. || url,wiki.quadrantsec.com/bin/view/Main/5001541 || url,support.citrix.com/article/CTX123875
+5001542 || [CITRIX] Netscaler - Data type is invalid. || url,wiki.quadrantsec.com/bin/view/Main/5001542 || url,support.citrix.com/article/CTX123875
+5001543 || [CITRIX] Netscaler - Invalid element. || url,wiki.quadrantsec.com/bin/view/Main/5001543 || url,support.citrix.com/article/CTX123875
+5001544 || [CITRIX] Netscaler - Not able to open the file. || url,wiki.quadrantsec.com/bin/view/Main/5001544 || url,support.citrix.com/article/CTX123875
+5001545 || [CITRIX] Netscaler - "Did not get expected type for element '%s' || url,wiki.quadrantsec.com/bin/view/Main/5001545 || url,support.citrix.com/article/CTX123875
+5001546 || [CITRIX] Netscaler - Unable to load validation engine. || url,wiki.quadrantsec.com/bin/view/Main/5001546 || url,support.citrix.com/article/CTX123875
+5001547 || [CITRIX] Netscaler - AppFw XML Validation Max Error. || url,wiki.quadrantsec.com/bin/view/Main/5001547 || url,support.citrix.com/article/CTX123875
+5001548 || [CITRIX] Netscaler - Service URL is not present or NULL. || url,wiki.quadrantsec.com/bin/view/Main/5001548 || url,support.citrix.com/article/CTX123875
+5001549 || [CITRIX] Netscaler - Feature not supported. || url,wiki.quadrantsec.com/bin/view/Main/5001549 || url,support.citrix.com/article/CTX123875
+5001550 || [CITRIX] Netscaler - Soap Body structure check failed. || url,wiki.quadrantsec.com/bin/view/Main/5001550 || url,support.citrix.com/article/CTX123875
+5001551 || [CITRIX] Netscaler - Soap Envelope structure check failed. || url,wiki.quadrantsec.com/bin/view/Main/5001551 || url,support.citrix.com/article/CTX123875
+5001552 || [CITRIX] Netscaler - Soap Header structure check failed. || url,wiki.quadrantsec.com/bin/view/Main/5001552 || url,support.citrix.com/article/CTX123875
+5001553 || [CITRIX] Netscaler - Prefix '%s' is unbounded. || url,wiki.quadrantsec.com/bin/view/Main/5001553 || url,support.citrix.com/article/CTX123875
+5001554 || [CITRIX] Netscaler - Element '%s' cannot be nil. || url,wiki.quadrantsec.com/bin/view/Main/5001554 || url,support.citrix.com/article/CTX123875
+5001555 || [CITRIX] Netscaler - "Element '%s' is nil || url,wiki.quadrantsec.com/bin/view/Main/5001555 || url,support.citrix.com/article/CTX123875
+5001556 || [CITRIX] Netscaler - Level of recursion more than maximum allowed depth. || url,wiki.quadrantsec.com/bin/view/Main/5001556 || url,support.citrix.com/article/CTX123875
+5001557 || [CITRIX] Netscaler - Trying to pop from an empty stack. || url,wiki.quadrantsec.com/bin/view/Main/5001557 || url,support.citrix.com/article/CTX123875
+5001558 || [CITRIX] Netscaler - Both SOAP Body and SOAP Header are empty in the SOAP request. || url,wiki.quadrantsec.com/bin/view/Main/5001558 || url,support.citrix.com/article/CTX123875
+5001559 || [CITRIX] Netscaler - Value should be of type '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001559 || url,support.citrix.com/article/CTX123875
+5001560 || [CITRIX] Netscaler - Element '%s' cannot appear at this location. || url,wiki.quadrantsec.com/bin/view/Main/5001560 || url,support.citrix.com/article/CTX123875
+5001561 || [CITRIX] Netscaler - Facet mismatch. || url,wiki.quadrantsec.com/bin/view/Main/5001561 || url,support.citrix.com/article/CTX123875
+5001562 || [CITRIX] Netscaler - AppFw XML Validator Load Failed. || url,wiki.quadrantsec.com/bin/view/Main/5001562 || url,support.citrix.com/article/CTX123875
+5001563 || [CITRIX] Netscaler - Attribute '%s' has invalid value '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001563 || url,support.citrix.com/article/CTX123875
+5001564 || [CITRIX] Netscaler - Invalid schema data type. || url,wiki.quadrantsec.com/bin/view/Main/5001564 || url,support.citrix.com/article/CTX123875
+5001565 || [CITRIX] Netscaler - Invalid schema node type. || url,wiki.quadrantsec.com/bin/view/Main/5001565 || url,support.citrix.com/article/CTX123875
+5001566 || [CITRIX] Netscaler - Value '%s' does not match FIXED constraint '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001566 || url,support.citrix.com/article/CTX123875
+5001567 || [CITRIX] Netscaler - List length is greater than max allowed. || url,wiki.quadrantsec.com/bin/view/Main/5001567 || url,support.citrix.com/article/CTX123875
+5001568 || [CITRIX] Netscaler - List length is invalid. || url,wiki.quadrantsec.com/bin/view/Main/5001568 || url,support.citrix.com/article/CTX123875
+5001569 || [CITRIX] Netscaler - List length is lesser than min allowed. || url,wiki.quadrantsec.com/bin/view/Main/5001569 || url,support.citrix.com/article/CTX123875
+5001570 || [CITRIX] Netscaler - AppFw XML Validation Maximum Load Error. || url,wiki.quadrantsec.com/bin/view/Main/5001570 || url,support.citrix.com/article/CTX123875
+5001571 || [CITRIX] Netscaler - Missing require attribute '%s' in element '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001571 || url,support.citrix.com/article/CTX123875
+5001572 || [CITRIX] Netscaler - Error code in the compiled Schema is being ignored. || url,wiki.quadrantsec.com/bin/view/Main/5001572 || url,support.citrix.com/article/CTX123875
+5001573 || [CITRIX] Netscaler - Error code in the compiled WSDL is being ignored. || url,wiki.quadrantsec.com/bin/view/Main/5001573 || url,support.citrix.com/article/CTX123875
+5001574 || [CITRIX] Netscaler - R2735: A MESSAGE described with an rpc-literal binding MUST place the part accessor elements for parameters and return value in no namespace. Element '%s' must be unqualified. || url,wiki.quadrantsec.com/bin/view/Main/5001574 || url,support.citrix.com/article/CTX123875
+5001575 || [CITRIX] Netscaler - R2113: A MESSAGE containing serialized arrays MUST NOT include the soapenc:arrayType attribute. Element '%s' must not include the soapenc:arrayType attribute. || url,wiki.quadrantsec.com/bin/view/Main/5001575 || url,support.citrix.com/article/CTX123875
+5001576 || [CITRIX] Netscaler - "R1015: A RECEIVER MUST generate a fault if they encounter a message whose document element has a local name of ""Envelope"" but a namespace name that is not ""http://schemas.xmlsoap.org/ soap/envelope/"" or ""http://www.w3.org/ 2003/05/soap-envelope"". We got namespace '%s' in SOAP Request." || url,wiki.quadrantsec.com/bin/view/Main/5001576 || url,support.citrix.com/article/CTX123875
+5001577 || [CITRIX] Netscaler - "R2740: The response envelope contained soap:Fault element(s) || url,wiki.quadrantsec.com/bin/view/Main/5001577 || url,support.citrix.com/article/CTX123875
+5001578 || [CITRIX] Netscaler - R1014: The children of the soap:Body element in a MESSAGE MUST be namespace qualified. Unqualified children of soap:Body is '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001578 || url,support.citrix.com/article/CTX123875
+5001579 || [CITRIX] Netscaler - "BP1201: The envelope does not use SOAP 1.1 or SOAP 1.2 || url,wiki.quadrantsec.com/bin/view/Main/5001579 || url,support.citrix.com/article/CTX123875
+5001580 || [CITRIX] Netscaler - R1011: A MESSAGE MUST NOT have any element children of soap:Envelope following the soap:Body element. Element '%s' should not appear after 'soap:Body' element. || url,wiki.quadrantsec.com/bin/view/Main/5001580 || url,support.citrix.com/article/CTX123875
+5001581 || [CITRIX] Netscaler - R0007: A SENDER MUST NOT use the soap:mustUnderstand attribute when sending a SOAP header block containing a conformance claim. soap:mustUnderstand attribute is present on element '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001581 || url,support.citrix.com/article/CTX123875
+5001582 || [CITRIX] Netscaler - AppFw XML WSI Internal Context NULL || url,wiki.quadrantsec.com/bin/view/Main/5001582 || url,support.citrix.com/article/CTX123875
+5001583 || [CITRIX] Netscaler - R1008: A MESSAGE MUST NOT contain a Document Type Declaration. DOCTYPE name is '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001583 || url,support.citrix.com/article/CTX123875
+5001584 || [CITRIX] Netscaler - "R1031: When a MESSAGE contains a faultcode element the content of that element SHOULD NOT use of the SOAP 1.1 ""dot"" notation to refine the meaning of the Fault || url,wiki.quadrantsec.com/bin/view/Main/5001584 || url,support.citrix.com/article/CTX123875
+5001585 || [CITRIX] Netscaler - R1005: A MESSAGE MUST NOT contain soap:encodingStyle attribute on any of the elements whose namespace is the same as the namespace of the qualified document element 'Envelope' || url,wiki.quadrantsec.com/bin/view/Main/5001585 || url,support.citrix.com/article/CTX123875
+5001586 || [CITRIX] Netscaler - R1006: A MESSAGE MUST NOT contain soap:encodingStyle attributes on any element that is a child of soap:Body || url,wiki.quadrantsec.com/bin/view/Main/5001586 || url,support.citrix.com/article/CTX123875
+5001587 || [CITRIX] Netscaler - R1007: A MESSAGE described in an RPC-literal binding MUST NOT contain soap:encodingStyle attribute on any elements are grandchildren of soap:Body || url,wiki.quadrantsec.com/bin/view/Main/5001587 || url,support.citrix.com/article/CTX123875
+5001588 || [CITRIX] Netscaler - "R1032: The soap:Envelope || url,wiki.quadrantsec.com/bin/view/Main/5001588 || url,support.citrix.com/article/CTX123875
+5001589 || [CITRIX] Netscaler - "R1033: An ENVELOPE SHOULD NOT contain the namespace declaration xmlns:xml=""http://www.w3.org/ XML/1998/namespace""." || url,wiki.quadrantsec.com/bin/view/Main/5001589 || url,support.citrix.com/article/CTX123875
+5001590 || [CITRIX] Netscaler - "R1111: An INSTANCE SHOULD use a ""200 OK"" HTTP status code for responses that contain a SOAP message that is not a SOAP fault. We should not get 'soap:Fault' element when HTTP response code is '200 OK'." || url,wiki.quadrantsec.com/bin/view/Main/5001590 || url,support.citrix.com/article/CTX123875
+5001591 || [CITRIX] Netscaler - R0005: A MESSAGE's conformance claims MUST be carried as SOAP header blocks. || url,wiki.quadrantsec.com/bin/view/Main/5001591 || url,support.citrix.com/article/CTX123875
+5001592 || [CITRIX] Netscaler - AppFw XML WSI HTTP Error || url,wiki.quadrantsec.com/bin/view/Main/5001592 || url,support.citrix.com/article/CTX123875
+5001593 || [CITRIX] Netscaler - R1132: An HTTP request MESSAGE must use the HTTP POST method. || url,wiki.quadrantsec.com/bin/view/Main/5001593 || url,support.citrix.com/article/CTX123875
+5001594 || [CITRIX] Netscaler - R1012: A MESSAGE must be serialized as either UTF-8 or UTF-16 || url,wiki.quadrantsec.com/bin/view/Main/5001594 || url,support.citrix.com/article/CTX123875
+5001595 || [CITRIX] Netscaler - R2738: A MESSAGE MUST include all soapbind:headers specified on a wsdl:input or wsdl:output of a wsdl:operation of a wsdl:binding that describes it.Wsdl header is not present in soap message. || url,wiki.quadrantsec.com/bin/view/Main/5001595 || url,support.citrix.com/article/CTX123875
+5001596 || [CITRIX] Netscaler - "R1013: A MESSAGE containing a soap:mustUnderstand attribute MUST only use the lexical || url,wiki.quadrantsec.com/bin/view/Main/5001596 || url,support.citrix.com/article/CTX123875
+5001597 || [CITRIX] Netscaler - Resource id of deployment is NULL. || url,wiki.quadrantsec.com/bin/view/Main/5001597 || url,support.citrix.com/article/CTX123875
+5001598 || [CITRIX] Netscaler - BP1701: The envelope does not conform to the SOAP schema located at 'http://schemas.xmlsoap.org/soap/ envelope/' or 'http://www.w3.org/ 2003/05/soap-envelope'. || url,wiki.quadrantsec.com/bin/view/Main/5001598 || url,support.citrix.com/article/CTX123875
+5001599 || [CITRIX] Netscaler - "R1114: An INSTANCE SHOULD use a ""405 Method not Allowed"" HTTP status code if the request method was not ""POST"". We got '%d' HTTP status code." || url,wiki.quadrantsec.com/bin/view/Main/5001599 || url,support.citrix.com/article/CTX123875
+5001600 || [CITRIX] Netscaler - "R1115: An INSTANCE SHOULD use a ""415 Unsupported Media Type"" HTTP status code if a HTTP request message's Content-Type header field-value is not permitted by its WSDL description. We got '%d' HTTP status code." || url,wiki.quadrantsec.com/bin/view/Main/5001600 || url,support.citrix.com/article/CTX123875
+5001601 || [CITRIX] Netscaler - Port URL is NULL. || url,wiki.quadrantsec.com/bin/view/Main/5001601 || url,support.citrix.com/article/CTX123875
+5001602 || [CITRIX] Netscaler - BP1011: The content of the request envelope does not match the wsdl:message definition. || url,wiki.quadrantsec.com/bin/view/Main/5001602 || url,support.citrix.com/article/CTX123875
+5001603 || [CITRIX] Netscaler - BP1013 The content of the response envelope does not match the wsdl:message definition. || url,wiki.quadrantsec.com/bin/view/Main/5001603 || url,support.citrix.com/article/CTX123875
+5001604 || [CITRIX] Netscaler - Deployed resource is not WSDL. || url,wiki.quadrantsec.com/bin/view/Main/5001604 || url,support.citrix.com/article/CTX123875
+5001605 || [CITRIX] Netscaler - "R2714: For one-way operations || url,wiki.quadrantsec.com/bin/view/Main/5001605 || url,support.citrix.com/article/CTX123875
+5001606 || [CITRIX] Netscaler - "R1112: An INSTANCE SHOULD use either a ""200 OK"" or ""202 Accepted"" HTTP status code for a response that does do not contain a SOAP message but indicates successful HTTP outcome of a request. We got '%d' HTTP response code." || url,wiki.quadrantsec.com/bin/view/Main/5001606 || url,support.citrix.com/article/CTX123875
+5001607 || [CITRIX] Netscaler - "R2729: A MESSAGE described with an rpc-literal binding that is a response message MUST have a wrapper element whose name is the corresponding wsdl:operation name suffixed with the string ""Response"". Element name should be '%sResponse' but got '%s'." || url,wiki.quadrantsec.com/bin/view/Main/5001607 || url,support.citrix.com/article/CTX123875
+5001608 || [CITRIX] Netscaler - "R2744: A HTTP request MESSAGE MUST contain a SOAPAction HTTP header field with a quoted value equal to the value of the soapAction attribute of soapbind:operation || url,wiki.quadrantsec.com/bin/view/Main/5001608 || url,support.citrix.com/article/CTX123875
+5001609 || [CITRIX] Netscaler - R1109: The value of the SOAPAction HTTP header field in a HTTP request MESSAGE must be a quoted string. We got '%s' SOAPAction HTTP header. || url,wiki.quadrantsec.com/bin/view/Main/5001609 || url,support.citrix.com/article/CTX123875
+5001610 || [CITRIX] Netscaler - "R1000: When a MESSAGE contains a soap:Fault element || url,wiki.quadrantsec.com/bin/view/Main/5001610 || url,support.citrix.com/article/CTX123875
+5001611 || [CITRIX] Netscaler - R1001: When a MESSAGE contains a soap:Fault element its element children MUST be unqualified. 'soap:Fault' child '%s' should be unqualified. || url,wiki.quadrantsec.com/bin/view/Main/5001611 || url,support.citrix.com/article/CTX123875
+5001612 || [CITRIX] Netscaler - "R1126: An INSTANCE MUST use a ""500 Internal Server Error"" HTTP status code if the response message is a SOAP Fault. We got '%s' HTTP response code." || url,wiki.quadrantsec.com/bin/view/Main/5001612 || url,support.citrix.com/article/CTX123875
+5001613 || [CITRIX] Netscaler - "R1003: A RECEIVER MUST accept fault messages that have any number of qualified or unqualified attributes || url,wiki.quadrantsec.com/bin/view/Main/5001613 || url,support.citrix.com/article/CTX123875
+5001614 || [CITRIX] Netscaler - BP1601: The soap:Envelope or soap:Body does not conform to XML 1.0. Error is '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001614 || url,support.citrix.com/article/CTX123875
+5001615 || [CITRIX] Netscaler - R1004: When a MESSAGE contains a faultcode element the content of that element SHOULD be one of the fault codes defined in SOAP 1.1 or a namespace qualified fault code. 'faultcode' '%s' is not defined in SOAP 1.1 or it is not namespace qualified. || url,wiki.quadrantsec.com/bin/view/Main/5001615 || url,support.citrix.com/article/CTX123875
+5001616 || [CITRIX] Netscaler - R1141: A MESSAGE MUST be sent using either HTTP/1.1 or HTTP/1.0. We got HTTP version '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001616 || url,support.citrix.com/article/CTX123875
+5001617 || [CITRIX] Netscaler - R1140: A MESSAGE SHOULD be sent using HTTP/1.1. We got HTTP version '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001617 || url,support.citrix.com/article/CTX123875
+5001618 || [CITRIX] Netscaler - "R0004: A MESSAGE MAY contain conformance claims || url,wiki.quadrantsec.com/bin/view/Main/5001618 || url,support.citrix.com/article/CTX123875
+5001619 || [CITRIX] Netscaler - AppFw XML WSI List Null. || url,wiki.quadrantsec.com/bin/view/Main/5001619 || url,support.citrix.com/article/CTX123875
+5001620 || [CITRIX] Netscaler - R1009: A MESSAGE MUST NOT contain Processing Instructions. Name of Processing Instruction is '%s'. || url,wiki.quadrantsec.com/bin/view/Main/5001620 || url,support.citrix.com/article/CTX123875
+5001621 || [CITRIX] Netscaler - "R2211: A MESSAGE described with an rpc-literal binding MUST NOT have the xsi:nil attribute with a value of ""1"" or ""true"" on the part accessors. Element '%s' must not have the xsi:nil attribute." || url,wiki.quadrantsec.com/bin/view/Main/5001621 || url,support.citrix.com/article/CTX123875
+5001622 || [CITRIX] Netscaler - Error during initialization || url,wiki.quadrantsec.com/bin/view/Main/5001622 || url,support.citrix.com/article/CTX123875
+5001623 || [CITRIX] Netscaler - AppFw XML XSDLOAD Failed during Compile || url,wiki.quadrantsec.com/bin/view/Main/5001623 || url,support.citrix.com/article/CTX123875
+5001624 || [CITRIX] Netscaler - No XSModel to print || url,wiki.quadrantsec.com/bin/view/Main/5001624 || url,support.citrix.com/article/CTX123875
+5001625 || [CITRIX] Netscaler - Error during parsing || url,wiki.quadrantsec.com/bin/view/Main/5001625 || url,support.citrix.com/article/CTX123875
+5001626 || [CITRIX] Netscaler - Unexpected exception during parsing || url,wiki.quadrantsec.com/bin/view/Main/5001626 || url,support.citrix.com/article/CTX123875
+5001627 || [CITRIX] Netscaler - Message contains SOAP Fault. || url,wiki.quadrantsec.com/bin/view/Main/5001627 || url,support.citrix.com/article/CTX123875
+5001628 || [CITRIX] Netscaler - Dumps the SOAP Fault contents to Audit log. || url,wiki.quadrantsec.com/bin/view/Main/5001628 || url,support.citrix.com/article/CTX123875
+5001629 || [CITRIX] Netscaler - Login to AAA TM VServer succeeds || url,wiki.quadrantsec.com/bin/view/Main/5001629 || url,support.citrix.com/article/CTX123875
+5001630 || [CITRIX] Netscaler - AAA TM session logged out || url,wiki.quadrantsec.com/bin/view/Main/5001630 || url,support.citrix.com/article/CTX123875
+5001631 || [CITRIX] Netscaler - A AAA TM session receives a HTTP request || url,wiki.quadrantsec.com/bin/view/Main/5001631 || url,support.citrix.com/article/CTX123875
+5001632 || [CITRIX] Netscaler - A http resource access is denied by policy engine. The denied policy name is captured in the log message. || url,wiki.quadrantsec.com/bin/view/Main/5001632 || url,support.citrix.com/article/CTX123875
+5001633 || [CITRIX] Netscaler -   || url,wiki.quadrantsec.com/bin/view/Main/5001633 || url,support.citrix.com/article/CTX123875
+5001634 || [CITRIX] Netscaler - Pitboss watch is added on a process with the process id PID || url,wiki.quadrantsec.com/bin/view/Main/5001634 || url,support.citrix.com/article/CTX123875
+5001635 || [CITRIX] Netscaler - Pitboss watch is deleted on a process with the process id pid || url,wiki.quadrantsec.com/bin/view/Main/5001635 || url,support.citrix.com/article/CTX123875
+5001636 || [CITRIX] Netscaler - "Process with pid has reached maximum number of restarts. Therefore || url,wiki.quadrantsec.com/bin/view/Main/5001636 || url,support.citrix.com/article/CTX123875
+5001637 || [CITRIX] Netscaler - Process with PID is being restarted. The message indicates the number of times the process has been restarted || url,wiki.quadrantsec.com/bin/view/Main/5001637 || url,support.citrix.com/article/CTX123875
+5001638 || [CITRIX] Netscaler - Route Advertised || url,wiki.quadrantsec.com/bin/view/Main/5001638 || url,support.citrix.com/article/CTX123875
+5001639 || [CITRIX] Netscaler - Route Withdrawn || url,wiki.quadrantsec.com/bin/view/Main/5001639 || url,support.citrix.com/article/CTX123875
+5001640 || [CITRIX] Netscaler - Route Relearnt || url,wiki.quadrantsec.com/bin/view/Main/5001640 || url,support.citrix.com/article/CTX123875
+5001641 || [CITRIX] Netscaler - HA state change || url,wiki.quadrantsec.com/bin/view/Main/5001641 || url,support.citrix.com/article/CTX123875
+5001642 || [CITRIX] Netscaler - The input URL before rewriting || url,wiki.quadrantsec.com/bin/view/Main/5001642 || url,support.citrix.com/article/CTX123875
+5001643 || [CITRIX] Netscaler - The rewritten URL || url,wiki.quadrantsec.com/bin/view/Main/5001643 || url,support.citrix.com/article/CTX123875
+5001644 || [CITRIX] Netscaler - PCRE Error || url,wiki.quadrantsec.com/bin/view/Main/5001644 || url,support.citrix.com/article/CTX123875
+5001645 || [CITRIX] Netscaler - The matched URL || url,wiki.quadrantsec.com/bin/view/Main/5001645 || url,support.citrix.com/article/CTX123875
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
