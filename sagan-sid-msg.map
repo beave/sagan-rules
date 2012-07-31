@@ -13,18 +13,18 @@
 5000012 || [BASH] /tmp/sh access || url,wiki.quadrantsec.com/bin/view/Main/5000012
 5000013 || [BASH] suidperl access || url,wiki.quadrantsec.com/bin/view/Main/5000013
 5000014 || [BASH] histfile=/dev/null || url,wiki.quadrantsec.com/bin/view/Main/5000014
-5000015 || [OPENSSH] PAM Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5000015
-5000016 || [OPENSSH] Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5000016
-5000017 || [OPENSSH] Authentication failure for root || url,wiki.quadrantsec.com/bin/view/Main/5000017
+5000015 || [OPENSSH] PAM Authentication failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000015
+5000016 || [OPENSSH] Authentication failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000016
+5000017 || [OPENSSH] Authentication failure for root - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000017
 5000018 || [OPENSSH] Possible break-in attempt || url,wiki.quadrantsec.com/bin/view/Main/5000018
 5000020 || [OPENSSH] Not executable shell - login attempt || url,wiki.quadrantsec.com/bin/view/Main/5000020
 5000021 || [OPENSSH] Message send write error || url,wiki.quadrantsec.com/bin/view/Main/5000021
 5000022 || [OPENSSH] Invalid or illegal user || url,wiki.quadrantsec.com/bin/view/Main/5000022
 5000023 || [OPENSSH] Out-of-Band challenge failure || url,wiki.quadrantsec.com/bin/view/Main/5000023
 5000024 || [SU] SUDO user NOT in sudoers || url,wiki.quadrantsec.com/bin/view/Main/5000024
-5000025 || [SU] SUDO authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5000025
+5000025 || [SU] SUDO authentication failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000025
 5000027 || [SU] Successful su as root || url,wiki.quadrantsec.com/bin/view/Main/5000027
-5000028 || [SU] FAILED su || url,wiki.quadrantsec.com/bin/view/Main/5000028
+5000028 || [SU] FAILED su - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000028
 5000029 || GRSEC Time set || url,wiki.quadrantsec.com/bin/view/Main/5000029
 5000030 || GRSEC Signal 11 sent || url,wiki.quadrantsec.com/bin/view/Main/5000030
 5000031 || TCP Treason uncloaked || url,wiki.quadrantsec.com/bin/view/Main/5000031
@@ -107,13 +107,13 @@
 5000110 || [BIND] Zone transfer error || url,wiki.quadrantsec.com/bin/view/Main/5000110
 5000111 || [CISCO-IOS] ISO configuration changed || url,wiki.quadrantsec.com/bin/view/Main/5000111
 5000112 || [CISCO-IOS] Successful login || url,wiki.quadrantsec.com/bin/view/Main/5000112
-5000113 || [CISCO-IOS] Failed login || url,wiki.quadrantsec.com/bin/view/Main/5000113
+5000113 || [CISCO-IOS] Failed login - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5000113
 5000114 || [SYSLOG] Possible unknown problem on a system || url,wiki.quadrantsec.com/bin/view/Main/5000114
 5000115 || [SYSLOG] /etc/securetty missing, root access unrestricted || url,wiki.quadrantsec.com/bin/view/Main/5000115
 5000116 || [SYSLOG] System out of disk space || url,wiki.quadrantsec.com/bin/view/Main/5000116
 5000117 || [SYSLOG] Unable to mount NFS share || url,wiki.quadrantsec.com/bin/view/Main/5000117
 5000118 || [SYSLOG] Unable to mount the NFS directory || url,wiki.quadrantsec.com/bin/view/Main/5000118
-5000119 || [SYSLOG] Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5000119
+5000119 || [SYSLOG] Authentication failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000119
 5000120 || [SYSLOG] Illegal root login || url,wiki.quadrantsec.com/bin/view/Main/5000120
 5000121 || [SYSLOG] Connection blocked by TCP Wrappers || url,wiki.quadrantsec.com/bin/view/Main/5000121
 5000122 || [SYSLOG] Physical root login || url,wiki.quadrantsec.com/bin/view/Main/5000122
@@ -186,10 +186,10 @@
 5000190 || [FTPD] Multiple failed login attempts || url,wiki.quadrantsec.com/bin/view/Main/5000190
 5000191 || [FTPD] User disconnected due to time out || url,wiki.quadrantsec.com/bin/view/Main/5000191
 5000192 || [FTPD] Attempted access to a disabled account || url,wiki.quadrantsec.com/bin/view/Main/5000192
-5000193 || [FTPD] Failed authentication || url,wiki.quadrantsec.com/bin/view/Main/5000193
+5000193 || [FTPD] Failed authentication - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000193
 5000194 || [VSFTPD] Session opened || url,wiki.quadrantsec.com/bin/view/Main/5000194
 5000195 || [VSFTPD] Authentication successful || url,wiki.quadrantsec.com/bin/view/Main/5000195
-5000196 || [VSFTPD] Login failed || url,wiki.quadrantsec.com/bin/view/Main/5000196
+5000196 || [VSFTPD] Login failed - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000196
 5000197 || [VSFTPD] File uploaded || url,wiki.quadrantsec.com/bin/view/Main/5000197
 5000198 || [WORDPRESS] - Wordpress authentication failed || url,wiki.quadrantsec.com/bin/view/Main/5000198
 5000199 || [WORDPRESS] - Wordpress authentication succeeded || url,wiki.quadrantsec.com/bin/view/Main/5000199
@@ -198,7 +198,7 @@
 5000202 || [WORDPRESS] - Wordpress Wordpress Comment Flood Attempt || url,wiki.quadrantsec.com/bin/view/Main/5000202
 5000203 || [WORDPRESS] - Attack against Wordpress detected || url,wiki.quadrantsec.com/bin/view/Main/5000203
 5000204 || [VMWARE] User login successful || url,wiki.quadrantsec.com/bin/view/Main/5000204
-5000206 || [VMWARE] User authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5000206
+5000206 || [VMWARE] User authentication failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000206
 5000208 || [VMWARE] Virtual machine state change to OFF || url,wiki.quadrantsec.com/bin/view/Main/5000208
 5000209 || [VMWARE] Virtual machine state change to ON || url,wiki.quadrantsec.com/bin/view/Main/5000209
 5000210 || [VMWARE] Virtual machine being reconfigured || url,wiki.quadrantsec.com/bin/view/Main/5000210
@@ -1107,7 +1107,7 @@
 5001148 || [JUNIPER] application-level distributed denial-of-service (AppDDoS) state transition occurred in logical system || url,wiki.quadrantsec.com/bin/view/Main/5001148
 5001149 || [JUNIPER] Application-level distributed denial-of-service (AppDDoS) attack in a logical system || url,wiki.quadrantsec.com/bin/view/Main/5001149
 5001150 || [JUNIPER] Application-level distributed denial-of-service (AppDDoS) attack || url,wiki.quadrantsec.com/bin/view/Main/5001150
-5001151 || [WINDOWS-AUTH] Login failure - Unknown username or bad password || url,wiki.quadrantsec.com/bin/view/Main/5001151
+5001151 || [WINDOWS-AUTH] Login failure - Unknown username or bad password - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001151
 5001152 || [WINDOWS-AUTH] Login failure - Account login time restriction || url,wiki.quadrantsec.com/bin/view/Main/5001152
 5001153 || [WINDOWS-AUTH] Login failure - Account currently disabled || url,wiki.quadrantsec.com/bin/view/Main/5001153
 5001154 || [WINDOWS-AUTH] Login failure - Specified account expired || url,wiki.quadrantsec.com/bin/view/Main/5001154
@@ -1334,7 +1334,7 @@
 5001376 || [CITRIX] Netscaler - ICA application launch has started || url,wiki.quadrantsec.com/bin/view/Main/5001376 || url,support.citrix.com/article/CTX123875
 5001377 || [CITRIX] Netscaler - SSLVPN license limit reached || url,wiki.quadrantsec.com/bin/view/Main/5001377 || url,support.citrix.com/article/CTX123875
 5001378 || [CITRIX] Netscaler - SSLVPN login succeeds || url,wiki.quadrantsec.com/bin/view/Main/5001378 || url,support.citrix.com/article/CTX123875
-5001379 || [CITRIX] Netscaler - AAA module failed to login the user || url,wiki.quadrantsec.com/bin/view/Main/5001379 || url,support.citrix.com/article/CTX123875
+5001379 || [CITRIX] Netscaler - AAA module failed to login the user - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001379 || url,support.citrix.com/article/CTX123875
 5001380 || [CITRIX] Netscaler - SSLVPN session logs out. || url,wiki.quadrantsec.com/bin/view/Main/5001380 || url,support.citrix.com/article/CTX123875
 5001381 || [CITRIX] Netscaler - Monitor bound to the service is down || url,wiki.quadrantsec.com/bin/view/Main/5001381 || url,support.citrix.com/article/CTX123875
 5001382 || [CITRIX] Netscaler - Monitor bound to the service has hit threshold limit || url,wiki.quadrantsec.com/bin/view/Main/5001382 || url,support.citrix.com/article/CTX123875
@@ -1428,6 +1428,7 @@
 5001472 || [DIGITALPERSONA] Account locked out || url,wiki.quadrantsec.com/bin/view/Main/5001472
 5001473 || [DIGITALPERSONA] License quota exceeded || url,wiki.quadrantsec.com/bin/view/Main/5001473
 5001474 || [DIGITALPERSONA] License quota near limit || url,wiki.quadrantsec.com/bin/view/Main/5001474
+5001475 || [WINDOWS-AUTH] Group account changed || url,wiki.quadrantsec.com/bin/view/Main/5001475
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
