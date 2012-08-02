@@ -1429,6 +1429,50 @@
 5001473 || [DIGITALPERSONA] License quota exceeded || url,wiki.quadrantsec.com/bin/view/Main/5001473
 5001474 || [DIGITALPERSONA] License quota near limit || url,wiki.quadrantsec.com/bin/view/Main/5001474
 5001475 || [WINDOWS-AUTH] Group account changed || url,wiki.quadrantsec.com/bin/view/Main/5001475
+5001476 || [CISCO-IOS] Unsupported Hardware Module || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1ab
+5001477 || [CISCO-IOS] IP Packet recieved to short || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1abb
+5001478 || [CISCO-IOS] IP Packet with probable bad checksum Dropped || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#EARL
+5001479 || [CISCO-IOS] NetFlow addressable memory almost full || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1a
+5001480 || [CISCO-IOS] IOS Keepalive Loop Detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1b
+5001481 || [CISCO-IOS] Possible IOS System Crash || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1bc
+5001482 || [CISCO-IOS] Error in Layer 3 Forwarding ASIC || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#ASIC
+5001483 || [CISCO-IOS] MAC/IP length inconsistencies || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1
+5001484 || [CISCO-IOS] Invalid IP Checksum detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob2
+5001485 || [CISCO-IOS] Excessive Multicast Traffic to IGMP reserved address || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob3
+5001486 || [CISCO-IOS] PIM Hold Time Out of range || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob5
+5001487 || [CISCO-IOS] Maximum Number of L2 Multicast Group Entries Created || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob6
+5001488 || [CISCO-IOS] Internal Table Manager Parity Error || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob7
+5001489 || [CISCO-IOS] Short IP Packets Detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob8
+5001490 || [CISCO-IOS] Creating Session to module/slot failed || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#Processor
+5001491 || [CISCO-IOS] Module Firmware error detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob9
+5001492 || [CISCO-IOS] Module Error Condition || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob-error
+5001493 || [CISCO-IOS] Switch Port Error Detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#mod-issue
+5001494 || [CISCO-IOS] Unsupported SFP GBIC Detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#badkey
+5001495 || [CISCO-IOS] TCAM Resource Exhaustion Detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#TCAM
+5001496 || [CISCO-IOS] Supervisor Engine Parity Errors || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#tmparity
+5001497 || [CISCO-IOS] Memory Parity Error || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob-controller
+5001498 || [CISCO-IOS] Linecard Endpoint Lost Sync || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#sp141
+5001499 || [CISCO-IOS] Misconfigured Boot Variables || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#nwboot
+5001500 || [CISCO-IOS] CPU Monitor Message Time Outs || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#monitor
+5001501 || [CISCO-IOS] CPU Monitor Message Not Heard || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#monitor
+5001502 || [CISCO-IOS] Invalid IDPROM Image || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#idprom
+5001503 || [CISCO-IOS] Switch Module Powered Off || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#pwrdis
+5001504 || [CISCO-IOS] ASIC Failed to Synchronize || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#onlinefail
+5001505 || [CISCO-IOS] Flow Mask Request Failed || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#flowmask
+5001506 || [CISCO-IOS] IGMP join packet Flood || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#igmpsnoop
+5001507 || [CISCO-IOS] ASIC/Pinnacle Unrecoverable resources || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#dr
+5001508 || [CISCO-IOS] Switching Bus Stalled || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob-3sec
+5001509 || [CISCO-IOS] Switching Bus Recovered || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob-3sec
+5001510 || [CISCO-IOS] SP-RP ping test failed, High Traffic || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#srp
+5001511 || [CISCO-IOS] Sub-interface Limit Reached || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#subint
+5001512 || [CISCO-IOS] Hash Bucket Collision || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#l2hash
+5001513 || [CISCO-IOS] QoS Hardware Resources Exceeded || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#qm_agg
+5001514 || [CISCO-IOS] Port Channel MTU Mismatch || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob-bundle
+5001515 || [CISCO-IOS] Port Channel Flow Control Mismatch || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#port
+5001516 || [CISCO-IOS] Route entries about to reach FIB capacity || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#tcamexception
+5001517 || [CISCO-IOS] Switch Port Data Path Error || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#disablingport
+5001518 || [CISCO-IOS] Bad CRC on ASIC Line Card || url,http://www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#module
+5001519 || [CISCO-IOS] Switch Detected Unknown Protocol || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#badcode
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
