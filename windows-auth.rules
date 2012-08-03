@@ -27,6 +27,7 @@
 # Windows based rules. 
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Login failure - Unknown username or bad password - Brute force"; content: " 529: "; classtype: unsuccessful-user; program: after: track by_src, count 3, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001151; sid: 5001151; rev:2;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Login failure - Unknown username or bad password"; content: " 529: "; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001531; sid: 5001531; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Login failure - Account login time restriction"; content: " 530: "; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001152; sid: 5001152; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Login failure - Account currently disabled"; content: " 531: "; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001153; sid: 5001153; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Login failure - Specified account expired"; content: " 532: "; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001154; sid: 5001154; rev:1;)
