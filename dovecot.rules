@@ -25,7 +25,7 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Authentication success"; content: "login"; content: "Login"; classtype: successful-user; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000264; sid:5000264; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Authentication success"; content: "login"; content: "Login"; classtype: successful-user; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000264; sid:5000264; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Failed login"; content: "Password mismatch"; classtype: unsuccessful-user; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000265; sid:5000265; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Starting up"; content: "starting up"; classtype: system-event; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000266; sid:5000266; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Fatal error"; content: "Fatal"; classtype: program-error; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000267; sid:5000267; rev:1;)
