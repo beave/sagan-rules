@@ -1473,6 +1473,18 @@
 5001517 || [CISCO-IOS] Switch Port Data Path Error || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#disablingport
 5001518 || [CISCO-IOS] Bad CRC on ASIC Line Card || url,http://www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#module
 5001519 || [CISCO-IOS] Switch Detected Unknown Protocol || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#badcode
+5001520 || [CISCO-IOS] Failed login || url,wiki.quadrantsec.com/bin/view/Main/5001520
+5001521 || [CITRIX] Netscaler - AAA module failed to login the user || url,wiki.quadrantsec.com/bin/view/Main/5001521 || url,support.citrix.com/article/CTX123875
+5001522 || [FTPD] Failed authentication || url,wiki.quadrantsec.com/bin/view/Main/5001522
+5001523 || [OPENSSH] PAM Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5001523
+5001524 || [OPENSSH] Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5001524
+5001525 || [OPENSSH] Authentication failure for root || url,wiki.quadrantsec.com/bin/view/Main/5001525
+5001526 || [SU] SUDO authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5001526
+5001527 || [SU] FAILED su || url,wiki.quadrantsec.com/bin/view/Main/5001527
+5001528 || [SYSLOG] Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5001528
+5001529 || [VMWARE] User authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5001529
+5001530 || [VSFTPD] Login failed || url,wiki.quadrantsec.com/bin/view/Main/5001530
+5001531 || [WINDOWS-AUTH] Login failure - Unknown username or bad password || url,wiki.quadrantsec.com/bin/view/Main/5001531
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
