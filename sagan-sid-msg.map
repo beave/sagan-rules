@@ -1116,7 +1116,7 @@
 5001157 || [WINDOWS-AUTH] Login failure - Account password is expired || url,wiki.quadrantsec.com/bin/view/Main/5001157
 5001158 || [WINDOWS-AUTH] Login failure - Internal error || url,wiki.quadrantsec.com/bin/view/Main/5001158
 5001159 || [WINDOWS-AUTH] Login failure - Account locked || url,wiki.quadrantsec.com/bin/view/Main/5001159
-5001160 || [WINDOWS-AUTH] Windows DC Logon Failure || url,wiki.quadrantsec.com/bin/view/Main/5001160
+5001160 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001160
 5001161 || [WINDOWS-AUTH] User account unlocked || url,wiki.quadrantsec.com/bin/view/Main/5001161
 5001162 || [WINDOWS-AUTH] Security enabled group created || url,wiki.quadrantsec.com/bin/view/Main/5001162
 5001163 || [WINDOWS-AUTH] Security enabled group deleted || url,wiki.quadrantsec.com/bin/view/Main/5001163

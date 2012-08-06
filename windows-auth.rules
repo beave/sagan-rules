@@ -39,7 +39,7 @@ drop syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Login failu
 
 # See 681 & 4769 for subcodes
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows DC Logon Failure"; pcre: "/ 675: | 676: | 681: /"; classtype: unsuccessful-user; program: Security; after: track by_src, count 3, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001160; sid: 5001160; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows DC Logon Failure - Brute force"; pcre: "/ 675: | 676: | 681: /"; classtype: unsuccessful-user; program: Security; after: track by_src, count 3, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001160; sid: 5001160; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] User account unlocked"; pcre: "/ 671: | 4767: /"; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001161; sid: 5001161; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled group created"; pcre: "/ 631: | 635: | 658: /"; classtype: system-event; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001162; sid: 5001162; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled group deleted"; pcre: "/ 634: | 638: | 662: /"; classtype: system-event; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001163; sid: 5001163; rev:1;)
