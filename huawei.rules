@@ -1,0 +1,91 @@
+# Sagan huawei.rules
+# Copyright (c) 2009-2012, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+# Huawei router rules.  Create by Robert Nunley (rnunley@quadrantsec.com)
+# 08/06/2012
+
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ARP_DUPLICATE_IPADDR"; content: "ARP/4/ARP_DUPLICATE_IPADDR"; classtype: suspicious-traffic; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001533; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 68 (msg:"[HUAWEI] DHCPC_LOG_NAK"; content: "DHCPC/4/DHCPC_LOG_NAK"; classtype: suspicious-traffic; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001534; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 68 (msg:"[HUAWEI] DHCPC_LOG_REQIP_SUCCESS"; content: "DHCPC/4/DHCPC_LOG_REQIP_SUCCESS"; content: "has acquired ip address successfully"; classtype: suspicious-traffic; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001535; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET 68 (msg:"[HUAWEI] DHCPC_LOG_REQIP_SUCCESS"; content: "DHCPC/4/DHCPC_LOG_REQIP_SUCCESS"; content: "vlan"; content: "has acquired ip address successfully"; classtype: suspicious-traffic; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001536; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[HUAWEI] FTPS - USERIN Login successful"; content: "FTPS/4/USERIN"; content: "login succeeded"; classtype: successful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001537; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[HUAWEI] FTPS - USERIN Login failed"; content: "FTPS/4/USERIN"; content: "login failed"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001538; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[HUAWEI] FTPS - USEROUT Logout"; content: "FTPS/4/USEROUT"; classtype: not-suspicious; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001539; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[HUAWEI] FTPS - RECVDATA"; content: "FTPS/5/RECVDATA"; classtype: not-suspicious; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001540; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[HUAWEI] FTPS - REQUEST"; content: "FTPS/5/REQUEST"; classtype: not-suspicious; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001541; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[HUAWEI] FTPS - SENDDATA"; content: "FTPS/5/SENDDATA"; classtype: not-suspicious; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001542; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[HUAWEI] HTTPD - FAIL"; content: "HTTPD/4/FAIL"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001543; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[HUAWEI] HTTPD - OUT"; content: "HTTPD/4/OUT"; classtype: attempted-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001544; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[HUAWEI] HTTPD - PASS"; content: "HTTPD/4/PASS"; classtype: attempted-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001545; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - IP spoof attack"; content: "SEC/4/ATCKDF"; content: "IP spoof attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001546; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Fraggle attack"; content: "SEC/4/ATCKDF"; content: "fraggle attack"; classtype: attempted-dos; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001547; rev:1;)
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Smurf attack"; content: "SEC/4/ATCKDF"; content: "Smurf attack"; classtype: attempted-dos; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001548; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Land attack"; content: "SEC/4/ATCKDF"; content: "land attack"; classtype: attempted-dos; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001549; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Time stamp attack"; content: "SEC/4/ATCKDF"; content: "Time stamp attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001550; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Ip options attack"; content: "SEC/4/ATCKDF"; content: "Ip options attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001551; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Ip option source route attack"; content: "SEC/4/ATCKDF"; content: "Ip option source route attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001552; rev:1;)
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - ICMP flood attack"; content: "SEC/4/ATCKDF"; content: "ICMP flood attack"; classtype: attempted-dos; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001553; rev:1;)
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Redirect attack"; content: "SEC/4/ATCKDF"; content: "Redirect attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001554; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - TCP flood attack"; content: "SEC/4/ATCKDF"; content: "TCP flood attack"; classtype: attempted-dos; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001555; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 139 (msg:"[HUAWEI] ATCKDF - Winnuke attack"; content: "SEC/4/ATCKDF"; content: "Winnuke attack"; classtype: attempted-dos; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001556; rev:1;)
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Ping of death attack"; content: "SEC/4/ATCKDF"; content: "Ping of death attack"; classtype: attempted-dos; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001557; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Tear drop attack"; content: "SEC/4/ATCKDF"; content: "Tear drop attack"; classtype: attempted-dos; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001558; rev:1;)
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Trace route attack"; content: "SEC/4/ATCKDF"; content: "Trace route attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001559; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Ip options route record attack"; content: "SEC/4/ATCKDF"; content: "Ip options route record attack"; classtype: misc-attack reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001560; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Port scan attack"; content: "SEC/4/ATCKDF"; content: "Port scan attack"; classtype: network-scan; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001561; rev:1;)
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Unreachable attack"; content: "SEC/4/ATCKDF"; content: "Unreachable attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001562; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - UDP flood attack"; content: "SEC/4/ATCKDF"; content: "Udp flood attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001563; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Syn flood attack"; content: "SEC/4/ATCKDF"; content: "Syn flood attack"; classtype: attempted-dos; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001564; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Other-protocol attack"; content: "SEC/4/ATCKDF"; content: "other-protocol attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001565; rev:1;)
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Large ICMP attack"; content: "SEC/4/ATCKDF"; content: "Large ICMP attack"; classtype: attempted-dos; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001566; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - IP Fragment attack"; content: "SEC/4/ATCKDF"; content: "IP Fragment attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001567; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"[HUAWEI] ATCKDF - Ftp Bounce attack"; content: "SEC/4/ATCKDF"; content: "Ftp Bounce attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001568; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Too much Half Con of SYN Flood"; content: "SEC/4/ATCKDF"; content: "Too much Half Con of SYN Flood"; classtype: attempted-dos; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001569; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] ATCKDF - Tcp flag attack"; content: "SEC/4/ATCKDF"; content: "Tcp flag attack"; classtype: misc-attack; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001570; rev:1;)
+#alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] BIND - VPN bound IP address"; content: "SEC/4/BIND"; content: "vpn:"; content: "is binded to Ip Address"; classtype: attempted-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001571; rev:1;)
+#alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] BIND - VPN unbound IP address"; content: "SEC/4/BIND"; content: "vpn:"; content: "is unbinded to Ip Address"; classtype: attempted-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001572; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] BLACKLIST - VPN added to blacklist"; content: "SEC/4/BLACKLIST"; content: "is added to blacklist"; classtype: configuration-change; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001573; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] BLACKLIST - VPN removed from blacklist"; content: "SEC/4/BLACKLIST"; content: "is removed from blacklist"; classtype: configuration-change; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001574; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] BLACKLIST - Blacklist cleared"; content: "SEC/4/BLACKLIST"; content: "Clear All blacklist"; classtype: configuration-change; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001575; rev:1;)
+#alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] SESSION"; content: "SEC/4/SESSION"; classtype: attempted-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001576; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 514 (msg:"[HUAWEI] SHELL - LOGIN"; content: "SHELL/4/LOGIN "; classtype: attempted-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001577; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 514 (msg:"[HUAWEI] SHELL - LOGIN_FAIL"; content: "SHELL/4/LOGIN_FAIL"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001578; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 514 (msg:"[HUAWEI] SHELL - LOGOUT"; content: "SHELL/4/LOGOUT"; classtype: attempted-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001579; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 514 (msg:"[HUAWEI] SHELL - CMD"; content: "SHELL/4/CMD"; classtype: system-event; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001580; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] FanAbnormal"; content: "SRM/3/FanAbnormal"; classtype: hardware-event; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001581; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] VentTemp2Hot"; content: "SRM/3/VentTemp2Hot"; classtype: hardware-event; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001582; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - add_success"; content: "SSH/4/add_success"; classtype: system-event; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001583; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL"; content: "SSH/4/LOGIN_FAIL "; classtype: attempted-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001584; rev:1;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL - Brute force"; content: "SSH/4/LOGIN_FAIL "; classtype: unsuccessful-user; after: track by_src, count 3, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; parse_ip; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001592; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL_CHALLENGE_ERR"; content: "SSH/4/LOGIN_FAIL_CHALLENGE_ERR"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001585; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL_COOKIE_ERR"; content: "SSH/4/LOGIN_FAIL_COOKIE_ERR"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001586; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL_DISSCONNECT"; content: "SSH/4/LOGIN_FAIL_DISSCONNECT"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001587; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL_PWD_ERR"; content: "SSH/4/LOGIN_FAIL_PWD_ERR"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001588; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL_RETRY_OUT"; content: "SSH/4/LOGIN_FAIL_RETRY_OUT"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001589; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL_RSA_ERR"; content: "SSH/4/LOGIN_FAIL_RSA_ERR"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001590; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] LogAuthFailed"; content: "VRRP/3/LogAuthFailed"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001591; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] USER_NOT_EXIST; content:"SSH/4/LOGIN_FAIL_USER_NOT_EXIST"; classtype: unsuccessful-user; threshold: type limit, track by_src, count 5, seconds 300;  reference: http://www.huaweisymantec.com/en//download.do?id=658891; sid: 5001532; rev:1;)
+

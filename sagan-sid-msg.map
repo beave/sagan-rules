@@ -1044,7 +1044,7 @@
 5001084 || [SONICWALL] IPS Detection Alert || url,wiki.quadrantsec.com/bin/view/Main/5001084
 5001085 || [SONICWALL] Possible UDP Port Scan || url,wiki.quadrantsec.com/bin/view/Main/5001085
 5001086 || [CISCO-PIXASA] Access denied URL || url, wiki.quadrantsec.com/bin/view/Main/5001086
-5001087 || [CISCO-PIXASA] AAA user authentication Successful || url, wiki.quadrantsec.com/bin/view/Main/5001087
+5001087 || [CISCO-PIXASA] AAA user authentication successful || url, wiki.quadrantsec.com/bin/view/Main/5001087
 5001088 || [CISCO-PIXASA] Disconnect by SSH server || url, wiki.quadrantsec.com/bin/view/Main/5001088
 5001089 || [CISCO-PIXASA] Access denied URL chars - HTTPS || url, wiki.quadrantsec.com/bin/view/Main/5001089
 5001090 || [SONICWALL] IPS Detection Alert || url,wiki.quadrantsec.com/bin/view/Main/5001090
@@ -1485,6 +1485,67 @@
 5001529 || [VMWARE] User authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5001529
 5001530 || [VSFTPD] Login failed || url,wiki.quadrantsec.com/bin/view/Main/5001530
 5001531 || [WINDOWS-AUTH] Login failure - Unknown username or bad password || url,wiki.quadrantsec.com/bin/view/Main/5001531
+5001532 || [HUAWEI] USER_NOT_EXIST; content:"SSH/4/LOGIN_FAIL_USER_NOT_EXIST || http://www.huaweisymantec.com/en//download.do?id=658891
+5001533 || [HUAWEI] ARP_DUPLICATE_IPADDR || url, huaweisymantec.com/en/download.do?id=658891
+5001534 || [HUAWEI] DHCPC_LOG_NAK || url, huaweisymantec.com/en/download.do?id=658891
+5001535 || [HUAWEI] DHCPC_LOG_REQIP_SUCCESS || url, huaweisymantec.com/en/download.do?id=658891
+5001536 || [HUAWEI] DHCPC_LOG_REQIP_SUCCESS || url, huaweisymantec.com/en/download.do?id=658891
+5001537 || [HUAWEI] FTPS - USERIN Login successful || url, huaweisymantec.com/en/download.do?id=658891
+5001538 || [HUAWEI] FTPS - USERIN Login failed || url, huaweisymantec.com/en/download.do?id=658891
+5001539 || [HUAWEI] FTPS - USEROUT Logout || url, huaweisymantec.com/en/download.do?id=658891
+5001540 || [HUAWEI] FTPS - RECVDATA || url, huaweisymantec.com/en/download.do?id=658891
+5001541 || [HUAWEI] FTPS - REQUEST || url, huaweisymantec.com/en/download.do?id=658891
+5001542 || [HUAWEI] FTPS - SENDDATA || url, huaweisymantec.com/en/download.do?id=658891
+5001543 || [HUAWEI] HTTPD - FAIL || url, huaweisymantec.com/en/download.do?id=658891
+5001544 || [HUAWEI] HTTPD - OUT || url, huaweisymantec.com/en/download.do?id=658891
+5001545 || [HUAWEI] HTTPD - PASS || url, huaweisymantec.com/en/download.do?id=658891
+5001546 || [HUAWEI] ATCKDF - IP spoof attack || url, huaweisymantec.com/en/download.do?id=658891
+5001547 || [HUAWEI] ATCKDF - Fraggle attack || url, huaweisymantec.com/en/download.do?id=658891
+5001548 || [HUAWEI] ATCKDF - Smurf attack || url, huaweisymantec.com/en/download.do?id=658891
+5001549 || [HUAWEI] ATCKDF - Land attack || url, huaweisymantec.com/en/download.do?id=658891
+5001550 || [HUAWEI] ATCKDF - Time stamp attack || url, huaweisymantec.com/en/download.do?id=658891
+5001551 || [HUAWEI] ATCKDF - Ip options attack || url, huaweisymantec.com/en/download.do?id=658891
+5001552 || [HUAWEI] ATCKDF - Ip option source route attack || url, huaweisymantec.com/en/download.do?id=658891
+5001553 || [HUAWEI] ATCKDF - ICMP flood attack || url, huaweisymantec.com/en/download.do?id=658891
+5001554 || [HUAWEI] ATCKDF - Redirect attack || url, huaweisymantec.com/en/download.do?id=658891
+5001555 || [HUAWEI] ATCKDF - TCP flood attack || url, huaweisymantec.com/en/download.do?id=658891
+5001556 || [HUAWEI] ATCKDF - Winnuke attack || url, huaweisymantec.com/en/download.do?id=658891
+5001557 || [HUAWEI] ATCKDF - Ping of death attack || url, huaweisymantec.com/en/download.do?id=658891
+5001558 || [HUAWEI] ATCKDF - Tear drop attack || url, huaweisymantec.com/en/download.do?id=658891
+5001559 || [HUAWEI] ATCKDF - Trace route attack || url, huaweisymantec.com/en/download.do?id=658891
+5001560 || [HUAWEI] ATCKDF - Ip options route record attack || url, huaweisymantec.com/en/download.do?id=658891
+5001561 || [HUAWEI] ATCKDF - Port scan attack || url, huaweisymantec.com/en/download.do?id=658891
+5001562 || [HUAWEI] ATCKDF - Unreachable attack || url, huaweisymantec.com/en/download.do?id=658891
+5001563 || [HUAWEI] ATCKDF - UDP flood attack || url, huaweisymantec.com/en/download.do?id=658891
+5001564 || [HUAWEI] ATCKDF - Syn flood attack || url, huaweisymantec.com/en/download.do?id=658891
+5001565 || [HUAWEI] ATCKDF - Other-protocol attack || url, huaweisymantec.com/en/download.do?id=658891
+5001566 || [HUAWEI] ATCKDF - Large ICMP attack || url, huaweisymantec.com/en/download.do?id=658891
+5001567 || [HUAWEI] ATCKDF - IP Fragment attack || url, huaweisymantec.com/en/download.do?id=658891
+5001568 || [HUAWEI] ATCKDF - Ftp Bounce attack || url, huaweisymantec.com/en/download.do?id=658891
+5001569 || [HUAWEI] ATCKDF - Too much Half Con of SYN Flood || url, huaweisymantec.com/en/download.do?id=658891
+5001570 || [HUAWEI] ATCKDF - Tcp flag attack || url, huaweisymantec.com/en/download.do?id=658891
+5001571 || [HUAWEI] BIND - VPN bound IP address || url, huaweisymantec.com/en/download.do?id=658891
+5001572 || [HUAWEI] BIND - VPN unbound IP address || url, huaweisymantec.com/en/download.do?id=658891
+5001573 || [HUAWEI] BLACKLIST - VPN added to blacklist || url, huaweisymantec.com/en/download.do?id=658891
+5001574 || [HUAWEI] BLACKLIST - VPN removed from blacklist || url, huaweisymantec.com/en/download.do?id=658891
+5001575 || [HUAWEI] BLACKLIST - Blacklist cleared || url, huaweisymantec.com/en/download.do?id=658891
+5001576 || [HUAWEI] SESSION || url, huaweisymantec.com/en/download.do?id=658891
+5001577 || [HUAWEI] SHELL - LOGIN || url, huaweisymantec.com/en/download.do?id=658891
+5001578 || [HUAWEI] SHELL - LOGIN_FAIL || url, huaweisymantec.com/en/download.do?id=658891
+5001579 || [HUAWEI] SHELL - LOGOUT || url, huaweisymantec.com/en/download.do?id=658891
+5001580 || [HUAWEI] SHELL - CMD || url, huaweisymantec.com/en/download.do?id=658891
+5001581 || [HUAWEI] FanAbnormal || url, huaweisymantec.com/en/download.do?id=658891
+5001582 || [HUAWEI] VentTemp2Hot || url, huaweisymantec.com/en/download.do?id=658891
+5001583 || [HUAWEI] SSH - add_success || url, huaweisymantec.com/en/download.do?id=658891
+5001584 || [HUAWEI] SSH - LOGIN_FAIL || url, huaweisymantec.com/en/download.do?id=658891
+5001585 || [HUAWEI] SSH - LOGIN_FAIL_CHALLENGE_ERR || url, huaweisymantec.com/en/download.do?id=658891
+5001586 || [HUAWEI] SSH - LOGIN_FAIL_COOKIE_ERR || url, huaweisymantec.com/en/download.do?id=658891
+5001587 || [HUAWEI] SSH - LOGIN_FAIL_DISSCONNECT || url, huaweisymantec.com/en/download.do?id=658891
+5001588 || [HUAWEI] SSH - LOGIN_FAIL_PWD_ERR || url, huaweisymantec.com/en/download.do?id=658891
+5001589 || [HUAWEI] SSH - LOGIN_FAIL_RETRY_OUT || url, huaweisymantec.com/en/download.do?id=658891
+5001590 || [HUAWEI] SSH - LOGIN_FAIL_RSA_ERR || url, huaweisymantec.com/en/download.do?id=658891
+5001591 || [HUAWEI] LogAuthFailed || url, huaweisymantec.com/en/download.do?id=658891
+5001592 || [HUAWEI] SSH - LOGIN_FAIL - Brute force || url, huaweisymantec.com/en/download.do?id=658891
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
