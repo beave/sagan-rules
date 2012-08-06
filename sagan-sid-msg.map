@@ -1544,8 +1544,9 @@
 5001588 || [HUAWEI] SSH - LOGIN_FAIL_PWD_ERR || url, huaweisymantec.com/en/download.do?id=658891
 5001589 || [HUAWEI] SSH - LOGIN_FAIL_RETRY_OUT || url, huaweisymantec.com/en/download.do?id=658891
 5001590 || [HUAWEI] SSH - LOGIN_FAIL_RSA_ERR || url, huaweisymantec.com/en/download.do?id=658891
-5001591 || [HUAWEI] LogAuthFailed || url, huaweisymantec.com/en/download.do?id=658891
+5001591 || [HUAWEI] VRRP - LogAuthFailed || url, huaweisymantec.com/en/download.do?id=658891
 5001592 || [HUAWEI] SSH - LOGIN_FAIL - Brute force || url, huaweisymantec.com/en/download.do?id=658891
+5001593 || [CISCO-PIXASA] AAA user authentication Reject - Brute force || url, wiki.quadrantsec.com/bin/view/Main/5001593
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
