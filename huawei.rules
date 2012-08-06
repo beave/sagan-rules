@@ -86,6 +86,6 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL_DISS
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL_PWD_ERR"; content: "SSH/4/LOGIN_FAIL_PWD_ERR"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001588; rev:1;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL_RETRY_OUT"; content: "SSH/4/LOGIN_FAIL_RETRY_OUT"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001589; rev:1;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] SSH - LOGIN_FAIL_RSA_ERR"; content: "SSH/4/LOGIN_FAIL_RSA_ERR"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001590; rev:1;)
-alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] LogAuthFailed"; content: "VRRP/3/LogAuthFailed"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001591; rev:1;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[HUAWEI] VRRP - LogAuthFailed"; content: "VRRP/3/LogAuthFailed"; classtype: unsuccessful-user; reference: url, huaweisymantec.com/en/download.do?id=658891; sid: 5001591; rev:1;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[HUAWEI] USER_NOT_EXIST; content:"SSH/4/LOGIN_FAIL_USER_NOT_EXIST"; classtype: unsuccessful-user; threshold: type limit, track by_src, count 5, seconds 300;  reference: http://www.huaweisymantec.com/en//download.do?id=658891; sid: 5001532; rev:1;)
 
