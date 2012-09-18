@@ -1563,6 +1563,15 @@
 5001608 || [MONGODB] Cannot authenticate to master server || url,www.mongodb.org
 5001609 || [MONGODB] replSet is going into maintenance mode || url,www.mongodb.org
 5001610 || [MONGODB] replSet is leaving maintenance mode || url,www.mongodb.org
+5001611 || [NETSCREEN] SYN Flood || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
+5001612 || [NETSCREEN] Teardrop attack || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
+5001613 || [NETSCREEN] IP spoofing || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
+5001614 || [NETSCREEN] ICMP flood || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
+5001615 || [NETSCREEN] SYN fragment || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
+5001616 || [NETSCREEN] Unknown protocol || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
+5001617 || [NETSCREEN] Bad IP option || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
+5001618 || [NETSCREEN] SYN-ACK-ACK || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
+5001619 || [NETSCREEN] Connection refused by the DNS || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
