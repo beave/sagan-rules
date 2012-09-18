@@ -80,3 +80,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] DC - Clock
 #
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Administrator group changed"; pcre: "/ ID:\s+\p*S-1-5-32-544\p*/"; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/XXXXXXX; sid: XXXXXXX; rev:1;)
 
+# 09/18/2012 Sniffty Dugen 
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Attempted Password Reset"; content: " 4724: "; classtype: configuration-change; program: Security-Auditing; reference: url,wiki.quadrantsec.com/bin/view/Main/5001620; sid:5001620; rev:1;) 
+
