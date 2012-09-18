@@ -105,7 +105,7 @@
 5000108 || [BIND] Named fatal error.  DNS service is going down || url,wiki.quadrantsec.com/bin/view/Main/5000108
 5000109 || [BIND] Serial number from master is lower than stored || url,wiki.quadrantsec.com/bin/view/Main/5000109
 5000110 || [BIND] Zone transfer error || url,wiki.quadrantsec.com/bin/view/Main/5000110
-5000111 || [CISCO-IOS] ISO configuration changed || url,wiki.quadrantsec.com/bin/view/Main/5000111
+5000111 || [CISCO-IOS] IOS configuration changed || url,wiki.quadrantsec.com/bin/view/Main/5000111
 5000112 || [CISCO-IOS] Successful login || url,wiki.quadrantsec.com/bin/view/Main/5000112
 5000113 || [CISCO-IOS] Failed login - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5000113
 5000114 || [SYSLOG] Possible unknown problem on a system || url,wiki.quadrantsec.com/bin/view/Main/5000114
@@ -1547,6 +1547,22 @@
 5001591 || [HUAWEI] VRRP - LogAuthFailed || url, huaweisymantec.com/en/download.do?id=658891
 5001592 || [HUAWEI] SSH - LOGIN_FAIL - Brute force || url, huaweisymantec.com/en/download.do?id=658891
 5001593 || [CISCO-PIXASA] AAA user authentication Reject - Brute force || url, wiki.quadrantsec.com/bin/view/Main/5001593
+5001595 || [MONGODB] DBException causing immediate shutdown || url,www.mongodb.org
+5001596 || [MONGODB] IOS_Base exception causing immediate shutdown || url,www.mongodb.org
+5001597 || [MONGODB] Bad allocation exception causing immediate shutdown || url,www.mongodb.org
+5001598 || [MONGODB] Shutting down || url,www.mongodb.org
+5001599 || [MONGODB] Clock skew detected || url,www.mongodb.org
+5001600 || [MONGODB] Large clock skew detected || url,www.mongodb.org
+5001601 || [MONGODB] Clock skew exception - shutting down || url,www.mongodb.org
+5001602 || [MONGODB] Terminating- Shutdown command received || url,www.mongodb.org
+5001603 || [MONGODB] Handshake detected || url,www.mongodb.org
+5001604 || [MONGODB] Auth: Could not find user || url,www.mongodb.org
+5001605 || [MONGODB] Admin command received from client || url,www.mongodb.org
+5001606 || [MONGODB] Attempting to sync || url,www.mongodb.org
+5001607 || [MONGODB] Replauthenticate failed: Requires Admin permissions || url,www.mongodb.org
+5001608 || [MONGODB] Cannot authenticate to master server || url,www.mongodb.org
+5001609 || [MONGODB] replSet is going into maintenance mode || url,www.mongodb.org
+5001610 || [MONGODB] replSet is leaving maintenance mode || url,www.mongodb.org
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

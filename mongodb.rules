@@ -1,0 +1,46 @@
+# Sagan mongodb.rules
+# Copyright (c) 2009-2012, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+# Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+# following conditions are met:
+#
+# * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+# disclaimer.
+# * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+# following disclaimer in the documentation and/or other materials provided with the distribution.
+# * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+# from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+# INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+# USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+# MongoDB rules. Created by Robert Nunley (rnunley@quadrantsec.com)
+# 09/13/2012
+
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] replSet is going into maintenance mode"; content: "going"; content: "maintenance"; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001609; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] replSet is leaving maintenance mode"; content: "leaving"; content: "maintenance"; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001610; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] DBException causing immediate shutdown"; content: "dbexception"; content: "shutdown"; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001595; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] IOS_Base exception causing immediate shutdown"; content: "ios_base"; content: "shutdown"; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001596; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Bad allocation exception causing immediate shutdown"; content: "bad_alloc"; content: "shutdown"; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001597; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Shutting down"; content: "shutdown"; content: "listening"; content: !"immediate"; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001598; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Clock skew detected"; content: "clock skew"; content: !"large"; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001599; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Large clock skew detected"; content: "clock skew"; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001600; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Clock skew exception - shutting down"; content: "ClockSkew"; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001601; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Terminating- Shutdown command received"; content: "terminating"; content: "command"; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001602; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Handshake detected"; content: "handshake between"; classtype: tcp-connection; program: mongod; parse_ip; reference: url,www.mongodb.org; sid: 5001603; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Auth: Could not find user"; content: "auth"; content: "couldn't"; content: "user"; classtype: unsuccessful-user; program: mongod; reference: url,www.mongodb.org; sid: 5001604; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Admin command received from client"; content: "admin"; content: "received"; content: "client"; classtype: successful-admin; program: mongod; reference: url,www.mongodb.org; sid: 5001605; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Attempting to sync"; content: "attempting"; content: "sync"; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001606; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Replauthenticate failed: Requires Admin permissions"; content: "requires admin"; content: "failing"; classtype: unsuccessful-admin; program: mongod; reference: url,www.mongodb.org; sid: 5001607; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 27017 (msg:"[MONGODB] Cannot authenticate to master server"; content: "can't authenticate"; content: "master server"; classtype: unsuccessful-user; program: mongod; reference: url,www.mongodb.org; sid: 5001608; rev:1;)
