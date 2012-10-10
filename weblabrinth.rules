@@ -27,7 +27,7 @@
 
 # Detect Weblabrinth traffic.  See Ben Jackson's https://code.google.com/p/weblabyrinth/
 #
-alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[MISC] Weblabyrinth - New host logged!"; classtype: misc-activity; program: weblabyrinth; content: "New host logged!"; parse_ip; reference: url,wiki.quadrantsec.com/bin/view/Main/5001093; sid: 5001093; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[MISC] Weblabyrinth - New host logged!"; classtype: misc-activity; program: weblabyrinth; content: "New host logged!"; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001093; sid: 5001093; rev:4;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"[MISC] Weblabyrinth - Crawler Ensnared!"; classtype: misc-activity; program: weblabyrinth; content: "Crawler Ensnared!"; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001095; sid: 5001095; rev:1;)
 
 
