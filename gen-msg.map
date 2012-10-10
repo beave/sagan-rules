@@ -5,3 +5,123 @@
 100 || 100 || sagan_track_clients: No log activity from remote agent in timeout period!
 100 || 101 || sagan_track_clients: Log activity resumed. 
 
+#1000 || 1  || *Websense TS: Adult Material
+#1000 || 2  || *Websense TS: Business and Economy
+#1000 || 3  || *Websense TS: Education
+#1000 || 4  || *Websense TS: Government
+#1000 || 5  || *Websense TS: News and Media
+#1000 || 6  || *Websense TS: Religion
+#1000 || 7  || *Websense TS: Society and Lifestyles
+#1000 || 8  || *Websense TS: Special Events
+#1000 || 9  || *Websense TS: Information Technology
+#1000 || 10  || *Websense TS: Abortion
+#1000 || 11  || *Websense TS: Advocacy Groups
+#1000 || 12  || *Websense TS: Entertainment
+#1000 || 13  || *Websense TS: Gambling
+#1000 || 14  || *Websense TS: Games
+1000 || 15  || *Websense TS: Illegal or Questionable
+#1000 || 16  || *Websense TS: Job Search
+#1000 || 17  || *Websense TS: Shopping
+#1000 || 18  || *Websense TS: Sports
+#1000 || 19  || *Websense TS: Tasteless
+#1000 || 20  || *Websense TS: Travel
+#1000 || 21  || *Websense TS: Vehicles
+#1000 || 22  || *Websense TS: Violence
+#1000 || 23  || *Websense TS: Weapons
+#1000 || 24  || *Websense TS: Drugs
+#1000 || 25  || *Websense TS: Militancy and Extremist
+#1000 || 26  || *Websense TS: Racism and Hate
+#1000 || 27  || *Websense TS: Health
+#1000 || 28  || *Websense TS: URL Translation Sites
+#1000 || 29  || *Websense TS: Advertisements
+#1000 || 64  || *Websense TS: User-Defined
+#1000 || 65  || *Websense TS: Nudity
+#1000 || 66  || *Websense TS: Adult Content
+#1000 || 67  || *Websense TS: Sex
+#1000 || 68  || *Websense TS: Financial Data and Services
+#1000 || 69  || *Websense TS: Cultural Institutions
+#1000 || 70  || *Websense TS: MP3 and Audio Download Services
+#1000 || 72  || *Websense TS: Military
+#1000 || 73  || *Websense TS: Political Organizations
+#1000 || 74  || *Websense TS: General Email
+1000 || 75  || *Websense TS: Proxy Avoidance
+#1000 || 76  || *Websense TS: Search Engines and Portals
+#1000 || 78  || *Websense TS: Web Hosting
+#1000 || 79  || *Websense TS: Web Chat
+1000 || 80  || *Websense TS: Hacking
+#1000 || 81  || *Websense TS: Alternative Journals
+#1000 || 82  || *Websense TS: Non-Traditional Religions and Occult and Folklore
+#1000 || 83  || *Websense TS: Traditional Religions
+#1000 || 84  || *Websense TS: Restaurants and Dining
+#1000 || 85  || *Websense TS: Gay or Lesbian or Bisexual Interest
+#1000 || 86  || *Websense TS: Personals and Dating
+#1000 || 87  || *Websense TS: Alcohol and Tobacco
+#1000 || 88  || *Websense TS: Prescribed Medications
+#1000 || 89  || *Websense TS: Supplements and Unregulated Compounds
+#1000 || 90  || *Websense TS: Abused Drugs
+#1000 || 91  || *Websense TS: Internet Communication
+#1000 || 92  || *Websense TS: Pro-Choice
+#1000 || 93  || *Websense TS: Pro-Life
+#1000 || 94  || *Websense TS: Sex Education
+#1000 || 95  || *Websense TS: Lingerie and Swimsuit
+#1000 || 96  || *Websense TS: Online Brokerage and Trading
+#1000 || 97  || *Websense TS: Educational Institutions
+#1000 || 98  || *Websense TS: Instant Messaging
+#1000 || 99  || *Websense TS: Freeware and Software Download
+#1000 || 100  || *Websense TS: Pay-to-Surf
+#1000 || 101  || *Websense TS: Internet Auctions
+#1000 || 102  || *Websense TS: Real Estate
+#1000 || 103  || *Websense TS: Hobbies
+#1000 || 107  || *Websense TS: Sport Hunting and Gun Clubs
+#1000 || 108  || *Websense TS: Internet Telephony
+#1000 || 109  || *Websense TS: Streaming Media
+#1000 || 110  || *Websense TS: Productivity
+#1000 || 111  || *Websense TS: Marijuana
+#1000 || 112  || *Websense TS: Message Boards and Forums
+#1000 || 113  || *Websense TS: Personal Network Storage and Backup
+#1000 || 114  || *Websense TS: Internet Radio and TV
+#1000 || 115  || *Websense TS: Peer-to-Peer File Sharing
+#1000 || 116  || *Websense TS: Bandwidth
+#1000 || 117  || *Websense TS: Social Networking
+#1000 || 118  || *Websense TS: Educational Materials
+#1000 || 121  || *Websense TS: Reference Materials
+#1000 || 122  || *Websense TS: Social Organizations
+#1000 || 123  || *Websense TS: Service and Philanthropic Organizations
+#1000 || 124  || *Websense TS: Social and Affiliation Organizations
+#1000 || 125  || *Websense TS: Professional and Worker Organizations
+1000 || 126  || *Websense TS: Security
+1000 || 128  || *Websense TS: Malicious Web Sites
+1000 || 138  || *Websense TS: Computer Security
+#1000 || 146  || *Websense TS: Miscellaneous
+#1000 || 147  || *Websense TS: Images (Media)
+#1000 || 148  || *Websense TS: Image Servers
+#1000 || 149  || *Websense TS: Private IP Addresses
+#1000 || 150  || *Websense TS: Content Delivery Networks
+#1000 || 151  || *Websense TS: Dynamic Content
+1000 || 152  || *Websense TS: Network Errors
+#1000 || 153  || *Websense TS: Uncategorized
+1000 || 154  || *Websense TS: Spyware
+#1000 || 156  || *Websense TS: File Download Servers
+1000 || 164  || *Websense TS: Phishing and Other Frauds
+1000 || 166  || *Websense TS: Keyloggers
+1000 || 167  || *Websense TS: Potentially Unwanted Software
+1000 || 172  || *Websense TS: Bot Networks
+1000 || 191  || *Websense TS: Extended Protection
+1000 || 192  || *Websense TS: Elevated Exposure
+1000 || 193  || *Websense TS: Emerging Exploits
+1000 || 194  || *Websense TS: Potentially Damaging Content
+#1000 || 195  || *Websense TS: Organizational Email
+#1000 || 196  || *Websense TS: Text and Media Messaging
+#1000 || 200  || *Websense TS: Web and Email Spam
+#1000 || 201  || *Websense TS: Web Collaboration
+#1000 || 202  || *Websense TS: Parked Domain
+#1000 || 203  || *Websense TS: Hosted Business Applications
+#1000 || 204  || *Websense TS: Blogs and Personal Sites
+1000 || 205  || *Websense TS: Malicious Embedded Link
+1000 || 206  || *Websense TS: Malicious Embedded iFrame
+1000 || 207  || *Websense TS: Suspicious Embedded Link
+#1000 || 208  || *Websense TS: Surveillance
+#1000 || 209  || *Websense TS: Educational Video
+#1000 || 210  || *Websense TS: Entertainment Video
+#1000 || 211  || *Websense TS: Viral Video
+#1000 || 212  || *Websense TS: Dynamic DNS

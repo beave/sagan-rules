@@ -1572,6 +1572,7 @@
 5001617 || [NETSCREEN] Bad IP option || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
 5001618 || [NETSCREEN] SYN-ACK-ACK || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
 5001619 || [NETSCREEN] Connection refused by the DNS || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
+5001620 || [WINDOWS-AUTH] Attempted Password Reset || url,wiki.quadrantsec.com/bin/view/Main/5001620
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
