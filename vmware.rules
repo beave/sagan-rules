@@ -39,11 +39,15 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine b
 # Jun  3 01:23:12 10.10.10.10 Hostd: [2011-06-03 01:23:12.139 2351BB90 info 'ha-eventmgr' opID=58D44130-00000003] Event 285 : User root@10.10.10.1 logged in
 # Jun  3 01:23:20 10.10.10.10 Hostd: [2011-06-03 01:23:20.106 2351BB90 info 'ha-eventmgr' opID=58D44130-00000030] Event 286 : User root logged out
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: "Event 285 : "; classtype: successful-admin; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001097; sid: 5001097; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User logoff successful"; content: "Event 286 : "; classtype: successful-admin; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001098; sid: 5001098; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: " logged in "; classtype: successful-admin; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001097; sid: 5001097; rev:2;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User logoff successful"; content: " logged out "; classtype: successful-admin; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001098; sid: 5001098; rev:2;)
 
 # vmware - 10/11/2011 - Champ Clark
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Lost access to volume"; content: "Event 37 : "; classtype: hardware-event; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001098; sid: 5001099; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Possible HD/Datastore failure"; content: ": 1672: "; classtype: hardware-event; program: vmkernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001100; sid: 5001100; rev:1;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: "Accepted password"; classtype:  successful-admin; program: Hostd; normalize: vmware; reference: url,wiki.quadrantsec.com/bin/view/Main/5001101; sid: 5001101; rev:1;)
+#2012-01-30T17:51:04.722Z [24C79B90 info 'ha-eventmgr'] Event 36 : User root logged out
+#2012-01-30T17:51:04.919Z [24C79B90 info 'Vimsvc'] [Auth]: User root
+#2012-01-30T17:51:04.920Z [24C79B90 info 'ha-eventmgr'] Event 37 : User root@192.168.1.1 logged in
+
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Lost access to volume"; content: "Event 37 : "; classtype: hardware-event; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001098; sid: 5001099; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Possible HD/Datastore failure"; content: ": 1672: "; classtype: hardware-event; program: vmkernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001100; sid: 5001100; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: "Accepted password"; classtype:  successful-admin; program: Hostd; normalize: vmware; reference: url,wiki.quadrantsec.com/bin/view/Main/5001101; sid: 5001101; rev:1;)

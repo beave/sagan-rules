@@ -106,5 +106,6 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Leaving system
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] General CRITICAL event"; content: "devname="; content: "pri=critical"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000975; sid: 5000975; rev:1;)
 
 # 01/04/2013
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Botnet traffic detected"; pcre: "/app_list=\"BotnetOnly\" app_type=\"Botnet\""/; classtype: trojan-activity; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5001627; sid: 5001627; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Botnet traffic detected"; pcre: "/app_list=\"BotnetOnly\" app_type=\"Botnet"/; classtype: trojan-activity; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5001627; sid: 5001627; rev:1;)
+
 
