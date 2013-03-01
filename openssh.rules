@@ -31,6 +31,8 @@
 # port information.
 
 
+Failed password for root from 109.70.148.243 port 17298 ssh2
+
 drop tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] PAM Authentication failure - Brute force [5/5]"; content: "Authentication failure"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000015; normalize: openssh; program: sshd; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; sid: 5000015; rev:4;)
 
 #drop tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] PAM Authentication failure - Brute force [10/5]"; content: "Authentication failure"; classtype: unsuccessful-user; normalize: openssh; program: sshd; after: track by_src, count 10, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001634; sid: 5001634; rev:1;)
@@ -105,4 +107,12 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Accepted publickey";
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Session closed"; content: "session closed for" ; classtype: not-suspicious; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000407; sid:5000407; rev:1;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] Received disconnect"; content: "Received disconnect from"; classtype: not-suspicious; program: sshd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000408; sid:5000408; rev:3;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg: "[OPENSSH] User logged into a disabled account"; pcre: "/accepted|authenticated/i"; pcre: "/^apache$|^mysql$|^www$|^nobody$|^nogroup$|^portmap$|^named$|^rpc$|^mail$|^ftp$|^shutdown$|^halt$|^daemon$|^bin$|^postfix$|^shell$|^info$|^guest$|^psql$|^user$|^users$|^console$|^uucp$|^lp$|^sync$|^sshd$|^cdrom$|^ossec$|^sagan$/"; parse_src_ip: 1; parse_port; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000411; program: sshd; sid: 5000411; rev:3;)
+
+# Failed password for root from 10.10.0.1 port 17298 ssh2
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password - Brute force"; content: "Failed password"; program: sshd; normalize: openssh; classtype: unsuccessful-user; sid: 5001646; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001646; rev:1;)
+
+#alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password"; content: "Failed password"; program: sshd; normalize: openssh; classtype: unsuccessful-user; sid: 5001647; reference: url,wiki.quadrantsec.com/bin/view/Main/5001647; rev:1;)
+
+
 

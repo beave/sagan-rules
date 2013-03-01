@@ -1,4 +1,4 @@
-# Sagan windows.rules
+# Sagan windows-auth.rules
 # Copyright (c) 2009-2012, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -24,7 +24,10 @@
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #*************************************************************
-# Windows based rules. 
+# Windows authentication rules. 
+# Eventlog to syslog service.  This is what we primarily use.
+# http://code.google.com/p/eventlog-to-syslog/
+
 
 drop syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Login failure - Unknown username or bad password - Brute force"; content: " 529: "; classtype: unsuccessful-user; program: Security; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001151; sid: 5001151; rev:5;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Login failure - Unknown username or bad password"; content: " 529: "; classtype: unsuccessful-user; program: Security; reference: url,wiki.quadrantsec.com/bin/view/Main/5001531; sid: 5001531; rev:1;)
