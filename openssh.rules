@@ -31,7 +31,7 @@
 # port information.
 
 
-Failed password for root from 109.70.148.243 port 17298 ssh2
+# Failed password for root from 109.70.148.243 port 17298 ssh2
 
 drop tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"[OPENSSH] PAM Authentication failure - Brute force [5/5]"; content: "Authentication failure"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000015; normalize: openssh; program: sshd; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; sid: 5000015; rev:4;)
 
