@@ -87,3 +87,5 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] DC - Clock
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Attempted Password Reset"; content: " 4724: "; classtype: configuration-change; program: Security-Auditing; reference: url,wiki.quadrantsec.com/bin/view/Main/5001620; sid:5001620; rev:1;) 
 
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Authentication failed - User credentials mismatch"; content: " 6273: "; classtype: unsuccessful-user; program: Security-Auditing; threshold: type limit, track by_src, count 5, seconds 300; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001648; sid: 5001648; rev:1;)
+
