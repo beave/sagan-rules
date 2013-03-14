@@ -78,3 +78,5 @@ rule=: Deny inbound UDP from %src-ip:ipv4%/%src-port:number% to %dst-ip:ipv4%/%d
 # Denied ICMP type=8, code=0 from 159.101.118.111 on interface INSIDE
 #
 rule=: Denied ICMP type=%-:number%, code=%-:number% from %src-ip:ipv4% on interface %-:word%
+
+rule=: AAA user authentication Rejected : reason = Unspecified : server = 204.15.65.142 : user = dthomas
