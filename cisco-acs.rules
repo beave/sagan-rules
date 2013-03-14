@@ -33,5 +33,7 @@
 # information.  parse_src_ip: 3 because the ACSVersion gets parsed as a
 # IP address.  - Champ Clark (03/14/2013).
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ACS] Failed Login Attempt"; program: CSCOacs_Failed_Attempts; content: "UserName="; parse_src_ip: 3; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001655; sid: 5001655; rev:1;)
+# alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ACS] Failed Login Attempt"; program: CSCOacs_Failed_Attempts; content: "UserName="; parse_src_ip: 3; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001655; sid: 5001655; rev:1;)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ACS] Failed Login Attempt - Brute force"; program: CSCOacs_Failed_Attempts; content: "UserName="; parse_src_ip: 3; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300;  classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001656; sid: 5001656; rev:1;)
 
