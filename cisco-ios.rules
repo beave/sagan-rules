@@ -86,3 +86,13 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Bad CRC on AS
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Switch Detected Unknown Protocol"; content: "SYS-3-PORT_RX_BADCODE"; classtype: network-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#badcode; sid: 5001519; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Login Failed"; content: "SEC_LOGIN-4-LOGIN_FAILED"; classtype: unsuccessful-user; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001625; sid: 5001625; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] High CPU usage detected"; content: "HIGH CPU DETECTED"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001626; sid: 5001626; rev:1;)
+
+# %AUTHPRIV-3-SYSTEM_MSG: pam_aaa:Authentication failed for user cisco from 10.10.10.10 - sshd[27924]
+
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg: "[CISCO-IOS] Authentication Failure SSH"; content: "%AUTHPRIV-3-SYSTEM_MSG:"; content: "sshd["; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001668; sid: 5001668; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg: "[CISCO-IOS] Authentication Failure SSH - Brute force"; content: "%AUTHPRIV-3-SYSTEM_MSG:"; content: "sshd["; classtype: unsuccessful-admin; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001670; sid: 5001670; rev:1;)
+
+# %DAEMON-3-SYSTEM_MSG: error: PAM: Authentication failure for illegal user cisco from 10.10.10.10 - sshd[27926]
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg: "[CISCO-IOS] Illegal User SSH"; content: "%DAEMON-3-SYSTEM_MSG:"; content: "sshd["; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001669; sid: 5001669; rev:1;)
+

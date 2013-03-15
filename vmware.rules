@@ -26,20 +26,20 @@
 #*************************************************************
 # VMWare ESX
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; pcre: "/Accepted password for|login from/i"; classtype: successful-admin; program: vmware-hostd|vmware-authd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000204; sid: 5000204; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; pcre: "/Accepted password for|login from/i"; classtype: successful-admin; program: vmware-hostd|vmware-authd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000204; sid: 5000204; rev:1;)
 drop syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User authentication failure - Brute force"; content: "Rejected password for"; classtype: unsuccessful-admin; program: vmware-hostd|vmware-authd; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5000206; sid: 5000206; rev:2;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User authentication failure"; content: "Rejected password for"; classtype: unsuccessful-admin; program: vmware-hostd|vmware-authd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001529; sid: 5001529; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine state change to OFF"; content: "VM_STATE_OFF"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000208; sid: 5000208; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine being turned ON"; content: "VM_STATE_POWERING_ON"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000380; sid: 5000380; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine state change to ON"; content: "VM_STATE_ON"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000209; sid: 5000209; rev:1; )
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine being reconfigured"; content: "VM_STATE_RECONFIGURING"; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000210; sid: 5000210; rev:1; )
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine state change to OFF"; content: "VM_STATE_OFF"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000208; sid: 5000208; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine being turned ON"; content: "VM_STATE_POWERING_ON"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000380; sid: 5000380; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine state change to ON"; content: "VM_STATE_ON"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000209; sid: 5000209; rev:1; )
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine being reconfigured"; content: "VM_STATE_RECONFIGURING"; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000210; sid: 5000210; rev:1; )
 
 # VMWare ESXi 4.1 (Champ Clark III 06/02/2011)
 #
 # Jun  3 01:23:12 10.10.10.10 Hostd: [2011-06-03 01:23:12.139 2351BB90 info 'ha-eventmgr' opID=58D44130-00000003] Event 285 : User root@10.10.10.1 logged in
 # Jun  3 01:23:20 10.10.10.10 Hostd: [2011-06-03 01:23:20.106 2351BB90 info 'ha-eventmgr' opID=58D44130-00000030] Event 286 : User root logged out
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: " logged in "; classtype: successful-admin; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001097; sid: 5001097; rev:2;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: " logged in "; classtype: successful-admin; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001097; sid: 5001097; rev:2;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User logoff successful"; content: " logged out "; classtype: successful-admin; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001098; sid: 5001098; rev:2;)
 
 # vmware - 10/11/2011 - Champ Clark
@@ -50,4 +50,4 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login succes
 
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Lost access to volume"; content: "Event 37 : "; classtype: hardware-event; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001098; sid: 5001099; rev:1;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Possible HD/Datastore failure"; content: ": 1672: "; classtype: hardware-event; program: vmkernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001100; sid: 5001100; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: "Accepted password"; classtype:  successful-admin; program: Hostd; normalize: vmware; reference: url,wiki.quadrantsec.com/bin/view/Main/5001101; sid: 5001101; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: "Accepted password"; classtype:  successful-admin; program: Hostd; normalize: vmware; reference: url,wiki.quadrantsec.com/bin/view/Main/5001101; sid: 5001101; rev:1;)
