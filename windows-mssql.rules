@@ -28,6 +28,25 @@
 # Eventlog to syslog service.  This is what we primarily use.
 # http://code.google.com/p/eventlog-to-syslog/
 
+# MSSQL$WEBSENSE| 18456: Login failed for user 'DOMAIN\user'. Reason: Token-based server access validation failed with an infrastructure error. Check for previous errors. [CLIENT: <local machine>]
+# MSSQL$XXX| 18453: Login succeeded for user 'DOMAIN\user'. Connection: trusted. [CLIENT: <local machine>]
+
+# MSSQLSERVER| 18456: Login failed for user 'BOB'. Reason: Failed to open the explicitly specified database. [CLIENT: 10.5.5.6]
+
+# |MSSQLSERVER| 19030: SQL Trace ID 2 was started by login "DOMAIN\user".
+# MSSQLSERVER| 19031: SQL Trace stopped. Trace ID = '2'. Login Name = 'DOMAIN\user'.
+
+# MSSQL$XXX| 833: SQL Server has encountered 1 occurrence(s) of I/O requests taking longer than 15 seconds to complete on file [E:\\Data\test.mdf] in database [<Database name is not available>] (17). The OS file handle is 0x0000000000000AF8. The offset of the latest long I/O is: 0x0000003a7a0000
+
+# |MSSQLSERVER| 18451: Login failed for user 'DOMAIN\users'. Only administrators may connect at this time. [CLIENT: 10.1.6.1]
+
+# |MSSQLSERVER| 26022: Server is listening on 
+
+# MSSQLSERVER| 18452: Login failed. The login is from an untrusted domain and cannot be used with Windows authentication. [CLIENT: 10.1.3.9]
+
+# MSSQLSERVER| 17147: SQL Server is terminating because of a system shutdown. This is an informational message only. No user action is required.
+
+# 17162: SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
 
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MSSQL] Login Failure"; content: " 18456: "; classtype: unsuccessful-user; program: MSSQLSERVER|MSSQL; reference: url,wiki.quadrantsec.com/bin/view/Main/5001640; sid: 5001640; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MSSQL] Login Failure - Brute force"; content: " 18456: "; classtype: unsuccessful-user; program: MSSQLSERVER|MSSQL; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001641; sid: 5001641; rev:1;)
