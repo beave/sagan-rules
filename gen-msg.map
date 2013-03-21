@@ -5,6 +5,8 @@
 100 || 100 || sagan_track_clients: No log activity from remote agent in timeout period!
 100 || 101 || sagan_track_clients: Log activity resumed. 
 
+1001 || 1 || sagan_blacklist: Address found in blacklist
+
 #1000 || 1  || *Websense TS: Adult Material
 #1000 || 2  || *Websense TS: Business and Economy
 #1000 || 3  || *Websense TS: Education

@@ -13,8 +13,8 @@
 5000012 || [BASH] /tmp/sh access || url,wiki.quadrantsec.com/bin/view/Main/5000012
 5000013 || [BASH] suidperl access || url,wiki.quadrantsec.com/bin/view/Main/5000013
 5000014 || [BASH] histfile=/dev/null || url,wiki.quadrantsec.com/bin/view/Main/5000014
-5000015 || [OPENSSH] PAM Authentication failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000015
-5000016 || [OPENSSH] Authentication failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000016
+5000015 || [OPENSSH] PAM Authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000015
+5000016 || [OPENSSH] Authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000016
 5000017 || [OPENSSH] Authentication failure for root - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000017
 5000018 || [OPENSSH] Possible break-in attempt || url,wiki.quadrantsec.com/bin/view/Main/5000018
 5000020 || [OPENSSH] Not executable shell - login attempt || url,wiki.quadrantsec.com/bin/view/Main/5000020
@@ -1471,7 +1471,7 @@
 5001515 || [CISCO-IOS] Port Channel Flow Control Mismatch || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#port
 5001516 || [CISCO-IOS] Route entries about to reach FIB capacity || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#tcamexception
 5001517 || [CISCO-IOS] Switch Port Data Path Error || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#disablingport
-5001518 || [CISCO-IOS] Bad CRC on ASIC Line Card || url,http://www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#module
+5001518 || [CISCO-IOS] Bad CRC on ASIC Line Card || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#module
 5001519 || [CISCO-IOS] Switch Detected Unknown Protocol || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#badcode
 5001520 || [CISCO-IOS] Failed login || url,wiki.quadrantsec.com/bin/view/Main/5001520
 5001521 || [CITRIX] Netscaler - AAA module failed to login the user || url,wiki.quadrantsec.com/bin/view/Main/5001521 || url,support.citrix.com/article/CTX123875
@@ -1485,7 +1485,7 @@
 5001529 || [VMWARE] User authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5001529
 5001530 || [VSFTPD] Login failed || url,wiki.quadrantsec.com/bin/view/Main/5001530
 5001531 || [WINDOWS-AUTH] Login failure - Unknown username or bad password || url,wiki.quadrantsec.com/bin/view/Main/5001531
-5001532 || [HUAWEI] USER_NOT_EXIST; content:"SSH/4/LOGIN_FAIL_USER_NOT_EXIST || http://www.huaweisymantec.com/en//download.do?id=658891
+5001532 || [HUAWEI] USER_NOT_EXIST; content:"SSH/4/LOGIN_FAIL_USER_NOT_EXIST || url, http://www.huaweisymantec.com/en//download.do?id=658891
 5001533 || [HUAWEI] ARP_DUPLICATE_IPADDR || url, huaweisymantec.com/en/download.do?id=658891
 5001534 || [HUAWEI] DHCPC_LOG_NAK || url, huaweisymantec.com/en/download.do?id=658891
 5001535 || [HUAWEI] DHCPC_LOG_REQIP_SUCCESS || url, huaweisymantec.com/en/download.do?id=658891
@@ -1573,6 +1573,60 @@
 5001618 || [NETSCREEN] SYN-ACK-ACK || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
 5001619 || [NETSCREEN] Connection refused by the DNS || url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf
 5001620 || [WINDOWS-AUTH] Attempted Password Reset || url,wiki.quadrantsec.com/bin/view/Main/5001620
+5001621 || [SYSLOG] Authentication failure - Brute force [10 attempts in 5 minutes] || url,wiki.quadrantsec.com/bin/view/Main/5001621
+5001622 || [SYSLOG] Authentication failure - Brute force [20 attempts in 5 minutes] || url,wiki.quadrantsec.com/bin/view/Main/5001622
+5001623 || [SYSLOG] Authentication failure - Brute force [50 attempts in 5 minutes] || url,wiki.quadrantsec.com/bin/view/Main/5001623
+5001624 || [SYSLOG] Authentication failure - Brute force [100 attempts in 5 minutes] || url,wiki.quadrantsec.com/bin/view/Main/5001624
+5001625 || [CISCO-IOS] Login Failed || url,wiki.quadrantsec.com/bin/view/Main/5001625
+5001626 || [CISCO-IOS] High CPU usage detected || url,wiki.quadrantsec.com/bin/view/Main/5001626
+5001627 || [FORTINET] Botnet traffic detected || url,wiki.quadrantsec.com/bin/view/Main/5001627
+5001628 || [OPENSSH] Authentication failure - Brute force [10/5] || url,wiki.quadrantsec.com/bin/view/Main/5001628
+5001629 || [OPENSSH] Authentication failure - Brute force [20/5] || url,wiki.quadrantsec.com/bin/view/Main/5001629
+5001630 || [OPENSSH] Authentication failure - Brute force [30/5] || url,wiki.quadrantsec.com/bin/view/Main/5001630
+5001631 || [OPENSSH] Authentication failure - Brute force [40/5] || url,wiki.quadrantsec.com/bin/view/Main/5001631
+5001632 || [OPENSSH] Authentication failure - Brute force [50/5] || url,wiki.quadrantsec.com/bin/view/Main/5001632
+5001633 || [OPENSSH] Authentication failure - Brute force [100/5] || url,wiki.quadrantsec.com/bin/view/Main/5001633
+5001634 || [OPENSSH] PAM Authentication failure - Brute force [10/5] || url,wiki.quadrantsec.com/bin/view/Main/5001634
+5001635 || [OPENSSH] PAM Authentication failure - Brute force [20/5] || url,wiki.quadrantsec.com/bin/view/Main/5001635
+5001636 || [OPENSSH] PAM Authentication failure - Brute force [30/5] || url,wiki.quadrantsec.com/bin/view/Main/5001636
+5001637 || [OPENSSH] PAM Authentication failure - Brute force [40/5] || url,wiki.quadrantsec.com/bin/view/Main/5001637
+5001638 || [OPENSSH] PAM Authentication failure - Brute force [50/5] || url,wiki.quadrantsec.com/bin/view/Main/5001638
+5001639 || [OPENSSH] PAM Authentication failure - Brute force [100/5] || url,wiki.quadrantsec.com/bin/view/Main/5001639
+5001640 || [WINDOWS-MSSQL] Login Failure || url,wiki.quadrantsec.com/bin/view/Main/5001640
+5001641 || [WINDOWS-MSSQL] Login Failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001641
+5001642 || [JUNIPER] SSHD_LOGIN_ATTEMPTS_THRESHOLD - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001642
+5001643 || [JUNIPER] SSHD_LOGIN_FAILED_LIMIT - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001643
+5001644 || [JUNIPER] SSHD_LOGIN_FAILED || url,wiki.quadrantsec.com/bin/view/Main/5001644
+5001645 || [JUNIPER] SSHD_LOGIN_FAILED - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001645
+5001646 || [OPENSSH] Failed password - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001646
+5001647 || [OPENSSH] Failed password || url,wiki.quadrantsec.com/bin/view/Main/5001647
+5001648 || [WINDOWS-AUTH] Authentication failed - User credentials mismatch || url,wiki.quadrantsec.com/bin/view/Main/5001648
+5001649 || [WINDOWS-MISC] DHCP Scope is almost full || url,wiki.quadrantsec.com/bin/view/Main/5001649
+5001650 || [WINDOWS-MISC] DHCP Scope if full.  No IP addresses left || url,wiki.quadrantsec.com/bin/view/Main/5001650
+5001651 || [OPENVPN] Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5001651
+5001652 || [OPENVPN] Authentication success || url,wiki.quadrantsec.com/bin/view/Main/5001652
+5001653 || [OPENVPN] Unencrypted VPN connection initiated || url,wiki.quadrantsec.com/bin/view/Main/5001653
+5001654 || [CISCO-PIXASA] User authentication failed - Brute force || url, wiki.quadrantsec.com/bin/view/Main/5001654
+5001655 || [CISCO-ACS] Failed Login Attempt || url,wiki.quadrantsec.com/bin/view/Main/5001655
+5001656 || [CISCO-ACS] Failed Login Attempt - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001656
+5001657 || [WINDOWS-AUTH] Auth failed - Bad Account/Incorrect Password - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001657
+5001658 || [WINDOWS-AUTH] Auth failed - Bad Account/Incorrect Password || url,wiki.quadrantsec.com/bin/view/Main/5001658
+5001659 || [WINDOWS-AUTH] User account does not exist || url,wiki.quadrantsec.com/bin/view/Main/5001659
+5001660 || [WINDOWS-AUTH] Domain does not exist || url,wiki.quadrantsec.com/bin/view/Main/5001660
+5001661 || [WINDOWS-AUTH] No matching newtork policy || url,wiki.quadrantsec.com/bin/view/Main/5001661
+5001662 || [WINDOWS-AUTH] RADIUS Access-Request message is disabled || url,wiki.quadrantsec.com/bin/view/Main/5001662
+5001663 || [WINDOWS-AUTH] User much change password || url,wiki.quadrantsec.com/bin/view/Main/5001663
+5001664 || [WINDOWS-AUTH] Remote RADIUS did not process auth request || url,wiki.quadrantsec.com/bin/view/Main/5001664
+5001665 || [WINDOWS-AUTH] Incomplete message. Signature not verified || url,wiki.quadrantsec.com/bin/view/Main/5001665
+5001666 || [WINDOWS-AUTH] EAP type cannot be processed by server || url,wiki.quadrantsec.com/bin/view/Main/5001666
+5001667 || [WINDOWS-AUTH] Error occured with EAP || url,wiki.quadrantsec.com/bin/view/Main/5001667
+5001668 || [CISCO-IOS] Authentication Failure SSH || url,wiki.quadrantsec.com/bin/view/Main/5001668
+5001669 || [CISCO-IOS] Illegal User SSH || url,wiki.quadrantsec.com/bin/view/Main/5001669
+5001670 || [CISCO-IOS] Authentication Failure SSH - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001670
+5001671 || [CISCO-IOS] FATAL: bad tty - login (no program) || url,wiki.quadrantsec.com/bin/view/Main/5001671
+5001672 || [CISCO-IOS] Auth to privilege 15 failed || url,wiki.quadrantsec.com/bin/view/Main/5001672
+5001673 || [CISCO-IOS] Multicast storm detected || url,wiki.quadrantsec.com/bin/view/Main/5001673
+5001674 || [CISCO-IOS] Invalid ARP || url,wiki.quadrantsec.com/bin/view/Main/5001674
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
