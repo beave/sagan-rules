@@ -7,6 +7,9 @@
 
 1001 || 1 || sagan_blacklist: Address found in blacklist
 
+1002 || 1 || sagan_nocase_search: String found in message
+1002 || 2 || sagan_search: String found in message
+
 #1000 || 1  || *Websense TS: Adult Material
 #1000 || 2  || *Websense TS: Business and Economy
 #1000 || 3  || *Websense TS: Education
