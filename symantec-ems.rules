@@ -28,46 +28,46 @@
 
 # Successful login
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Authentication success"; content: "authenticated internal PGP Desktop"; parse_src_ip: 2; classtype: successful-user; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001675; sid: 5001675; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Authentication success"; content: "authenticated internal PGP Desktop"; parse_src_ip: 2; classtype: successful-user; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001675; sid: 5001675; rev:2;)
 
 # Unsuccessful login
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Authentication failure"; content: "failed authentication for internal PGP Desktop"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001676; sid: 5001676; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Authentication failure"; content: "failed authentication for internal PGP Desktop"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001676; sid: 5001676; rev:2;)
 
 # Multiple login failures - Brute Force
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Multiple authentication failures"; content: "failed authentication for internal PGP Desktop"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001677; sid: 5001677; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Multiple authentication failures"; content: "failed authentication for internal PGP Desktop"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001677; sid: 5001677; rev:2;)
 
 # Unsuccessful login
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Authorization failure"; content: "authorization failed for this operation"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001678; sid: 5001678; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Authorization failure"; content: "authorization failed for this operation"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001678; sid: 5001678; rev:2;)
 
 # Multiple login failures - Brute Force
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Multiple authorization failures"; content: "authorization failed for this operation"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001679; sid: 5001679; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Multiple authorization failures"; content: "authorization failed for this operation"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001679; sid: 5001679; rev:2;)
 
 # Encrypted Partition Mount Failure
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Encrypted partition mount failure"; content: "WDE Event"; content: "mount"; content: "failure"; classtype: hardware-event; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001680; sid: 5001680; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Encrypted partition mount failure"; content: "WDE Event"; content: "mount"; content: "failure"; classtype: hardware-event; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001680; sid: 5001680; rev:2;)
 
 # Error-regrouping - expired key
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Error regrouping - expired key"; content: "error while regrouping consumer"; content: "key has expired"; classtype: hardware-event; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001681; sid: 5001681; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Error regrouping - expired key"; content: "error while regrouping consumer"; content: "key has expired"; classtype: hardware-event; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001681; sid: 5001681; rev:2;)
 
 # Error-regrouping - cannot delete object
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Error regrouping - expired key"; content: "error while regrouping consumer"; content: "cannot delete derived object while source object"; classtype: hardware-event; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001682; sid: 5001682; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Error regrouping - expired key"; content: "error while regrouping consumer"; content: "cannot delete derived object while source object"; classtype: hardware-event; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001682; sid: 5001682; rev:2;)
 
 # Error-reqrouping - bad parameters
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Error regrouping - bad parameters"; content: "error while regrouping consumer"; content: "bad parameters"; classtype: unsuccessful-user; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001683; sid: 5001683; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Error regrouping - bad parameters"; content: "error while regrouping consumer"; content: "bad parameters"; classtype: unsuccessful-user; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001683; sid: 5001683; rev:2;)
 
 # Failed to map user to a directory
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Failed to map user to a directory"; content: "failed to map consumer"; content: "to a directory"; classtype: unsuccessful-user; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001684; sid: 5001684; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Failed to map user to a directory"; content: "failed to map consumer"; content: "to a directory"; classtype: unsuccessful-user; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001684; sid: 5001684; rev:2;)
 
 # LDAP key error - name lookup failed
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] LDAP key error - name lookup failed"; content: "error searching for key"; content: "LDAP"; content: "name lookup failed"; classtype: unsuccessful-user; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001685; sid: 5001685; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] LDAP key error - name lookup failed"; content: "error searching for key"; content: "LDAP"; content: "name lookup failed"; classtype: unsuccessful-user; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001685; sid: 5001685; rev:2;)
 
 
