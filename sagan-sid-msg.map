@@ -1627,6 +1627,17 @@
 5001672 || [CISCO-IOS] Auth to privilege 15 failed || url,wiki.quadrantsec.com/bin/view/Main/5001672
 5001673 || [CISCO-IOS] Multicast storm detected || url,wiki.quadrantsec.com/bin/view/Main/5001673
 5001674 || [CISCO-IOS] Invalid ARP || url,wiki.quadrantsec.com/bin/view/Main/5001674
+5001675 || [SYMANTEC-EMS] Authentication success || url,wiki.quadrantsec.com/bin/view/Main/5001675
+5001676 || [SYMANTEC-EMS] Multiple authentication failures || url,wiki.quadrantsec.com/bin/view/Main/5001676
+5001677 || [SYMANTEC-EMS] Multiple authentication failures || url,wiki.quadrantsec.com/bin/view/Main/5001677
+5001678 || [SYMANTEC-EMS] Multiple authentication failures || url,wiki.quadrantsec.com/bin/view/Main/5001678
+5001679 || [SYMANTEC-EMS] Multiple authentication failures || url,wiki.quadrantsec.com/bin/view/Main/5001679
+5001680 || [SYMANTEC-EMS] Encrypted partition mount failure || url,wiki.quadrantsec.com/bin/view/Main/5001680
+5001681 || [SYMANTEC-EMS] Error regrouping - expired key || url,wiki.quadrantsec.com/bin/view/Main/5001681
+5001682 || [SYMANTEC-EMS] Error regrouping - expired key || url,wiki.quadrantsec.com/bin/view/Main/5001682
+5001683 || [SYMANTEC-EMS] Error regrouping - bad parameters || url,wiki.quadrantsec.com/bin/view/Main/5001683
+5001684 || [SYMANTEC-EMS] Failed to map user to a directory || url,wiki.quadrantsec.com/bin/view/Main/5001684
+5001685 || [SYMANTEC-EMS] LDAP key error - name lookup failed || url,wiki.quadrantsec.com/bin/view/Main/5001685
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
