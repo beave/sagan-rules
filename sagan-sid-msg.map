@@ -1628,10 +1628,10 @@
 5001673 || [CISCO-IOS] Multicast storm detected || url,wiki.quadrantsec.com/bin/view/Main/5001673
 5001674 || [CISCO-IOS] Invalid ARP || url,wiki.quadrantsec.com/bin/view/Main/5001674
 5001675 || [SYMANTEC-EMS] Authentication success || url,wiki.quadrantsec.com/bin/view/Main/5001675
-5001676 || [SYMANTEC-EMS] Multiple authentication failures || url,wiki.quadrantsec.com/bin/view/Main/5001676
+5001676 || [SYMANTEC-EMS] Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5001676
 5001677 || [SYMANTEC-EMS] Multiple authentication failures || url,wiki.quadrantsec.com/bin/view/Main/5001677
-5001678 || [SYMANTEC-EMS] Multiple authentication failures || url,wiki.quadrantsec.com/bin/view/Main/5001678
-5001679 || [SYMANTEC-EMS] Multiple authentication failures || url,wiki.quadrantsec.com/bin/view/Main/5001679
+5001678 || [SYMANTEC-EMS] Authorization failure || url,wiki.quadrantsec.com/bin/view/Main/5001678
+5001679 || [SYMANTEC-EMS] Multiple authorization failures || url,wiki.quadrantsec.com/bin/view/Main/5001679
 5001680 || [SYMANTEC-EMS] Encrypted partition mount failure || url,wiki.quadrantsec.com/bin/view/Main/5001680
 5001681 || [SYMANTEC-EMS] Error regrouping - expired key || url,wiki.quadrantsec.com/bin/view/Main/5001681
 5001682 || [SYMANTEC-EMS] Error regrouping - expired key || url,wiki.quadrantsec.com/bin/view/Main/5001682
