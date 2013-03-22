@@ -44,7 +44,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Multiple authe
 
 # Multiple login failures - Brute Force
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Multiple authorization failures"; content: "authorization failed for this operation"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001679; sid: 5001679; rev:2;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Multiple authorization failures"; content: "authorization failed for this operation"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001679; sid: 5001679; rev:2;)
 
 # Encrypted Partition Mount Failure
 
