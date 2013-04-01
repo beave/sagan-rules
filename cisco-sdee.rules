@@ -33,7 +33,7 @@
 #
 #  Since these are not "standard" rules, we start the ID's at "6100000". 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] IPS/IDS License Expiration"; content: "Health Warning"; content: "licenseExpriation"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/6100000; sid: 6100000; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] IPS/IDS License Expiration"; content: "Health Warning"; content: "licenseExpiration"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/6100000; sid: 6100000; rev:1;)
 
 # Based off http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId={Sigature ID}
 
