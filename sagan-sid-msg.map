@@ -2099,3 +2099,4 @@
 6050521 || [OSSEC] Level 12 - Database shutdown messge. (postgresql_rules.xml:postgresql_log)
 6050580 || [OSSEC] Level 10 - Multiple database errors. (postgresql_rules.xml:postgresql_log)
 6050581 || [OSSEC] Level 10 - Multiple database errors. (postgresql_rules.xml:postgresql_log)
+6100000 || [CISCO-SDEE] IPS/IDS License Expiration || url,wiki.quadrantsec.com/bin/view/Main/6100000
