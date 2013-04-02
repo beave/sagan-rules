@@ -98,7 +98,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg: "[CISCO-IOS] Illegal User SSH"
 
 # %USER-3-SYSTEM_MSG: FATAL: bad tty - login (no program)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] FATAL: bad tty - login (no program)"; content: "%USER-3-SYSTEM_MSG:"; content: "FATAL: bad tty"; content: "no program";  classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001671; sid: 5001671; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Auth to privilege 15 failed"; content: "%SYS-5-PRIV_AUTH_FAIL";  classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001672; sid: 5001672; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Auth to privilege 15 failed"; content: "%SYS-5-PRIV_AUTH_FAIL"; parse_src_ip: 1; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001672; sid: 5001672; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Multicast storm detected"; content: "%STORM_CONTROL-3-FILTERED";  classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001673; sid: 5001673; rev:1;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Invalid ARP"; content: "%SW_DAI-4-INVALID_ARP";  classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001674; sid: 5001674; rev:1;)
 
