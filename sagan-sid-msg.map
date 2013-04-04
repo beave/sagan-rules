@@ -1638,6 +1638,12 @@
 5001683 || [SYMANTEC-EMS] Error regrouping - bad parameters || url,wiki.quadrantsec.com/bin/view/Main/5001683
 5001684 || [SYMANTEC-EMS] Failed to map user to a directory || url,wiki.quadrantsec.com/bin/view/Main/5001684
 5001685 || [SYMANTEC-EMS] LDAP key error - name lookup failed || url,wiki.quadrantsec.com/bin/view/Main/5001685
+5001692 || [WINDOWS-AUTH] Local Administrator account added to a local group || url,wiki.quadrantsec.com/bin/view/Main/5001692
+5001693 || [WINDOWS-AUTH] User added to Network Config Operator group || url,wiki.quadrantsec.com/bin/view/Main/5001693
+5001694 || [WINDOWS-AUTH] User added to DNS Admins group || url,wiki.quadrantsec.com/bin/view/Main/5001694
+5001695 || [WINDOWS-AUTH] User added to Domain Administrators group || url,wiki.quadrantsec.com/bin/view/Main/5001695
+5001696 || [WINDOWS-AUTH] User added to Enterprise Administrators group || url,wiki.quadrantsec.com/bin/view/Main/5001696
+5001697 || [WINDOWS-AUTH] User added to Group Policy Creator Owner group || url,wiki.quadrantsec.com/bin/view/Main/5001696
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
