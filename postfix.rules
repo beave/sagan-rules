@@ -25,6 +25,6 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[POSTFIX] IP Address black-listed by anti-spam [blocked]"; content: "blocked using"; classtype: spam; program: postfix; reference: url,wiki.quadrantsec.com/bin/view/Main/5000225; sid: 5000225; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[POSTFIX] Processing error"; pcre: "/defer service failure|resource temporarily unavailable/i"; classtype: program-error; program: postfix; reference: url,wiki.quadrantsec.com/bin/view/Main/5000226; sid: 5000226; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"[POSTFIX] SASL authentication failure"; content: "authentication failed"; classtype: unsuccessful-user; program: postfix; reference: url,wiki.quadrantsec.com/bin/view/Main/5000227; sid: 5000227; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SMTP_PORT (msg:"[POSTFIX] IP Address black-listed by anti-spam [blocked]"; content: "blocked using"; classtype: spam; program: postfix; reference: url,wiki.quadrantsec.com/bin/view/Main/5000225; sid: 5000225; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SMTP_PORT (msg:"[POSTFIX] Processing error"; pcre: "/defer service failure|resource temporarily unavailable/i"; classtype: program-error; program: postfix; reference: url,wiki.quadrantsec.com/bin/view/Main/5000226; sid: 5000226; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SMTP_PORT (msg:"[POSTFIX] SASL authentication failure"; content: "authentication failed"; classtype: unsuccessful-user; program: postfix; reference: url,wiki.quadrantsec.com/bin/view/Main/5000227; sid: 5000227; rev:2;)

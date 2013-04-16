@@ -49,6 +49,6 @@
 # 17162: SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
 
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MSSQL] Login Failure"; content: " 18456: "; classtype: unsuccessful-user; program: MSSQLSERVER|MSSQL; reference: url,wiki.quadrantsec.com/bin/view/Main/5001640; sid: 5001640; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET 1433 (msg: "[WINDOWS-MSSQL] Login Failure - Brute force"; content: " 18456: "; parse_src_ip: 1; classtype: unsuccessful-user; program: MSSQLSERVER|MSSQL; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001641; sid: 5001641; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $MSSQL_PORT (msg: "[WINDOWS-MSSQL] Login Failure - Brute force"; content: " 18456: "; parse_src_ip: 1; classtype: unsuccessful-user; program: MSSQLSERVER|MSSQL; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001641; sid: 5001641; rev:4;)
 
 
