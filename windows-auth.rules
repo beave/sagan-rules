@@ -109,16 +109,13 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Auth faile
 
 # Local group
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] Local Administrator account added to a local group"; pcre: "/S-1-5-21-\d{10}\-\d{10}\-\d{10}-500/"; pcre: "/ 636: | 4732: /"; program: Security-Auditing; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001692; sid: 5001692; rev:1;)
-
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User added to Network Config Operator group"; pcre: "/S-1-5-21-\d{10}\-\d{10}\-\d{10}-556/"; pcre: "/ 636: | 4732: /"; program: Security-Auditing; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001693; sid: 5001693; rev:1;)
-
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User added to DNS Admins group"; pcre: "/S-1-5-21-\d{10}\-\d{10}\-\d{10}-1101/"; pcre: "/ 636: | 4732: /"; program: Security-Auditing; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001694; sid: 5001694; rev:1;)
-
 # Domain/global group
 alert syslog $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[WINDOWS-AUTH] User added to Domain Administrators group"; pcre: "/S-1-5-21-\d{10}\-\d{10}\-\d{10}-512/"; pcre: "/ 632: | 4728: /"; program: Security-Auditing; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001695; sid: 5001695; rev:1;)
-
 # Enterprise/universal group
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User added to Enterprise Administrators group"; pcre: "/S-1-5-21-\d{10}\-\d{10}\-\d{10}-519/"; pcre: "/ 660: | 4756: /"; program: Security-Auditing; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001696; sid: 5001696; rev:1;)
-
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User added to Group Policy Creator Owner group"; pcre: "/S-1-5-21-\d{10}\-\d{10}\-\d{10}-520/"; pcre: "/ 660: | 4756: /"; program: Security-Auditing; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001696; sid: 5001697; rev:1;)
+# User enabled
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account enabled"; content: " 4722: "; program: Security-Auditing; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001687; sid: 5001687; rev:1;) 
 
