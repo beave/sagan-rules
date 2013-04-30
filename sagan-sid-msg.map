@@ -331,7 +331,7 @@
 5000347 || [WINDOWS-MISC] WinVNC4 Connection accepted || url,wiki.quadrantsec.com/bin/view/Main/5000347
 5000348 || [WINDOWS-MISC] WinVNC4 Connection closed - Requested security type not available || url,wiki.quadrantsec.com/bin/view/Main/5000348
 5000349 || [WINDOWS-MISC] WinVNC4 Connection blacklisted || url,wiki.quadrantsec.com/bin/view/Main/5000349
-5000350 || [WINDOWS-MISC] WinVNC4 Connection Authenticaiton failure || url,wiki.quadrantsec.com/bin/view/Main/5000350
+5000350 || [WINDOWS-MISC] WinVNC4 Connection Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5000350
 5000351 || [WINDOWS-MISC] WinVNC4 Connection close - reset by peer || url,wiki.quadrantsec.com/bin/view/Main/5000351
 5000352 || [WINDOWS-MISC] WinVNC4 Connection close - reset by peer [Non-shared] || url,wiki.quadrantsec.com/bin/view/Main/5000352
 5000353 || [WINDOWS-MISC] WinVNC4 Connection close - reading version failed || url,wiki.quadrantsec.com/bin/view/Main/5000353
@@ -1490,7 +1490,6 @@
 5001534 || [HUAWEI] DHCPC_LOG_NAK || url, huaweisymantec.com/en/download.do?id=658891
 5001535 || [HUAWEI] DHCPC_LOG_REQIP_SUCCESS || url, huaweisymantec.com/en/download.do?id=658891
 5001536 || [HUAWEI] DHCPC_LOG_REQIP_SUCCESS || url, huaweisymantec.com/en/download.do?id=658891
-5001537 || [HUAWEI] FTPS - USERIN Login successful || url, huaweisymantec.com/en/download.do?id=658891
 5001538 || [HUAWEI] FTPS - USERIN Login failed || url, huaweisymantec.com/en/download.do?id=658891
 5001539 || [HUAWEI] FTPS - USEROUT Logout || url, huaweisymantec.com/en/download.do?id=658891
 5001540 || [HUAWEI] FTPS - RECVDATA || url, huaweisymantec.com/en/download.do?id=658891
@@ -1638,6 +1637,8 @@
 5001683 || [SYMANTEC-EMS] Error regrouping - bad parameters || url,wiki.quadrantsec.com/bin/view/Main/5001683
 5001684 || [SYMANTEC-EMS] Failed to map user to a directory || url,wiki.quadrantsec.com/bin/view/Main/5001684
 5001685 || [SYMANTEC-EMS] LDAP key error - name lookup failed || url,wiki.quadrantsec.com/bin/view/Main/5001685
+5001686 || [CISCO-IOS] Login Failed - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001686
+5001687 || [WINDOWS-AUTH] User account enabled || url,wiki.quadrantsec.com/bin/view/Main/5001687
 5001692 || [WINDOWS-AUTH] Local Administrator account added to a local group || url,wiki.quadrantsec.com/bin/view/Main/5001692
 5001693 || [WINDOWS-AUTH] User added to Network Config Operator group || url,wiki.quadrantsec.com/bin/view/Main/5001693
 5001694 || [WINDOWS-AUTH] User added to DNS Admins group || url,wiki.quadrantsec.com/bin/view/Main/5001694
@@ -4402,3 +4403,4 @@
 6106999 || [CISCO-SDEE] Cisco PIM Multicast Denial of Service Attack || url,wiki.quadrantsec.com/bin/view/Main/6106999
 6107000 || [CISCO-SDEE] Data Base TNS Connection || url,wiki.quadrantsec.com/bin/view/Main/6107000
 6107001 || [CISCO-SDEE] TNS Redirect Request || url,wiki.quadrantsec.com/bin/view/Main/6107001
+6107002 || [CISCO-SDEE] NBT NetBIOS Session Failed Login - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/6107002
