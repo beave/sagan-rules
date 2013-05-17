@@ -94,9 +94,9 @@
 #1000 || 123  || *Websense TS: Service and Philanthropic Organizations
 #1000 || 124  || *Websense TS: Social and Affiliation Organizations
 #1000 || 125  || *Websense TS: Professional and Worker Organizations
-1000 || 126  || *Websense TS: Security
+#1000 || 126  || *Websense TS: Security
 1000 || 128  || *Websense TS: Malicious Web Sites
-1000 || 138  || *Websense TS: Computer Security
+#1000 || 138  || *Websense TS: Computer Security
 #1000 || 146  || *Websense TS: Miscellaneous
 #1000 || 147  || *Websense TS: Images (Media)
 #1000 || 148  || *Websense TS: Image Servers
