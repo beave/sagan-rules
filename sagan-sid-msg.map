@@ -757,7 +757,7 @@
 5000791 || [CISCO-PIXASA] EAPoUDP association failed to establish || url, wiki.quadrantsec.com/bin/view/Main/5000791
 5000792 || [CISCO-PIXASA] EAPoUDP failed to get a response from host || url, wiki.quadrantsec.com/bin/view/Main/5000792
 5000793 || [CISCO-PIXASA] HTTP - matched string in policy-map verification failed || url, wiki.quadrantsec.com/bin/view/Main/5000793
-5000794 || [CISCO-PIXASA] Bad TCP hdr length || url, wiki.quadrantsec.com/bin/view/Main/5000794
+5000794 || [CISCO-PIXASA] Bad TCP hdr length - Possible network scan || url, wiki.quadrantsec.com/bin/view/Main/5000794
 5000796 || [CISCO-PIXASA] IKE area failed to find centry for message || url, wiki.quadrantsec.com/bin/view/Main/5000796
 5000797 || [CISCO-PIXASA] Failure during phase 1 rekeying attempt due to collision || url, wiki.quadrantsec.com/bin/view/Main/5000797
 5000798 || [CISCO-PIXASA] Ignoring received malformed firewall record || url, wiki.quadrantsec.com/bin/view/Main/5000798
@@ -1639,6 +1639,8 @@
 5001685 || [SYMANTEC-EMS] LDAP key error - name lookup failed || url,wiki.quadrantsec.com/bin/view/Main/5001685
 5001686 || [CISCO-IOS] Login Failed - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001686
 5001687 || [WINDOWS-AUTH] User account enabled || url,wiki.quadrantsec.com/bin/view/Main/5001687
+5001688 || [CISCO-IOS] Low FAN RPM - Service recommended; content: "%ENVMON-4-FAN_LOW_RPM || url,wiki.quadrantsec.com/bin/view/Main/5001688
+5001689 || [CISCO-WLC] Rogue AP detected || url,wiki.quadrantsec.com/bin/view/Main/5001689
 5001692 || [WINDOWS-AUTH] Local Administrator account added to a local group || url,wiki.quadrantsec.com/bin/view/Main/5001692
 5001693 || [WINDOWS-AUTH] User added to Network Config Operator group || url,wiki.quadrantsec.com/bin/view/Main/5001693
 5001694 || [WINDOWS-AUTH] User added to DNS Admins group || url,wiki.quadrantsec.com/bin/view/Main/5001694
