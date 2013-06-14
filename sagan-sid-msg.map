@@ -1639,7 +1639,7 @@
 5001685 || [SYMANTEC-EMS] LDAP key error - name lookup failed || url,wiki.quadrantsec.com/bin/view/Main/5001685
 5001686 || [CISCO-IOS] Login Failed - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001686
 5001687 || [WINDOWS-AUTH] User account enabled || url,wiki.quadrantsec.com/bin/view/Main/5001687
-5001688 || [CISCO-IOS] Low FAN RPM - Service recommended; content: "%ENVMON-4-FAN_LOW_RPM || url,wiki.quadrantsec.com/bin/view/Main/5001688
+5001688 || [CISCO-IOS] Low FAN RPM - Service recommended || url,wiki.quadrantsec.com/bin/view/Main/5001688
 5001689 || [CISCO-WLC] Rogue AP detected || url,wiki.quadrantsec.com/bin/view/Main/5001689
 5001692 || [WINDOWS-AUTH] Local Administrator account added to a local group || url,wiki.quadrantsec.com/bin/view/Main/5001692
 5001693 || [WINDOWS-AUTH] User added to Network Config Operator group || url,wiki.quadrantsec.com/bin/view/Main/5001693
