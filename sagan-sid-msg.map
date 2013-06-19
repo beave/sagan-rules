@@ -1647,6 +1647,11 @@
 5001695 || [WINDOWS-AUTH] User added to Domain Administrators group || url,wiki.quadrantsec.com/bin/view/Main/5001695
 5001696 || [WINDOWS-AUTH] User added to Enterprise Administrators group || url,wiki.quadrantsec.com/bin/view/Main/5001696
 5001697 || [WINDOWS-AUTH] User added to Group Policy Creator Owner group || url,wiki.quadrantsec.com/bin/view/Main/5001696
+5001699 || [WEB-ATTACK] Havij SQL Injection Tool Identified || url,wiki.quadrantsec.com/bin/view/Main/5001699
+5001700 || [WEB-ATTACKS] UNION ALL SELECT in URL - Possible SQL Injection || url,wiki.quadrantsec.com/bin/view/Main/5001700
+5001701 || [WEB-ATTACKS] SQL Injection Using Encapsulated Data - x=x || url,wiki.quadrantsec.com/bin/view/Main/5001701
+5001702 || [WEB-ATTACKS] SQL Injection Using Encapsulated Data - 1=1 || url,wiki.quadrantsec.com/bin/view/Main/5001702
+5001703 || [WEB-ATTACKS] SQL Injection Using Hex Encoding || url,wiki.quadrantsec.com/bin/view/Main/5001703
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
