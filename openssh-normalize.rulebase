@@ -38,7 +38,7 @@ rule=: error: PAM: Authentication failure for %username:word% from %src-host:wor
 rule=: pam_unix(sshd:auth): authentication failure; logname= uid=%uid:number% euid=%euid:number% tty=ssh ruser= rhost=%src-ip:ipv4%  user=%username:word%
 rule=: pam_unix(sshd:auth): authentication failure; logname= uid=%uid:number% euid=%euid:number% tty=ssh ruser= rhost=%src-ip:ipv4% 
 rule=: PAM %number:number% more authentication failure; logname= uid=%uid:number% euid=%euid:number% tty=ssh ruser= rhost=%src-ip:ipv4% 
-rule=: Accepted publickey for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2
+rule=: Accepted publickey for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2 
 rule=: error: PAM: Authentication failure for illegal user %username:word% from %src-ip:ipv4%
 rule=: Failed password for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2
 
