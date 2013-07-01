@@ -1,0 +1,18 @@
+
+message || 17 || nocase || UDP 
+message || 17 || nocase || UDP,
+message || 17 || nocase ||,UDP
+message || 17 || nocase ||/UDP
+message || 1  || nocase ||ICMP 
+message || 1  || nocase ||,ICMP
+message || 1  || nocase ||/ICMP
+
+program || 17 || nocase || named
+program || 6  || nocase || ssh
+program || 6  || nocase || rsync
+program || 17 || nocase || bind
+program || 6  || nocase || http
+program || 6  || nocase || apache
+
+
+
