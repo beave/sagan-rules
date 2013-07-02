@@ -6,6 +6,10 @@ message || 17 || nocase ||/UDP
 message || 1  || nocase ||ICMP 
 message || 1  || nocase ||,ICMP
 message || 1  || nocase ||/ICMP
+message || 6  || nocase || TCP 
+message || 6  || nocase || TCP,
+message || 6  || nocase || ,TCP
+message || 6  || nocase || /TCP
 
 program || 17 || nocase || named
 program || 6  || nocase || ssh
