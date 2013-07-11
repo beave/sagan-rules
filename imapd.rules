@@ -25,7 +25,7 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $IMAP_PORT (msg: "[IMAPD] User login failed"; pcre: "/Login failed user=|AUTHENTICATE LOGIN failure/i"; classtype: unsuccessful-user; parse_src_ip: 1; program: imapd; normalize: imap; reference: url,wiki.quadrantsec.com/bin/view/Main/5000367; sid: 5000367; rev:5;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $IMAP_PORT (msg: "[IMAPD] User login failed"; pcre: "/Login failed user=|AUTHENTICATE LOGIN failure/i"; classtype: unsuccessful-user; parse_src_ip: 1; program: imapd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000367; sid: 5000367; rev:6;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET $IMAP_PORT (msg: "[IMAPD] Successful login"; content: "Authenticated user="; classtype: successful-user; program: imapd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000262; sid: 5000262; rev:5;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET $IMAP_PORT (msg: "[IMAPD] User logout"; content: "Logout user="; classtype: not-suspicious; program: imapd; normalize: imap; reference: url,wiki.quadrantsec.com/bin/view/Main/5000276; sid:5000276; rev:3;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET $IMAP_PORT (msg: "[IMAPD] Exessive login failures"; content: "Login excessive login"; classtype: unsuccessful-user; program: imapd; normalize: imap; reference: url,wiki.quadrantsec.com/bin/view/Main/5001078; sid: 5001078; rev:3;)

@@ -63,3 +63,10 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Nagios npre - Ho
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] syslog-ng I/O error"; program: syslog-ng; content: "I/O error occurred while writing"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001011; sid: 5001011; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] syslog-ng suspend write"; program: syslog-ng; content: "Suspending write operation"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001012; sid: 5001012; rev:1;)
 
+# Linux system "password changed" rules.  Created by Brian Echeverry (becheverry@quadrantsec.com)
+
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[PASSWD] password changed for user"; content: "passwd"; content: "changed"; classtype: successful-user; program: passwd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001704; sid:5001704; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[PASSWD] password changed for user root"; content: "passwd"; content: "changed"; content: "root"; classtype: successful-admin; program: passwd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001705; sid:5001705; rev:1;)
+
+
+
