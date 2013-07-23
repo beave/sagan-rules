@@ -25,6 +25,6 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET $POP_PORT (msg:"[VMPOP3D] Authentication failure for POP3"; content: "failed auth"; classtype: unsuccessful-user; program: vm-pop3d; reference: url,wiki.quadrantsec.com/bin/view/Main/5000215; sid: 5000215; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET $POP3_PORT (msg:"[VMPOP3D] Authentication failure for POP3"; content: "failed auth"; classtype: unsuccessful-user; program: vm-pop3d; reference: url,wiki.quadrantsec.com/bin/view/Main/5000215; sid: 5000215; rev:3;)
 
 
