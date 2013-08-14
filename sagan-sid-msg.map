@@ -1652,6 +1652,16 @@
 5001701 || [WEB-ATTACKS] SQL Injection Using Encapsulated Data - x=x || url,wiki.quadrantsec.com/bin/view/Main/5001701
 5001702 || [WEB-ATTACKS] SQL Injection Using Encapsulated Data - 1=1 || url,wiki.quadrantsec.com/bin/view/Main/5001702
 5001703 || [WEB-ATTACKS] SQL Injection Using Hex Encoding || url,wiki.quadrantsec.com/bin/view/Main/5001703
+5001704 || [SYSLOG] password changed for user || url,wiki.quadrantsec.com/bin/view/Main/5001704
+5001705 || [SYSLOG] password changed for user root || url,wiki.quadrantsec.com/bin/view/Main/5001705
+5001706 || [BIND] Version attempt || url,wiki.quadrantsec.com/bin/view/Main/5001706
+5001707 || [CISCO-IOS] EIGRP Adjacency Change - Neighbor Up || url,wiki.quadrantsec.com/bin/view/Main/5001707
+5001708 || [CISCO-IOS] EIGRP Adjacency Change - Neighbor Down || url,wiki.quadrantsec.com/bin/view/Main/5001708
+5001709 || [CISCO-IOS] Call Manager Telephony Subsystem Shutdown || url,wiki.quadrantsec.com/bin/view/Main/5001709
+5001710 || [CISCO-IOS] Call Manager Telephony Subsystem ModuleStop || url,wiki.quadrantsec.com/bin/view/Main/5001710
+5001711 || [CISCO-IOS] Grammar Manager Telephony Subsystem ModuleStop || url,wiki.quadrantsec.com/bin/view/Main/5001711
+5001712 || [CISCO-IOS] Cisco Unified CCX MGR Shutdown || url,wiki.quadrantsec.com/bin/view/Main/5001712
+5001713 || [CISCO-IOS] Socket Manager Telephony Subsystem ModuleStart || url,wiki.quadrantsec.com/bin/view/Main/5001713
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
