@@ -1662,6 +1662,10 @@
 5001711 || [CISCO-IOS] Grammar Manager Telephony Subsystem ModuleStop || url,wiki.quadrantsec.com/bin/view/Main/5001711
 5001712 || [CISCO-IOS] Cisco Unified CCX MGR Shutdown || url,wiki.quadrantsec.com/bin/view/Main/5001712
 5001713 || [CISCO-IOS] Socket Manager Telephony Subsystem ModuleStart || url,wiki.quadrantsec.com/bin/view/Main/5001713
+5001714 || [CISCO-PIXASA] TCP access denied by ACL - Brute force || url, wiki.quadrantsec.com/bin/view/Main/5001714
+5001715 || [CISCO-PIXASA] TCP access denied by ACL || url, wiki.quadrantsec.com/bin/view/Main/5001715
+5001716 || [WINDOWS-MISC] DHCP Scope is almost full || url,wiki.quadrantsec.com/bin/view/Main/5001716
+5001717 || [ORACLE] Authentication Failure || url, wiki.quadrantsec.com/bin/view/Main/5001717
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
