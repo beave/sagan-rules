@@ -106,6 +106,6 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Low FAN RPM -
 
 # Submitted by Robert Nunley (rnunley@quadrantsec.com) - 08/14/2013
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] EIGRP Adjacency Change - Neighbor Up"; content: "%DUAL-5-NBRCHANGE"; content: "EIGRP"; content: "is up"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001707; sid: 5001707; rev:3;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] EIGRP Adjacency Change - Neighbor Down"; content: "%DUAL-5-NBRCHANGE"; content: "EIGRP"; content: "is down"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001708; sid: 5001708; rev:3;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] EIGRP Adjacency Change - Neighbor Up"; content: "%DUAL-5-NBRCHANGE"; content: "EIGRP"; content: "is up"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001707; sid: 5001707; rev:3;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] EIGRP Adjacency Change - Neighbor Down"; content: "%DUAL-5-NBRCHANGE"; content: "EIGRP"; content: "is down"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001708; sid: 5001708; rev:3;)
 
