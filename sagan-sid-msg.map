@@ -1664,8 +1664,14 @@
 5001713 || [CISCO-IOS] Socket Manager Telephony Subsystem ModuleStart || url,wiki.quadrantsec.com/bin/view/Main/5001713
 5001714 || [CISCO-PIXASA] TCP access denied by ACL - Brute force || url, wiki.quadrantsec.com/bin/view/Main/5001714
 5001715 || [CISCO-PIXASA] TCP access denied by ACL || url, wiki.quadrantsec.com/bin/view/Main/5001715
-5001716 || [WINDOWS-MISC] DHCP Scope is almost full || url,wiki.quadrantsec.com/bin/view/Main/5001716
+5001716 || [WINDOWS-MISC] DHCP Scope is FULL || url,wiki.quadrantsec.com/bin/view/Main/5001716
 5001717 || [ORACLE] Authentication Failure || url, wiki.quadrantsec.com/bin/view/Main/5001717
+5001718 || [CISCO-IOS] BGP Adjacency Change - Neighbor Up || url,wiki.quadrantsec.com/bin/view/Main/5001718
+5001719 || [CISCO-IOS] BGP Adjacency Change - Neighbor Down || url,wiki.quadrantsec.com/bin/view/Main/5001719
+5001720 || [CISCO-IOS] BGP Neighbor Removed From Topology || url,wiki.quadrantsec.com/bin/view/Main/5001720
+5001721 || [CISCO-IOS] HSRP Requesting Active State || url,wiki.quadrantsec.com/bin/view/Main/5001721
+5001722 || [CISCO-IOS] HSRP State Change || url,wiki.quadrantsec.com/bin/view/Main/5001722
+5001723 || [CISCO-IOS] HSRP State Change || url,wiki.quadrantsec.com/bin/view/Main/5001723
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

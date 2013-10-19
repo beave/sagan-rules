@@ -101,11 +101,23 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[CISCO-IOS] Illegal Us
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] FATAL: bad tty - login (no program)"; content: "%USER-3-SYSTEM_MSG:"; content: "FATAL: bad tty"; content: "no program";  classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001671; sid: 5001671; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Auth to privilege 15 failed"; content: "%SYS-5-PRIV_AUTH_FAIL"; parse_src_ip: 1; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001672; sid: 5001672; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Multicast storm detected"; content: "%STORM_CONTROL-3-FILTERED";  classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001673; sid: 5001673; rev:1;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Invalid ARP"; content: "%SW_DAI-4-INVALID_ARP";  classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001674; sid: 5001674; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Invalid ARP"; content: "%SW_DAI-4-INVALID_ARP";  classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001674; sid: 5001674; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Low FAN RPM - Service recommended"; content: "%ENVMON-4-FAN_LOW_RPM"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001688; sid: 5001688; rev:1;)
 
 # Submitted by Robert Nunley (rnunley@quadrantsec.com) - 08/14/2013
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] EIGRP Adjacency Change - Neighbor Up"; content: "%DUAL-5-NBRCHANGE"; content: "EIGRP"; content: "is up"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001707; sid: 5001707; rev:3;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] EIGRP Adjacency Change - Neighbor Down"; content: "%DUAL-5-NBRCHANGE"; content: "EIGRP"; content: "is down"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001708; sid: 5001708; rev:3;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] EIGRP Adjacency Change - Neighbor Up"; content: "%DUAL-5-NBRCHANGE"; content: "EIGRP"; content: "is up"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001707; sid: 5001707; rev:3;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] EIGRP Adjacency Change - Neighbor Down"; content: "%DUAL-5-NBRCHANGE"; content: "EIGRP"; content: "is down"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001708; sid: 5001708; rev:3;)
+
+# Submittied by Robert Nunley (rnunley@quadrantsec.com) - 11/18/2013
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] BGP Adjacency Change - Neighbor Up"; content: "%BGP-5-ADJCHANGE"; content: "neighbor"; content: "Up"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001718; sid: 5001718; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] BGP Adjacency Change - Neighbor Down"; content: "%BGP-5-ADJCHANGE"; content: "neighbor"; content: "Down"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001719; sid: 5001719; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] BGP Neighbor Removed From Topology"; content: "%BGP_SESSION-5-ADJCHANGE"; content: "neighbor"; content: "topology"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001720; sid: 5001720; rev:1;)
+
+# Submitted by Adam Hall (ahall@quadrantsec.com) - 11/18.2013
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] HSRP Requesting Active State"; content: "Grp"; content: "Coup"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001721; sid: 5001721; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] HSRP State Change"; content: "%STANDBY-6-STATECHANGE"; content: "state"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001722; sid: 5001722; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] HSRP State Change"; content: "%HSRP-5-STATECHANGE"; content: "state"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001723; sid: 5001723; rev:1;)
 
