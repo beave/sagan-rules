@@ -1672,6 +1672,10 @@
 5001721 || [CISCO-IOS] HSRP Requesting Active State || url,wiki.quadrantsec.com/bin/view/Main/5001721
 5001722 || [CISCO-IOS] HSRP State Change || url,wiki.quadrantsec.com/bin/view/Main/5001722
 5001723 || [CISCO-IOS] HSRP State Change || url,wiki.quadrantsec.com/bin/view/Main/5001723
+5001724 || [CISCO-MALWARE] ZeroAccess UDP port 16464 detected" || url, wiki.quadrantsec.com/bin/view/Main/5001724
+5001725 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected" || url, wiki.quadrantsec.com/bin/view/Main/5001725
+5001726 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected" || url, wiki.quadrantsec.com/bin/view/Main/5001726
+5001727 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected" || url, wiki.quadrantsec.com/bin/view/Main/5001727
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
