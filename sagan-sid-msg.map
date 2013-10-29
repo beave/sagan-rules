@@ -1672,10 +1672,21 @@
 5001721 || [CISCO-IOS] HSRP Requesting Active State || url,wiki.quadrantsec.com/bin/view/Main/5001721
 5001722 || [CISCO-IOS] HSRP State Change || url,wiki.quadrantsec.com/bin/view/Main/5001722
 5001723 || [CISCO-IOS] HSRP State Change || url,wiki.quadrantsec.com/bin/view/Main/5001723
-5001724 || [CISCO-MALWARE] ZeroAccess UDP port 16464 detected" || url, wiki.quadrantsec.com/bin/view/Main/5001724
-5001725 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected" || url, wiki.quadrantsec.com/bin/view/Main/5001725
-5001726 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected" || url, wiki.quadrantsec.com/bin/view/Main/5001726
-5001727 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected" || url, wiki.quadrantsec.com/bin/view/Main/5001727
+5001724 || [CISCO-MALWARE] ZeroAccess UDP port 16464 detected || url, wiki.quadrantsec.com/bin/view/Main/5001724
+5001725 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected || url, wiki.quadrantsec.com/bin/view/Main/5001725
+5001726 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected || url, wiki.quadrantsec.com/bin/view/Main/5001726
+5001727 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected || url, wiki.quadrantsec.com/bin/view/Main/5001727
+5001728 || [WINDOWS-AUTH] Potential Windows User Enumeration - User Name Does Not Exist || url,wiki.quadrantsec.com/bin/view/Main/5001728
+5001729 || [WINDOWS-AUTH] Windows Brute force - User Correct but Incorrect Password || url,wiki.quadrantsec.com/bin/view/Main/5001729
+5001730 || [WINDOWS-AUTH] Windows Brute force - User Is Locked Out || url,wiki.quadrantsec.com/bin/view/Main/5001730
+5001731 || [WINDOWS-AUTH] Windows Brute force - User Account Disabled || url,wiki.quadrantsec.com/bin/view/Main/5001731
+5001732 || [WINDOWS-AUTH] Windows Brute force - User Login Attempts Outside of Time Restriction || url,wiki.quadrantsec.com/bin/view/Main/5001732
+5001733 || [WINDOWS-AUTH] Windows Brute force - Expired Account || url,wiki.quadrantsec.com/bin/view/Main/5001733
+5001734 || [WINDOWS-AUTH] Windows Brute force - Expired Password || url,wiki.quadrantsec.com/bin/view/Main/5001734
+5001735 || [WINDOWS-MALWARE] ZeroAccess Malware Detected  || url,wiki.quadrantsec.com/bin/view/Main/5001735
+5001736 || [WINDOWS-MALWARE] ZeroAccess Malware Detected  || url,wiki.quadrantsec.com/bin/view/Main/5001736
+5001737 || [WINDOWS-MALWARE] ZeroAccess Malware Detected || url,wiki.quadrantsec.com/bin/view/Main/5001737
+5001738 || [WINDOWS-MALWARE] ZeroAccess Malware Detected  || url,wiki.quadrantsec.com/bin/view/Main/5001738
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
