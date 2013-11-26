@@ -1733,6 +1733,11 @@
 5001783 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x32 - Inappropriate type of checksum in message || url,wiki.quadrantsec.com/bin/view/Main/5001783
 5001784 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3C - Generic error || url,wiki.quadrantsec.com/bin/view/Main/5001784
 5001785 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3D - Field is too long for this implementation || url,wiki.quadrantsec.com/bin/view/Main/5001785
+5001786 || [FORTINET-MALWARE] ZeroAccess UDP port 16464 detected || url, wiki.quadrantsec.com/bin/view/Main/5001786
+5001787 || [FORTINET-MALWARE] ZeroAccess UDP port 16465 detected || url, wiki.quadrantsec.com/bin/view/Main/5001787
+5001788 || [FORTINET-MALWARE] ZeroAccess UDP port 16470 detected || url, wiki.quadrantsec.com/bin/view/Main/5001788
+5001789 || [FORTINET-MALWARE] ZeroAccess UDP port 16471 detected || url, wiki.quadrantsec.com/bin/view/Main/5001789
+5001790 || [CISCO-MALWARE] ZeroAccess pre-2012 TCP port 13620 detected || url, wiki.quadrantsec.com/bin/view/Main/5001790
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
