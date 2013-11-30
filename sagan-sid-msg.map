@@ -1672,10 +1672,10 @@
 5001721 || [CISCO-IOS] HSRP Requesting Active State || url,wiki.quadrantsec.com/bin/view/Main/5001721
 5001722 || [CISCO-IOS] HSRP State Change || url,wiki.quadrantsec.com/bin/view/Main/5001722
 5001723 || [CISCO-IOS] HSRP State Change || url,wiki.quadrantsec.com/bin/view/Main/5001723
-5001724 || [CISCO-MALWARE] ZeroAccess UDP port 16464 detected || url, wiki.quadrantsec.com/bin/view/Main/5001724
-5001725 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected || url, wiki.quadrantsec.com/bin/view/Main/5001725
-5001726 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected || url, wiki.quadrantsec.com/bin/view/Main/5001726
-5001727 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected || url, wiki.quadrantsec.com/bin/view/Main/5001727
+5001724 || [CISCO-MALWARE] ZeroAccess UDP port 16464 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001724
+5001725 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001725
+5001726 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001726
+5001727 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001727
 5001728 || [WINDOWS-AUTH] Potential Windows User Enumeration - User Name Does Not Exist || url,wiki.quadrantsec.com/bin/view/Main/5001728
 5001729 || [WINDOWS-AUTH] Windows Brute force - User Correct but Incorrect Password || url,wiki.quadrantsec.com/bin/view/Main/5001729
 5001730 || [WINDOWS-AUTH] Windows Brute force - User Is Locked Out || url,wiki.quadrantsec.com/bin/view/Main/5001730
@@ -1737,7 +1737,79 @@
 5001787 || [FORTINET-MALWARE] ZeroAccess UDP port 16465 detected || url, wiki.quadrantsec.com/bin/view/Main/5001787
 5001788 || [FORTINET-MALWARE] ZeroAccess UDP port 16470 detected || url, wiki.quadrantsec.com/bin/view/Main/5001788
 5001789 || [FORTINET-MALWARE] ZeroAccess UDP port 16471 detected || url, wiki.quadrantsec.com/bin/view/Main/5001789
-5001790 || [CISCO-MALWARE] ZeroAccess pre-2012 TCP port 13620 detected || url, wiki.quadrantsec.com/bin/view/Main/5001790
+5001790 || [CISCO-MALWARE] ZeroAccess pre-2012 TCP port 13620 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001790
+5001791 || [WINDOWS-AUTH] User account created || url,wiki.quadrantsec.com/bin/view/Main/5001786
+5001792 || [WEB-ATTACKS] bsqlbf Brute Force SQL Injection || url,doc.emergingthreats.net/2008362 || url,code.google.com/p/bsqlbf-v2/
+5001793 || [WEB-ATTACKS] Cisco Torch IOS HTTP Scan || url,doc.emergingthreats.net/2008415 || url,www.securiteam.com/tools/5EP0F1FEUA.html || url,www.hackingexposedcisco.com/?link=tools
+5001794 || [WEB-ATTACKS] Core-Project Scanning Bot UA Detected
+5001795 || [WEB-ATTACKS] crimscanner User-Agent detected || url,doc.emergingthreats.net/2010954
+5001796 || [WEB-ATTACKS] DavTest WebDav Vulnerability Scanner Default User Agent Detected || url,doc.emergingthreats.net/2011089 || url,code.google.com/p/davtest/ || url,www.darknet.org.uk/2010/04/davtest-webdav-vulerability-scanning-scanner-tool/
+5001797 || [WEB-ATTACKS] DirBuster Web App Scan in Progress || url,doc.emergingthreats.net/2008186 || url,owasp.org
+5001798 || [WEB-ATTACKS] Possible Fast-Track Tool Spidering User-Agent Detected || url,doc.emergingthreats.net/2011721 || url,www.offensive-security.com/metasploit-unleashed/Fast-Track-Modes
+5001799 || [WEB-ATTACKS] Suspicious User-Agent - get-minimal - Possible Vuln Scan || url,doc.emergingthreats.net/2003634
+5001800 || [WEB-ATTACKS] Grabber.py Web Scan Detected || url,doc.emergingthreats.net/2009483 || url,rgaucher.info/beta/grabber/
+5001801 || [WEB-ATTACKS] Grendel Web Scan - Default User Agent Detected || url,doc.emergingthreats.net/2009480 || url,www.grendel-scan.com
+5001802 || [WEB-ATTACKS] Hmap Webserver Fingerprint Scan || url,doc.emergingthreats.net/2008537 || url,www.ujeni.murkyroc.com/hmap/
+5001803 || [WEB-ATTACKS] Mini MySqlatOr SQL Injection Scanner || url,doc.emergingthreats.net/2008729 || url,www.scrt.ch/pages_en/minimysqlator.html
+5001804 || [WEB-ATTACKS] Default Mysqloit User Agent Detected - Mysql Injection Takover Tool || url,doc.emergingthreats.net/2009882 || url,code.google.com/p/mysqloit/
+5001805 || [WEB-ATTACKS] Nmap Scripting Engine User-Agent Detected (Nmap NSE) || url,doc.emergingthreats.net/2009359
+5001806 || [WEB-ATTACKS] Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine) || url,doc.emergingthreats.net/2009358
+5001807 || [WEB-ATTACKS] Nessus User Agent || url,doc.emergingthreats.net/2002664 || url,www.nessus.org
+5001808 || [WEB-ATTACKS] Netsparker Default User-Agent || url,www.mavitunasecurity.com/communityedition/
+5001809 || [WEB-ATTACKS] Nikto Web App Scan in Progress || url,doc.emergingthreats.net/2002677 || url,www.cirt.net/code/nikto.shtml
+5001810 || [WEB-ATTACKS] Paros Proxy Scanner Detected || url,doc.emergingthreats.net/2008187 || url,www.parosproxy.org
+5001811 || [WEB-ATTACKS] SQL Injection Attempt (Agent uil2pn) || url,doc.emergingthreats.net/2010215 || url,www.prevx.com/filenames/89385984947861762-X1/UIL2PN.EXE.html
+5001812 || [WEB-ATTACKS] SQL Power Injector SQL Injection User Agent Detected || url,doc.emergingthreats.net/2009769 || url,en.wikipedia.org/wiki/Sql_injection || url,www.sqlpowerinjector.com/index.htm
+5001813 || [WEB-ATTACKS] Sqlmap SQL Injection Scan || url,doc.emergingthreats.net/2008538 || url,sqlmap.sourceforge.net
+5001814 || [WEB-ATTACKS] Skipfish Web Application Scan Detected || url,doc.emergingthreats.net/2010953 || url,code.google.com/p/skipfish/ || url,isc.sans.org/diary.html?storyid=8467
+5001815 || [WEB-ATTACKS] Skipfish Web Application Scan Detected (2) || url,doc.emergingthreats.net/2010956 || url,code.google.com/p/skipfish/ || url,isc.sans.org/diary.html?storyid=8467
+5001816 || [WEB-ATTACKS] Springenwerk XSS Scanner User-Agent Detected || url,doc.emergingthreats.net/2010508 || url,springenwerk.org/
+5001817 || [WEB-ATTACKS] Suspicious User-Agent inbound (bot) || url,doc.emergingthreats.net/bin/view/Main/2008228
+5001818 || [WEB-ATTACKS] Toata Scanner User-Agent Detected || url,doc.emergingthreats.net/2009159 || url,isc.sans.org/diary.html?storyid=5599
+5001819 || [WEB-ATTACKS] Tomcat Web Application Manager scanning || url,doc.emergingthreats.net/2010019
+5001820 || [WEB-ATTACKS] Suspicious User-Agent Containing SQL Inject/ion, Likely SQL Injection Scanner || url,doc.emergingthreats.net/2010087 || url,www.owasp.org/index.php/SQL_Injection
+5001821 || [WEB-ATTACKS] Suspicious User-Agent Containing Web Scan/er, Likely Web Scanner || url,doc.emergingthreats.net/2010088
+5001822 || [WEB-ATTACKS] Suspicious User-Agent Containing Security Scan/ner, Likely Scan || url,doc.emergingthreats.net/2010089
+5001823 || [WEB-ATTACKS] w3af User Agent || url,doc.emergingthreats.net/2007757 || url,w3af.sourceforge.net
+5001824 || [WEB-ATTACKS] WSFuzzer Web Application Fuzzing || url,doc.emergingthreats.net/2008628 || url,www.owasp.org/index.php/Category%3aOWASP_WSFuzzer_Project
+5001825 || [WEB-ATTACKS] Wapiti Web Server Vulnerability Scan || url,doc.emergingthreats.net/2008417 || url,wapiti.sourceforge.net/
+5001826 || [WEB-ATTACKS] WebHack Control Center User-Agent Inbound (WHCC/) || url,doc.emergingthreats.net/2003924 || url,www.governmentsecurity.org/forum/index.php?showtopic=5112&pid=28561&mode=threaded&start=
+5001827 || [WEB-ATTACKS] Open-Proxy ScannerBot (webcollage-UA)  || url,doc.emergingthreats.net/2010768 || url,www.botsvsbrowsers.com/details/214715/index.html || url, stateofsecurity.com/?p=526
+5001828 || [WEB-ATTACKS] WebShag Web Application Scan Detected || url,doc.emergingthreats.net/2009158 || url,www.scrt.ch/pages_en/outils.html
+5001829 || [WEB-ATTACKS] WhatWeb Web Application Fingerprint Scanner Default User-Agent Detected || url,doc.emergingthreats.net/2010960 || url,www.morningstarsecurity.com/research/whatweb
+5001830 || [WEB-ATTACKS] WITOOL SQL Injection Scan || url,doc.emergingthreats.net/2009833 || url,witool.sourceforge.net/
+5001831 || [WEB-ATTACKS] ZmEu exploit scanner || url,doc.emergingthreats.net/2010715
+5001832 || [WEB-ATTACKS] Possible jBroFuzz Fuzzer Detected || url,doc.emergingthreats.net/2009476 || url,www.owasp.org/index.php/Category%3aOWASP_JBroFuzz
+5001833 || [WEB-ATTACKS] Hydra User-Agent || url,freeworld.thc.org/thc-hydra
+5001834 || [WEB-ATTACKS] Inspathx Path Disclosure Scanner User-Agent Detected || url,www.darknet.org.uk/2010/09/inspathx-tool-for-finding-path-disclosure-vulnerabilities/ || url,code.google.com/p/inspathx/
+5001835 || [WEB-ATTACKS] Medusa User-Agent || url,www.foofus.net/~jmk/medusa/medusa.html
+5001836 || [WEB-ATTACKS] DotDotPwn User-Agent || url,dotdotpwn.sectester.net
+5001838 || [WEB-ATTACKS] Havij SQL Injection Tool User-Agent Inbound || url,itsecteam.com/en/projects/project1.htm
+5001839 || [WEB-ATTACKS] OpenVAS User-Agent Inbound || url,openvas.org
+5001840 || [WEB-ATTACKS] ZmEu Scanner User-Agent Inbound
+5001841 || [WEB-ATTACKS] Internal Dummy Connection User-Agent Inbound
+5001842 || [WEB-ATTACKS] DominoHunter Security Scan in Progress || url,packetstormsecurity.org/files/31653/DominoHunter-0.92.zip.html
+5001843 || [WEB-ATTACKS] Vega Web Application Scan || url,www.darknet.org.uk/2011/07/vega-open-source-cross-platform-web-application-security-assessment-platform/ || url,www.subgraph.com/products.html
+5001844 || [WEB-ATTACKS] FHScan core User-Agent Detect || url,www.tarasco.org/security/FHScan_Fast_HTTP_Vulnerability_Scanner/index.html
+5001845 || [WEB-ATTACKS] w3af User-Agent 2
+5001846 || [HONEYD] Connection made to honeypot || url,wiki.quadrantsec.com/bin/view/Main/5001846
+5001847 || [HONEYD] Attempt to login to honeypot Telnet server || url,wiki.quadrantsec.com/bin/view/Main/5001847
+5001848 || [HONEYD] Attempt to login to honeypot Telnet server as admin user || url,wiki.quadrantsec.com/bin/view/Main/5001848
+5001849 || [HONEYD] Attempt to login to honeypot FTP server || url,wiki.quadrantsec.com/bin/view/Main/5001849
+5001853 || [NFCAPD] Netflow - ZeroAccess UDP port 16464 detected || url, wiki.quadrantsec.com/bin/view/Main/5001853
+5001854 || [NFCAPD] Netflow - ZeroAccess UDP port 16465 detected || url, wiki.quadrantsec.com/bin/view/Main/5001854
+5001855 || [NFCAPD] Netflow - ZeroAccess UDP port 16470 detected || url, wiki.quadrantsec.com/bin/view/Main/5001855
+5001856 || [NFCAPD] Netflow - ZeroAccess UDP port 16471 detected || url, wiki.quadrantsec.com/bin/view/Main/5001856
+5001857 || [NFCAPD] Netflow - Old ZeroAccess TCP port 13620 detected || url, wiki.quadrantsec.com/bin/view/Main/5001857
+5001858 || [CISCO-MALWARE] ZeroAccess UDP port 16464 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001858
+5001859 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001859
+5001860 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001860
+5001861 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001861
+5001862 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001862
+5001863 || [WEB-ATTACKS] Grendel Web Scan - Default User Agent Detected || url,doc.emergingthreats.net/2009480 || url,www.grendel-scan.com
+5001864 || [WEB-ATTACKS] Absinthe SQL Injection Tool HTTP Header Detected || url,doc.emergingthreats.net/2009555 || url,0x90.org/releases/absinthe
+5001865 || [WEB-ATTACKS] Nessus User Agent || url,doc.emergingthreats.net/2002664 || url,www.nessus.org
+5001866 || [WEB-ATTACKS] Nikto Web App Scan in Progress || url,doc.emergingthreats.net/2002677 || url,www.cirt.net/code/nikto.shtml
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
