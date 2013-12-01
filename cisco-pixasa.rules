@@ -488,6 +488,3 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] User authe
 alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] TCP access denied by ACL - Brute force"; program: %ASA-3-710003; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5001714; parse_src_ip: 1; parse_dst_ip: 2; parse_port; threshold: type limit, track by_src, count 5, seconds 300; after: track by_src, count 5, seconds 300; sid: 5001714; rev: 1;)
 #alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] TCP access denied by ACL"; program: %ASA-3-710003; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5001715; parse_src_ip: 1; parse_dst_ip: 2; parse_port; sid: 5001715; rev: 1;)
 
-
-
-
