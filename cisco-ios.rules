@@ -121,3 +121,9 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] HSRP Requesti
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] HSRP State Change"; content: "%STANDBY-6-STATECHANGE"; content: "state"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001722; sid: 5001722; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] HSRP State Change"; content: "%HSRP-5-STATECHANGE"; content: "state"; classtype: system-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001723; sid: 5001723; rev:1;)
 
+# %PARSER-5-CFGLOG_LOGGEDCMD: User:bob  logged command:!exec: enable
+
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Command logged"; content: "%PARSER-5-CFGLOG_LOGGEDCMD"; classtype: misc-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5001871; sid: 5001871; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Enable command executed"; content: "%PARSER-5-CFGLOG_LOGGEDCMD"; content: "exec"; nocase; content: "enable"; nocase; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001872; sid: 5001872; rev:1;)
+
+
