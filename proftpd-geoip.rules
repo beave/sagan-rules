@@ -1,4 +1,4 @@
-# Sagan cisco-geoip.rules
+# Sagan proftpd-geoip.rules
 # Copyright (c) 2009-2013, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -25,9 +25,7 @@
 #
 #
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-GEOIP] VPN Login from outside HOME_COUNTRY"; program: %ASA-6-716038; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001868; sid: 5001868; rev: 1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[PROFTPD] Authentication success from outside HOME_COUNTRY"; content: "Login successful"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001870; sid: 5001870; rev:1;)
 
-# %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: testuser] [Source: 10.10.10.10] [localport: 22] at 05:00:13 EST Sun Dec 1 2013
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] Console login from outside HOME_COUNTRY"; program: %SEC_LOGIN-5-LOGIN_SUCCESS; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001869; sid: 5001869; rev: 1;)
 
