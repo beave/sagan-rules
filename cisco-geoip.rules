@@ -31,3 +31,9 @@ alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-GEOIP] VPN Lo
 
 alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] Console login from outside HOME_COUNTRY"; program: %SEC_LOGIN-5-LOGIN_SUCCESS; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001869; sid: 5001869; rev: 1;)
 
+10.1.2.1|local4|info|info|a6|2013-12-02|08:00:03|%ASA-6-605005| Login permitted from 10.1.1.1/54112 to inside:10.1.2.1/ssh for user "bob"
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] Login permitted from outside HOME_COUNTRY"; program: %ASA-6-605005; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5001879; sid: 5001879; rev: 1;)
+
+
+
