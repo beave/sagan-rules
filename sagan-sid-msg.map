@@ -1811,6 +1811,15 @@
 5001865 || [WEB-ATTACKS] Nessus User Agent || url,doc.emergingthreats.net/2002664 || url,www.nessus.org
 5001866 || [WEB-ATTACKS] Nikto Web App Scan in Progress || url,doc.emergingthreats.net/2002677 || url,www.cirt.net/code/nikto.shtml
 5001867 || [FORTINET-MALWARE] Older ZeroAccess TCP port 13620 detected || url, wiki.quadrantsec.com/bin/view/Main/5001867
+5001868 || [CISCO-GEOIP] VPN Login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001868
+5001869 || [CISCO-GEOIP] Console login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001869
+5001870 || [PROFTPD] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001870
+5001871 || [CISCO-IOS] Command logged || url,wiki.quadrantsec.com/bin/view/Main/5001871
+5001872 || [CISCO-IOS] Enable command executed || url,wiki.quadrantsec.com/bin/view/Main/5001872
+5001873 || [WINDOWS-GEOIP] Windows Logon outside of HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001873
+5001874 || [OPENSSH-GEOIP] Authentication success via password from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001874
+5001875 || [OPENSSH-GEOIP] Authentication success via publickey from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001875
+5001876 || [OPENSSH-GEOIP] Authentication success via keyboard from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001876
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
