@@ -1822,6 +1822,9 @@
 5001876 || [OPENSSH-GEOIP] Authentication success via keyboard from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001876
 5001877 || [SSH-TECTIA-SERVER] Authentication Failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001877
 5001878 || [SSH-TECTIA-SERVER] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001878
+5001879 || [CISCO-GEOIP] Login permitted from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001879
+5001880 || [WINDOWS-AUTH] User account created [FLOWBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5001880
+5001881 || [WINDOWS-AUTH] User account re-enabled || url,wiki.quadrantsec.com/bin/view/Main/5001881
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
