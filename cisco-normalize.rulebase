@@ -33,6 +33,10 @@ prefix=
 
 rule=: %uptime:word% %authfail:word% Authentication failure for SNMP req from host %src-ip:ipv4%
 
+#  Dec 26 19:59:26: %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host 10.1.128.27
+
+rule=: %month:word% %day:word% %hour:word% %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host %src-ip:ipv4%
+
 # Access denied URL http://www.example.com/somethings.txt SRC 192.168.0.1 DEST 10.10.10.10 on interface inside
 
 rule=: Access denied URL %url:word% SRC %src-ip:ipv4% DEST %dst-ip:ipv4% on interface %interface:word%
