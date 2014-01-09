@@ -1,4 +1,4 @@
-001888 || [MALWARE] Zeus bin Request 7 || url,http://labs.snort.org/papers/zeus.html
+001888 || [PROXY-MALWARE] Zeus bin Request 7 || url,http://labs.snort.org/papers/zeus.html
 5000000 || [BASH] ./a.out execution attempt || url,wiki.quadrantsec.com/bin/view/Main/5000000
 5000001 || [BASH] gcc execution || url,wiki.quadrantsec.com/bin/view/Main/5000001
 5000002 || [BASH] telnet execution || url,wiki.quadrantsec.com/bin/view/Main/5000002
@@ -1826,66 +1826,70 @@
 5001879 || [CISCO-GEOIP] Login permitted from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001879
 5001880 || [WINDOWS-AUTH] User account created [FLOWBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5001880
 5001881 || [WINDOWS-AUTH] User account re-enabled || url,wiki.quadrantsec.com/bin/view/Main/5001881
-5001882 || [MALWARE] Zeus bin Request 1 || url,http://labs.snort.org/papers/zeus.html
-5001883 || [MALWARE] Zeus bin Request 2 || url,http://labs.snort.org/papers/zeus.html
-5001884 || [MALWARE] Zeus bin Request 3 || url,http://labs.snort.org/papers/zeus.html
-5001885 || [MALWARE] Zeus bin Request 4 || url,http://labs.snort.org/papers/zeus.html
-5001886 || [MALWARE] Zeus bin Request 5 || url,http://labs.snort.org/papers/zeus.html
-5001887 || [MALWARE] Zeus bin Request 6 || url,http://labs.snort.org/papers/zeus.html
-5001889 || [MALWARE] Zeus bin Request 8 || url,http://labs.snort.org/papers/zeus.html
-5001890 || [MALWARE] Zeus bin Request 9 || url,http://labs.snort.org/papers/zeus.html
-5001891 || [MALWARE] Zeus bin Request 10 || url,http://labs.snort.org/papers/zeus.html
-5001892 || [MALWARE] Zeus bin Request 11 || url,http://labs.snort.org/papers/zeus.html
-5001893 || [MALWARE] Zeus bin Request 12 || url,http://labs.snort.org/papers/zeus.html
-5001894 || [MALWARE] Zeus bin Request 13 || url,http://labs.snort.org/papers/zeus.html
-5001895 || [MALWARE] Zeus bin Request 14 || url,http://labs.snort.org/papers/zeus.html
-5001896 || [MALWARE] Zeus bin Request 15 || url,http://labs.snort.org/papers/zeus.html
-5001897 || [MALWARE] Zeus bin Request 16 || url,http://labs.snort.org/papers/zeus.html
-5001898 || [MALWARE] Zeus bin Request 17 || url,http://labs.snort.org/papers/zeus.html
-5001899 || [MALWARE] Zeus bin Request 18 || url,http://labs.snort.org/papers/zeus.html
-5001900 || [MALWARE] Zeus bin Request 19 || url,http://labs.snort.org/papers/zeus.html
-5001901 || [MALWARE] Zeus bin Request 20 || url,http://labs.snort.org/papers/zeus.html
-5001902 || [MALWARE] Zeus bin Request 21 || url,http://labs.snort.org/papers/zeus.html
-5001903 || [MALWARE] Zeus bin Request 22 || url,http://labs.snort.org/papers/zeus.html
-5001904 || [MALWARE] Zeus bin Request 23 || url,http://labs.snort.org/papers/zeus.html
-5001905 || [MALWARE] Zeus bin Request 24 || url,http://labs.snort.org/papers/zeus.html
-5001906 || [MALWARE] Zeus bin Request 25 || url,http://labs.snort.org/papers/zeus.html
-5001907 || [MALWARE] Zeus bin Request 26 || url,http://labs.snort.org/papers/zeus.html
-5001908 || [MALWARE] Zeus bin Request 27 || url,http://labs.snort.org/papers/zeus.html
-5001909 || [MALWARE] Zeus bin Request 28 || url,http://labs.snort.org/papers/zeus.html
-5001910 || [MALWARE] Zeus bin Request 29 || url,http://labs.snort.org/papers/zeus.html
-5001911 || [MALWARE] Zeus bin Request 30 || url,http://labs.snort.org/papers/zeus.html
-5001912 || [MALWARE] Zeus bin Request 31 || url,http://labs.snort.org/papers/zeus.html
-5001913 || [MALWARE] Zeus bin Request 32 || url,http://labs.snort.org/papers/zeus.html
-5001914 || [MALWARE] Zeus bin Request 33 || url,http://labs.snort.org/papers/zeus.html
-5001915 || [MALWARE] Zeus bin Request 34 || url,http://labs.snort.org/papers/zeus.html
-5001916 || [MALWARE] Zeus bin Request 35 || url,http://labs.snort.org/papers/zeus.html
-5001917 || [MALWARE] Zeus bin Request 36 || url,http://labs.snort.org/papers/zeus.html
-5001918 || [MALWARE] Zeus php Request 1 || url,http://labs.snort.org/papers/zeus.html
-5001919 || [MALWARE] Zeus php Request 2 || url,http://labs.snort.org/papers/zeus.html
-5001920 || [MALWARE] Zeus php Request 3 || url,http://labs.snort.org/papers/zeus.html
-5001921 || [MALWARE] Zeus php Request 4 || url,http://labs.snort.org/papers/zeus.html
-5001922 || [MALWARE] Zeus php Request 5 || url,http://labs.snort.org/papers/zeus.html
-5001923 || [MALWARE] Zeus php Request 6 || url,http://labs.snort.org/papers/zeus.html
-5001924 || [MALWARE] Zeus php Request 7 || url,http://labs.snort.org/papers/zeus.html
-5001925 || [MALWARE] Zeus php Request 8 || url,http://labs.snort.org/papers/zeus.html
-5001926 || [MALWARE] Zeus php Request 9 || url,http://labs.snort.org/papers/zeus.html
-5001927 || [MALWARE] Zeus php Request 10 || url,http://labs.snort.org/papers/zeus.html
-5001928 || [MALWARE] Zeus php Request 11 || url,http://labs.snort.org/papers/zeus.html
-5001929 || [MALWARE] Zeus php Request 12 || url,http://labs.snort.org/papers/zeus.html
-5001930 || [MALWARE] Zeus php Request 13 || url,http://labs.snort.org/papers/zeus.html
-5001931 || [MALWARE] Zeus php Request 14 || url,http://labs.snort.org/papers/zeus.html
-5001932 || [MALWARE] Zeus php Request 15 || url,http://labs.snort.org/papers/zeus.html
-5001933 || [MALWARE] Zeus php Request 16 || url,http://labs.snort.org/papers/zeus.html
-5001934 || [MALWARE] Zeus php Request 17 || url,http://labs.snort.org/papers/zeus.html
-5001935 || [MALWARE] Zeus php Request 18 || url,http://labs.snort.org/papers/zeus.html
-5001936 || [MALWARE] Zeus php Request 19 || url,http://labs.snort.org/papers/zeus.html
-5001937 || [MALWARE] Zeus php Request 20 || url,http://labs.snort.org/papers/zeus.html
-5001938 || [MALWARE] Zeus php Request 21 || url,http://labs.snort.org/papers/zeus.html
-5001939 || [MALWARE] Zeus php Request 22 || url,http://labs.snort.org/papers/zeus.html
-5001940 || [MALWARE] Zeus php Request 23 || url,http://labs.snort.org/papers/zeus.html
-5001941 || [MALWARE] Zeus php Request 24 || url,http://labs.snort.org/papers/zeus.html
-5001942 || [MALWARE] Zeus php Request 25 || url,http://labs.snort.org/papers/zeus.html
+5001882 || [PROXY-MALWARE] Zeus bin Request 1 || url,http://labs.snort.org/papers/zeus.html
+5001883 || [PROXY-MALWARE] Zeus bin Request 2 || url,http://labs.snort.org/papers/zeus.html
+5001884 || [PROXY-MALWARE] Zeus bin Request 3 || url,http://labs.snort.org/papers/zeus.html
+5001885 || [PROXY-MALWARE] Zeus bin Request 4 || url,http://labs.snort.org/papers/zeus.html
+5001886 || [PROXY-MALWARE] Zeus bin Request 5 || url,http://labs.snort.org/papers/zeus.html
+5001887 || [PROXY-MALWARE] Zeus bin Request 6 || url,http://labs.snort.org/papers/zeus.html
+5001889 || [PROXY-MALWARE] Zeus bin Request 8 || url,http://labs.snort.org/papers/zeus.html
+5001890 || [PROXY-MALWARE] Zeus bin Request 9 || url,http://labs.snort.org/papers/zeus.html
+5001891 || [PROXY-MALWARE] Zeus bin Request 10 || url,http://labs.snort.org/papers/zeus.html
+5001892 || [PROXY-MALWARE] Zeus bin Request 11 || url,http://labs.snort.org/papers/zeus.html
+5001893 || [PROXY-MALWARE] Zeus bin Request 12 || url,http://labs.snort.org/papers/zeus.html
+5001894 || [PROXY-MALWARE] Zeus bin Request 13 || url,http://labs.snort.org/papers/zeus.html
+5001895 || [PROXY-MALWARE] Zeus bin Request 14 || url,http://labs.snort.org/papers/zeus.html
+5001896 || [PROXY-MALWARE] Zeus bin Request 15 || url,http://labs.snort.org/papers/zeus.html
+5001897 || [PROXY-MALWARE] Zeus bin Request 16 || url,http://labs.snort.org/papers/zeus.html
+5001898 || [PROXY-MALWARE] Zeus bin Request 17 || url,http://labs.snort.org/papers/zeus.html
+5001899 || [PROXY-MALWARE] Zeus bin Request 18 || url,http://labs.snort.org/papers/zeus.html
+5001900 || [PROXY-MALWARE] Zeus bin Request 19 || url,http://labs.snort.org/papers/zeus.html
+5001901 || [PROXY-MALWARE] Zeus bin Request 20 || url,http://labs.snort.org/papers/zeus.html
+5001902 || [PROXY-MALWARE] Zeus bin Request 21 || url,http://labs.snort.org/papers/zeus.html
+5001903 || [PROXY-MALWARE] Zeus bin Request 22 || url,http://labs.snort.org/papers/zeus.html
+5001904 || [PROXY-MALWARE] Zeus bin Request 23 || url,http://labs.snort.org/papers/zeus.html
+5001905 || [PROXY-MALWARE] Zeus bin Request 24 || url,http://labs.snort.org/papers/zeus.html
+5001906 || [PROXY-MALWARE] Zeus bin Request 25 || url,http://labs.snort.org/papers/zeus.html
+5001907 || [PROXY-MALWARE] Zeus bin Request 26 || url,http://labs.snort.org/papers/zeus.html
+5001908 || [PROXY-MALWARE] Zeus bin Request 27 || url,http://labs.snort.org/papers/zeus.html
+5001909 || [PROXY-MALWARE] Zeus bin Request 28 || url,http://labs.snort.org/papers/zeus.html
+5001910 || [PROXY-MALWARE] Zeus bin Request 29 || url,http://labs.snort.org/papers/zeus.html
+5001911 || [PROXY-MALWARE] Zeus bin Request 30 || url,http://labs.snort.org/papers/zeus.html
+5001912 || [PROXY-MALWARE] Zeus bin Request 31 || url,http://labs.snort.org/papers/zeus.html
+5001913 || [PROXY-MALWARE] Zeus bin Request 32 || url,http://labs.snort.org/papers/zeus.html
+5001914 || [PROXY-MALWARE] Zeus bin Request 33 || url,http://labs.snort.org/papers/zeus.html
+5001915 || [PROXY-MALWARE] Zeus bin Request 34 || url,http://labs.snort.org/papers/zeus.html
+5001916 || [PROXY-MALWARE] Zeus bin Request 35 || url,http://labs.snort.org/papers/zeus.html
+5001917 || [PROXY-MALWARE] Zeus bin Request 36 || url,http://labs.snort.org/papers/zeus.html
+5001918 || [PROXY-MALWARE] Zeus php Request 1 || url,http://labs.snort.org/papers/zeus.html
+5001919 || [PROXY-MALWARE] Zeus php Request 2 || url,http://labs.snort.org/papers/zeus.html
+5001920 || [PROXY-MALWARE] Zeus php Request 3 || url,http://labs.snort.org/papers/zeus.html
+5001921 || [PROXY-MALWARE] Zeus php Request 4 || url,http://labs.snort.org/papers/zeus.html
+5001922 || [PROXY-MALWARE] Zeus php Request 5 || url,http://labs.snort.org/papers/zeus.html
+5001923 || [PROXY-MALWARE] Zeus php Request 6 || url,http://labs.snort.org/papers/zeus.html
+5001924 || [PROXY-MALWARE] Zeus php Request 7 || url,http://labs.snort.org/papers/zeus.html
+5001925 || [PROXY-MALWARE] Zeus php Request 8 || url,http://labs.snort.org/papers/zeus.html
+5001926 || [PROXY-MALWARE] Zeus php Request 9 || url,http://labs.snort.org/papers/zeus.html
+5001927 || [PROXY-MALWARE] Zeus php Request 10 || url,http://labs.snort.org/papers/zeus.html
+5001928 || [PROXY-MALWARE] Zeus php Request 11 || url,http://labs.snort.org/papers/zeus.html
+5001929 || [PROXY-MALWARE] Zeus php Request 12 || url,http://labs.snort.org/papers/zeus.html
+5001930 || [PROXY-MALWARE] Zeus php Request 13 || url,http://labs.snort.org/papers/zeus.html
+5001931 || [PROXY-MALWARE] Zeus php Request 14 || url,http://labs.snort.org/papers/zeus.html
+5001932 || [PROXY-MALWARE] Zeus php Request 15 || url,http://labs.snort.org/papers/zeus.html
+5001933 || [PROXY-MALWARE] Zeus php Request 16 || url,http://labs.snort.org/papers/zeus.html
+5001934 || [PROXY-MALWARE] Zeus php Request 17 || url,http://labs.snort.org/papers/zeus.html
+5001935 || [PROXY-MALWARE] Zeus php Request 18 || url,http://labs.snort.org/papers/zeus.html
+5001936 || [PROXY-MALWARE] Zeus php Request 19 || url,http://labs.snort.org/papers/zeus.html
+5001937 || [PROXY-MALWARE] Zeus php Request 20 || url,http://labs.snort.org/papers/zeus.html
+5001938 || [PROXY-MALWARE] Zeus php Request 21 || url,http://labs.snort.org/papers/zeus.html
+5001939 || [PROXY-MALWARE] Zeus php Request 22 || url,http://labs.snort.org/papers/zeus.html
+5001940 || [PROXY-MALWARE] Zeus php Request 23 || url,http://labs.snort.org/papers/zeus.html
+5001941 || [PROXY-MALWARE] Zeus php Request 24 || url,http://labs.snort.org/papers/zeus.html
+5001942 || [PROXY-MALWARE] Zeus php Request 25 || url,http://labs.snort.org/papers/zeus.html
+5001943 || [LINUX-KERNEL] ReiserFS error || url,wiki.quadrantsec.com/bin/view/Main/5001943
+5001944 || [LINUX-KERNEL] Unhandled error code || url,wiki.quadrantsec.com/bin/view/Main/5001944
+5001945 || [LINUX-KERNEL] I/O error || url,wiki.quadrantsec.com/bin/view/Main/5001945
+5001946 || [LINUX-KERNEL] hostbyte=DID_ERROR || url,wiki.quadrantsec.com/bin/view/Main/5001946
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
