@@ -1890,6 +1890,9 @@
 5001944 || [LINUX-KERNEL] Unhandled error code || url,wiki.quadrantsec.com/bin/view/Main/5001944
 5001945 || [LINUX-KERNEL] I/O error || url,wiki.quadrantsec.com/bin/view/Main/5001945
 5001946 || [LINUX-KERNEL] hostbyte=DID_ERROR || url,wiki.quadrantsec.com/bin/view/Main/5001946
+5001947 || [FORTINET] Login accepted || url,wiki.quadrantsec.com/bin/view/Main/5001947
+5001948 || [FORTINET] Administrator Login || url,wiki.quadrantsec.com/bin/view/Main/5001948
+5001949 || [FORTINET] Admin authentication success || url,wiki.quadrantsec.com/bin/view/Main/5001949
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
