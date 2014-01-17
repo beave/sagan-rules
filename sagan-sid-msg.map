@@ -1894,6 +1894,7 @@
 5001948 || [FORTINET] Administrator Login || url,wiki.quadrantsec.com/bin/view/Main/5001948
 5001949 || [FORTINET] Admin authentication success || url,wiki.quadrantsec.com/bin/view/Main/5001949
 5001950 || [CISCO-GEOIP] WebVPN login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001950
+5001951 || [WINDOWS-MALWARE] Black POS Malware Detected  || url,wiki.quadrantsec.com/bin/view/Main/5001951
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
