@@ -27,3 +27,4 @@
 
 alert udp $EXTERNAL_NET any -> $HOME_NET $NTP_PORT (msg: "[NTP] Permission denied error"; content:"permission denied"; program: ntpd_initres; classtype: program-error; reference: url,wiki.quadrantsec.com/bin/view/Main/5000041; sid: 5000041; rev:2;)
 
+
