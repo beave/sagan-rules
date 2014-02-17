@@ -126,4 +126,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] HSRP State Ch
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Command logged"; content: "%PARSER-5-CFGLOG_LOGGEDCMD"; classtype: misc-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5001871; sid: 5001871; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Enable command executed"; content: "%PARSER-5-CFGLOG_LOGGEDCMD"; content: "exec"; nocase; content: "enable"; nocase; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001872; sid: 5001872; rev:1;)
 
+# Jan 22 16:03:51: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: bob] [Source: 10.10.0.1] [localport: 22] at 16:03:51 UTC Wed Jan 22 2014
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Login Success"; content: "%PARSER-5-CFGLOG_LOGGEDCMD"; classtype: successful-admin; parse_src_ip: 1; parse_port; reference: url,wiki.quadrantsec.com/bin/view/Main/5001952; sid: 5001952; rev:1;)
 

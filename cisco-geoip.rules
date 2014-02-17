@@ -39,5 +39,8 @@ alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] Login permitte
 
 alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-GEOIP] WebVPN login from outside HOME_COUNTRY"; program: %ASA-6-716001; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001950; sid: 5001950; rev: 1;)
 
+# Jan 22 16:03:51: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: bob] [Source: 10.10.0.1] [localport: 22] at 16:03:51 UTC Wed Jan 22 2014
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Login Success"; content: "%PARSER-5-CFGLOG_LOGGEDCMD"; classtype: successful-admin; parse_src_ip: 1; parse_port; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5001953; sid: 5001953; rev:1;)
 
 

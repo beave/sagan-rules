@@ -114,5 +114,9 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password - 
 
 #alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password"; content: "Failed password"; program: sshd; normalize: openssh; classtype: unsuccessful-user; sid: 5001647; reference: url,wiki.quadrantsec.com/bin/view/Main/5001647; rev:2;)
 
+# AIX 5 has a tendency to log ssh connections via program: syslog :(
+# syslog  ssh: failed login attempt for UNKNOWN_USER from 10.1.1.4
 
+
+drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] SYSLOG Authentication failure - Brute force [5/5]"; content: "ssh|3a| failed login attempt"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001954; program: syslog; after: track by_src, count 5, seconds 300; parse_ip_src: 1; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; sid: 5001954; rev:5;)
 
