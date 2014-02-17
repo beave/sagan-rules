@@ -49,7 +49,7 @@
 #1000 || 72  || *Websense TS: Military
 #1000 || 73  || *Websense TS: Political Organizations
 #1000 || 74  || *Websense TS: General Email
-1000 || 75  || *Websense TS: Proxy Avoidance
+#1000 || 75  || *Websense TS: Proxy Avoidance
 #1000 || 76  || *Websense TS: Search Engines and Portals
 #1000 || 78  || *Websense TS: Web Hosting
 #1000 || 79  || *Websense TS: Web Chat

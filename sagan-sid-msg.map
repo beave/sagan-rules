@@ -1902,6 +1902,9 @@
 5001956 || [FATPIPE] Login Success - ADMINISTRATOR || url,wiki.quadrantsec.com/bin/view/Main/5001956
 5001957 || [FATPIPE] Login Failed || url,wiki.quadrantsec.com/bin/view/Main/5001957
 5001958 || [FATPIPE] Login Failed - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001958
+5001959 || [FATPIPE-GEOIP] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001959
+5001960 || [FATPIPE-GEOIP] Login Success - ADMINISTRATOR || url,wiki.quadrantsec.com/bin/view/Main/5001960
+5001961 || [SYSLOG] Redhat Linux not updating || url,wiki.quadrantsec.com/bin/view/Main/5001961
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

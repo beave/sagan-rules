@@ -67,6 +67,6 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] syslog-ng suspen
 
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] password changed for user"; content: "passwd"; content: "changed"; classtype: successful-user; program: passwd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001704; sid:5001704; rev:1;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] password changed for user root"; content: "passwd"; content: "changed"; content: "root"; classtype: successful-admin; program: passwd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001705; sid:5001705; rev:1;)
-
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Redhat Linux not updating"; content: "your system is up-to-date"; classtype: program-error; program: rhsmd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001961; sid:5001961; rev:1;)
 
 
