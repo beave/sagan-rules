@@ -1199,7 +1199,7 @@
 5001240 || [CITRIX] Netscaler - DTD present in the XML message || url,wiki.quadrantsec.com/bin/view/Main/5001240 || url,support.citrix.com/article/CTX123875
 5001241 || [CITRIX] Netscaler - External entities present in the XML message || url,wiki.quadrantsec.com/bin/view/Main/5001241 || url,support.citrix.com/article/CTX123875
 5001242 || [CITRIX] Netscaler - AppFw XML DoS Maximum Error || url,wiki.quadrantsec.com/bin/view/Main/5001242 || url,support.citrix.com/article/CTX123875
-5001243 || [CITRIX] Netscaler - Element exceeds maximum attributes per element || url,wiki.quadrantsec.com/bin/view/Main/5001243 || url,support.citrix.com/article/CTX123875
+5001243 || [CITRIX] Netscaler - Element exceeds maximum attributes per element || url,wiki.quadrantsec.com/bin/view/Main/5001243 || url,support.citrix.com/article/CTX123876
 5001244 || [CITRIX] Netscaler - Element an attribute exceeds maximum name length || url,wiki.quadrantsec.com/bin/view/Main/5001244 || url,support.citrix.com/article/CTX123875
 5001245 || [CITRIX] Netscaler - Element attribute exceeds maximum attribute value length || url,wiki.quadrantsec.com/bin/view/Main/5001245 || url,support.citrix.com/article/CTX123875
 5001246 || [CITRIX] Netscaler - Element exceeds maximum elements per message || url,wiki.quadrantsec.com/bin/view/Main/5001246 || url,support.citrix.com/article/CTX123875
@@ -1895,6 +1895,13 @@
 5001949 || [FORTINET] Admin authentication success || url,wiki.quadrantsec.com/bin/view/Main/5001949
 5001950 || [CISCO-GEOIP] WebVPN login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001950
 5001951 || [WINDOWS-MALWARE] Black POS Malware Detected  || url,wiki.quadrantsec.com/bin/view/Main/5001951
+5001952 || [CISCO-IOS] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001952
+5001953 || [CISCO-IOS] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001953
+5001954 || [OPENSSH] SYSLOG Authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001954
+5001955 || [FATPIPE] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001955
+5001956 || [FATPIPE] Login Success - ADMINISTRATOR || url,wiki.quadrantsec.com/bin/view/Main/5001956
+5001957 || [FATPIPE] Login Failed || url,wiki.quadrantsec.com/bin/view/Main/5001957
+5001958 || [FATPIPE] Login Failed - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001958
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
