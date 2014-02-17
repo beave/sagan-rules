@@ -53,7 +53,7 @@
 #1000 || 76  || *Websense TS: Search Engines and Portals
 #1000 || 78  || *Websense TS: Web Hosting
 #1000 || 79  || *Websense TS: Web Chat
-1000 || 80  || *Websense TS: Hacking
+#1000 || 80  || *Websense TS: Hacking
 #1000 || 81  || *Websense TS: Alternative Journals
 #1000 || 82  || *Websense TS: Non-Traditional Religions and Occult and Folklore
 #1000 || 83  || *Websense TS: Traditional Religions
@@ -95,7 +95,7 @@
 #1000 || 124  || *Websense TS: Social and Affiliation Organizations
 #1000 || 125  || *Websense TS: Professional and Worker Organizations
 #1000 || 126  || *Websense TS: Security
-1000 || 128  || *Websense TS: Malicious Web Sites
+#1000 || 128  || *Websense TS: Malicious Web Sites
 #1000 || 138  || *Websense TS: Computer Security
 #1000 || 146  || *Websense TS: Miscellaneous
 #1000 || 147  || *Websense TS: Images (Media)
@@ -109,7 +109,7 @@
 #1000 || 156  || *Websense TS: File Download Servers
 1000 || 164  || *Websense TS: Phishing and Other Frauds
 1000 || 166  || *Websense TS: Keyloggers
-1000 || 167  || *Websense TS: Potentially Unwanted Software
+#1000 || 167  || *Websense TS: Potentially Unwanted Software
 1000 || 172  || *Websense TS: Bot Networks
 1000 || 191  || *Websense TS: Extended Protection
 1000 || 192  || *Websense TS: Elevated Exposure
