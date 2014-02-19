@@ -43,4 +43,18 @@ alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-GEOIP] WebVPN
 
 alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Login Success"; content: "%PARSER-5-CFGLOG_LOGGEDCMD"; classtype: successful-admin; parse_src_ip: 1; parse_port; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5001953; sid: 5001953; rev:1;)
 
+# Group = AnyConnect, Username = bob, IP = 10.10.10.10, Session disconnected. Session Type: SSL, Duration: 12h:00m:19s, Bytes xmt: 332468520, Bytes rcv: 130276830, Reason: Max time exceeded
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-GEOIP] VPN disconnect from outside HOME_COUNTRY"; program: %ASA-4-113019; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001962; sid: 5001962; rev: 1;)
+
+# 10.8.5.10|local4|info|info|a6|2014-02-18|02:12:41|%ASA-6-734001| DAP: User bob, Addr 10.10.10.10, Connection AnyConnect: The following DAP records were selected for this connection: DfltAccessPolicy
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-GEOIP] VPN login from outside HOME_COUNTRY"; program: %ASA-6-734001; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001964; sid: 5001964; rev: 1;)
+
+
+
+
+5001962
+
+
 
