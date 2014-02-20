@@ -41,4 +41,5 @@ rule=: PAM %number:number% more authentication failure; logname= uid=%uid:number
 rule=: Accepted publickey for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2 
 rule=: error: PAM: Authentication failure for illegal user %username:word% from %src-ip:ipv4%
 rule=: Failed password for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2
+rule=: Accepted gssapi-with-mic for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2
 

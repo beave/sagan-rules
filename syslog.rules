@@ -69,4 +69,9 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] syslog-ng suspen
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] password changed for user root"; content: "passwd"; content: "changed"; content: "root"; classtype: successful-admin; program: passwd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001705; sid:5001705; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Redhat Linux not updating"; content: "your system is up-to-date"; classtype: program-error; program: rhsmd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001961; sid:5001961; rev:1;)
 
+# Added by Robert Nunley 02/20/2014 (rnunley@quadantsec.com)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SYSLOG] SCSI task abort"; content: "scsi"; content: "task abort"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001972; program: kernel; sid: 5001972; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SYSLOG] Remounting filesystem read-only"; content: "Remounting filesystem read-only"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001973; program: kernel; sid: 5001973; rev:1;)
+
 

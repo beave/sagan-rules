@@ -51,10 +51,9 @@ alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-GEOIP] VPN di
 
 alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-GEOIP] VPN login from outside HOME_COUNTRY"; program: %ASA-6-734001; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001964; sid: 5001964; rev: 1;)
 
+# Cisco ACS (via VPN) - authentication success
+# 10.10.10.10|auth|info|info|26|2014-02-20|16:26:58|CisACS_01_PassedAuth| 12s245v32 1 0 Message-Type=Authen OK,User-Name=BOB,NAS-IP-Address=172.16.1.1,Caller-ID=199.44.66.11,NAS-Port=58642432,Group-Name=VPN Users,Filter Information=No Filters activated.,
 
-
-
-5001962
-
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] ACS Login success from outside HOME_COUNTRY"; program: CisACS_01_PassedAuth; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5001977; sid: 5001977; rev: 1;)
 
 

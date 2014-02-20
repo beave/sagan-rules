@@ -1915,6 +1915,12 @@
 5001969 || [CISCO-MALWARE] ACE ZeroAccess pre-2012 TCP port 13620 || url, wiki.quadrantsec.com/bin/view/Main/5001969
 5001970 || [FORTINET] SSH traffic detected || url,wiki.quadrantsec.com/bin/view/Main/5001970
 5001971 || [FORTINET] SSH traffic detected from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001971
+5001972 || [SYSLOG] SCSI task abort || url,wiki.quadrantsec.com/bin/view/Main/5001972
+5001973 || [SYSLOG] Remounting filesystem read-only || url,wiki.quadrantsec.com/bin/view/Main/5001973
+5001974 || [OPENSSH] Fail2Ban SSH Suspicious Activity || url,wiki.quadrantsec.com/bin/view/Main/5001974
+5001975 || [CISCO-ACS] Failed Login Attempt [CisACS] || url,wiki.quadrantsec.com/bin/view/Main/5001975
+5001976 || [CISCO-ACS] Failed Login Attempt - Brute force [CisACS] || url,wiki.quadrantsec.com/bin/view/Main/5001976
+5001977 || [CISCO-GEOIP] ACS Login success from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001977
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

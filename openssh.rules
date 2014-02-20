@@ -120,3 +120,6 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password - 
 
 drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] SYSLOG Authentication failure - Brute force [5/5]"; content: "ssh|3a| failed login attempt"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001954; program: syslog; after: track by_src, count 5, seconds 300; parse_ip_src: 1; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; sid: 5001954; rev:5;)
 
+# Added by Robert Nunley - 02/20/2014 (rnunley@quadrantsec.com)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Fail2Ban SSH Suspicious Activity"; content: "Fail2Ban"; classtype: attempted-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001974; parse_src_ip: 1; sid: 5001974; rev:1;)
