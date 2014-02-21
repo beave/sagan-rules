@@ -30,6 +30,8 @@
 # 1. Snort logs to syslog:
 #    output alert_syslog: LOG_AUTH LOG_ALERT # Example SNORT config
 # 2. Snort "file-identify.rules" rules are enabled
+#
+# Concept by Robert Nunley (rnunley@quadrantsec.com) - 02/21/2014
 
 # THIS RULES ARE HIGHLY EXPERIMENTAL!
 
