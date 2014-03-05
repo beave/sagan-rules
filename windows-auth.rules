@@ -64,7 +64,6 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] User accou
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled group member removed"; pcre: "/ 661: | 4757: /"; classtype: system-event; program: Security|Security-Auditing; reference: url,wiki.quadrantsec.com/bin/view/Main/5001179; sid: 5001179; rev:2;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled group member deleted"; pcre: "/ 662: | 4758: /"; classtype: system-event; program: Security|Security-Auditing; reference: url,wiki.quadrantsec.com/bin/view/Main/5001180; sid: 5001180; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] RDP maximum allowed failed logon attempts"; content: " 1012: "; classtype: system-event; program: TermService; reference: url,wiki.quadrantsec.com/bin/view/Main/5001181; sid: 5001181; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows audit log was cleared"; content: " 517: "; classtype: system-event; program: Security|Security-Auditing; reference: url,wiki.quadrantsec.com/bin/view/Main/5001185; sid: 5001185; rev:2;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows login attempt (ignored). Duplicated"; content: " 680: "; classtype: unsuccessful-user; program: Security|Security-Auditing; reference: url,wiki.quadrantsec.com/bin/view/Main/5001186; sid: 5001186; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Remote access login failure"; pcre: "/ 20187: | 20014: | 20078: | 20050: | 20049: | 20189: /"; classtype: unsuccessful-user; program: RemoteAccess; reference: url,wiki.quadrantsec.com/bin/view/Main/5001187; sid: 5001187; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Remote access login success"; content: " 20158: "; classtype: successful-user; program: RemoteAccess; reference: url,wiki.quadrantsec.com/bin/view/Main/5001188; sid: 5001188; rev:1;)
@@ -194,5 +193,17 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User accoun
 # Disabled by default.  Possible flowbit rule canidate (?)
 
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Account locked out (ADMINISTRATOR)"; pcre: "/ 644: | 4740: /"; content: "administrator"; nocase; classtype: unsuccessful-user; program: Security|Security-Auditing; reference: url,wiki.quadrantsec.com/bin/view/Main/5001978; sid: 5001978; rev:1;) 
+
+# You'll want to populate the "WINDOWS_DOMAINS" before enabling this rule. 
+# It does a good job at PTH attacks,  but will misfire if the variable
+# is not set! 
+# Champ Clark - 03/03/2014
+
+#alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MALWARE] Pass-The-Hash test"; pcre: "/ 4624: | 4625: /"; content: "Logon Type|3a| 3 "; content: "Authentication Package|3a| NTLM "; content:!"ANONYMOUS LOGON"; windows_domain: isnot,$WINDOWS_DOMAINS; program: Security|Security-Auditing; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002017; sid: 5002017; rev:1;)
+
+# Records _all_ RDP sessions
+
+#alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] RDP / Logon type 10"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; program: Security|Security-Auditing; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002015; sid: 5002015; rev:1;)
+#alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] Logon attempt using explicit credentials; pcre: "/ 552: | 4648: /"; content:!"Network Address|3a| - "; content:!"Port|3a| - "; content:!"Target Server Name|3a| localhost"; program: Security|Security-Auditing; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002018; sid: 5002018; rev:1;)
 
 

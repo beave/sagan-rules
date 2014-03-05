@@ -96,3 +96,10 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope
 # BAD RULE BELOW
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope if full.  No IP addresses left"; content: " 5001650: "; classtype: network-event; program: DHCP-Server; reference: url,wiki.quadrantsec.com/bin/view/Main/5001650; sid: 5001650; rev:1;)
 
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows audit log was cleared"; pcre: "/ 517: | 1102: /"; classtype: system-event; program: Security|Security-Auditing; reference: url,wiki.quadrantsec.com/bin/view/Main/5001185; sid: 5001185; rev:3;)
+
+# We really need to create EMET based rules
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] EMET event detection"; content: "EMET detected"; classtype: exploit-attempt; program: EMET; reference: url,wiki.quadrantsec.com/bin/view/Main/5002021; reference: url,support.microsoft.com/kb/2458544sid: 5002021; rev:1;)
+
+

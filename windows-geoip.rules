@@ -25,3 +25,7 @@
 #
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-GEOIP] Windows Logon outside of HOME_COUNTRY"; content: " 540: "; classtype: successful-user; program: Security|Security-Auditing; parse_src_ip: 1; parse_port; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5001873; sid: 5001873; rev:1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-GEOIP] RDP / Logon type 10 from outside HOME_COUNTRY "; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; country_code: track by_src, isnot $HOME_COUNTRY; program: Security|Security-Auditing; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002016; sid: 5002016; rev:1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-GEOIP] Logon attempt using explicit credentials from outside HOME_COUNTRY; pcre: "/ 552: | 4648: /"; content:!"Network Address|3a| - "; content:!"Port|3a| - "; content:!"Target Server Name|3a| localhost"; program: Security|Security-Auditing; parse_src_ip: 1; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002020; sid: 5002020; rev:1;)
+
+

@@ -1797,11 +1797,11 @@
 5001847 || [HONEYD] Attempt to login to honeypot Telnet server || url,wiki.quadrantsec.com/bin/view/Main/5001847
 5001848 || [HONEYD] Attempt to login to honeypot Telnet server as admin user || url,wiki.quadrantsec.com/bin/view/Main/5001848
 5001849 || [HONEYD] Attempt to login to honeypot FTP server || url,wiki.quadrantsec.com/bin/view/Main/5001849
-5001853 || [NFCAPD] Netflow - ZeroAccess UDP port 16464 detected || url, wiki.quadrantsec.com/bin/view/Main/5001853
-5001854 || [NFCAPD] Netflow - ZeroAccess UDP port 16465 detected || url, wiki.quadrantsec.com/bin/view/Main/5001854
+5001853 || [NFCAPD-MALWARE] Netflow - ZeroAccess UDP port 16464 detected || url, wiki.quadrantsec.com/bin/view/Main/5001853
+5001854 || [NFCAPD-MALWARE] Netflow - ZeroAccess UDP port 16465 detected || url, wiki.quadrantsec.com/bin/view/Main/5001854
 5001855 || [NFCAPD] Netflow - ZeroAccess UDP port 16470 detected || url, wiki.quadrantsec.com/bin/view/Main/5001855
-5001856 || [NFCAPD] Netflow - ZeroAccess UDP port 16471 detected || url, wiki.quadrantsec.com/bin/view/Main/5001856
-5001857 || [NFCAPD] Netflow - Old ZeroAccess TCP port 13620 detected || url, wiki.quadrantsec.com/bin/view/Main/5001857
+5001856 || [NFCAPD-MALWARE] Netflow - ZeroAccess UDP port 16471 detected || url, wiki.quadrantsec.com/bin/view/Main/5001856
+5001857 || [NFCAPD-MALWARE] Netflow - Old ZeroAccess TCP port 13620 detected || url, wiki.quadrantsec.com/bin/view/Main/5001857
 5001858 || [CISCO-MALWARE] ZeroAccess UDP port 16464 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001858
 5001859 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001859
 5001860 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001860
@@ -1894,9 +1894,8 @@
 5001948 || [FORTINET] Administrator Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001948
 5001949 || [FORTINET] Admin authentication success outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001949
 5001950 || [CISCO-GEOIP] WebVPN login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001950
-5001951 || [WINDOWS-MALWARE] Black POS Malware Detected  || url,wiki.quadrantsec.com/bin/view/Main/5001951
+5001951 || [WINDOWS-MALWARE] Black POS Malware Detected || url,wiki.quadrantsec.com/bin/view/Main/5001951
 5001952 || [CISCO-IOS] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001952
-5001953 || [CISCO-IOS] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001953
 5001954 || [OPENSSH] SYSLOG Authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001954
 5001955 || [FATPIPE] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001955
 5001956 || [FATPIPE] Login Success - ADMINISTRATOR || url,wiki.quadrantsec.com/bin/view/Main/5001956
@@ -1921,6 +1920,41 @@
 5001975 || [CISCO-ACS] Failed Login Attempt [CisACS] || url,wiki.quadrantsec.com/bin/view/Main/5001975
 5001976 || [CISCO-ACS] Failed Login Attempt - Brute force [CisACS] || url,wiki.quadrantsec.com/bin/view/Main/5001976
 5001977 || [CISCO-GEOIP] ACS Login success from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001977
+5001978 || [WINDOWS-AUTH] Account locked out (ADMINISTRATOR) || url,wiki.quadrantsec.com/bin/view/Main/5001978
+5001979 || [FILE-GEOIP] Executable Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001979
+5001980 || [FILE-GEOIP] Java Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001980
+5001981 || [FILE-GEOIP] Jar/Zip Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001981
+5001982 || [FILE-GEOIP] PDF Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001982
+5001983 || [FILE-GEOIP] Flash Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001983
+5001984 || [NFCAPD] Possible IRC detected || url, wiki.quadrantsec.com/bin/view/Main/5001984
+5001985 || [NFCAPD] Possible IRC over SSL detected || url, wiki.quadrantsec.com/bin/view/Main/5001985
+5001986 || [NFCAPD] Possible IRC - Port 6660 || url, wiki.quadrantsec.com/bin/view/Main/5001986
+5001987 || [NFCAPD] Possible IRC - Port 6661 || url, wiki.quadrantsec.com/bin/view/Main/5001987
+5001988 || [NFCAPD] Possible IRC - Port 6662 || url, wiki.quadrantsec.com/bin/view/Main/5001988
+5001989 || [NFCAPD] Possible IRC - Port 6663 || url, wiki.quadrantsec.com/bin/view/Main/5001989
+5001990 || [NFCAPD] Possible IRC - Port 6664 || url, wiki.quadrantsec.com/bin/view/Main/5001990
+5001991 || [NFCAPD] Possible IRC - Port 6665 || url, wiki.quadrantsec.com/bin/view/Main/5001991
+5001992 || [NFCAPD] Possible IRC - Port 6666 || url, wiki.quadrantsec.com/bin/view/Main/5001992
+5001993 || [NFCAPD] Possible IRC - Port 6668 || url, wiki.quadrantsec.com/bin/view/Main/5001993
+5001994 || [NFCAPD] Possible IRC - Port 6669 || url, wiki.quadrantsec.com/bin/view/Main/5001994
+5001995 || [NFCAPD] Possible IRC - Port 7000 || url, wiki.quadrantsec.com/bin/view/Main/5001995
+5001996 || [NFCAPD] SSH Traffic Detected || url, wiki.quadrantsec.com/bin/view/Main/5001996
+5001997 || [NFCAPD] Possible SSH Traffic Detected - Port 2222 || url, wiki.quadrantsec.com/bin/view/Main/5001997
+5001998 || [NFCAPD] Telnet Traffic Detected || url, wiki.quadrantsec.com/bin/view/Main/5001998
+5001999 || [WINDOWS-MALWARE] Suspicious misspelled process || url,wiki.quadrantsec.com/bin/view/Main/5001999
+5002000 || [WINDOWS-MALWARE] Lower case drive letter used in process || url,wiki.quadrantsec.com/bin/view/Main/5002000
+5002001 || [WINDOWS-MALWARE] Incorrect path called for svchost.exe || url,wiki.quadrantsec.com/bin/view/Main/5002001
+5002002 || [WINDOWS-MALWARE] Incorrect path called for explorer.exe || url,wiki.quadrantsec.com/bin/view/Main/5002002
+5002003 || [WINDOWS-MALWARE] Suspicious application crash || url,wiki.quadrantsec.com/bin/view/Main/5002003
+5002006 || [WINDOWS-MALWARE] Suspicious Tool Event || url,wiki.quadrantsec.com/bin/view/Main/5002006
+5002007 || [WINDOWS-MALWARE] Virus Found! || url,wiki.quadrantsec.com/bin/view/Main/5002007
+5002011 || [WINDOWS-MALWARE] System protection disabled || url,wiki.quadrantsec.com/bin/view/Main/5002011
+5002014 || [WINDOWS-MALWARE] System shutdown [FLOWBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5002014
+5002015 || [WINDOWS-MISC] RDP / Logon type 10 || url,wiki.quadrantsec.com/bin/view/Main/5002015
+5002016 || [WINDOWS-GEOIP] RDP / Logon type 10 from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002016
+5002017 || [WINDOWS-MALWARE] Pass-The-Hash test || url,wiki.quadrantsec.com/bin/view/Main/5002017
+5002018 || [WINDOWS-MISC] Logon attempt using explicit credentials; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002018
+5002020 || [WINDOWS-GEOIP] Logon attempt using explicit credentials from outside HOME_COUNTRY; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002020
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

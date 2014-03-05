@@ -107,7 +107,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] General CRITIC
 
 # 01/04/2013
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Botnet traffic detected"; content: "app_list=|22|BotnetOnly|22| app_type=|22|Botnet|22|"; classtype: trojan-activity; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5001627; sid: 5001627; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] SSH traffic detected"; content: " service=SSH "; classtype: trojan-activity; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5001970; sid: 5001970; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] SSH traffic detected"; content: " service=SSH "; classtype: trojan-activity; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5001970; sid: 5001970; rev:1;)
 
 
 
