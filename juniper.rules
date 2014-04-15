@@ -45,9 +45,6 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] SSHD_LOGIN_FAILED_
 #alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] SSHD_LOGIN_FAILED"; content: "SSHD_LOGIN_FAILED"; program: sshd; parse_src_ip: 1; classtype: unsuccessful-user; sid: 5001644; reference: url,wiki.quadrantsec.com/bin/view/Main/5001644; rev:1;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] SSHD_LOGIN_FAILED - Brute force"; content: "SSHD_LOGIN_FAILED"; program: sshd; parse_src_ip: 1; classtype: unsuccessful-user; sid: 5001645; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001645; rev:1;)
 
-
-
-
 # Juniper Netscreens
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Fragmented traffic"; program: Netscreen; content: "Fragmented traffic"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000396; sid: 5000396; rev:1;)
@@ -97,4 +94,14 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Unknown proto
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Bad IP option"; program: Netscreen; content: "Bad IP option"; classtype: suspicious-traffic; parse_src_ip: 1; reference: url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf; sid: 5001617; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] SYN-ACK-ACK"; program: Netscreen; content: "SYN-ACK-ACK"; classtype: suspicious-traffic; parse_src_ip: 1; reference: url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf; sid: 5001618; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Connection refused by the DNS"; program: Netscreen; content: "Connection refused by the DNS"; classtype: suspicious-traffic; reference: url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf; sid: 5001619; rev:1;)
+
+# Juniper VPN devices - Champ Clark (cclark@quadrantsec.com)
+
+#alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[JUNIPER] VPN Login failed"; program: Juniper;  pcre: "/ Login failed | authentication failed /"; parse_src_ip: 1; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002022; sid: 5002022; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[JUNIPER] VPN Login failed - Brute Force"; program: Juniper; pcre: "/ Login failed | authentication failed /i"; parse_src_ip: 1; after: track by_src, count 10, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002023; sid: 5002023; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[JUNIPER] Possible VPN Login bypass attempt"; program: Juniper; content: "not authenticated yet"; parse_src_ip: 1; threshold: type limit, track by_src, count 5, seconds 300; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002024; sid: 5002024; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[JUNIPER] VPN Unable to download virus signatures"; program: Juniper; content: "Unable to download current virus"; parse_src_ip: 1; threshold: type limit, track by_src, count 5, seconds 300; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002025; sid: 5002025; rev:1;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[JUNIPER] VPN - Possible scan/probe"; program: Juniper; content: "SSL negotiation failed"; parse_src_ip: 1; threshold: type limit, track by_src, count 5, seconds 300; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5002026; sid: 5002026; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[JUNIPER] VPN - Policy violation"; program: Juniper; content: "Host Checker policy"; parse_src_ip: 1; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002027; sid: 5002027; rev:1;)
+
 

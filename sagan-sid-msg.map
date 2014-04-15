@@ -1955,6 +1955,14 @@
 5002017 || [WINDOWS-MALWARE] Pass-The-Hash test || url,wiki.quadrantsec.com/bin/view/Main/5002017
 5002018 || [WINDOWS-MISC] Logon attempt using explicit credentials; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002018
 5002020 || [WINDOWS-GEOIP] Logon attempt using explicit credentials from outside HOME_COUNTRY; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002020
+5002022 || [JUNIPER] VPN Login failed || url,wiki.quadrantsec.com/bin/view/Main/5002022
+5002023 || [JUNIPER] VPN Login failed - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5002023
+5002024 || [JUNIPER] Possible VPN Login bypass attempt || url,wiki.quadrantsec.com/bin/view/Main/5002024
+5002025 || [JUNIPER] VPN Unable to download virus signatures || url,wiki.quadrantsec.com/bin/view/Main/5002025
+5002026 || [JUNIPER] VPN - Possible scan/probe || url,wiki.quadrantsec.com/bin/view/Main/5002026
+5002027 || [JUNIPER] VPN - Policy violation || url,wiki.quadrantsec.com/bin/view/Main/5002027
+5002028 || [JUNIPER-GEOIP] VPN Login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002028
+5002029 || [JUNIPER-GEOIP] VPN Logout from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002029
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
