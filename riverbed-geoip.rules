@@ -30,5 +30,5 @@
 
 # 10.3.1.1|local1|notice|notice|8d|2014-04-16|13:41:29|webasd| [web.NOTICE]: web: User bob logged in from 10.7.8.1, session count: 1.
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[RIVERBED] Administrator Login outside of HOME_COUNTRY"; content: "logged in"; classtype: successful-admin; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5002032; program: webasd; sid: 5002032; rev:5;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[RIVERBED] Administrator Login outside of HOME_COUNTRY"; content: "logged in"; parse_src_ip: 1; classtype: successful-admin; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5002032; program: webasd; sid: 5002032; rev:1;)
 
