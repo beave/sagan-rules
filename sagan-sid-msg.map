@@ -1963,6 +1963,9 @@
 5002027 || [JUNIPER] VPN - Policy violation || url,wiki.quadrantsec.com/bin/view/Main/5002027
 5002028 || [JUNIPER-GEOIP] VPN Login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002028
 5002029 || [JUNIPER-GEOIP] VPN Logout from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002029
+5002030 || [RIVERBED] Administrator Login || url,wiki.quadrantsec.com/bin/view/Main/5002030
+5002031 || [RIVERBED] Administrator Login Failure || url,wiki.quadrantsec.com/bin/view/Main/5002031
+5002032 || [RIVERBED] Administrator Login outside of HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002032
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
