@@ -30,7 +30,7 @@
 
 # 10.3.1.1|local1|notice|notice|8d|2014-04-16|13:41:29|webasd| [web.NOTICE]: web: User bob logged in from 10.7.8.1, session count: 1.
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[RIVERBED] Administrator Login"; content: "logged in"; parse_src_ip: 1; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5002030; program: webasd; sid: 5002030; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[RIVERBED] Administrator Login"; content: "logged in"; content: "session count"; parse_src_ip: 1; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5002030; program: webasd; sid: 5002030; rev:2;)
 
 
 # 10.3.1.1|local1|notice|notice|8d|2014-04-16|13:42:55|webasd| [web.NOTICE]: web: User bob from 10.7.8.1 with the given password is not recognized: You must provide a valid account name and password.
