@@ -95,7 +95,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[CISCO-IOS] Authentica
 
 # %DAEMON-3-SYSTEM_MSG: error: PAM: Authentication failure for illegal user cisco from 10.10.10.10 - sshd[27926]
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[CISCO-IOS] Illegal User SSH"; content: "%DAEMON-3-SYSTEM_MSG:"; content: "sshd["; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001669; sid: 5001669; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[CISCO-IOS] Illegal User SSH"; content: "%DAEMON-3-SYSTEM_MSG:"; content: "sshd["; parse_src_ip: 1; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001669; sid: 5001669; rev:3;)
 
 # %USER-3-SYSTEM_MSG: FATAL: bad tty - login (no program)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] FATAL: bad tty - login (no program)"; content: "%USER-3-SYSTEM_MSG:"; content: "FATAL: bad tty"; content: "no program";  classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001671; sid: 5001671; rev:1;)
