@@ -61,7 +61,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Not executabl
 
 # General "illegal user" 
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [Brute Force]"; pcre: "/invalid user|illegal user/i"; classtype: attempted-user; program: sshd; parse_src_ip: 1; fter: track by_src, count 10, seconds 300; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000022; sid: 5000022; rev:9;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [Brute Force]"; pcre: "/invalid user|illegal user/i"; classtype: attempted-user; program: sshd; parse_src_ip: 1; after: track by_src, count 10, seconds 300; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000022; sid: 5000022; rev:10;)
 
 drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [a]"; pcre: "/invalid user|illegal user/i"; content: "user a "; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001106; sid: 5001106; rev:4;)
 

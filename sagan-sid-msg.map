@@ -20,7 +20,7 @@
 5000018 || [OPENSSH] Possible break-in attempt || url,wiki.quadrantsec.com/bin/view/Main/5000018
 5000020 || [OPENSSH] Not executable shell - login attempt || url,wiki.quadrantsec.com/bin/view/Main/5000020
 5000021 || [OPENSSH] Message send write error || url,wiki.quadrantsec.com/bin/view/Main/5000021
-5000022 || [OPENSSH] Invalid or illegal user || url,wiki.quadrantsec.com/bin/view/Main/5000022
+5000022 || [OPENSSH] Invalid or illegal user [Brute Force] || url,wiki.quadrantsec.com/bin/view/Main/5000022
 5000023 || [OPENSSH] Out-of-Band challenge failure || url,wiki.quadrantsec.com/bin/view/Main/5000023
 5000024 || [SU] SUDO user NOT in sudoers || url,wiki.quadrantsec.com/bin/view/Main/5000024
 5000025 || [SU] SUDO authentication failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000025
@@ -75,8 +75,8 @@
 5000077 || [OPENSSH] Attempt to login using a denied user || url,wiki.quadrantsec.com/bin/view/Main/5000077
 5000078 || [PROFTPD] Session opened || url,wiki.quadrantsec.com/bin/view/Main/5000078
 5000079 || [PROFTPD] Session closed || url,wiki.quadrantsec.com/bin/view/Main/5000079
-5000080 || [PROFTPD] Attempt to login as a non-existent user || url,wiki.quadrantsec.com/bin/view/Main/5000080
-5000081 || [PROFTPD] Login failed accessing the FTP server || url,wiki.quadrantsec.com/bin/view/Main/5000081
+5000080 || [PROFTPD] Attempt to login as a non-existent user [Brute Force] || url,wiki.quadrantsec.com/bin/view/Main/5000080
+5000081 || [PROFTPD] Login failed accessing the FTP server [Brute Force] || url,wiki.quadrantsec.com/bin/view/Main/5000081
 5000082 || [PROFTPD] Authentication success || url,wiki.quadrantsec.com/bin/view/Main/5000082
 5000083 || [PROFTPD] Connection refused by TCP Wrappers || url,wiki.quadrantsec.com/bin/view/Main/5000083
 5000084 || [PROFTPD] Small PassivePorts range in config file || url,wiki.quadrantsec.com/bin/view/Main/5000084
@@ -804,7 +804,7 @@
 5000839 || [CISCO-PIXASA] RIP hdr failed || url, wiki.quadrantsec.com/bin/view/Main/5000839
 5000840 || [CISCO-PIXASA] No management IP address configured for transparent firewall || url, wiki.quadrantsec.com/bin/view/Main/5000840
 5000841 || [CISCO-PIXASA] NAC is disabled for host || url, wiki.quadrantsec.com/bin/view/Main/5000841
-5000842 || [CISCO-PIXASA] Login denied || url, wiki.quadrantsec.com/bin/view/Main/5000842
+5000842 || [CISCO-PIXASA] Login denied [Brute Force] || url, wiki.quadrantsec.com/bin/view/Main/5000842
 5000843 || [CISCO-PIXASA] Authorization failed || url, wiki.quadrantsec.com/bin/view/Main/5000843
 5000844 || [CISCO-PIXASA] User authentication failed || url, wiki.quadrantsec.com/bin/view/Main/5000844
 5000845 || [CISCO-PIXASA] VNPClient XAUTH Failed || url, wiki.quadrantsec.com/bin/view/Main/5000845
@@ -826,7 +826,7 @@
 5000862 || [CISCO-PIXASA] Cert validation failure handle invalid for Main/Aggressive Mode Initiator/Responder! || url, wiki.quadrantsec.com/bin/view/Main/5000862
 5000863 || [CISCO-PIXASA] Attempt to get Phase 1 ID data failed while hash computation || url, wiki.quadrantsec.com/bin/view/Main/5000863
 5000864 || [CISCO-PIXASA] Processing firewall record || url, wiki.quadrantsec.com/bin/view/Main/5000864
-5000865 || [CISCO-PIXASA] Remote user has been granted access by the Firewall Server || url, wiki.quadrantsec.com/bin/view/Main/5000865
+5000865 || [CISCO-PIXASA] Remote user has been granted access by the Firewall Server [Brute Force] || url, wiki.quadrantsec.com/bin/view/Main/5000865
 5000866 || [CISCO-PIXASA] The Firewall Server has requested a list of active user sessions || url, wiki.quadrantsec.com/bin/view/Main/5000866
 5000867 || [CISCO-PIXASA] Got bad refCnt assigning || url, wiki.quadrantsec.com/bin/view/Main/5000867
 5000868 || [CISCO-PIXASA] subroutine Q Send failure RetCode || url, wiki.quadrantsec.com/bin/view/Main/5000868
@@ -867,7 +867,7 @@
 5000904 || [FORTINET] To many bad admin login attempts || url,wiki.quadrantsec.com/bin/view/Main/5000904
 5000905 || [FORTINET] Administrator logout || url,wiki.quadrantsec.com/bin/view/Main/5000905
 5000906 || [FORTINET] IPS error mode || url,wiki.quadrantsec.com/bin/view/Main/5000906
-5000907 || [FORTINET] Login failed || url,wiki.quadrantsec.com/bin/view/Main/5000907
+5000907 || [FORTINET] Login failed [Brute Force] || url,wiki.quadrantsec.com/bin/view/Main/5000907
 5000908 || [FORTINET] Login accepted || url,wiki.quadrantsec.com/bin/view/Main/5000908
 5000909 || [FORTINET] Disk full or almost full || url,wiki.quadrantsec.com/bin/view/Main/5000909
 5000910 || [FORTINET] Fortigate has started || url,wiki.quadrantsec.com/bin/view/Main/5000910
@@ -1677,7 +1677,7 @@
 5001725 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001725
 5001726 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001726
 5001727 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001727
-5001728 || [WINDOWS-AUTH] Potential Windows User Enumeration - User Name Does Not Exist || url,wiki.quadrantsec.com/bin/view/Main/5001728
+5001728 || [WINDOWS-AUTH] Potential Windows User Enumeration - User Name Does Not Exist [Brute Force] || url,wiki.quadrantsec.com/bin/view/Main/5001728
 5001729 || [WINDOWS-AUTH] Windows Brute force - User Correct but Incorrect Password || url,wiki.quadrantsec.com/bin/view/Main/5001729
 5001730 || [WINDOWS-AUTH] Windows Brute force - User Is Locked Out || url,wiki.quadrantsec.com/bin/view/Main/5001730
 5001731 || [WINDOWS-AUTH] Windows Brute force - User Account Disabled || url,wiki.quadrantsec.com/bin/view/Main/5001731
