@@ -1814,7 +1814,7 @@
 5001867 || [FORTINET-MALWARE] Older ZeroAccess TCP port 13620 detected || url, wiki.quadrantsec.com/bin/view/Main/5001867
 5001868 || [CISCO-GEOIP] VPN Login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001868
 5001869 || [CISCO-GEOIP] Console login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001869
-5001870 || [PROFTPD] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001870
+5001870 || [PROFTPD-GEOIP] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001870
 5001871 || [CISCO-IOS] Command logged || url,wiki.quadrantsec.com/bin/view/Main/5001871
 5001872 || [CISCO-IOS] Enable command executed || url,wiki.quadrantsec.com/bin/view/Main/5001872
 5001873 || [WINDOWS-GEOIP] Windows Logon outside of HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001873
@@ -1822,7 +1822,7 @@
 5001875 || [OPENSSH-GEOIP] Authentication success via publickey from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001875
 5001876 || [OPENSSH-GEOIP] Authentication success via keyboard from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001876
 5001877 || [SSH-TECTIA-SERVER] Authentication Failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001877
-5001878 || [SSH-TECTIA-SERVER] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001878
+5001878 || [SSH-TECTIA-SERVER-GEOIP] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001878
 5001879 || [CISCO-GEOIP] Login permitted from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001879
 5001880 || [WINDOWS-AUTH] User account created [FLOWBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5001880
 5001881 || [WINDOWS-AUTH] User account re-enabled || url,wiki.quadrantsec.com/bin/view/Main/5001881
@@ -1890,9 +1890,9 @@
 5001944 || [LINUX-KERNEL] Unhandled error code || url,wiki.quadrantsec.com/bin/view/Main/5001944
 5001945 || [LINUX-KERNEL] I/O error || url,wiki.quadrantsec.com/bin/view/Main/5001945
 5001946 || [LINUX-KERNEL] hostbyte=DID_ERROR || url,wiki.quadrantsec.com/bin/view/Main/5001946
-5001947 || [FORTINET] Login accepted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001947
-5001948 || [FORTINET] Administrator Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001948
-5001949 || [FORTINET] Admin authentication success outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001949
+5001947 || [FORTINET-GEOIP] Login accepted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001947
+5001948 || [FORTINET-GEOIP] Administrator Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001948
+5001949 || [FORTINET-GEOIP] Admin authentication success outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001949
 5001950 || [CISCO-GEOIP] WebVPN login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001950
 5001951 || [WINDOWS-MALWARE] Black POS Malware Detected || url,wiki.quadrantsec.com/bin/view/Main/5001951
 5001952 || [CISCO-IOS] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001952
@@ -1901,8 +1901,8 @@
 5001956 || [FATPIPE] Login Success - ADMINISTRATOR || url,wiki.quadrantsec.com/bin/view/Main/5001956
 5001957 || [FATPIPE] Login Failed || url,wiki.quadrantsec.com/bin/view/Main/5001957
 5001958 || [FATPIPE] Login Failed - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001958
-5001959 || [FATPIPE-GEOIP] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001959
-5001960 || [FATPIPE-GEOIP] Login Success - ADMINISTRATOR || url,wiki.quadrantsec.com/bin/view/Main/5001960
+5001959 || [FATPIPE-GEOIP] Login Success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001959
+5001960 || [FATPIPE-GEOIP] Login Success - ADMINISTRATOR - from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001960
 5001961 || [SYSLOG] Redhat Linux not updating || url,wiki.quadrantsec.com/bin/view/Main/5001961
 5001962 || [CISCO-GEOIP] VPN disconnect from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001962
 5001963 || [CISCO-PIXASA] WebVPN console/admin failed || url, wiki.quadrantsec.com/bin/view/Main/5001963
@@ -1913,7 +1913,7 @@
 5001968 || [CISCO-MALWARE] ACE ZeroAccess UDP port 16471 detected || url, wiki.quadrantsec.com/bin/view/Main/5001968
 5001969 || [CISCO-MALWARE] ACE ZeroAccess pre-2012 TCP port 13620 || url, wiki.quadrantsec.com/bin/view/Main/5001969
 5001970 || [FORTINET] SSH traffic detected || url,wiki.quadrantsec.com/bin/view/Main/5001970
-5001971 || [FORTINET] SSH traffic detected from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001971
+5001971 || [FORTINET-GEOIP] SSH traffic detected from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001971
 5001972 || [SYSLOG] SCSI task abort || url,wiki.quadrantsec.com/bin/view/Main/5001972
 5001973 || [SYSLOG] Remounting filesystem read-only || url,wiki.quadrantsec.com/bin/view/Main/5001973
 5001974 || [OPENSSH] Fail2Ban SSH Suspicious Activity || url,wiki.quadrantsec.com/bin/view/Main/5001974
@@ -1965,8 +1965,32 @@
 5002029 || [JUNIPER-GEOIP] VPN Logout from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002029
 5002030 || [RIVERBED] Administrator Login || url,wiki.quadrantsec.com/bin/view/Main/5002030
 5002031 || [RIVERBED] Administrator Login Failure || url,wiki.quadrantsec.com/bin/view/Main/5002031
-5002032 || [RIVERBED] Administrator Login outside of HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002032
+5002032 || [RIVERBED-GEOIP] Administrator Login outside of HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002032
 5002033 || [RIVERBED] Administrator Login Failure - Brute Force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002033
+5002034 || [CISCO-AETAS] VPN Login at suspicious time || url, wiki.quadrantsec.com/bin/view/Main/5002034
+5002035 || [CISCO-AETAS] Console login at suspicious time || url, wiki.quadrantsec.com/bin/view/Main/5002035
+5002036 || [CISCO-AETAS] Login permitted at suspicious time || url, wiki.quadrantsec.com/bin/view/Main/5002036
+5002037 || [CISCO-AETAS] WebVPN login at suspicious time || url, wiki.quadrantsec.com/bin/view/Main/5002037
+5002038 || [CISCO-AETAS] VPN disconnect at suspicious time || url, wiki.quadrantsec.com/bin/view/Main/5002038
+5002039 || [CISCO-AETAS] VPN login at suspicious time || url, wiki.quadrantsec.com/bin/view/Main/5002039
+5002040 || [CISCO-AETAS] ACS Login success at suspicious time || url, wiki.quadrantsec.com/bin/view/Main/5002040
+5002041 || [FATPIPE-AETAS] Login Success at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002041
+5002042 || [FATPIPE-AETAS] Login Success - ADMINISTRATOR - at supicious time || url,wiki.quadrantsec.com/bin/view/Main/5002042
+5002043 || [FORTINET-AETAS] Login accepted at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002043
+5002044 || [FORTINET-AETAS] Administrator Login at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002044
+5002045 || [FORTINET-AETAS] Admin authentication access at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002045
+5002046 || [FORTINET-AETAS] SSH traffic detected at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002046
+5002047 || [JUNIPER-AETAS] VPN Login at suspicious time || url, wiki.quadrantsec.com/bin/view/Main/5002047
+5002048 || [JUNIPER-AETAS] VPN Logout at suspicious time || url, wiki.quadrantsec.com/bin/view/Main/5002048
+5002049 || [OPENSSH-AETAS] Authentication success via password at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002049
+5002050 || [OPENSSH-AETAS] Authentication success via publickey at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002050
+5002051 || [OPENSSH-AETAS] Authentication success via keyboard at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002051
+5002052 || [PROFTPD-AETAS] Authentication success at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002052
+5002053 || [RIVERBED-AETAS] Administrator Login at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002053
+5002054 || [SSH-TECTIA-SERVER-AETAS] Authentication success at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002054
+5002055 || [WINDOWS-GEOIP] Windows Logon at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002055
+5002056 || [WINDOWS-GEOIP] RDP / Logon type 10 at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002056
+5002057 || [WINDOWS-GEOIP] Logon attempt using explicit credentials at suspicious time; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002057
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
