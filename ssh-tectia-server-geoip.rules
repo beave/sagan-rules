@@ -1,4 +1,4 @@
-# Sagan ssh-tectia-server.rules
+# Sagan ssh-tectia-server-geoip.rules
 # Copyright (c) 2009-2014, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -27,4 +27,4 @@
 #
 # These rules are for the SSH Tectia Server for Windows systems.
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[SSH-TECTIA-SERVER] Authentication success from outside HOME_COUNTRY"; content: "Login_success"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001878; parse_src_ip: 1; parse_dst_ip: 2; program: SSH_Tectia_Server; country_code: track by_src, isnot $HOME_COUNTRY; sid: 5001878; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[SSH-TECTIA-SERVER-GEOIP] Authentication success from outside HOME_COUNTRY"; content: "Login_success"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001878; parse_src_ip: 1; parse_dst_ip: 2; program: SSH_Tectia_Server; country_code: track by_src, isnot $HOME_COUNTRY; sid: 5001878; rev:3;)

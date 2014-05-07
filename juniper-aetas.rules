@@ -1,4 +1,4 @@
-# Sagan riverbed-geoip.rules
+# Sagan juniper-aetas.rules
 # Copyright (c) 2009-2014, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -25,10 +25,8 @@
 #
 #*************************************************************
 
-# SSH logins are covered for Riverbed via the openssh.rules and openssh-geoip.rules
-# Champ Clark (04/15/2014)
 
-# 10.3.1.1|local1|notice|notice|8d|2014-04-16|13:41:29|webasd| [web.NOTICE]: web: User bob logged in from 10.7.8.1, session count: 1.
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[JUNIPER-AETAS] VPN Login at suspicious time"; program: Juniper; pcre: "/Authentication successful|Login succeeded/i"; alert_time: days $DAYS, hours $HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002047; sid:5002047; rev: 1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[JUNIPER-AETAS] VPN Logout at suspicious time"; program: Juniper; content: "Logout from"; alert_time: days $DAYS, hours $HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002048; sid:5002048; rev: 1;)
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[RIVERBED-GEOIP] Administrator Login outside of HOME_COUNTRY"; content: "logged in"; parse_src_ip: 1; classtype: successful-admin; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5002032; program: webasd; sid: 5002032; rev:2;)
 

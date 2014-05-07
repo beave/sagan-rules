@@ -1,4 +1,4 @@
-# Sagan riverbed-geoip.rules
+# Sagan fortinet-aetas.rules
 # Copyright (c) 2009-2014, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -25,10 +25,8 @@
 #
 #*************************************************************
 
-# SSH logins are covered for Riverbed via the openssh.rules and openssh-geoip.rules
-# Champ Clark (04/15/2014)
-
-# 10.3.1.1|local1|notice|notice|8d|2014-04-16|13:41:29|webasd| [web.NOTICE]: web: User bob logged in from 10.7.8.1, session count: 1.
-
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[RIVERBED-GEOIP] Administrator Login outside of HOME_COUNTRY"; content: "logged in"; parse_src_ip: 1; classtype: successful-admin; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5002032; program: webasd; sid: 5002032; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-AETAS] Login accepted at suspicious time"; content: "32006 type="; content: "login"; pcre: "/accepted|successfully/"; parse_src_ip: 1; alert_time: days $DAYS, hours $HOURS; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5002043; sid: 5002043; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-AETAS] Administrator Login at suspicious time"; content: "32001 type="; content: "logged in"; parse_src_ip: 1; classtype: successful-admin; alert_time: days $DAYS, hours $HOURS; reference: url,wiki.quadrantsec.com/bin/view/Main/5002044; sid: 5002044; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-AETAS] Admin authentication access at suspicious time"; content: "38001 type="; content: "succeeded in authentication"; parse_src_ip: 1; alert_time: days $DAYS, hours $HOURS; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5002045; sid: 5002045; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-AETAS] SSH traffic detected at suspicious time"; content: " service=SSH "; classtype: trojan-activity; parse_src_ip: 1; parse_dst_ip: 2; alert_time: days $DAYS, hours $HOURS; reference: url,wiki.quadrantsec.com/bin/view/Main/5002046; sid: 5002046; rev:1;)
 

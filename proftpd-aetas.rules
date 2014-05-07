@@ -1,4 +1,4 @@
-# Sagan riverbed-geoip.rules
+# Sagan proftpd-aetas.rules
 # Copyright (c) 2009-2014, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -23,12 +23,9 @@
 #  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-#*************************************************************
+#
 
-# SSH logins are covered for Riverbed via the openssh.rules and openssh-geoip.rules
-# Champ Clark (04/15/2014)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[PROFTPD-AETAS] Authentication success at suspicious time"; content: "Login successful"; alert_time: days $DAYS, hours $HOURS; classtype: successful-user; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002052; sid: 5002052; rev:1;)
 
-# 10.3.1.1|local1|notice|notice|8d|2014-04-16|13:41:29|webasd| [web.NOTICE]: web: User bob logged in from 10.7.8.1, session count: 1.
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[RIVERBED-GEOIP] Administrator Login outside of HOME_COUNTRY"; content: "logged in"; parse_src_ip: 1; classtype: successful-admin; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5002032; program: webasd; sid: 5002032; rev:2;)
 

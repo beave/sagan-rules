@@ -1,4 +1,4 @@
-# Sagan riverbed-geoip.rules
+# Sagan ssh-tectia-server-aetas.rules
 # Copyright (c) 2009-2014, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -24,11 +24,7 @@
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #*************************************************************
+#
+# These rules are for the SSH Tectia Server for Windows systems.
 
-# SSH logins are covered for Riverbed via the openssh.rules and openssh-geoip.rules
-# Champ Clark (04/15/2014)
-
-# 10.3.1.1|local1|notice|notice|8d|2014-04-16|13:41:29|webasd| [web.NOTICE]: web: User bob logged in from 10.7.8.1, session count: 1.
-
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[RIVERBED-GEOIP] Administrator Login outside of HOME_COUNTRY"; content: "logged in"; parse_src_ip: 1; classtype: successful-admin; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5002032; program: webasd; sid: 5002032; rev:2;)
-
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[SSH-TECTIA-SERVER-AETAS] Authentication success at suspicious time"; content: "Login_success"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002054; parse_src_ip: 1; parse_dst_ip: 2; program: SSH_Tectia_Server; alert_time: days $DAYS, hours $HOURS; sid: 5002054; rev:1;)
