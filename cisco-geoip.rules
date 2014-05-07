@@ -52,4 +52,9 @@ alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-GEOIP] VPN lo
 
 alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] ACS Login success from outside HOME_COUNTRY"; program: CisACS_01_PassedAuth; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5001977; sid: 5001977; rev: 1;)
 
+# 2014-05-07 09:32:45|172.18.0.5|129815|local4|info|info|%ASA-6-722022| Group <GroupPolicy1> User <Bob> IP <10.10.102.102> UDP SVC connection established without compression
+
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] VPN login from outside HOME_COUNTRY [2]"; program: %ASA-6-722022|%ASA-6-722023; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002058; sid: 5002058; rev: 1;)
+
+
 
