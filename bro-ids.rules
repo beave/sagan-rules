@@ -23,7 +23,20 @@
 #  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-#*************************************************************
+#*****************************************************************************
+#
+# Note:  Your syslog daemon will need to forward Bro logs to your Sagan server.  With syslog-ng,  you would do 
+# something like this:
+#
+# destination sagan_box { udp("10.10.10.10" port(514)); } ;
+# source s_bro_notice { file("/var/log/bro/log/current/notice.log" flags(no-parse) program_override("bro")); };
+# log { source(s_bro_notice); destination(sagan_box); };
+# 
+# For rsyslog,  see: http://www.rsyslog.com/doc/imfile.html
+# 
+# The syslog "program" field will _need_ to be "bro"! 
+#
+#*****************************************************************************
 #
 # Submitted by Brad Doctor (July 2nd, 2010).  For more information see
 # http://www.bro-ids.org/ 
