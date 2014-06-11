@@ -843,10 +843,10 @@
 5000879 || [CISCO-PIXASA] Fail to create group || url, wiki.quadrantsec.com/bin/view/Main/5000879
 5000880 || [CISCO-PIXASA] Creation of group policy || url, wiki.quadrantsec.com/bin/view/Main/5000880
 5000881 || [SENDMAIL] SpamAssassin Milter Plugin Remote Arbitrary Command Injection Attempt || url,http://www.securityfocus.com/bid/38578 || url, wiki.quadrantsec.com/bin/view/Main/5000881
-5000883 || [BRO] Successful Password Guessing
-5000884 || [BRO] Protocol Violation
-5000885 || [BRO] Sensitive Login
-5000886 || [BRO] Sensitive Connection
+5000883 || [BRO] Successful Password Guessing || url,wiki.quadrantsec.com/bin/view/Main/5000883
+5000884 || [BRO] Protocol Violation || url,wiki.quadrantsec.com/bin/view/Main/5000884
+5000885 || [BRO] Sensitive Login || url,wiki.quadrantsec.com/bin/view/Main/5000885
+5000886 || [BRO] Sensitive Connection || url,wiki.quadrantsec.com/bin/view/Main/5000886
 5000887 || [BRO] Sensitive Username in password
 5000888 || [JUNIPER] AS group missing
 5000889 || [JUNIPER] Duplicate IP address
@@ -1991,6 +1991,18 @@
 5002055 || [WINDOWS-GEOIP] Windows Logon at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002055
 5002056 || [WINDOWS-GEOIP] RDP / Logon type 10 at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002056
 5002057 || [WINDOWS-GEOIP] Logon attempt using explicit credentials at suspicious time; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002057
+5002058 || [CISCO-GEOIP] VPN login from outside HOME_COUNTRY [2] || url, wiki.quadrantsec.com/bin/view/Main/5002058
+5002059 || [CISCO-GEOIP] FTP file transfer from  outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002059
+5002060 || [CISCO-GEOIP] FTP file transfer from  outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002060
+5002061 || [PROXY-MALWARE] Tor2www Request || url,http://www.tor2www.com
+5002062 || [PROXY-MALWARE] Tor2web Request || url,http://www.tor2web.org
+5002063 || [BRO] SSH Password_Guessing || url,wiki.quadrantsec.com/bin/view/Main/5002063
+5002064 || [BRO] TeamCymruMalwareHashRegistry Match || url,www.team-cymru.org/Services/MHR/
+5002065 || [BRO] HTTP SQL_Injection_Attacker || url,wiki.quadrantsec.com/bin/view/Main/5002065
+5002066 || [BRO] HTTP SQL_Injection_Victim || url,wiki.quadrantsec.com/bin/view/Main/5002066
+5002067 || [BRO] SSH Login_By_Password_Guesser || url,wiki.quadrantsec.com/bin/view/Main/5002067
+5002068 || [BRO] SSH Watched_Country_Login || url,wiki.quadrantsec.com/bin/view/Main/5002068
+5002069 || [BRO] 10+ SSL Invalid_Server_Cert in 30 seconds || url,wiki.quadrantsec.com/bin/view/Main/5002069
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
