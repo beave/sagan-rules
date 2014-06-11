@@ -2003,6 +2003,11 @@
 5002067 || [BRO] SSH Login_By_Password_Guesser || url,wiki.quadrantsec.com/bin/view/Main/5002067
 5002068 || [BRO] SSH Watched_Country_Login || url,wiki.quadrantsec.com/bin/view/Main/5002068
 5002069 || [BRO] 10+ SSL Invalid_Server_Cert in 30 seconds || url,wiki.quadrantsec.com/bin/view/Main/5002069
+5002070 || [BRO] 10+ unable to get local issuer certificate in 30 seconds || url,wiki.quadrantsec.com/bin/view/Main/5002070
+5002071 || [BRO] ZeroAccess ZeroAccess_Client || url,wiki.quadrantsec.com/bin/view/Main/5002070
+5002072 || [BRO] Probable LURK0 RAT C&C Access || url,wiki.quadrantsec.com/bin/view/Main/5002072
+5002073 || [BRO] Sidejacking attach detected || url,matthias.vallentin.net/blog/2010/10/taming-the-sheep-detecting-sidejacking-with-bro || url,wiki.quadrantsec.com/bin/view/Main/5002073
+5002074 || [BRO] Bitcoin Miner || url,wiki.quadrantsec.com/bin/view/Main/5002074
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
