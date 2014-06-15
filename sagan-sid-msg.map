@@ -1992,8 +1992,8 @@
 5002056 || [WINDOWS-GEOIP] RDP / Logon type 10 at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002056
 5002057 || [WINDOWS-GEOIP] Logon attempt using explicit credentials at suspicious time; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002057
 5002058 || [CISCO-GEOIP] VPN login from outside HOME_COUNTRY [2] || url, wiki.quadrantsec.com/bin/view/Main/5002058
-5002059 || [CISCO-GEOIP] FTP file transfer from  outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002059
-5002060 || [CISCO-GEOIP] FTP file transfer from  outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002060
+5002059 || [CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002059
+5002060 || [CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002060
 5002061 || [PROXY-MALWARE] Tor2www Request || url,http://www.tor2www.com
 5002062 || [PROXY-MALWARE] Tor2web Request || url,http://www.tor2web.org
 5002063 || [BRO] SSH Password_Guessing || url,wiki.quadrantsec.com/bin/view/Main/5002063
@@ -2008,6 +2008,11 @@
 5002072 || [BRO] Probable LURK0 RAT C&C Access || url,wiki.quadrantsec.com/bin/view/Main/5002072
 5002073 || [BRO] Sidejacking attach detected || url,matthias.vallentin.net/blog/2010/10/taming-the-sheep-detecting-sidejacking-with-bro || url,wiki.quadrantsec.com/bin/view/Main/5002073
 5002074 || [BRO] Bitcoin Miner || url,wiki.quadrantsec.com/bin/view/Main/5002074
+5002075 || [IMAPD-GEOIP] Login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002075
+5002076 || [IMAPD-GEOIP] Logout from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002076
+5002077 || [IMAPD-GEOIP] Timeout from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002077
+5002078 || [IMAPD-GEOIP] Disconnect from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002078
+5002079 || [IMAPD-GEOIP] Connection from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002079
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

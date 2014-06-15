@@ -1,0 +1,49 @@
+# Sagan imapd-geoip.rules
+# Copyright (c) 2009-2014, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+
+# 10.1.1.1|mail|info|info|16|2014-06-11|23:12:53|imapd-ssl| LOGIN, user=bob, ip=[192.168.8.1], port=[36938], protocol=IMAP
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET $IMAP_PORT (msg: "[IMAPD-GEOIP] Login from outside HOME_COUNTRY"; program: imapd|imapd-ssl; content: "LOGIN,"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002075; sid:5002075; rev: 1;)
+
+# 10.1.1.1|mail|info|info|16|2014-06-11|23:12:53|imapd-ssl| LOGOUT, user=bob, ip=[192.168.8.1], headers=0, body=0, rcvd=96, sent=470, time=0, starttls=1
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET $IMAP_PORT (msg: "[IMAPD-GEOIP] Logout from outside HOME_COUNTRY"; program: imapd|imapd-ssl; content: "LOGOUT,"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002076; sid:5002076; rev: 1;)
+
+# 10.1.1.1|mail|info|info|16|2014-06-12|04:06:34|imapd-ssl| TIMEOUT, user=bob, ip=[192.168.8.1], headers=714, body=8944, rcvd=1050, sent=15577, time=2701, starttls=1
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET $IMAP_PORT (msg: "[IMAPD-GEOIP] Timeout from outside HOME_COUNTRY"; program: imapd|imapd-ssl; content: "TIMEOUT,"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002077; sid:5002077; rev: 1;)
+
+# 10.1.1.1|mail|info|info|16|2014-06-11|23:53:51|imapd-ssl| DISCONNECTED, user=bob, ip=[192.168.8.1], headers=0, body=0, rcvd=357, sent=981, time=10511, starttls=1
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET $IMAP_PORT (msg: "[IMAPD-GEOIP] Disconnect from outside HOME_COUNTRY"; program: imapd|imapd-ssl; content: "DISCONNECTED,"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002078; sid:5002078; rev: 1;)
+
+# 10.7.1.71|mail|debug|debug|17|2014-06-11|23:53:52|imapd-ssl| Connection, ip=[192.168.8.1]
+
+# alert tcp $HOME_NET any -> $EXTERNAL_NET $IMAP_PORT (msg: "[IMAPD-GEOIP] Connection from outside HOME_COUNTRY"; program: imapd|imapd-ssl; content: "Connection,"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002079; sid:5002079; rev: 1;)
+
+
