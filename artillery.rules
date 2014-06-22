@@ -27,8 +27,8 @@
 
 # "Artillery" is a project by TrustedSec that monitors, detect & block attacks.  It is written in Python
 # and acts as an HIDS system.  Artillery has the ability to write to local or remote syslog servers.  These
-# Sagan alerts trigger when Artillery detects something back.  This is useful for getting Artillery data 
-# into consoles like Snorby,  Sguil, etc. 
+# Sagan rules trigger when Artillery detects something bad.  These rules also act as a "gateway" between
+# Artillery and Snort consoles (Snorby/Sguil/etc).
 # 
 # From the Artilley Website: "The purpose of Artillery is to provide a combination of a honeypot, file-system 
 # monitoring, system hardening, real-time threat intelligence feeds, and overall health of a server to create a 
