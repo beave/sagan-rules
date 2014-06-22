@@ -34,7 +34,8 @@
 # monitoring, system hardening, real-time threat intelligence feeds, and overall health of a server to create a 
 # comprehensive way to secure a system.
 # 
-# Artillery is written by Dave Kennedy and the TrustedSec crew (@HackingDave / @TrustedSec)
+# Artillery is written by Dave Kennedy and the TrustedSec crew (@HackingDave / @TrustedSec).  For more 
+# information about Artillery,  see https://www.trustedsec.com/downloads/artillery/
 # 
 
 # Alerts on anything from the program "Artillery".  
