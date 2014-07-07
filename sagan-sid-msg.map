@@ -641,7 +641,7 @@
 5000671 || [CISCO-PIXASA] PPTP tunnel hashtable insert failed || url, wiki.quadrantsec.com/bin/view/Main/5000671
 5000672 || [CISCO-PIXASA] PPP virtual interface client ip allocation failed || url, wiki.quadrantsec.com/bin/view/Main/5000672
 5000673 || [CISCO-PIXASA] H.323 library_name ASN Library failed to initialize || url, wiki.quadrantsec.com/bin/view/Main/5000673
-5000674 || [CISCO-PIXASA] ACL = deny; no sa created || url, wiki.quadrantsec.com/bin/view/Main/5000674
+5000674 || [CISCO-PIXASA] ACL = deny no sa created || url, wiki.quadrantsec.com/bin/view/Main/5000674
 5000675 || [CISCO-PIXASA] {outbound static|identity|portmap|regular] translation creation failed || url, wiki.quadrantsec.com/bin/view/Main/5000675
 5000676 || [CISCO-PIXASA] Denied ICMP || url, wiki.quadrantsec.com/bin/view/Main/5000676
 5000677 || [CISCO-PIXASA] Denied ICMPv6 || url, wiki.quadrantsec.com/bin/view/Main/5000677
