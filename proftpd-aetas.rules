@@ -25,7 +25,7 @@
 #
 #
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[PROFTPD-AETAS] Authentication success at suspicious time"; content: "Login successful"; alert_time: days $DAYS, hours $HOURS; parse_src_ip: 3; classtype: successful-user; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002052; sid: 5002052; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[PROFTPD-AETAS] Authentication success at suspicious time"; content: "Login successful"; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; parse_src_ip: 3; classtype: successful-user; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002052; sid: 5002052; rev:3;)
 
 
 
