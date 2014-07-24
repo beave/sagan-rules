@@ -201,7 +201,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows DC
 # You'll want to populate the "WINDOWS_DOMAINS" before enabling this rule. 
 # Champ Clark - 03/03/2014
 
-#alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-AUTH] Pass-The-Hash detected!"; pcre: "/ 4624: | 4625: /"; content: "Logon Type|3a| 3 "; content: "Authentication Package|3a| NTLM "; content:!"ANONYMOUS LOGON"; meta_content:!"Domain|3a| ",$WINDOWS_DOMAINS; meta_nocase; program: Security|Security-Auditing; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002017; reference: url, http://en.wikipedia.org/wiki/Pass_the_hash; sid: 5002017; rev:2;)
+#alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-AUTH] Pass-The-Hash detected!"; pcre: "/ 4624: | 4625: /"; content: "Logon Type|3a| 3 "; content: "Authentication Package|3a| NTLM "; content:!"ANONYMOUS LOGON"; meta_content:!"Domain|3a| %sagan% ",$WINDOWS_DOMAINS; meta_nocase; program: Security|Security-Auditing; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002017; reference: url, http://en.wikipedia.org/wiki/Pass_the_hash; sid: 5002017; rev:3;)
 
 # Records _all_ RDP sessions
 
