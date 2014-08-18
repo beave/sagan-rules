@@ -27,7 +27,7 @@
 # OpenVPN rules. Created by Robert Nunley (rnunley@quadrantsec.com)
 # 03/11/2013
 
-alert udp $EXTERNAL_NET any -> $HOME_NET $OPENVPN_PORT (msg:"[OPENVPN] Authentication failure"; content: "Decrypt packet error"; parse_src_ip: 1; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001651; program: openvpn; threshold:type limit, track by_src, count 5, seconds 300; sid: 5001651; rev:2;)
+alert udp $EXTERNAL_NET any -> $HOME_NET $OPENVPN_PORT (msg:"[OPENVPN] Authentication failure [0/5]"; content: "Decrypt packet error"; parse_src_ip: 1; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001651; program: openvpn; threshold:type limit, track by_src, count 5, seconds 300; sid: 5001651; rev:2;)
 #alert udp $EXTERNAL_NET any -> $HOME_NET $OPENVPN_PORT (msg:"[OPENVPN] Authentication success"; content: "Initialization Sequence Completed"; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001652; program: openvpn; sid: 5001652; rev:2;)
 alert udp $EXTERNAL_NET any -> $HOME_NET $OPENVPN_PORT (msg:"[OPENVPN] Unencrypted VPN connection initiated"; content: "tunnelled as cleartext"; parse_src_ip: 1; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001653; program: openvpn; sid: 5001653; rev:2;)
 

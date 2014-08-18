@@ -28,4 +28,4 @@
 # Cisco-WLC to point to the Sagan device.   Setup snmptrapd on the Sagan device to receive the SNMP trap messages
 # and forward them to syslog.  When snmptrapd is used,  Sagan will look for the OID of the offending message.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Rogue AP detected"; program: snmptrapd; content: "14179.2.6.3.36"; classtype: network-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001689; sid: 5001689; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Rogue AP detected [0/5]"; program: snmptrapd; content: "14179.2.6.3.36"; classtype: network-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001689; sid: 5001689; rev:1;)

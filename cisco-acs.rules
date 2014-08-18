@@ -34,10 +34,10 @@
 # IP address.  - Champ Clark (03/14/2013).
 
 # alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ACS] Failed Login Attempt"; program: CSCOacs_Failed_Attempts; content: "UserName="; parse_src_ip: 3; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001655; sid: 5001655; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ACS] Failed Login Attempt - Brute force"; program: CSCOacs_Failed_Attempts; content: "UserName="; parse_src_ip: 3; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300;  classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001656; sid: 5001656; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ACS] Failed Login Attempt - Brute force [5/5]"; program: CSCOacs_Failed_Attempts; content: "UserName="; parse_src_ip: 3; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300;  classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001656; sid: 5001656; rev:4;)
 
 # 10.10.10.10|auth|info|info|26|2014-02-20|16:23:54|CisACS_02_FailedAuth| 79fa6rs6 1 0 Message-Type=Authen failed,User-Name=champtest,NAS-IP-Address=172.16.1.1,Authen-Failure-Code=ACS user unknown,Caller-ID=10.10.10.10,NAS-Port=58634240,Group-Name=Default Group,
 
 # alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ACS] Failed Login Attempt [CisACS]"; program: CisACS_02_FailedAuth; parse_src_ip: 1; parse_dst_ip: 2; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001975; sid: 5001975; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ACS] Failed Login Attempt - Brute force [CisACS]"; program: CisACS_02_FailedAuth; parse_src_ip: 1; parse_dst_ip: 2; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300;  classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001976; sid: 5001976; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ACS] Failed Login Attempt - Brute force [CisACS] [5/5]"; program: CisACS_02_FailedAuth; parse_src_ip: 1; parse_dst_ip: 2; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300;  classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001976; sid: 5001976; rev:2;)
 

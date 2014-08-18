@@ -53,7 +53,7 @@ drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Authentication
 #drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Authentication failure - Brute force [100/5]"; content: "authentication failure"; classtype: unsuccessful-user;program: sshd; after: track by_src, count 100, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; normalize: openssh; reference: url,wiki.quadrantsec.com/bin/view/Main/5001633; sid: 5001633; rev:2;)
 
 #alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Authentication failure"; content: "authentication failure"; classtype: unsuccessful-user;program: sshd; normalize: openssh; reference: url,wiki.quadrantsec.com/bin/view/Main/5001524; sid: 5001524; rev:2;)
-drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Authentication failure for root - Brute force"; content: "Authentication failure for root"; classtype: unsuccessful-admin;program: sshd; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; normalize: openssh; reference: url,wiki.quadrantsec.com/bin/view/Main/5000017; sid: 5000017; rev:5;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Authentication failure for root - Brute force [5/5]"; content: "Authentication failure for root"; classtype: unsuccessful-admin;program: sshd; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; normalize: openssh; reference: url,wiki.quadrantsec.com/bin/view/Main/5000017; sid: 5000017; rev:6;)
 #alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Authentication failure for root"; content: "Authentication failure for root"; classtype: unsuccessful-admin;program: sshd; normalize: openssh; reference: url,wiki.quadrantsec.com/bin/view/Main/5001525; sid: 5001525; rev:2;)
 drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Possible break-in attempt"; content: "POSSIBLE BREAK-IN ATTEMPT"; classtype: unsuccessful-user; program: sshd; parse_src_ip: 1; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5000018; sid: 5000018; rev:6;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Not executable shell - login attempt"; content: "is not executable"; classtype: unsuccessful-user; program: sshd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000020; sid: 5000020; rev:4;)
@@ -61,7 +61,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Not executabl
 
 # General "illegal user" 
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [Brute Force]"; pcre: "/invalid user|illegal user/i"; classtype: attempted-user; program: sshd; parse_src_ip: 1; after: track by_src, count 10, seconds 300; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000022; sid: 5000022; rev:10;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [Brute Force] [10/5]"; pcre: "/invalid user|illegal user/i"; classtype: attempted-user; program: sshd; parse_src_ip: 1; after: track by_src, count 10, seconds 300; threshold:type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000022; sid: 5000022; rev:11;)
 
 drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [a]"; pcre: "/invalid user|illegal user/i"; content: "user a "; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001106; sid: 5001106; rev:4;)
 
@@ -110,7 +110,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[OPENSSH] User logged 
 
 # Failed password for root from 10.10.0.1 port 17298 ssh2
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password - Brute force"; content: "Failed password"; program: sshd; normalize: openssh; classtype: unsuccessful-user; sid: 5001646; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001646; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password - Brute force [5/5]"; content: "Failed password"; program: sshd; normalize: openssh; classtype: unsuccessful-user; sid: 5001646; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001646; rev:3;)
 
 #alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password"; content: "Failed password"; program: sshd; normalize: openssh; classtype: unsuccessful-user; sid: 5001647; reference: url,wiki.quadrantsec.com/bin/view/Main/5001647; rev:2;)
 
