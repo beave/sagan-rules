@@ -27,8 +27,10 @@
 # Windows authentication rules. 
 # Eventlog to syslog service.  This is what we primarily use.
 # http://code.google.com/p/eventlog-to-syslog/
+#
+# Rules converted from https://github.com/tcw3bb/ISC_Posts/blob/master/OSSEC_AppLocker_Local_Rule.xml
 
-
+# Champ Clark (08/19/2014)
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-APPLOCKER] Allowed program to execute"; content: " 8003|3a| "; classtype: suspicious-command; program: AppLocker; reference: url,wiki.quadrantsec.com/bin/view/Main/5002090; sid:5002090; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-APPLOCKER] Application blocked"; content: " 8004|3a| "; classtype: suspicious-command; program: AppLocker; reference: url,wiki.quadrantsec.com/bin/view/Main/5002091; sid:5002091; rev:1;)
