@@ -16,16 +16,16 @@
 5000014 || [BASH] histfile=/dev/null || url,wiki.quadrantsec.com/bin/view/Main/5000014
 5000015 || [OPENSSH] PAM Authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000015
 5000016 || [OPENSSH] Authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000016
-5000017 || [OPENSSH] Authentication failure for root - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000017
+5000017 || [OPENSSH] Authentication failure for root - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000017
 5000018 || [OPENSSH] Possible break-in attempt || url,wiki.quadrantsec.com/bin/view/Main/5000018
 5000020 || [OPENSSH] Not executable shell - login attempt || url,wiki.quadrantsec.com/bin/view/Main/5000020
 5000021 || [OPENSSH] Message send write error || url,wiki.quadrantsec.com/bin/view/Main/5000021
-5000022 || [OPENSSH] Invalid or illegal user [Brute Force] || url,wiki.quadrantsec.com/bin/view/Main/5000022
+5000022 || [OPENSSH] Invalid or illegal user [Brute Force] [10/5] || url,wiki.quadrantsec.com/bin/view/Main/5000022
 5000023 || [OPENSSH] Out-of-Band challenge failure || url,wiki.quadrantsec.com/bin/view/Main/5000023
 5000024 || [SU] SUDO user NOT in sudoers || url,wiki.quadrantsec.com/bin/view/Main/5000024
-5000025 || [SU] SUDO authentication failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000025
+5000025 || [SU] SUDO authentication failure - Brute force [3/5] || url,wiki.quadrantsec.com/bin/view/Main/5000025
 5000027 || [SU] Successful su as root || url,wiki.quadrantsec.com/bin/view/Main/5000027
-5000028 || [SU] FAILED su - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000028
+5000028 || [SU] FAILED su - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000028
 5000029 || GRSEC Time set || url,wiki.quadrantsec.com/bin/view/Main/5000029
 5000030 || GRSEC Signal 11 sent || url,wiki.quadrantsec.com/bin/view/Main/5000030
 5000031 || TCP Treason uncloaked || url,wiki.quadrantsec.com/bin/view/Main/5000031
@@ -46,7 +46,7 @@
 5000048 || [SQUID] XSS attempt || url,wiki.quadrantsec.com/bin/view/Main/5000048
 5000049 || [SQUID] 'passwd' access attempt || url,wiki.quadrantsec.com/bin/view/Main/5000049
 5000050 || [SQUID] Directory traversal attempt || url,wiki.quadrantsec.com/bin/view/Main/5000050
-5000051 || [CISCO-IOS] SNMP Authentication Failure || url,wiki.quadrantsec.com/bin/view/Main/5000051
+5000051 || [CISCO-IOS] SNMP Authentication Failure [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000051
 5000052 || [CISCO-IOS] Attempted RSHELL connection || url,wiki.quadrantsec.com/bin/view/Main/5000052
 5000053 || [CISCO-IOS] Line protocol changed state up/down || url,wiki.quadrantsec.com/bin/view/Main/5000053
 5000054 || [CISCO-IOS] Line protocol changed state up/down || url,wiki.quadrantsec.com/bin/view/Main/5000054
@@ -75,8 +75,8 @@
 5000077 || [OPENSSH] Attempt to login using a denied user || url,wiki.quadrantsec.com/bin/view/Main/5000077
 5000078 || [PROFTPD] Session opened || url,wiki.quadrantsec.com/bin/view/Main/5000078
 5000079 || [PROFTPD] Session closed || url,wiki.quadrantsec.com/bin/view/Main/5000079
-5000080 || [PROFTPD] Attempt to login as a non-existent user [Brute Force] || url,wiki.quadrantsec.com/bin/view/Main/5000080
-5000081 || [PROFTPD] Login failed accessing the FTP server [Brute Force] || url,wiki.quadrantsec.com/bin/view/Main/5000081
+5000080 || [PROFTPD] Attempt to login as a non-existent user [Brute Force] [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000080
+5000081 || [PROFTPD] Login failed accessing the FTP server [Brute Force] [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000081
 5000082 || [PROFTPD] Authentication success || url,wiki.quadrantsec.com/bin/view/Main/5000082
 5000083 || [PROFTPD] Connection refused by TCP Wrappers || url,wiki.quadrantsec.com/bin/view/Main/5000083
 5000084 || [PROFTPD] Small PassivePorts range in config file || url,wiki.quadrantsec.com/bin/view/Main/5000084
@@ -108,13 +108,13 @@
 5000110 || [BIND] Zone transfer error || url,wiki.quadrantsec.com/bin/view/Main/5000110
 5000111 || [CISCO-IOS] IOS configuration changed || url,wiki.quadrantsec.com/bin/view/Main/5000111
 5000112 || [CISCO-IOS] Successful login || url,wiki.quadrantsec.com/bin/view/Main/5000112
-5000113 || [CISCO-IOS] Failed login - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5000113
+5000113 || [CISCO-IOS] Failed login - Brute Force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000113
 5000114 || [SYSLOG] Possible unknown problem on a system || url,wiki.quadrantsec.com/bin/view/Main/5000114
 5000115 || [SYSLOG] /etc/securetty missing, root access unrestricted || url,wiki.quadrantsec.com/bin/view/Main/5000115
 5000116 || [SYSLOG] System out of disk space || url,wiki.quadrantsec.com/bin/view/Main/5000116
 5000117 || [SYSLOG] Unable to mount NFS share || url,wiki.quadrantsec.com/bin/view/Main/5000117
 5000118 || [SYSLOG] Unable to mount the NFS directory || url,wiki.quadrantsec.com/bin/view/Main/5000118
-5000119 || [SYSLOG] Authentication failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000119
+5000119 || [SYSLOG] Authentication failure - Brute force [20/1] || url,wiki.quadrantsec.com/bin/view/Main/5000119
 5000120 || [SYSLOG] Illegal root login || url,wiki.quadrantsec.com/bin/view/Main/5000120
 5000121 || [SYSLOG] Connection blocked by TCP Wrappers || url,wiki.quadrantsec.com/bin/view/Main/5000121
 5000122 || [SYSLOG] Physical root login || url,wiki.quadrantsec.com/bin/view/Main/5000122
@@ -173,9 +173,9 @@
 5000176 || [ASTERISK] Warning message || url,wiki.quadrantsec.com/bin/view/Main/5000176
 5000177 || [ASTERISK] Warning message || url,wiki.quadrantsec.com/bin/view/Main/5000177
 5000178 || [ASTERISK] Notice message || url,wiki.quadrantsec.com/bin/view/Main/5000178
-5000179 || [ASTERISK] Login session failed || url,wiki.quadrantsec.com/bin/view/Main/5000179
-5000180 || [ASTERISK] Login session failed [invalid user] || url,wiki.quadrantsec.com/bin/view/Main/5000180
-5000181 || [ASTERISK] Login session failed [invalid extension] || url,wiki.quadrantsec.com/bin/view/Main/5000181
+5000179 || [ASTERISK] Login session failed [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000179
+5000180 || [ASTERISK] Login session failed [invalid user] [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000180
+5000181 || [ASTERISK] Login session failed [invalid extension] [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000181
 5000182 || [FTPD] FTP Login refused || url,wiki.quadrantsec.com/bin/view/Main/5000182
 5000183 || [FTPD] File created || url,wiki.quadrantsec.com/bin/view/Main/5000183
 5000184 || [FTPD] File deleted || url,wiki.quadrantsec.com/bin/view/Main/5000184
@@ -187,10 +187,10 @@
 5000190 || [FTPD] Multiple failed login attempts || url,wiki.quadrantsec.com/bin/view/Main/5000190
 5000191 || [FTPD] User disconnected due to time out || url,wiki.quadrantsec.com/bin/view/Main/5000191
 5000192 || [FTPD] Attempted access to a disabled account || url,wiki.quadrantsec.com/bin/view/Main/5000192
-5000193 || [FTPD] Failed authentication - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000193
+5000193 || [FTPD] Failed authentication - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000193
 5000194 || [VSFTPD] Session opened || url,wiki.quadrantsec.com/bin/view/Main/5000194
 5000195 || [VSFTPD] Authentication successful || url,wiki.quadrantsec.com/bin/view/Main/5000195
-5000196 || [VSFTPD] Login failed - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000196
+5000196 || [VSFTPD] Login failed - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000196
 5000197 || [VSFTPD] File uploaded || url,wiki.quadrantsec.com/bin/view/Main/5000197
 5000198 || [WORDPRESS] - Wordpress authentication failed || url,wiki.quadrantsec.com/bin/view/Main/5000198
 5000199 || [WORDPRESS] - Wordpress authentication succeeded || url,wiki.quadrantsec.com/bin/view/Main/5000199
@@ -199,7 +199,7 @@
 5000202 || [WORDPRESS] - Wordpress Wordpress Comment Flood Attempt || url,wiki.quadrantsec.com/bin/view/Main/5000202
 5000203 || [WORDPRESS] - Attack against Wordpress detected || url,wiki.quadrantsec.com/bin/view/Main/5000203
 5000204 || [VMWARE] User login successful || url,wiki.quadrantsec.com/bin/view/Main/5000204
-5000206 || [VMWARE] User authentication failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5000206
+5000206 || [VMWARE] User authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000206
 5000208 || [VMWARE] Virtual machine state change to OFF || url,wiki.quadrantsec.com/bin/view/Main/5000208
 5000209 || [VMWARE] Virtual machine state change to ON || url,wiki.quadrantsec.com/bin/view/Main/5000209
 5000210 || [VMWARE] Virtual machine being reconfigured || url,wiki.quadrantsec.com/bin/view/Main/5000210
@@ -290,7 +290,7 @@
 5000299 || [OSSEC] Log file rotated || url,wiki.quadrantsec.com/bin/view/Main/5000299
 5000300 || [OSSEC] File size reduced || url,wiki.quadrantsec.com/bin/view/Main/5000300
 5000301 || [OSSEC] Microsoft event log cleared || url,wiki.quadrantsec.com/bin/view/Main/5000301
-5000306 || [WINDOWS-MISC] Detection of net listening application || url,wiki.quadrantsec.com/bin/view/Main/5000306
+5000306 || [WINDOWS-MISC] Detection of net listening application [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000306
 5000307 || [WINDOWS-MISC] Privileged Service Called || url,wiki.quadrantsec.com/bin/view/Main/5000307
 5000308 || [WINDOWS-MISC] Apple Bonjour service detect [iTunes installed?] || url,wiki.quadrantsec.com/bin/view/Main/5000308
 5000309 || [WINDOWS-MISC] Application error || url,wiki.quadrantsec.com/bin/view/Main/5000309
@@ -343,8 +343,8 @@
 5000359 || [APACHE] Apache directory attempt || url,wiki.quadrantsec.com/bin/view/Main/5000359
 5000360 || [APACHE] Apache directory attempt || url,wiki.quadrantsec.com/bin/view/Main/5000360
 5000361 || [APACHE] Apache robots.txt access || url,wiki.quadrantsec.com/bin/view/Main/5000361
-5000362 || [APACHE] Apache phpinfo access attempt || url,wiki.quadrantsec.com/bin/view/Main/5000362
-5000364 || [APACHE] Apache php-my-admin access attempt || url,wiki.quadrantsec.com/bin/view/Main/5000364
+5000362 || [APACHE] Apache phpinfo access attempt [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000362
+5000364 || [APACHE] Apache php-my-admin access attempt [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000364
 5000365 || [ATTACK] Possible buffer overflow attempt [yppasswd?] || url,wiki.quadrantsec.com/bin/view/Main/5000356
 5000366 || [ATTACK] Heap overflow in the Solaris cachefsd service || url,wiki.quadrantsec.com/bin/view/Main/5000366
 5000367 || [IMAPD] User login failed || url,wiki.quadrantsec.com/bin/view/Main/5000367
@@ -368,7 +368,7 @@
 5000385 || [BASH] iptables command access || url,wiki.quadrantsec.com/bin/view/Main/5000385
 5000386 || [SNORT] Snort syslog message || url,wiki.quadrantsec.com/bin/view/Main/5000386
 5000387 || [SQUID] MSG Messenger access || url,wiki.quadrantsec.com/bin/view/Main/5000387
-5000388 || [CISCO-IOS] Fan failure - Fan not rotating || url,wiki.quadrantsec.com/bin/view/Main/5000388
+5000388 || [CISCO-IOS] Fan failure - Fan not rotating [0/2] || url,wiki.quadrantsec.com/bin/view/Main/5000388
 5000392 || [TELNET] Attempt to login with an option || url,wiki.quadrantsec.com/bin/view/Main/5000392
 5000393 || [SYSLOG] kcfd - Unable to open certificate file || url,wiki.quadrantsec.com/bin/view/Main/5000393
 5000395 || [SYSLOG] automount - Couldn't stat filesystem || url,wiki.quadrantsec.com/bin/view/Main/5000395
@@ -603,10 +603,10 @@
 5000633 || [CISCO-PIXASA] Deny inbound UDP || url, wiki.quadrantsec.com/bin/view/Main/5000633
 5000634 || [CISCO-PIXASA] Deny inbound UDP from outside due to DNS {Response|Query} || url, wiki.quadrantsec.com/bin/view/Main/5000634
 5000635 || [CISCO-PIXASA] Dropping echo request || url, wiki.quadrantsec.com/bin/view/Main/5000635
-5000636 || [CISCO-PIXASA] Deny IP spoof || url, wiki.quadrantsec.com/bin/view/Main/5000636
-5000637 || [CISCO-PIXASA] Deny IP due to Land Attack || url, wiki.quadrantsec.com/bin/view/Main/5000637
+5000636 || [CISCO-PIXASA] Deny IP spoof [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000636
+5000637 || [CISCO-PIXASA] Deny IP due to Land Attack [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000637
 5000638 || [CISCO-PIXASA] ICMP denied by outbound ACL || url, wiki.quadrantsec.com/bin/view/Main/5000638
-5000639 || [CISCO-PIXASA] Deny IP teardrop fragment || url, wiki.quadrantsec.com/bin/view/Main/5000639
+5000639 || [CISCO-PIXASA] Deny IP teardrop fragment [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000639
 5000640 || [CISCO-PIXASA] Bad route_compress || url, wiki.quadrantsec.com/bin/view/Main/5000640
 5000641 || [CISCO-PIXASA] Failed Identification Test in slot || url, wiki.quadrantsec.com/bin/view/Main/5000641
 5000642 || [CISCO-PIXASA] Dropped DNS responses with mis-matched id || url, wiki.quadrantsec.com/bin/view/Main/5000642
@@ -703,7 +703,7 @@
 5000736 || [CISCO-PIXASA] Remote user has been rejected by the Firewall Server || url, wiki.quadrantsec.com/bin/view/Main/5000736
 5000737 || [CISCO-PIXASA] Remote user has been terminated by the Firewall Server || url, wiki.quadrantsec.com/bin/view/Main/5000737
 5000738 || [CISCO-PIXASA] Headend security gateway has failed our user authentication attempt - check configured username and password || url, wiki.quadrantsec.com/bin/view/Main/5000738
-5000739 || [CISCO-PIXASA] Remote peer has failed user authentication - check configured username and password || url, wiki.quadrantsec.com/bin/view/Main/5000739
+5000739 || [CISCO-PIXASA] Remote peer has failed user authentication - check configured username and password [10/5] || url, wiki.quadrantsec.com/bin/view/Main/5000739
 5000740 || [CISCO-PIXASA] Error Username too long - connection aborted || url, wiki.quadrantsec.com/bin/view/Main/5000740
 5000741 || [CISCO-PIXASA] User Authorization failed || url, wiki.quadrantsec.com/bin/view/Main/5000741
 5000742 || [CISCO-PIXASA] IKE Receiver Error reading from socket || url, wiki.quadrantsec.com/bin/view/Main/5000742
@@ -728,8 +728,8 @@
 5000761 || [CISCO-PIXASA] No matching connection for ICMP error || url, wiki.quadrantsec.com/bin/view/Main/5000761
 5000762 || [CISCO-PIXASA] NAC Downloaded ACL parse failure || url, wiki.quadrantsec.com/bin/view/Main/5000762
 5000763 || [CISCO-PIXASA] Shun add failed unable to allocate resources || url, wiki.quadrantsec.com/bin/view/Main/5000763
-5000764 || [CISCO-PIXASA] IPSEC Received an protocol packet from remote IP to local IP that failed anti-replay checking || url, wiki.quadrantsec.com/bin/view/Main/5000764
-5000765 || [CISCO-PIXASA] IPSEC Received an protocol packet from remote IP to local IP that failed authentication || url, wiki.quadrantsec.com/bin/view/Main/5000765
+5000764 || [CISCO-PIXASA] IPSEC Received an protocol packet from remote IP to local IP that failed anti-replay checking [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000764
+5000765 || [CISCO-PIXASA] IPSEC Received an protocol packet from remote IP to local IP that failed authentication [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000765
 5000766 || [CISCO-PIXASA] CRYPTO The hardware accelerator encountered an error while executing crypto command || url, wiki.quadrantsec.com/bin/view/Main/5000766
 5000767 || [CISCO-PIXASA] PPPoE failed to assign PPP IP address || url, wiki.quadrantsec.com/bin/view/Main/5000767
 5000768 || [CISCO-PIXASA] ISAKMP Failed to allocate address for client from pool string || url, wiki.quadrantsec.com/bin/view/Main/5000768
@@ -786,14 +786,14 @@
 5000821 || [CISCO-PIXASA] Fail to delete crypto policy for peer || url, wiki.quadrantsec.com/bin/view/Main/5000821
 5000822 || [CISCO-PIXASA] Fail to install LB NP rules || url, wiki.quadrantsec.com/bin/view/Main/5000822
 5000823 || [CISCO-PIXASA] Fail to delete LB NP rules || url, wiki.quadrantsec.com/bin/view/Main/5000823
-5000824 || [CISCO-PIXASA] Deny IP || url, wiki.quadrantsec.com/bin/view/Main/5000824
+5000824 || [CISCO-PIXASA] Deny IP [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000824
 5000825 || [CISCO-PIXASA] Deny TCP [no connection] || url, wiki.quadrantsec.com/bin/view/Main/5000825
 5000826 || [CISCO-PIXASA] Failed to determine the security context || url, wiki.quadrantsec.com/bin/view/Main/5000826
 5000827 || [CISCO-PIXASA] Failed to determine the security context || url, wiki.quadrantsec.com/bin/view/Main/5000827
 5000828 || [CISCO-PIXASA] access-list ACL {permitted | denied | est-allowed} protocol || url, wiki.quadrantsec.com/bin/view/Main/5000828
 5000829 || [CISCO-PIXASA] Auth from inside to outside failed [server failed] on interface || url, wiki.quadrantsec.com/bin/view/Main/5000829
 5000830 || [CISCO-PIXASA] Auth from inside to outside failed [all servers failed] on interface || url, wiki.quadrantsec.com/bin/view/Main/5000830
-5000831 || [CISCO-PIXASA] Authentication failed for user || url, wiki.quadrantsec.com/bin/view/Main/5000831
+5000831 || [CISCO-PIXASA] Authentication failed for user [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000831
 5000832 || [CISCO-PIXASA] Authorization permitted for user || url, wiki.quadrantsec.com/bin/view/Main/5000832
 5000833 || [CISCO-PIXASA] Authorization denied for user from outside to inside on interface || url, wiki.quadrantsec.com/bin/view/Main/5000833
 5000834 || [CISCO-PIXASA] Authorization denied [not authenticated] || url, wiki.quadrantsec.com/bin/view/Main/5000834
@@ -804,9 +804,9 @@
 5000839 || [CISCO-PIXASA] RIP hdr failed || url, wiki.quadrantsec.com/bin/view/Main/5000839
 5000840 || [CISCO-PIXASA] No management IP address configured for transparent firewall || url, wiki.quadrantsec.com/bin/view/Main/5000840
 5000841 || [CISCO-PIXASA] NAC is disabled for host || url, wiki.quadrantsec.com/bin/view/Main/5000841
-5000842 || [CISCO-PIXASA] Login denied [Brute Force] || url, wiki.quadrantsec.com/bin/view/Main/5000842
+5000842 || [CISCO-PIXASA] Login denied [Brute Force] [10/5] || url, wiki.quadrantsec.com/bin/view/Main/5000842
 5000843 || [CISCO-PIXASA] Authorization failed || url, wiki.quadrantsec.com/bin/view/Main/5000843
-5000844 || [CISCO-PIXASA] User authentication failed || url, wiki.quadrantsec.com/bin/view/Main/5000844
+5000844 || [CISCO-PIXASA] User authentication failed [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000844
 5000845 || [CISCO-PIXASA] VNPClient XAUTH Failed || url, wiki.quadrantsec.com/bin/view/Main/5000845
 5000846 || [CISCO-PIXASA] VPNClient Secure Unit Authentication Disabled || url, wiki.quadrantsec.com/bin/view/Main/5000846
 5000847 || [CISCO-PIXASA] VPNClient User Authentication Disabled || url, wiki.quadrantsec.com/bin/view/Main/5000847
@@ -826,7 +826,7 @@
 5000862 || [CISCO-PIXASA] Cert validation failure handle invalid for Main/Aggressive Mode Initiator/Responder! || url, wiki.quadrantsec.com/bin/view/Main/5000862
 5000863 || [CISCO-PIXASA] Attempt to get Phase 1 ID data failed while hash computation || url, wiki.quadrantsec.com/bin/view/Main/5000863
 5000864 || [CISCO-PIXASA] Processing firewall record || url, wiki.quadrantsec.com/bin/view/Main/5000864
-5000865 || [CISCO-PIXASA] Remote user has been granted access by the Firewall Server [Brute Force] || url, wiki.quadrantsec.com/bin/view/Main/5000865
+5000865 || [CISCO-PIXASA] Remote user has been granted access by the Firewall Server [Brute Force] [10/5] || url, wiki.quadrantsec.com/bin/view/Main/5000865
 5000866 || [CISCO-PIXASA] The Firewall Server has requested a list of active user sessions || url, wiki.quadrantsec.com/bin/view/Main/5000866
 5000867 || [CISCO-PIXASA] Got bad refCnt assigning || url, wiki.quadrantsec.com/bin/view/Main/5000867
 5000868 || [CISCO-PIXASA] subroutine Q Send failure RetCode || url, wiki.quadrantsec.com/bin/view/Main/5000868
@@ -843,11 +843,11 @@
 5000879 || [CISCO-PIXASA] Fail to create group || url, wiki.quadrantsec.com/bin/view/Main/5000879
 5000880 || [CISCO-PIXASA] Creation of group policy || url, wiki.quadrantsec.com/bin/view/Main/5000880
 5000881 || [SENDMAIL] SpamAssassin Milter Plugin Remote Arbitrary Command Injection Attempt || url,http://www.securityfocus.com/bid/38578 || url, wiki.quadrantsec.com/bin/view/Main/5000881
-5000883 || [BRO] Successful Password Guessing || url,wiki.quadrantsec.com/bin/view/Main/5000883
-5000884 || [BRO] Protocol Violation || url,wiki.quadrantsec.com/bin/view/Main/5000884
-5000885 || [BRO] Sensitive Login || url,wiki.quadrantsec.com/bin/view/Main/5000885
-5000886 || [BRO] Sensitive Connection || url,wiki.quadrantsec.com/bin/view/Main/5000886
-5000887 || [BRO] Sensitive Username in password
+5000883 || [BRO] Successful Password Guessing [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000883
+5000884 || [BRO] Protocol Violation [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000884
+5000885 || [BRO] Sensitive Login [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000885
+5000886 || [BRO] Sensitive Connection [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000886
+5000887 || [BRO] Sensitive Username in password [0/5]
 5000888 || [JUNIPER] AS group missing
 5000889 || [JUNIPER] Duplicate IP address
 5000890 || [JUNIPER] BGP missing MD5 digest
@@ -867,7 +867,7 @@
 5000904 || [FORTINET] To many bad admin login attempts || url,wiki.quadrantsec.com/bin/view/Main/5000904
 5000905 || [FORTINET] Administrator logout || url,wiki.quadrantsec.com/bin/view/Main/5000905
 5000906 || [FORTINET] IPS error mode || url,wiki.quadrantsec.com/bin/view/Main/5000906
-5000907 || [FORTINET] Login failed [Brute Force] || url,wiki.quadrantsec.com/bin/view/Main/5000907
+5000907 || [FORTINET] Login failed [Brute Force] [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000907
 5000908 || [FORTINET] Login accepted || url,wiki.quadrantsec.com/bin/view/Main/5000908
 5000909 || [FORTINET] Disk full or almost full || url,wiki.quadrantsec.com/bin/view/Main/5000909
 5000910 || [FORTINET] Fortigate has started || url,wiki.quadrantsec.com/bin/view/Main/5000910
@@ -1015,7 +1015,7 @@
 5001053 || [RSYNC] Connection closed stats || url, wiki.quadrantsec.com/bin/view/Main/5001053
 5001054 || [RSYNC] Authentication failure || url, wiki.quadrantsec.com/bin/view/Main/5001054
 5001055 || [RSYNC] Some files could not be transferred || url, wiki.quadrantsec.com/bin/view/Main/5001055
-5001056 || [WINDOWS-MISC] Disk corruption || url,wiki.quadrantsec.com/bin/view/Main/5001056
+5001056 || [WINDOWS-MISC] Disk corruption [0/2] || url,wiki.quadrantsec.com/bin/view/Main/5001056
 5001057 || [APC-EMU] Humidity violation || url,wiki.quadrantsec.com/bin/view/Main/5001057
 5001058 || [APC-EMU] Humidity violation cleared || url,wiki.quadrantsec.com/bin/view/Main/5001058
 5001059 || [APC-EMU] Front door opened || url,wiki.quadrantsec.com/bin/view/Main/5001059
@@ -1045,14 +1045,14 @@
 5001084 || [SONICWALL] IPS Detection Alert || url,wiki.quadrantsec.com/bin/view/Main/5001084
 5001085 || [SONICWALL] Possible UDP Port Scan || url,wiki.quadrantsec.com/bin/view/Main/5001085
 5001086 || [CISCO-PIXASA] Access denied URL || url, wiki.quadrantsec.com/bin/view/Main/5001086
-5001087 || [CISCO-PIXASA] AAA user authentication successful || url, wiki.quadrantsec.com/bin/view/Main/5001087
+5001087 || [CISCO-PIXASA] AAA user authentication successful [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5001087
 5001088 || [CISCO-PIXASA] Disconnect by SSH server || url, wiki.quadrantsec.com/bin/view/Main/5001088
 5001089 || [CISCO-PIXASA] Access denied URL chars - HTTPS || url, wiki.quadrantsec.com/bin/view/Main/5001089
 5001090 || [SONICWALL] IPS Detection Alert || url,wiki.quadrantsec.com/bin/view/Main/5001090
 5001091 || [CISCO-PIXASA] Access denied URL - HTTPS || url, wiki.quadrantsec.com/bin/view/Main/5001091
-5001092 || [CISCO-PIXASA] AAA user authentication Reject || url, wiki.quadrantsec.com/bin/view/Main/5001092
+5001092 || [CISCO-PIXASA] AAA user authentication Reject [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5001092
 5001093 || [MISC] Weblabyrinth - New host logged! || url,wiki.quadrantsec.com/bin/view/Main/5001093
-5001094 || [SENDMAIL] Insufficient system resources [Remote] || url, wiki.quadrantsec.com/bin/view/Main/5001094
+5001094 || [SENDMAIL] Insufficient system resources [Remote] [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5001094
 5001095 || [MISC] Weblabyrinth - Crawler Ensnared! || url,wiki.quadrantsec.com/bin/view/Main/5001095
 5001096 || [WINDOWS-MISC] MSSQLServer I/O error || url,wiki.quadrantsec.com/bin/view/Main/5001096
 5001097 || [VMWARE] User login successful || url,wiki.quadrantsec.com/bin/view/Main/5001097
@@ -1108,16 +1108,16 @@
 5001148 || [JUNIPER] application-level distributed denial-of-service (AppDDoS) state transition occurred in logical system || url,wiki.quadrantsec.com/bin/view/Main/5001148
 5001149 || [JUNIPER] Application-level distributed denial-of-service (AppDDoS) attack in a logical system || url,wiki.quadrantsec.com/bin/view/Main/5001149
 5001150 || [JUNIPER] Application-level distributed denial-of-service (AppDDoS) attack || url,wiki.quadrantsec.com/bin/view/Main/5001150
-5001151 || [WINDOWS-AUTH] Login failure - Unknown username or bad password - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001151
+5001151 || [WINDOWS-AUTH] Login failure - Unknown username or bad password - Brute force [20/2] || url,wiki.quadrantsec.com/bin/view/Main/5001151
 5001152 || [WINDOWS-AUTH] Login failure - Account login time restriction || url,wiki.quadrantsec.com/bin/view/Main/5001152
-5001153 || [WINDOWS-AUTH] Login failure - Account currently disabled || url,wiki.quadrantsec.com/bin/view/Main/5001153
+5001153 || [WINDOWS-AUTH] Login failure - Account currently disabled [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5001153
 5001154 || [WINDOWS-AUTH] Login failure - Specified account expired || url,wiki.quadrantsec.com/bin/view/Main/5001154
 5001155 || [WINDOWS-AUTH] Login failure - User not allowed to login at this computer || url,wiki.quadrantsec.com/bin/view/Main/5001155
 5001156 || [WINDOWS-AUTH] Login failure - User not granted login type || url,wiki.quadrantsec.com/bin/view/Main/5001156
 5001157 || [WINDOWS-AUTH] Login failure - Account password is expired || url,wiki.quadrantsec.com/bin/view/Main/5001157
 5001158 || [WINDOWS-AUTH] Login failure - Internal error || url,wiki.quadrantsec.com/bin/view/Main/5001158
-5001159 || [WINDOWS-AUTH] Login failure - Account locked || url,wiki.quadrantsec.com/bin/view/Main/5001159
-5001160 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001160
+5001159 || [WINDOWS-AUTH] Login failure - Account locked [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5001159
+5001160 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force [20/2] || url,wiki.quadrantsec.com/bin/view/Main/5001160
 5001161 || [WINDOWS-AUTH] User account unlocked || url,wiki.quadrantsec.com/bin/view/Main/5001161
 5001162 || [WINDOWS-AUTH] Security enabled group created || url,wiki.quadrantsec.com/bin/view/Main/5001162
 5001163 || [WINDOWS-AUTH] Security enabled group deleted || url,wiki.quadrantsec.com/bin/view/Main/5001163
@@ -1148,13 +1148,13 @@
 5001189 || [WINDOWS-AUTH] Computer account changed/deleted || url,wiki.quadrantsec.com/bin/view/Main/5001189
 5001190 || [WINDOWS-AUTH] Computer account changed/deleted || url,wiki.quadrantsec.com/bin/view/Main/5001190
 5001191 || [WINDOWS-MISC] File system full || url,wiki.quadrantsec.com/bin/view/Main/5001191
-5001192 || [WINDOWS-AUTH] Account locked out (multiple login errors) || url,wiki.quadrantsec.com/bin/view/Main/5001192
+5001192 || [WINDOWS-AUTH] Account locked out [multiple login errors] [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5001192
 5001193 || [WINDOWS-AUTH] General account database changed || url,wiki.quadrantsec.com/bin/view/Main/5001193
 5001194 || [WINDOWS-MISC] System time has changed || url,wiki.quadrantsec.com/bin/view/Main/5001194
 5001195 || [WINDOWS-AUTH] DC  - Integrity check on decrypted || url,wiki.quadrantsec.com/bin/view/Main/5001195
 5001196 || [WINDOWS-AUTH] DC - Possible replay attack || url,wiki.quadrantsec.com/bin/view/Main/5001196
 5001197 || [WINDOWS-AUTH] DC - Clock skew too great || url,wiki.quadrantsec.com/bin/view/Main/5001197
-5001198 || [CISCO-IOS] Fans had a rotation error reported || url,wiki.quadrantsec.com/bin/view/Main/5001198
+5001198 || [CISCO-IOS] Fans had a rotation error reported [0/2] || url,wiki.quadrantsec.com/bin/view/Main/5001198
 5001199 || [CISCO-IOS] Power Controller reports power Imax error detected || url,wiki.quadrantsec.com/bin/view/Main/5001190
 5001200 || [CITRIX] Netscaler - URL Transformation action matched URL || url,wiki.quadrantsec.com/bin/view/Main/5001200 || url,support.citrix.com/article/CTX123875
 5001201 || [CITRIX] Netscaler - URL Transformation action didn't match URL || url,wiki.quadrantsec.com/bin/view/Main/5001201 || url,support.citrix.com/article/CTX123875
@@ -1335,7 +1335,7 @@
 5001376 || [CITRIX] Netscaler - ICA application launch has started || url,wiki.quadrantsec.com/bin/view/Main/5001376 || url,support.citrix.com/article/CTX123875
 5001377 || [CITRIX] Netscaler - SSLVPN license limit reached || url,wiki.quadrantsec.com/bin/view/Main/5001377 || url,support.citrix.com/article/CTX123875
 5001378 || [CITRIX] Netscaler - SSLVPN login succeeds || url,wiki.quadrantsec.com/bin/view/Main/5001378 || url,support.citrix.com/article/CTX123875
-5001379 || [CITRIX] Netscaler - AAA module failed to login the user - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001379 || url,support.citrix.com/article/CTX123875
+5001379 || [CITRIX] Netscaler - AAA module failed to login the user - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001379 || url,support.citrix.com/article/CTX123875
 5001380 || [CITRIX] Netscaler - SSLVPN session logs out. || url,wiki.quadrantsec.com/bin/view/Main/5001380 || url,support.citrix.com/article/CTX123875
 5001381 || [CITRIX] Netscaler - Monitor bound to the service is down || url,wiki.quadrantsec.com/bin/view/Main/5001381 || url,support.citrix.com/article/CTX123875
 5001382 || [CITRIX] Netscaler - Monitor bound to the service has hit threshold limit || url,wiki.quadrantsec.com/bin/view/Main/5001382 || url,support.citrix.com/article/CTX123875
@@ -1393,7 +1393,7 @@
 5001436 || [DIGITALPERSONA] OTS Started || url,wiki.quadrantsec.com/bin/view/Main/5001436
 5001437 || [DIGITALPERSONA] Fingerprint reader connected || url,wiki.quadrantsec.com/bin/view/Main/5001437
 5001438 || [DIGITALPERSONA] Fingerprint reader disconnected || url,wiki.quadrantsec.com/bin/view/Main/5001438
-5001439 || [DIGITALPERSONA] One-to-one fingerprint match failed || url,wiki.quadrantsec.com/bin/view/Main/5001439
+5001439 || [DIGITALPERSONA] One-to-one fingerprint match failed [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001439
 5001440 || [DIGITALPERSONA] System unlocked || url,wiki.quadrantsec.com/bin/view/Main/5001440
 5001441 || [DIGITALPERSONA] Kiosk Login || url,wiki.quadrantsec.com/bin/view/Main/5001441
 5001442 || [DIGITALPERSONA] Logoff || url,wiki.quadrantsec.com/bin/view/Main/5001442
@@ -1436,7 +1436,7 @@
 5001479 || [CISCO-IOS] NetFlow addressable memory almost full || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1a
 5001480 || [CISCO-IOS] IOS Keepalive Loop Detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1b
 5001481 || [CISCO-IOS] Possible IOS System Crash || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1bc
-5001482 || [CISCO-IOS] Error in Layer 3 Forwarding ASIC || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#ASIC
+5001482 || [CISCO-IOS] Error in Layer 3 Forwarding ASIC [0/2] || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#ASIC
 5001483 || [CISCO-IOS] MAC/IP length inconsistencies || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1
 5001484 || [CISCO-IOS] Invalid IP Checksum detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob2
 5001485 || [CISCO-IOS] Excessive Multicast Traffic to IGMP reserved address || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob3
@@ -1447,15 +1447,15 @@
 5001490 || [CISCO-IOS] Creating Session to module/slot failed || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#Processor
 5001491 || [CISCO-IOS] Module Firmware error detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob9
 5001492 || [CISCO-IOS] Module Error Condition || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob-error
-5001493 || [CISCO-IOS] Switch Port Error Detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#mod-issue
+5001493 || [CISCO-IOS] Switch Port Error Detected [0/3] || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#mod-issue
 5001494 || [CISCO-IOS] Unsupported SFP GBIC Detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#badkey
 5001495 || [CISCO-IOS] TCAM Resource Exhaustion Detected || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#TCAM
-5001496 || [CISCO-IOS] Supervisor Engine Parity Errors || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#tmparity
-5001497 || [CISCO-IOS] Memory Parity Error || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob-controller
+5001496 || [CISCO-IOS] Supervisor Engine Parity Errors [0/3] || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#tmparity
+5001497 || [CISCO-IOS] Memory Parity Error [0/3] || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob-controller
 5001498 || [CISCO-IOS] Linecard Endpoint Lost Sync || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#sp141
 5001499 || [CISCO-IOS] Misconfigured Boot Variables || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#nwboot
-5001500 || [CISCO-IOS] CPU Monitor Message Time Outs || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#monitor
-5001501 || [CISCO-IOS] CPU Monitor Message Not Heard || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#monitor
+5001500 || [CISCO-IOS] CPU Monitor Message Time Outs [0/3] || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#monitor
+5001501 || [CISCO-IOS] CPU Monitor Message Not Heard [0/3] || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#monitor
 5001502 || [CISCO-IOS] Invalid IDPROM Image || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#idprom
 5001503 || [CISCO-IOS] Switch Module Powered Off || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#pwrdis
 5001504 || [CISCO-IOS] ASIC Failed to Synchronize || url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#onlinefail
@@ -1545,8 +1545,8 @@
 5001589 || [HUAWEI] SSH - LOGIN_FAIL_RETRY_OUT || url, huaweisymantec.com/en/download.do?id=658891
 5001590 || [HUAWEI] SSH - LOGIN_FAIL_RSA_ERR || url, huaweisymantec.com/en/download.do?id=658891
 5001591 || [HUAWEI] VRRP - LogAuthFailed || url, huaweisymantec.com/en/download.do?id=658891
-5001592 || [HUAWEI] SSH - LOGIN_FAIL - Brute force || url, huaweisymantec.com/en/download.do?id=658891
-5001593 || [CISCO-PIXASA] AAA user authentication Reject - Brute force || url, wiki.quadrantsec.com/bin/view/Main/5001593
+5001592 || [HUAWEI] SSH - LOGIN_FAIL - Brute force [5/5] || url, huaweisymantec.com/en/download.do?id=658891
+5001593 || [CISCO-PIXASA] AAA user authentication Reject - Brute force [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001593
 5001595 || [MONGODB] DBException causing immediate shutdown || url,www.mongodb.org
 5001596 || [MONGODB] IOS_Base exception causing immediate shutdown || url,www.mongodb.org
 5001597 || [MONGODB] Bad allocation exception causing immediate shutdown || url,www.mongodb.org
@@ -1593,23 +1593,23 @@
 5001638 || [OPENSSH] PAM Authentication failure - Brute force [50/5] || url,wiki.quadrantsec.com/bin/view/Main/5001638
 5001639 || [OPENSSH] PAM Authentication failure - Brute force [100/5] || url,wiki.quadrantsec.com/bin/view/Main/5001639
 5001640 || [WINDOWS-MSSQL] Login Failure || url,wiki.quadrantsec.com/bin/view/Main/5001640
-5001641 || [WINDOWS-MSSQL] Login Failure - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001641
+5001641 || [WINDOWS-MSSQL] Login Failure - Brute force [20/1] || url,wiki.quadrantsec.com/bin/view/Main/5001641
 5001642 || [JUNIPER] SSHD_LOGIN_ATTEMPTS_THRESHOLD - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001642
 5001643 || [JUNIPER] SSHD_LOGIN_FAILED_LIMIT - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001643
 5001644 || [JUNIPER] SSHD_LOGIN_FAILED || url,wiki.quadrantsec.com/bin/view/Main/5001644
-5001645 || [JUNIPER] SSHD_LOGIN_FAILED - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001645
-5001646 || [OPENSSH] Failed password - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001646
+5001645 || [JUNIPER] SSHD_LOGIN_FAILED - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001645
+5001646 || [OPENSSH] Failed password - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001646
 5001647 || [OPENSSH] Failed password || url,wiki.quadrantsec.com/bin/view/Main/5001647
-5001648 || [WINDOWS-AUTH] Authentication failed - User credentials mismatch || url,wiki.quadrantsec.com/bin/view/Main/5001648
+5001648 || [WINDOWS-AUTH] Authentication failed - User credentials mismatch [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5001648
 5001649 || [WINDOWS-MISC] DHCP Scope is almost full || url,wiki.quadrantsec.com/bin/view/Main/5001649
 5001650 || [WINDOWS-MISC] DHCP Scope if full.  No IP addresses left || url,wiki.quadrantsec.com/bin/view/Main/5001650
-5001651 || [OPENVPN] Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5001651
+5001651 || [OPENVPN] Authentication failure [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5001651
 5001652 || [OPENVPN] Authentication success || url,wiki.quadrantsec.com/bin/view/Main/5001652
 5001653 || [OPENVPN] Unencrypted VPN connection initiated || url,wiki.quadrantsec.com/bin/view/Main/5001653
-5001654 || [CISCO-PIXASA] User authentication failed - Brute force || url, wiki.quadrantsec.com/bin/view/Main/5001654
+5001654 || [CISCO-PIXASA] User authentication failed - Brute force [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001654
 5001655 || [CISCO-ACS] Failed Login Attempt || url,wiki.quadrantsec.com/bin/view/Main/5001655
-5001656 || [CISCO-ACS] Failed Login Attempt - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001656
-5001657 || [WINDOWS-AUTH] Auth failed - Bad Account/Incorrect Password - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001657
+5001656 || [CISCO-ACS] Failed Login Attempt - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001656
+5001657 || [WINDOWS-AUTH] Auth failed - Bad Account/Incorrect Password - Brute Force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001657
 5001658 || [WINDOWS-AUTH] Auth failed - Bad Account/Incorrect Password || url,wiki.quadrantsec.com/bin/view/Main/5001658
 5001659 || [WINDOWS-AUTH] User account does not exist || url,wiki.quadrantsec.com/bin/view/Main/5001659
 5001660 || [WINDOWS-AUTH] Domain does not exist || url,wiki.quadrantsec.com/bin/view/Main/5001660
@@ -1622,7 +1622,7 @@
 5001667 || [WINDOWS-AUTH] Error occured with EAP || url,wiki.quadrantsec.com/bin/view/Main/5001667
 5001668 || [CISCO-IOS] Authentication Failure SSH || url,wiki.quadrantsec.com/bin/view/Main/5001668
 5001669 || [CISCO-IOS] Illegal User SSH || url,wiki.quadrantsec.com/bin/view/Main/5001669
-5001670 || [CISCO-IOS] Authentication Failure SSH - Brute force || url,wiki.quadrantsec.com/bin/view/Main/5001670
+5001670 || [CISCO-IOS] Authentication Failure SSH - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001670
 5001671 || [CISCO-IOS] FATAL: bad tty - login (no program) || url,wiki.quadrantsec.com/bin/view/Main/5001671
 5001672 || [CISCO-IOS] Auth to privilege 15 failed || url,wiki.quadrantsec.com/bin/view/Main/5001672
 5001673 || [CISCO-IOS] Multicast storm detected || url,wiki.quadrantsec.com/bin/view/Main/5001673
@@ -1638,10 +1638,10 @@
 5001683 || [SYMANTEC-EMS] Error regrouping - bad parameters || url,wiki.quadrantsec.com/bin/view/Main/5001683
 5001684 || [SYMANTEC-EMS] Failed to map user to a directory || url,wiki.quadrantsec.com/bin/view/Main/5001684
 5001685 || [SYMANTEC-EMS] LDAP key error - name lookup failed || url,wiki.quadrantsec.com/bin/view/Main/5001685
-5001686 || [CISCO-IOS] Login Failed - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001686
+5001686 || [CISCO-IOS] Login Failed - Brute Force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001686
 5001687 || [WINDOWS-AUTH] User account enabled || url,wiki.quadrantsec.com/bin/view/Main/5001687
 5001688 || [CISCO-IOS] Low FAN RPM - Service recommended || url,wiki.quadrantsec.com/bin/view/Main/5001688
-5001689 || [CISCO-WLC] Rogue AP detected || url,wiki.quadrantsec.com/bin/view/Main/5001689
+5001689 || [CISCO-WLC] Rogue AP detected [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5001689
 5001692 || [WINDOWS-AUTH] Local Administrator account added to a local group || url,wiki.quadrantsec.com/bin/view/Main/5001692
 5001693 || [WINDOWS-AUTH] User added to Network Config Operator group || url,wiki.quadrantsec.com/bin/view/Main/5001693
 5001694 || [WINDOWS-AUTH] User added to DNS Admins group || url,wiki.quadrantsec.com/bin/view/Main/5001694
@@ -1663,7 +1663,7 @@
 5001711 || [CISCO-IOS] Grammar Manager Telephony Subsystem ModuleStop || url,wiki.quadrantsec.com/bin/view/Main/5001711
 5001712 || [CISCO-IOS] Cisco Unified CCX MGR Shutdown || url,wiki.quadrantsec.com/bin/view/Main/5001712
 5001713 || [CISCO-IOS] Socket Manager Telephony Subsystem ModuleStart || url,wiki.quadrantsec.com/bin/view/Main/5001713
-5001714 || [CISCO-PIXASA] TCP access denied by ACL - Brute force || url, wiki.quadrantsec.com/bin/view/Main/5001714
+5001714 || [CISCO-PIXASA] TCP access denied by ACL - Brute force [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001714
 5001715 || [CISCO-PIXASA] TCP access denied by ACL || url, wiki.quadrantsec.com/bin/view/Main/5001715
 5001716 || [WINDOWS-MISC] DHCP Scope is FULL || url,wiki.quadrantsec.com/bin/view/Main/5001716
 5001717 || [ORACLE] Authentication Failure || url, wiki.quadrantsec.com/bin/view/Main/5001717
@@ -1673,24 +1673,24 @@
 5001721 || [CISCO-IOS] HSRP Requesting Active State || url,wiki.quadrantsec.com/bin/view/Main/5001721
 5001722 || [CISCO-IOS] HSRP State Change || url,wiki.quadrantsec.com/bin/view/Main/5001722
 5001723 || [CISCO-IOS] HSRP State Change || url,wiki.quadrantsec.com/bin/view/Main/5001723
-5001724 || [CISCO-MALWARE] ZeroAccess UDP port 16464 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001724
-5001725 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001725
-5001726 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001726
-5001727 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001727
-5001728 || [WINDOWS-AUTH] Potential Windows User Enumeration - User Name Does Not Exist [Brute Force] || url,wiki.quadrantsec.com/bin/view/Main/5001728
-5001729 || [WINDOWS-AUTH] Windows Brute force - User Correct but Incorrect Password || url,wiki.quadrantsec.com/bin/view/Main/5001729
+5001724 || [CISCO-MALWARE] ZeroAccess UDP port 16464 detected [denied] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001724
+5001725 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected [denied] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001725
+5001726 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected [denied] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001726
+5001727 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected [denied] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001727
+5001728 || [WINDOWS-AUTH] Potential Windows User Enumeration - User Name Does Not Exist [Brute Force] [20/1] || url,wiki.quadrantsec.com/bin/view/Main/5001728
+5001729 || [WINDOWS-AUTH] Windows Brute force - User Correct but Incorrect Password [20/1] || url,wiki.quadrantsec.com/bin/view/Main/5001729
 5001730 || [WINDOWS-AUTH] Windows Brute force - User Is Locked Out || url,wiki.quadrantsec.com/bin/view/Main/5001730
-5001731 || [WINDOWS-AUTH] Windows Brute force - User Account Disabled || url,wiki.quadrantsec.com/bin/view/Main/5001731
-5001732 || [WINDOWS-AUTH] Windows Brute force - User Login Attempts Outside of Time Restriction || url,wiki.quadrantsec.com/bin/view/Main/5001732
-5001733 || [WINDOWS-AUTH] Windows Brute force - Expired Account || url,wiki.quadrantsec.com/bin/view/Main/5001733
-5001734 || [WINDOWS-AUTH] Windows Brute force - Expired Password || url,wiki.quadrantsec.com/bin/view/Main/5001734
-5001735 || [WINDOWS-MALWARE] ZeroAccess Malware Detected  || url,wiki.quadrantsec.com/bin/view/Main/5001735
-5001736 || [WINDOWS-MALWARE] ZeroAccess Malware Detected  || url,wiki.quadrantsec.com/bin/view/Main/5001736
-5001737 || [WINDOWS-MALWARE] ZeroAccess Malware Detected || url,wiki.quadrantsec.com/bin/view/Main/5001737
-5001738 || [WINDOWS-MALWARE] ZeroAccess Malware Detected  || url,wiki.quadrantsec.com/bin/view/Main/5001738
+5001731 || [WINDOWS-AUTH] Windows Brute force - User Account Disabled [20/1] || url,wiki.quadrantsec.com/bin/view/Main/5001731
+5001732 || [WINDOWS-AUTH] Windows Brute force - User Login Attempts Outside of Time Restriction [5/1] || url,wiki.quadrantsec.com/bin/view/Main/5001732
+5001733 || [WINDOWS-AUTH] Windows Brute force - Expired Account [5/1] || url,wiki.quadrantsec.com/bin/view/Main/5001733
+5001734 || [WINDOWS-AUTH] Windows Brute force - Expired Password [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001734
+5001735 || [WINDOWS-MALWARE] ZeroAccess Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001735
+5001736 || [WINDOWS-MALWARE] ZeroAccess Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001736
+5001737 || [WINDOWS-MALWARE] ZeroAccess Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001737
+5001738 || [WINDOWS-MALWARE] ZeroAccess Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001738
 5001739 || [PROXY-MALWARE] Pony Trojan || url,wiki.quadrantsec.com/bin/view/Main/5001739
-5001741 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2 - Server's entry in database has expired || url,wiki.quadrantsec.com/bin/view/Main/5001741
-5001742 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3 - Requested protocol version # not supported || url,wiki.quadrantsec.com/bin/view/Main/5001742
+5001741 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2 - Server's entry in database has expired [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001741
+5001742 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3 - Requested protocol version # not supported [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001742
 5001743 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x4 - Client's key encrypted in old master key || url,wiki.quadrantsec.com/bin/view/Main/5001743
 5001744 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x5 - Server's key encrypted in old master key || url,wiki.quadrantsec.com/bin/view/Main/5001744
 5001745 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x6 - Client not found in Kerberos database || url,wiki.quadrantsec.com/bin/view/Main/5001745
@@ -1699,7 +1699,7 @@
 5001748 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x9 - The client or server has a null key || url,wiki.quadrantsec.com/bin/view/Main/5001748
 5001749 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xA - Ticket not eligible for postdating || url,wiki.quadrantsec.com/bin/view/Main/5001749
 5001750 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xB - Requested start time is later than end time || url,wiki.quadrantsec.com/bin/view/Main/5001750
-5001751 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xC - KDC policy rejects request || url,wiki.quadrantsec.com/bin/view/Main/5001751
+5001751 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xC - KDC policy rejects request [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001751
 5001752 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xD - KDC cannot accommodate requested option || url,wiki.quadrantsec.com/bin/view/Main/5001752
 5001753 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xE - KDC has no support for encryption type || url,wiki.quadrantsec.com/bin/view/Main/5001753
 5001754 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xF - KDC has no support for checksum type || url,wiki.quadrantsec.com/bin/view/Main/5001754
@@ -1711,16 +1711,16 @@
 5001760 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x15 - Client not yet valid - try again later || url,wiki.quadrantsec.com/bin/view/Main/5001760
 5001761 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x16 - Server not yet valid - try again later || url,wiki.quadrantsec.com/bin/view/Main/5001761
 5001762 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x17 - Password has expired || url,wiki.quadrantsec.com/bin/view/Main/5001762
-5001763 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x18 - Pre-authentication information was invalid || url,wiki.quadrantsec.com/bin/view/Main/5001763
+5001763 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x18 - Pre-authentication information was invalid [20/5] || url,wiki.quadrantsec.com/bin/view/Main/5001763
 5001764 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x19 - Additional pre-authentication required || url,wiki.quadrantsec.com/bin/view/Main/5001764
 5001765 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x1F - Integrity check on decrypted field failed || url,wiki.quadrantsec.com/bin/view/Main/5001765
 5001766 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x20 - Ticket expired || url,wiki.quadrantsec.com/bin/view/Main/5001766
 5001767 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x21 - Ticket not yet valid || url,wiki.quadrantsec.com/bin/view/Main/5001767
-5001768 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x22 - Request is a replay || url,wiki.quadrantsec.com/bin/view/Main/5001768
+5001768 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x22 - Request is a replay [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001768
 5001769 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x23 - The ticket isn't for us || url,wiki.quadrantsec.com/bin/view/Main/5001769
-5001770 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x24 - Ticket and authenticator don't match || url,wiki.quadrantsec.com/bin/view/Main/5001770
+5001770 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x24 - Ticket and authenticator don't match [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001770
 5001771 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x25 - Clock skew too great || url,wiki.quadrantsec.com/bin/view/Main/5001771
-5001772 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x26 - Incorrect net address || url,wiki.quadrantsec.com/bin/view/Main/5001772
+5001772 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x26 - Incorrect net address [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001772
 5001773 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x27 - Protocol version mismatch || url,wiki.quadrantsec.com/bin/view/Main/5001773
 5001774 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x28 - Invalid msg type || url,wiki.quadrantsec.com/bin/view/Main/5001774
 5001775 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x29 - Message stream modified || url,wiki.quadrantsec.com/bin/view/Main/5001775
@@ -1730,15 +1730,15 @@
 5001779 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2E - Mutual authentication failed || url,wiki.quadrantsec.com/bin/view/Main/5001779
 5001780 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2F - Incorrect message direction || url,wiki.quadrantsec.com/bin/view/Main/5001780
 5001781 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x30 - Alternative authentication method required || url,wiki.quadrantsec.com/bin/view/Main/5001781
-5001782 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x31 - Incorrect sequence number in message || url,wiki.quadrantsec.com/bin/view/Main/5001782
+5001782 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x31 - Incorrect sequence number in message [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001782
 5001783 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x32 - Inappropriate type of checksum in message || url,wiki.quadrantsec.com/bin/view/Main/5001783
 5001784 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3C - Generic error || url,wiki.quadrantsec.com/bin/view/Main/5001784
 5001785 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3D - Field is too long for this implementation || url,wiki.quadrantsec.com/bin/view/Main/5001785
-5001786 || [FORTINET-MALWARE] ZeroAccess UDP port 16464 detected || url, wiki.quadrantsec.com/bin/view/Main/5001786
-5001787 || [FORTINET-MALWARE] ZeroAccess UDP port 16465 detected || url, wiki.quadrantsec.com/bin/view/Main/5001787
-5001788 || [FORTINET-MALWARE] ZeroAccess UDP port 16470 detected || url, wiki.quadrantsec.com/bin/view/Main/5001788
-5001789 || [FORTINET-MALWARE] ZeroAccess UDP port 16471 detected || url, wiki.quadrantsec.com/bin/view/Main/5001789
-5001790 || [CISCO-MALWARE] ZeroAccess pre-2012 TCP port 13620 detected [denied] || url, wiki.quadrantsec.com/bin/view/Main/5001790
+5001786 || [FORTINET-MALWARE] ZeroAccess UDP port 16464 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001786
+5001787 || [FORTINET-MALWARE] ZeroAccess UDP port 16465 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001787
+5001788 || [FORTINET-MALWARE] ZeroAccess UDP port 16470 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001788
+5001789 || [FORTINET-MALWARE] ZeroAccess UDP port 16471 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001789
+5001790 || [CISCO-MALWARE] ZeroAccess pre-2012 TCP port 13620 detected [denied] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001790
 5001791 || [WINDOWS-AUTH] User account created || url,wiki.quadrantsec.com/bin/view/Main/5001786
 5001792 || [WEB-ATTACKS] bsqlbf Brute Force SQL Injection || url,doc.emergingthreats.net/2008362 || url,code.google.com/p/bsqlbf-v2/
 5001793 || [WEB-ATTACKS] Cisco Torch IOS HTTP Scan || url,doc.emergingthreats.net/2008415 || url,www.securiteam.com/tools/5EP0F1FEUA.html || url,www.hackingexposedcisco.com/?link=tools
@@ -1749,7 +1749,7 @@
 5001798 || [WEB-ATTACKS] Possible Fast-Track Tool Spidering User-Agent Detected || url,doc.emergingthreats.net/2011721 || url,www.offensive-security.com/metasploit-unleashed/Fast-Track-Modes
 5001799 || [WEB-ATTACKS] Suspicious User-Agent - get-minimal - Possible Vuln Scan || url,doc.emergingthreats.net/2003634
 5001800 || [WEB-ATTACKS] Grabber.py Web Scan Detected || url,doc.emergingthreats.net/2009483 || url,rgaucher.info/beta/grabber/
-5001801 || [WEB-ATTACKS] Grendel Web Scan - Default User Agent Detected || url,doc.emergingthreats.net/2009480 || url,www.grendel-scan.com
+5001801 || [WEB-ATTACKS] Grendel Web Scan - Default User Agent Detected [0/5] || url,doc.emergingthreats.net/2009480 || url,www.grendel-scan.com
 5001802 || [WEB-ATTACKS] Hmap Webserver Fingerprint Scan || url,doc.emergingthreats.net/2008537 || url,www.ujeni.murkyroc.com/hmap/
 5001803 || [WEB-ATTACKS] Mini MySqlatOr SQL Injection Scanner || url,doc.emergingthreats.net/2008729 || url,www.scrt.ch/pages_en/minimysqlator.html
 5001804 || [WEB-ATTACKS] Default Mysqloit User Agent Detected - Mysql Injection Takover Tool || url,doc.emergingthreats.net/2009882 || url,code.google.com/p/mysqloit/
@@ -1794,24 +1794,24 @@
 5001844 || [WEB-ATTACKS] FHScan core User-Agent Detect || url,www.tarasco.org/security/FHScan_Fast_HTTP_Vulnerability_Scanner/index.html
 5001845 || [WEB-ATTACKS] w3af User-Agent 2
 5001846 || [HONEYD] Connection made to honeypot || url,wiki.quadrantsec.com/bin/view/Main/5001846
-5001847 || [HONEYD] Attempt to login to honeypot Telnet server || url,wiki.quadrantsec.com/bin/view/Main/5001847
-5001848 || [HONEYD] Attempt to login to honeypot Telnet server as admin user || url,wiki.quadrantsec.com/bin/view/Main/5001848
-5001849 || [HONEYD] Attempt to login to honeypot FTP server || url,wiki.quadrantsec.com/bin/view/Main/5001849
-5001853 || [NFCAPD-MALWARE] Netflow - ZeroAccess UDP port 16464 detected || url, wiki.quadrantsec.com/bin/view/Main/5001853
-5001854 || [NFCAPD-MALWARE] Netflow - ZeroAccess UDP port 16465 detected || url, wiki.quadrantsec.com/bin/view/Main/5001854
-5001855 || [NFCAPD] Netflow - ZeroAccess UDP port 16470 detected || url, wiki.quadrantsec.com/bin/view/Main/5001855
-5001856 || [NFCAPD-MALWARE] Netflow - ZeroAccess UDP port 16471 detected || url, wiki.quadrantsec.com/bin/view/Main/5001856
-5001857 || [NFCAPD-MALWARE] Netflow - Old ZeroAccess TCP port 13620 detected || url, wiki.quadrantsec.com/bin/view/Main/5001857
-5001858 || [CISCO-MALWARE] ZeroAccess UDP port 16464 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001858
-5001859 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001859
-5001860 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001860
-5001861 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001861
-5001862 || [CISCO-MALWARE] ZeroAccess TCP port 13620 detected [allowed] || url, wiki.quadrantsec.com/bin/view/Main/5001862
+5001847 || [HONEYD] Attempt to login to honeypot Telnet server [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5001847
+5001848 || [HONEYD] Attempt to login to honeypot Telnet server as admin user [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5001848
+5001849 || [HONEYD] Attempt to login to honeypot FTP server [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5001849
+5001853 || [NFCAPD-MALWARE] Netflow - ZeroAccess UDP port 16464 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001853
+5001854 || [NFCAPD-MALWARE] Netflow - ZeroAccess UDP port 16465 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001854
+5001855 || [NFCAPD] Netflow - ZeroAccess UDP port 16470 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001855
+5001856 || [NFCAPD-MALWARE] Netflow - ZeroAccess UDP port 16471 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001856
+5001857 || [NFCAPD-MALWARE] Netflow - Old ZeroAccess TCP port 13620 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001857
+5001858 || [CISCO-MALWARE] ZeroAccess UDP port 16464 detected [allowed] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001858
+5001859 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected [allowed] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001859
+5001860 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected [allowed] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001860
+5001861 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected [allowed] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001861
+5001862 || [CISCO-MALWARE] ZeroAccess TCP port 13620 detected [allowed] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001862
 5001863 || [WEB-ATTACKS] Grendel Web Scan - Default User Agent Detected || url,doc.emergingthreats.net/2009480 || url,www.grendel-scan.com
 5001864 || [WEB-ATTACKS] Absinthe SQL Injection Tool HTTP Header Detected || url,doc.emergingthreats.net/2009555 || url,0x90.org/releases/absinthe
 5001865 || [WEB-ATTACKS] Nessus User Agent || url,doc.emergingthreats.net/2002664 || url,www.nessus.org
 5001866 || [WEB-ATTACKS] Nikto Web App Scan in Progress || url,doc.emergingthreats.net/2002677 || url,www.cirt.net/code/nikto.shtml
-5001867 || [FORTINET-MALWARE] Older ZeroAccess TCP port 13620 detected || url, wiki.quadrantsec.com/bin/view/Main/5001867
+5001867 || [FORTINET-MALWARE] Older ZeroAccess TCP port 13620 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001867
 5001868 || [CISCO-GEOIP] VPN Login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001868
 5001869 || [CISCO-GEOIP] Console login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001869
 5001870 || [PROFTPD-GEOIP] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001870
@@ -1894,31 +1894,31 @@
 5001948 || [FORTINET-GEOIP] Administrator Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001948
 5001949 || [FORTINET-GEOIP] Admin authentication success outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001949
 5001950 || [CISCO-GEOIP] WebVPN login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001950
-5001951 || [WINDOWS-MALWARE] Black POS Malware Detected || url,wiki.quadrantsec.com/bin/view/Main/5001951
+5001951 || [WINDOWS-MALWARE] Black POS Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001951
 5001952 || [CISCO-IOS] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001952
 5001954 || [OPENSSH] SYSLOG Authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001954
 5001955 || [FATPIPE] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001955
 5001956 || [FATPIPE] Login Success - ADMINISTRATOR || url,wiki.quadrantsec.com/bin/view/Main/5001956
 5001957 || [FATPIPE] Login Failed || url,wiki.quadrantsec.com/bin/view/Main/5001957
-5001958 || [FATPIPE] Login Failed - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001958
+5001958 || [FATPIPE] Login Failed - Brute Force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001958
 5001959 || [FATPIPE-GEOIP] Login Success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001959
 5001960 || [FATPIPE-GEOIP] Login Success - ADMINISTRATOR - from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001960
 5001961 || [SYSLOG] Redhat Linux not updating || url,wiki.quadrantsec.com/bin/view/Main/5001961
 5001962 || [CISCO-GEOIP] VPN disconnect from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001962
 5001963 || [CISCO-PIXASA] WebVPN console/admin failed || url, wiki.quadrantsec.com/bin/view/Main/5001963
 5001964 || [CISCO-GEOIP] VPN login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001964
-5001965 || [CISCO-MALWARE] ACE ZeroAccess UDP port 16464 detected || url, wiki.quadrantsec.com/bin/view/Main/5001965
-5001966 || [CISCO-MALWARE] ACE ZeroAccess UDP port 16465 detected || url, wiki.quadrantsec.com/bin/view/Main/5001966
-5001967 || [CISCO-MALWARE] ACE ZeroAccess UDP port 16470 detected || url, wiki.quadrantsec.com/bin/view/Main/5001967
-5001968 || [CISCO-MALWARE] ACE ZeroAccess UDP port 16471 detected || url, wiki.quadrantsec.com/bin/view/Main/5001968
-5001969 || [CISCO-MALWARE] ACE ZeroAccess pre-2012 TCP port 13620 || url, wiki.quadrantsec.com/bin/view/Main/5001969
+5001965 || [CISCO-MALWARE] ACE ZeroAccess UDP port 16464 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001965
+5001966 || [CISCO-MALWARE] ACE ZeroAccess UDP port 16465 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001966
+5001967 || [CISCO-MALWARE] ACE ZeroAccess UDP port 16470 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001967
+5001968 || [CISCO-MALWARE] ACE ZeroAccess UDP port 16471 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001968
+5001969 || [CISCO-MALWARE] ACE ZeroAccess pre-2012 TCP port 13620 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001969
 5001970 || [FORTINET] SSH traffic detected || url,wiki.quadrantsec.com/bin/view/Main/5001970
 5001971 || [FORTINET-GEOIP] SSH traffic detected from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001971
 5001972 || [SYSLOG] SCSI task abort || url,wiki.quadrantsec.com/bin/view/Main/5001972
 5001973 || [SYSLOG] Remounting filesystem read-only || url,wiki.quadrantsec.com/bin/view/Main/5001973
 5001974 || [OPENSSH] Fail2Ban SSH Suspicious Activity || url,wiki.quadrantsec.com/bin/view/Main/5001974
 5001975 || [CISCO-ACS] Failed Login Attempt [CisACS] || url,wiki.quadrantsec.com/bin/view/Main/5001975
-5001976 || [CISCO-ACS] Failed Login Attempt - Brute force [CisACS] || url,wiki.quadrantsec.com/bin/view/Main/5001976
+5001976 || [CISCO-ACS] Failed Login Attempt - Brute force [CisACS] [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001976
 5001977 || [CISCO-GEOIP] ACS Login success from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001977
 5001978 || [WINDOWS-AUTH] Account locked out (ADMINISTRATOR) || url,wiki.quadrantsec.com/bin/view/Main/5001978
 5001979 || [FILE-GEOIP] Executable Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001979
@@ -1926,21 +1926,21 @@
 5001981 || [FILE-GEOIP] Jar/Zip Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001981
 5001982 || [FILE-GEOIP] PDF Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001982
 5001983 || [FILE-GEOIP] Flash Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001983
-5001984 || [NFCAPD] Possible IRC detected || url, wiki.quadrantsec.com/bin/view/Main/5001984
-5001985 || [NFCAPD] Possible IRC over SSL detected || url, wiki.quadrantsec.com/bin/view/Main/5001985
-5001986 || [NFCAPD] Possible IRC - Port 6660 || url, wiki.quadrantsec.com/bin/view/Main/5001986
-5001987 || [NFCAPD] Possible IRC - Port 6661 || url, wiki.quadrantsec.com/bin/view/Main/5001987
-5001988 || [NFCAPD] Possible IRC - Port 6662 || url, wiki.quadrantsec.com/bin/view/Main/5001988
-5001989 || [NFCAPD] Possible IRC - Port 6663 || url, wiki.quadrantsec.com/bin/view/Main/5001989
-5001990 || [NFCAPD] Possible IRC - Port 6664 || url, wiki.quadrantsec.com/bin/view/Main/5001990
-5001991 || [NFCAPD] Possible IRC - Port 6665 || url, wiki.quadrantsec.com/bin/view/Main/5001991
-5001992 || [NFCAPD] Possible IRC - Port 6666 || url, wiki.quadrantsec.com/bin/view/Main/5001992
-5001993 || [NFCAPD] Possible IRC - Port 6668 || url, wiki.quadrantsec.com/bin/view/Main/5001993
-5001994 || [NFCAPD] Possible IRC - Port 6669 || url, wiki.quadrantsec.com/bin/view/Main/5001994
-5001995 || [NFCAPD] Possible IRC - Port 7000 || url, wiki.quadrantsec.com/bin/view/Main/5001995
-5001996 || [NFCAPD] SSH Traffic Detected || url, wiki.quadrantsec.com/bin/view/Main/5001996
-5001997 || [NFCAPD] Possible SSH Traffic Detected - Port 2222 || url, wiki.quadrantsec.com/bin/view/Main/5001997
-5001998 || [NFCAPD] Telnet Traffic Detected || url, wiki.quadrantsec.com/bin/view/Main/5001998
+5001984 || [NFCAPD] Possible IRC detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001984
+5001985 || [NFCAPD] Possible IRC over SSL detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001985
+5001986 || [NFCAPD] Possible IRC - Port 6660 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001986
+5001987 || [NFCAPD] Possible IRC - Port 6661 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001987
+5001988 || [NFCAPD] Possible IRC - Port 6662 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001988
+5001989 || [NFCAPD] Possible IRC - Port 6663 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001989
+5001990 || [NFCAPD] Possible IRC - Port 6664 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001990
+5001991 || [NFCAPD] Possible IRC - Port 6665 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001991
+5001992 || [NFCAPD] Possible IRC - Port 6666 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001992
+5001993 || [NFCAPD] Possible IRC - Port 6668 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001993
+5001994 || [NFCAPD] Possible IRC - Port 6669 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001994
+5001995 || [NFCAPD] Possible IRC - Port 7000 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001995
+5001996 || [NFCAPD] SSH Traffic Detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001996
+5001997 || [NFCAPD] Possible SSH Traffic Detected - Port 2222 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001997
+5001998 || [NFCAPD] Telnet Traffic Detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001998
 5001999 || [WINDOWS-MALWARE] Suspicious misspelled process || url,wiki.quadrantsec.com/bin/view/Main/5001999
 5002000 || [WINDOWS-MALWARE] Lower case drive letter used in process || url,wiki.quadrantsec.com/bin/view/Main/5002000
 5002001 || [WINDOWS-MALWARE] Incorrect path called for svchost.exe || url,wiki.quadrantsec.com/bin/view/Main/5002001
@@ -1956,7 +1956,7 @@
 5002018 || [WINDOWS-MISC] Logon attempt using explicit credentials; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002018
 5002020 || [WINDOWS-GEOIP] Logon attempt using explicit credentials from outside HOME_COUNTRY; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002020
 5002022 || [JUNIPER] VPN Login failed || url,wiki.quadrantsec.com/bin/view/Main/5002022
-5002023 || [JUNIPER] VPN Login failed - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5002023
+5002023 || [JUNIPER] VPN Login failed - Brute Force [10/5] || url,wiki.quadrantsec.com/bin/view/Main/5002023
 5002024 || [JUNIPER] Possible VPN Login bypass attempt || url,wiki.quadrantsec.com/bin/view/Main/5002024
 5002025 || [JUNIPER] VPN Unable to download virus signatures || url,wiki.quadrantsec.com/bin/view/Main/5002025
 5002026 || [JUNIPER] VPN - Possible scan/probe || url,wiki.quadrantsec.com/bin/view/Main/5002026
@@ -1996,18 +1996,18 @@
 5002060 || [CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002060
 5002061 || [PROXY-MALWARE] Tor2www Request || url,http://www.tor2www.com
 5002062 || [PROXY-MALWARE] Tor2web Request || url,http://www.tor2web.org
-5002063 || [BRO] SSH Password_Guessing || url,wiki.quadrantsec.com/bin/view/Main/5002063
+5002063 || [BRO] SSH Password_Guessing [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002063
 5002064 || [BRO] TeamCymruMalwareHashRegistry Match || url,www.team-cymru.org/Services/MHR/
 5002065 || [BRO] HTTP SQL_Injection_Attacker || url,wiki.quadrantsec.com/bin/view/Main/5002065
 5002066 || [BRO] HTTP SQL_Injection_Victim || url,wiki.quadrantsec.com/bin/view/Main/5002066
 5002067 || [BRO] SSH Login_By_Password_Guesser || url,wiki.quadrantsec.com/bin/view/Main/5002067
 5002068 || [BRO] SSH Watched_Country_Login || url,wiki.quadrantsec.com/bin/view/Main/5002068
-5002069 || [BRO] 10+ SSL Invalid_Server_Cert in 30 seconds || url,wiki.quadrantsec.com/bin/view/Main/5002069
-5002070 || [BRO] 10+ unable to get local issuer certificate in 30 seconds || url,wiki.quadrantsec.com/bin/view/Main/5002070
-5002071 || [BRO] ZeroAccess ZeroAccess_Client || url,wiki.quadrantsec.com/bin/view/Main/5002070
+5002069 || [BRO] 10+ SSL Invalid_Server_Cert in 30 seconds [10/5] || url,wiki.quadrantsec.com/bin/view/Main/5002069
+5002070 || [BRO] 10+ unable to get local issuer certificate in 30 seconds [10/5] || url,wiki.quadrantsec.com/bin/view/Main/5002070
+5002071 || [BRO] ZeroAccess ZeroAccess_Client [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002070
 5002072 || [BRO] Probable LURK0 RAT C&C Access || url,wiki.quadrantsec.com/bin/view/Main/5002072
 5002073 || [BRO] Sidejacking attach detected || url,matthias.vallentin.net/blog/2010/10/taming-the-sheep-detecting-sidejacking-with-bro || url,wiki.quadrantsec.com/bin/view/Main/5002073
-5002074 || [BRO] Bitcoin Miner || url,wiki.quadrantsec.com/bin/view/Main/5002074
+5002074 || [BRO] Bitcoin Miner [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5002074
 5002075 || [IMAPD-GEOIP] Login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002075
 5002076 || [IMAPD-GEOIP] Logout from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002076
 5002077 || [IMAPD-GEOIP] Timeout from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002077
@@ -2023,6 +2023,17 @@
 5002087 || [ARTILLERY] Honeyport attack detected || url,www.trustedsec.com/downloads/artillery || url,wiki.quadrantsec.com/bin/view/Main/5002087
 5002088 || [ARTILLERY] File changes have occured || url,www.trustedsec.com/downloads/artillery || url,wiki.quadrantsec.com/bin/view/Main/5002088
 5002089 || [ARTILLERY] SSH brute force violation || url,www.trustedsec.com/downloads/artillery || url,wiki.quadrantsec.com/bin/view/Main/5002089
+5002090 || [WINDOWS-APPLOCKER] Allowed program to execute || url,wiki.quadrantsec.com/bin/view/Main/5002090
+5002091 || [WINDOWS-APPLOCKER] Application blocked || url,wiki.quadrantsec.com/bin/view/Main/5002091
+5002092 || [WINDOWS-APPLOCKER] Allowed an MSI or script to execute || url,wiki.quadrantsec.com/bin/view/Main/5002092
+5002093 || [WINDOWS-APPLOCKER] Allowed MSI/Script, but would have blocked || url,wiki.quadrantsec.com/bin/view/Main/5002093
+5002094 || [WINDOWS-APPLOCKER] Prevent MSI/Script to execute || url,wiki.quadrantsec.com/bin/view/Main/5002094
+5002095 || [WINDOWS-APPLOCKER] Package application allowed || url,wiki.quadrantsec.com/bin/view/Main/5002095
+5002096 || [WINDOWS-APPLOCKER] Package application audited || url,wiki.quadrantsec.com/bin/view/Main/5002096
+5002097 || [WINDOWS-APPLOCKER] Package application disabled || url,wiki.quadrantsec.com/bin/view/Main/5002097
+5002098 || [WINDOWS-APPLOCKER] Package application installation allowed || url,wiki.quadrantsec.com/bin/view/Main/5002098
+5002099 || [WINDOWS-APPLOCKER] Package application installation audited || url,wiki.quadrantsec.com/bin/view/Main/5002099
+5002100 || [WINDOWS-APPLOCKER] Package application installation disabled || url,wiki.quadrantsec.com/bin/view/Main/5002100
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
@@ -4781,5 +4792,5 @@
 6106999 || [CISCO-SDEE] Cisco PIM Multicast Denial of Service Attack || url,wiki.quadrantsec.com/bin/view/Main/6106999
 6107000 || [CISCO-SDEE] Data Base TNS Connection || url,wiki.quadrantsec.com/bin/view/Main/6107000
 6107001 || [CISCO-SDEE] TNS Redirect Request || url,wiki.quadrantsec.com/bin/view/Main/6107001
-6107002 || [CISCO-SDEE] NBT NetBIOS Session Failed Login - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/6107002
-50017240 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x1 - Client's entry in database has expired || url,wiki.quadrantsec.com/bin/view/Main/5001740
+6107002 || [CISCO-SDEE] NBT NetBIOS Session Failed Login - Brute Force [5/3] || url,wiki.quadrantsec.com/bin/view/Main/6107002
+50017240 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x1 - Client's entry in database has expired [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001740
