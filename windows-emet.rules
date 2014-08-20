@@ -1,0 +1,44 @@
+# Sagan windows-applocker.rules
+# Copyright (c) 2009-2014, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+# Windows EMET rules
+# 
+# See http://support.microsoft.com/kb/2458544 for more information on EMET
+# 
+# Eventlog to syslog service.  This is what we primarily use.
+# http://code.google.com/p/eventlog-to-syslog/
+#
+# Champ Clark (08/20/2014)
+
+# 10.5.1.1|daemon|err|err|1b|2014-08-19|23:03:56|EMET| 2: EMET detected Caller mitigation and will close the application: chrome.exe Caller check failed: Application : C:\Program Files\Google\Chrome\Application\chrome.exe User Name : Champ-BOX\champ Session ID : 1 PID : 0xBFC (3068) TID : 0xBE8 (3048) API Name : kernel32.LoadLibraryW ReturnAddress : 0x5BE777AC CalledAddress : 0x769FEFF2 StackPtr : 0x0031E51C 
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-EMET] Detected Caller mitigation/will close application"; content: " 2|3a| "; classtype: suspicious-command; program: EMET; reference: url,wiki.quadrantsec.com/bin/view/Main/5002101; sid:5002101; rev:1;)
+
+# 10.5.1.1|daemon|notice|notice|1d|2014-08-20|12:03:23|Security-Auditing| 4689: A process has exited. Subject: Security ID: S-1-5-21-148272361-2449339356-1462517947-1000 Account Name: champ Account Domain: Champ-BOX Logon ID: 0x1a285 Process Information: Process ID: 0x120 Process Name: C:\Program Files\EMET 4.1\EMET_Agent.exe Exit Status: 0x40010004
+
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-EMET] EMET process stopped, but not due to reboot"; pcre: "/ 4689: | 593: /" ; content: "EMET_Agent.exe"; nocase; flowbits: isnotset, by_src, windows_reboot; program: Security-Auditing|Security; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002102; sid:5002102; rev:1;)
+
+

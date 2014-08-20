@@ -1141,7 +1141,7 @@
 5001182 || [WINDOWS-MISC] Application uninstall || url,wiki.quadrantsec.com/bin/view/Main/5001182
 5001183 || [WINDOWS-MISC] Application install || url,wiki.quadrantsec.com/bin/view/Main/5001183
 5001184 || [WINDOWS-MISC] Windows is shutting down || url,wiki.quadrantsec.com/bin/view/Main/5001184
-5001185 || [WINDOWS-AUTH] Windows audit log was cleared || url,wiki.quadrantsec.com/bin/view/Main/5001185
+5001185 || [WINDOWS-MISC] Windows audit log was cleared || url,wiki.quadrantsec.com/bin/view/Main/5001185
 5001186 || [WINDOWS-AUTH] Windows login attempt (ignored). Duplicated || url,wiki.quadrantsec.com/bin/view/Main/5001186
 5001187 || [WINDOWS-AUTH] Remote access login failure || url,wiki.quadrantsec.com/bin/view/Main/5001187
 5001188 || [WINDOWS-AUTH] Remote access login success || url,wiki.quadrantsec.com/bin/view/Main/5001188
@@ -1949,7 +1949,7 @@
 5002006 || [WINDOWS-MALWARE] Suspicious Tool Event || url,wiki.quadrantsec.com/bin/view/Main/5002006
 5002007 || [WINDOWS-MALWARE] Virus Found! || url,wiki.quadrantsec.com/bin/view/Main/5002007
 5002011 || [WINDOWS-MALWARE] System protection disabled || url,wiki.quadrantsec.com/bin/view/Main/5002011
-5002014 || [WINDOWS-MALWARE] System shutdown [FLOWBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5002014
+5002014 || [WINDOWS-MISC] System shutdown [FLOWBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5002014
 5002015 || [WINDOWS-MISC] RDP / Logon type 10 || url,wiki.quadrantsec.com/bin/view/Main/5002015
 5002016 || [WINDOWS-GEOIP] RDP / Logon type 10 from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002016
 5002017 || [WINDOWS-AUTH] Pass-The-Hash detected! || url, http://en.wikipedia.org/wiki/Pass_the_hash || url,wiki.quadrantsec.com/bin/view/Main/5002017
@@ -2034,6 +2034,8 @@
 5002098 || [WINDOWS-APPLOCKER] Package application installation allowed || url,wiki.quadrantsec.com/bin/view/Main/5002098
 5002099 || [WINDOWS-APPLOCKER] Package application installation audited || url,wiki.quadrantsec.com/bin/view/Main/5002099
 5002100 || [WINDOWS-APPLOCKER] Package application installation disabled || url,wiki.quadrantsec.com/bin/view/Main/5002100
+5002101 || [WINDOWS-EMET] Detected Caller mitigation/will close application || url,wiki.quadrantsec.com/bin/view/Main/5002101
+5002102 || [WINDOWS-EMET] EMET process stopped, but not due to reboot || url,wiki.quadrantsec.com/bin/view/Main/5002102
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
