@@ -2054,6 +2054,59 @@
 5002118 || [CISCO-WLC] NetStumbler 3.3.0 detected || url,wiki.quadrantsec.com/bin/view/Main/5002118 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
 5002119 || [CISCO-WLC] NetStumbler generic detected || url,wiki.quadrantsec.com/bin/view/Main/5002119 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
 5002120 || [CISCO-WLC] Wellenreiter detected || url,wiki.quadrantsec.com/bin/view/Main/5002120 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002121 || [CISCO-WLC] Big NAV Dos attack || url,wiki.quadrantsec.com/bin/view/Main/5002121 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002122 || [CISCO-PRIME] BIG NAV DOS Attack || url,wiki.quadrantsec.com/bin/view/Main/5002122 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002123 || [CISCO-PRIME] Rogue AP detect and contained || url,wiki.quadrantsec.com/bin/view/Main/5002123 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002124 || [CISCO-PRIME] Rogue AP detected exceed theshold || url,wiki.quadrantsec.com/bin/view/Main/5002124 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002125 || [CISCO-PRIME] SNMP Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5002125 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002126 || [CISCO-PRIME] Authentication failure by local management user/MAC  || url,wiki.quadrantsec.com/bin/view/Main/5002126 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002127 || [CISCO-PRIME] Rogue AP or ADHOC detected || url,wiki.quadrantsec.com/bin/view/Main/5002127 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002128 || [CISCO-PRIME] Rogue AP on the network! || url,wiki.quadrantsec.com/bin/view/Main/5002128 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002129 || [CISCO-PRIME] Rogue AP has been removed || url,wiki.quadrantsec.com/bin/view/Main/5002129 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002130 || [CISCO-PRIME] Internal high temperature detected! || url,wiki.quadrantsec.com/bin/view/Main/5002130 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002131 || [CISCO-PRIME] Internal low temperature detected! || url,wiki.quadrantsec.com/bin/view/Main/5002131 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002132 || [CISCO-PRIME] Station authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5002132 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002133 || [CISCO-PRIME] Station association failure || url,wiki.quadrantsec.com/bin/view/Main/5002133 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002134 || [CISCO-PRIME] Station blacklisted || url,wiki.quadrantsec.com/bin/view/Main/5002134 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002135 || [CISCO-PRIME] Duplicate IP address assigned to controller || url,wiki.quadrantsec.com/bin/view/Main/5002135 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002136 || [CISCO-PRIME] Possible brute force from management user! || url,wiki.quadrantsec.com/bin/view/Main/5002136 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002137 || [CISCO-PRIME] Rogue ADHOC contained || url,wiki.quadrantsec.com/bin/view/Main/5002137 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002138 || [CISCO-PRIME] Rogue AP auto contained || url,wiki.quadrantsec.com/bin/view/Main/5002138 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002140 || [CISCO-PRIME] Trusted AP has invalid encryption || url,wiki.quadrantsec.com/bin/view/Main/5002140 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002141 || [CISCO-PRIME] Trusted AP has invalid radio policy || url,wiki.quadrantsec.com/bin/view/Main/5002141 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002142 || [CISCO-PRIME] Trusted AP has invalid SSID || url,wiki.quadrantsec.com/bin/view/Main/5002142 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002143 || [CISCO-PRIME] Trusted AP missing || url,wiki.quadrantsec.com/bin/view/Main/5002143 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002144 || [CISCO-PRIME] AP impersionation detected! || url,wiki.quadrantsec.com/bin/view/Main/5002144 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002145 || [CISCO-PRIME] WIDS / Signature attack detected! || url,wiki.quadrantsec.com/bin/view/Main/5002145 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002146 || [CISCO-PRIME] WIDS / Signature attack detected! || url,wiki.quadrantsec.com/bin/view/Main/5002146 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002147 || [CISCO-PRIME] MESH Console login || url,wiki.quadrantsec.com/bin/view/Main/5002147 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002148 || [CISCO-PRIME] MESH authorization failure || url,wiki.quadrantsec.com/bin/view/Main/5002148 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002149 || [CISCO-PRIME] Shun client alert from IDS/IPS appliance! || url,wiki.quadrantsec.com/bin/view/Main/5002149 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002150 || [CISCO-PRIME] MFP anomaly detected || url,wiki.quadrantsec.com/bin/view/Main/5002150 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002151 || [CISCO-PRIME] MESH authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5002151 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002152 || [CISCO-PRIME] GUEST user created on controller || url,wiki.quadrantsec.com/bin/view/Main/5002152 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002153 || [CISCO-PRIME] GUEST user authenticated || url,wiki.quadrantsec.com/bin/view/Main/5002153 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002154 || [CISCO-PRIME] GUEST user logoff || url,wiki.quadrantsec.com/bin/view/Main/5002154 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002155 || [CISCO-PRIME] SI Security trap raised! || url,wiki.quadrantsec.com/bin/view/Main/5002155 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002156 || [CISCO-PRIME] Cooling fan failure [MSE-3355] || url,wiki.quadrantsec.com/bin/view/Main/5002156 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002157 || [CISCO-PRIME] Friendly rogue AP detected on network || url,wiki.quadrantsec.com/bin/view/Main/5002157 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002158 || [CISCO-PRIME] Friendly rogue AP detected || url,wiki.quadrantsec.com/bin/view/Main/5002158 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002159 || [CISCO-PRIME] Unclassified rogue AP detected on network || url,wiki.quadrantsec.com/bin/view/Main/5002159 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002160 || [CISCO-PRIME] Unclassified rogue AP detected on network contained || url,wiki.quadrantsec.com/bin/view/Main/5002160 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002161 || [CISCO-PRIME] Unclassified rogue AP detected contained || url,wiki.quadrantsec.com/bin/view/Main/5002161 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002162 || [CISCO-PRIME] Unclassified rogue AP detected || url,wiki.quadrantsec.com/bin/view/Main/5002162 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002163 || [CISCO-PRIME] Malicious rogue AP detected on the network || url,wiki.quadrantsec.com/bin/view/Main/5002163 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002164 || [CISCO-PRIME] Malicious rogue AP detected on the network contained || url,wiki.quadrantsec.com/bin/view/Main/5002164 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002165 || [CISCO-PRIME] Malicious rogue AP detected contained || url,wiki.quadrantsec.com/bin/view/Main/5002165 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002166 || [CISCO-PRIME] Malicious rogue AP || url,wiki.quadrantsec.com/bin/view/Main/5002166 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002167 || [CISCO-PRIME] Rogue ADHOC detected on network || url,wiki.quadrantsec.com/bin/view/Main/5002167 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002168 || [CISCO-PRIME] Rogue ADHOC detected on network contained || url,wiki.quadrantsec.com/bin/view/Main/5002168 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002170 || [CISCO-PRIME] Rogue AP state change || url,wiki.quadrantsec.com/bin/view/Main/5002170 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002171 || [CISCO-PRIME] Rogue detected || url,wiki.quadrantsec.com/bin/view/Main/5002171 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002172 || [CISCO-PRIME] Rogue detected contained || url,wiki.quadrantsec.com/bin/view/Main/5002172 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002173 || [CISCO-PRIME] Rogue detected on network || url,wiki.quadrantsec.com/bin/view/Main/5002173 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002174 || [CISCO-PRIME] Rogue auto contained || url,wiki.quadrantsec.com/bin/view/Main/5002174 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
+5002175 || [CISCO-PRIME] User authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5002175 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

@@ -103,3 +103,8 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] NetStumbler g
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Wellenreiter detected"; program: snmptrapd; content: "signatureName=Wellenreiter"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002120; sid:5002120; rev:1;)
 
+# Big NAV Dos attack from AP with Base Radio MAC 00:0f:23:xx:xx:xx, Slot ID 0 and Source MAC 00:00:00:00:00:00
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Big NAV Dos attack"; program: snmptrapd; content: "Big NAV Dos attack"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002121; sid:5002121; rev:1;)
+
+
