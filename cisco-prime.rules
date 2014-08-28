@@ -345,5 +345,8 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] User authen
 # WIPS_TRAPS
 # Dynamically generated per alarm.
 # See the wIPS alarm encyclopedia under NCS > Configuration > wIPS Profiles.
-# ^^^ RESEARCH MORE
+# READ ME:  This could be split out more.  Cisco documentation has the "alarm names",  but lacks SNMP Trap examples.  
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] WIPS Event!"; program: snmptrapd; content: "=WIPS_TRAPS|28|"; classtype: suspicious-traffic; reference: url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002176; sid:5002176; rev:1;)
+
 
