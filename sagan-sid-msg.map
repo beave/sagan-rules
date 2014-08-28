@@ -2036,6 +2036,24 @@
 5002100 || [WINDOWS-APPLOCKER] Package application installation disabled || url,wiki.quadrantsec.com/bin/view/Main/5002100
 5002101 || [WINDOWS-EMET] Detected Caller mitigation/will close application || url,wiki.quadrantsec.com/bin/view/Main/5002101
 5002102 || [WINDOWS-EMET] EMET process stopped, but not due to reboot || url,wiki.quadrantsec.com/bin/view/Main/5002102
+5002103 || [WINDOWS-MALWARE] RASWMI Malware process detected || url,wiki.quadrantsec.com/bin/view/Main/5002103
+5002104 || [CISCO-WLC] Bcast Deauth || url,wiki.quadrantsec.com/bin/view/Main/5002104 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002105 || [CISCO-WLC] Null probe resp 1 || url,wiki.quadrantsec.com/bin/view/Main/5002105 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002106 || [CISCO-WLC] Null probe resp 2 || url,wiki.quadrantsec.com/bin/view/Main/5002106 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002107 || [CISCO-WLC] Assoc Flood || url,wiki.quadrantsec.com/bin/view/Main/5002107 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002108 || [CISCO-WLC] Reassoc Flood || url,wiki.quadrantsec.com/bin/view/Main/5002108 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002109 || [CISCO-WLC] Broadcast Probe flood || url,wiki.quadrantsec.com/bin/view/Main/5002109 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002110 || [CISCO-WLC] Disassoc flood || url,wiki.quadrantsec.com/bin/view/Main/5002110 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002111 || [CISCO-WLC] Deauth flood || url,wiki.quadrantsec.com/bin/view/Main/5002111 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002112 || [CISCO-WLC] Res mgmt 6 & 7 || url,wiki.quadrantsec.com/bin/view/Main/5002112 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002113 || [CISCO-WLC] Res mgmt D || url,wiki.quadrantsec.com/bin/view/Main/5002113 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002114 || [CISCO-WLC] Res mgmt E & F || url,wiki.quadrantsec.com/bin/view/Main/5002114 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002115 || [CISCO-WLC] EAPOL flood || url,wiki.quadrantsec.com/bin/view/Main/5002115 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002116 || [CISCO-WLC] NetStumbler 3.2.0 detected || url,wiki.quadrantsec.com/bin/view/Main/5002116 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002117 || [CISCO-WLC] NetStumbler 3.2.3 detected || url,wiki.quadrantsec.com/bin/view/Main/5002117 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002118 || [CISCO-WLC] NetStumbler 3.3.0 detected || url,wiki.quadrantsec.com/bin/view/Main/5002118 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002119 || [CISCO-WLC] NetStumbler generic detected || url,wiki.quadrantsec.com/bin/view/Main/5002119 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
+5002120 || [CISCO-WLC] Wellenreiter detected || url,wiki.quadrantsec.com/bin/view/Main/5002120 || url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
