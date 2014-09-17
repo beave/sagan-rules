@@ -104,6 +104,6 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope
 
 # Moved from windows-malware.rules
 
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdown [FLOWBIT SET]"; content: " 1074|3a| "; program: USER32; flowbits: set, windows_reboot, 60; flowbits: noalert; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002014; sid: 5002014; rev:5;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdown [FLOWBIT SET]"; content: " 1074|3a| "; program: USER32; flowbits: set, reboot.windows, 60; flowbits: noalert; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002014; sid: 5002014; rev:6;)
 
 
