@@ -1,0 +1,54 @@
+# Sagan deleted.rules
+# Copyright (c) 2009-2014, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+# Where rules go to die & why.
+#*************************************************************
+
+
+# Champ Clark - 09/17/2014 - Would be better for meta_content,  if we event want to do this! 
+
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [a]"; pcre: "/invalid user|illegal user/i"; content: "user a "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001106; sid: 5001106; rev:5;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [admin]"; pcre: "/invalid user|illegal user/i"; content: "user admin "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001107; sid: 5001107; rev:5;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [ftp]"; pcre: "/invalid user|illegal user/i"; content: "user ftp "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001108; sid: 5001108; rev:5;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [guest]"; pcre: "/invalid user|illegal user/i"; content: "user guest "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day;  reference: url,wiki.quadrantsec.com/bin/view/Main/5001109; sid: 5001109; rev:5;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [info]"; pcre: "/invalid user|illegal user/i"; content: "user info "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001110; sid: 5001110; rev:5;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [mysql]"; pcre: "/invalid user|illegal user/i"; content: "user mysql "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001111; sid: 5001111; rev:5;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [nagios]"; pcre: "/invalid user|illegal user/i"; content: "user nagios "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day;  reference: url,wiki.quadrantsec.com/bin/view/Main/5001112; sid: 5001112; rev:5;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [oracle]"; pcre: "/invalid user|illegal user/i"; content: "user oracle "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001113; sid: 5001113; rev:5;) 
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [postgres]"; pcre: "/invalid user|illegal user/i"; content: "user postgres "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001114; sid: 5001114; rev:5;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [test]"; pcre: "/invalid user|illegal user/i"; content: "user test "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001115; sid: 5001115; rev:5;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [user]"; pcre: "/invalid user|illegal user/i"; content: "user user "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001116; sid: 5001116; rev:5;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [web]"; pcre: "/invalid user|illegal user/i"; content: "user web "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001117; sid: 5001117; rev:4;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [webmaster]"; pcre: "/invalid user|illegal user/i"; content: "user webmaster "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001118; sid: 5001118; rev:5;)
+#drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Invalid or illegal user [apache]"; pcre: "/invalid user|illegal user/i"; content: "user apache "; flowbits: set, illegal_user.unix.ssh&illegal_user.generic, 300; classtype: attempted-user; program: sshd; parse_src_ip: 1; threshold:type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001119; sid: 5001119; rev:5;)
+
+# Champ Clark - 09/17/2014 - Never used. 
+
+#alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Accepted publickey"; content: "Accepted publickey" ; classtype: successful-user; program: sshd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000406; sid:5000406; rev:5;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Session closed"; content: "session closed for" ; classtype: not-suspicious; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000407; sid:5000407; rev:2;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Received disconnect"; content: "Received disconnect from"; classtype: not-suspicious; program: sshd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000408; sid:5000408; rev:4;)
+#alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Authentication success"; pcre: "/accepted|authenticated/i"; classtype: successful-user; normalize: openssh; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000075; sid: 5000075; rev:3;)
+
