@@ -95,8 +95,8 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Fail2Ban SSH Sus
 
 # Added by Champ Clark - 09/17/2014 - Required flowbit.  Valid login _after_ brute force. 
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] SSH login success after brute force attack!"; pcre: "/accepted|authenticated/i"; flowbits: isset, both,brute_force.unix.ssh; flowbits: set,attacker.unix.login&attacker.generic,86400; normalize: openssh; classtype: successful-user; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002176; sid:5002177; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Accepted publickey after brute force attack!"; content: "Accepted publickey" ; flowbits: isset, both, brute_force.ssh; flowbits: set,attacker.unix.login&attacker.generic,86400; normalize: openssh; classtype: successful-user; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002178; sid:5002178; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] SSH login success after brute force attack!"; pcre: "/accepted|authenticated/i"; flowbits: isset, both,brute_force.unix.ssh; flowbits: set,attacker.unix.login&attacker.generic,86400; normalize: openssh; classtype: correlated-attack; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002176; sid:5002177; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] Accepted publickey after brute force attack!"; content: "Accepted publickey" ; flowbits: isset, both, brute_force.ssh; flowbits: set,attacker.unix.login&attacker.generic,86400; normalize: openssh; classtype: correlated-attack; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002178; sid:5002178; rev:2;)
 
 
 
