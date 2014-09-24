@@ -2092,6 +2092,8 @@
 5002176 || [CISCO-PRIME] WIPS Event! || url,wiki.quadrantsec.com/bin/view/Main/5002176 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
 5002177 || [OPENSSH] SSH login success after brute force attack! || url,wiki.quadrantsec.com/bin/view/Main/5002176
 5002178 || [OPENSSH] Accepted publickey after brute force attack! || url,wiki.quadrantsec.com/bin/view/Main/5002178
+5002179 || [BASH] Remote execution attempt via CVE-2014-6271 || url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271 || url,wiki.quadrantsec.com/bin/view/Main/5002179
+5002180 || [APACHE] Remote execution attempt via CVE-2014-6271 || url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271 || url,wiki.quadrantsec.com/bin/view/Main/5002180
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
