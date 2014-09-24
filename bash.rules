@@ -50,3 +50,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] suidperl access"; c
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] histfile=/dev/null"; content:"histfile=/dev/null"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000014; program: bash|-bash; sid:5000014; level: info; rev:3;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] iptables command access"; content:"iptables"; content: "HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000385; program: bash|-bash; sid:5000385; level: info; rev:3;)
 
+# CVS-2014-6271 (09/24/2014 - Champ Clark III)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Remote execution attempt via CVE-2014-6271"; content:"|28 29| { |3a 3b|}"; content: "HISTORY"; program: bash|-bash; classtype: exploit-attempt; flowbits: set, exploit_attempt, 86400; reference: url,wiki.quadrantsec.com/bin/view/Main/5002179; reference: url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271; sid:5002179; rev:1;)
+
