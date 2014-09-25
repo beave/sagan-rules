@@ -51,5 +51,5 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORT (msg:"[APACHE] Apache php-my
 
 # CVS-2014-6271 (09/24/2014 - Champ Clark III)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[APACHE] Remote execution attempt via CVE-2014-6271"; content:"|28 29| { |3a 3b|}"; program: apache|httpd; classtype: exploit-attempt; flowbits: set, exploit_attempt, 86400; parse_src_ip: 1; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5002180; reference: url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271; sid:5002180; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORT (msg:"[APACHE] Remote execution attempt via CVE-2014-6271"; content:"|28 29| { |3a 3b|}"; program: apache|httpd; classtype: exploit-attempt; flowbits: set, exploit_attempt, 86400; parse_src_ip: 1; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5002180; reference: url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271; sid:5002180; rev:3;)
 
