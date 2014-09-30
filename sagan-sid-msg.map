@@ -149,18 +149,18 @@
 5000152 || [MYSQL] Database startup or restart || quadrantsec,5000152
 5000153 || [MYSQL] Database error || url,wiki.quadrantsec.com/bin/view/Main/5000153
 5000154 || [MYSQL] Database fatal error || url,wiki.quadrantsec.com/bin/view/Main/5000154
-5000155 || [APACHE] Apache segmentation fault || url,wiki.quadrantsec.com/bin/view/Main/5000155
-5000156 || [APACHE] Apache Attempt to access forbidden file or directory || url,wiki.quadrantsec.com/bin/view/Main/5000156
-5000157 || [APACHE] Apache Attempt to access forbidden directory index || url,wiki.quadrantsec.com/bin/view/Main/5000157
-5000158 || [APACHE] Apache Client sent malformed Host header || url,wiki.quadrantsec.com/bin/view/Main/5000158
-5000159 || [APACHE] Apache User authentication failed || url,wiki.quadrantsec.com/bin/view/Main/5000159
-5000160 || [APACHE] Apache Attempt to login using a non-existent user || url,wiki.quadrantsec.com/bin/view/Main/5000160
-5000161 || [APACHE] Apache Attempt to access a non-existent file or directory || url,wiki.quadrantsec.com/bin/view/Main/5000161
-5000162 || [APACHE] Apache Invalid URI in request || url,wiki.quadrantsec.com/bin/view/Main/5000162
-5000163 || [APACHE] Apache Invalid URI, file name too long || url,wiki.quadrantsec.com/bin/view/Main/5000163
+5000155 || [APACHE] Segmentation fault || url,wiki.quadrantsec.com/bin/view/Main/5000155
+5000156 || [APACHE] Attempt to access forbidden file or directory || url,wiki.quadrantsec.com/bin/view/Main/5000156
+5000157 || [APACHE] Attempt to access forbidden directory index || url,wiki.quadrantsec.com/bin/view/Main/5000157
+5000158 || [APACHE] Client sent malformed Host header || url,wiki.quadrantsec.com/bin/view/Main/5000158
+5000159 || [APACHE] User authentication failed || url,wiki.quadrantsec.com/bin/view/Main/5000159
+5000160 || [APACHE] Attempt to login using a non-existent user || url,wiki.quadrantsec.com/bin/view/Main/5000160
+5000161 || [APACHE] Rapid attempt to access a non-existent file or directory || url,wiki.quadrantsec.com/bin/view/Main/5000161
+5000162 || [APACHE] Invalid URI in request || url,wiki.quadrantsec.com/bin/view/Main/5000162
+5000163 || [APACHE] Invalid URI, file name too long || url,wiki.quadrantsec.com/bin/view/Main/5000163
 5000164 || [BIND] Unexpected error [RCODE] while resolving domain || url,wiki.quadrantsec.com/bin/view/Main/5000164
-5000165 || [APACHE] Apache Mod_Security Access denied || url,wiki.quadrantsec.com/bin/view/Main/5000165
-5000166 || [APACHE] Apache Resource temporarily unavailable || url,wiki.quadrantsec.com/bin/view/Main/5000166
+5000165 || [APACHE] Mod_Security Access denied || url,wiki.quadrantsec.com/bin/view/Main/5000165
+5000166 || [APACHE] Resource temporarily unavailable || url,wiki.quadrantsec.com/bin/view/Main/5000166
 5000168 || [NGINX] Nginx error message || url,wiki.quadrantsec.com/bin/view/Main/5000168
 5000169 || [NGINX] Nginx warning message || url,wiki.quadrantsec.com/bin/view/Main/5000169
 5000170 || [NGINX] Nginx critical message || url,wiki.quadrantsec.com/bin/view/Main/5000170
@@ -339,11 +339,11 @@
 5000355 || [WINDOWS-MISC] WinVNC4 HTTPServer event || url,wiki.quadrantsec.com/bin/view/Main/5000355
 5000356 || [WINDOWS-MISC] Crypt32 Failed to extract third-party root list || url,wiki.quadrantsec.com/bin/view/Main/5000356
 5000357 || [SENDMAIL] Username with pipe symbol || url,wiki.quadrantsec.com/bin/view/Main/5000357
-5000359 || [APACHE] Apache directory attempt || url,wiki.quadrantsec.com/bin/view/Main/5000359
-5000360 || [APACHE] Apache directory attempt || url,wiki.quadrantsec.com/bin/view/Main/5000360
-5000361 || [APACHE] Apache robots.txt access || url,wiki.quadrantsec.com/bin/view/Main/5000361
-5000362 || [APACHE] Apache phpinfo access attempt [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000362
-5000364 || [APACHE] Apache php-my-admin access attempt [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000364
+5000359 || [APACHE] Directory traversal attempt - 1 || url,wiki.quadrantsec.com/bin/view/Main/5000359
+5000360 || [APACHE] Directory traversal attempt - 2 || url,wiki.quadrantsec.com/bin/view/Main/5000360
+5000361 || [APACHE] Robots.txt access || url,wiki.quadrantsec.com/bin/view/Main/5000361
+5000362 || [APACHE] PHPinfo access attempt [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000362
+5000364 || [APACHE] Php-my-admin access attempt [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000364
 5000365 || [ATTACK] Possible buffer overflow attempt [yppasswd?] || url,wiki.quadrantsec.com/bin/view/Main/5000356
 5000366 || [ATTACK] Heap overflow in the Solaris cachefsd service || url,wiki.quadrantsec.com/bin/view/Main/5000366
 5000367 || [IMAPD] User login failed || url,wiki.quadrantsec.com/bin/view/Main/5000367
@@ -357,7 +357,7 @@
 5000375 || [SAMBA] User action denied by configuration || url,wiki.quadrantsec.com/bin/view/Main/5000375
 5000376 || [SYSLOG] User or group was deleted from the system || url,wiki.quadrantsec.com/bin/view/Main/5000376
 5000377 || [SYSLOG] Information for a user was changed || url,wiki.quadrantsec.com/bin/view/Main/5000377
-5000378 || [APACHE] Apache Attempt to access a non-existent file or stream || url,wiki.quadrantsec.com/bin/view/Main/5000378
+5000378 || [APACHE] Attempt to access a non-existent file or stream || url,wiki.quadrantsec.com/bin/view/Main/5000378
 5000379 || [XINETD] Excessive number connections to a service || url,wiki.quadrantsec.com/bin/view/Main/5000379
 5000380 || [VMWARE] Virtual machine being turned ON || url,wiki.quadrantsec.com/bin/view/Main/5000380
 5000381 || [WINDOWS-MISC] LSASRV - Could not establish a secure connection || url,wiki.quadrantsec.com/bin/view/Main/5000381
@@ -2094,6 +2094,38 @@
 5002178 || [OPENSSH] Accepted publickey after brute force attack! || url,wiki.quadrantsec.com/bin/view/Main/5002178
 5002179 || [BASH] Remote execution attempt via CVE-2014-6271 || url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271 || url,wiki.quadrantsec.com/bin/view/Main/5002179
 5002180 || [APACHE] Remote execution attempt via CVE-2014-6271 || url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271 || url,wiki.quadrantsec.com/bin/view/Main/5002180
+5002181 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 1 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002182 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 2 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002183 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 3 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002184 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 4 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002185 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 5 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002186 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 6 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002187 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 7 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002188 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 8 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002189 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 9 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002190 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 10 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002191 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 12 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002192 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 13 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002193 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 14 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002194 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 15 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002195 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 16 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002196 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 17 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002197 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 18 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002198 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 19 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002199 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 20 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002200 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 21 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002201 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 22 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002202 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 23 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002203 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 24 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002204 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 25 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002205 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 26 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002206 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 27 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002207 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 28 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002208 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 29 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002209 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 30 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002210 || [APACHE] CVE-2014-6271 Attempt In HTTP Headers Line Continuation Evasion LF || url,www.invisiblethreat.ca/2014/09/cve-2014-6271/
+5002211 || [APACHE] CVE-2014-6271 Attempt In HTTP Headers Line Continuation Evasion CRLF || url,www.invisiblethreat.ca/2014/09/cve-2014-6271/
+5002212 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 11 || url,blogs.akamai.com/2014/09/environment-bashing.html
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
