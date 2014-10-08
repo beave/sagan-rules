@@ -210,4 +210,6 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows DC
 #alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] RDP / Logon type 10"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; program: Security|Security-Auditing; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002015; sid: 5002015; rev:1;)
 #alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] Logon attempt using explicit credentials; pcre: "/ 552: | 4648: /"; content:!"Network Address|3a| - "; content:!"Port|3a| - "; content:!"Target Server Name|3a| localhost"; program: Security|Security-Auditing; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002018; sid: 5002018; rev:1;)
 
+# Rule added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/08/2014
 
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account disabled"; content: " 4725|3a| "; program: Security|Security-Auditing; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002213; sid: 5002213; rev:1;)
