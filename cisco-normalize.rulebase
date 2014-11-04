@@ -83,3 +83,12 @@ rule=: Deny inbound UDP from %src-ip:ipv4%/%src-port:number% to %dst-ip:ipv4%/%d
 #
 rule=: Denied ICMP type=%-:number%, code=%-:number% from %src-ip:ipv4% on interface %-:word%
 
+# These cover a lot of WebVPN, etc rules. 
+#
+# Group <GroupPolicy1> User <Bob> IP <10.10.10.10> WebVPN session terminated: User Requested.
+# Group <GroupPolicy1> User <Bob> IP <10.10.10.10> WebVPN session terminated: Idle Timeout.
+# Group <Mobile VPN Group Policy> User <Bob> IP <10.10.10.10> SVC closing connection: Transport closing.
+# Group <Mobile VPN Group Policy> User <BobR> IP <10.10.10.10> SVC Message: 17/ERROR: Reconnecting to recover from error..
+#
+rule=: Group <%-:char-to:\x3e%> User <%username:char-to:\x3e%> IP <%srcip:char-to:\x3e%> %-:rest%
+
