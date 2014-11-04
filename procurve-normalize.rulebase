@@ -25,7 +25,7 @@
 #
 #*************************************************************
 
-prefix=
+#prefix=
 #FFI: port 14 - Security Violation
-rule=:  port %-:number% - Security Violation
+#rule=:  port %-:number% - Security Violation
 

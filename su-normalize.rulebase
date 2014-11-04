@@ -29,8 +29,5 @@
 
 prefix=
 rule=: Successful su for %-:word% by %username:word%
-rule=: pam_unix(sudo:auth): authentication failure; logname= uid=%uid:number% euid=%euid:number% tty=/dev/pts/%-:number% ruser= rhost=  user=%username:word%
-
-
-
+rule=: pam_unix(sudo:auth): authentication failure; logname= uid=%uid:number% euid=%-:number% %-:word% ruser= rhost=  user=%username:word%
 

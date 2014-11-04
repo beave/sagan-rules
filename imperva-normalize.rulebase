@@ -28,5 +28,5 @@
 
 prefix=
 
-rule=: act=Block dst=%dstip:ipv4% dpt=%srcport:number% duser=%username:word% src=%srcip:ipv4% spt=%srcport:number% proto=%proto:word% %all:rest%
+rule=: act=Block dst=%dst-ip:ipv4% dpt=%src-port:number% duser=%username:word% src=%src-ip:ipv4% spt=%src-port:number% proto=%proto:word% %all:rest%
 

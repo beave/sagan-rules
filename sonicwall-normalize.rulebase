@@ -36,8 +36,6 @@ prefix=id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr
 
 rule=: msg="Possible port scan detected" n=%n:number% src=%src-ip:ipv4%:%src-port:number%:%interface:word% dst=%dst-ip:ipv4%:%dst-port:number%:%interface:word% note=%ports-scanned:quoted-string% 
 
-
-
 #rule=:  msg="%alert:char-to:\x22%" sid=%sid:number% ipscat=%proto:word% ipspri=%ipspri:number% n=%n:number% src=%src-ip:ipv4%:%src-port:number%:%interface:word% dst=%dst-ip:ipv4%:%dst-port:number%:%interface:word% 
 
 rule=:  msg=%alert:quoted-string% sid=%sid:number% ipscat=%proto:word% ipspri=%ipspri:number% n=%n:number% src=%src-ip:ipv4%:%src-port:number%:%interface:word% dst=%dst-ip:ipv4%:%dst-port:number%:%interface:word% 

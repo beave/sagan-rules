@@ -39,13 +39,13 @@ rule=: %month:word% %day:word% %hour:word% %SNMP-3-AUTHFAIL: Authentication fail
 
 # Access denied URL http://www.example.com/somethings.txt SRC 192.168.0.1 DEST 10.10.10.10 on interface inside
 
-rule=: Access denied URL %url:word% SRC %src-ip:ipv4% DEST %dst-ip:ipv4% on interface %interface:word%
+rule=: Access denied URL %url:word% SRC %src-ip:ipv4% DEST %dst-ip:ipv4% %-:rest%
 
 # Caused by WebVPN or IPSec
 # AAA user authentication Successful : server =  10.10.10.10 : user = domain\bob
 
 rule=: AAA user authentication Successful : server =  %ip-src:ipv4% : user = %username:word%
-rule=: AAA user authentication Rejected : reason = %reason:word% : server = %ip-src:ipv4% : user = %username:word%
+rule=: AAA user authentication Rejected : reason = %-:word% : server = %ip-src:ipv4% : user = %username:word%
 
 # User authentication failed: Uname: timothy
 
@@ -55,12 +55,12 @@ rule=: User authentication failed: Uname: %username:word%
 # %ASA-6-315011: SSH session from 192.168.0.1  on interface Outside2 for user "test" disconnected by SSH server, reason: "Internal error" (0x00)
 #                SSH session from 10.20.10.200 on interface Outside2 for user "root" disconnected by SSH server, reason: "Internal error" (0x00)
 
-rule=: SSH session from %src-ip:ipv4% on interface %interface:word% for user %username:quoted-string% disconnected by SSH server, reason: %reason:quoted-string% %code:word% 
-rule=: SSH session from %src-ip:ipv4%  on interface %interface:word% for user %username:quoted-string% disconnected by SSH server, reason: %reason:quoted-string% %code:word%
+rule=: SSH session from %src-ip:ipv4% on interface %-:word% for user %username:quoted-string% disconnected by SSH server, %-:rest%
+rule=: SSH session from %src-ip:ipv4%  on interface %-:word% for user %username:quoted-string% disconnected by SSH server, %-:rest%
 
-rule=: Configured from console by %tty:word:% (%ip:ipv4%)
-rule=: Authentication failure for %proto:word% req from host %ip:ipv4%
-rule=: Attempted to connect to %servname:word% from %ip:ipv4%
+rule=: Configured from console by %-:word% (%src-ip:ipv4%)
+rule=: Authentication failure for %proto:word% req from host %src-ip:ipv4%
+rule=: Attempted to connect to %username:word% from %src-ip:ipv4%
 
 # 02:19:47.007 UTC: %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host 10.10.10.10
 #
@@ -68,8 +68,7 @@ rule=: %-:word% %-:word% %-:word% %-:word% %%SNMP-3-AUTHFAIL: Authentication fai
 
 # Deny TCP (no connection) from perforce/139 to 192.168.73.1/2048 flags RST ACK  on interface INSIDE
 #
-rule=: Deny TCP (no connection) from %src-ip:ipv4%/%src-port:number% to %dst-ip:ipv4%/%dst-port:number% flags %-:word% %-:word%  on interface %-:word%
-rule=: Deny TCP (no connection) from %src-ip:ipv4%/%src-port:number% to %dst-ip:ipv4%/%dst-port:number% flags %-:word%  on interface %-:word%
+rule=: Deny %proto:word% (no connection) from %src-ip:ipv4%/%src-port:number% to %dst-ip:ipv4%/%dst-port:number% flags %-:rest%
 
 # Mar 31 02:30:42.815 UTC: %SYS-5-CONFIG_I: Configured from console by sachen on vty0 (10.32.23.63)
 #
@@ -77,11 +76,11 @@ rule=: %-:word% %-:word% %-:word% %-:word% %%SYS-5-CONFIG_I: Configured from con
 
 # Deny inbound UDP from 46.161.166.49/63905 to 214.20.10.211/65257 on interface OUTSIDE
 #
-rule=: Deny inbound UDP from %src-ip:ipv4%/%src-port:number% to %dst-ip:ipv4%/%dst-port:number% on interface %-:word%
+rule=: Deny inbound UDP from %src-ip:ipv4%/%src-port:number% to %dst-ip:ipv4%/%dst-port:number% %-:rest%
 
 # Denied ICMP type=8, code=0 from 159.101.118.111 on interface INSIDE
 #
-rule=: Denied ICMP type=%-:number%, code=%-:number% from %src-ip:ipv4% on interface %-:word%
+rule=: Denied ICMP type=%-:number%, code=%-:number% from %src-ip:ipv4% %-:rest%
 
 # These cover a lot of WebVPN, etc rules. 
 #
@@ -90,5 +89,25 @@ rule=: Denied ICMP type=%-:number%, code=%-:number% from %src-ip:ipv4% on interf
 # Group <Mobile VPN Group Policy> User <Bob> IP <10.10.10.10> SVC closing connection: Transport closing.
 # Group <Mobile VPN Group Policy> User <BobR> IP <10.10.10.10> SVC Message: 17/ERROR: Reconnecting to recover from error..
 #
-rule=: Group <%-:char-to:\x3e%> User <%username:char-to:\x3e%> IP <%srcip:char-to:\x3e%> %-:rest%
+rule=: Group <%-:char-to:\x3e%> User <%username:char-to:\x3e%> IP <%src-ip:char-to:\x3e%> %-:rest%
 
+# Teardown UDP connection 31929471 for inside:10.10.10.10/1111 to dmz:239.254.0.4/12224 duration 0:00:00 bytes 0
+# Teardown TCP connection 1829067148 for outside:10.10.10.10/443 to inside:192.168.1.1/10830 duration 0:03:04 bytes 8699 TCP FINs"
+
+rule=: Teardown %proto:word% connection %connection:number% for %-:char-to:\x3a%:%src-ip:ipv4%/%src-port:number% to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number% %-:rest%
+
+# Teardown ICMP connection for faddr 10.10.10.10/0 gaddr 192.168.1.1/10000 laddr 192.168.1.1/100001
+
+rule=: Teardown %proto:word% connection for %-:word% %src-ip:ipv4%/%src-port:number% %-:word% %dst-ip:ipv4%/28694 %-:rest%
+
+# access-list inside_egress permitted tcp inside/10.10.10.1(10000) -> outside/192.186.1.1(80) hit-cnt 1 first hit [0xf83f456b, 0x0]
+
+rule=: access-list %-:word% permitted %proto:word% %-:char-to:\x2f%/%src-ip:ipv4%(%src-port:number%) -> %-:char-to:\x2f%/%dst-ip:ipv4%(%dst-port:number%) %-:rest%
+
+# Built inbound TCP connection 3171137 for outside:10.10.10.10/10000 (10.10.10.10/10000)(DOMAIN\Bob) to inside:192.168.1.10/80 (192.168.1.1/80) (Bob)
+
+rule=: Built inbound %proto:word% connection %-:number% for %-:char-to:\x3a%:%src-ip:ipv4%/%src-port:number% (%-:ipv4%/58521)(%domain:char-to:\x5c%\%username:char-to:\x29%) to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number% %-:rest%
+
+# Built inbound TCP connection 1834111354 for outside:10.10.10.10/28490 (10.10.10.10/28490) to dmz:192.168.1.1/80 (192.168.1.1/80)
+
+rule=: Built %-:word% %proto:word% connection %-:number% for %-:char-to:\x3a%:%src-ip:ipv4%/%src-port:number% %-:word% to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number% %-:rest%

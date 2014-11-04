@@ -36,7 +36,7 @@ prefix=
 #
 # [6251572.861709] IN=fire OUT=fire PHYSIN=eth0 PHYSOUT=eth1 SRC=X.X.X.X DST=X.X.X.X LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=9133 DF PROTO=TCP SPT=50661 DPT=113 WINDOW=5840 RES=0x00 SYN URGP=0
 
-rule=: %unusedtime:word% IN=%in:word% OUT=%out:word% PHYSIN=%physin:word% PHYSOUT=%phyout:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%len:number% TOS=%tos:word% PREC=%prec:word% TTL=%ttl:number% ID=%id:number% %DF:word% PROTO=%proto:word% SPT=%src-port:number% DPT=%dst-port:number% WINDOW=%window:number% RES=%res:word% %pkt-type:word% URGP=%urgp:number% 
+rule=: %-:word% IN=%-:word% OUT=%-:word% PHYSIN=%-:word% PHYSOUT=%-:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%-:number% TOS=%-:word% PREC=%-:word% TTL=%-:number% ID=%-:number% %-:word% PROTO=%proto:word% SPT=%src-port:number% DPT=%dst-port:number% %-:rest%
 
 # iptables UDP : iptables flags "--state NEW,INVALID -j LOG"  (NOTE: no --prefix!)
 #
@@ -44,9 +44,8 @@ rule=: %unusedtime:word% IN=%in:word% OUT=%out:word% PHYSIN=%physin:word% PHYSOU
 # [6255730.106539] IN=fire OUT=fire PHYSIN=eth0 SRC=X.X.X.X DST=X.X.X.X LEN=76 TOS=0x00 PREC=0xC0 TTL=63 ID=34162 PROTO=UDP SPT=123 DPT=123 LEN=56 
 # [6256275.991117] IN=fire OUT=fire PHYSIN=eth0 PHYSOUT=eth1 SRC=X.X.X.X DST=X.X.X.X LEN=241 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=138 DPT=138 LEN=221 
 
-rule=: %unusedtime:word% IN=%in:word% OUT=%out:word% PHYSIN=%phyin:word% PHYSOUT=%phyout:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%len:number% TOS=%tos:word% PREC=%prec:word% TTL=%tos:word% ID=%id:number% PROTO=%proto:word% SPT=%src-port:number% DPT=%dst-port:number% LEN=%len:number% 
+rule=: %-:word% IN=%-:word% OUT=%-:word% PHYSIN=%-:word% PHYSOUT=%-:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%-:number% TOS=%-:word% PREC=%-:word% TTL=%-:word% ID=%-:number% PROTO=%-:word% SPT=%src-port:number% DPT=%dst-port:number% %-:rest%
 
-rule=: %unusedtime:word% IN=%in:word% OUT=%out:word% PHYSIN=%phyin:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%len:number% TOS=%tos:word% PREC=%prec:word% TTL=%ttl:number% ID=%id:number%2 PROTO=%proto:word% SPT=%src-port:number% DPT=%dst-port:number% LEN=%len:number% 
-
+rule=: %-:word% IN=%-:word% OUT=%-:word% PHYSIN=%-:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%-:number% TOS=%-:word% PREC=%-:word% TTL=%-:number% ID=%-:number% PROTO=%proto:word% SPT=%src-port:number% DPT=%dst-port:number% %-:rest%
 
 
