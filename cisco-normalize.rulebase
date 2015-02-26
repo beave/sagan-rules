@@ -45,7 +45,7 @@ rule=: Access denied URL %url:word% SRC %src-ip:ipv4% DEST %dst-ip:ipv4% %-:rest
 # AAA user authentication Successful : server =  10.10.10.10 : user = domain\bob
 
 rule=: AAA user authentication Successful : server =  %ip-src:ipv4% : user = %username:word%
-rule=: AAA user authentication Rejected : reason = %-:word% : server = %ip-src:ipv4% : user = %username:word%
+rule=: AAA user authentication Rejected : reason = AAA failure : server = %src-ip:ipv4% : user = %username:word%
 
 # User authentication failed: Uname: timothy
 
@@ -106,8 +106,15 @@ rule=: access-list %-:word% permitted %proto:word% %-:char-to:\x2f%/%src-ip:ipv4
 
 # Built inbound TCP connection 3171137 for outside:10.10.10.10/10000 (10.10.10.10/10000)(DOMAIN\Bob) to inside:192.168.1.10/80 (192.168.1.1/80) (Bob)
 
-rule=: Built inbound %proto:word% connection %-:number% for %-:char-to:\x3a%:%src-ip:ipv4%/%src-port:number% (%-:ipv4%/58521)(%domain:char-to:\x5c%\%username:char-to:\x29%) to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number% %-:rest%
+rule=: Built %-:word% %proto:word% connection %-:number% for %-:char-to:\x3a%:%src-ip:ipv4%/%src-port:number% (%-:ipv4%/58521)(%domain:char-to:\x5c%\%username:char-to:\x29%) to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number% %-:rest%
 
 # Built inbound TCP connection 1834111354 for outside:10.10.10.10/28490 (10.10.10.10/28490) to dmz:192.168.1.1/80 (192.168.1.1/80)
 
 rule=: Built %-:word% %proto:word% connection %-:number% for %-:char-to:\x3a%:%src-ip:ipv4%/%src-port:number% %-:word% to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number% %-:rest%
+
+#  Group = Employee, Username = bob, IP = 10.10.10.10, Error processing payload: Payload ID: 14
+rule=: Group = %-:word%, Username = %username:word%, IP = %src-ip:ipv4%, Error processing payload: %-:rest%
+
+# FTP connection from inside:10.10.1.1/3789 to outside:12.12.12.12/21, user bob Retrieved file somefile.txt
+rule=: FTP connection from %-:char-to:\x3a%:%src-ip:ipv4%/%src-port:number% to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number%, user %username:word% %-:rest%
+
