@@ -29,5 +29,5 @@
 # http://code.google.com/p/eventlog-to-syslog/
 
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-GEOIP] RDP / Logon type 10 from a blacklisted location."; program: Security*; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; blacklist: by_src; program: Security|Security-Auditing; parse_src_ip: 1; normalize: windows; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002215; sid: 5002215; rev:1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-GEOIP] RDP / Logon type 10 from a blacklisted location."; program: Security*; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; blacklist: by_src; program: Security*; parse_src_ip: 1; normalize: windows; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002215; sid: 5002215; rev:2;)
 
