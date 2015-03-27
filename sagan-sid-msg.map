@@ -1,4 +1,4 @@
-001888 || [PROXY-MALWARE] Zeus bin Request 7 || url,http://labs.snort.org/papers/zeus.html
+001888 || [PROXY-MALWARE] Zeus bin Request 7 || url,labs.snort.org/papers/zeus.html
 5000000 || [BASH] ./a.out execution attempt || url,wiki.quadrantsec.com/bin/view/Main/5000000
 5000001 || [BASH] gcc execution || url,wiki.quadrantsec.com/bin/view/Main/5000001
 5000002 || [BASH] telnet execution || url,wiki.quadrantsec.com/bin/view/Main/5000002
@@ -1808,66 +1808,66 @@
 5001879 || [CISCO-GEOIP] Login permitted from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001879
 5001880 || [WINDOWS-AUTH] User account created [FLOWBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5001880
 5001881 || [WINDOWS-AUTH] User account re-enabled || url,wiki.quadrantsec.com/bin/view/Main/5001881
-5001882 || [PROXY-MALWARE] Zeus bin Request 1 || url,http://labs.snort.org/papers/zeus.html
-5001883 || [PROXY-MALWARE] Zeus bin Request 2 || url,http://labs.snort.org/papers/zeus.html
-5001884 || [PROXY-MALWARE] Zeus bin Request 3 || url,http://labs.snort.org/papers/zeus.html
-5001885 || [PROXY-MALWARE] Zeus bin Request 4 || url,http://labs.snort.org/papers/zeus.html
-5001886 || [PROXY-MALWARE] Zeus bin Request 5 || url,http://labs.snort.org/papers/zeus.html
-5001887 || [PROXY-MALWARE] Zeus bin Request 6 || url,http://labs.snort.org/papers/zeus.html
-5001889 || [PROXY-MALWARE] Zeus bin Request 8 || url,http://labs.snort.org/papers/zeus.html
-5001890 || [PROXY-MALWARE] Zeus bin Request 9 || url,http://labs.snort.org/papers/zeus.html
-5001891 || [PROXY-MALWARE] Zeus bin Request 10 || url,http://labs.snort.org/papers/zeus.html
-5001892 || [PROXY-MALWARE] Zeus bin Request 11 || url,http://labs.snort.org/papers/zeus.html
-5001893 || [PROXY-MALWARE] Zeus bin Request 12 || url,http://labs.snort.org/papers/zeus.html
-5001894 || [PROXY-MALWARE] Zeus bin Request 13 || url,http://labs.snort.org/papers/zeus.html
-5001895 || [PROXY-MALWARE] Zeus bin Request 14 || url,http://labs.snort.org/papers/zeus.html
-5001896 || [PROXY-MALWARE] Zeus bin Request 15 || url,http://labs.snort.org/papers/zeus.html
-5001897 || [PROXY-MALWARE] Zeus bin Request 16 || url,http://labs.snort.org/papers/zeus.html
-5001898 || [PROXY-MALWARE] Zeus bin Request 17 || url,http://labs.snort.org/papers/zeus.html
-5001899 || [PROXY-MALWARE] Zeus bin Request 18 || url,http://labs.snort.org/papers/zeus.html
-5001900 || [PROXY-MALWARE] Zeus bin Request 19 || url,http://labs.snort.org/papers/zeus.html
-5001901 || [PROXY-MALWARE] Zeus bin Request 20 || url,http://labs.snort.org/papers/zeus.html
-5001902 || [PROXY-MALWARE] Zeus bin Request 21 || url,http://labs.snort.org/papers/zeus.html
-5001903 || [PROXY-MALWARE] Zeus bin Request 22 || url,http://labs.snort.org/papers/zeus.html
-5001904 || [PROXY-MALWARE] Zeus bin Request 23 || url,http://labs.snort.org/papers/zeus.html
-5001905 || [PROXY-MALWARE] Zeus bin Request 24 || url,http://labs.snort.org/papers/zeus.html
-5001906 || [PROXY-MALWARE] Zeus bin Request 25 || url,http://labs.snort.org/papers/zeus.html
-5001907 || [PROXY-MALWARE] Zeus bin Request 26 || url,http://labs.snort.org/papers/zeus.html
-5001908 || [PROXY-MALWARE] Zeus bin Request 27 || url,http://labs.snort.org/papers/zeus.html
-5001909 || [PROXY-MALWARE] Zeus bin Request 28 || url,http://labs.snort.org/papers/zeus.html
-5001910 || [PROXY-MALWARE] Zeus bin Request 29 || url,http://labs.snort.org/papers/zeus.html
-5001911 || [PROXY-MALWARE] Zeus bin Request 30 || url,http://labs.snort.org/papers/zeus.html
-5001912 || [PROXY-MALWARE] Zeus bin Request 31 || url,http://labs.snort.org/papers/zeus.html
-5001913 || [PROXY-MALWARE] Zeus bin Request 32 || url,http://labs.snort.org/papers/zeus.html
-5001914 || [PROXY-MALWARE] Zeus bin Request 33 || url,http://labs.snort.org/papers/zeus.html
-5001915 || [PROXY-MALWARE] Zeus bin Request 34 || url,http://labs.snort.org/papers/zeus.html
-5001916 || [PROXY-MALWARE] Zeus bin Request 35 || url,http://labs.snort.org/papers/zeus.html
-5001917 || [PROXY-MALWARE] Zeus bin Request 36 || url,http://labs.snort.org/papers/zeus.html
-5001918 || [PROXY-MALWARE] Zeus php Request 1 || url,http://labs.snort.org/papers/zeus.html
-5001919 || [PROXY-MALWARE] Zeus php Request 2 || url,http://labs.snort.org/papers/zeus.html
-5001920 || [PROXY-MALWARE] Zeus php Request 3 || url,http://labs.snort.org/papers/zeus.html
-5001921 || [PROXY-MALWARE] Zeus php Request 4 || url,http://labs.snort.org/papers/zeus.html
-5001922 || [PROXY-MALWARE] Zeus php Request 5 || url,http://labs.snort.org/papers/zeus.html
-5001923 || [PROXY-MALWARE] Zeus php Request 6 || url,http://labs.snort.org/papers/zeus.html
-5001924 || [PROXY-MALWARE] Zeus php Request 7 || url,http://labs.snort.org/papers/zeus.html
-5001925 || [PROXY-MALWARE] Zeus php Request 8 || url,http://labs.snort.org/papers/zeus.html
-5001926 || [PROXY-MALWARE] Zeus php Request 9 || url,http://labs.snort.org/papers/zeus.html
-5001927 || [PROXY-MALWARE] Zeus php Request 10 || url,http://labs.snort.org/papers/zeus.html
-5001928 || [PROXY-MALWARE] Zeus php Request 11 || url,http://labs.snort.org/papers/zeus.html
-5001929 || [PROXY-MALWARE] Zeus php Request 12 || url,http://labs.snort.org/papers/zeus.html
-5001930 || [PROXY-MALWARE] Zeus php Request 13 || url,http://labs.snort.org/papers/zeus.html
-5001931 || [PROXY-MALWARE] Zeus php Request 14 || url,http://labs.snort.org/papers/zeus.html
-5001932 || [PROXY-MALWARE] Zeus php Request 15 || url,http://labs.snort.org/papers/zeus.html
-5001933 || [PROXY-MALWARE] Zeus php Request 16 || url,http://labs.snort.org/papers/zeus.html
-5001934 || [PROXY-MALWARE] Zeus php Request 17 || url,http://labs.snort.org/papers/zeus.html
-5001935 || [PROXY-MALWARE] Zeus php Request 18 || url,http://labs.snort.org/papers/zeus.html
-5001936 || [PROXY-MALWARE] Zeus php Request 19 || url,http://labs.snort.org/papers/zeus.html
-5001937 || [PROXY-MALWARE] Zeus php Request 20 || url,http://labs.snort.org/papers/zeus.html
-5001938 || [PROXY-MALWARE] Zeus php Request 21 || url,http://labs.snort.org/papers/zeus.html
-5001939 || [PROXY-MALWARE] Zeus php Request 22 || url,http://labs.snort.org/papers/zeus.html
-5001940 || [PROXY-MALWARE] Zeus php Request 23 || url,http://labs.snort.org/papers/zeus.html
-5001941 || [PROXY-MALWARE] Zeus php Request 24 || url,http://labs.snort.org/papers/zeus.html
-5001942 || [PROXY-MALWARE] Zeus php Request 25 || url,http://labs.snort.org/papers/zeus.html
+5001882 || [PROXY-MALWARE] Zeus bin Request 1 || url,labs.snort.org/papers/zeus.html
+5001883 || [PROXY-MALWARE] Zeus bin Request 2 || url,labs.snort.org/papers/zeus.html
+5001884 || [PROXY-MALWARE] Zeus bin Request 3 || url,labs.snort.org/papers/zeus.html
+5001885 || [PROXY-MALWARE] Zeus bin Request 4 || url,labs.snort.org/papers/zeus.html
+5001886 || [PROXY-MALWARE] Zeus bin Request 5 || url,labs.snort.org/papers/zeus.html
+5001887 || [PROXY-MALWARE] Zeus bin Request 6 || url,labs.snort.org/papers/zeus.html
+5001889 || [PROXY-MALWARE] Zeus bin Request 8 || url,labs.snort.org/papers/zeus.html
+5001890 || [PROXY-MALWARE] Zeus bin Request 9 || url,labs.snort.org/papers/zeus.html
+5001891 || [PROXY-MALWARE] Zeus bin Request 10 || url,labs.snort.org/papers/zeus.html
+5001892 || [PROXY-MALWARE] Zeus bin Request 11 || url,labs.snort.org/papers/zeus.html
+5001893 || [PROXY-MALWARE] Zeus bin Request 12 || url,labs.snort.org/papers/zeus.html
+5001894 || [PROXY-MALWARE] Zeus bin Request 13 || url,labs.snort.org/papers/zeus.html
+5001895 || [PROXY-MALWARE] Zeus bin Request 14 || url,labs.snort.org/papers/zeus.html
+5001896 || [PROXY-MALWARE] Zeus bin Request 15 || url,labs.snort.org/papers/zeus.html
+5001897 || [PROXY-MALWARE] Zeus bin Request 16 || url,labs.snort.org/papers/zeus.html
+5001898 || [PROXY-MALWARE] Zeus bin Request 17 || url,labs.snort.org/papers/zeus.html
+5001899 || [PROXY-MALWARE] Zeus bin Request 18 || url,labs.snort.org/papers/zeus.html
+5001900 || [PROXY-MALWARE] Zeus bin Request 19 || url,labs.snort.org/papers/zeus.html
+5001901 || [PROXY-MALWARE] Zeus bin Request 20 || url,labs.snort.org/papers/zeus.html
+5001902 || [PROXY-MALWARE] Zeus bin Request 21 || url,labs.snort.org/papers/zeus.html
+5001903 || [PROXY-MALWARE] Zeus bin Request 22 || url,labs.snort.org/papers/zeus.html
+5001904 || [PROXY-MALWARE] Zeus bin Request 23 || url,labs.snort.org/papers/zeus.html
+5001905 || [PROXY-MALWARE] Zeus bin Request 24 || url,labs.snort.org/papers/zeus.html
+5001906 || [PROXY-MALWARE] Zeus bin Request 25 || url,labs.snort.org/papers/zeus.html
+5001907 || [PROXY-MALWARE] Zeus bin Request 26 || url,labs.snort.org/papers/zeus.html
+5001908 || [PROXY-MALWARE] Zeus bin Request 27 || url,labs.snort.org/papers/zeus.html
+5001909 || [PROXY-MALWARE] Zeus bin Request 28 || url,labs.snort.org/papers/zeus.html
+5001910 || [PROXY-MALWARE] Zeus bin Request 29 || url,labs.snort.org/papers/zeus.html
+5001911 || [PROXY-MALWARE] Zeus bin Request 30 || url,labs.snort.org/papers/zeus.html
+5001912 || [PROXY-MALWARE] Zeus bin Request 31 || url,labs.snort.org/papers/zeus.html
+5001913 || [PROXY-MALWARE] Zeus bin Request 32 || url,labs.snort.org/papers/zeus.html
+5001914 || [PROXY-MALWARE] Zeus bin Request 33 || url,labs.snort.org/papers/zeus.html
+5001915 || [PROXY-MALWARE] Zeus bin Request 34 || url,labs.snort.org/papers/zeus.html
+5001916 || [PROXY-MALWARE] Zeus bin Request 35 || url,labs.snort.org/papers/zeus.html
+5001917 || [PROXY-MALWARE] Zeus bin Request 36 || url,labs.snort.org/papers/zeus.html
+5001918 || [PROXY-MALWARE] Zeus php Request 1 || url,labs.snort.org/papers/zeus.html
+5001919 || [PROXY-MALWARE] Zeus php Request 2 || url,labs.snort.org/papers/zeus.html
+5001920 || [PROXY-MALWARE] Zeus php Request 3 || url,labs.snort.org/papers/zeus.html
+5001921 || [PROXY-MALWARE] Zeus php Request 4 || url,labs.snort.org/papers/zeus.html
+5001922 || [PROXY-MALWARE] Zeus php Request 5 || url,labs.snort.org/papers/zeus.html
+5001923 || [PROXY-MALWARE] Zeus php Request 6 || url,labs.snort.org/papers/zeus.html
+5001924 || [PROXY-MALWARE] Zeus php Request 7 || url,labs.snort.org/papers/zeus.html
+5001925 || [PROXY-MALWARE] Zeus php Request 8 || url,labs.snort.org/papers/zeus.html
+5001926 || [PROXY-MALWARE] Zeus php Request 9 || url,labs.snort.org/papers/zeus.html
+5001927 || [PROXY-MALWARE] Zeus php Request 10 || url,labs.snort.org/papers/zeus.html
+5001928 || [PROXY-MALWARE] Zeus php Request 11 || url,labs.snort.org/papers/zeus.html
+5001929 || [PROXY-MALWARE] Zeus php Request 12 || url,labs.snort.org/papers/zeus.html
+5001930 || [PROXY-MALWARE] Zeus php Request 13 || url,labs.snort.org/papers/zeus.html
+5001931 || [PROXY-MALWARE] Zeus php Request 14 || url,labs.snort.org/papers/zeus.html
+5001932 || [PROXY-MALWARE] Zeus php Request 15 || url,labs.snort.org/papers/zeus.html
+5001933 || [PROXY-MALWARE] Zeus php Request 16 || url,labs.snort.org/papers/zeus.html
+5001934 || [PROXY-MALWARE] Zeus php Request 17 || url,labs.snort.org/papers/zeus.html
+5001935 || [PROXY-MALWARE] Zeus php Request 18 || url,labs.snort.org/papers/zeus.html
+5001936 || [PROXY-MALWARE] Zeus php Request 19 || url,labs.snort.org/papers/zeus.html
+5001937 || [PROXY-MALWARE] Zeus php Request 20 || url,labs.snort.org/papers/zeus.html
+5001938 || [PROXY-MALWARE] Zeus php Request 21 || url,labs.snort.org/papers/zeus.html
+5001939 || [PROXY-MALWARE] Zeus php Request 22 || url,labs.snort.org/papers/zeus.html
+5001940 || [PROXY-MALWARE] Zeus php Request 23 || url,labs.snort.org/papers/zeus.html
+5001941 || [PROXY-MALWARE] Zeus php Request 24 || url,labs.snort.org/papers/zeus.html
+5001942 || [PROXY-MALWARE] Zeus php Request 25 || url,labs.snort.org/papers/zeus.html
 5001943 || [LINUX-KERNEL] ReiserFS error || url,wiki.quadrantsec.com/bin/view/Main/5001943
 5001944 || [LINUX-KERNEL] Unhandled error code || url,wiki.quadrantsec.com/bin/view/Main/5001944
 5001945 || [LINUX-KERNEL] I/O error || url,wiki.quadrantsec.com/bin/view/Main/5001945
@@ -1976,8 +1976,8 @@
 5002058 || [CISCO-GEOIP] VPN login from outside HOME_COUNTRY [2] || url, wiki.quadrantsec.com/bin/view/Main/5002058
 5002059 || [CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002059
 5002060 || [CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002060
-5002061 || [PROXY-MALWARE] Tor2www Request || url,http://www.tor2www.com
-5002062 || [PROXY-MALWARE] Tor2web Request || url,http://www.tor2web.org
+5002061 || [PROXY-MALWARE] Tor2www Request || url,www.tor2www.com
+5002062 || [PROXY-MALWARE] Tor2web Request || url,www.tor2web.org
 5002063 || [BRO] SSH Password_Guessing [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002063
 5002064 || [BRO] TeamCymruMalwareHashRegistry Match || url,www.team-cymru.org/Services/MHR/
 5002065 || [BRO] HTTP SQL_Injection_Attacker || url,wiki.quadrantsec.com/bin/view/Main/5002065
@@ -2126,6 +2126,32 @@
 5002210 || [APACHE] CVE-2014-6271 Attempt In HTTP Headers Line Continuation Evasion LF || url,www.invisiblethreat.ca/2014/09/cve-2014-6271/
 5002211 || [APACHE] CVE-2014-6271 Attempt In HTTP Headers Line Continuation Evasion CRLF || url,www.invisiblethreat.ca/2014/09/cve-2014-6271/
 5002212 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 11 || url,blogs.akamai.com/2014/09/environment-bashing.html
+5002213 || [WINDOWS-AUTH] User account disabled || url,wiki.quadrantsec.com/bin/view/Main/5002213
+5002214 || [PROXY-MALWARE] Fiesta malware request || url,wiki.quadrantsec.com/bin/view/Main/5002214
+5002215 || [WINDOWS-BLACKLIST] RDP / Logon type 10 from a blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002215
+5002216 || [WINDOWS-BLACKLIST] Login failure from a blacklisted IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002216
+5002217 || [WINDOWS-BLACKLIST] Login failure from a blacklisted IP [Time restriction] [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002217
+5002218 || [WINDOWS-BLACKLIST] Login failure from blacklisted IP - Account currently disabled [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002218
+5002219 || [WINDOWS-BLACKLIST] Login failure from blacklisted IP - Specified account expired || url,wiki.quadrantsec.com/bin/view/Main/5002219
+5002220 || [WINDOWS-BLACKLIST] Login failure from blacklisted IP - User not allowed to login at this computer || url,wiki.quadrantsec.com/bin/view/Main/5002220
+5002222 || [WINDOWS-BLACKLIST] Login failure from blacklisted IP - Account locked [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5002222
+5002223 || [WINDOWS-BLACKLIST] Windows DC Logon Failure from blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002223
+5002224 || [WINDOWS-BLACKLIST] RDP / Logon type 10 from a Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002224
+5002225 || [WINDOWS-BLACKLIST] Login failure from a Bro Intel listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002225
+5002226 || [WINDOWS-BLACKLIST] Login failure from a Bro Intel listed IP [Time restriction] [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002226
+5002227 || [WINDOWS-BLACKLIST] Login failure from a Bro Intel listed IP - Account currently disabled [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002227
+5002228 || [WINDOWS-BLACKLIST] Login failure from a Bro Intel listed IP - Specified account expired || url,wiki.quadrantsec.com/bin/view/Main/5002228
+5002229 || [WINDOWS-BLACKLIST] Login failure from a Bro Intel listed IP - User not allowed to login at this computer || url,wiki.quadrantsec.com/bin/view/Main/5002229
+5002230 || [WINDOWS-BLACKLIST] Login failure - Account locked from a Bro Intel listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002230
+5002231 || [WINDOWS-BLACKLIST] Windows DC Logon Failure from a Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002231
+5002232 || [WINDOWS-BLACKLIST] RDP / Logon type 10 from a Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002232
+5002233 || [WINDOWS-BLACKLIST] Login failure from a Websense listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002233
+5002234 || [WINDOWS-BLACKLIST] Login failure from a Websense listed IP [Time restriction] [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002234
+5002235 || [WINDOWS-BLACKLIST] Login failure from Websense listed IP - Account currently disabled [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002235
+5002236 || [WINDOWS-BLACKLIST] Login failure from Websense listed IP - Specified account expired || url,wiki.quadrantsec.com/bin/view/Main/5002236
+5002237 || [WINDOWS-BLACKLIST] Login failure from Websense listed IP - User not allowed to login at this computer || url,wiki.quadrantsec.com/bin/view/Main/5002237
+5002238 || [WINDOWS-BLACKLIST] Login failure from Websense listed IP - Account locked [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5002238
+5002239 || [WINDOWS-BLACKLIST] Windows DC Logon Failure from Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002239
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
