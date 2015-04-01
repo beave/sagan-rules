@@ -2136,14 +2136,14 @@
 5002220 || [WINDOWS-BLACKLIST] Login failure from blacklisted IP - User not allowed to login at this computer || url,wiki.quadrantsec.com/bin/view/Main/5002220
 5002222 || [WINDOWS-BLACKLIST] Login failure from blacklisted IP - Account locked [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5002222
 5002223 || [WINDOWS-BLACKLIST] Windows DC Logon Failure from blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002223
-5002224 || [WINDOWS-BRO-INTEL] RDP / Logon type 10 from a Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002224
-5002225 || [WINDOWS-BRO-INTEL] Login failure from a Bro Intel listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002225
-5002226 || [WINDOWS-BRO-INTEL] Login failure from a Bro Intel listed IP [Time restriction] [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002226
-5002227 || [WINDOWS-BRO-INTEL] Login failure from a Bro Intel listed IP - Account currently disabled [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002227
-5002228 || [WINDOWS-BRO-INTEL] Login failure from a Bro Intel listed IP - Specified account expired || url,wiki.quadrantsec.com/bin/view/Main/5002228
-5002229 || [WINDOWS-BRO-INTEL] Login failure from a Bro Intel listed IP - User not allowed to login at this computer || url,wiki.quadrantsec.com/bin/view/Main/5002229
-5002230 || [WINDOWS-BRO-INTEL] Login failure - Account locked from a Bro Intel listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002230
-5002231 || [WINDOWS-BRO-INTEL] Windows DC Logon Failure from a Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002231
+5002224 || [WINDOWS-BROINTEL] RDP / Logon type 10 from a Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002224
+5002225 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002225
+5002226 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP [Time restriction] [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002226
+5002227 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - Account currently disabled [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002227
+5002228 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - Specified account expired || url,wiki.quadrantsec.com/bin/view/Main/5002228
+5002229 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - User not allowed to login at this computer || url,wiki.quadrantsec.com/bin/view/Main/5002229
+5002230 || [WINDOWS-BROINTEL] Login failure - Account locked from a Bro Intel listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002230
+5002231 || [WINDOWS-BROINTEL] Windows DC Logon Failure from a Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002231
 5002232 || [WINDOWS-WEBSENSE] RDP / Logon type 10 from a Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002232
 5002233 || [WINDOWS-WEBSENSE] Login failure from a Websense listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002233
 5002234 || [WINDOWS-WEBSENSE] Login failure from a Websense listed IP [Time restriction] [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002234
@@ -2162,6 +2162,20 @@
 5002247 || [CISCO-BLACKLIST] VPN login from blacklisted IP [2] || url, wiki.quadrantsec.com/bin/view/Main/5002247
 5002248 || [CISCO-BLACKLIST] FTP file transfer from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002248
 5002249 || [CISCO-BLACKLIST] FTP file transfer from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002249
+5002250 || [CISCO-BROINTEL] VPN Login from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002250
+5002251 || [CISCO-BROINTEL] Console login from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002251 sid: 5002251
+5002252 || [CISCO-BROINTEL] Login permitted from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002252
+5002253 || [CISCO-BROINTEL] WebVPN login from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002253
+5002254 || [CISCO-BROINTEL] VPN disconnect from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002254
+5002255 || [CISCO-BROINTEL] VPN login from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002255
+5002256 || [CISCO-BROINTEL] ACS Login success from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002256
+5002257 || [CISCO-BROINTEL] VPN login from Bro Intel IP [2] || url, wiki.quadrantsec.com/bin/view/Main/5002257
+5002258 || [CISCO-BROINTEL] FTP file transfer from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002258
+5002259 || [CISCO-BROINTEL] FTP file transfer from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002259
+5002260 || [CITRIX-GEOIP] Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002260 || url,support.citrix.com/article/CTX123875
+5002261 || [CITRIX-BLACKLIST] Login from outside blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002261 || url,support.citrix.com/article/CTX123875
+5002262 || [CITRIX-BROINTEL] Login from outside Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002262 || url,support.citrix.com/article/CTX123875
+5002263 || [CITRIX-WEBSENSE] Login from outside Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002263 || url,support.citrix.com/article/CTX123875
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
