@@ -1,0 +1,41 @@
+# Sagan windows-owa.rules
+# Copyright (c) 2009-2015, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+
+# OWA "reason" codes: 
+# 
+# reason=0	Nothing
+# reason=1	You've successfully signed out of Outlook Web App. Please close all browser windows.
+# reason=2 	The user name or password you entered isn't correct. Try entering it again.
+# reason=3 	Your session has timed out. To protect your account from unauthorized access, the connection to 
+#		your mailbox is closed after a period of inactivity. Please re-enter your user name and password.
+# reason=4	Your password has been changed. You can now sign in with your new password.
+
+# 10.1.2.1|user|notice|notice|0d|2015-04-23|00:39:14|SERVER.local  IISWebLog       0       2015-04-23| 00:31:32 10.1.2.1 GET /owa/auth/logon.aspx replaceCurrent=1&reason=2&url=https%3a%2f%2fwebmail.example.org%2fowa%2f 443 - 12.12.12.12 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.1;+WOW64;+Trident/5.0) cookieTest=1;+OutlookSession=ba7a32d49c144484d9fb790bd1f;+PBack=0;+tzid=Eastern+Standard+Time;+owacsdc=1 - 200 0 0 0  
+# 10.1.2.1|user|notice|notice|0d|2015-04-23|00:39:14|SERVER.local  IISWebLog       0       2015-04-23| 00:31:32 10.1.2.1 POST /owa/auth.owa - 443 bob 12.12.12.12 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.1;+WOW64;+Trident/5.0) OutlookSession=b87b312d49b7441891b1099fb790bd1e;+PBack=0;+tzid=Eastern+Standard+Time;+owacsdc=1 https://webmail.example.org/owa/auth/logon.aspx?replaceCurrent=1&reason=2&url=https%3a%2f%2fwebmail.example.org%2fowa%2f 401 1 1326 3156 
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[WINDOWS-OWA] Login failure - Brute force [5/5]"; content: "/owa/auth/logon.aspx"; nocase; content: "reason=2&"; classtype: unsuccessful-user; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002264; sid: 5002264; rev:1;)
+
+

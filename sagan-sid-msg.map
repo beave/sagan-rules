@@ -2176,6 +2176,14 @@
 5002261 || [CITRIX-BLACKLIST] Login from outside blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002261 || url,support.citrix.com/article/CTX123875
 5002262 || [CITRIX-BROINTEL] Login from outside Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002262 || url,support.citrix.com/article/CTX123875
 5002263 || [CITRIX-WEBSENSE] Login from outside Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002263 || url,support.citrix.com/article/CTX123875
+5002264 || [WINDOWS-OWA] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002264
+5002265 || [WINDOWS-OWA-GEOIP] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002265
+5002266 || [WINDOWS-OWA-BROINTEL] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002266
+5002267 || [WINDOWS-OWA-BLACKLIST] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002267
+5002268 || [WINDOWS-OWA-WEBSENSE] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002268
+5002269 || [WEBSENSE] Suspicious communications detected via Websense TS || url,wiki.quadrantsec.com/bin/view/Main/5002269
+5002270 || [BRO-INTEL] Suspicious communications detected via Websense TS || url,wiki.quadrantsec.com/bin/view/Main/5002270
+5002271 || [BLACKLIST] Suspicious communications detected via Websense TS || url,wiki.quadrantsec.com/bin/view/Main/5002271
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
