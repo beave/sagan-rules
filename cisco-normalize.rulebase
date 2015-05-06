@@ -118,3 +118,7 @@ rule=: Group = %-:word%, Username = %username:word%, IP = %src-ip:ipv4%, Error p
 # FTP connection from inside:10.10.1.1/3789 to outside:12.12.12.12/21, user bob Retrieved file somefile.txt
 rule=: FTP connection from %-:char-to:\x3a%:%src-ip:ipv4%/%src-port:number% to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number%, user %username:word% %-:rest%
 
+# TCP access denied by ACL from 10.10.10.10/28490 to inside:192.168.1.1/80
+rule =: TCP access denied by ACL from %src-ip:ipv4%/%src-port:number% to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number%
+
+
