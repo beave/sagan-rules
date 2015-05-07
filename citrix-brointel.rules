@@ -32,3 +32,6 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[CITRIX-BROINTEL] Lo
 
 #alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[CITRIX-BROINTEL] AAA LOGIN_FAILED from Bro Intel listed IP"; content: "AAA LOGIN_FAILED"; classtype: unsuccessful-user; parse_src_ip: 1; normalize: citrix; bro-intel: by_src; fwsam: src, 1 day; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5002282; sid:5002282; rev:1;)
 
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[CITRIX-BROINTEL] SSLVPN HTTPREQUEST from Bro Intel listed IP"; content: "SSLVPN HTTPREQUEST"; classtype: unsuccessful-user; parse_src_ip: 1; normalize: citrix; bro-intel: by_src; fwsam: src, 1 day; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5002286; sid:5002286; rev:1;)
+
+
