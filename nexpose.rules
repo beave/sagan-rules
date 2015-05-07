@@ -1,4 +1,4 @@
-# Sagan citrix-blacklist.rules
+# Sagan nexpose.rules
 # Copyright (c) 2009-2015, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -24,11 +24,10 @@
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #*************************************************************
-# Citrix applicances/devices/software
 
-# Login from blacklisted IP (Champ Clark / 04/01/2015)
+# Brian Echeverry - NeXpose rules (security scanning software)
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[CITRIX-BLACKLIST] Login from outside blacklisted IP"; content: "SSLVPN LOGIN"; classtype: unsuccessful-user; parse_src_ip: 1; parse_dst_ip: 2; blacklist: by_src; fwsam: src, 1 day; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5002261; sid: 5002261; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan paused"; content: "SCAN PAUSED|3a|"; classtype: program-error; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002272; sid:5002276; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan failed"; content: "SCAN FAILED|3a|"; classtype: program-error; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002273; sid:5002277; rev:1;)
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[CITRIX-BLACKLIST] AAA LOGIN_FAILED from blacklisted IP"; content: "AAA LOGIN_FAILED"; classtype: unsuccessful-user; parse_src_ip: 1; normalize: citrix; blacklist: by_src; fwsam: src, 1 day; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5002281; sid:5002281; rev:1;)
 

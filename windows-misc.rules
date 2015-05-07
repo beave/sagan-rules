@@ -98,6 +98,15 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope
 
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows audit log was cleared"; pcre: "/ 517: | 1102: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001185; sid: 5001185; rev:4;)
 
+# Brian Echeverry - 05/07/2015
+# SID 5002272 and 5002273 are noisy. 
+ 
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] A directory service object was modified"; content: " 5136|3a| "; classtype: configuration-change; program: Security|Security-Auditing|EvntSLog; sid:5002272; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] A directory service object was created"; content: " 5137|3a| "; classtype: configuration-change; program: Security|Security-Auditing|EvntSLog; sid:5002273; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] A directory service object was undeleted"; content: " 5138|3a| "; classtype: configuration-change; program: Security|Security-Auditing|EvntSLog; sid:5002274; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] A directory service object was moved"; content: " 5139|3a| "; classtype: configuration-change; program: Security|Security-Auditing|EvntSLog; sid:5002275; rev:1;)
+
+
 #######################################
 # Flowbit rules 
 #######################################

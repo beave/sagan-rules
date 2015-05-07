@@ -2182,8 +2182,16 @@
 5002267 || [WINDOWS-OWA-BLACKLIST] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002267
 5002268 || [WINDOWS-OWA-WEBSENSE] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002268
 5002269 || [WEBSENSE] Suspicious communications detected via Websense TS || url,wiki.quadrantsec.com/bin/view/Main/5002269
-5002270 || [BRO-INTEL] Suspicious communications detected via Websense TS || url,wiki.quadrantsec.com/bin/view/Main/5002270
-5002271 || [BLACKLIST] Suspicious communications detected via Websense TS || url,wiki.quadrantsec.com/bin/view/Main/5002271
+5002270 || [BRO-INTEL] Suspicious communications detected via Bro-Intel || url,wiki.quadrantsec.com/bin/view/Main/5002270
+5002271 || [BLACKLIST] Suspicious communications detected via Blacklist || url,wiki.quadrantsec.com/bin/view/Main/5002271
+5002272 || [WINDOWS] A directory service object was modified
+5002273 || [WINDOWS] A directory service object was created
+5002274 || [WINDOWS] A directory service object was undeleted
+5002275 || [WINDOWS] A directory service object was moved
+5002276 || [NeXpose] Scan paused || url,wiki.quadrantsec.com/bin/view/Main/5002272
+5002277 || [NeXpose] Scan failed || url,wiki.quadrantsec.com/bin/view/Main/5002273
+5002278 || [LINUX-KERNEL] Hard drive/RAID - FAILED abort on device || url,wiki.quadrantsec.com/bin/view/Main/5002278
+5002279 || [LINUX-KERNEL] Hard drive/RAID - probably means device no longer present || url,wiki.quadrantsec.com/bin/view/Main/5002279
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
