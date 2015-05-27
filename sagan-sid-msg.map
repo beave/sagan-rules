@@ -1875,7 +1875,7 @@
 5001947 || [FORTINET-GEOIP] Login accepted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001947
 5001948 || [FORTINET-GEOIP] Administrator Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001948
 5001949 || [FORTINET-GEOIP] Admin authentication success outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001949
-5001950 || [CISCO-GEOIP] WebVPN login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001950
+5001950 || [CISCO-GEOIP] VPN login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001950
 5001951 || [WINDOWS-MALWARE] Black POS Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001951
 5001952 || [CISCO-IOS] Login Success || url,wiki.quadrantsec.com/bin/view/Main/5001952
 5001954 || [OPENSSH] SYSLOG Authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001954
@@ -2200,6 +2200,7 @@
 5002285 || [CITRIX-BLACKLIST] SSLVPN HTTPREQUEST from blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002285 || url,support.citrix.com/article/CTX123875
 5002286 || [CITRIX-BROINTEL] SSLVPN HTTPREQUEST from Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002286 || url,support.citrix.com/article/CTX123875
 5002287 || [CITRIX-WEBSENSE] SSLVPN HTTPREQUEST from Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002287 || url,support.citrix.com/article/CTX123875
+5002288 || [BLUEDOT] Suspicious communications detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002288
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

@@ -1,4 +1,4 @@
-# Sagan nexpose.rules
+# Sagan bluedot.rules
 # Copyright (c) 2009-2015, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -23,12 +23,8 @@
 #  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-#*************************************************************
 
-# Brian Echeverry - NeXpose rules (security scanning software)
+# These are CATCH ALL rules.  This means it will parse _all_ logs. 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan paused"; content: "SCAN PAUSED|3a|"; classtype: program-error; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002276; sid:5002276; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan failed"; content: "SCAN FAILED|3a|"; classtype: program-error; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002277; sid:5002277; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan stopped"; content: "SCAN STOPPED|3a|"; classtype: program-error; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002289; sid:5002289; rev:1;)
-
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLUEDOT] Suspicious communications detected via Bluedot"; bluedot: all, $BLUEDOT_NETWORK; classtype: suspicious-traffic; after: track by_src, count 5, seconds 30; threshold: type limit, track by_src, count 10, seconds 60; parse_src_ip: 1; parse_dst_ip: 2; normalize: all; parse_proto; parse_proto_program; reference: url,wiki.quadrantsec.com/bin/view/Main/5002288; sid:5002288; rev:1;)
 
