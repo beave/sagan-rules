@@ -116,9 +116,13 @@ rule=: Built %-:word% %proto:word% connection %-:number% for %-:char-to:\x3a%:%s
 rule=: Group = %-:word%, Username = %username:word%, IP = %src-ip:ipv4%, Error processing payload: %-:rest%
 
 # FTP connection from inside:10.10.1.1/3789 to outside:12.12.12.12/21, user bob Retrieved file somefile.txt
+
 rule=: FTP connection from %-:char-to:\x3a%:%src-ip:ipv4%/%src-port:number% to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number%, user %username:word% %-:rest%
 
 # TCP access denied by ACL from 10.10.10.10/28490 to inside:192.168.1.1/80
+
 rule =: TCP access denied by ACL from %src-ip:ipv4%/%src-port:number% to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number%
 
+# Teardown TCP connection 361112504 for outside:10.10.1.100/61160(LOCAL\Bob) to inside:12.159.2.124/443 duration 0:00:13 bytes 3216 TCP FINs (Bob)
 
+rule=: Teardown %proto:word% connection %-:number% for outside:%src-ip:ipv4%/%src-port:number%%-:word% to inside:%dst-ip:ipv4%/%dst-port:number% %-:rest%
