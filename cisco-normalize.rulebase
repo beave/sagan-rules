@@ -113,7 +113,10 @@ rule=: Built %-:word% %proto:word% connection %-:number% for %-:char-to:\x3a%:%s
 rule=: Built %-:word% %proto:word% connection %-:number% for %-:char-to:\x3a%:%src-ip:ipv4%/%src-port:number% %-:word% to %-:char-to:\x3a%:%dst-ip:ipv4%/%dst-port:number% %-:rest%
 
 #  Group = Employee, Username = bob, IP = 10.10.10.10, Error processing payload: Payload ID: 14
-rule=: Group = %-:word%, Username = %username:word%, IP = %src-ip:ipv4%, Error processing payload: %-:rest%
+
+rule=: Group = %-:word%, Username = %username:word%, IP = %src-ip:ipv4%, %-:rest%
+rule=: Group = %-:char-to:\x2c%, Username = %username:char-to:\x2c%, IP = %src-ip:ipv4%, %-:rest%
+
 
 # FTP connection from inside:10.10.1.1/3789 to outside:12.12.12.12/21, user bob Retrieved file somefile.txt
 
