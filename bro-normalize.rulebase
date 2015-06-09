@@ -28,7 +28,7 @@
 #*************************************************************
 
 prefix=
-#
-# Jun  2 00:41:47 demo snort: [1:19559:5] INDICATOR-SCAN SSH brute force login attempt [Classification: Misc activity] [Priority: 3] {TCP} 43.255.188.148:35236 -> 10.5.1.3:22
 
-rule=: files: %-:word% %-:word% %src-ip:ipv4% %dst-ip:ipv4% %-:word% %-:word% %-:number% %-:word% %mime-type:word% %-:word% %-:word% %-:word% %-:word% %-:number% %-:number% %-:number% %-:number% %-:word% %-:word% %file-md5:word% %file-sha1:word% %-:rest%
+# This is a "custom" bro output Sagan uses for file hashes from Bro.
+
+rule=: files: %-:word% %-:word% %src-ip:ipv4% %dst-ip:ipv4% %-:word% %-:word% %-:number% %-:word% %mime-type:word% %-:word% %-:word% %-:word% %-:word% %-:number% %-:number% %-:number% %-:number% %-:word% %-:word% %filehash-md5:word% %filehash-sha1:word% %filehash-sha256:word% %-:rest%
