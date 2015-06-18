@@ -129,3 +129,7 @@ rule =: TCP access denied by ACL from %src-ip:ipv4%/%src-port:number% to %-:char
 # Teardown TCP connection 361112504 for outside:10.10.1.100/61160(LOCAL\Bob) to inside:12.159.2.124/443 duration 0:00:13 bytes 3216 TCP FINs (Bob)
 
 rule=: Teardown %proto:word% connection %-:number% for outside:%src-ip:ipv4%/%src-port:number%%-:word% to inside:%dst-ip:ipv4%/%dst-port:number% %-:rest%
+
+# Cisco ACS normalization 
+
+rule=: %-:word% %-:number% %-:number% %-:word% %-:word% %-:word% %-:word% %-:word% NOTICE Failed-Attempt: Authentication failed, ACSVersion=%-:word% ConfigVersionId=%-:word% Device IP Address=%src-ip:char-to:\x2c%, Device Port=%src-port:char-to:\x2c%, UserName=%username:char-to:\x2c%, Protocol=%-:word% RequestLatency=%-:word% NetworkDeviceName=%-:word% Type=Authentication, Action=Login, Privilege-Level=%-:word% Authen-Type=%-:word% Service=Login, User=%-:word% Port=%-:word% Remote-Address=%dst-ip:char-to:\x2c%, %-:rest%
