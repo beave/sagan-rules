@@ -2188,8 +2188,8 @@
 5002273 || [WINDOWS] A directory service object was created
 5002274 || [WINDOWS] A directory service object was undeleted
 5002275 || [WINDOWS] A directory service object was moved
-5002276 || [NeXpose] Scan paused || url,wiki.quadrantsec.com/bin/view/Main/5002272
-5002277 || [NeXpose] Scan failed || url,wiki.quadrantsec.com/bin/view/Main/5002273
+5002276 || [NeXpose] Scan paused || url,wiki.quadrantsec.com/bin/view/Main/5002276
+5002277 || [NeXpose] Scan failed || url,wiki.quadrantsec.com/bin/view/Main/5002277
 5002278 || [LINUX-KERNEL] Hard drive/RAID - FAILED abort on device || url,wiki.quadrantsec.com/bin/view/Main/5002278
 5002279 || [LINUX-KERNEL] Hard drive/RAID - probably means device no longer present || url,wiki.quadrantsec.com/bin/view/Main/5002279
 5002280 || [CITRIX-GEOIP] AAA LOGIN_FAILED from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002280 || url,support.citrix.com/article/CTX123875
@@ -2200,7 +2200,18 @@
 5002285 || [CITRIX-BLACKLIST] SSLVPN HTTPREQUEST from blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002285 || url,support.citrix.com/article/CTX123875
 5002286 || [CITRIX-BROINTEL] SSLVPN HTTPREQUEST from Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002286 || url,support.citrix.com/article/CTX123875
 5002287 || [CITRIX-WEBSENSE] SSLVPN HTTPREQUEST from Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002287 || url,support.citrix.com/article/CTX123875
-5002288 || [BLUEDOT] Suspicious communications detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002288
+5002288 || [BLUEDOT] Suspicious IP detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002288
+5002289 || [NeXpose] Scan stopped || url,wiki.quadrantsec.com/bin/view/Main/5002289
+5002291 || [NFCAPD] Possible BitTorrent - Port 6881 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5002291
+5002294 || [NFCAPD] Possible BitTorrent - Port 6884 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5002294
+5002295 || [NFCAPD] Possible BitTorrent - Port 6885 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5002295
+5002296 || [NFCAPD] Possible BitTorrent - Port 6886 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5002296
+5002297 || [NFCAPD] Possible BitTorrent - Port 6887 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5002297
+5002298 || [NFCAPD] Possible BitTorrent - Port 6888 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5002298
+5002299 || [NFCAPD] Possible BitTorrent - Port 6889 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5002299
+5002300 || [NFCAPD] Possible TOR - Port 9001 || url, torstatus.blutmagie.de/index.php?SR=ORPort&SO=Asc || url, wiki.quadrantsec.com/bin/view/Main/5002300
+5002301 || [NFCAPD] Possible TOR - Port 9030 after Port 9001 || url, torstatus.blutmagie.de/index.php?SR=ORPort&SO=Asc || url, wiki.quadrantsec.com/bin/view/Main/5002301
+5002302 || [NFCAPD] Possible TOR - Port 443 after Port 9001 || url, torstatus.blutmagie.de/index.php?SR=ORPort&SO=Asc || url, wiki.quadrantsec.com/bin/view/Main/5002302
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

@@ -26,5 +26,5 @@
 
 # These are CATCH ALL rules.  This means it will parse _all_ logs. 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLUEDOT] Suspicious communications detected via Bluedot"; bluedot: all, $BLUEDOT_NETWORK; classtype: suspicious-traffic; after: track by_src, count 5, seconds 30; threshold: type limit, track by_src, count 10, seconds 60; parse_src_ip: 1; parse_dst_ip: 2; normalize: all; parse_proto; parse_proto_program; reference: url,wiki.quadrantsec.com/bin/view/Main/5002288; sid:5002288; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLUEDOT] Suspicious IP detected via Bluedot"; bluedot: reputation, all, $BLUEDOT_NETWORK; classtype: suspicious-traffic; after: track by_src, count 10, seconds 30; threshold: type limit, track by_src, count 2, seconds 60; parse_src_ip: 1; parse_dst_ip: 2; normalize: all; parse_proto; parse_proto_program; reference: url,wiki.quadrantsec.com/bin/view/Main/5002288; sid:5002288; rev:2;)
 
