@@ -207,8 +207,8 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Account lo
 
 # Records _all_ RDP sessions
 
-#alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] RDP / Logon type 10"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; program: Security*; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002015; sid: 5002015; rev:1;)
-#alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] Logon attempt using explicit credentials; pcre: "/ 552: | 4648: /"; content:!"Network Address|3a| - "; content:!"Port|3a| - "; content:!"Target Server Name|3a| localhost"; program: Security*; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002018; sid: 5002018; rev:2;)
+#alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-AUTH] RDP / Logon type 10"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; program: Security*; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002015; sid: 5002015; rev:2;)
+#alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-AUTH] Logon attempt using explicit credentials"; pcre: "/ 552: | 4648: /"; content:!"Network Address|3a| - "; content:!"Port|3a| - "; content:!"Target Server Name|3a| localhost"; program: Security*; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002018; sid: 5002018; rev:3;)
 
 # Rule added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/08/2014
 

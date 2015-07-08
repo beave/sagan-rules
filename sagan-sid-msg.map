@@ -82,7 +82,7 @@
 5000085 || [PROFTPD] Attempt to bypass firewall - cannot keep state of FTP traffic || url,wiki.quadrantsec.com/bin/view/Main/5000085
 5000086 || [PROFTPD] Maximum login attempts reached [DoS?] || url,wiki.quadrantsec.com/bin/view/Main/5000086
 5000087 || [PROFTPD] Host name or host address mismatch || url,wiki.quadrantsec.com/bin/view/Main/5000087
-5000088 || [PROFTPD] Reverse lookup failure; content: "can't verify hostname || url,wiki.quadrantsec.com/bin/view/Main/5000088
+5000088 || [PROFTPD] Reverse lookup failure || url,wiki.quadrantsec.com/bin/view/Main/5000088
 5000089 || [PROFTPD] Remote host connected to FTP server || url,wiki.quadrantsec.com/bin/view/Main/5000089
 5000090 || [PROFTPD] Remote host disconnected due to inactivity || url,wiki.quadrantsec.com/bin/view/Main/5000090
 5000091 || [PROFTPD] Remote host disconnected due to login time out || url,wiki.quadrantsec.com/bin/view/Main/5000091
@@ -416,7 +416,7 @@
 5000441 || [CISCO-PIXASA] Internal error in function OCCAM corrupted standalone block || url, wiki.quadrantsec.com/bin/view/Main/5000441
 5000442 || [CISCO-PIXASA] UNICORN_SYSLOGID_PERM_STORAGE_SERVER_LOAD_FAIL || url, wiki.quadrantsec.com/bin/view/Main/5000442
 5000443 || [CISCO-PIXASA] UNICORN_SYSLOGID_PERM_STORAGE_SERVER_STORE_FAIL || url, wiki.quadrantsec.com/bin/view/Main/5000443
-5000444 || [CISCO-PIXASA] Unexpected fiber scheduler error; possible out-of-memory condition || url, wiki.quadrantsec.com/bin/view/Main/5000444
+5000444 || [CISCO-PIXASA] Unexpected fiber scheduler error - possible out-of-memory condition || url, wiki.quadrantsec.com/bin/view/Main/5000444
 5000445 || [CISCO-PIXASA] Failed to get port statistics in 4GE SSM I/O card || url, wiki.quadrantsec.com/bin/view/Main/5000445
 5000446 || [CISCO-PIXASA] Failed to get current msr in 4GE SSM I/O card || url, wiki.quadrantsec.com/bin/view/Main/5000446
 5000447 || [CISCO-PIXASA] Failed to enable port after link is up in 4GE SSM I/O card || url, wiki.quadrantsec.com/bin/view/Main/5000447
@@ -1468,7 +1468,7 @@
 5001529 || [VMWARE] User authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5001529
 5001530 || [VSFTPD] Login failed || url,wiki.quadrantsec.com/bin/view/Main/5001530
 5001531 || [WINDOWS-AUTH] Login failure - Unknown username or bad password || url,wiki.quadrantsec.com/bin/view/Main/5001531
-5001532 || [HUAWEI] USER_NOT_EXIST; content:"SSH/4/LOGIN_FAIL_USER_NOT_EXIST || url, http://www.huaweisymantec.com/en//download.do?id=658891
+5001532 || [HUAWEI] USER_NOT_EXIST || url, http://www.huaweisymantec.com/en//download.do?id=658891
 5001533 || [HUAWEI] ARP_DUPLICATE_IPADDR || url, huaweisymantec.com/en/download.do?id=658891
 5001534 || [HUAWEI] DHCPC_LOG_NAK || url, huaweisymantec.com/en/download.do?id=658891
 5001535 || [HUAWEI] DHCPC_LOG_REQIP_SUCCESS || url, huaweisymantec.com/en/download.do?id=658891
@@ -1932,11 +1932,11 @@
 5002007 || [WINDOWS-MALWARE] Virus Found! || url,wiki.quadrantsec.com/bin/view/Main/5002007
 5002011 || [WINDOWS-MALWARE] System protection disabled || url,wiki.quadrantsec.com/bin/view/Main/5002011
 5002014 || [WINDOWS-MISC] System shutdown [FLOWBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5002014
-5002015 || [WINDOWS-MISC] RDP / Logon type 10 || url,wiki.quadrantsec.com/bin/view/Main/5002015
+5002015 || [WINDOWS-AUTH] RDP / Logon type 10 || url,wiki.quadrantsec.com/bin/view/Main/5002015
 5002016 || [WINDOWS-GEOIP] RDP / Logon type 10 from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002016
 5002017 || [WINDOWS-AUTH] Pass-The-Hash detected! || url, http://en.wikipedia.org/wiki/Pass_the_hash || url,wiki.quadrantsec.com/bin/view/Main/5002017
-5002018 || [WINDOWS-MISC] Logon attempt using explicit credentials; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002018
-5002020 || [WINDOWS-GEOIP] Logon attempt using explicit credentials from outside HOME_COUNTRY; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002020
+5002018 || [WINDOWS-AUTH] Logon attempt using explicit credentials || url,wiki.quadrantsec.com/bin/view/Main/5002018
+5002020 || [WINDOWS-GEOIP] Logon attempt using explicit credentials from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002020
 5002022 || [JUNIPER] VPN Login failed || url,wiki.quadrantsec.com/bin/view/Main/5002022
 5002023 || [JUNIPER] VPN Login failed - Brute Force [10/5] || url,wiki.quadrantsec.com/bin/view/Main/5002023
 5002024 || [JUNIPER] Possible VPN Login bypass attempt || url,wiki.quadrantsec.com/bin/view/Main/5002024
@@ -1972,7 +1972,7 @@
 5002054 || [SSH-TECTIA-SERVER-AETAS] Authentication success at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002054
 5002055 || [WINDOWS-GEOIP] Windows Logon at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002055
 5002056 || [WINDOWS-GEOIP] RDP / Logon type 10 at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002056
-5002057 || [WINDOWS-GEOIP] Logon attempt using explicit credentials at suspicious time; pcre: "/ 552: | 4648: / || url,wiki.quadrantsec.com/bin/view/Main/5002057
+5002057 || [WINDOWS-GEOIP] Logon attempt using explicit credentials at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002057
 5002058 || [CISCO-GEOIP] VPN login from outside HOME_COUNTRY [2] || url, wiki.quadrantsec.com/bin/view/Main/5002058
 5002059 || [CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002059
 5002060 || [CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002060
