@@ -1605,7 +1605,7 @@
 5001668 || [CISCO-IOS] Authentication Failure SSH || url,wiki.quadrantsec.com/bin/view/Main/5001668
 5001669 || [CISCO-IOS] Illegal User SSH || url,wiki.quadrantsec.com/bin/view/Main/5001669
 5001670 || [CISCO-IOS] Authentication Failure SSH - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001670
-5001671 || [CISCO-IOS] FATAL: bad tty - login (no program) || url,wiki.quadrantsec.com/bin/view/Main/5001671
+5001671 || [CISCO-IOS] FATAL - bad tty - login (no program) || url,wiki.quadrantsec.com/bin/view/Main/5001671
 5001672 || [CISCO-IOS] Auth to privilege 15 failed || url,wiki.quadrantsec.com/bin/view/Main/5001672
 5001673 || [CISCO-IOS] Multicast storm detected || url,wiki.quadrantsec.com/bin/view/Main/5001673
 5001674 || [CISCO-IOS] Invalid ARP || url,wiki.quadrantsec.com/bin/view/Main/5001674
@@ -2212,6 +2212,36 @@
 5002300 || [NFCAPD] Possible TOR - Port 9001 || url, torstatus.blutmagie.de/index.php?SR=ORPort&SO=Asc || url, wiki.quadrantsec.com/bin/view/Main/5002300
 5002301 || [NFCAPD] Possible TOR - Port 9030 after Port 9001 || url, torstatus.blutmagie.de/index.php?SR=ORPort&SO=Asc || url, wiki.quadrantsec.com/bin/view/Main/5002301
 5002302 || [NFCAPD] Possible TOR - Port 443 after Port 9001 || url, torstatus.blutmagie.de/index.php?SR=ORPort&SO=Asc || url, wiki.quadrantsec.com/bin/view/Main/5002302
+5002303 || [BASH] History hiding
+5002304 || [BASH] History hiding
+5002306 || [BASH] Netcat execution
+5002308 || [BASH] Python subproces execution
+5002309 || [BASH] PHP socket execution
+5002310 || [BASH] PHP subproces execution
+5002311 || [BASH] Perl socket execution
+5002312 || [BASH] Perl subproces execution
+5002313 || [BASH] Ruby socket execution
+5002314 || [BASH] Ruby subproces execution
+5002315 || [BASH] mknod execution [FLOWBIT SET]
+5002316 || [BASH] telnet reverse shell execution
+5002317 || [BASH] /dev/tcp access
+5002318 || [BASH] /dev/udp access
+5002319 || [BASH] csh shell execution
+5002320 || [BASH] ksh shell execution
+5002321 || [BASH] tcsh shell execution
+5002322 || [BASH] zsh shell execution
+5002323 || [BASH] stunnel execution
+5002324 || [BASH] SSH agent forwarding
+5002325 || [BASH] SSH dynamic forwarding
+5002326 || [BASH] SSH GSSAPI forwarding
+5002327 || [BASH] SSH local forwarding
+5002328 || [BASH] SSH remote forwarding
+5002329 || [BASH] SSH input and output forwarding
+5002330 || [BASH] SSH tunnel forwarding
+5002331 || [BASH] SSH X11 forwarding
+5002332 || [BASH] SSH X11 trusted forwarding
+5002333 || [BASH] LD_PRELOAD environment variable access
+5002334 || [BASH] LD_LIBRARY_PATH environment variable access
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
