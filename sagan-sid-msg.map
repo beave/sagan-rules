@@ -1090,7 +1090,7 @@
 5001148 || [JUNIPER] application-level distributed denial-of-service (AppDDoS) state transition occurred in logical system || url,wiki.quadrantsec.com/bin/view/Main/5001148
 5001149 || [JUNIPER] Application-level distributed denial-of-service (AppDDoS) attack in a logical system || url,wiki.quadrantsec.com/bin/view/Main/5001149
 5001150 || [JUNIPER] Application-level distributed denial-of-service (AppDDoS) attack || url,wiki.quadrantsec.com/bin/view/Main/5001150
-5001151 || [WINDOWS-AUTH] Login failure - Unknown username or bad password - Brute force [20/2] || url,wiki.quadrantsec.com/bin/view/Main/5001151
+5001151 || [WINDOWS-AUTH] Login failure - Unknown username or bad password - Brute force [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001151
 5001152 || [WINDOWS-AUTH] Login failure - Account login time restriction || url,wiki.quadrantsec.com/bin/view/Main/5001152
 5001153 || [WINDOWS-AUTH] Login failure - Account currently disabled [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5001153
 5001154 || [WINDOWS-AUTH] Login failure - Specified account expired || url,wiki.quadrantsec.com/bin/view/Main/5001154
@@ -1099,7 +1099,7 @@
 5001157 || [WINDOWS-AUTH] Login failure - Account password is expired || url,wiki.quadrantsec.com/bin/view/Main/5001157
 5001158 || [WINDOWS-AUTH] Login failure - Internal error || url,wiki.quadrantsec.com/bin/view/Main/5001158
 5001159 || [WINDOWS-AUTH] Login failure - Account locked [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5001159
-5001160 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force [20/2] || url,wiki.quadrantsec.com/bin/view/Main/5001160
+5001160 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001160
 5001161 || [WINDOWS-AUTH] User account unlocked || url,wiki.quadrantsec.com/bin/view/Main/5001161
 5001162 || [WINDOWS-AUTH] Security enabled group created || url,wiki.quadrantsec.com/bin/view/Main/5001162
 5001163 || [WINDOWS-AUTH] Security enabled group deleted || url,wiki.quadrantsec.com/bin/view/Main/5001163
@@ -1591,7 +1591,7 @@
 5001654 || [CISCO-PIXASA] User authentication failed - Brute force [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001654
 5001655 || [CISCO-ACS] Failed Login Attempt || url,wiki.quadrantsec.com/bin/view/Main/5001655
 5001656 || [CISCO-ACS] Failed Login Attempt - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001656
-5001657 || [WINDOWS-AUTH] Auth failed - Bad Account/Incorrect Password - Brute Force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001657
+5001657 || [WINDOWS-AUTH] Auth failed - Bad Account/Incorrect Password - Brute Force [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001657
 5001658 || [WINDOWS-AUTH] Auth failed - Bad Account/Incorrect Password || url,wiki.quadrantsec.com/bin/view/Main/5001658
 5001659 || [WINDOWS-AUTH] User account does not exist || url,wiki.quadrantsec.com/bin/view/Main/5001659
 5001660 || [WINDOWS-AUTH] Domain does not exist || url,wiki.quadrantsec.com/bin/view/Main/5001660
@@ -1659,63 +1659,63 @@
 5001725 || [CISCO-MALWARE] ZeroAccess UDP port 16465 detected [denied] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001725
 5001726 || [CISCO-MALWARE] ZeroAccess UDP port 16470 detected [denied] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001726
 5001727 || [CISCO-MALWARE] ZeroAccess UDP port 16471 detected [denied] [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001727
-5001728 || [WINDOWS-AUTH] Potential Windows User Enumeration - User Name Does Not Exist [Brute Force] [20/1] || url,wiki.quadrantsec.com/bin/view/Main/5001728
-5001729 || [WINDOWS-AUTH] Windows Brute force - User Correct but Incorrect Password [20/1] || url,wiki.quadrantsec.com/bin/view/Main/5001729
-5001730 || [WINDOWS-AUTH] Windows Brute force - User Is Locked Out || url,wiki.quadrantsec.com/bin/view/Main/5001730
-5001731 || [WINDOWS-AUTH] Windows Brute force - User Account Disabled [20/1] || url,wiki.quadrantsec.com/bin/view/Main/5001731
-5001732 || [WINDOWS-AUTH] Windows Brute force - User Login Attempts Outside of Time Restriction [5/1] || url,wiki.quadrantsec.com/bin/view/Main/5001732
-5001733 || [WINDOWS-AUTH] Windows Brute force - Expired Account [5/1] || url,wiki.quadrantsec.com/bin/view/Main/5001733
-5001734 || [WINDOWS-AUTH] Windows Brute force - Expired Password [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001734
+5001728 || [WINDOWS-AUTH] Potential Windows User Enumeration - User Name Does Not Exist [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001728
+5001729 || [WINDOWS-AUTH] Windows Brute force - User Correct but Incorrect Password [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001729
+5001730 || [WINDOWS-AUTH] Windows Brute force - User Is Locked Out [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001730
+5001731 || [WINDOWS-AUTH] Windows Brute force - User Account Disabled [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001731
+5001732 || [WINDOWS-AUTH] Windows Brute force - User Login Attempts Outside of Time Restriction [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001732
+5001733 || [WINDOWS-AUTH] Windows Brute force - Expired Account [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001733
+5001734 || [WINDOWS-AUTH] Windows Brute force - Expired Password [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001734
 5001735 || [WINDOWS-MALWARE] ZeroAccess Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001735
 5001736 || [WINDOWS-MALWARE] ZeroAccess Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001736
 5001737 || [WINDOWS-MALWARE] ZeroAccess Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001737
 5001738 || [WINDOWS-MALWARE] ZeroAccess Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001738
 5001739 || [PROXY-MALWARE] Pony Trojan || url,wiki.quadrantsec.com/bin/view/Main/5001739
-5001741 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2 - Server's entry in database has expired [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001741
-5001742 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3 - Requested protocol version # not supported [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001742
-5001743 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x4 - Client's key encrypted in old master key || url,wiki.quadrantsec.com/bin/view/Main/5001743
-5001744 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x5 - Server's key encrypted in old master key || url,wiki.quadrantsec.com/bin/view/Main/5001744
-5001745 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x6 - Client not found in Kerberos database || url,wiki.quadrantsec.com/bin/view/Main/5001745
-5001746 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x7 - Server not found in Kerberos database || url,wiki.quadrantsec.com/bin/view/Main/5001746
-5001747 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x8 - Multiple principal entries in database || url,wiki.quadrantsec.com/bin/view/Main/5001747
-5001748 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x9 - The client or server has a null key || url,wiki.quadrantsec.com/bin/view/Main/5001748
-5001749 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xA - Ticket not eligible for postdating || url,wiki.quadrantsec.com/bin/view/Main/5001749
-5001750 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xB - Requested start time is later than end time || url,wiki.quadrantsec.com/bin/view/Main/5001750
-5001751 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xC - KDC policy rejects request [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001751
-5001752 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xD - KDC cannot accommodate requested option || url,wiki.quadrantsec.com/bin/view/Main/5001752
-5001753 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xE - KDC has no support for encryption type || url,wiki.quadrantsec.com/bin/view/Main/5001753
-5001754 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xF - KDC has no support for checksum type || url,wiki.quadrantsec.com/bin/view/Main/5001754
-5001755 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x10 - KDC has no support for padata type || url,wiki.quadrantsec.com/bin/view/Main/5001755
-5001756 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x11 - KDC has no support for transited type || url,wiki.quadrantsec.com/bin/view/Main/5001756
-5001757 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x12 - Clients credentials have been revoked || url,wiki.quadrantsec.com/bin/view/Main/5001757
-5001758 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x13 - Credentials for server have been revoked || url,wiki.quadrantsec.com/bin/view/Main/5001758
-5001759 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x14 - TGT has been revoked || url,wiki.quadrantsec.com/bin/view/Main/5001759
-5001760 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x15 - Client not yet valid - try again later || url,wiki.quadrantsec.com/bin/view/Main/5001760
-5001761 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x16 - Server not yet valid - try again later || url,wiki.quadrantsec.com/bin/view/Main/5001761
-5001762 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x17 - Password has expired || url,wiki.quadrantsec.com/bin/view/Main/5001762
-5001763 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x18 - Pre-authentication information was invalid [20/5] || url,wiki.quadrantsec.com/bin/view/Main/5001763
-5001764 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x19 - Additional pre-authentication required || url,wiki.quadrantsec.com/bin/view/Main/5001764
-5001765 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x1F - Integrity check on decrypted field failed || url,wiki.quadrantsec.com/bin/view/Main/5001765
-5001766 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x20 - Ticket expired || url,wiki.quadrantsec.com/bin/view/Main/5001766
-5001767 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x21 - Ticket not yet valid || url,wiki.quadrantsec.com/bin/view/Main/5001767
-5001768 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x22 - Request is a replay [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001768
-5001769 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x23 - The ticket isn't for us || url,wiki.quadrantsec.com/bin/view/Main/5001769
-5001770 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x24 - Ticket and authenticator don't match [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001770
-5001771 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x25 - Clock skew too great || url,wiki.quadrantsec.com/bin/view/Main/5001771
-5001772 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x26 - Incorrect net address [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001772
-5001773 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x27 - Protocol version mismatch || url,wiki.quadrantsec.com/bin/view/Main/5001773
-5001774 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x28 - Invalid msg type || url,wiki.quadrantsec.com/bin/view/Main/5001774
-5001775 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x29 - Message stream modified || url,wiki.quadrantsec.com/bin/view/Main/5001775
-5001776 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2A - Message out of order || url,wiki.quadrantsec.com/bin/view/Main/5001776
-5001777 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2C - Specified version of key is not available || url,wiki.quadrantsec.com/bin/view/Main/5001777
-5001778 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2D - Service key not available || url,wiki.quadrantsec.com/bin/view/Main/5001778
-5001779 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2E - Mutual authentication failed || url,wiki.quadrantsec.com/bin/view/Main/5001779
-5001780 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2F - Incorrect message direction || url,wiki.quadrantsec.com/bin/view/Main/5001780
-5001781 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x30 - Alternative authentication method required || url,wiki.quadrantsec.com/bin/view/Main/5001781
-5001782 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x31 - Incorrect sequence number in message [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001782
-5001783 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x32 - Inappropriate type of checksum in message || url,wiki.quadrantsec.com/bin/view/Main/5001783
-5001784 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3C - Generic error || url,wiki.quadrantsec.com/bin/view/Main/5001784
-5001785 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3D - Field is too long for this implementation || url,wiki.quadrantsec.com/bin/view/Main/5001785
+5001741 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2 - Server's entry in database has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001741
+5001742 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3 - Requested protocol version # not supported [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001742
+5001743 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x4 - Client's key encrypted in old master key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001743
+5001744 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x5 - Server's key encrypted in old master key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001744
+5001745 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x6 - Client not found in Kerberos database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001745
+5001746 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x7 - Server not found in Kerberos database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001746
+5001747 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x8 - Multiple principal entries in database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001747
+5001748 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x9 - The client or server has a null key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001748
+5001749 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xA - Ticket not eligible for postdating [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001749
+5001750 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xB - Requested start time is later than end time [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001750
+5001751 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xC - KDC policy rejects request [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001751
+5001752 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xD - KDC cannot accommodate requested option [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001752
+5001753 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0xE - KDC has no support for encryption type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001753
+5001754 || [WINDOWS-AUTH] Windows DC Logon Failure - B4ute force 0xF - KDC has no support for checksum type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001754
+5001755 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x10 - KDC has no support for padata type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001755
+5001756 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x11 - KDC has no support for transited type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001756
+5001757 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x12 - Clients credentials have been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001757
+5001758 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x13 - Credentials for server have been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001758
+5001759 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x14 - TGT has been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001759
+5001760 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x15 - Client not yet valid - try again later [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001760
+5001761 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x16 - Server not yet valid - try again later [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001761
+5001762 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x17 - Password has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001762
+5001763 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x18 - Pre-authentication information was invalid [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001763
+5001764 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x19 - Additional pre-authentication required [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001764
+5001765 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x1F - Integrity check on decrypted field failed [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001765
+5001766 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x20 - Ticket expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001766
+5001767 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x21 - Ticket not yet valid [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001767
+5001768 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x22 - Request is a replay [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001768
+5001769 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x23 - The ticket isn't for us [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001769
+5001770 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x24 - Ticket and authenticator don't match [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001770
+5001771 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x25 - Clock skew too great [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001771
+5001772 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x26 - Incorrect net address [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001772
+5001773 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x27 - Protocol version mismatch [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001773
+5001774 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x28 - Invalid msg type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001774
+5001775 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x29 - Message stream modified [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001775
+5001776 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2A - Message out of order [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001776
+5001777 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2C - Specified version of key is not available [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001777
+5001778 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2D - Service key not available [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001778
+5001779 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2E - Mutual authentication failed [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001779
+5001780 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2F - Incorrect message direction [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001780
+5001781 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x30 - Alternative authentication method required [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001781
+5001782 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x31 - Incorrect sequence number in message [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001782
+5001783 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x32 - Inappropriate type of checksum in message [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001783
+5001784 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3C - Generic error [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001784
+5001785 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3D - Field is too long for this implementation [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001785
 5001786 || [FORTINET-MALWARE] ZeroAccess UDP port 16464 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001786
 5001787 || [FORTINET-MALWARE] ZeroAccess UDP port 16465 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001787
 5001788 || [FORTINET-MALWARE] ZeroAccess UDP port 16470 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001788
@@ -2176,7 +2176,7 @@
 5002261 || [CITRIX-BLACKLIST] Login from outside blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002261 || url,support.citrix.com/article/CTX123875
 5002262 || [CITRIX-BROINTEL] Login from outside Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002262 || url,support.citrix.com/article/CTX123875
 5002263 || [CITRIX-WEBSENSE] Login from outside Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002263 || url,support.citrix.com/article/CTX123875
-5002264 || [WINDOWS-OWA] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002264
+5002264 || [WINDOWS-OWA] Login failure - Brute force [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002264
 5002265 || [WINDOWS-OWA-GEOIP] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002265
 5002266 || [WINDOWS-OWA-BROINTEL] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002266
 5002267 || [WINDOWS-OWA-BLACKLIST] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002267
@@ -5002,4 +5002,4 @@
 6107000 || [CISCO-SDEE] Data Base TNS Connection || url,wiki.quadrantsec.com/bin/view/Main/6107000
 6107001 || [CISCO-SDEE] TNS Redirect Request || url,wiki.quadrantsec.com/bin/view/Main/6107001
 6107002 || [CISCO-SDEE] NBT NetBIOS Session Failed Login - Brute Force [5/3] || url,wiki.quadrantsec.com/bin/view/Main/6107002
-50017240 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x1 - Client's entry in database has expired [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001740
+50017240 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x1 - Client's entry in database has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001740
