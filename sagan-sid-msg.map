@@ -2243,6 +2243,7 @@
 5002333 || [BASH] LD_PRELOAD environment variable access
 5002334 || [BASH] LD_LIBRARY_PATH environment variable access
 5002335 || [WINDOWS-AUTH] User account deleted || url,wiki.quadrantsec.com/bin/view/Main/5002335
+5002336 || [WINDOWS-AUTH] Successful RDP login from known brute force IP || url,wiki.quadrantsec.com/bin/view/Main/5002336
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

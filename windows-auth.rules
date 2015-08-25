@@ -216,3 +216,5 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Account lo
 
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account deleted"; content: " 4726|3a| "; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002335; sid: 5002335; rev:1;) 
 
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-AUTH] Successful RDP login from known brute force IP"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; program: Security*; flowbits:isset,by_src,brute_force.generic; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002336; sid:5002336; rev:1;)
+
