@@ -28,7 +28,7 @@
 # Eventlog to syslog service.  This is what we primarily use.
 # http://code.google.com/p/eventlog-to-syslog/
 
-# MSSQL$WEBSENSE| 18456: Login failed for user 'DOMAIN\user'. Reason: Token-based server access validation failed with an infrastructure error. Check for previous errors. [CLIENT: <local machine>]
+# MSSQL$SERVER| 18456: Login failed for user 'DOMAIN\user'. Reason: Token-based server access validation failed with an infrastructure error. Check for previous errors. [CLIENT: <local machine>]
 # MSSQL$XXX| 18453: Login succeeded for user 'DOMAIN\user'. Connection: trusted. [CLIENT: <local machine>]
 
 # MSSQLSERVER| 18456: Login failed for user 'BOB'. Reason: Failed to open the explicitly specified database. [CLIENT: 10.5.5.6]

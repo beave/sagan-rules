@@ -2144,14 +2144,6 @@
 5002229 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - User not allowed to login at this computer || url,wiki.quadrantsec.com/bin/view/Main/5002229
 5002230 || [WINDOWS-BROINTEL] Login failure - Account locked from a Bro Intel listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002230
 5002231 || [WINDOWS-BROINTEL] Windows DC Logon Failure from a Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002231
-5002232 || [WINDOWS-WEBSENSE] RDP / Logon type 10 from a Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002232
-5002233 || [WINDOWS-WEBSENSE] Login failure from a Websense listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002233
-5002234 || [WINDOWS-WEBSENSE] Login failure from a Websense listed IP [Time restriction] [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002234
-5002235 || [WINDOWS-WEBSENSE] Login failure from Websense listed IP - Account currently disabled [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002235
-5002236 || [WINDOWS-WEBSENSE] Login failure from Websense listed IP - Specified account expired || url,wiki.quadrantsec.com/bin/view/Main/5002236
-5002237 || [WINDOWS-WEBSENSE] Login failure from Websense listed IP - User not allowed to login at this computer || url,wiki.quadrantsec.com/bin/view/Main/5002237
-5002238 || [WINDOWS-WEBSENSE] Login failure from Websense listed IP - Account locked [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5002238
-5002239 || [WINDOWS-WEBSENSE] Windows DC Logon Failure from Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002239
 5002240 || [CISCO-BLACKLIST] VPN Login from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002240
 5002241 || [CISCO-BLACKLIST] Console login from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002241 sid: 5002241
 5002242 || [CISCO-BLACKLIST] Login permitted from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002242
@@ -2175,13 +2167,10 @@
 5002260 || [CITRIX-GEOIP] Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002260 || url,support.citrix.com/article/CTX123875
 5002261 || [CITRIX-BLACKLIST] Login from outside blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002261 || url,support.citrix.com/article/CTX123875
 5002262 || [CITRIX-BROINTEL] Login from outside Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002262 || url,support.citrix.com/article/CTX123875
-5002263 || [CITRIX-WEBSENSE] Login from outside Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002263 || url,support.citrix.com/article/CTX123875
 5002264 || [WINDOWS-OWA] Login failure - Brute force [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002264
 5002265 || [WINDOWS-OWA-GEOIP] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002265
 5002266 || [WINDOWS-OWA-BROINTEL] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002266
 5002267 || [WINDOWS-OWA-BLACKLIST] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002267
-5002268 || [WINDOWS-OWA-WEBSENSE] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002268
-5002269 || [WEBSENSE] Suspicious communications detected via Websense TS || url,wiki.quadrantsec.com/bin/view/Main/5002269
 5002270 || [BRO-INTEL] Suspicious communications detected via Bro-Intel || url,wiki.quadrantsec.com/bin/view/Main/5002270
 5002271 || [BLACKLIST] Suspicious communications detected via Blacklist || url,wiki.quadrantsec.com/bin/view/Main/5002271
 5002272 || [WINDOWS] A directory service object was modified
@@ -2195,11 +2184,9 @@
 5002280 || [CITRIX-GEOIP] AAA LOGIN_FAILED from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002280 || url,support.citrix.com/article/CTX123875
 5002281 || [CITRIX-BLACKLIST] AAA LOGIN_FAILED from blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002281 || url,support.citrix.com/article/CTX123875
 5002282 || [CITRIX-BROINTEL] AAA LOGIN_FAILED from Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002282 || url,support.citrix.com/article/CTX123875
-5002283 || [CITRIX-WEBSENSE] AAA LOGIN_FAILED from Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002283 || url,support.citrix.com/article/CTX123875
 5002284 || [CITRIX-GEOIP] SSLVPN HTTPREQUEST from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002284 || url,support.citrix.com/article/CTX123875
 5002285 || [CITRIX-BLACKLIST] SSLVPN HTTPREQUEST from blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002285 || url,support.citrix.com/article/CTX123875
 5002286 || [CITRIX-BROINTEL] SSLVPN HTTPREQUEST from Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002286 || url,support.citrix.com/article/CTX123875
-5002287 || [CITRIX-WEBSENSE] SSLVPN HTTPREQUEST from Websense listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002287 || url,support.citrix.com/article/CTX123875
 5002288 || [BLUEDOT] Suspicious IP detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002288
 5002289 || [NeXpose] Scan stopped || url,wiki.quadrantsec.com/bin/view/Main/5002289
 5002291 || [NFCAPD] Possible BitTorrent - Port 6881 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5002291
@@ -2244,6 +2231,22 @@
 5002334 || [BASH] LD_LIBRARY_PATH environment variable access
 5002335 || [WINDOWS-AUTH] User account deleted || url,wiki.quadrantsec.com/bin/view/Main/5002335
 5002336 || [WINDOWS-AUTH] Successful RDP login from known brute force IP || url,wiki.quadrantsec.com/bin/view/Main/5002336
+5002337 || [WINDOWS-GEOIP] Windows Network Cleartext from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002337
+5002338 || [WINDOWS-GEOIP] Windows Session Disconnected from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002338
+5002339 || [WINDOWS-GEOIP] Windows RDP Session Disconnected from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002339
+5002340 || [WINDOWS-GEOIP] Explicit Windows Logon  || url,wiki.quadrantsec.com/bin/view/Main/5002340
+5002341 || [CITRIX-BLUEDOT] Login from outside Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002341 || url,support.citrix.com/article/CTX123875
+5002342 || [CITRIX-BLUEDOT] AAA LOGIN_FAILED from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002342 || url,support.citrix.com/article/CTX123875
+5002343 || [CITRIX-BLUEDOT] SSLVPN HTTPREQUEST from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002343 || url,support.citrix.com/article/CTX123875
+5002344 || [WINDOWS-BLUEDOT] RDP / Logon type 10 from a Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002344
+5002345 || [WINDOWS-BLUEDOT] Login failure from a Bluedot listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002345
+5002346 || [WINDOWS-BLUEDOT] Login failure from a Bluedot listed IP [Time restriction] [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002346
+5002347 || [WINDOWS-BLUEDOT] Login failure from Bluedot listed IP - Account currently disabled [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002347
+5002348 || [WINDOWS-BLUEDOT] Login failure from Bluedot listed IP - Specified account expired || url,wiki.quadrantsec.com/bin/view/Main/5002348
+5002349 || [WINDOWS-BLUEDOT] Login failure from Bluedot listed IP - User not allowed to login at this computer || url,wiki.quadrantsec.com/bin/view/Main/5002349
+5002350 || [WINDOWS-BLUEDOT] Login failure from Bluedot listed IP - Account locked [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5002350
+5002351 || [WINDOWS-BLUEDOT] Windows DC Logon Failure from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002351
+5002352 || [WINDOWS-OWA-BLUEDOT] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002352
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

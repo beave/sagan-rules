@@ -1,4 +1,4 @@
-# Sagan windows-owa-websense.rules
+# Sagan windows-owa-bluedot.rules
 # Copyright (c) 2009-2015, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -24,6 +24,5 @@
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[WINDOWS-OWA-WEBSENSE] Login failure - Brute force [5/5]"; content: "/ews/exchange.asmx"; nocase; websense: by_src, $WEBSENSE_NETWORK; classtype: suspicious-traffic; fwsam: src, 1 day; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002268; sid: 5002268; rev:1;)
-
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[WINDOWS-OWA-BLUEDOT] Login failure - Brute force [5/5]"; content: "/ews/exchange.asmx"; nocase; bluedot: reputation, by_src, $BLUEDOT_NETWORK; classtype: suspicious-traffic; fwsam: src, 1 day; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002352; sid:5002352; rev:1;)
 
