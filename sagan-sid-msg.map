@@ -2265,6 +2265,10 @@
 5002368 || [CISCO-CORRELATED] FTP file transfer after recon [2] || url, wiki.quadrantsec.com/bin/view/Main/5002368
 5002369 || [FATPIPE-CORRELATED] Login Success after recon || url,wiki.quadrantsec.com/bin/view/Main/5002369
 5002370 || [FATPIPE-CORRELATED] Login Success - ADMINISTRATOR - after recon || url,wiki.quadrantsec.com/bin/view/Main/5002370
+5002371 || [FORTINET-CORRELATED] Login accepted after recon || url,wiki.quadrantsec.com/bin/view/Main/5002371
+5002372 || [FORTINET-CORRELATED] Administrator Login after recon || url,wiki.quadrantsec.com/bin/view/Main/5002372
+5002373 || [FORTINET-CORRELATED] Admin authentication success after recon || url,wiki.quadrantsec.com/bin/view/Main/5002373
+5002374 || [FORTINET-CORRELATED] SSH traffic detected after recon || url,wiki.quadrantsec.com/bin/view/Main/5002374
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
