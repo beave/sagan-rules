@@ -2090,8 +2090,8 @@
 5002174 || [CISCO-PRIME] Rogue auto contained || url,wiki.quadrantsec.com/bin/view/Main/5002174 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
 5002175 || [CISCO-PRIME] User authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5002175 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
 5002176 || [CISCO-PRIME] WIPS Event! || url,wiki.quadrantsec.com/bin/view/Main/5002176 || url,http://www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html
-5002177 || [OPENSSH] SSH login success after brute force attack! || url,wiki.quadrantsec.com/bin/view/Main/5002176
-5002178 || [OPENSSH] Accepted publickey after brute force attack! || url,wiki.quadrantsec.com/bin/view/Main/5002178
+5002177 || [OPENSSH-CORRELATED] SSH login success after brute force attack! || url,wiki.quadrantsec.com/bin/view/Main/5002176
+5002178 || [OPENSSH-CORRELATED] Accepted publickey after brute force attack! || url,wiki.quadrantsec.com/bin/view/Main/5002178
 5002179 || [BASH] Remote execution attempt via CVE-2014-6271 || url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271 || url,wiki.quadrantsec.com/bin/view/Main/5002179
 5002180 || [APACHE] Remote execution attempt via CVE-2014-6271 || url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271 || url,wiki.quadrantsec.com/bin/view/Main/5002180
 5002181 || [APACHE] Possible CVE-2014-6271 Attempt in HTTP URLENCODE Generic 1 || url,blogs.akamai.com/2014/09/environment-bashing.html
@@ -2230,7 +2230,7 @@
 5002333 || [BASH] LD_PRELOAD environment variable access
 5002334 || [BASH] LD_LIBRARY_PATH environment variable access
 5002335 || [WINDOWS-AUTH] User account deleted || url,wiki.quadrantsec.com/bin/view/Main/5002335
-5002336 || [WINDOWS-AUTH] Successful RDP login from known brute force IP || url,wiki.quadrantsec.com/bin/view/Main/5002336
+5002336 || [WINDOWS-CORRELATED] Successful RDP login from known brute force IP || url,wiki.quadrantsec.com/bin/view/Main/5002336
 5002337 || [WINDOWS-GEOIP] Windows Network Cleartext from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002337
 5002338 || [WINDOWS-GEOIP] Windows Session Disconnected from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002338
 5002339 || [WINDOWS-GEOIP] Windows RDP Session Disconnected from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002339
@@ -2247,6 +2247,10 @@
 5002350 || [WINDOWS-BLUEDOT] Login failure from Bluedot listed IP - Account locked [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5002350
 5002351 || [WINDOWS-BLUEDOT] Windows DC Logon Failure from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002351
 5002352 || [WINDOWS-OWA-BLUEDOT] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002352
+5002353 || [OPENSSH-CORRELATED] Authentication success via password after recon || url,wiki.quadrantsec.com/bin/view/Main/5002353
+5002354 || [OPENSSH-CORRELATED] Authentication success via public key after recon || url,wiki.quadrantsec.com/bin/view/Main/5002354
+5002355 || [OPENSSH-CORRELATED] Authentication success via keyboard-interactive after recon || url,wiki.quadrantsec.com/bin/view/Main/5002355
+5002356 || [WINDOWS-CORRELATED] RDP login after recon || url,wiki.quadrantsec.com/bin/view/Main/5002356
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
