@@ -150,7 +150,7 @@
 5000153 || [MYSQL] Database error || url,wiki.quadrantsec.com/bin/view/Main/5000153
 5000154 || [MYSQL] Database fatal error || url,wiki.quadrantsec.com/bin/view/Main/5000154
 5000155 || [APACHE] Segmentation fault || url,wiki.quadrantsec.com/bin/view/Main/5000155
-5000156 || [APACHE] Attempt to access forbidden file or directory || url,wiki.quadrantsec.com/bin/view/Main/5000156
+5000156 || [APACHE] Attempt to access forbidden file or directory [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000156
 5000157 || [APACHE] Attempt to access forbidden directory index || url,wiki.quadrantsec.com/bin/view/Main/5000157
 5000158 || [APACHE] Client sent malformed Host header || url,wiki.quadrantsec.com/bin/view/Main/5000158
 5000159 || [APACHE] User authentication failed || url,wiki.quadrantsec.com/bin/view/Main/5000159
@@ -750,7 +750,7 @@
 5000787 || [CISCO-PIXASA] IP address end configuration {FAILED|OK} || url, wiki.quadrantsec.com/bin/view/Main/5000787
 5000788 || [CISCO-PIXASA] FTP cmd_string command unsupported - failed strict inspection || url, wiki.quadrantsec.com/bin/view/Main/5000788
 5000789 || [CISCO-PIXASA] Access denied URL chars || url, wiki.quadrantsec.com/bin/view/Main/5000789
-5000790 || [CISCO-PIXASA] Asymmetric NAT rules matched for forward and reverse flows || url, wiki.quadrantsec.com/bin/view/Main/5000790
+5000790 || [CISCO-PIXASA] Asymmetric NAT rules matched for forward and reverse flows [0/1] || url, wiki.quadrantsec.com/bin/view/Main/5000790
 5000791 || [CISCO-PIXASA] EAPoUDP association failed to establish || url, wiki.quadrantsec.com/bin/view/Main/5000791
 5000792 || [CISCO-PIXASA] EAPoUDP failed to get a response from host || url, wiki.quadrantsec.com/bin/view/Main/5000792
 5000793 || [CISCO-PIXASA] HTTP - matched string in policy-map verification failed || url, wiki.quadrantsec.com/bin/view/Main/5000793
@@ -800,7 +800,7 @@
 5000839 || [CISCO-PIXASA] RIP hdr failed || url, wiki.quadrantsec.com/bin/view/Main/5000839
 5000840 || [CISCO-PIXASA] No management IP address configured for transparent firewall || url, wiki.quadrantsec.com/bin/view/Main/5000840
 5000841 || [CISCO-PIXASA] NAC is disabled for host || url, wiki.quadrantsec.com/bin/view/Main/5000841
-5000842 || [CISCO-PIXASA] Login denied [Brute Force] [10/5] || url, wiki.quadrantsec.com/bin/view/Main/5000842
+5000842 || [CISCO-PIXASA] Login denied [Brute Force] [10/1] || url, wiki.quadrantsec.com/bin/view/Main/5000842
 5000843 || [CISCO-PIXASA] Authorization failed || url, wiki.quadrantsec.com/bin/view/Main/5000843
 5000844 || [CISCO-PIXASA] User authentication failed [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000844
 5000845 || [CISCO-PIXASA] VNPClient XAUTH Failed || url, wiki.quadrantsec.com/bin/view/Main/5000845
@@ -812,7 +812,7 @@
 5000851 || [CISCO-PIXASA] vlan number not available for firewall interface || url, wiki.quadrantsec.com/bin/view/Main/5000851
 5000852 || [CISCO-PIXASA] vlan number available for firewall interface || url, wiki.quadrantsec.com/bin/view/Main/5000852
 5000853 || [CISCO-PIXASA] Bad register || url, wiki.quadrantsec.com/bin/view/Main/5000853
-5000854 || [CISCO-PIXASA] Attempt to send an IKE packet from standby unit. Dropping the packet! || url, wiki.quadrantsec.com/bin/view/Main/5000854
+5000854 || [CISCO-PIXASA] Attempt to send an IKE packet from standby unit. Dropping the packet! [0/1] || url, wiki.quadrantsec.com/bin/view/Main/5000854
 5000855 || [CISCO-PIXASA] Certificate received from Certificate Authority for trustpoint || url, wiki.quadrantsec.com/bin/view/Main/5000855
 5000856 || [CISCO-PIXASA] PKCS 12 export failed || url, wiki.quadrantsec.com/bin/view/Main/5000856
 5000857 || [CISCO-PIXASA] PKCS 12 import failed || url, wiki.quadrantsec.com/bin/view/Main/5000857
@@ -822,7 +822,7 @@
 5000862 || [CISCO-PIXASA] Cert validation failure handle invalid for Main/Aggressive Mode Initiator/Responder! || url, wiki.quadrantsec.com/bin/view/Main/5000862
 5000863 || [CISCO-PIXASA] Attempt to get Phase 1 ID data failed while hash computation || url, wiki.quadrantsec.com/bin/view/Main/5000863
 5000864 || [CISCO-PIXASA] Processing firewall record || url, wiki.quadrantsec.com/bin/view/Main/5000864
-5000865 || [CISCO-PIXASA] Remote user has been granted access by the Firewall Server [Brute Force] [10/5] || url, wiki.quadrantsec.com/bin/view/Main/5000865
+5000865 || [CISCO-PIXASA] Remote user has been granted access by the Firewall Server [Brute Force] [10/1] || url, wiki.quadrantsec.com/bin/view/Main/5000865
 5000866 || [CISCO-PIXASA] The Firewall Server has requested a list of active user sessions || url, wiki.quadrantsec.com/bin/view/Main/5000866
 5000867 || [CISCO-PIXASA] Got bad refCnt assigning || url, wiki.quadrantsec.com/bin/view/Main/5000867
 5000868 || [CISCO-PIXASA] subroutine Q Send failure RetCode || url, wiki.quadrantsec.com/bin/view/Main/5000868
@@ -1528,7 +1528,7 @@
 5001590 || [HUAWEI] SSH - LOGIN_FAIL_RSA_ERR || url, huaweisymantec.com/en/download.do?id=658891
 5001591 || [HUAWEI] VRRP - LogAuthFailed || url, huaweisymantec.com/en/download.do?id=658891
 5001592 || [HUAWEI] SSH - LOGIN_FAIL - Brute force [5/5] || url, huaweisymantec.com/en/download.do?id=658891
-5001593 || [CISCO-PIXASA] AAA user authentication Reject - Brute force [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001593
+5001593 || [CISCO-PIXASA] AAA user authentication Reject - Brute force [5/1] || url, wiki.quadrantsec.com/bin/view/Main/5001593
 5001595 || [MONGODB] DBException causing immediate shutdown || url,www.mongodb.org
 5001596 || [MONGODB] IOS_Base exception causing immediate shutdown || url,www.mongodb.org
 5001597 || [MONGODB] Bad allocation exception causing immediate shutdown || url,www.mongodb.org
@@ -1575,7 +1575,7 @@
 5001638 || [OPENSSH] PAM Authentication failure - Brute force [50/5] || url,wiki.quadrantsec.com/bin/view/Main/5001638
 5001639 || [OPENSSH] PAM Authentication failure - Brute force [100/5] || url,wiki.quadrantsec.com/bin/view/Main/5001639
 5001640 || [WINDOWS-MSSQL] Login Failure || url,wiki.quadrantsec.com/bin/view/Main/5001640
-5001641 || [WINDOWS-MSSQL] Login Failure - Brute force [20/1] || url,wiki.quadrantsec.com/bin/view/Main/5001641
+5001641 || [WINDOWS-MSSQL] Login Failure - Brute force [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001641
 5001642 || [JUNIPER] SSHD_LOGIN_ATTEMPTS_THRESHOLD - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001642
 5001643 || [JUNIPER] SSHD_LOGIN_FAILED_LIMIT - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001643
 5001644 || [JUNIPER] SSHD_LOGIN_FAILED || url,wiki.quadrantsec.com/bin/view/Main/5001644
@@ -1588,7 +1588,7 @@
 5001651 || [OPENVPN] Authentication failure [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5001651
 5001652 || [OPENVPN] Authentication success || url,wiki.quadrantsec.com/bin/view/Main/5001652
 5001653 || [OPENVPN] Unencrypted VPN connection initiated || url,wiki.quadrantsec.com/bin/view/Main/5001653
-5001654 || [CISCO-PIXASA] User authentication failed - Brute force [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001654
+5001654 || [CISCO-PIXASA] User authentication failed - Brute force [5/1] || url, wiki.quadrantsec.com/bin/view/Main/5001654
 5001655 || [CISCO-ACS] Failed Login Attempt || url,wiki.quadrantsec.com/bin/view/Main/5001655
 5001656 || [CISCO-ACS] Failed Login Attempt - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001656
 5001657 || [WINDOWS-AUTH] Auth failed - Bad Account/Incorrect Password - Brute Force [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001657
@@ -1645,7 +1645,7 @@
 5001711 || [CISCO-IOS] Grammar Manager Telephony Subsystem ModuleStop || url,wiki.quadrantsec.com/bin/view/Main/5001711
 5001712 || [CISCO-IOS] Cisco Unified CCX MGR Shutdown || url,wiki.quadrantsec.com/bin/view/Main/5001712
 5001713 || [CISCO-IOS] Socket Manager Telephony Subsystem ModuleStart || url,wiki.quadrantsec.com/bin/view/Main/5001713
-5001714 || [CISCO-PIXASA] TCP access denied by ACL - Brute force [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001714
+5001714 || [CISCO-PIXASA] TCP access denied by ACL - Brute force [5/1] || url, wiki.quadrantsec.com/bin/view/Main/5001714
 5001715 || [CISCO-PIXASA] TCP access denied by ACL || url, wiki.quadrantsec.com/bin/view/Main/5001715
 5001716 || [WINDOWS-MISC] DHCP Scope is FULL || url,wiki.quadrantsec.com/bin/view/Main/5001716
 5001717 || [ORACLE] Authentication Failure || url, wiki.quadrantsec.com/bin/view/Main/5001717
