@@ -2251,6 +2251,18 @@
 5002354 || [OPENSSH-CORRELATED] Authentication success via public key after recon || url,wiki.quadrantsec.com/bin/view/Main/5002354
 5002355 || [OPENSSH-CORRELATED] Authentication success via keyboard-interactive after recon || url,wiki.quadrantsec.com/bin/view/Main/5002355
 5002356 || [WINDOWS-CORRELATED] RDP login after recon || url,wiki.quadrantsec.com/bin/view/Main/5002356
+5002357 || [CITRIX-CORRELATED] Login after recon || url,wiki.quadrantsec.com/bin/view/Main/5002357 || url,support.citrix.com/article/CTX123875
+5002358 || [CITRIX-CORRELATED] AAA LOGIN_FAILED after recon || url,wiki.quadrantsec.com/bin/view/Main/5002358 || url,support.citrix.com/article/CTX123875
+5002359 || [CITRIX-CORRELATED] SSLVPN HTTPREQUEST after recon || url,wiki.quadrantsec.com/bin/view/Main/5002359 || url,support.citrix.com/article/CTX123875
+5002360 || [CISCO-CORRELATED] Console login after recon || url, wiki.quadrantsec.com/bin/view/Main/5002360
+5002361 || [CISCO-CORRELATED] Login permitted after recon || url, wiki.quadrantsec.com/bin/view/Main/5002361
+5002362 || [CISCO-CORRELATED] VPN login after recon || url, wiki.quadrantsec.com/bin/view/Main/5002362
+5002363 || [CISCO-CORRELATED] VPN disconnect after recon || url, wiki.quadrantsec.com/bin/view/Main/5002363
+5002364 || [CISCO-CORRELATED] VPN login after recon || url, wiki.quadrantsec.com/bin/view/Main/5002364
+5002365 || [CISCO-CORRELATED] ACS Login success after recon || url, wiki.quadrantsec.com/bin/view/Main/5002365
+5002366 || [CISCO-CORRELATED] VPN login after recon [2] || url, wiki.quadrantsec.com/bin/view/Main/5002366
+5002367 || [CISCO-CORRELATED] FTP file transfer after recon || url, wiki.quadrantsec.com/bin/view/Main/5002367
+5002368 || [CISCO-CORRELATED] FTP file transfer after recon [2] || url, wiki.quadrantsec.com/bin/view/Main/5002368
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
