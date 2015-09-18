@@ -59,9 +59,9 @@ alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] VPN login f
 # 2014-05-07 16:41:47|192.168.1.1|7050594|local0|info|info|%ASA-6-303002| FTP connection from inside:10.20.11.20/2351 to dmz:192.168.1.1/21, user bob Stored file somefile
 
 # Track by source
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY"; program: %ASA-6-303002; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; normalize: cisco;; reference: url, wiki.quadrantsec.com/bin/view/Main/5002059; sid: 5002059; rev: 3;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY"; program: %ASA-6-303002; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; normalize: cisco; reference: url, wiki.quadrantsec.com/bin/view/Main/5002059; sid: 5002059; rev: 4;)
 
 # Track by dest
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY"; program: %ASA-6-303002; country_code: track by_dst, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002060; sid: 5002060; rev: 2;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY"; program: %ASA-6-303002; country_code: track by_dst, isnot $HOME_COUNTRY; classtype: successful-user; normalize: cisco; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002060; sid: 5002060; rev: 3;)
 
 
