@@ -2286,8 +2286,9 @@
 5002386 || [VMWARE-CORRELATED] User login successful after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002386
 5002387 || [VSFTPD-GEOIP] Authentication successful from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002387
 5002388 || [VSFTPD-GEOIP] File uploaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002388
-5002389 || [VSFTPD-GEOIP] Authentication successful from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002389
-5002390 || [VSFTPD-GEOIP] File uploaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002390
+5002389 || [VSFTPD-CORRELATED] Authentication successful from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002389
+5002390 || [VSFTPD-CORRELATED] File uploaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002390
+5002391 || [WINDOWS-OWA-CORRELATED] Login failure after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002391
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
