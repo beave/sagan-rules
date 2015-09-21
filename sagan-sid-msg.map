@@ -2277,6 +2277,13 @@
 5002377 || [IMAPD-CORRELATED] Timeout after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002377
 5002378 || [IMAPD-CORRELATED] Disconnect after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002378
 5002379 || [IMAPD-CORRELATED] Connection after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002379
+5002380 || [SSH-TECTIA-SERVER-CORRELATED] Authentication success after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002380
+5002381 || [VMWARE-GEOIP] User login successful from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002381
+5002382 || [VMWARE-GEOIP] User login successful from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002382
+5002383 || [VMWARE-GEOIP] User login successful || url,wiki.quadrantsec.com/bin/view/Main/5002383
+5002384 || [VMWARE-CORRELATED] User login successful after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002384
+5002385 || [VMWARE-CORRELATED] User login successful after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002385
+5002386 || [VMWARE-CORRELATED] User login successful after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002386
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
