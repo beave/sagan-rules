@@ -1779,6 +1779,9 @@
 5001847 || [HONEYD] Attempt to login to honeypot Telnet server [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5001847
 5001848 || [HONEYD] Attempt to login to honeypot Telnet server as admin user [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5001848
 5001849 || [HONEYD] Attempt to login to honeypot FTP server [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5001849
+5001850 || [HONEYD] Connection to honeypot IIS server [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5001850
+5001851 || [HONEYD] Connection to honeypot Apache server [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5001851
+5001852 || [HONEYD] Connection to honeypot SMTP server [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5001852
 5001853 || [NFCAPD-MALWARE] Netflow - ZeroAccess UDP port 16464 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001853
 5001854 || [NFCAPD-MALWARE] Netflow - ZeroAccess UDP port 16465 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001854
 5001855 || [NFCAPD] Netflow - ZeroAccess UDP port 16470 detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001855
@@ -2247,28 +2250,33 @@
 5002350 || [WINDOWS-BLUEDOT] Login failure from Bluedot listed IP - Account locked [0/1] || url,wiki.quadrantsec.com/bin/view/Main/5002350
 5002351 || [WINDOWS-BLUEDOT] Windows DC Logon Failure from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002351
 5002352 || [WINDOWS-OWA-BLUEDOT] Login failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002352
-5002353 || [OPENSSH-CORRELATED] Authentication success via password after recon || url,wiki.quadrantsec.com/bin/view/Main/5002353
-5002354 || [OPENSSH-CORRELATED] Authentication success via public key after recon || url,wiki.quadrantsec.com/bin/view/Main/5002354
-5002355 || [OPENSSH-CORRELATED] Authentication success via keyboard-interactive after recon || url,wiki.quadrantsec.com/bin/view/Main/5002355
-5002356 || [WINDOWS-CORRELATED] RDP login after recon || url,wiki.quadrantsec.com/bin/view/Main/5002356
-5002357 || [CITRIX-CORRELATED] Login after recon || url,wiki.quadrantsec.com/bin/view/Main/5002357 || url,support.citrix.com/article/CTX123875
-5002358 || [CITRIX-CORRELATED] AAA LOGIN_FAILED after recon || url,wiki.quadrantsec.com/bin/view/Main/5002358 || url,support.citrix.com/article/CTX123875
-5002359 || [CITRIX-CORRELATED] SSLVPN HTTPREQUEST after recon || url,wiki.quadrantsec.com/bin/view/Main/5002359 || url,support.citrix.com/article/CTX123875
-5002360 || [CISCO-CORRELATED] Console login after recon || url, wiki.quadrantsec.com/bin/view/Main/5002360
-5002361 || [CISCO-CORRELATED] Login permitted after recon || url, wiki.quadrantsec.com/bin/view/Main/5002361
-5002362 || [CISCO-CORRELATED] VPN login after recon || url, wiki.quadrantsec.com/bin/view/Main/5002362
-5002363 || [CISCO-CORRELATED] VPN disconnect after recon || url, wiki.quadrantsec.com/bin/view/Main/5002363
-5002364 || [CISCO-CORRELATED] VPN login after recon || url, wiki.quadrantsec.com/bin/view/Main/5002364
-5002365 || [CISCO-CORRELATED] ACS Login success after recon || url, wiki.quadrantsec.com/bin/view/Main/5002365
-5002366 || [CISCO-CORRELATED] VPN login after recon [2] || url, wiki.quadrantsec.com/bin/view/Main/5002366
-5002367 || [CISCO-CORRELATED] FTP file transfer after recon || url, wiki.quadrantsec.com/bin/view/Main/5002367
-5002368 || [CISCO-CORRELATED] FTP file transfer after recon [2] || url, wiki.quadrantsec.com/bin/view/Main/5002368
-5002369 || [FATPIPE-CORRELATED] Login Success after recon || url,wiki.quadrantsec.com/bin/view/Main/5002369
-5002370 || [FATPIPE-CORRELATED] Login Success - ADMINISTRATOR - after recon || url,wiki.quadrantsec.com/bin/view/Main/5002370
-5002371 || [FORTINET-CORRELATED] Login accepted after recon || url,wiki.quadrantsec.com/bin/view/Main/5002371
-5002372 || [FORTINET-CORRELATED] Administrator Login after recon || url,wiki.quadrantsec.com/bin/view/Main/5002372
-5002373 || [FORTINET-CORRELATED] Admin authentication success after recon || url,wiki.quadrantsec.com/bin/view/Main/5002373
-5002374 || [FORTINET-CORRELATED] SSH traffic detected after recon || url,wiki.quadrantsec.com/bin/view/Main/5002374
+5002353 || [OPENSSH-CORRELATED] Authentication success via password after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002353
+5002354 || [OPENSSH-CORRELATED] Authentication success via public key after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002354
+5002355 || [OPENSSH-CORRELATED] Authentication success via keyboard-interactive after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002355
+5002356 || [WINDOWS-CORRELATED] RDP login after suspicious traffic || url,wiki.quadrantsec.com/bin/view/Main/5002356
+5002357 || [CITRIX-CORRELATED] Login after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002357 || url,support.citrix.com/article/CTX123875
+5002358 || [CITRIX-CORRELATED] AAA LOGIN_FAILED after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002358 || url,support.citrix.com/article/CTX123875
+5002359 || [CITRIX-CORRELATED] SSLVPN HTTPREQUEST after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002359 || url,support.citrix.com/article/CTX123875
+5002360 || [CISCO-CORRELATED] Console login after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002360
+5002361 || [CISCO-CORRELATED] Login permitted after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002361
+5002362 || [CISCO-CORRELATED] VPN login after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002362
+5002363 || [CISCO-CORRELATED] VPN disconnect after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002363
+5002364 || [CISCO-CORRELATED] VPN login after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002364
+5002365 || [CISCO-CORRELATED] ACS Login success after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002365
+5002366 || [CISCO-CORRELATED] VPN login after suspicious activity [2] || url, wiki.quadrantsec.com/bin/view/Main/5002366
+5002367 || [CISCO-CORRELATED] FTP file transfer after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002367
+5002368 || [CISCO-CORRELATED] FTP file transfer after suspicious activity [2] || url, wiki.quadrantsec.com/bin/view/Main/5002368
+5002369 || [FATPIPE-CORRELATED] Login Success after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002369
+5002370 || [FATPIPE-CORRELATED] Login Success - ADMINISTRATOR - after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002370
+5002371 || [FORTINET-CORRELATED] Login accepted after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002371
+5002372 || [FORTINET-CORRELATED] Administrator Login after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002372
+5002373 || [FORTINET-CORRELATED] Admin authentication success after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002373
+5002374 || [FORTINET-CORRELATED] SSH traffic detected after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002374
+5002375 || [IMAPD-CORRELATED] Login after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002375
+5002376 || [IMAPD-CORRELATED] Logout after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002376
+5002377 || [IMAPD-CORRELATED] Timeout after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002377
+5002378 || [IMAPD-CORRELATED] Disconnect after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002378
+5002379 || [IMAPD-CORRELATED] Connection after suspicious activity || url, wiki.quadrantsec.com/bin/view/Main/5002379
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
