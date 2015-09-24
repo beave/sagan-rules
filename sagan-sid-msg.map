@@ -247,8 +247,8 @@
 5000256 || [XINETD] Removing service || url,wiki.quadrantsec.com/bin/view/Main/5000256
 5000257 || [XINETD] Starting service || url,wiki.quadrantsec.com/bin/view/Main/5000257
 5000258 || [COURIER] Connection established || url,wiki.quadrantsec.com/bin/view/Main/5000258
-5000259 || [COURIER] IMAP/POP3 authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5000259
-5000260 || [COURIER] Logout/timeout || url,wiki.quadrantsec.com/bin/view/Main/5000260
+5000259 || [COURIER] Authentication failure || url,wiki.quadrantsec.com/bin/view/Main/5000259
+5000260 || [COURIER] Logout/disconnect || url,wiki.quadrantsec.com/bin/view/Main/5000260
 5000261 || [COURIER] User login || url,wiki.quadrantsec.com/bin/view/Main/5000261
 5000262 || [IMAPD] Successful login || url,wiki.quadrantsec.com/bin/view/Main/5000262
 5000263 || [HORDEIMP] Notice message || url,wiki.quadrantsec.com/bin/view/Main/5000263
@@ -2233,7 +2233,7 @@
 5002333 || [BASH] LD_PRELOAD environment variable access
 5002334 || [BASH] LD_LIBRARY_PATH environment variable access
 5002335 || [WINDOWS-AUTH] User account deleted || url,wiki.quadrantsec.com/bin/view/Main/5002335
-5002336 || [WINDOWS-CORRELATED] Successful RDP login from known brute force IP || url,wiki.quadrantsec.com/bin/view/Main/5002336
+5002336 || [WINDOWS-CORRELATED] Successful RDP login from known brute force || url,wiki.quadrantsec.com/bin/view/Main/5002336
 5002337 || [WINDOWS-GEOIP] Windows Network Cleartext from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002337
 5002338 || [WINDOWS-GEOIP] Windows Session Disconnected from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002338
 5002339 || [WINDOWS-GEOIP] Windows RDP Session Disconnected from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002339
@@ -2289,6 +2289,16 @@
 5002389 || [VSFTPD-CORRELATED] Authentication successful from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002389
 5002390 || [VSFTPD-CORRELATED] File uploaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002390
 5002391 || [WINDOWS-OWA-CORRELATED] Login failure after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002391
+5002392 || [WINDOWS-MISC] Microsoft Antimalware has encountered an error trying to update signatures || url,wiki.quadrantsec.com/bin/view/Main/5002392
+5002393 || [COURIER] Timeout || url,wiki.quadrantsec.com/bin/view/Main/5002393
+5002394 || [COURIER-GEOIP] Authentication failure from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002394
+5002395 || [COURIER-GEOIP] Logout/disconnect from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002395
+5002396 || [COURIER-GEOIP] User login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002396
+5002397 || [COURIER-GEOIP] Timeout from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002397
+5002398 || [COURIER] Authentication failure - Brute Force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002398
+5002399 || [COURIER-CORRELATED] Logout/disconnect after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002399
+5002400 || [COURIER-CORRELATED] User login after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002400
+5002401 || [COURIER-CORRELATED] Timeout after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002401
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
