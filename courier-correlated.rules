@@ -1,4 +1,4 @@
-# Sagan windows-correlated.rules
+# Sagan courier-correlated.rules
 # Copyright (c) 2009-2015, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -25,10 +25,8 @@
 #
 #*************************************************************
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-CORRELATED] Successful RDP login from known brute force"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; program: Security*; flowbits:isset,by_src,brute_force; parse_src_ip: 1; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002336; sid:5002336; rev:4;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-CORRELATED] Logout/disconnect after suspicious activity"; pcre: "/LOGOUT|DISCONNECTED/"; classtype: not-suspicious; parse_src_ip: 1; program: imapd|imapd-ssl|courierlogger;  flowbits: isset,by_src,recon|honeypot; reference: url,wiki.quadrantsec.com/bin/view/Main/5002399; sid:5002399; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-CORRELATED] User login after suspicious activity"; content: "LOGIN,"; parse_src_ip: 1;classtype: successful-user; program: imapd|imapd-ssl|courierlogger;  flowbits: isset,by_src,recon|honeypot; reference: url,wiki.quadrantsec.com/bin/view/Main/5002400; sid:5002400; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-CORRELATED] Timeout after suspicious activity"; content: "TIMEOUT"; parse_src_ip: 1;classtype: successful-user; program: imapd|imapd-ssl|courierlogger;  flowbits: isset,by_src,recon|honeypot; reference: url,wiki.quadrantsec.com/bin/view/Main/5002401; sid:5002401; rev:1;)
 
-# Add by Champ Clark 09/18/2015
-# RDP after recon/honeypot
-
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-CORRELATED] RDP login after suspicious traffic"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; program: Security*; flowbits: isset,by_src,recon|honeypot; parse_src_ip: 1; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002356; sid:5002356; rev:1;)
 
