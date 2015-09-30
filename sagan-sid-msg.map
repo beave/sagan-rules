@@ -2299,6 +2299,7 @@
 5002399 || [COURIER-CORRELATED] Logout/disconnect after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002399
 5002400 || [COURIER-CORRELATED] User login after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002400
 5002401 || [COURIER-CORRELATED] Timeout after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002401
+5002402 || [WINDOWS-MSSQL] Login Failure from non-trusted connection - Brute force [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002402
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
