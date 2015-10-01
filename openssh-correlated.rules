@@ -35,9 +35,9 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-CORRELATED] Au
 
 # Added by Champ Clark - 09/17/2014 - Required flowbit.  Valid login _after_ brute force.
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-CORRELATED] SSH login success after brute force attack!"; pcre: "/accepted|authenticated/i"; flowbits: isset, both,brute_force; flowbits: set,attacker,86400; normalize: openssh; classtype: correlated-attack; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002176; sid:5002177; rev:5;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-CORRELATED] SSH login success after brute force attack!"; pcre: "/accepted|authenticated/i"; flowbits: isset,by_src,brute_force; flowbits: set,attacker,86400; normalize: openssh; classtype: correlated-attack; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002176; sid:5002177; rev:6;)
 
 # We could later use "attacker.generic" to "track" the attacker! 
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-CORRELATED] Accepted publickey after brute force attack!"; content: "Accepted publickey" ; flowbits: isset, both,brute_force; flowbits: set,attacker,86400; normalize: openssh; classtype: correlated-attack; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002178; sid:5002178; rev:4;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-CORRELATED] Accepted publickey after brute force attack!"; content: "Accepted publickey" ; flowbits: isset,by_src,brute_force; flowbits: set,attacker,86400; normalize: openssh; classtype: correlated-attack; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002178; sid:5002178; rev:5;)
 
