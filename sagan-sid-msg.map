@@ -1671,6 +1671,7 @@
 5001737 || [WINDOWS-MALWARE] ZeroAccess Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001737
 5001738 || [WINDOWS-MALWARE] ZeroAccess Malware Detected [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001738
 5001739 || [PROXY-MALWARE] Pony Trojan || url,wiki.quadrantsec.com/bin/view/Main/5001739
+5001740 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x1 - Client's entry in database has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001740
 5001741 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x2 - Server's entry in database has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001741
 5001742 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3 - Requested protocol version # not supported [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001742
 5001743 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x4 - Client's key encrypted in old master key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001743
@@ -5059,4 +5060,3 @@
 6107000 || [CISCO-SDEE] Data Base TNS Connection || url,wiki.quadrantsec.com/bin/view/Main/6107000
 6107001 || [CISCO-SDEE] TNS Redirect Request || url,wiki.quadrantsec.com/bin/view/Main/6107001
 6107002 || [CISCO-SDEE] NBT NetBIOS Session Failed Login - Brute Force [5/3] || url,wiki.quadrantsec.com/bin/view/Main/6107002
-50017240 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x1 - Client's entry in database has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001740
