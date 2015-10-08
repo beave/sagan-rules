@@ -15,7 +15,7 @@
 5000013 || [BASH] suidperl access || url,wiki.quadrantsec.com/bin/view/Main/5000013
 5000014 || [BASH] histfile=/dev/null || url,wiki.quadrantsec.com/bin/view/Main/5000014
 5000015 || [OPENSSH] PAM Authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000015
-5000016 || [OPENSSH] Authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000016
+5000016 || [OPENSSH] Authentication failure - Brute force [10/1] || url,wiki.quadrantsec.com/bin/view/Main/5000016
 5000017 || [OPENSSH] Authentication failure for root - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000017
 5000018 || [OPENSSH] Possible break-in attempt || url,wiki.quadrantsec.com/bin/view/Main/5000018
 5000020 || [OPENSSH] Not executable shell - login attempt || url,wiki.quadrantsec.com/bin/view/Main/5000020
@@ -107,13 +107,13 @@
 5000110 || [BIND] Zone transfer error || url,wiki.quadrantsec.com/bin/view/Main/5000110
 5000111 || [CISCO-IOS] IOS configuration changed || url,wiki.quadrantsec.com/bin/view/Main/5000111
 5000112 || [CISCO-IOS] Successful login || url,wiki.quadrantsec.com/bin/view/Main/5000112
-5000113 || [CISCO-IOS] Failed login - Brute Force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000113
+5000113 || [CISCO-IOS] Failed login - Brute Force [10/1] || url,wiki.quadrantsec.com/bin/view/Main/5000113
 5000114 || [SYSLOG] Possible unknown problem on a system || url,wiki.quadrantsec.com/bin/view/Main/5000114
 5000115 || [SYSLOG] /etc/securetty missing, root access unrestricted || url,wiki.quadrantsec.com/bin/view/Main/5000115
 5000116 || [SYSLOG] System out of disk space || url,wiki.quadrantsec.com/bin/view/Main/5000116
 5000117 || [SYSLOG] Unable to mount NFS share || url,wiki.quadrantsec.com/bin/view/Main/5000117
 5000118 || [SYSLOG] Unable to mount the NFS directory || url,wiki.quadrantsec.com/bin/view/Main/5000118
-5000119 || [SYSLOG] Authentication failure - Brute force [20/1] || url,wiki.quadrantsec.com/bin/view/Main/5000119
+5000119 || [SYSLOG] Authentication failure - Brute force [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5000119
 5000120 || [SYSLOG] Illegal root login || url,wiki.quadrantsec.com/bin/view/Main/5000120
 5000121 || [SYSLOG] Connection blocked by TCP Wrappers || url,wiki.quadrantsec.com/bin/view/Main/5000121
 5000122 || [SYSLOG] Physical root login || url,wiki.quadrantsec.com/bin/view/Main/5000122
@@ -1528,7 +1528,7 @@
 5001590 || [HUAWEI] SSH - LOGIN_FAIL_RSA_ERR || url, huaweisymantec.com/en/download.do?id=658891
 5001591 || [HUAWEI] VRRP - LogAuthFailed || url, huaweisymantec.com/en/download.do?id=658891
 5001592 || [HUAWEI] SSH - LOGIN_FAIL - Brute force [5/5] || url, huaweisymantec.com/en/download.do?id=658891
-5001593 || [CISCO-PIXASA] AAA user authentication Reject - Brute force [5/1] || url, wiki.quadrantsec.com/bin/view/Main/5001593
+5001593 || [CISCO-PIXASA] AAA user authentication Reject - Brute force [10/1] || url, wiki.quadrantsec.com/bin/view/Main/5001593
 5001595 || [MONGODB] DBException causing immediate shutdown || url,www.mongodb.org
 5001596 || [MONGODB] IOS_Base exception causing immediate shutdown || url,www.mongodb.org
 5001597 || [MONGODB] Bad allocation exception causing immediate shutdown || url,www.mongodb.org
@@ -1580,7 +1580,7 @@
 5001643 || [JUNIPER] SSHD_LOGIN_FAILED_LIMIT - Brute Force || url,wiki.quadrantsec.com/bin/view/Main/5001643
 5001644 || [JUNIPER] SSHD_LOGIN_FAILED || url,wiki.quadrantsec.com/bin/view/Main/5001644
 5001645 || [JUNIPER] SSHD_LOGIN_FAILED - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001645
-5001646 || [OPENSSH] Failed password - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001646
+5001646 || [OPENSSH] Failed password - Brute force [10/1] || url,wiki.quadrantsec.com/bin/view/Main/5001646
 5001647 || [OPENSSH] Failed password || url,wiki.quadrantsec.com/bin/view/Main/5001647
 5001648 || [WINDOWS-AUTH] Authentication failed - User credentials mismatch [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5001648
 5001649 || [WINDOWS-MISC] DHCP Scope is almost full || url,wiki.quadrantsec.com/bin/view/Main/5001649
@@ -1620,7 +1620,7 @@
 5001683 || [SYMANTEC-EMS] Error regrouping - bad parameters || url,wiki.quadrantsec.com/bin/view/Main/5001683
 5001684 || [SYMANTEC-EMS] Failed to map user to a directory || url,wiki.quadrantsec.com/bin/view/Main/5001684
 5001685 || [SYMANTEC-EMS] LDAP key error - name lookup failed || url,wiki.quadrantsec.com/bin/view/Main/5001685
-5001686 || [CISCO-IOS] Login Failed - Brute Force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001686
+5001686 || [CISCO-IOS] Login Failed - Brute Force [10/1] || url,wiki.quadrantsec.com/bin/view/Main/5001686
 5001687 || [WINDOWS-AUTH] User account enabled || url,wiki.quadrantsec.com/bin/view/Main/5001687
 5001688 || [CISCO-IOS] Low FAN RPM - Service recommended || url,wiki.quadrantsec.com/bin/view/Main/5001688
 5001689 || [CISCO-WLC] Rogue AP detected [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5001689
@@ -1645,7 +1645,7 @@
 5001711 || [CISCO-IOS] Grammar Manager Telephony Subsystem ModuleStop || url,wiki.quadrantsec.com/bin/view/Main/5001711
 5001712 || [CISCO-IOS] Cisco Unified CCX MGR Shutdown || url,wiki.quadrantsec.com/bin/view/Main/5001712
 5001713 || [CISCO-IOS] Socket Manager Telephony Subsystem ModuleStart || url,wiki.quadrantsec.com/bin/view/Main/5001713
-5001714 || [CISCO-PIXASA] TCP access denied by ACL - Brute force [5/1] || url, wiki.quadrantsec.com/bin/view/Main/5001714
+5001714 || [CISCO-PIXASA] TCP access denied by ACL - Brute force [25/1] || url, wiki.quadrantsec.com/bin/view/Main/5001714
 5001715 || [CISCO-PIXASA] TCP access denied by ACL || url, wiki.quadrantsec.com/bin/view/Main/5001715
 5001716 || [WINDOWS-MISC] DHCP Scope is FULL || url,wiki.quadrantsec.com/bin/view/Main/5001716
 5001717 || [ORACLE] Authentication Failure || url, wiki.quadrantsec.com/bin/view/Main/5001717
@@ -1925,7 +1925,7 @@
 5001995 || [NFCAPD] Possible IRC - Port 7000 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001995
 5001996 || [NFCAPD] SSH Traffic Detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001996
 5001997 || [NFCAPD] Possible SSH Traffic Detected - Port 2222 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001997
-5001998 || [NFCAPD] Telnet Traffic Detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001998
+5001998 || [NFCAPD] Telnet Traffic Detected - SYN traffic only [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001998
 5001999 || [WINDOWS-MALWARE] Suspicious misspelled process || url,wiki.quadrantsec.com/bin/view/Main/5001999
 5002000 || [WINDOWS-MALWARE] Lower case drive letter used in process || url,wiki.quadrantsec.com/bin/view/Main/5002000
 5002001 || [WINDOWS-MALWARE] Incorrect path called for svchost.exe || url,wiki.quadrantsec.com/bin/view/Main/5002001
@@ -2238,7 +2238,7 @@
 5002338 || [WINDOWS-GEOIP] Windows Session Disconnected from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002338
 5002339 || [WINDOWS-GEOIP] Windows RDP Session Disconnected from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002339
 5002340 || [WINDOWS-GEOIP] Explicit Windows Logon  || url,wiki.quadrantsec.com/bin/view/Main/5002340
-5002341 || [CITRIX-BLUEDOT] Login from outside Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002341 || url,support.citrix.com/article/CTX123875
+5002341 || [CITRIX-BLUEDOT] Login from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002341 || url,support.citrix.com/article/CTX123875
 5002342 || [CITRIX-BLUEDOT] AAA LOGIN_FAILED from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002342 || url,support.citrix.com/article/CTX123875
 5002343 || [CITRIX-BLUEDOT] SSLVPN HTTPREQUEST from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002343 || url,support.citrix.com/article/CTX123875
 5002344 || [WINDOWS-BLUEDOT] RDP / Logon type 10 from a Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002344
