@@ -25,7 +25,7 @@
 #
 #*************************************************************
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-CORRELATED] Successful RDP login from known brute force"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; program: Security*; flowbits:isset,by_src,brute_force; parse_src_ip: 1; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002336; sid:5002336; rev:4;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-CORRELATED] Successful RDP login from known brute force"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; content:!"Source Network Address|3a| 0.0.0.0"; program: Security*; flowbits:isset,by_src,brute_force; parse_src_ip: 1; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002336; sid:5002336; rev:5;)
 
 # Add by Champ Clark 09/18/2015
 # RDP after recon/honeypot
