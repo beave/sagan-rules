@@ -1,0 +1,81 @@
+# Sagan cylance.rules
+# Copyright (c) 2009-2015, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+# Robert Nunley - 10142015
+
+#successful-user
+
+#Event Type: AuditLog, Event Name: DeviceEdit,
+#Event Type: AuditLog, Event Name: LoginSuccess,
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] AuditLog - Device Edit"; content: "Event Name|3a| DeviceEdit"; content: "AuditLog"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/8000145; parse_src_ip: 1; sid: 8000145; rev:1;)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] AuditLog - Login Success"; content: "Event Name|3a| LoginSuccess"; content: "AuditLog; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/8000146; parse_src_ip: 1; sid: 8000146; rev:1;)
+
+#configuration-change
+
+#Event Type: AuditLog, Event Name: SyslogSettingsSave,
+#Event Type: AuditLog, Event Name: ZoneAddDevice,
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] AuditLog - Syslog Settings Saved"; content: "Event Name|3a| SyslogSettingsSave"; content: "AuditLog; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/8000147; parse_src_ip: 1; sid: 8000147; rev:1;)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] AuditLog - Zone Add Device"; content: "Event Name|3a| ZoneAddDevice"; content: "AuditLog; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/8000148; parse_src_ip: 1; sid: 8000148; rev:1;)
+
+
+
+#system-event
+
+#Event Type: Device, Event Name: Devices
+#Event Type: Device, Event Name: Registration,
+##Event Type: Device, Event Name: SystemSecurity,
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Device - Action Taken"; content: "Event Name|3a| Device"; content: "Device"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/8000149; parse_src_ip: 1; sid: 8000149; rev:1;)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Device - Registration"; content: "Event Name|3a| Registration"; content: "Device"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/8000150; parse_src_ip: 1; sid: 8000150; rev:1;)
+
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Device - System Security"; content: "Event Name|3a| SystemSecurity"; content: "Device"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/8000151; parse_src_ip: 1; sid: 8000151; rev:1;)
+
+#exploit-attempt
+
+#Event Type: ExploitAttempt, Event Name: blocked,
+#Event Type: ExploitAttempt, Event Name: none,
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] ExploitAttempt - Blocked"; content: "Event Name|3a| blocked"; content: "ExploitAttempt"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: exploit-attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/8000152; parse_src_ip: 1; sid: 8000152; rev:1;)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] ExploitAttempt - No Action Taken"; content: "Event Name|3a| none"; content: "ExploitAttempt"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: exploit-attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/8000153; parse_src_ip: 1; sid: 8000153; rev:1;)
+
+#misc-attack
+
+#Event Type: Threat, Event Name: threat_changed,
+#Event Type: Threat, Event Name: threat_found,
+#Event Type: Threat, Event Name: threat_quarantined,
+#Event Type: Threat, Event Name: threat_removed,
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Threat - Changed"; content: "threat_changed"; content: "Threat"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/8000154; parse_src_ip: 1; sid: 8000154; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Threat - Found"; content: "threat_found"; content: "Threat"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/8000155; parse_src_ip: 1; sid: 8000155; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Threat - Quarantined"; content: "threat_quarantined"; content: "Threat"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/8000156; parse_src_ip: 1; sid: 8000156; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Threat - Removed"; content: "threat_removed"; content: "Threat"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/8000157; parse_src_ip: 1; sid: 8000157; rev:1;)
+
