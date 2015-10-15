@@ -21,7 +21,7 @@
 #  SPECIAL, EXEMPLARY, OR.AP...QUENTIAL DA.AP...(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT.AP...BSTITUTE .AP...OR
 #  SER.AP....AP....AP..., DATA, OR PR.AP... O.AP...NESS INTERRUPTION) HOWEVER.AP...D AND ON ANY THEORY OF LIABILITY,
 #  WHETHER IN CONTRA.AP...RICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTH.AP...).AP...NG IN ANY WAY OUT OF THE
-.AP... OF.AP...SOFTWARE, EVEN IF .AP...D OF TH.AP...IBILITY.AP...CH DAMAGE.
+#.AP... OF.AP...SOFTWARE, EVEN IF .AP...D OF TH.AP...IBILITY.AP...CH DAMAGE.
 #
 ##############################################################################
 # These rules are intended to catch malware via the NetFlow protocol.  This
