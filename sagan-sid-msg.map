@@ -1913,7 +1913,7 @@
 5001982 || [FILE-GEOIP] PDF Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001982
 5001983 || [FILE-GEOIP] Flash Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001983
 5001984 || [NFCAPD] Possible IRC detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001984
-5001985 || [NFCAPD] Possible IRC over SSL detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001985
+5001985 || [NFCAPD] Possible IRC detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001985
 5001986 || [NFCAPD] Possible IRC - Port 6660 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001986
 5001987 || [NFCAPD] Possible IRC - Port 6661 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001987
 5001988 || [NFCAPD] Possible IRC - Port 6662 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001988
@@ -1924,9 +1924,9 @@
 5001993 || [NFCAPD] Possible IRC - Port 6668 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001993
 5001994 || [NFCAPD] Possible IRC - Port 6669 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001994
 5001995 || [NFCAPD] Possible IRC - Port 7000 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001995
-5001996 || [NFCAPD] SSH Traffic Detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001996
-5001997 || [NFCAPD] Possible SSH Traffic Detected - Port 2222 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001997
-5001998 || [NFCAPD] Telnet Traffic Detected - SYN traffic only [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001998
+5001996 || [NFCAPD] PUSH/ACK Traffic Detected [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001996
+5001997 || [NFCAPD] PUSH/ACK Traffic Detected - Port 2222 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001997
+5001998 || [NFCAPD] Telnet Traffic Detected via PUSH/ACK [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5001998
 5001999 || [WINDOWS-MALWARE] Suspicious misspelled process || url,wiki.quadrantsec.com/bin/view/Main/5001999
 5002000 || [WINDOWS-MALWARE] Lower case drive letter used in process || url,wiki.quadrantsec.com/bin/view/Main/5002000
 5002001 || [WINDOWS-MALWARE] Incorrect path called for svchost.exe || url,wiki.quadrantsec.com/bin/view/Main/5002001
@@ -2200,9 +2200,9 @@
 5002297 || [NFCAPD] Possible BitTorrent - Port 6887 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5002297
 5002298 || [NFCAPD] Possible BitTorrent - Port 6888 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5002298
 5002299 || [NFCAPD] Possible BitTorrent - Port 6889 [5/5] || url, wiki.quadrantsec.com/bin/view/Main/5002299
-5002300 || [NFCAPD] Possible TOR - Port 9001 || url, torstatus.blutmagie.de/index.php?SR=ORPort&SO=Asc || url, wiki.quadrantsec.com/bin/view/Main/5002300
-5002301 || [NFCAPD] Possible TOR - Port 9030 after Port 9001 || url, torstatus.blutmagie.de/index.php?SR=ORPort&SO=Asc || url, wiki.quadrantsec.com/bin/view/Main/5002301
-5002302 || [NFCAPD] Possible TOR - Port 443 after Port 9001 || url, torstatus.blutmagie.de/index.php?SR=ORPort&SO=Asc || url, wiki.quadrantsec.com/bin/view/Main/5002302
+5002300 || [NFCAPD] Possible TOR - Port 9001 || url, torstatus.blutmagie.de || url, wiki.quadrantsec.com/bin/view/Main/5002300
+5002301 || [NFCAPD] Possible TOR - Port 9030 after Port 9001 || url, torstatus.blutmagie.de || url, wiki.quadrantsec.com/bin/view/Main/5002301
+5002302 || [NFCAPD] Possible TOR - Port 443 after Port 9001 || url, torstatus.blutmagie.de || url, wiki.quadrantsec.com/bin/view/Main/5002302
 5002303 || [BASH] History hiding
 5002304 || [BASH] History hiding
 5002306 || [BASH] Netcat execution
@@ -5060,3 +5060,16 @@
 6107000 || [CISCO-SDEE] Data Base TNS Connection || url,wiki.quadrantsec.com/bin/view/Main/6107000
 6107001 || [CISCO-SDEE] TNS Redirect Request || url,wiki.quadrantsec.com/bin/view/Main/6107001
 6107002 || [CISCO-SDEE] NBT NetBIOS Session Failed Login - Brute Force [5/3] || url,wiki.quadrantsec.com/bin/view/Main/6107002
+8000145 || [CYLANCE] AuditLog - Device Edit || url,wiki.quadrantsec.com/bin/view/Main/8000145
+8000146 || [CYLANCE] AuditLog - Login Success || url,wiki.quadrantsec.com/bin/view/Main/8000146
+8000147 || [CYLANCE] AuditLog - Syslog Settings Saved || url,wiki.quadrantsec.com/bin/view/Main/8000147
+8000148 || [CYLANCE] AuditLog - Zone Add Device || url,wiki.quadrantsec.com/bin/view/Main/8000148
+8000149 || [CYLANCE] Device - Action Taken || url,wiki.quadrantsec.com/bin/view/Main/8000149
+8000150 || [CYLANCE] Device - Registration || url,wiki.quadrantsec.com/bin/view/Main/8000150
+8000151 || [CYLANCE] Device - System Security || url,wiki.quadrantsec.com/bin/view/Main/8000151
+8000152 || [CYLANCE] ExploitAttempt - Blocked || url,wiki.quadrantsec.com/bin/view/Main/8000152
+8000153 || [CYLANCE] ExploitAttempt - No Action Taken || url,wiki.quadrantsec.com/bin/view/Main/8000153
+8000154 || [CYLANCE] Threat - Changed || url,wiki.quadrantsec.com/bin/view/Main/8000154
+8000155 || [CYLANCE] Threat - Found || url,wiki.quadrantsec.com/bin/view/Main/8000155
+8000156 || [CYLANCE] Threat - Quarantined || url,wiki.quadrantsec.com/bin/view/Main/8000156
+8000157 || [CYLANCE] Threat - Removed || url,wiki.quadrantsec.com/bin/view/Main/8000157
