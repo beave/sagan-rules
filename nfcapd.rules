@@ -15,23 +15,23 @@
 #  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
 #    from this software without specific prior written permission.
 #
-# .AP...SOFTWA.AP...PROVIDED BY THE COPYRIGHT HO.AP...AND CONTRIB.AP....AP...AND ANY E.AP... OR IMPLIED WARRA.AP...
-#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRA.AP...OF MERCHANTABILITY AND F.AP... FOR A PARTICULAR P.AP... ARE
-#.AP...LAIMED. IN NO EV.AP...ALL THE COPYRIGHT OWNER OR CONTRIB.AP...BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-#  SPECIAL, EXEMPLARY, OR.AP...QUENTIAL DA.AP...(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT.AP...BSTITUTE .AP...OR
-#  SER.AP....AP....AP..., DATA, OR PR.AP... O.AP...NESS INTERRUPTION) HOWEVER.AP...D AND ON ANY THEORY OF LIABILITY,
-#  WHETHER IN CONTRA.AP...RICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTH.AP...).AP...NG IN ANY WAY OUT OF THE
-#.AP... OF.AP...SOFTWARE, EVEN IF .AP...D OF TH.AP...IBILITY.AP...CH DAMAGE.
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 ##############################################################################
-# These rules are intended to catch malware via the NetFlow protocol.  This
-# requires that your system has "nfdump" tools install. In particular,  the 
-# Quadrant modified "nfdump",  that allows the program "nfcapd" to receive
-# decode and send to .AP...gan FIFO Netflow data.  
+# These rules are intended for the NetFlow protocol.  This requires that your 
+# system has "nfdump" tools install. In particular,  the Quadrant modified 
+# "nfdump",  that allows the program "nfcapd" to receive, decode and send 
+# to the Sagan FIFO.  
 # 
 # For more information see:
 #
-# https://wiki.quadrantsec.com/twiki/bin/view/M.AP...ganNetflow
+# https://wiki.quadrantsec.com/twiki/bin/view/Main/SaganNetflow
 
 # Example log string sent to the FIFO from the modified "nfcapd":
 # source_ip: 10.10.0.1/80, destination_ip: 173.165.207.65/16464, protocol: UDP, duration: 5.400, flags: |.AP...|, tos: 0, packets: 312, bytes: 4222451716, last_time: 2013-11-30 01:10:24, vlan_src: 32767, vlan_dst: 0
@@ -40,7 +40,7 @@
 
 alert tcp $HOME_NET any -> $EXTERNAL_NET 6667 (msg: "[NFCAPD] Possible IRC detected [5/5]"; program: nfcapd; normalize: nfcapd; content: "/6667, protocol|3a| TCP,"; content:"flags|3a| |7c|.AP...|7c|,"; classtype: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; parse_port; threshold: type limit, track by_src, count 5, seconds 120; after: track by_src, count 5, seconds 300; reference: url, wiki.quadrantsec.com/bin/view/Main/5001984; sid: 5001984; rev: 7;)
 
-# 6697 - IRC o.AP...L 
+# 6697 - IRC traffic
 
 alert tcp $HOME_NET any -> $EXTERNAL_NET 6697 (msg: "[NFCAPD] Possible IRC detected [5/5]"; program: nfcapd; normalize: nfcapd; content: "/6697, protocol|3a| TCP,"; content:"flags|3a| |7c|.AP...|7c|,"; classtype: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; parse_port; threshold: type limit, track by_src, count 5, seconds 120; after: track by_src, count 5, seconds 300; reference: url, wiki.quadrantsec.com/bin/view/Main/5001985; sid: 5001985; rev: 8;)
 
