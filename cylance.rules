@@ -79,3 +79,4 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Threat - Found";
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Threat - Quarantined"; content: "threat_quarantined"; content: "Threat"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/8000156; parse_src_ip: 1; sid: 8000156; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Threat - Removed"; content: "threat_removed"; content: "Threat"; content: "CylancePROTECT"; threshold: type limit, count 1, seconds 300, track by_src; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/8000157; parse_src_ip: 1; sid: 8000157; rev:1;)
 
+#
