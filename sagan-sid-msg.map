@@ -1108,7 +1108,7 @@
 5001166 || [WINDOWS-AUTH] Security enabled global group member added || url,wiki.quadrantsec.com/bin/view/Main/5001166
 5001167 || [WINDOWS-AUTH] Security enabled global group member removed || url,wiki.quadrantsec.com/bin/view/Main/5001167
 5001168 || [WINDOWS-AUTH] Security enabled global group deleted || url,wiki.quadrantsec.com/bin/view/Main/5001168
-5001169 || [WINDOWS-AUTH] Security enabled global group created || url,wiki.quadrantsec.com/bin/view/Main/5001169
+5001169 || [WINDOWS-AUTH] Security enabled local group created || url,wiki.quadrantsec.com/bin/view/Main/5001169
 5001170 || [WINDOWS-AUTH] Security enabled local group member added || url,wiki.quadrantsec.com/bin/view/Main/5001170
 5001171 || [WINDOWS-AUTH] Security enabled local group member removed || url,wiki.quadrantsec.com/bin/view/Main/5001171
 5001172 || [WINDOWS-AUTH] Security enabled local group deleted || url,wiki.quadrantsec.com/bin/view/Main/5001172
@@ -2301,6 +2301,166 @@
 5002400 || [COURIER-CORRELATED] User login after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002400
 5002401 || [COURIER-CORRELATED] Timeout after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002401
 5002402 || [WINDOWS-MSSQL] Login Failure from non-trusted connection - Brute force [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002402
+5002403 || [WINDOWS-AUTH] Security enabled global group created || url,wiki.quadrantsec.com/bin/view/Main/5002403
+5002404 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - User Is Locked Out [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002404
+5002405 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - User Account Disabled [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002405
+5002406 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - User Login Attempts Outside of Time Restriction [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002406
+5002407 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - Expired Account [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002407
+5002408 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - Expired Password [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002408
+5002409 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x1 - Client's entry in database has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002409
+5002410 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x2 - Server's entry in database has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002410
+5002411 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x3 - Requested protocol version # not supported [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002411
+5002412 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x4 - Client's key encrypted in old master key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002412
+5002413 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x5 - Server's key encrypted in old master key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002413
+5002414 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x6 - Client not found in Kerberos database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002414
+5002415 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x7 - Server not found in Kerberos database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002415
+5002416 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x8 - Multiple principal entries in database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002416
+5002417 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x9 - The client or server has a null key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002417
+5002418 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0xA - Ticket not eligible for postdating [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002418
+5002419 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0xB - Requested start time is later than end time [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002419
+5002420 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0xC - KDC policy rejects request [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002420
+5002421 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0xD - KDC cannot accommodate requested option [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002421
+5002422 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0xE - KDC has no support for encryption type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002422
+5002423 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - B4ute force 0xF - KDC has no support for checksum type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002423
+5002424 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x10 - KDC has no support for padata type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002424
+5002425 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x11 - KDC has no support for transited type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002425
+5002426 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x12 - Clients credentials have been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002426
+5002427 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x13 - Credentials for server have been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002427
+5002428 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x14 - TGT has been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002428
+5002429 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x15 - Client not yet valid - try again later [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002429
+5002430 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x16 - Server not yet valid - try again later [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002430
+5002431 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x17 - Password has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002431
+5002432 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x18 - Pre-authentication information was invalid [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002432
+5002433 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x19 - Additional pre-authentication required [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002433
+5002434 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x1F - Integrity check on decrypted field failed [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002434
+5002435 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x20 - Ticket expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002435
+5002436 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x21 - Ticket not yet valid [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002436
+5002437 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x22 - Request is a replay [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002437
+5002438 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x23 - The ticket isn't for us [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002438
+5002439 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x24 - Ticket and authenticator don't match [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002439
+5002440 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x25 - Clock skew too great [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002440
+5002441 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x26 - Incorrect net address [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002441
+5002442 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x27 - Protocol version mismatch [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002442
+5002443 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x28 - Invalid msg type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002443
+5002444 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x29 - Message stream modified [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002444
+5002445 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x2A - Message out of order [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002445
+5002446 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x2C - Specified version of key is not available [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002446
+5002447 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x2D - Service key not available [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002447
+5002448 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x2E - Mutual authentication failed [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002448
+5002449 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x2F - Incorrect message direction [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002449
+5002450 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x30 - Alternative authentication method required [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002450
+5002451 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x31 - Incorrect sequence number in message [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002451
+5002452 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x32 - Inappropriate type of checksum in message [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002452
+5002453 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x3C - Generic error [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002453
+5002454 || [WINDOWS-BROINTEL] Windows DC Login failure from a Bro Intel listed IP - Brute force 0x3D - Field is too long for this implementation [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002454
+5002455 || [WINDOWS-BLUEDOT] Login failure from a Bluedot listed IP - User Name Does Not Exist [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002455
+5002456 || [WINDOWS-BLUEDOT] Login failure from a Bluedot listed IP - User Correct but Incorrect Password [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002456
+5002457 || [WINDOWS-BLUEDOT] Login failure from a Bluedot listed IP - User Is Locked Out [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002457
+5002458 || [WINDOWS-BLUEDOT] Login failure from a Bluedot listed IP - User Account Disabled [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002458
+5002459 || [WINDOWS-BLUEDOT] Login failure from a Bluedot listed IP - User Login Attempts Outside of Time Restriction [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002459
+5002460 || [WINDOWS-BLUEDOT] Login failure from a Bluedot listed IP - Expired Account [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002460
+5002461 || [WINDOWS-BLUEDOT] Login failure from a Bluedot listed IP - Expired Password [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002461
+5002462 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x1 - Client's entry in database has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002462
+5002463 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x2 - Server's entry in database has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002463
+5002464 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x3 - Requested protocol version # not supported [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002464
+5002465 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x4 - Client's key encrypted in old master key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002465
+5002466 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x5 - Server's key encrypted in old master key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002466
+5002467 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x6 - Client not found in Kerberos database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002467
+5002468 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x7 - Server not found in Kerberos database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002468
+5002469 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x8 - Multiple principal entries in database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002469
+5002470 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x9 - The client or server has a null key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002470
+5002471 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xA - Ticket not eligible for postdating [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002471
+5002472 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xB - Requested start time is later than end time [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002472
+5002473 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xC - KDC policy rejects request [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002473
+5002475 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xD - KDC cannot accommodate requested option [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002475
+5002476 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xE - KDC has no support for encryption type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002476
+5002477 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - B4ute force 0xF - KDC has no support for checksum type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002477
+5002478 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x10 - KDC has no support for padata type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002478
+5002479 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x11 - KDC has no support for transited type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002479
+5002480 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x12 - Clients credentials have been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002480
+5002481 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x13 - Credentials for server have been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002481
+5002482 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x14 - TGT has been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002482
+5002483 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x15 - Client not yet valid - try again later [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002483
+5002484 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x16 - Server not yet valid - try again later [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002484
+5002485 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x17 - Password has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002485
+5002486 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x18 - Pre-authentication information was invalid [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002486
+5002487 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x19 - Additional pre-authentication required [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002487
+5002488 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x1F - Integrity check on decrypted field failed [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002488
+5002489 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x20 - Ticket expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002489
+5002490 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x21 - Ticket not yet valid [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002490
+5002491 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x22 - Request is a replay [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002491
+5002492 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x23 - The ticket isn't for us [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002492
+5002493 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x24 - Ticket and authenticator don't match [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002493
+5002494 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x25 - Clock skew too great [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002494
+5002495 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x26 - Incorrect net address [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002495
+5002496 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x27 - Protocol version mismatch [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002496
+5002497 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x28 - Invalid msg type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002497
+5002498 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x29 - Message stream modified [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002498
+5002499 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x2A - Message out of order [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002499
+5002500 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x2C - Specified version of key is not available [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002500
+5002501 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x2D - Service key not available [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002501
+5002502 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x2E - Mutual authentication failed [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002502
+5002503 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x2F - Incorrect message direction [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002503
+5002504 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x30 - Alternative authentication method required [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002504
+5002505 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x31 - Incorrect sequence number in message [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002505
+5002506 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x32 - Inappropriate type of checksum in message [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002506
+5002507 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x3C - Generic error [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002507
+5002508 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x3D - Field is too long for this implementation [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002508
+5002509 || [WINDOWS-BLACKLIST] Login failure from a blacklisted IP - User Name Does Not Exist [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002509
+5002510 || [WINDOWS-BLACKLIST] Login failure from a blacklisted IP - User Correct but Incorrect Password [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002510
+5002511 || [WINDOWS-BLACKLIST] Login failure from a blacklisted IP - User Is Locked Out [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002511
+5002512 || [WINDOWS-BLACKLIST] Login failure from a blacklisted IP - User Account Disabled [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002512
+5002513 || [WINDOWS-BLACKLIST] Login failure from a blacklisted IP - User Login Attempts Outside of Time Restriction [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002513
+5002514 || [WINDOWS-BLACKLIST] Login failure from a blacklisted IP - Expired Account [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002514
+5002515 || [WINDOWS-BLACKLIST] Login failure from a blacklisted IP - Expired Password [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002515
+5002516 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x1 - Client's entry in database has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002516
+5002517 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x2 - Server's entry in database has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002517
+5002518 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x3 - Requested protocol version # not supported [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002518
+5002519 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x4 - Client's key encrypted in old master key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002519
+5002520 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x5 - Server's key encrypted in old master key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002520
+5002521 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x6 - Client not found in Kerberos database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002521
+5002522 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x7 - Server not found in Kerberos database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002522
+5002523 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x8 - Multiple principal entries in database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002523
+5002524 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x9 - The client or server has a null key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002524
+5002525 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0xA - Ticket not eligible for postdating [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002525
+5002526 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0xB - Requested start time is later than end time [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002526
+5002527 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0xC - KDC policy rejects request [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002527
+5002528 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0xD - KDC cannot accommodate requested option [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002528
+5002529 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0xE - KDC has no support for encryption type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002529
+5002530 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - B4ute force 0xF - KDC has no support for checksum type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002530
+5002531 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x10 - KDC has no support for padata type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002531
+5002532 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x11 - KDC has no support for transited type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002532
+5002533 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x12 - Clients credentials have been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002533
+5002534 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x13 - Credentials for server have been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002534
+5002535 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x14 - TGT has been revoked [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002535
+5002536 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x15 - Client not yet valid - try again later [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002536
+5002537 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x16 - Server not yet valid - try again later [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002537
+5002538 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x17 - Password has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002538
+5002539 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x18 - Pre-authentication information was invalid [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002539
+5002540 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x19 - Additional pre-authentication required [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002540
+5002541 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x1F - Integrity check on decrypted field failed [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002541
+5002542 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x20 - Ticket expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002542
+5002543 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x21 - Ticket not yet valid [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002543
+5002544 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x22 - Request is a replay [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002544
+5002545 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x23 - The ticket isn't for us [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002545
+5002546 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x24 - Ticket and authenticator don't match [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002546
+5002547 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x25 - Clock skew too great [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002547
+5002548 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x26 - Incorrect net address [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002548
+5002549 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x27 - Protocol version mismatch [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002549
+5002550 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x28 - Invalid msg type [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002550
+5002551 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x29 - Message stream modified [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002551
+5002552 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x2A - Message out of order [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002552
+5002553 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x2C - Specified version of key is not available [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002553
+5002554 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x2D - Service key not available [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002554
+5002555 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x2E - Mutual authentication failed [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002555
+5002556 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x2F - Incorrect message direction [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002556
+5002557 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x30 - Alternative authentication method required [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002557
+5002558 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x31 - Incorrect sequence number in message [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002558
+5002559 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x32 - Inappropriate type of checksum in message [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002559
+5002560 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x3C - Generic error [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002560
+5002561 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x3D - Field is too long for this implementation [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002561
+5002562 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - User Correct but Incorrect Password [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002562
+5002563 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - User Name Does Not Exist [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002563
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
