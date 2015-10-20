@@ -48,15 +48,15 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Login fail
 
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows DC Logon Failure - Brute force [25/1]"; pcre: "/ 675: | 676: | 681: | 4771: | 4768: /"; classtype: unsuccessful-user; program: Security*; flowbits: set,brute_force,86400; after: track by_src, count 25, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001160; sid: 5001160; rev:10;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] User account unlocked"; pcre: "/ 671: | 4767: /"; classtype: unsuccessful-user; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001161; sid: 5001161; rev:3;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled group created"; pcre: "/ 631: | 635: | 658: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001162; sid: 5001162; rev:3;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled group deleted"; pcre: "/ 634: | 638: | 662: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001163; sid: 5001163; rev:3;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled group created"; pcre: "/ 631: | 635: | 658: | 4727: | 4731: | 4754: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001162; sid: 5001162; rev:4;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled group deleted"; pcre: "/ 634: | 638: | 662: | 4730: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001163; sid: 5001163; rev:4;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Group account created"; pcre: "/ 631: | 4727: | 635: | 4731: | 658: | 4754: | 648: | 4744: | 653: | 4749: | 663: | 4759: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001164; sid: 5001164; rev:3;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Group account deleted"; pcre: "/ 634: | 4730: | 638: | 4734: | 662: | 4758: | 652: | 4748: | 657: | 4753: | 667: | 4763: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001165; sid: 5001165; rev:3;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Group account changed"; pcre: "/ 632: | 4728: | 633: | 4729: | 636: | 4732: | 637: | 4733: | 639: | 4735: | 641 | 4737: | 637: | 4733: | 659: | 4755: | 660: | 4766: | 668: | 4764: | 649: | 4745: | 650: | 4746: | 651: | 4747: | 654: | 4750: | 655: | 4751: | 656: | 4752: | 659: | 4755: | 660: | 4756: | 661: | 4757: | 664: | 4760: | 665: | 4761: | 666: | 4762: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001475; sid: 5001475; rev:3;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled global group member added"; pcre: "/ 632: | 4728: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001166; sid: 5001166; rev:3;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled global group member removed"; pcre: "/ 633: | 4729: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001167; sid: 5001167; rev:3;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled global group deleted"; pcre: "/ 634: | 4730: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001168; sid: 5001168; rev:3;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled global group created"; pcre: "/ 635: | 4731: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001169; sid: 5001169; rev:3;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled local group created"; pcre: "/ 635: | 4731: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001169; sid: 5001169; rev:4;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled local group member added"; pcre: "/ 636: | 4732: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001170; sid: 5001170; rev:3;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled local group member removed"; pcre: "/ 637: | 4733: /"; classtype: system-eventr; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001171; sid: 5001171; rev:3;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled local group deleted"; pcre: "/ 638: | 4734: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001172; sid: 5001172; rev:3;)
@@ -71,8 +71,8 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] RDP maximu
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows login attempt (ignored). Duplicated"; content: " 680|3a| "; classtype: unsuccessful-user; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001186; sid: 5001186; rev:4;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Remote access login failure"; pcre: "/ 20187: | 20014: | 20078: | 20050: | 20049: | 20189: /"; classtype: unsuccessful-user; program: RemoteAccess; reference: url,wiki.quadrantsec.com/bin/view/Main/5001187; sid: 5001187; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Remote access login success"; content: " 20158|3a| "; classtype: successful-user; program: RemoteAccess; reference: url,wiki.quadrantsec.com/bin/view/Main/5001188; sid: 5001188; rev:3;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Computer account changed/deleted"; pcre: "/ 646: | 647: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001189; sid: 5001189; rev:3;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Computer account changed/deleted"; pcre: "/ 646: | 647: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001190; sid: 5001190; rev:3;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Computer account changed/deleted"; pcre: "/ 646: | 647: | 4742: | 4743: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001189; sid: 5001189; rev:4;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Computer account changed/deleted"; pcre: "/ 646: | 647: | 4742: | 4743: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001190; sid: 5001190; rev:4;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Account locked out [multiple login errors] [0/1]"; pcre: "/ 644: | 4740: /"; threshold: type limit, track by_src, count 1, seconds 300; classtype: unsuccessful-user; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001192; sid: 5001192; rev:7;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] General account database changed"; content: " 640|3a| "; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001193; sid: 5001193; rev:4;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] DC  - Integrity check on decrypted"; pcre: "/ 675: | 676: | 681: | 4771: | 4768: /"; content: "Failure Code|3a| 0x1F"; classtype: exploit-attempt; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001195; sid: 5001195; rev:6;)
@@ -88,7 +88,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] DC - Clock
 
 # 09/18/2012 Sniffty Dugen 
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Attempted Password Reset"; content: " 4724|3a| "; classtype: configuration-change; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001620; sid:5001620; rev:4;) 
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Attempted Password Reset"; pcre: "/ 628: | 4724: /"; classtype: configuration-change; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001620; sid:5001620; rev:4;)
 
 # Generic "catch all" for event ID 6273
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Authentication failed - User credentials mismatch [0/5]"; content: " 6273|3a| "; classtype: unsuccessful-user; program: Security*; threshold: type limit, track by_src, count 5, seconds 300; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001648; sid: 5001648; rev:5;)
@@ -120,10 +120,10 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[WINDOWS-AUTH] User added 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User added to Enterprise Administrators group"; pcre: "/ 660: | 4756: /"; pcre: "/S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-519 /"; program: Security*; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001696; sid: 5001696; rev:5;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User added to Group Policy Creator Owner group"; pcre: "/ 660: | 4756: /"; pcre: "/S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-520 /"; program: Security*; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001696; sid: 5001697; rev:5;)
 # User enabled
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account enabled"; content: " 4722|3a| "; content:!"$ Account Domain|3a| "; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001687; sid: 5001687; rev:6;) 
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account enabled"; pcre: "/ 626: | 4722: /"; content:!"$ Account Domain";|3a| "; content:!"$ Account Domain|3a| "; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001687; sid: 5001687; rev:7;)
 
 # User created
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account created"; content: " 4720|3a| "; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001786; sid: 5001791; rev:3;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account created"; pcre: "/ 624: | 4720: /"; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001786; sid: 5001791; rev:4;)
 
 # Windows 2008 rules submitted by Robert Nunley (rnunley@quadrantsec.com)
 
@@ -192,8 +192,8 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows DC
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3D - Field is too long for this implementation [25/1]"; pcre: "/ 675: | 676: | 681: | 4771: | 4768: /"; content: " 0x3D "; classtype: unsuccessful-user; program: Security*; flowbits: set,brute_force,86400; after: track by_src, count 25, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001785; sid: 5001785; rev:5;) 
 # Account "re-enabled" via flowbit (12/03/2013) 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account created [FLOWBIT SET]"; content: " 4720: "; program: Security*; classtype: successful-user; flowbits: set, created_enabled, 30; flowbits: noalert; reference: url,wiki.quadrantsec.com/bin/view/Main/5001880; sid: 5001880; rev:3;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account re-enabled"; content: " 4722: "; content:! "$" ;program: Security*; flowbits: isnotset, by_src, created_enabled; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001881; sid: 5001881; rev:3;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account created [FLOWBIT SET]"; pcre: "/ 624: | 4720: /"; program: Security*; classtype: successful-user; flowbits: set, created_enabled, 30; flowbits: noalert; reference: url,wiki.quadrantsec.com/bin/view/Main/5001880; sid: 5001880; rev:4;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account re-enabled"; pcre: "/ 626: | 4722: /"; content:! "$" ;program: Security*; flowbits: isnotset, by_src, created_enabled; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001881; sid: 5001881; rev:4;)
 
 # Rule added by Brian Echeverry ( becheverry@quadrantsec.com) - 02/21/2014
 # Disabled by default.  Possible flowbit rule canidate (?)
@@ -212,8 +212,10 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Account lo
 
 # Rule added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/08/2014
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account disabled"; content: " 4725|3a| "; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002213; sid: 5002213; rev:2;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account disabled"; pcre: "/ 629: | 4725: /"; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002213; sid: 5002213; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account deleted"; content: " 4726|3a| "; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002335; sid: 5002335; rev:1;) 
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account deleted"; pcre: "/ 630: | 4726: /"; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002335; sid: 5002335; rev:2;)
 
+# Rule added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/19/2015
 
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled global group created"; pcre: "/ 631: | 4727: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002403; sid: 5002403; rev:1;)

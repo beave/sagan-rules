@@ -24,7 +24,7 @@
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-GEOIP] Windows Logon at suspicious time"; content: " 540|3a| "; classtype: successful-user; program: Security*; parse_src_ip: 1; parse_port; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; reference: url,wiki.quadrantsec.com/bin/view/Main/5002055; sid: 5002055; rev:4;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-GEOIP] Windows Logon at suspicious time"; pcre: "/ 540: | 4624: /"; classtype: successful-user; program: Security*; parse_src_ip: 1; parse_port; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; reference: url,wiki.quadrantsec.com/bin/view/Main/5002055; sid: 5002055; rev:5;)
 alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-GEOIP] RDP / Logon type 10 at suspicious time"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 ";  program: Security*; parse_src_ip: 1; days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002056; sid: 5002056; rev:3;)
 alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-GEOIP] Logon attempt using explicit credentials at suspicious time"; pcre: "/ 552: | 4648: /"; content:!"Network Address|3a| - "; content:!"Port|3a| - "; content:!"Target Server Name|3a| localhost"; program: Security*; parse_src_ip: 1; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002057; sid: 5002057; rev:3;)
 

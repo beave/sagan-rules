@@ -29,7 +29,7 @@
 # http://code.google.com/p/eventlog-to-syslog/
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Detection of net listening application [0/5]"; pcre: "/ 861: | 5154: /"; threshold: type limit, track by_src, count 5, seconds 300; classtype: network-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000306; sid: 5000306; rev:6;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Privileged Service Called"; content: " 577|3a| "; classtype: successful-admin; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000307; sid: 5000307; rev:4;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Privileged Service Called"; pcre: "/ 577: | 4673: /"; classtype: successful-admin; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000307; sid: 5000307; rev:5;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Apple Bonjour service detect [iTunes installed?]"; classtype: policy-violation; program: Bonjour; reference: url,wiki.quadrantsec.com/bin/view/Main/5000308; sid: 5000308; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application error"; content: " 1001|3a| "; classtype: program-error; program: Application; reference: url,wiki.quadrantsec.com/bin/view/Main/5000309; sid: 5000309; rev:3;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application hang"; content: " 1002|3a| "; classtype: program-error; program: Application; reference: url,wiki.quadrantsec.com/bin/view/Main/5000310; sid: 5000310; rev:3;)
@@ -85,7 +85,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] MSSQLServe
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application install"; content: " 11707|3a| "; classtype: program-error; program: MsiInstaller; reference: url,wiki.quadrantsec.com/bin/view/Main/5001183; sid: 5001183; rev:2;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows is shutting down"; pcre: "/ 513: | 4609: /"; classtype: program-error; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001184; sid: 5001184; rev:3;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] File system full"; content: " 13570|3a| "; classtype: program-error; program: NtFrs|Ntfs; reference: url,wiki.quadrantsec.com/bin/view/Main/5001191; sid: 5001191; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] System time has changed"; content: " 520|3a| "; content:!"|3a|\Program Files\VMware\VMware Tools\vmtoolsd.exe"; classtype: program-error; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001194; sid: 5001194; rev:5;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] System time has changed"; pcre: "/ 520: | 4616: /"; content:!"|3a|\Program Files\VMware\VMware Tools\vmtoolsd.exe"; classtype: program-error; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001194; sid: 5001194; rev:6;)
 
 # DHCP-Server| 1063: There are no IP addresses available for lease in the scope or superscope "VLAN_311_Example".
 # DHCP-Server| 1020: Scope, 10.100.1.0, is 97 percent full with only 2 IP addresses remaining.
