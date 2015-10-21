@@ -1,4 +1,3 @@
-001888 || [PROXY-MALWARE] Zeus bin Request 7 || url,labs.snort.org/papers/zeus.html
 5000000 || [BASH] ./a.out execution attempt || url,wiki.quadrantsec.com/bin/view/Main/5000000
 5000001 || [BASH] gcc execution || url,wiki.quadrantsec.com/bin/view/Main/5000001
 5000002 || [BASH] telnet execution || url,wiki.quadrantsec.com/bin/view/Main/5000002
@@ -1818,6 +1817,7 @@
 5001885 || [PROXY-MALWARE] Zeus bin Request 4 || url,labs.snort.org/papers/zeus.html
 5001886 || [PROXY-MALWARE] Zeus bin Request 5 || url,labs.snort.org/papers/zeus.html
 5001887 || [PROXY-MALWARE] Zeus bin Request 6 || url,labs.snort.org/papers/zeus.html
+5001888 || [PROXY-MALWARE] Zeus bin Request 7 || url,labs.snort.org/papers/zeus.html
 5001889 || [PROXY-MALWARE] Zeus bin Request 8 || url,labs.snort.org/papers/zeus.html
 5001890 || [PROXY-MALWARE] Zeus bin Request 9 || url,labs.snort.org/papers/zeus.html
 5001891 || [PROXY-MALWARE] Zeus bin Request 10 || url,labs.snort.org/papers/zeus.html
