@@ -2461,6 +2461,22 @@
 5002561 || [WINDOWS-BLACKLIST] Windows DC Login failure from a blacklisted IP - Brute force 0x3D - Field is too long for this implementation [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002561
 5002562 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - User Correct but Incorrect Password [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002562
 5002563 || [WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - User Name Does Not Exist [Brute Force] [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002563
+5002564 || [WINDOWS-MISC] Unable to log events to security log || url,wiki.quadrantsec.com/bin/view/Main/5002564
+5002565 || [BASH] root password change attempt || url,wiki.quadrantsec.com/bin/view/Main/5002565
+5002566 || [SU] root password change attempt || url,wiki.quadrantsec.com/bin/view/Main/5002566
+5002567 || [CYLANCE] AuditLog - Device Edit || url,wiki.quadrantsec.com/bin/view/Main/5002567
+5002568 || [CYLANCE] AuditLog - Login Success || url,wiki.quadrantsec.com/bin/view/Main/5002568
+5002569 || [CYLANCE] AuditLog - Syslog Settings Saved || url,wiki.quadrantsec.com/bin/view/Main/5002569
+5002570 || [CYLANCE] AuditLog - Zone Add Device || url,wiki.quadrantsec.com/bin/view/Main/5002570
+5002571 || [CYLANCE] Device - Action Taken || url,wiki.quadrantsec.com/bin/view/Main/5002571
+5002572 || [CYLANCE] Device - Registration || url,wiki.quadrantsec.com/bin/view/Main/5002572
+5002573 || [CYLANCE] Device - System Security || url,wiki.quadrantsec.com/bin/view/Main/5002573
+5002574 || [CYLANCE] ExploitAttempt - Blocked || url,wiki.quadrantsec.com/bin/view/Main/5002574
+5002575 || [CYLANCE] ExploitAttempt - No Action Taken || url,wiki.quadrantsec.com/bin/view/Main/5002575
+5002576 || [CYLANCE] Threat - Changed || url,wiki.quadrantsec.com/bin/view/Main/5002576
+5002577 || [CYLANCE] Threat - Found || url,wiki.quadrantsec.com/bin/view/Main/5002577
+5002578 || [CYLANCE] Threat - Quarantined || url,wiki.quadrantsec.com/bin/view/Main/5002578
+5002579 || [CYLANCE] Threat - Removed || url,wiki.quadrantsec.com/bin/view/Main/5002579
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
@@ -5220,16 +5236,3 @@
 6107000 || [CISCO-SDEE] Data Base TNS Connection || url,wiki.quadrantsec.com/bin/view/Main/6107000
 6107001 || [CISCO-SDEE] TNS Redirect Request || url,wiki.quadrantsec.com/bin/view/Main/6107001
 6107002 || [CISCO-SDEE] NBT NetBIOS Session Failed Login - Brute Force [5/3] || url,wiki.quadrantsec.com/bin/view/Main/6107002
-8000145 || [CYLANCE] AuditLog - Device Edit || url,wiki.quadrantsec.com/bin/view/Main/8000145
-8000146 || [CYLANCE] AuditLog - Login Success || url,wiki.quadrantsec.com/bin/view/Main/8000146
-8000147 || [CYLANCE] AuditLog - Syslog Settings Saved || url,wiki.quadrantsec.com/bin/view/Main/8000147
-8000148 || [CYLANCE] AuditLog - Zone Add Device || url,wiki.quadrantsec.com/bin/view/Main/8000148
-8000149 || [CYLANCE] Device - Action Taken || url,wiki.quadrantsec.com/bin/view/Main/8000149
-8000150 || [CYLANCE] Device - Registration || url,wiki.quadrantsec.com/bin/view/Main/8000150
-8000151 || [CYLANCE] Device - System Security || url,wiki.quadrantsec.com/bin/view/Main/8000151
-8000152 || [CYLANCE] ExploitAttempt - Blocked || url,wiki.quadrantsec.com/bin/view/Main/8000152
-8000153 || [CYLANCE] ExploitAttempt - No Action Taken || url,wiki.quadrantsec.com/bin/view/Main/8000153
-8000154 || [CYLANCE] Threat - Changed || url,wiki.quadrantsec.com/bin/view/Main/8000154
-8000155 || [CYLANCE] Threat - Found || url,wiki.quadrantsec.com/bin/view/Main/8000155
-8000156 || [CYLANCE] Threat - Quarantined || url,wiki.quadrantsec.com/bin/view/Main/8000156
-8000157 || [CYLANCE] Threat - Removed || url,wiki.quadrantsec.com/bin/view/Main/8000157
