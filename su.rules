@@ -36,3 +36,6 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] Three failed attempts
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] Successful sudo to ROOT executed"; content: "USER=root"; content: "COMMAND="; content:!"incorrect password attempts"; content:!"NOT in sudoers"; classtype: successful-admin;program: sudo; reference: url,wiki.quadrantsec.com/bin/view/Main/5000133; sid: 5000133; rev:3;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] su as 'root' suceeded"; content: "su root"; content: "succeeded for root"; classtype: successful-admin; program: su; reference: url,wiki.quadrantsec.com/bin/view/Main/5000409; normalize: su; sid: 5000409; rev:2;)
 
+#  Rules added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/21/2015
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] root password change attempt"; content:"passwd"; content "root"; content:"HISTORY"; classtype: suspicious-command; program: -su|su; reference: url,wiki.quadrantsec.com/bin/view/Main/5002566; sid: 5002566; rev:1;)

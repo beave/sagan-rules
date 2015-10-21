@@ -98,3 +98,6 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH X11 trusted for
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] LD_PRELOAD environment variable access"; content:"HISTORY"; content:"LD_PRELOAD"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002333; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] LD_LIBRARY_PATH environment variable access"; content:"HISTORY"; content:"LD_LIBRARY_PATH"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002334; rev:1;)
 
+#  Rules added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/21/2015
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] root password change attempt"; content:"passwd"; content:"root"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5002565; program: bash|-bash|sh|-sh; sid:5002565; rev:1;)
