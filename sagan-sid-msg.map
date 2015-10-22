@@ -2149,7 +2149,7 @@
 5002230 || [WINDOWS-BROINTEL] Login failure - Account locked from a Bro Intel listed IP [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002230
 5002231 || [WINDOWS-BROINTEL] Windows DC Logon Failure from a Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002231
 5002240 || [CISCO-BLACKLIST] VPN Login from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002240
-5002241 || [CISCO-BLACKLIST] Console login from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002241 sid: 5002241
+5002241 || [CISCO-BLACKLIST] Console login from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002241
 5002242 || [CISCO-BLACKLIST] Login permitted from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002242
 5002243 || [CISCO-BLACKLIST] WebVPN login from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002243
 5002244 || [CISCO-BLACKLIST] VPN disconnect from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002244
