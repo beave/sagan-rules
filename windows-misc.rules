@@ -111,8 +111,8 @@ alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shu
 
 # Added by Brian Echeverry (09/22/2015)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Microsoft Antimalware has encountered an error trying to update signatures"; program: Microsoft_Antimalware; content: " 2001|3A| "; reference: url,wiki.quadrantsec.com/bin/view/Main/5002392; threshold: type limit, track by_src, count 1, seconds 86400; classtype: program-error; sid:5002392; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Microsoft Antimalware has encountered an error trying to update signatures"; program: Microsoft_Antimalware; content: " 2001|3A| "; reference: url,wiki.quadrantsec.com/bin/view/Main/5002392; threshold: type limit, track by_src, count 1, seconds 86400; classtype: program-error; sid:5002392; rev:2;)
 
 #  Rules added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/21/2015
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Unable to log events to security log"; content: " 521|3a| "; classtype: program-error; program: Security|Security-Auditing; reference: url,wiki.quadrantsec.com/bin/view/Main/5002564; sid:5002564; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Unable to log events to security log"; content: " 521|3a| "; threshold: type limit, track by_src, count 1, seconds 86400; classtype: program-error; program: Security|Security-Auditing; reference: url,wiki.quadrantsec.com/bin/view/Main/5002564; sid:5002564; rev:2;)
