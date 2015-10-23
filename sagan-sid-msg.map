@@ -2477,6 +2477,27 @@
 5002577 || [CYLANCE] Threat - Found || url,wiki.quadrantsec.com/bin/view/Main/5002577
 5002578 || [CYLANCE] Threat - Quarantined || url,wiki.quadrantsec.com/bin/view/Main/5002578
 5002579 || [CYLANCE] Threat - Removed || url,wiki.quadrantsec.com/bin/view/Main/5002579
+5002580 || [PALO-ALTO] Certificate has illegal URL || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002581 || [PALO-ALTO] Accepted SSH Connection From Outside Home Country || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002582 || [PALO-ALTO] AntiVirus update job failed || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002583 || [PALO-ALTO] Authorization failed - Brute Force [25/1]  || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002584 || [PALO-ALTO] Chassis Master Alarm || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002585 || [PALO-ALTO]: "Failed to connect to Panorama Server || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002586 || [PALO-ALTO] Failed Interactive Login - Brute Force [15/1] || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002587 || [PALO-ALTO] Failed to install software || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002588 || [PALO-ALTO] NTLM Authentication Brute Force - [25/1] || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002589 || [PALO-ALTO] Successful NTLM Authentication From Outside Home Country || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002590 || [PALO-ALTO] User Authenticated From Outside Home Country || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002591 || [PALO-ALTO] User Authentication - Brute Force [25/1] || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002592 || [PALO-ALTO] Possible Replay Attempt Caused Disconnection || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002593 || [PALO-ALTO] GlobalProtect Portal Authentication From Outside Home Country || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002594 || [PALO-ALTO] PPPoE Session Connected For User Outside Home Country; content: "PPPoE session was connected for user || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002595 || [PALO-ALTO] PPPoE Brute Force Attempt - [25/1] || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002596 || [PALO-ALTO] SSL VPN User Authentication Failure - Brute Force [25/1] || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002597 || [PALO-ALTO] SSL VPN Authentication From Outside Home Country || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002598 || [PALO-ALTO] SSL VPN Login - Brute Force [25/1] || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002599 || [PALO-ALTO] SSL VPN Login From Outside Home Country || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002600 || [PALO-ALTO] Certificate is revoked || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
