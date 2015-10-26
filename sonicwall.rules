@@ -30,7 +30,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] Possible UDP Port
 #alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert"; content: "IPS Detection Alert"; content: "ICMP PING"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.quadrantsec.com/bin/view/Main/5001084; sid: 5001084; rev:1;)
 alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert"; content: "IPS Detection Alert"; classtype: network-scan; normalize: sonicwall; reference: url,wiki.quadrantsec.com/bin/view/Main/5001090; sid: 5001090; rev:2;)
 
-These where created by Kevin Gross (kgross@quadrantsec.com)
+# These where created by Kevin Gross (kgross@quadrantsec.com)
 
 alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Possible restart for system maintenance"; content: "As per Diagnostic Auto-restart configuration request, restarting system"; classtype: system-event; parse_src_ip: 1; parse_dst_ip: 2; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002601; rev: 1; )
 alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Auto-Dial Failure"; content: "auto-dial failed: Current Connection Model is configured as Ethernet Only"; classtype: system-event; parse_src_ip: 1; parse_dst_ip: 2; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002602; rev: 1; )
