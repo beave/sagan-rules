@@ -120,7 +120,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[WINDOWS-AUTH] User added 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User added to Enterprise Administrators group"; pcre: "/ 660: | 4756: /"; pcre: "/S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-519 /"; program: Security*; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001696; sid: 5001696; rev:5;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User added to Group Policy Creator Owner group"; pcre: "/ 660: | 4756: /"; pcre: "/S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-520 /"; program: Security*; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001696; sid: 5001697; rev:5;)
 # User enabled
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account enabled"; pcre: "/ 626: | 4722: /"; content:!"$ Account Domain";|3a| "; content:!"$ Account Domain|3a| "; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001687; sid: 5001687; rev:7;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account enabled"; pcre: "/ 626: | 4722: /"; content:!"$ Account Domain"; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001687; sid: 5001687; rev:7;)
 
 # User created
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account created"; pcre: "/ 624: | 4720: /"; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001786; sid: 5001791; rev:4;)

@@ -2498,6 +2498,140 @@
 5002598 || [PALO-ALTO] SSL VPN Login - Brute Force [25/1] || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
 5002599 || [PALO-ALTO] SSL VPN Login From Outside Home Country || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
 5002600 || [PALO-ALTO] Certificate is revoked || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002601 || [SONICWALL] Possible restart for system maintenance || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002602 || [SONICWALL] Auto-Dial Failure || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002603 || [SONICWALL] Ethernet Port Down || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002604 || [SONICWALL] Ethernet Port Up || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002605 || [SONICWALL] Registration Update Needed || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002606 || [SONICWALL] 3G Device Detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002607 || [SONICWALL] 3G Data Limit Reached || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002608 || [SONICWALL] No 3G Sim Card Detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002609 || [SONICWALL] Preferences File Inaccessable || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002610 || [SONICWALL] OS Upgrade Performed || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002611 || [SONICWALL] Attempted access from host out of compliance with GSC policy || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002612 || [SONICWALL] Access attempt from host without Anti-Virus agent installed || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002613 || [SONICWALL] Security Services || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002614 || [SONICWALL] Firewall Rule Added || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002615 || [SONICWALL] Firewall Rule Deleted || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002616 || [SONICWALL] Firewall Rule Modified || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002617 || [SONICWALL] Firewall Rule reset to defaults || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002618 || [SONICWALL] Network Access to proxy server denied || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002619 || [SONICWALL] ActiveX access denied || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002620 || [SONICWALL] ActiveX orJava archive access denied || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002621 || [SONICWALL] Successful Administrator Access || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002622 || [SONICWALL] Administrator Access denied due to bad credentials || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002623 || [SONICWALL] Administrator Access not allowed on this interface || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002624 || [SONICWALL] Administrator Account Name Changed || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002625 || [SONICWALL] Firewall preferences reset to factory defaults || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002626 || [SONICWALL] Allowed LDAP server certificate with wrong host name || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002627 || [SONICWALL] Possible Intrusion detection - Anti-Spyware detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002628 || [SONICWALL] Possible Intrusion detection - Anti-Spyware detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002629 || [SONICWALL] Intrusion Detection - Suspicious Application detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002630 || [SONICWALL] Intrusion Detection - Suspicious Application detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002631 || [SONICWALL] ASOC Flood detected from WLAN station || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002632 || [SONICWALL] Intrusion Detection - Back Orifice Attack Dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002633 || [SONICWALL] High Availability - Backup active || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002634 || [SONICWALL] High Availability/Failover - Backup Firewall Active || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002635 || [SONICWALL] High Availability/Failover - Backup Firewall transitioned to idle || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002636 || [SONICWALL] High Availability - Backup Firewall Rebooting || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002637 || [SONICWALL] High Availability - Backup WAN link down || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002638 || [SONICWALL] VPN PKI - Bad CRL format || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002639 || [SONICWALL] VPN PKI - Blacklisted Certificate || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002640 || [SONICWALL] Administrator Login - Commandline login successful || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002641 || [SONICWALL] Administrator login failed due to bad credentials || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002642 || [SONICWALL] Firewall event - Diagnostic Reboot || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002643 || [SONICWALL] Firewall Hardware Diagnostic Code A || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002644 || [SONICWALL] Firewall Hardware Diagnostic Code B || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002645 || [SONICWALL] Firewall Hardware Diagnostic Code C || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002646 || [SONICWALL] Firewall Hardware Diagnostic Code D || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002647 || [SONICWALL] Firewall Hardware Diagnostic Code E || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002648 || [SONICWALL] Firewall Hardware Diagnostic Code F || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002649 || [SONICWALL] Firewall Hardware Diagnostic Code G || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002650 || [SONICWALL] Firewall Hardware Diagnostic Code H || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002651 || [SONICWALL] Firewall Hardware Diagnostic Code I || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002652 || [SONICWALL] Firewall Hardware Diagnostic Code J || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002653 || [SONICWALL] Intrusion Detection Non-Sonicpoint WLAN traffic dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002654 || [SONICWALL] Error initializing Hardware acceleration for VPN || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002655 || [SONICWALL] High Availability - Error rebooting peer firewall || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002656 || [SONICWALL] High Availability - Error setting up IP address of the backup || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002657 || [SONICWALL] Security Services - License Sync Failed || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002658 || [SONICWALL] Intrusion Detection - Possible FIN Flood || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002659 || [SONICWALL] Intrusion Detection - Possible FIN Flood || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002660 || [SONICWALL] WLAN IDS - Rouge Access Point || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002661 || [SONICWALL] Intrusion Detection - Fraudulent Microsoft Certificate || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002662 || [SONICWALL] FTP - Login Failed || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002663 || [SONICWALL] Network Access - Dropped access from non-default port || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002664 || [SONICWALL] Intrusion Detection - Bounce attack dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002665 || [SONICWALL] Intrusion Detection - Spoof attack dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002666 || [SONICWALL] Guest account created || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002667 || [SONICWALL] Guest account deleted || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002668 || [SONICWALL] Guest account disabled || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002669 || [SONICWALL] Guest account pruned || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002670 || [SONICWALL] Guest account re-enabled || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002671 || [SONICWALL] Guest account re-generated || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002672 || [SONICWALL] Heartbeat detected from incompatable source || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002673 || [SONICWALL] HTTP management port has changed || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002674 || [SONICWALL] Wireless - Unauthorized user || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002675 || [SONICWALL] Possible IP spoof detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002676 || [SONICWALL] Possible IP spoof dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002677 || [SONICWALL] IPS Detection Alert || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002678 || [SONICWALL] IPS Prevention Alert || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002679 || [SONICWALL] Intrusion Detection - Land attack dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002680 || [SONICWALL] Intrusion Detection - removed from FIN flood blacklist || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002681 || [SONICWALL] Intrusion Detection - removed from RST flood blacklist || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002682 || [SONICWALL] Intrusion Detection - removed from SYN flood blacklist || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002683 || [SONICWALL] Firewall logging - Maximum events per second threshold exceeded || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002684 || [SONICWALL] PPP dialup - Maximum sequential failed dial attempts || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002685 || [SONICWALL] Firewall logging - Maximum syslog data per second threshold exceeded || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002686 || [SONICWALL] Multiple DHCP servers detected on network || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002687 || [SONICWALL] Intrusion Detection - Net Spy attack dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002688 || [SONICWALL] Intrusion Detection - NetBus attack dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002689 || [SONICWALL] Wireless - Packet dropped by WLAN || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002690 || [SONICWALL] No firewall rule exists for VPN policy || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002691 || [SONICWALL] Intrusion Detection - Ping of Death dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002692 || [SONICWALL] Intrusion Detection - Possible DNS rebind attack detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002693 || [SONICWALL] Intrusion Detection - Possible FIN Flood || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002694 || [SONICWALL] Intrusion Detection - Possible port scan detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002695 || [SONICWALL] Intrusion Detection - Possible RST Flood || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002696 || [SONICWALL] Intrusion Detection - Possible SYN Flood || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002697 || [SONICWALL] Intrusion Detection - Priority attack dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002698 || [SONICWALL] Intrusion Detection - Probable port scan detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002699 || [SONICWALL] Intrusion Detection - Probable TCP FIN scan detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002700 || [SONICWALL] Intrusion Detection - Probable TCP NULL scan detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002701 || [SONICWALL] Intrusion Detection - Probable TCP XMAS scan detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002702 || [SONICWALL] Wan Failover - Possible recon attempt || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002703 || [SONICWALL] Wan Failover - Recon attempt || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002704 || [SONICWALL] Firewall Hardware - Clock battery has failed || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002705 || [SONICWALL] Wan Failover - Possible recon || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002706 || [SONICWALL] Sonicwall License Expired || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002707 || [SONICWALL] Firewall rebooting || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002708 || [SONICWALL] Intrusion Detection - RIPper attack dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002709 || [SONICWALL] Intrusion Detection - RST Flood Blacklist || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002710 || [SONICWALL] Intrusion Detection - RST Flood || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002711 || [SONICWALL] Intrusion Detection - Senna Spy attack dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002712 || [SONICWALL] Firewall activated || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002713 || [SONICWALL] Firewall starting up || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002714 || [SONICWALL] SonicWALL SSO agent is down || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002715 || [SONICWALL] SonicWALL SSO agent is up || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002716 || [SONICWALL] Domain name too long || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002717 || [SONICWALL] SSO agent returned error || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002718 || [SONICWALL] User name too long || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002719 || [SONICWALL] Intrusion Detection - Source routed IP packet dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002720 || [SONICWALL] Intrusion Detection - Spank attack dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002721 || [SONICWALL] VPN policy enforced || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002722 || [SONICWALL] Intrusion Detection - Striker attack dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002723 || [SONICWALL] Intrusion Detection - Sub Seven attack dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002724 || [SONICWALL] Intrusion Detection - SYN Flood blacklisting enabled by user || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002725 || [SONICWALL] Intrusion Detection - SYN flood ceased or flooding machines blacklisted || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002726 || [SONICWALL] Intrusion Detection - SYN Flood Mode changed by user || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002727 || [SONICWALL] System clock manually updated || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002728 || [SONICWALL] Intrusion Detection - TCP Xmas Tree dropped || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002729 || [SONICWALL] Virtual Access Point is disabled || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002730 || [SONICWALL] Virtual Access Point is enabled || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002731 || [SONICWALL] Hardware failure - Voltages Out of Tolerance || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002732 || [SONICWALL] WLAN firmware image has been updated || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002733 || [SONICWALL] Radio frequency threat detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002734 || [SONICWALL] WLAN sequence number out of order - sequencing error/EMF interference/rogue AP || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
