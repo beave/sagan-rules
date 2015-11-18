@@ -1036,7 +1036,7 @@
 5001080 || [ARP] arpalert - MAC address flood || url,wiki.quadrantsec.com/bin/view/Main/5001080
 5001081 || [ARP] arpalert - MAC address blacklisted || url,wiki.quadrantsec.com/bin/view/Main/5001081
 5001082 || [ARP] arpalert - MAC address changed || url,wiki.quadrantsec.com/bin/view/Main/5001082
-5001083 || [SONICWALL] Possible TCP Port Scan || url,wiki.quadrantsec.com/bin/view/Main/5001083
+5001083 || [SONICWALL] Possible TCP Port Scan || url,wiki.quadrantsec.com/bin/view/Main/5001085
 5001084 || [SONICWALL] IPS Detection Alert || url,wiki.quadrantsec.com/bin/view/Main/5001084
 5001085 || [SONICWALL] Possible UDP Port Scan || url,wiki.quadrantsec.com/bin/view/Main/5001085
 5001086 || [CISCO-PIXASA] Access denied URL || url, wiki.quadrantsec.com/bin/view/Main/5001086
@@ -2517,7 +2517,7 @@
 5002617 || [SONICWALL] Firewall Rule reset to defaults || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002618 || [SONICWALL] Network Access to proxy server denied || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002619 || [SONICWALL] ActiveX access denied || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
-5002620 || [SONICWALL] ActiveX orJava archive access denied || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002620 || [SONICWALL] ActiveX or Java archive access denied || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002621 || [SONICWALL] Successful Administrator Access || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002622 || [SONICWALL] Administrator Access denied due to bad credentials || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002623 || [SONICWALL] Administrator Access not allowed on this interface || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
@@ -2632,6 +2632,7 @@
 5002732 || [SONICWALL] WLAN firmware image has been updated || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002733 || [SONICWALL] Radio frequency threat detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002734 || [SONICWALL] WLAN sequence number out of order - sequencing error/EMF interference/rogue AP || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002735 || [YUBIKEY] Invalid OTP || url,wiki.quadrantsec.com/bin/view/Main/5002735
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
