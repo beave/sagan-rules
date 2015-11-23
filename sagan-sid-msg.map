@@ -1629,7 +1629,7 @@
 5001695 || [WINDOWS-AUTH] User added to Domain Administrators group || url,wiki.quadrantsec.com/bin/view/Main/5001695
 5001696 || [WINDOWS-AUTH] User added to Enterprise Administrators group || url,wiki.quadrantsec.com/bin/view/Main/5001696
 5001697 || [WINDOWS-AUTH] User added to Group Policy Creator Owner group || url,wiki.quadrantsec.com/bin/view/Main/5001696
-5001699 || [WEB-ATTACK] Havij SQL Injection Tool Identified || url,wiki.quadrantsec.com/bin/view/Main/5001699
+5001699 || [WEB-ATTACKS] Havij SQL Injection Tool Identified || url,wiki.quadrantsec.com/bin/view/Main/5001699
 5001700 || [WEB-ATTACKS] UNION ALL SELECT in URL - Possible SQL Injection || url,wiki.quadrantsec.com/bin/view/Main/5001700
 5001701 || [WEB-ATTACKS] SQL Injection Using Encapsulated Data - x=x || url,wiki.quadrantsec.com/bin/view/Main/5001701
 5001702 || [WEB-ATTACKS] SQL Injection Using Encapsulated Data - 1=1 || url,wiki.quadrantsec.com/bin/view/Main/5001702
@@ -2633,6 +2633,17 @@
 5002733 || [SONICWALL] Radio frequency threat detected || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002734 || [SONICWALL] WLAN sequence number out of order - sequencing error/EMF interference/rogue AP || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002735 || [YUBIKEY] Invalid OTP || url,wiki.quadrantsec.com/bin/view/Main/5002735
+5002736 || [WEB-ATTACKS] RFI Attempt || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002737 || [WEB-ATTACKS] Possible LFI Attempt || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002740 || [WEB-ATTACKS] Attempt to Access Default Cacti Login Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002741 || [WEB-ATTACKS] Attempt to Access PHPMyAdmin Changelog Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002742 || [WEB-ATTACKS] Attempt to Access robots.txt File || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002743 || [WEB-ATTACKS] Possible SQL Injection ;-- || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002744 || [WEB-ATTACKS] Attempt to Access Default Drupal DB Config File || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002745 || [WEB-ATTACKS] Attempt to Access Default Joomla Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002746 || [WEB-ATTACKS] Attempt to Access PHP Timeclock Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002747 || [WEB-ATTACKS] Attempt to Access default DeV!L`s ClanPortal Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002748 || [WEB-ATTACKS] Attempt to Access IISamples Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
