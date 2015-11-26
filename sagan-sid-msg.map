@@ -2644,6 +2644,21 @@
 5002746 || [WEB-ATTACKS] Attempt to Access PHP Timeclock Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 5002747 || [WEB-ATTACKS] Attempt to Access default DeV!L`s ClanPortal Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 5002748 || [WEB-ATTACKS] Attempt to Access IISamples Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002749 || [PALO-ALTO] Malware URL Blocked || url,www.brightcloud.com/tools/url-ip-lookup.php
+5002750 || [PALO-ALTO] Phishing URL Blocked || url,www.brightcloud.com/tools/url-ip-lookup.php
+5002751 || [PALO-ALTO] Spyware or Adware URL Blocked || url,www.brightcloud.com/tools/url-ip-lookup.php
+5002752 || [PALO-ALTO] Url Blocked by policy or category || url,www.brightcloud.com/tools/url-ip-lookup.php
+5002753 || [PALO-ALTO] Foreign URL of unknown category || url,www.brightcloud.com/tools/url-ip-lookup.php
+5002754 || [PALO-ALTO] Url silent flowbit set || url,www.brightcloud.com/tools/url-ip-lookup.php
+5002755 || [PALO-ALTO] Virus Detected || url,threatvault.paloaltonetworks.com
+5002756 || [PALO-ALTO] Critical Severity Exploit Inbound || url,threatvault.paloaltonetworks.com
+5002757 || [PALO-ALTO] Critical Severity Exploit Outbound || url,threatvault.paloaltonetworks.com
+5002758 || [PALO-ALTO] High Severity Exploit Inbound || url,threatvault.paloaltonetworks.com
+5002759 || [PALO-ALTO] High Severity Exploit Outbound || url,threatvault.paloaltonetworks.com
+5002760 || [PALO-ALTO] Medium Severity Exploit Inbound || url,threatvault.paloaltonetworks.com
+5002761 || [PALO-ALTO] Medium Severity Exploit Outbound || url,threatvault.paloaltonetworks.com
+5002762 || [PALO-ALTO] Executable File Download
+5002763 || [PALO-ALTO] Suspicious DNS Request || url,threatvault.paloaltonetworks.com
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
