@@ -2638,7 +2638,7 @@
 5002740 || [WEB-ATTACKS] Attempt to Access Default Cacti Login Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 5002741 || [WEB-ATTACKS] Attempt to Access PHPMyAdmin Changelog Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 5002742 || [WEB-ATTACKS] Attempt to Access robots.txt File || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
-5002743 || [WEB-ATTACKS] Possible SQL Injection ;-- || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002743 || [WEB-ATTACKS] Possible SQL Injection || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 5002744 || [WEB-ATTACKS] Attempt to Access Default Drupal DB Config File || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 5002745 || [WEB-ATTACKS] Attempt to Access Default Joomla Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 5002746 || [WEB-ATTACKS] Attempt to Access PHP Timeclock Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html

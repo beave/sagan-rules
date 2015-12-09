@@ -28,5 +28,5 @@
 # 34: Audit trail: LENGTH: "351" SESSIONID:[9] "269111111" ENTRYID:[1] "1" STATEMENT:[1] "1" USERID:[8] "XXXXXXX" USERHOST:[17] "XXXX\XXXX-XXXXX" TERMINAL:[12] "XXXX-XXXXXXX" ACTION:[3] "100" RETURNCODE:[4] "1017" COMMENT$TEXT:[100] "Authenticated by: DATABASE; Client address: (ADDRESS=(PROTOCOL=tcp)(HOST=XX.XX.XX.XX)(PORT=XXXXX))" OS$USERID:[3] "Bob" DBID:[10] "4004821111" .
 # 34: Audit trail: LENGTH: "358" SESSIONID:[9] "269811111" ENTRYID:[1] "1" STATEMENT:[1] "1" USERID:[14] "XXXXXXXXZZZZZZ" USERHOST:[17] "XXXX\XXXX-XXXXXX" TERMINAL:[12] "XXXXX-XXXXXX" ACTION:[3] "100" RETURNCODE:[4] "1017" COMMENT$TEXT:[100] "Authenticated by: DATABASE; Client address: (ADDRESS=(PROTOCOL=tcp)(HOST=XX.XX.XX.XX)(PORT=XXXXXX))" OS$USERID:[3] "Bob" DBID:[10] "4004827967" . 
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 1521 (msg: "[ORACLE] Authentication Failure"; content: "RETURNCODE|3a|[4] |22|1017|22|"; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5001717; sid: 5001717; rev: 2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 1521 (msg: "[ORACLE] Authentication Failure"; content: "RETURNCODE|3a|[4] |22|1017|22|"; classtype: unsuccessful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001717; sid: 5001717; rev: 3;)
 
