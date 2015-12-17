@@ -1,0 +1,65 @@
+# Sagan fipaypin.rules
+# Copyright (c) 2009-2015, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+# Rules to be used with PoS (Point of Sales) FiPay PIN (Flexable Integrated Payment System) credit card
+# processing devices.  For information about AJB Software's web site:
+#
+# http://www.ajbsoftware.com/
+# http://support.ajbsoftware.com/index.aspx?menuId=10305
+
+# 10.11.11.11|daemon|warning|warning|1c|2015-11-28|16:31:49|xxx_RTS_FIPEMV2| 8: 2015/11/28 16:31:49.423 C-400008 FIPAYPIN FIPEMV2 : Call Remote: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 10.11.11.11:26008
+# 10.11.11.11|daemon|warning|warning|1c|2015-12-07|02:06:24|xxx_RTS_FIPAYPIN| 8: 2015/12/07 02:06:24.537 C-400008 FIPAYPIN FIPAYPIN : Unable to connect Fipay Node 'whatever'
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Connection failed to Fipay [5/2]"; content: "C-400008"; classtype: misc-activity; program: *FIPAYPIN*; parse_src_ip: 1; parse_port; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 2, seconds 3600; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002764; sid:5002764; rev:1;)
+
+# 10.11.11.11|daemon|warning|warning|1c|2015-11-07|16:55:15|xxx_RTS_FIPEMV1| 2046: 2015/11/07 16:55:15.154 S-302046 FIPAYPIN FIPEMV1 : Slow send (from 16:55:14.622 --> 531ms).Thread ID:9
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Slow send!"; content: "S-302046"; classtype: misc-activity; program: *FIPEMV*; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 2, seconds 3600; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002765; sid:5002765; rev:1;)
+
+# See sagan.conf for $CREDIT_CARD_PREFIXES. 
+# 10.11.11.11|daemon|warning|warning|1c|2015-11-03|10:27:43|xxx_RTS_FIPAYPIN| 0: 2015/11/03 10:27:43.379 S-300000 FIPAYPIN FIPAYPIN : Swpe: Response Success track2=666666******6666 svc=6666
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Invalid credit cards detected"; content: "S-300000"; meta_content:!"track2=%sagan%", $CREDIT_CARD_PREFIXES; classtype: misc-activity; program: *FIPAYPIN*; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002766; sid:5002766; rev:1;)
+
+# 10.11.11.11|daemon|warning|warning|1c|2015-11-27|10:46:42|xxx_RTS_FIPAYPIN| 0: 2015/11/27 10:46:41.999 S-300000 FIPAYPIN FIPAYPIN : Bad/No Pin Block and KSN returned - Check to ensure your pinpad had DUKPT keys loaded.
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Bad/No Pin Block and KSN returned"; content: "S-300000"; content: "Bad/No Pin Block and KSN returned"; classtype: misc-activity; program: *FIPAYPIN*; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002767; sid:5002767; rev:1;)
+
+# 10.11.11.11|daemon|warning|warning|1c|2015-11-15|15:38:02|xxx_RTS_FIPAYPIN| 0: 2015/11/15 15:38:02.220 S-300000 FIPAYPIN FIPAYPIN : Blocked the response to POS.
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Blocked the response to POS"; content: "S-300000"; content: "Blocked the response to POS"; classtype: misc-activity; program: *FIPAYPIN*; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002768; sid:5002768; rev:1;)
+
+# 10.30.1.131|daemon|warning|warning|1c|2015-11-19|11:33:13|xxx_RTS_FIPAYPIN| 0: 2015/11/19 11:33:13.015 S-300000 FIPAYPIN FIPAYPIN : Failed to open pinpad COM9.
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Failed to open pinpad [0/2]"; content: "S-300000"; content: "Failed to open pinpad"; classtype: misc-activity; program: *FIPAYPIN*; threshold: type limit, track by_src, count 2, seconds 3600; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002769; sid:5002769; rev:1;)
+
+# 10.11.11.11|daemon|warning|warning|1c|2015-11-04|13:57:27|xxx_RTS_FIPAYPIN| 0: 2015/11/04 13:57:27.037 S-300000 FIPAYPIN FIPAYPIN : Replace macro [RTS1_IP] with value '10.11.11.11'
+
+# See sagan.conf for RFC1918 var. 
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Replace macro from outside RFC1918"; content: "S-300000"; content: "RTS1_IP"; meta_content:!"value ''%sagan%", $RFC1918; classtype: misc-activity; program: *FIPAYPIN*; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002770; sid:5002770; rev:1;)
+

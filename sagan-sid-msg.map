@@ -2659,6 +2659,13 @@
 5002761 || [PALO-ALTO] Medium Severity Exploit Outbound || url,threatvault.paloaltonetworks.com
 5002762 || [PALO-ALTO] Executable File Download
 5002763 || [PALO-ALTO] Suspicious DNS Request || url,threatvault.paloaltonetworks.com
+5002764 || [FIPAYPIN] Connection failed to Fipay [5/2] || url,wiki.quadrantsec.com/bin/view/Main/sid:5002764
+5002765 || [FIPAYPIN] Slow send! || url,wiki.quadrantsec.com/bin/view/Main/sid:5002765
+5002766 || [FIPAYPIN] Invalid credit cards detected || url,wiki.quadrantsec.com/bin/view/Main/sid:5002766
+5002767 || [FIPAYPIN] Bad/No Pin Block and KSN returned || url,wiki.quadrantsec.com/bin/view/Main/sid:5002767
+5002768 || [FIPAYPIN] Blocked the response to POS || url,wiki.quadrantsec.com/bin/view/Main/sid:5002768
+5002769 || [FIPAYPIN] Failed to open pinpad [0/2] || url,wiki.quadrantsec.com/bin/view/Main/sid:5002769
+5002770 || [FIPAYPIN] Replace macro from outside RFC1918 || url,wiki.quadrantsec.com/bin/view/Main/sid:5002770
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
