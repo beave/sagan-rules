@@ -43,7 +43,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Slow send!"; co
 # See sagan.conf for $CREDIT_CARD_PREFIXES. 
 # 10.11.11.11|daemon|warning|warning|1c|2015-11-03|10:27:43|xxx_RTS_FIPAYPIN| 0: 2015/11/03 10:27:43.379 S-300000 FIPAYPIN FIPAYPIN : Swpe: Response Success track2=666666******6666 svc=6666
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Invalid credit cards detected"; content: "S-300000"; meta_content:!"track2=%sagan%", $CREDIT_CARD_PREFIXES; classtype: misc-activity; program: *FIPAYPIN*; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002766; sid:5002766; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Invalid credit card detected"; content: "S-300000"; meta_content:!"track2=%sagan%", $CREDIT_CARD_PREFIXES; classtype: misc-activity; program: *FIPAYPIN*; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002766; sid:5002766; rev:2;)
 
 # 10.11.11.11|daemon|warning|warning|1c|2015-11-27|10:46:42|xxx_RTS_FIPAYPIN| 0: 2015/11/27 10:46:41.999 S-300000 FIPAYPIN FIPAYPIN : Bad/No Pin Block and KSN returned - Check to ensure your pinpad had DUKPT keys loaded.
 
