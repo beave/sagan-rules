@@ -107,7 +107,4 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[JUNIPER] VPN - Poli
 # Juniper alerts for CVE 2015-7755 - Robert Nunley (rnunley@quadrantsec.com)
 
 alert tcp $HOME_NET any -> $EXTERNAL_NET $SSH_PORT (msg:"[ScreenOS] Juniper ScreenOS Login for Suspicious Admin user - system"; content: "Admin user system has logged on via"; nocase; content "00515"; parse_src_ip: 1; reference:cve,2015-7755; reference:url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search; classtype:successful-admin; sid: 5002771; rev:2;)
-
-
-
 alert tcp $HOME_NET any -> $EXTERNAL_NET $SSH_PORT (msg:"[ScreenOS] Juniper ScreenOS Login for Suspicious Admin user - username"; content "Admin user"; content:"username"; content:"has logged on via"; content: "00515"; parse_src_ip: 1; reference:cve,2015-7755; reference:url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search; classtype:successful-admin; sid: 5002772; rev:2;)
