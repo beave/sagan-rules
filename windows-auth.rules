@@ -219,3 +219,6 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Account lo
 # Rule added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/19/2015
 
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Security enabled global group created"; pcre: "/ 631: | 4727: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002403; sid: 5002403; rev:1;)
+
+# Added by Adam Hall (Jan, 11th 2016).  You'll need to make sure your audit policy/GPO have logging for this enabled!
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Domain policy was changed"; pcre: "/ 4739: | 643: /"; classtype: system-event; program: Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002775; sid: 5002775; rev:1;)
