@@ -2671,6 +2671,28 @@
 5002773 || [ScreenOS-GEOIP] Juniper ScreenOS Admin Login from Outside of Home Country || url, wiki.quadrantsec.com/bin/view/Main/5002773 || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search
 5002774 || [ScreenOS] Juniper ScreenOS Admin Login From a Malicious IP || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search || cve,2015-7755
 5002775 || [WINDOWS-MISC] Domain policy was changed || url,wiki.quadrantsec.com/bin/view/Main/5002775
+5002776 || [F5-BIG-IP-GEOIP] Command-line Login from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002777 || [F5-BIG-IP-GEOIP] Command-line Logout from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002778 || [F5-BIG-IP-GEOIP] Unsuccessful Command-line Login from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002779 || [F5-BIG-IP-GEOIP] Unsuccessful Command-line Login from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002780 || [F5-BIG-IP-GEOIP] Successful Configuration Utility Login from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002781 || [F5-BIG-IP-GEOIP] Unsuccessful Configuration Utility Login from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002782 || [Barracuda] Last Auto Backup Time Changed || url,wiki.quadrantsec.com/bin/view/Main/5002782
+5002783 || [Barracuda] Spyware Exploit || url,wiki.quadrantsec.com/bin/view/Main/5002783
+5002784 || [Barracuda] AdWare Win32 Agent || url,wiki.quadrantsec.com/bin/view/Main/5002784
+5002785 || [Barracuda] Login || url,wiki.quadrantsec.com/bin/view/Main/5002785
+5002786 || [Barracuda] Failed Login || url,wiki.quadrantsec.com/bin/view/Main/5002786
+5002787 || [Barracuda] Spyware Filter Change || url,wiki.quadrantsec.com/bin/view/Main/5002787
+5002788 || [Barracuda] Snort Enabled || url,wiki.quadrantsec.com/bin/view/Main/5002788
+5002789 || [Barracuda] Ipoque Enabled || url,wiki.quadrantsec.com/bin/view/Main/5002789
+5002790 || [Barracuda] Failed Login Log Change || url,wiki.quadrantsec.com/bin/view/Main/5002790
+5002791 || [Barracuda] Change to URL Whitelist || url,wiki.quadrantsec.com/bin/view/Main/5002791
+5002792 || [Barracuda] Change to URL Blacklist || url,wiki.quadrantsec.com/bin/view/Main/5002792
+5002793 || [Barracuda] Policy Block Change || url,wiki.quadrantsec.com/bin/view/Main/5002793
+5002794 || [Barracuda] User Password Changed || url,wiki.quadrantsec.com/bin/view/Main/5002794
+5002795 || [Barracuda] System Password Changed || url,wiki.quadrantsec.com/bin/view/Main/5002795
+5002796 || [Barracuda] System Shutdown || url,wiki.quadrantsec.com/bin/view/Main/5002796
+5002797 || [Trendmicro] Virus Found Unable to Quarantine || url,wiki.quadrantsec.com/bin/view/Main/5002797
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
