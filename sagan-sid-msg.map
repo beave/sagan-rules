@@ -724,7 +724,7 @@
 5000762 || [CISCO-PIXASA] NAC Downloaded ACL parse failure || url, wiki.quadrantsec.com/bin/view/Main/5000762
 5000763 || [CISCO-PIXASA] Shun add failed unable to allocate resources || url, wiki.quadrantsec.com/bin/view/Main/5000763
 5000764 || [CISCO-PIXASA] IPSEC Received an protocol packet from remote IP to local IP that failed anti-replay checking [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000764
-5000765 || [CISCO-PIXASA] IPSEC Received an protocol packet from remote IP to local IP that failed authentication [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000765
+5000765 || [CISCO-PIXASA] IPSEC Received an ESP packet from remote IP to local IP that failed authentication [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000765
 5000766 || [CISCO-PIXASA] CRYPTO The hardware accelerator encountered an error while executing crypto command || url, wiki.quadrantsec.com/bin/view/Main/5000766
 5000767 || [CISCO-PIXASA] PPPoE failed to assign PPP IP address || url, wiki.quadrantsec.com/bin/view/Main/5000767
 5000768 || [CISCO-PIXASA] ISAKMP Failed to allocate address for client from pool string || url, wiki.quadrantsec.com/bin/view/Main/5000768
