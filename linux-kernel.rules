@@ -35,7 +35,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] IPTABLES TCP";
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] ReiserFS error"; content: "REISERFS error"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001943; program: kernel; threshold: type limit, track by_src, count 5, seconds 300; sid: 5001943; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] Unhandled error code"; content: "Unhandled error code"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001944; program: kernel; threshold: type limit, track by_src, count 5, seconds 300; sid: 5001944; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] I/O error"; content: "I/O error, dev"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001945; program: kernel; threshold: type limit, track by_src, count 5, seconds 300; sid: 5001945; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] I/O error"; content: "I/O error, dev"; content:!"dev fd"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001945; program: kernel; threshold: type limit, track by_src, count 5, seconds 300; sid: 5001945; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] hostbyte=DID_ERROR"; content: "hostbyte=DID_ERROR"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001946; program: kernel; threshold: type limit, track by_src, count 5, seconds 300; sid: 5001946; rev:1;)
 
 # HPSA (HP Raid controllers) - (Champ Clark - 05/07/2015)
