@@ -1735,8 +1735,8 @@
 5001802 || [WEB-ATTACKS] Hmap Webserver Fingerprint Scan || url,doc.emergingthreats.net/2008537 || url,www.ujeni.murkyroc.com/hmap/
 5001803 || [WEB-ATTACKS] Mini MySqlatOr SQL Injection Scanner || url,doc.emergingthreats.net/2008729 || url,www.scrt.ch/pages_en/minimysqlator.html
 5001804 || [WEB-ATTACKS] Default Mysqloit User Agent Detected - Mysql Injection Takover Tool || url,doc.emergingthreats.net/2009882 || url,code.google.com/p/mysqloit/
-5001805 || [WEB-ATTACKS] Nmap Scripting Engine User-Agent Detected (Nmap NSE) || url,doc.emergingthreats.net/2009359
-5001806 || [WEB-ATTACKS] Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine) || url,doc.emergingthreats.net/2009358
+5001805 || [WEB-ATTACKS] Nmap Scripting Engine User-Agent Detected - Nmap NSE || url,doc.emergingthreats.net/2009359
+5001806 || [WEB-ATTACKS] Nmap Scripting Engine User-Agent Detected - Nmap Scripting Engine || url,doc.emergingthreats.net/2009358
 5001807 || [WEB-ATTACKS] Nessus User Agent || url,doc.emergingthreats.net/2002664 || url,www.nessus.org
 5001808 || [WEB-ATTACKS] Netsparker Default User-Agent || url,www.mavitunasecurity.com/communityedition/
 5001809 || [WEB-ATTACKS] Nikto Web App Scan in Progress || url,doc.emergingthreats.net/2002677 || url,www.cirt.net/code/nikto.shtml
