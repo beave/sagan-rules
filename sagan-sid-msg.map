@@ -2482,7 +2482,7 @@
 5002582 || [PALO-ALTO] AntiVirus update job failed || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
 5002583 || [PALO-ALTO] Authorization failed - Brute Force [25/1]  || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
 5002584 || [PALO-ALTO] Chassis Master Alarm || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
-5002585 || [PALO-ALTO]: "Failed to connect to Panorama Server || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
+5002585 || [PALO-ALTO] Failed to connect to Panorama Server || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
 5002586 || [PALO-ALTO] Failed Interactive Login - Brute Force [15/1] || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
 5002587 || [PALO-ALTO] Failed to install software || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
 5002588 || [PALO-ALTO] NTLM Authentication Brute Force - [25/1] || url, https://live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
@@ -2693,6 +2693,7 @@
 5002795 || [Barracuda] System Password Changed || url,wiki.quadrantsec.com/bin/view/Main/5002795
 5002796 || [Barracuda] System Shutdown || url,wiki.quadrantsec.com/bin/view/Main/5002796
 5002797 || [Trendmicro] Virus Found Unable to Quarantine || url,wiki.quadrantsec.com/bin/view/Main/5002797
+5002798 || [BRO] RFC1918 address scanning the network || url,wiki.quadrantsec.com/bin/view/Main/5002798
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
