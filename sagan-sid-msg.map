@@ -2694,6 +2694,7 @@
 5002796 || [Barracuda] System Shutdown || url,wiki.quadrantsec.com/bin/view/Main/5002796
 5002797 || [Trendmicro] Virus Found Unable to Quarantine || url,wiki.quadrantsec.com/bin/view/Main/5002797
 5002798 || [BRO] RFC1918 address scanning the network || url,wiki.quadrantsec.com/bin/view/Main/5002798
+5002799 || [WINDOWS-SYSMON] PSExec execution detected || url,wiki.quadrantsec.com/bin/view/Main/sid:5002799
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

@@ -1,0 +1,33 @@
+# Sagan windows-sysmon.rules  
+# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>  
+# All rights reserved.
+#  
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list  
+#
+#*************************************************************  
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the  
+#  following conditions are met:
+#  
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following  
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR  
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,  
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  
+#  
+#*************************************************************
+
+# Sysmon| 1: Process Create: UtcTime: 2016-04-08 03:54:58.330 ProcessGuid: {E67F94C7-2B92-5707-0000-001050880400} ProcessId: 2004 Image: C:\Windows\System32\audiodg.exe CommandLine: C:\Windows\system32\AUDIODG.EXE 0x74c CurrentDirectory: C:\Windows User: NT AUTHORITY\LOCAL SERVICE LogonGuid: {E67F94C7-2A7B-5707-0000-0020E5030000} LogonId: 0x3e5 TerminalSessionId: 0 IntegrityLevel: System Hashes: SHA1=F033FD30AACD0183BFC30861891A92B56AC2468B,MD5=D5CCA1453B98A5801E6D5FF0FF89DC6C,SHA256=85F2C2480AAC31B6092187B431A562D79D4CFB1324F925C85055ABAB2483264B ParentProcessGuid: {E67F94C7-2A7B-5707-0000-00102A9E0000} ParentProcessId: 772 ParentImage: C:\Windows\System32\svchost.exe ParentCommandLine: C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted
+
+# Created by Champ Clark 04/08/2016.  You'll need PSEXEC_MD5 defined in your sagan.conf!
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] PSExec execution detected"; content: " 1: "; meta_content: "MD5=%sagan%,",$PSEXEC_MD5; classtype: suspicious-command; program: Sysmon; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002799; sid:5002799; rev:1;)
+

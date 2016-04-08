@@ -32,6 +32,11 @@
 #  Contact Champ Clark III for more information (cclark@quadrantsec.com)
 #
 #  Since these are not "standard" rules, we start the ID's at "6100000". 
+#
+#  See: https://supportforums.cisco.com/discussion/10008061/problems-ips-alert-reporting
+#       http://www.cisco.com/en/US/docs/ios/12_3t/12_3t8/feature/guide/gt_fwids.html
+#       http://www.cisco.com/c/en/us/td/docs/ios-xml/ios/sec_data_ios_ips/configuration/12-4t/sec-data-ios-ips-12-4t-book.pdf
+
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] IPS/IDS License Expiration"; content: "Health Warning"; content: "licenseExpiration"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/6100000; sid: 6100000; rev:1;)
 
