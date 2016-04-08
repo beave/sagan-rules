@@ -214,7 +214,8 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Account lo
 
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account disabled"; pcre: "/ 629: | 4725: /"; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002213; sid: 5002213; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account deleted"; pcre: "/ 630: | 4726: /"; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002335; sid: 5002335; rev:2;)
+# Enabled by Brian Echeverry - 04/08/2016
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account deleted"; pcre: "/ 630: | 4726: /"; program: Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002335; sid: 5002335; rev:2;)
 
 # Rule added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/19/2015
 
