@@ -31,3 +31,19 @@
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] PSExec execution detected"; content: " 1: "; meta_content: "MD5=%sagan%,",$PSEXEC_MD5; classtype: suspicious-command; program: Sysmon; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002799; sid:5002799; rev:1;)
 
+
+# Locky Ransomware
+# Champ Clark 04/08/2016
+
+# Sysmon| 1: Process Create: UtcTime: 2016-04-08 05:29:03.829 ProcessGuid: {E67F94C7-419F-5707-0000-00103FB11D00} ProcessId: 2920 Image: C:\Windows\System32\notepad.exe CommandLine: "C:\Windows\system32\NOTEPAD.EXE" C:\Users\frankw\Desktop\_HELP_instructions.txt CurrentDirectory: C:\Users\frankw\AppData\Local\Temp\ User: frankw-PC\frankw LogonGuid: {E67F94C7-32CC-5707-0000-0020F4440100} LogonId: 0x144f4 TerminalSessionId: 1 IntegrityLevel: High Hashes: SHA1=7EB0139D2175739B3CCB0D1110067820BE6ABD29,MD5=F2C7BB8ACC97F92E987A2D4087D021B1,SHA256=142E1D688EF0568370C37187FD9F2351D7DDEDA574F8BFA9B0FA4EF42DB85AA2 ParentProcessGuid: {E67F94C7-414A-5707-0000-001049CA1900} ParentProcessId: 1704 ParentImage: C:\Users\frankw\AppData\Local\Temp\30e22374e00af038d06063db14cb3797.exe ParentCommandLine: "C:\Users\frankw\AppData\Local\Temp\30e22374e00af038d06063db14cb3797.exe" 
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Locky ransomware instructions detected!"; content: " 1: "; content: "notepad.exe"; nocase; content: "_HELP_instructions.txt "; classtype: trojan-activity; program: Sysmon; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002802; sid:5002802; rev:1;)
+
+# vssadmin.exe is sometimes used by malware to delete shadow volume copied.  Below is Locky:
+# Champ Clark 04/08/2016
+
+# 1: Process Create: UtcTime: 2016-04-08 05:28:44.314 ProcessGuid: {E67F94C7-418C-5707-0000-00103EB31C00} ProcessId: 2404 Image: C:\Windows\System32\vssadmin.exe CommandLine: vssadmin.exe Delete Shadows /All /Quiet CurrentDirectory: C:\Users\frankw\AppData\Local\Temp\ User: frankw-PC\frankw LogonGuid: {E67F94C7-32CC-5707-0000-0020F4440100} LogonId: 0x144f4 TerminalSessionId: 1 IntegrityLevel: High Hashes: SHA1=09FAFEB1B8404124B33C44440BE7E3FDB6105F8A,MD5=E23DD973E1444684EB36365DEFF1FC74,SHA256=4DE7FA20E3224382D8C4A81017E5BDD4673AFBEF9C0F017E203D7B78977FBF8C ParentProcessGuid: {E67F94C7-414A-5707-0000-001049CA1900} ParentProcessId: 1704 ParentImage: C:\Users\frankw\AppData\Local\Temp\30e22374e00af038d06063db14cb3797.exe ParentCommandLine: "C:\Users\frankw\AppData\Local\Temp\30e22374e00af038d06063db14cb3797.exe" 
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] vssadmin.exe execution. Possible ransomware"; content: " 1: "; content: "vssadmin.exe"; nocase; content: "Delete Shadows"; classtype: trojan-activity; program: Sysmon; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002803; sid:5002803; rev:1;)
+
+
