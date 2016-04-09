@@ -51,7 +51,7 @@
 
 # Robert Nunley & Champ Clark -  06/10/2014
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[BRO] SSH Password_Guessing [0/5]"; content: "SSH|3a 3a|Password_Guessing"; program: bro; classtype: misc-attack; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 5, seconds 120; reference: url,wiki.quadrantsec.com/bin/view/Main/5002063; sid: 5002063; rev:2;) 
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[BRO] SSH Password_Guessing [0/5]"; content: "SSH|3a 3a|Password_Guessing"; program: bro; classtype: misc-attack; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 5, seconds 120; flowbits: set,brute_force,86400; reference: url,wiki.quadrantsec.com/bin/view/Main/5002063; sid: 5002063; rev:3;) 
 
 # Note: You will need licensing to use the Team Cymru Malware Hash Registry for corporate use.  See http://www.team-cymru.org/Services/MHR/
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] TeamCymruMalwareHashRegistry Match"; content: "TeamCymruMalwareHashRegistry|3a 3a|Match"; parse_src_ip: 1; parse_dst_ip: 2; program: bro; reference: url,www.team-cymru.org/Services/MHR/; classtype: trojan-activity; sid: 5002064; rev:2;) 
