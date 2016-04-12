@@ -2699,7 +2699,7 @@
 5002802 || [WINDOWS-SYSMON] Locky ransomware instructions detected! || url,wiki.quadrantsec.com/bin/view/Main/sid:5002802
 5002803 || [WINDOWS-SYSMON] vssadmin.exe execution. Possible ransomware || url,wiki.quadrantsec.com/bin/view/Main/sid:5002803
 5002804 || [WINDOWS-MALWARE] Locky ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002804 || url,http://www.bleepingcomputer.com/news/security/the-locky-ransomware-encrypts-local-files-and-unmapped-network-shares/
-5002805 || [WINDOWS-MALWARE] Crytowall 4.0 ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002805 || url,http://www.bleepingcomputer.com/virus-removal/cryptowall-ransomware-information#cryptowall4
+5002805 || [WINDOWS-MALWARE] Cryptowall 4.0 ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002805 || url,http://www.bleepingcomputer.com/virus-removal/cryptowall-ransomware-information#cryptowall4
 5002806 || [WINDOWS-MALWARE] Cryptowall ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002806
 5002807 || [WINDOWS-MALWARE] CryptInfinite/DecryptorMax ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002807 || url,http://www.bleepingcomputer.com/news/security/cryptinfinite-or-decryptormax-ransomware-decrypted/
 5002808 || [WINDOWS-MALWARE] TeslaCrypt ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002808 || url,https://www.pcrisk.com/removal-guides/8724-teslacrypt-virus
