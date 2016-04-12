@@ -97,8 +97,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[BRO] Sidejacking at
 
 #1459283371.705967       -       -       -       -       -       -       -       -       -       Scan::Port_Scan 10.1.0.34 scanned at least 15 unique ports of host 10.1.0.4 in 0m2s        local   10.1.0.34     10.1.0.4     -       -     bro      Notice::ACTION_LOG      3600.000000     F       -       -       -       -       - 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] RFC1918 address scanning the network"; content: "Scan|3a 3a|Port_Scan"; pcre:"/((192)\.(168)\.(\d+)\.(\d+)|(10)\.(\d+)\.(\d+)\.(\d+)|(172)\.(1[6,7,8,9])\.(\d+)\.(\d+)|(172)\.(2[0,1,2,3,4,5,6,7,8,9])\.(\d+)\.(\d+)|(172)\.(3[0,1])\.(\d+)\.(\d+)) scanned at least \d+ unique ports/smi"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; flowbits: set,recon,86400; classtype: attempted-recon; reference: url,wiki.quadrantsec.com/bin/view/Main/5002798; sid:5002798; rev:2;)
-
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] RFC1918 address scanning the network"; content: "Scan|3a 3a|Port_Scan"; pcre:"/((192)\.(168)\.(\d+)\.(\d+)|(10)\.(\d+)\.(\d+)\.(\d+)|(172)\.(1[6,7,8,9])\.(\d+)\.(\d+)|(172)\.(2[0,1,2,3,4,5,6,7,8,9])\.(\d+)\.(\d+)|(172)\.(3[0,1])\.(\d+)\.(\d+)) scanned at least \d+ unique ports/smi"; program: bro; parse_src_ip: 1; threshold: type limit, track by_src, count 1, seconds 86400; flowbits: set,recon,86400; classtype: attempted-recon; reference: url,wiki.quadrantsec.com/bin/view/Main/5002798; sid:5002798; rev:3;)
 
 
 
