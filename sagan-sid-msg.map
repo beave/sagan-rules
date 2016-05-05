@@ -2713,35 +2713,36 @@
 5002816 || [WINDOWS-SYSMON] Suspicious WMIC call - computersystem get model || url,wiki.quadrantsec.com/bin/view/Main/sid:5002816
 5002817 || [WINDOWS-MISC] Installation of service via SCM || url,pastebin.com/raw/0SNSvyjJ || url,wiki.quadrantsec.com/bin/view/Main/5002817
 5002818 || [WINDOWS-MISC] Installation of new service via Security Audit  || url,pastebin.com/raw/0SNSvyjJ || url,wiki.quadrantsec.com/bin/view/Main/5002818
-5002819 || [WINDOWS-MALWARE] Rakhni or .CryptoHasYou. - Trojan:Win32/Dynamer!ac extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002819
-5002820 || [WINDOWS-MALWARE] .CryptoHasYou. - Trojan:Win32/Dynamer!ac ransom note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002820
-5002821 || [WINDOWS-MALWARE] 7ev3n - Ransom:Win32/Empercrypt.A extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002821
-5002822 || [WINDOWS-MALWARE] Win32/Cribit or MSIL/Vaultlock.A extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002822
-5002823 || [WINDOWS-MALWARE] Cerber - Win32/Cerber extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002823
-5002824 || [WINDOWS-MALWARE] Chimera - Win32/Chicrypt extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002824
-5002825 || [WINDOWS-MALWARE] Coverton extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002825
-5002826 || [WINDOWS-MALWARE] CryptInfinite extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002826
-5002827 || [WINDOWS-MALWARE] CryptInfinite extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002827
-5002828 || [WINDOWS-MALWARE] CryptoTorLocker2015 extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002828
-5002829 || [WINDOWS-MALWARE] CryptXXX or Gomasom extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002829
-5002830 || [WINDOWS-MALWARE] Hi Buddy! or Rakhni extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002830
-5002831 || [WINDOWS-MALWARE] iLock, iLockLight or Lortok extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002831
-5002832 || [WINDOWS-MALWARE] Jigsaw - MSIL/JigsawLocker.A || url,wiki.quadrantsec.com/bin/view/Main/5002832
-5002833 || [WINDOWS-MALWARE] Job Crypter, KimcilWare or "Rakhni extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002833
-5002834 || [WINDOWS-MALWARE] KeyBTC - Win32/Isda - BAT/Xibow extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002834
-5002835 || [WINDOWS-MALWARE] KimcilWare extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002835
-5002836 || [WINDOWS-MALWARE] LeChiffre extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002836
-5002837 || [WINDOWS-MALWARE] Magic extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002837
-5002838 || [WINDOWS-MALWARE] MireWare extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002838
-5002839 || [WINDOWS-MALWARE] Nemucod extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002839
-5002840 || [WINDOWS-MALWARE] Offline ransomware extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002840
-5002841 || [WINDOWS-MALWARE] OMG! ransomware extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002841
-5002842 || [WINDOWS-MALWARE] Radamant ransomware extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002842
-5002843 || [WINDOWS-MALWARE] Coverton extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002843
-5002844 || [WINDOWS-MALWARE] RemindMe ransomware extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002844
-5002845 || [WINDOWS-MALWARE] Rokku ransomware extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002845
-5002846 || [WINDOWS-MALWARE] Samas-Samsam extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002846
-5002847 || [WINDOWS-MALWARE] LowLevel04 extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5002847
+5002819 || [WINDOWS-MALWARE] Rakhni or .CryptoHasYou. - Trojan:Win32/Dynamer!ac extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002819
+5002820 || [WINDOWS-MALWARE] .CryptoHasYou. - Trojan:Win32/Dynamer!ac ransom note detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002820
+5002821 || [WINDOWS-MALWARE] 7ev3n - Ransom:Win32/Empercrypt.A extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002821
+5002822 || [WINDOWS-MALWARE] Win32/Cribit or MSIL/Vaultlock.A extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002822
+5002823 || [WINDOWS-MALWARE] Cerber - Win32/Cerber extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002823
+5002824 || [WINDOWS-MALWARE] Chimera - Win32/Chicrypt extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002824
+5002825 || [WINDOWS-MALWARE] Coverton extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002825
+5002826 || [WINDOWS-MALWARE] CryptInfinite extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002826
+5002827 || [WINDOWS-MALWARE] CryptInfinite extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002827
+5002828 || [WINDOWS-MALWARE] CryptoTorLocker2015 extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002828
+5002829 || [WINDOWS-MALWARE] CryptXXX or Gomasom extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002829
+5002830 || [WINDOWS-MALWARE] Hi Buddy! or Rakhni extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002830
+5002831 || [WINDOWS-MALWARE] iLock, iLockLight or Lortok extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002831
+5002832 || [WINDOWS-MALWARE] Jigsaw - MSIL/JigsawLocker.A || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002832
+5002833 || [WINDOWS-MALWARE] Job Crypter, KimcilWare or "Rakhni extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002833
+5002834 || [WINDOWS-MALWARE] KeyBTC - Win32/Isda - BAT/Xibow extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002834
+5002835 || [WINDOWS-MALWARE] KimcilWare extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002835
+5002836 || [WINDOWS-MALWARE] LeChiffre extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002836
+5002837 || [WINDOWS-MALWARE] Magic extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002837
+5002838 || [WINDOWS-MALWARE] MireWare extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002838
+5002839 || [WINDOWS-MALWARE] Nemucod extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002839
+5002840 || [WINDOWS-MALWARE] Offline ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002840
+5002841 || [WINDOWS-MALWARE] OMG! ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002841
+5002842 || [WINDOWS-MALWARE] Radamant ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002842
+5002843 || [WINDOWS-MALWARE] Coverton extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002843
+5002844 || [WINDOWS-MALWARE] RemindMe ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002844
+5002845 || [WINDOWS-MALWARE] Rokku ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002845
+5002846 || [WINDOWS-MALWARE] Samas-Samsam extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002846
+5002847 || [WINDOWS-MALWARE] LowLevel04 extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002847
+5002848 || [WINDOWS-MALWARE] Sanction ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002848
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
