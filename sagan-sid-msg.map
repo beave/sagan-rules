@@ -2738,7 +2738,7 @@
 5002841 || [WINDOWS-MALWARE] OMG! ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002841
 5002842 || [WINDOWS-MALWARE] Radamant ransomware extension detected. || url,decrypter.emsisoft.com || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002842
 5002843 || [WINDOWS-MALWARE] Coverton or Torrentlocker ransomware extension detected. || url,support.kaspersky.com/us/viruses/disinfection/10556 || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002843
-5002844 || [WINDOWS-MALWARE] RemindMe ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002844
+5002844 || [WINDOWS-MALWARE] RemindMe ransomware extension or note detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002844
 5002845 || [WINDOWS-MALWARE] Rokku ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002845
 5002846 || [WINDOWS-MALWARE] Samas-Samsam ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002846
 5002847 || [WINDOWS-MALWARE] LowLevel04 ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002847
@@ -2758,6 +2758,10 @@
 5002861 || [WINDOWS-MALWARE] El-Polocker ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002861
 5002862 || [WINDOWS-MALWARE] Mobef ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002862
 5002863 || [WINDOWS-MALWARE] Alpha ransomware extension detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002863
+5002864 || [WINDOWS-MALWARE] WonderCrypter ransomware extension or note detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002864
+5002865 || [WINDOWS-MALWARE] Zeta ransomware note detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002865
+5002866 || [WINDOWS-MALWARE] WonderCrypter ransomware extension or note detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002866
+5002867 || [WINDOWS-MALWARE] Possible unknown strain ransomware extension or note detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002867
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
