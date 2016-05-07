@@ -32,8 +32,9 @@
 
 
 # Failed password for root from 109.70.148.243 port 17298 ssh2
+# error: PAM: Authentication failure for champ from 192.168.1.1
 
-drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] PAM Authentication failure - Brute force [5/5]"; content: "Authentication failure"; flowbits: set,brute_force, 86400; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000015; normalize: openssh; program: sshd; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; sid: 5000015; rev:9;)
+drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] PAM Authentication failure - Brute force [10/1]"; content: "Authentication failure"; flowbits: set,brute_force, 86400; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000015; normalize: openssh; parse_src_ip: 1; program: sshd; after: track by_src, count 10, seconds 300; threshold: type limit, track by_src, count 1, seconds 300; fwsam: src, 1 day; sid: 5000015; rev:10;)
 
 #drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] PAM Authentication failure - Brute force [10/5]"; content: "Authentication failure"; flowbits: set,brute_force,86400; classtype: unsuccessful-user; normalize: openssh; program: sshd; after: track by_src, count 10, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001634; sid: 5001634; rev:5;)
 #drop tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH] PAM Authentication failure - Brute force [20/5]"; content: "Authentication failure"; flowbits: set,brute_force,86400; classtype: unsuccessful-user; normalize: openssh; program: sshd; after: track by_src, count 20, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001635; sid: 5001635; rev:5;)
