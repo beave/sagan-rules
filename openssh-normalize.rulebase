@@ -28,7 +28,7 @@
 #*************************************************************
 
 prefix=
-rule=: Invalid user %username:word% from %src-ip:ipv4%
+
 rule=: Failed %-:word% for invalid user %username:word% from %src-ip:ipv4% port %src-port:number% ssh2
 
 rule=: Accepted %-:word% for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2
@@ -46,4 +46,10 @@ rule=: Accepted publickey for %username:word% from %src-ip:ipv4% port %src-port:
 rule=: error: PAM: Authentication failure for illegal user %username:word% from %src-ip:ipv4%
 rule=: Failed password for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2
 rule=: Accepted gssapi-with-mic for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2
+
+rule=: Postponed keyboard-interactive for invalid user %username:word% from %src-ip:ipv4% port %src-port:number% ssh2 [preauth]
+rule=: Failed keyboard-interactive/pam for invalid user %username:word% from %src-ip:ipv4% port %src-port:number% ssh2
+rule=: input_userauth_request: invalid user %username:word% [preauth]
+rule=: Invalid user %username:word% from %src-ip:ipv4%
+rule=: Disconnecting: Too many authentication failures for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2 [preauth]
 
