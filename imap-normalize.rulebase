@@ -29,7 +29,7 @@
 
 
 prefix=
-rule= Logout user=%username:word% host=%-:word% [%src-ip:ipv4%]
+rule=: Logout user=%username:word% host=%-:word% [%src-ip:ipv4%]
 
 rule=: Login excessive login failures user=%username:word% auth=%-:word% host=%-t:word% [%src-ip:ipv4]]
 rule=: Login failed user=%username:word% auth=%-:word% host=%-:word% [%src-ip:ipv4%]
