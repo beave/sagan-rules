@@ -28,7 +28,7 @@
 # "arpalert" rules - http://www.arpalert.org
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ARP] arpalert - Detected new machine on the network"; content: "type=new"; classtype: suspicious-traffic; program: arpalert; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000060; sid: 5000060; rev:3;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpalert - Detected ip change"; content: "type=ip_change"; classtype: suspicious-traffic; program: arpalert; normalize: arp; reference: url,wiki.quadrantsec.com/bin/view/Main/5000061; sid: 5000061; rev: 2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpalert - Detected ip change"; content: "type=ip_change"; classtype: suspicious-traffic; program: arpalert; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000061; sid: 5000061; rev: 3;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpalert - Detected new machine on the network [mac-new]"; content: "type=new_mac"; classtype: suspicious-traffic; program: arpalert; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001079; sid: 5001079; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpalert - MAC address flood"; content: "type=flood"; classtype: suspicious-traffic; program: arpalert; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001080; sid: 5001080; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpalert - MAC address blacklisted"; content: "type=black_listed"; classtype: suspicious-traffic; program: arpalert; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001081; sid: 5001081; rev:2;)

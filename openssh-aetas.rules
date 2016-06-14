@@ -33,9 +33,9 @@
 
 # 10.1.7.2|authpriv|info|info|56|2013-12-02|14:21:19|sshd| Accepted password for bob from 10.1.16.1 port 51860 ssh2
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-AETAS] Authentication success via password at suspicious time"; content: "Accepted password"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002049; normalize: openssh; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002049; rev:2;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-AETAS] Authentication success via publickey at suspicious time"; content: "Accepted publickey"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002050; normalize: openssh; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002050; rev:2;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-AETAS] Authentication success via keyboard at suspicious time"; content: "Accepted keyboard-interactive"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002051; normalize: openssh; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002051; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-AETAS] Authentication success via password at suspicious time"; content: "Accepted password"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002049; normalize; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002049; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-AETAS] Authentication success via publickey at suspicious time"; content: "Accepted publickey"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002050; normalize; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002050; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-AETAS] Authentication success via keyboard at suspicious time"; content: "Accepted keyboard-interactive"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002051; normalize; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002051; rev:3;)
 
 
 

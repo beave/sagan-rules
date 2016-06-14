@@ -28,8 +28,8 @@
 
 # These detect "generic" netfilter/iptables messages.  Normalization will _not_ work if your using a user-defined iptables LOG "prefix" options!
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] IPTABLES TCP"; content: "IN="; content: "OUT="; content: "PROTO=TCP"; classtype: bad-unknown; reference: url,wiki.quadrantsec.com/bin/view/Main/5001104; normalize: linux-kernel; program: kernel; sid: 5001104; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] IPTABLES TCP"; content: "IN="; content: "OUT="; content: "PROTO=UDP"; classtype: bad-unknown; reference: url,wiki.quadrantsec.com/bin/view/Main/5001105; normalize: linux-kernel; program: kernel; sid: 5001105; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] IPTABLES TCP"; content: "IN="; content: "OUT="; content: "PROTO=TCP"; classtype: bad-unknown; reference: url,wiki.quadrantsec.com/bin/view/Main/5001104; normalize; program: kernel; sid: 5001104; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] IPTABLES TCP"; content: "IN="; content: "OUT="; content: "PROTO=UDP"; classtype: bad-unknown; reference: url,wiki.quadrantsec.com/bin/view/Main/5001105; normalize; program: kernel; sid: 5001105; rev:2;)
 
 # General file system errors (Champ Clark - 01/09/2014)
 

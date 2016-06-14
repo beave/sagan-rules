@@ -50,4 +50,4 @@ drop syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User authenticatio
 
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Lost access to volume"; content: "Event 37 : "; classtype: hardware-event; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001098; sid: 5001099; rev:1;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Possible HD/Datastore failure"; content: ": 1672: "; classtype: hardware-event; program: vmkernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001100; sid: 5001100; rev:1;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: "Accepted password"; classtype:  successful-admin; program: Hostd; normalize: vmware; reference: url,wiki.quadrantsec.com/bin/view/Main/5001101; sid: 5001101; rev:1;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: "Accepted password"; classtype:  successful-admin; program: Hostd; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001101; sid: 5001101; rev:2;)

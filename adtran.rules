@@ -25,5 +25,5 @@
 #
 # Adtran rules by James Lay - 06/25/2012 (actually, added well before that.. hrmph).
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[ADTRAN] TCP INTERNAL BLOCK"; content: "Access Policy"; content: "tcp"; program: FIREWALL; normalize: adtran; classtype: bad-unknown; sid:5001126; reference: url,wiki.quadrantsec.com/bin/view/Main/5001126; rev:2;)
-alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[ADTRAN] UDP INTERNAL BLOCK"; content: "Access Policy"; content: "udp"; program: FIREWALL; normalize: adtran; classtype: bad-unknown; sid:5001127; reference: url,wiki.quadrantsec.com/bin/view/Main/5001127; rev:2;) 
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"[ADTRAN] TCP INTERNAL BLOCK"; content: "Access Policy"; content: "tcp"; program: FIREWALL; normalize; classtype: bad-unknown; sid:5001126; reference: url,wiki.quadrantsec.com/bin/view/Main/5001126; rev:3;)
+alert udp $EXTERNAL_NET any -> $HOME_NET any (msg:"[ADTRAN] UDP INTERNAL BLOCK"; content: "Access Policy"; content: "udp"; program: FIREWALL; normalize; classtype: bad-unknown; sid:5001127; reference: url,wiki.quadrantsec.com/bin/view/Main/5001127; rev:3;) 
