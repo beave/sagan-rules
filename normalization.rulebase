@@ -350,9 +350,6 @@ rule=: [%generator_id:number%:%sig_id:number%:%rev:number%] %sig_name:char-to:\x
 
 # Remember the space at the end of the rule..  Also " counts as part of a %thing:word%
 
-prefix=id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr%" fw=%fire-ip:ipv4% pri=%pri:number% c=%c:number% m=%m:number%
-
-
 rule=: id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr%" fw=%fire-ip:ipv4% pri=%pri:number% c=%c:number% m=%m:number% msg="Possible port scan detected" n=%n:number% src=%src-ip:ipv4%:%src-port:number%:%interface:word% dst=%dst-ip:ipv4%:%dst-port:number%:%interface:word% note=%ports-scanned:quoted-string% 
 
 #rule=:  msg="%alert:char-to:\x22%" sid=%sid:number% ipscat=%proto:word% ipspri=%ipspri:number% n=%n:number% src=%src-ip:ipv4%:%src-port:number%:%interface:word% dst=%dst-ip:ipv4%:%dst-port:number%:%interface:word% 
