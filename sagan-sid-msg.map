@@ -2802,6 +2802,19 @@
 5002905 || [OPENSSH-BLUEDOT] Authentication success via password from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002905
 5002906 || [OPENSSH-BLUEDOT] Authentication success via publickey from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002906
 5002907 || [OPENSSH-BLUEDOT] Authentication success via keyboard from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002907
+5002908 || [PROFTPD-BLUEDOT] Authentication success from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002908
+5002909 || [RIVERBED-BLUEDOT] Administrator Login a suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002909
+5002910 || [FILE-BLUEDOT] Executable Downloaded from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002910
+5002911 || [FILE-BLUEDOT] Java Downloaded from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002911
+5002912 || [FILE-BLUEDOT] Jar/Zip Downloaded a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002912
+5002913 || [FILE-BLUEDOT] PDF Downloaded a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002913
+5002914 || [FILE-BLUEDOT] Flash Downloaded a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002914
+5002915 || [SSH-TECTIA-SERVER-BLUEDOT] Authentication success from a suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002915
+5002916 || [VMWARE-BLUEDOT] User login successful from a suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002916
+5002917 || [VMWARE-BLUEDOT] User login successful from a suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002917
+5002918 || [VMWARE-BLUEDOT] User login successful from a suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002918
+5002919 || [VSFTPD-BLUEDOT] Authentication successful from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002919
+5002920 || [VSFTPD-BLUEDOT] File uploaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002920
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

@@ -1,0 +1,42 @@
+# Sagan snort-bluedot.rules
+# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+# These detect where certain types of files are accessed from outside your HOME_COUNTRY.  
+# They require that:
+# 
+# 1. Snort logs to syslog:
+#    output alert_syslog: LOG_AUTH LOG_ALERT # Example SNORT config
+# 2. Snort "file-identify.rules" rules are enabled
+#
+# Concept by Robert Nunley (rnunley@quadrantsec.com) - 02/21/2014
+
+# THIS RULES ARE HIGHLY EXPERIMENTAL!
+
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[FILE-BLUEDOT] Executable Downloaded from a suspicious source"; program: snort; bluedot: reputation, by_src, $BLUEDOT_NETWORK; content: "FILE-IDENTIFY"; content: "Exe"; classtype: bad-unknown; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002910;sid:5002910; rev: 1;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[FILE-BLUEDOT] Java Downloaded from a suspicious source"; program: snort; bluedot: reputation, by_src, $BLUEDOT_NETWORK; content: "FILE-IDENTIFY"; content: "Java"; classtype: bad-unknown; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002911; sid:5002911; rev: 1;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[FILE-BLUEDOT] Jar/Zip Downloaded a suspicious source"; program: snort; bluedot: reputation, by_src, $BLUEDOT_NETWORK; content: "FILE-IDENTIFY"; content: "Jar"; classtype: bad-unknown; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002912; sid:5002912; rev: 1;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[FILE-BLUEDOT] PDF Downloaded a suspicious source"; program: snort; bluedot: reputation, by_src, $BLUEDOT_NETWORK; content: "FILE-IDENTIFY"; content: "PDF"; classtype: bad-unknown; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002913; sid:5002913; rev: 1;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[FILE-BLUEDOT] Flash Downloaded a suspicious source"; program: snort; bluedot: reputation, by_src, $BLUEDOT_NETWORK; content: "FILE-IDENTIFY"; content: "Flash"; classtype: bad-unknown; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002914; sid:5002914; rev: 1;)
