@@ -25,7 +25,7 @@
 #
 #
 
-#alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-GEOIP] VPN Login from outside HOME_COUNTRY"; program: %ASA-6-716038; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001868; sid: 5001868; rev: 1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-GEOIP] VPN Login from outside HOME_COUNTRY"; program: %ASA-6-716038; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001868; sid: 5001868; rev: 1;)
 
 # %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: testuser] [Source: 10.10.10.10] [localport: 22] at 05:00:13 EST Sun Dec 1 2013
 
@@ -62,6 +62,6 @@ alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] VPN login f
 alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY"; program: %ASA-6-303002; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; normalize; reference: url, wiki.quadrantsec.com/bin/view/Main/5002059; sid: 5002059; rev: 5;)
 
 # Track by dest
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY"; program: %ASA-6-303002; country_code: track by_dst, isnot $HOME_COUNTRY; classtype: successful-user; normalize; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002060; sid: 5002060; rev: 4;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] FTP file transfer to outside HOME_COUNTRY"; program: %ASA-6-303002; country_code: track by_dst, isnot $HOME_COUNTRY; classtype: successful-user; normalize; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002060; sid: 5002060; rev: 5;)
 
 

@@ -1,4 +1,4 @@
-# Sagan grsec.rules
+# Sagan courier-geoip.rules
 # Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -24,11 +24,9 @@
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #*************************************************************
-#
-# These rule sets are for systems with hardened kernels (PaX/GRSec).    If you don't run a hardened kernel,  you won't
-# see these alerts.  For more information,  see: http://www.grsecurity.net/ 
 
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-BLUEDOT] Authentication failure from suspicius source"; content: "LOGIN FAILED,"; parse_src_ip: 1; classtype: unsuccessful-user; program: imapd|imapd-sslcourierlogger; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,wiki.quadrantsec.com/bin/view/Main/5002885; sid:5002885; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-BLUEDOT] Logout/disconnect from suspicious source"; pcre: "/LOGOUT|DISCONNECTED/"; classtype: not-suspicious; parse_src_ip: 1; program: imapd|imapd-ssl|courierlogger; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,wiki.quadrantsec.com/bin/view/Main/5002886; sid:5002886; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-BLUEDOT] User login from suspicious source"; content: "LOGIN,"; parse_src_ip: 1;classtype: successful-user; program: imapd|imapd-ssl|courierlogger; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,wiki.quadrantsec.com/bin/view/Main/5002887; sid:5002887; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-BLUEDOT] Timeout from suspicious source"; content: "TIMEOUT"; parse_src_ip: 1;classtype: successful-user; program: imapd|imapd-ssl|courierlogger; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,wiki.quadrantsec.com/bin/view/Main/5002888; sid:5002888; rev:1;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[GRSEC] Time set"; content:"time set by";classtype: not-suspicious; program: grsec; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000029; sid: 5000029; rev:5;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[GRSEC] Signal 11 sent"; content:"signal 11 sent";classtype: program-error; parse_src_ip: 1; program: grsec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000030; sid: 5000030; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[GRSEC] Denied resource overstep"; content:"denied resource overstep"; classtype: exploit-attempt; program: grsec; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000042; sid: 5000042; rev:4;)

@@ -13,7 +13,7 @@
 5000012 || [BASH] /tmp/sh access || url,wiki.quadrantsec.com/bin/view/Main/5000012
 5000013 || [BASH] suidperl access || url,wiki.quadrantsec.com/bin/view/Main/5000013
 5000014 || [BASH] histfile=/dev/null || url,wiki.quadrantsec.com/bin/view/Main/5000014
-5000015 || [OPENSSH] PAM Authentication failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000015
+5000015 || [OPENSSH] PAM Authentication failure - Brute force [10/1] || url,wiki.quadrantsec.com/bin/view/Main/5000015
 5000016 || [OPENSSH] Authentication failure - Brute force [10/1] || url,wiki.quadrantsec.com/bin/view/Main/5000016
 5000017 || [OPENSSH] Authentication failure for root - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000017
 5000018 || [OPENSSH] Possible break-in attempt || url,wiki.quadrantsec.com/bin/view/Main/5000018
@@ -25,8 +25,8 @@
 5000025 || [SU] SUDO authentication failure - Brute force [3/5] || url,wiki.quadrantsec.com/bin/view/Main/5000025
 5000027 || [SU] Successful su as root || url,wiki.quadrantsec.com/bin/view/Main/5000027
 5000028 || [SU] FAILED su - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000028
-5000029 || GRSEC Time set || url,wiki.quadrantsec.com/bin/view/Main/5000029
-5000030 || GRSEC Signal 11 sent || url,wiki.quadrantsec.com/bin/view/Main/5000030
+5000029 || [GRSEC] Time set || url,wiki.quadrantsec.com/bin/view/Main/5000029
+5000030 || [GRSEC] Signal 11 sent || url,wiki.quadrantsec.com/bin/view/Main/5000030
 5000031 || TCP Treason uncloaked || url,wiki.quadrantsec.com/bin/view/Main/5000031
 5000032 || [IPOP3D] Excessive login failures || url,wiki.quadrantsec.com/bin/view/Main/5000032
 5000034 || [SENDMAIL] VRFY or EXPN root attempt || nessus,10249 || cve,1999-0531 || arachnids,31 || url,wiki.quadrantsec.com/bin/view/Main/5000034
@@ -36,7 +36,7 @@
 5000038 || [MILTER] Milter error state || url,wiki.quadrantsec.com/bin/view/Main/5000038
 5000039 || [MILTER] Mimedefang - No response from slave || url,wiki.quadrantsec.com/bin/view/Main/5000039
 5000041 || [NTP] Permission denied error || url,wiki.quadrantsec.com/bin/view/Main/5000041
-5000042 || GRSEC Denied resource overstep || url,wiki.quadrantsec.com/bin/view/Main/5000042
+5000042 || [GRSEC] Denied resource overstep || url,wiki.quadrantsec.com/bin/view/Main/5000042
 5000043 || [SQUID] TCP_DENIED || url,wiki.quadrantsec.com/bin/view/Main/5000043
 5000044 || [SQUID] TCP_DENIED unsupported-request-method || url,wiki.quadrantsec.com/bin/view/Main/5000044
 5000045 || [SQUID] TCP_DENIED invalid-request || url,wiki.quadrantsec.com/bin/view/Main/5000045
@@ -1979,7 +1979,7 @@
 5002057 || [WINDOWS-GEOIP] Logon attempt using explicit credentials at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5002057
 5002058 || [CISCO-GEOIP] VPN login from outside HOME_COUNTRY [2] || url, wiki.quadrantsec.com/bin/view/Main/5002058
 5002059 || [CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002059
-5002060 || [CISCO-GEOIP] FTP file transfer from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002060
+5002060 || [CISCO-GEOIP] FTP file transfer to outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002060
 5002061 || [PROXY-MALWARE] Tor2www Request || url,www.tor2www.com
 5002062 || [PROXY-MALWARE] Tor2web Request || url,www.tor2web.org
 5002063 || [BRO] SSH Password_Guessing [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002063
@@ -2671,12 +2671,12 @@
 5002773 || [ScreenOS-GEOIP] Juniper ScreenOS Admin Login from Outside of Home Country || url, wiki.quadrantsec.com/bin/view/Main/5002773 || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search
 5002774 || [ScreenOS] Juniper ScreenOS Admin Login From a Malicious IP || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search || cve,2015-7755
 5002775 || [WINDOWS-MISC] Domain policy was changed || url,wiki.quadrantsec.com/bin/view/Main/5002775
-5002776 || [F5-BIG-IP-GEOIP] Command-line Login from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
-5002777 || [F5-BIG-IP-GEOIP] Command-line Logout from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
-5002778 || [F5-BIG-IP-GEOIP] Unsuccessful Command-line Login from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
-5002779 || [F5-BIG-IP-GEOIP] Unsuccessful Command-line Login from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
-5002780 || [F5-BIG-IP-GEOIP] Successful Configuration Utility Login from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
-5002781 || [F5-BIG-IP-GEOIP] Unsuccessful Configuration Utility Login from outside HOME_COUNTRY || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002776 || [F5-BIG-IP-GEOIP] Command-line Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002776 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002777 || [F5-BIG-IP-GEOIP] Command-line Logout from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002777 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002778 || [F5-BIG-IP-GEOIP] Unsuccessful Command-line Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002778 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002779 || [F5-BIG-IP-GEOIP] Unsuccessful Command-line Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002779 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002780 || [F5-BIG-IP-GEOIP] Successful Configuration Utility Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002780 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002781 || [F5-BIG-IP-GEOIP] Unsuccessful Configuration Utility Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002781 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
 5002782 || [Barracuda] Last Auto Backup Time Changed || url,wiki.quadrantsec.com/bin/view/Main/5002782
 5002783 || [Barracuda] Spyware Exploit || url,wiki.quadrantsec.com/bin/view/Main/5002783
 5002784 || [Barracuda] AdWare Win32 Agent || url,wiki.quadrantsec.com/bin/view/Main/5002784
@@ -2762,6 +2762,46 @@
 5002865 || [WINDOWS-MALWARE] Zeta ransomware note detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002865
 5002866 || [WINDOWS-MALWARE] WonderCrypter ransomware extension or note detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002866
 5002867 || [WINDOWS-MALWARE] Possible unknown strain ransomware extension or note detected. || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002867
+5002868 || [CISCO-BLUEDOT] Suspicious TCP connection detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002868
+5002869 || [CISCO-BLUEDOT] Suspicious UDP connection detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002869
+5002870 || [CISCO-BLUEDOT] VPN Login from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002870
+5002871 || [CISCO-BLUEDOT] Console login from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002871
+5002872 || [CISCO-BLUEDOT] Login permitted from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002872
+5002873 || [CISCO-BLUEDOT] VPN login from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002873
+5002874 || [CISCO-BLUEDOT] VPN disconnect from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002874
+5002875 || [CISCO-BLUEDOT] VPN/AnyConnect login from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002875
+5002876 || [CISCO-BLUEDOT] ACS Login success from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002876
+5002877 || [CISCO-BLUEDOT] VPN login from suspicious source [2] || url, wiki.quadrantsec.com/bin/view/Main/5002877
+5002878 || [CISCO-BLUEDOT] FTP file transfer from or to  suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002878
+5002879 || [CISCO-BLUEDOT] Suspicious ICMP connection detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002879
+5002880 || [CISCO-BLUEDOT] Suspicious GRE connection detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002880
+5002881 || [FORTINET-BLUEDOT] Login accepted from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002881
+5002882 || [FORTINET-BLUEDOT] Administrator Login from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002882
+5002883 || [FORTINET-BLUEDOT] Admin authentication success suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002883
+5002884 || [FORTINET-BLUEDOT] SSH traffic detected from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002884
+5002885 || [COURIER-BLUEDOT] Authentication failure from suspicius source || url,wiki.quadrantsec.com/bin/view/Main/5002885
+5002886 || [COURIER-BLUEDOT] Logout/disconnect from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002886
+5002887 || [COURIER-BLUEDOT] User login from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002887
+5002888 || [COURIER-BLUEDOT] Timeout from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002888
+5002889 || [F5-BIG-IP-BLUEDOT] Command-line Login from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002889 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002890 || [F5-BIG-IP-BLUEDOT] Command-line Logout from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002890 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002891 || [F5-BIG-IP-BLUEDOT] Unsuccessful Command-line Login from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002891 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002892 || [F5-BIG-IP-BLUEDOT] Unsuccessful Command-line Login from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002892 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002893 || [F5-BIG-IP-BLUEDOT] Successful Configuration Utility Login from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002893 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002894 || [F5-BIG-IP-BLUEDOT] Unsuccessful Configuration Utility Login from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002894 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
+5002895 || [FATPIPE-BLUEDOT] Login Success from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002895
+5002896 || [FATPIPE-BLUEDOT] Login Success - ADMINISTRATOR - from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002896
+5002897 || [IMAPD-BLUEDOT] Login from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002897
+5002898 || [IMAPD-BLUEDOT] Logout from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002898
+5002899 || [IMAPD-BLUEDOT] Timeout from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002899
+5002900 || [IMAPD-BLUEDOT] Disconnect from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002900
+5002901 || [IMAPD-BLUEDOT] Connection from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002901
+5002902 || [JUNIPER-BLUEDOT] VPN Login from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002902
+5002903 || [JUNIPER-BLUEDOT] VPN Logout from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002903
+5002904 || [ScreenOS-BLUEDOT] Juniper ScreenOS Admin Login from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002904 || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search
+5002905 || [OPENSSH-BLUEDOT] Authentication success via password from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002905
+5002906 || [OPENSSH-BLUEDOT] Authentication success via publickey from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002906
+5002907 || [OPENSSH-BLUEDOT] Authentication success via keyboard from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002907
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

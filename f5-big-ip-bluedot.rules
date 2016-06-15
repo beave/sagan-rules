@@ -1,0 +1,40 @@
+# Sagan F5-BIG-IP-bluedot.rules
+# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+# F5 Big-IP 
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[F5-BIG-IP-BLUEDOT] Command-line Login from suspicious source"; content: "start="; content: !"end="; content: "sshd"; classtype: successful-user; parse_src_ip: 1; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002889; sid:5002889; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[F5-BIG-IP-BLUEDOT] Command-line Logout from suspicious source"; content: "start="; content: "end="; content: "sshd"; classtype: successful-user; parse_src_ip: 1; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002890; sid:5002890; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[F5-BIG-IP-BLUEDOT] Unsuccessful Command-line Login from suspicious source"; content: "failed to login after"; content: "sshd"; classtype: unsuccessful-user; parse_src_ip: 1; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002891; sid:5002891; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[F5-BIG-IP-BLUEDOT] Unsuccessful Command-line Login from suspicious source"; content: "Authentication failure for root"; content: "sshd"; classtype: unsuccessful-user; parse_src_ip: 1; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002892; sid:5002892; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[F5-BIG-IP-BLUEDOT] Successful Configuration Utility Login from suspicious source"; content: "mod_auth_pam"; content: "httpd"; classtype: successful-user; parse_src_ip: 1; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002893; sid:5002893; rev:1;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[F5-BIG-IP-BLUEDOT] Unsuccessful Configuration Utility Login from suspicious source"; content: "failed to login after"; content: "httpd"; classtype: unsuccessful-user; parse_src_ip: 1; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002894; sid:5002894; rev:1;)
