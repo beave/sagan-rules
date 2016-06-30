@@ -26,6 +26,7 @@
 
 # These are CATCH ALL rules.  This means it will parse _all_ logs. 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLUEDOT] Suspicious IP detected via Bluedot"; bluedot: reputation, all, $BLUEDOT_NETWORK; content:!"drop"; nocase; content:!"denied"; nocase; content:!"deny"; nocase; content:!"qipapikey"; classtype: suspicious-traffic; after: track by_src, count 10, seconds 30; threshold: type limit, track by_src, count 2, seconds 3600; parse_src_ip: 1; parse_dst_ip: 2; normalize; parse_proto; parse_proto_program; reference: url,wiki.quadrantsec.com/bin/view/Main/5002288; sid:5002288; rev:4;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLUEDOT] Suspicious IP detected via Bluedot"; bluedot: type ip_reputation, track all, mdate_effective_period 6 months, Malicious, Tor; content:!"drop"; nocase; content:!"denied"; nocase; content:!"deny"; nocase; content:!"qipapikey"; classtype: suspicious-traffic; after: track by_src, count 10, seconds 30; threshold: type limit, track by_src, count 2, seconds 3600; parse_src_ip: 1; parse_dst_ip: 2; normalize; parse_proto; parse_proto_program; reference: url,wiki.quadrantsec.com/bin/view/Main/5002288; sid:5002288; rev:5;)
 
-alert udp $HOME_NET any -> $EXTERNAL_NET 22 (msg:"[ScreenOS] Juniper ScreenOS Admin Login From a Malicious IP"; content:"has logged on via"; content "00515";  bluedot: reputation, all, $BLUEDOT_NETWORK; parse_src_ip: 1; reference:cve,2015-7755; reference:url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search; classtype:successful-admin; sid: 5002774; rev:1;)
+
+#alert udp $HOME_NET any -> $EXTERNAL_NET 22 (msg:"[ScreenOS] Juniper ScreenOS Admin Login From a Malicious IP"; content:"has logged on via"; content "00515";  bluedot: reputation, all, $BLUEDOT_NETWORK; parse_src_ip: 1; reference:cve,2015-7755; reference:url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search; classtype:successful-admin; sid: 5002774; rev:1;)

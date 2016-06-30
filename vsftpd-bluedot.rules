@@ -25,6 +25,6 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[VSFTPD-BLUEDOT] Authentication successful from outside HOME_COUNTRY"; content: "OK LOGIN"; classtype: successful-user; program: vsftpd; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,wiki.quadrantsec.com/bin/view/Main/5002919; sid:5002919; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[VSFTPD-BLUEDOT] File uploaded from outside HOME_COUNTRY"; content: "OK UPLOAD"; classtype: suspicious-traffic; bluedot: reputation, by_src, $BLUEDOT_NETWORK; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002920; sid:5002920; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[VSFTPD-BLUEDOT] Authentication successful from outside HOME_COUNTRY"; content: "OK LOGIN"; classtype: successful-user; program: vsftpd; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; reference: url,wiki.quadrantsec.com/bin/view/Main/5002919; sid:5002919; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[VSFTPD-BLUEDOT] File uploaded from outside HOME_COUNTRY"; content: "OK UPLOAD"; classtype: suspicious-traffic; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002920; sid:5002920; rev:2;)
 

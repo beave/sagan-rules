@@ -26,10 +26,10 @@
 #*************************************************************
 
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[JUNIPER-BLUEDOT] VPN Login from suspicious source"; program: Juniper; pcre: "/Authentication successful|Login succeeded/i"; bluedot: reputation, by_src, $BLUEDOT_NETWORK; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002902; sid:5002902; rev: 1;)
-alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[JUNIPER-BLUEDOT] VPN Logout from suspicious source"; program: Juniper; content: "Logout from"; bluedot: reputation, by_src, $BLUEDOT_NETWORK; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002903; sid:5002903; rev: 1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[JUNIPER-BLUEDOT] VPN Login from suspicious source"; program: Juniper; pcre: "/Authentication successful|Login succeeded/i"; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002902; sid:5002902; rev: 2;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[JUNIPER-BLUEDOT] VPN Logout from suspicious source"; program: Juniper; content: "Logout from"; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002903; sid:5002903; rev: 2;)
 
 # Juniper alerts for CVE 2015-7755 - Robert Nunley (rnunley@quadrantsec.com)
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET $SSH_PORT (msg: "[ScreenOS-BLUEDOT] Juniper ScreenOS Admin Login from suspicious source"; content: "Admin user"; content:"has logged on via"; bluedot: reputation, by_src, $BLUEDOT_NETWORK; classtype: successful-user; parse_src_ip: 1; reference:url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search; reference: url, wiki.quadrantsec.com/bin/view/Main/5002904; sid:5002904; rev: 1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $SSH_PORT (msg: "[ScreenOS-BLUEDOT] Juniper ScreenOS Admin Login from suspicious source"; content: "Admin user"; content:"has logged on via"; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype: successful-user; parse_src_ip: 1; reference:url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search; reference: url, wiki.quadrantsec.com/bin/view/Main/5002904; sid:5002904; rev: 2;)
 

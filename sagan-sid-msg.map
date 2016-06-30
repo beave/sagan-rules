@@ -1994,11 +1994,11 @@
 5002072 || [BRO] Probable LURK0 RAT C&C Access || url,wiki.quadrantsec.com/bin/view/Main/5002072
 5002073 || [BRO] Sidejacking attach detected || url,matthias.vallentin.net/blog/2010/10/taming-the-sheep-detecting-sidejacking-with-bro || url,wiki.quadrantsec.com/bin/view/Main/5002073
 5002074 || [BRO] Bitcoin Miner [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5002074
-5002075 || [IMAPD-GEOIP] Login from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002075
-5002076 || [IMAPD-GEOIP] Logout from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002076
-5002077 || [IMAPD-GEOIP] Timeout from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002077
-5002078 || [IMAPD-GEOIP] Disconnect from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002078
-5002079 || [IMAPD-GEOIP] Connection from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5002079
+5002075 || [IMAPD-BLUEDOT] Login from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002075
+5002076 || [IMAPD-BLUEDOT] Logout from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002076
+5002077 || [IMAPD-BLUEDOT] Timeout from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002077
+5002078 || [IMAPD-BLUEDOT] Disconnect from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002078
+5002079 || [IMAPD-BLUEDOT] Connection from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002079
 5002080 || [ARTILLERY] General Artillery Message || url,www.trustedsec.com/downloads/artillery || url,wiki.quadrantsec.com/bin/view/Main/5002080
 5002081 || [ARTILLERY] FTP brute force violation || url,www.trustedsec.com/downloads/artillery || url,wiki.quadrantsec.com/bin/view/Main/5002081
 5002082 || [ARTILLERY] Issue identified - Permissions not set as root || url,www.trustedsec.com/downloads/artillery || url,wiki.quadrantsec.com/bin/view/Main/5002082
@@ -2369,7 +2369,7 @@
 5002468 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x7 - Server not found in Kerberos database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002468
 5002469 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x8 - Multiple principal entries in database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002469
 5002470 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x9 - The client or server has a null key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002470
-5002471 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xA - Ticket not eligible for postdating [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002471
+5002471 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xA - Ticket not eligible for postdating [25/1]
 5002472 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xB - Requested start time is later than end time [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002472
 5002473 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xC - KDC policy rejects request [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002473
 5002475 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xD - KDC cannot accommodate requested option [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002475

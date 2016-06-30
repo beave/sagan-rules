@@ -25,45 +25,43 @@
 #
 
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"[CISCO-BLUEDOT] Suspicious TCP connection detected via Bluedot"; program: %ASA-6-*; content: " TCP "; content:!" bytes 0 "; bluedot: reputation, all, $BLUEDOT_NETWORK, mdate_effective_period 6 months; normalize; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 1, seconds 7200; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5002868; sid: 5002868; rev:3;)
-alert udp $HOME_NET any -> $EXTERNAL_NET any (msg:"[CISCO-BLUEDOT] Suspicious UDP connection detected via Bluedot"; program: %ASA-6-*; content: " UDP "; content:!" bytes 0 "; bluedot: reputation, all, $BLUEDOT_NETWORK, mdate_effective_period 6 months; normalize; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 1, seconds 7200; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5002869; sid: 5002869; rev:3;)
-alert icmp $HOME_NET any -> $EXTERNAL_NET any (msg:"[CISCO-BLUEDOT] Suspicious ICMP connection detected via Bluedot"; program: %ASA-6-*; content: " ICMP "; bluedot: reputation, all, $BLUEDOT_NETWORK, mdate_effective_period 6 months; normalize; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 1, seconds 7200; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5002879; sid:5002879; rev:3;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"[CISCO-BLUEDOT] Suspicious TCP connection detected via Bluedot"; program: %ASA-6-*; content: " TCP "; content:!" bytes 0 "; bluedot: type ip_reputation, track all, mdate_effective_period 6 months, Malicious, Tor; normalize; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 1, seconds 7200; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5002868; sid: 5002868; rev:4;)
+alert udp $HOME_NET any -> $EXTERNAL_NET any (msg:"[CISCO-BLUEDOT] Suspicious UDP connection detected via Bluedot"; program: %ASA-6-*; content: " UDP "; content:!" bytes 0 "; bluedot: type ip_reputation, track all, mdate_effective_period 6 months, Malicious, Tor; normalize; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 1, seconds 7200; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5002869; sid: 5002869; rev:4;)
+alert icmp $HOME_NET any -> $EXTERNAL_NET any (msg:"[CISCO-BLUEDOT] Suspicious ICMP connection detected via Bluedot"; program: %ASA-6-*; content: " ICMP "; bluedot: type ip_reputation, track all, mdate_effective_period 6 months, Malicious, Tor; normalize; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 1, seconds 7200; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5002879; sid:5002879; rev:4;)
+alert udp $HOME_NET any -> $EXTERNAL_NET any (msg:"[CISCO-BLUEDOT] Suspicious GRE connection detected via Bluedot"; program: %ASA-6-*; content: " GRE "; bluedot: type ip_reputation, track all, mdate_effective_period 6 months, Malicious, Tor; normalize; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 1, seconds 7200; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5002880; sid:5002880; rev:3;)
 
-alert udp $HOME_NET any -> $EXTERNAL_NET any (msg:"[CISCO-BLUEDOT] Suspicious GRE connection detected via Bluedot"; program: %ASA-6-*; content: " GRE "; bluedot: reputation, all, $BLUEDOT_NETWORK, mdate_effective_period 6 months; normalize; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 1, seconds 7200; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5002880; sid:5002880; rev:3;)
-
-
-alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-BLUEDOT] VPN Login from suspicious source"; program: %ASA-6-716038; bluedot: reputation, all, $BLUEDOT_NETWORK; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002870; sid:5002870; rev: 1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-BLUEDOT] VPN Login from suspicious source"; program: %ASA-6-716038; bluedot: type ip_reputation, track all, none, Malicious, Tor, Honeypot; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002870; sid:5002870; rev: 3;)
 
 # %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: testuser] [Source: 10.10.10.10] [localport: 22] at 05:00:13 EST Sun Dec 1 2013
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] Console login from suspicious source"; program: %SEC_LOGIN-5-LOGIN_SUCCESS; bluedot: reputation, by_src, $BLUEDOT_NETWORK; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002871; sid:5002871; rev: 2;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] Console login from suspicious source"; program: %SEC_LOGIN-5-LOGIN_SUCCESS; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002871; sid:5002871; rev: 3;)
 
 # 10.1.2.1|local4|info|info|a6|2013-12-02|08:00:03|%ASA-6-605005| Login permitted from 10.1.1.1/54112 to inside:10.1.2.1/ssh for user "bob"
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] Login permitted from suspicious source"; program: %ASA-6-605005; bluedot: reputation, by_src, $BLUEDOT_NETWORK; classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002872; sid:5002872; rev: 1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] Login permitted from suspicious source"; program: %ASA-6-605005; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype:  successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002872; sid:5002872; rev: 2;)
 
 # WebVPN
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-BLUEDOT] VPN login from suspicious source"; program: %ASA-6-716001|%ASA-6-716038; bluedot: reputation, by_src, $BLUEDOT_NETWORK; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002873; sid:5002873; rev: 1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-BLUEDOT] VPN login from suspicious source"; program: %ASA-6-716001|%ASA-6-716038; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002873; sid:5002873; rev: 2;)
 
 # Group = AnyConnect, Username = bob, IP = 10.10.10.10, Session disconnected. Session Type: SSL, Duration: 12h:00m:19s, Bytes xmt: 332468520, Bytes rcv: 130276830, Reason: Max time exceeded
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-BLUEDOT] VPN disconnect from suspicious source"; program: %ASA-4-113019|%ASA-6-716002|%ASA-6-721018; bluedot: reputation, by_src, $BLUEDOT_NETWORK; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002874; sid:5002874; rev: 1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-BLUEDOT] VPN disconnect from suspicious source"; program: %ASA-4-113019|%ASA-6-716002|%ASA-6-721018; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002874; sid:5002874; rev: 2;)
 
 # 10.8.5.10|local4|info|info|a6|2014-02-18|02:12:41|%ASA-6-734001| DAP: User bob, Addr 10.10.10.10, Connection AnyConnect: The following DAP records were selected for this connection: DfltAccessPolicy
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-BLUEDOT] VPN/AnyConnect login from suspicious source"; program: %ASA-6-734001; bluedot: reputation, by_src, $BLUEDOT_NETWORK; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002875; sid:5002875; rev: 1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-BLUEDOT] VPN/AnyConnect login from suspicious source"; program: %ASA-6-734001; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002875; sid:5002875; rev: 2;)
 
 # Cisco ACS (via VPN) - authentication success
 # 10.10.10.10|auth|info|info|26|2014-02-20|16:26:58|CisACS_01_PassedAuth| 12s245v32 1 0 Message-Type=Authen OK,User-Name=BOB,NAS-IP-Address=172.16.1.1,Caller-ID=199.44.66.11,NAS-Port=58642432,Group-Name=VPN Users,Filter Information=No Filters activated.,
 
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] ACS Login success from suspicious source"; program: CisACS_01_PassedAuth; bluedot: reputation, by_src, $BLUEDOT_NETWORK; classtype: successful-user; parse_src_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002876; sid:5002876; rev: 1;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] ACS Login success from suspicious source"; program: CisACS_01_PassedAuth; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype: successful-user; parse_src_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002876; sid:5002876; rev: 2;)
 
 # 2014-05-07 09:32:45|10.8.0.5|129815|local4|info|info|%ASA-6-722022| Group <GroupPolicy1> User <Bob> IP <10.10.102.102> UDP SVC connection established without compression
 
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] VPN login from suspicious source [2]"; program: %ASA-6-722022|%ASA-6-722023; bluedot: reputation, by_src, $BLUEDOT_NETWORK; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002877; sid:5002877; rev: 1;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] VPN login from suspicious source [2]"; program: %ASA-6-722022|%ASA-6-722023; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002877; sid:5002877; rev: 2;)
 
 # 2014-05-07 16:41:47|192.168.1.1|7050594|local0|info|info|%ASA-6-303002| FTP connection from inside:10.20.11.20/2351 to dmz:192.168.1.1/21, user bob Stored file somefile
 
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] FTP file transfer from or to  suspicious source"; program: %ASA-6-303002; bluedot: reputation, all, $BLUEDOT_NETWORK; classtype: successful-user; normalize; reference: url, wiki.quadrantsec.com/bin/view/Main/5002878; sid: 5002878; rev: 1;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] FTP file transfer from or to  suspicious source"; program: %ASA-6-303002; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype: successful-user; normalize; reference: url, wiki.quadrantsec.com/bin/view/Main/5002878; sid: 5002878; rev: 2;)
 

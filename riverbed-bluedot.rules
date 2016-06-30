@@ -27,5 +27,5 @@
 
 # 10.3.1.1|local1|notice|notice|8d|2014-04-16|13:41:29|webasd| [web.NOTICE]: web: User bob logged in from 10.7.8.1, session count: 1.
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[RIVERBED-BLUEDOT] Administrator Login a suspicious source"; content: "logged in"; parse_src_ip: 1; classtype: successful-admin; bluedot: reputation, by_src, $BLUEDOT_NETWORK; reference: url,wiki.quadrantsec.com/bin/view/Main/5002909; program: webasd; sid:5002909; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[RIVERBED-BLUEDOT] Administrator Login a suspicious source"; content: "logged in"; parse_src_ip: 1; classtype: successful-admin; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; reference: url,wiki.quadrantsec.com/bin/view/Main/5002909; program: webasd; sid:5002909; rev:2;)
 
