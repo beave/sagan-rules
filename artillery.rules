@@ -45,7 +45,7 @@
 # ftp_monitor.py
 # write_log("Artillery has blocked (blacklisted) the following IP for FTP brute forcing violations: " + ipaddress)
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[ARTILLERY] FTP brute force violation"; content: "FTP brute forcing"; flowbits: set,brute_force,86400; classtype: unsuccessful-user; parse_src_ip: 1; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002081; reference: url,www.trustedsec.com/downloads/artillery; sid:5002081; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[ARTILLERY] FTP brute force violation"; content: "FTP brute forcing"; flowbits: set,brute_force,21600; classtype: unsuccessful-user; parse_src_ip: 1; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002081; reference: url,www.trustedsec.com/downloads/artillery; sid:5002081; rev:4;)
 
 # harden.py
 # Issue identified: %s permissions are not set to root. If an attacker compromises the system and is running under the Apache user account, could view these files. Recommendation: Change the permission of %s to root:root. Command: chown root:root %s\n\n" % (filename,filename,filename)

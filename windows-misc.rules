@@ -28,7 +28,7 @@
 # Eventlog to syslog service.  This is what we primarily use.
 # http://code.google.com/p/eventlog-to-syslog/
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Detection of net listening application [0/5]"; pcre: "/ 861: | 5154: /"; threshold: type limit, track by_src, count 5, seconds 300; classtype: network-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000306; sid: 5000306; rev:7;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Detection of net listening application [0/5]"; pcre: "/ 861: | 5154: /"; threshold: type limit, track by_src, count 5, seconds 300; classtype: network-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000306; sid: 5000306; rev:7;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Privileged Service Called"; pcre: "/ 577: | 4673: /"; classtype: successful-admin; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000307; sid: 5000307; rev:6;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Apple Bonjour service detect [iTunes installed?]"; classtype: policy-violation; program: Bonjour; reference: url,wiki.quadrantsec.com/bin/view/Main/5000308; sid: 5000308; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application error"; content: " 1001|3a| "; classtype: program-error; program: Application; reference: url,wiki.quadrantsec.com/bin/view/Main/5000309; sid: 5000309; rev:3;)
