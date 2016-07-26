@@ -2815,6 +2815,25 @@
 5002918 || [VMWARE-BLUEDOT] User login successful from a suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002918
 5002919 || [VSFTPD-BLUEDOT] Authentication successful from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002919
 5002920 || [VSFTPD-BLUEDOT] File uploaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002920
+5002921 || [BIT9] Non-System Filemods to system32
+5002922 || [BIT9] Newly Loaded Modules
+5002923 || [BIT9] A new device was mounted
+5002924 || [BIT9] File was executed for the first time
+5002925 || [BIT9] Computer reported that signature on file is invalid
+5002926 || [BIT9] Server discovered new certificate
+5002927 || [BIT9] Disk configuration change detected
+5002928 || [BIT9] Bit9 Agent blocked an attempt to create file
+5002929 || [BIT9] Bit9 Agent blocked an attempt to delete file
+5002930 || [BIT9] Permission change was blocked
+5002931 || [BIT9] Modification of registry was blocked
+5002932 || [BIT9] Bit9 Agent failed a health check
+5002933 || [BIT9] File was identified by Bit9 Software Reputation Service as a potential risk
+5002934 || [BIT9] Server detected revocation of certificate
+5002935 || [BIT9] Bit9 Agent detected a problem
+5002936 || [BIT9] Exclusive access to a file was blocked because of tamper protection
+5002937 || [BIT9] Bit9 Agent had to rebuild its primary database cache and now has to re-initialize
+5002938 || [BIT9] Computer failed to receive Notifier Logo
+5002939 || [BIT9] Bit9 Agent had to restore its primary database cache
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
