@@ -2835,6 +2835,7 @@
 5002938 || [BIT9] Computer failed to receive Notifier Logo
 5002939 || [BIT9] Bit9 Agent had to restore its primary database cache
 5002940 || [BLUEDOT] Suspicious file hash detected || url,wiki.quadrantsec.com/bin/view/Main/5002940
+5002941 || [WINDOWS-MISC] Event logging service has shut down. || url,wiki.quadrantsec.com/bin/view/Main/5002941
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
