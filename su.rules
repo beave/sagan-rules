@@ -38,4 +38,4 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] su as 'root' suceeded
 
 #  Rules added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/21/2015
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] root password change attempt"; content:"passwd"; content "root"; content:"HISTORY"; classtype: suspicious-command; program: -su|su; reference: url,wiki.quadrantsec.com/bin/view/Main/5002566; sid: 5002566; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] root password change attempt"; content:"passwd"; content: "root"; content:"HISTORY"; classtype: suspicious-command; program: -su|su; reference: url,wiki.quadrantsec.com/bin/view/Main/5002566; sid: 5002566; rev:2;)
