@@ -2839,6 +2839,7 @@
 5002942 || [ASTERISK] Brute force login session failed [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002942
 5002943 || [ASTERISK] Brute force login session failed [invalid user] [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002943
 5002944 || [ASTERISK] Brute force login session failed [invalid extension] [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002944
+5002945 || [Barracuda] Brute force login attempt [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002945
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
