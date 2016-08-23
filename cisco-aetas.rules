@@ -25,25 +25,25 @@
 #
 #
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-AETAS] VPN Login at suspicious time"; program: %ASA-6-716038; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002034; sid: 5002034; rev: 2;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-AETAS] VPN Login at suspicious time"; program: %ASA*-6-716038; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002034; sid: 5002034; rev: 2;)
 
 # %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: testuser] [Source: 10.10.10.10] [localport: 22] at 05:00:13 EST Sun Dec 1 2013
 
 alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-AETAS] Console login at suspicious time"; program: %SEC_LOGIN-5-LOGIN_SUCCESS; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002035; sid: 5002035; rev: 2;)
 
-# 10.1.2.1|local4|info|info|a6|2013-12-02|08:00:03|%ASA-6-605005| Login permitted from 10.1.1.1/54112 to inside:10.1.2.1/ssh for user "bob"
+# 10.1.2.1|local4|info|info|a6|2013-12-02|08:00:03|%ASA*-6-605005| Login permitted from 10.1.1.1/54112 to inside:10.1.2.1/ssh for user "bob"
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-AETAS] Login permitted at suspicious time"; program: %ASA-6-605005; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS;classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002036; sid: 5002036; rev: 2;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-AETAS] Login permitted at suspicious time"; program: %ASA*-6-605005; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS;classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002036; sid: 5002036; rev: 2;)
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-AETAS] WebVPN login at suspicious time"; program: %ASA-6-716001; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002037; sid: 5002037; rev: 2;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-AETAS] WebVPN login at suspicious time"; program: %ASA*-6-716001; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002037; sid: 5002037; rev: 2;)
 
 # Group = AnyConnect, Username = bob, IP = 10.10.10.10, Session disconnected. Session Type: SSL, Duration: 12h:00m:19s, Bytes xmt: 332468520, Bytes rcv: 130276830, Reason: Max time exceeded
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-AETAS] VPN disconnect at suspicious time"; program: %ASA-4-113019; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002038; sid: 5002038; rev: 2;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-AETAS] VPN disconnect at suspicious time"; program: %ASA*-4-113019; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002038; sid: 5002038; rev: 2;)
 
-# 10.8.5.10|local4|info|info|a6|2014-02-18|02:12:41|%ASA-6-734001| DAP: User bob, Addr 10.10.10.10, Connection AnyConnect: The following DAP records were selected for this connection: DfltAccessPolicy
+# 10.8.5.10|local4|info|info|a6|2014-02-18|02:12:41|%ASA*-6-734001| DAP: User bob, Addr 10.10.10.10, Connection AnyConnect: The following DAP records were selected for this connection: DfltAccessPolicy
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-AETAS] VPN login at suspicious time"; program: %ASA-6-734001; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002039; sid: 5002039; rev: 2;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTPS_PORT (msg: "[CISCO-AETAS] VPN login at suspicious time"; program: %ASA*-6-734001; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002039; sid: 5002039; rev: 2;)
 
 # Cisco ACS (via VPN) - authentication success
 # 10.10.10.10|auth|info|info|26|2014-02-20|16:26:58|CisACS_01_PassedAuth| 12s245v32 1 0 Message-Type=Authen OK,User-Name=BOB,NAS-IP-Address=172.16.1.1,Caller-ID=199.44.66.11,NAS-Port=58642432,Group-Name=VPN Users,Filter Information=No Filters activated.,
