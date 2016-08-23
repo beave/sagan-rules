@@ -80,7 +80,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[OPENSSH] User logged 
 
 # Failed password for root from 10.10.0.1 port 17298 ssh2
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password - Brute force [10/1]"; content: "Failed password"; program: sshd; normalize; flowbits: set, brute_force,21600; classtype: unsuccessful-user; sid: 5001646; after: track by_src, count 10, seconds 300; threshold: type limit, track by_src, count 1, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001646; rev:8;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password - Brute force [10/1]"; content: "Failed password"; program: sshd; normalize; flowbits: set,brute_force,21600; classtype: unsuccessful-user; sid: 5001646; after: track by_src, count 10, seconds 300; threshold: type limit, track by_src, count 1, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001646; rev:8;)
 
 #alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password"; content: "Failed password"; program: sshd; normalize; classtype: unsuccessful-user; sid: 5001647; reference: url,wiki.quadrantsec.com/bin/view/Main/5001647; rev:4;)
 
