@@ -340,7 +340,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue auto 
 # User Authentication Failure.
 # ''%s'' ''%s'' failed authentication on Controller ''%s''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] User authentication failure"; program: snmptrapd; content: "=USER_AUTHENTICATION_FAILURE|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002175; sid:5002175; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] User authentication failure"; program: snmptrapd; content: "=USER_AUTHENTICATION_FAILURE|28|"; flowbits: set,recon,86400; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002175; sid:5002175; rev:3;)
 
 # WIPS_TRAPS
 # Dynamically generated per alarm.
