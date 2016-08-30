@@ -34,6 +34,6 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg: "[FTPD] User logged int
 
 # Rule by W. E Restrepo (werestrepo@quadrantsec.com) - 08/30/2016
 
-alert syslog any -> any (msg: "[VSFTPD] FTPCHK3 file accessed by user"; content: "ftpchk3"; pcre: "/CHMOD|DELE|STOR/i"; program: vsftpd; classtype: suspicious-traffic; reference: url,blog.ftptoday.com/ftp-password-stealing-malware; reference: url,wiki.quadrantsec.com/bin/view/Main/5002952; sid:5002952; rev: 2;)
+alert syslog any -> any (msg: "[VSFTPD] FTPCHK3 file accessed by user"; content: "ftpchk3"; pcre: "/CHMOD|DELE|STOR/i"; program: vsftpd; classtype: suspicious-traffic; reference: url,blog.ftptoday.com/ftp-password-stealing-malware; reference: url,wiki.quadrantsec.com/bin/view/Main/5002953; sid:5002953; rev: 2;)
 
 
