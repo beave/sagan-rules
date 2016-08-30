@@ -32,3 +32,8 @@ drop tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[VSFTPD] Login failed - 
 #alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[VSFTPD] File uploaded"; content: "OK UPLOAD"; classtype: not-suspicious; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000197; sid: 5000197; rev:2;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg: "[FTPD] User logged into an disabled account"; content: "OK LOGIN"; pcre: "/ apache | mysql | www | nobody | nogroup | portmap | named | rpc | mail | ftp | shutdown | halt | daemon | bin | postfix | shell | info | guest | psql | user | users | console | uucp | lp | sync | sshd | cdrom | ossec | sagan /"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000415; program: sshd; sid: 5000415; rev:3;)
 
+# Rule by W. E Restrepo (werestrepo@quadrantsec.com) - 08/30/2016
+
+alert syslog any -> any (msg: "[VSFTPD] FTPCHK3 file accessed by user"; content: "ftpchk3"; pcre: "/CHMOD|DELE|STOR/i"; program: vsftpd; classtype: suspicious-traffic; reference: url,blog.ftptoday.com/ftp-password-stealing-malware; reference: url,wiki.quadrantsec.com/bin/view/Main/5002952; sid:5002952; rev: 2;)
+
+
