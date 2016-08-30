@@ -1,2 +1,62 @@
 
+08/30/2016 -	Sagan rule release
+
+	* vsftp, proftp, pureftp and generic ftp rules for "ftpchk3".  See https://blog.ftptoday.com/ftp-password-stealing-malware
+	  https://github.com/beave/sagan-rules/commit/9f04bf22570801f4fa4f4f96ef561d95010d717e
+	  https://github.com/beave/sagan-rules/commit/2a227378143ed10fb4db3696092ead39841a54d2
+
+	* Added "FTP|FTPD" to program field in ftpd.rules
+	  https://github.com/beave/sagan-rules/commit/27e2d99ccdc69a99ce7b6b1899ce4e01ef27ab39
+
+	* Updated all Cisco ASA rules to take into account when Cisco "Emblem" is enabled
+	  https://github.com/beave/sagan-rules/commit/83d4c122a25114fc716cac8dc9d2ed81ce2b61cb
+	  https://github.com/beave/sagan-rules/commit/7e12112fa1abfffaffb94d45a17a068e5c1da128
+
+	* bit9.rules update to take into account "customer" program field. 
+	  https://github.com/beave/sagan-rules/commit/83d4c122a25114fc716cac8dc9d2ed81ce2b61cb
+
+	* cisco-prime "recon" flowbit added to sid 5002175
+	  https://github.com/beave/sagan-rules/commit/ead9c3399fed3ba920f7760abe0bc7c009b59081
+
+	* ngix.rules new brute force rule & "brute_force" flowbit added - 5002948
+	  https://github.com/beave/sagan-rules/commit/ead9c3399fed3ba920f7760abe0bc7c009b59081
+
+	* oracle.rules new brute force rule & "brute_force" flowbit added - sid 5002949
+	  https://github.com/beave/sagan-rules/commit/ead9c3399fed3ba920f7760abe0bc7c009b59081
+
+	* cisco-prime.rules clean up of invalid references. 
+	  https://github.com/beave/sagan-rules/commit/ead9c3399fed3ba920f7760abe0bc7c009b59081
+
+	* ipop3d.rules new "brute_force" flowbit added - sid 5000032
+	  https://github.com/beave/sagan-rules/commit/8058562a727e9fa4dcad8639b062ae5555ec95c8
+
+	* New Big IP F5 rules (f5-big-ip.rules) 
+	  https://github.com/beave/sagan-rules/commit/6aa0e58eb1249cae31c2ea60a61bedd00e1cc390
+
+	* bash.rules changes to better detect certain command line options 
+	  https://github.com/beave/sagan-rules/commit/7e12112fa1abfffaffb94d45a17a068e5c1da128
+
+	* apache.rules new "brute_force" & "recon" flowbits added. 
+	  https://github.com/beave/sagan-rules/commit/32373afab6cc557c95f7c2f18fdf61336fc54b72
+
+	* artillery.rules new "honeypot" & "flowbits" added. 
+	  https://github.com/beave/sagan-rules/commit/32373afab6cc557c95f7c2f18fdf61336fc54b72
+
+	* barracuda.rules new brute force rules and flowbits
+	  https://github.com/beave/sagan-rules/commit/32373afab6cc557c95f7c2f18fdf61336fc54b72
+
+	* asterisk.rules new brute force & "brute_force" flowbits
+	  https://github.com/beave/sagan-rules/commit/32373afab6cc557c95f7c2f18fdf61336fc54b72
+
+	* Correaction in su.rules that could lead to false positives.  
+	  https://github.com/beave/sagan-rules/commit/22173a81ede60f166403b124a62cef4a82fb9616
+
+	* bro-ids.rules "brute_force" flowbit added. 
+	  https://github.com/beave/sagan-rules/commit/32373afab6cc557c95f7c2f18fdf61336fc54b72
+
+	* Changes to widnows-geoip.rule to work around https://support.microsoft.com/en-us/kb/3097467
+	  https://github.com/beave/sagan-rules/commit/22173a81ede60f166403b124a62cef4a82fb9616
+
+	* windows-misc.rules added event 1100 detection.
+	  https://github.com/beave/sagan-rules/commit/1458068d33082fe937c934130ef9d730199fe834
 
