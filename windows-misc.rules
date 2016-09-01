@@ -96,7 +96,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope
 # BAD RULE BELOW
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope if full.  No IP addresses left"; content: " 5001650|3a| "; classtype: network-event; program: DHCP-Server; reference: url,wiki.quadrantsec.com/bin/view/Main/5001650; sid: 5001650; rev:2;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows audit log was cleared"; pcre: "/ 517: | 1102: /"; classtype: system-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001185; sid: 5001185; rev:5;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows audit log was cleared"; pcre: "/ 517: | 1102: /"; classtype: system-event; program: *Security*|Eventlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5001185; sid: 5001185; rev:6;)
 
 # Brian Echeverry - 05/07/2015
 # SID 5002272 and 5002273 are noisy. 
@@ -126,5 +126,13 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installati
 # Added by Champ Clark III (08/19/2016) 
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Event logging service has shut down."; content: " 1100|3a| "; classtype: suspicious-traffic; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002941; sid:5002941; rev:1;)
+
+# Added by Champ Clark III (09/01/2016)
+# These target strange errors seen by evtsys.  
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Event log has been cleared."; content: " 104|3a| "; content: "cleared"; classtype: suspicious-traffic; program: Eventlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5002954; sid:5002954; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Subscription calledback error recieved. Logging has likely stopped."; content: " 570|3a| "; content: "callback"; classtype: suspicious-traffic; program: The; reference: url,wiki.quadrantsec.com/bin/view/Main/5002955; sid:5002955; rev:1;)
+
+
 
 
