@@ -2835,7 +2835,7 @@
 5002938 || [BIT9] Computer failed to receive Notifier Logo
 5002939 || [BIT9] Bit9 Agent had to restore its primary database cache
 5002940 || [BLUEDOT] Suspicious file hash detected || url,wiki.quadrantsec.com/bin/view/Main/5002940
-5002941 || [WINDOWS-MISC] Event logging service has shut down. || url,wiki.quadrantsec.com/bin/view/Main/5002941
+5002941 || [WINDOWS-MISC] Suspicious event logging service shut down. || url,wiki.quadrantsec.com/bin/view/Main/5002941
 5002942 || [ASTERISK] Brute force login session failed [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002942
 5002943 || [ASTERISK] Brute force login session failed [invalid user] [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002943
 5002944 || [ASTERISK] Brute force login session failed [invalid extension] [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002944
