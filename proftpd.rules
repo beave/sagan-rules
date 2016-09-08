@@ -47,5 +47,5 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg: "[PROFTPD] User logged 
 
 # Rule by W. E Restrepo (werestrepo@quadrantsec.com) - 08/30/2016
 
-alert syslog any -> any (msg: "[PROFTP] FTPCHK3 file accessed by user"; content: "ftpchk3"; pcre: "/CHMOD|DELE|STOR/i";  parse_src_ip: 3; program: proftpd; classtype: suspicious-traffic; reference: blog.ftptoday.com/ftp-password-stealing-malware; reference: url,wiki.quadrantsec.com/bin/view/Main/5002951; sid:5002951; rev: 2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[PROFTP] FTPCHK3 file accessed by user"; content: "ftpchk3"; pcre: "/CHMOD|DELE|STOR/i";  parse_src_ip: 3; program: proftpd; classtype: suspicious-traffic; reference: blog.ftptoday.com/ftp-password-stealing-malware; reference: url,wiki.quadrantsec.com/bin/view/Main/5002951; sid:5002951; rev: 2;)
 

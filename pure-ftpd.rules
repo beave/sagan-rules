@@ -35,6 +35,6 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg: "[PUREFTPD] User logged
 
 # Rule by W. E Restrepo (werestrepo@quadrantsec.com) - 08/30/2016
 
-alert syslog any -> any (msg: "[PUREFTPD] FTPCHK3 file accessed by user"; content: "ftpchk3"; pcre: "/CHMOD|DELE|STOR/i"; program: pure-ftpd; classtype: suspicious-traffic; reference: url,blog.ftptoday.com/ftp-password-stealing-malware; reference: url,wiki.quadrantsec.com/bin/view/Main/5002952; sid:5002952; rev: 2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[PUREFTPD] FTPCHK3 file accessed by user"; content: "ftpchk3"; pcre: "/CHMOD|DELE|STOR/i"; program: pure-ftpd; classtype: suspicious-traffic; reference: url,blog.ftptoday.com/ftp-password-stealing-malware; reference: url,wiki.quadrantsec.com/bin/view/Main/5002952; sid:5002952; rev: 2;)
 
 
