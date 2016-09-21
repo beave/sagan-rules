@@ -1,4 +1,22 @@
+09/21/2016 - 	Sagan rule release
 
+	* Disabled many nfcapd.rules. These are low value rules 
+	  https://github.com/beave/sagan-rules/commit/00df337cefc41f84d53ab1e17a9a05c7c2f2e433
+
+	* Rules 500295[0123] fixed "any -> any" typo
+	  https://github.com/beave/sagan-rules/commit/2aad0351efaf92b09a222f8afca7ea4a49c1ded2
+
+	* Removed "Tor" nfcapd-malware.rules.  These are low value rules (better ways to catch Tor traffic)
+	  https://github.com/beave/sagan-rules/commit/2a41f85b7b58b7c85c85fdfcb6dcee31dd1eb668
+
+	* Flowbit fix in sid 5002941 ([WINDOWS-MISC] Suspicious event logging service shut down)
+	  https://github.com/beave/sagan-rules/commit/a6042fccbf8e74c13f36ae6ddcd0640399da69c1
+
+	* Modification of sid web-attack.rules 5001843 to ignore the word "Vegas"
+	  https://github.com/beave/sagan-rules/commit/056d588034c4d029abdc825cece4cb9b46773c0b
+
+	* Two new rules targetting Evtsys errors. Sid 5001185 changed to address evtsys issue.
+	  https://github.com/beave/sagan-rules/commit/079e19f9f9dc300a879de51b1e2991b846f79e19
 
 08/30/2016 -	Sagan rule release
 
