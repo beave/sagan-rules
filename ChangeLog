@@ -1,4 +1,4 @@
-09/21/2016 - 	Sagan rule release
+09/23/2016 - 	Sagan rule release
 
 	* Disabled many nfcapd.rules. These are low value rules 
 	  https://github.com/beave/sagan-rules/commit/00df337cefc41f84d53ab1e17a9a05c7c2f2e433
