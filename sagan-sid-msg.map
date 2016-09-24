@@ -2850,6 +2850,7 @@
 5002953 || [VSFTPD] FTPCHK3 file accessed by user || url,wiki.quadrantsec.com/bin/view/Main/5002953 || url,blog.ftptoday.com/ftp-password-stealing-malware
 5002954 || [WINDOWS-MISC] Event log has been cleared. || url,wiki.quadrantsec.com/bin/view/Main/5002954
 5002955 || [WINDOWS-MISC] Subscription calledback error recieved. Logging has likely stopped. || url,wiki.quadrantsec.com/bin/view/Main/5002955
+5002956 || [WINDOWS-MALWARE] Suspicious Service Control Manager Call || url,twitter.com/jackcr/status/779716898296520704
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
