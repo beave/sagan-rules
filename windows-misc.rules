@@ -119,7 +119,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Unable to 
 
 # Added by Champ Clark III (04/20/2016) - Great read at http://pastebin.com/raw/0SNSvyjJ
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of service via SCM"; content: " 7045|3a| "; content:!"ForeScout"; nocase; content:!"nxlog"; nocase; content:!"ccmsetup"; nocase; classtype: suspicious-traffic; program: Service_Control_Manager; reference: url,wiki.quadrantsec.com/bin/view/Main/5002817; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5002817; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of service via SCM"; content: " 7045|3a| "; content:!"ForeScout"; nocase; content:!"nxlog"; nocase; content:!"ccmsetup"; nocase; classtype: suspicious-traffic; program: System|Service_Control_Manager; reference: url,wiki.quadrantsec.com/bin/view/Main/5002817; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5002817; rev:3;)
 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of new service via Security Audit "; pcre: "/ 4697: | 601: /"; classtype: suspicious-traffic; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002818; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5002818; rev:2;)
 
