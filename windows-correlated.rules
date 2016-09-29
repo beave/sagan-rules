@@ -25,10 +25,14 @@
 #
 #*************************************************************
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-CORRELATED] Successful RDP login from known brute force"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; content:!"Source Network Address|3a| 0.0.0.0"; program: Security*; flowbits:isset,by_src,brute_force; parse_src_ip: 1; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002336; sid:5002336; rev:5;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-CORRELATED] Successful RDP login from known brute force source"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; content:!"Source Network Address|3a| 0.0.0.0"; program: Security*; flowbits:isset,by_src,brute_force; parse_src_ip: 1; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002336; sid:5002336; rev:6;)
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-CORRELATED] Successful RDP login from a recon source"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; content:!"Source Network Address|3a| 0.0.0.0"; program: Security*; flowbits:isset,by_src,recon; parse_src_ip: 1; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002957; sid:5002957; rev:1;)
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-CORRELATED] Successful RDP login from a exploit attempt source"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; content:!"Source Network Address|3a| 0.0.0.0"; program: Security*; flowbits:isset,by_src,exploit_attempt; parse_src_ip: 1; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002958; sid:5002958; rev:1;)
 
 # Add by Champ Clark 09/18/2015
 # RDP after recon/honeypot
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-CORRELATED] RDP login after suspicious traffic"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; program: Security*; flowbits: isset,by_src,recon|honeypot; parse_src_ip: 1; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002356; sid:5002356; rev:1;)
+# alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-CORRELATED] RDP login after suspicious traffic"; pcre: "/ 528: | 4624: /"; content: "Logon Type|3a| 10 "; program: Security*; flowbits: isset,by_src,recon|honeypot|exploit_attempt; parse_src_ip: 1; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002356; sid:5002356; rev:2;)
 

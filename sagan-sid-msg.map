@@ -2234,7 +2234,7 @@
 5002333 || [BASH] LD_PRELOAD environment variable access
 5002334 || [BASH] LD_LIBRARY_PATH environment variable access
 5002335 || [WINDOWS-AUTH] User account deleted || url,wiki.quadrantsec.com/bin/view/Main/5002335
-5002336 || [WINDOWS-CORRELATED] Successful RDP login from known brute force || url,wiki.quadrantsec.com/bin/view/Main/5002336
+5002336 || [WINDOWS-CORRELATED] Successful RDP login from known brute force source || url,wiki.quadrantsec.com/bin/view/Main/5002336
 5002337 || [WINDOWS-GEOIP] Windows Network Cleartext from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002337
 5002338 || [WINDOWS-GEOIP] Windows Session Disconnected from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002338
 5002339 || [WINDOWS-GEOIP] Windows RDP Session Disconnected from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002339
@@ -2851,6 +2851,8 @@
 5002954 || [WINDOWS-MISC] Event log has been cleared. || url,wiki.quadrantsec.com/bin/view/Main/5002954
 5002955 || [WINDOWS-MISC] Subscription calledback error recieved. Logging has likely stopped. || url,wiki.quadrantsec.com/bin/view/Main/5002955
 5002956 || [WINDOWS-MALWARE] Suspicious Service Control Manager Call || url,twitter.com/jackcr/status/779716898296520704
+5002957 || [WINDOWS-CORRELATED] Successful RDP login from a recon source || url,wiki.quadrantsec.com/bin/view/Main/5002957
+5002958 || [WINDOWS-CORRELATED] Successful RDP login from a exploit attempt source || url,wiki.quadrantsec.com/bin/view/Main/5002958
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

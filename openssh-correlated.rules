@@ -29,9 +29,9 @@
 # Add by Champ Clark - 09/18/2015
 # Login after previous recon flowbit is set. 
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-CORRELATED] Authentication success via password after suspicious activity"; content: "Accepted password"; flowbits: isset,by_src,recon|honeypot; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002353; normalize; program: sshd; sid:5002353; rev:3;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-CORRELATED] Authentication success via public key after suspicious activity"; content: "Accepted publickey"; flowbits: isset,by_src,recon|honeypot; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002354; normalize; program: sshd; sid:5002354; rev:3;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-CORRELATED] Authentication success via keyboard-interactive after suspicious activity"; content: "Accepted keyboard-interactive"; flowbits: isset,by_src,recon|honeypot; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002355; normalize; program: sshd; sid:5002355; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-CORRELATED] Authentication success via password after suspicious activity"; content: "Accepted password"; flowbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002353; normalize; program: sshd; sid:5002353; rev:5;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-CORRELATED] Authentication success via public key after suspicious activity"; content: "Accepted publickey"; flowbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002354; normalize; program: sshd; sid:5002354; rev:5;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[OPENSSH-CORRELATED] Authentication success via keyboard-interactive after suspicious activity"; content: "Accepted keyboard-interactive"; flowbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002355; normalize; program: sshd; sid:5002355; rev:5;)
 
 # Added by Champ Clark - 09/17/2014 - Required flowbit.  Valid login _after_ brute force.
 

@@ -28,6 +28,6 @@
 
 # 10.10.10.5|authpriv|info|info|56|2014-02-12|18:53:52|xtremed| UI Login: Success, User Name: bob, Remote IP: 10.10.10.1, Privilege: ADMINISTRATOR
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[FATPIPE-CORRELATED] Login Success after suspicious activity"; content: "Login|3a| Success"; flowbits: isset,by_src,recon|honeypot; classtype: correlated-attack; program: xtremed; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002369; sid:5002369; rev:3;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[FATPIPE-CORRELATED] Login Success - ADMINISTRATOR - after suspicious activity"; content: "Login|3a| Success"; content: "ADMINISTRATOR"; flowbits: isset,by_src,recon|honeypot; classtype: correlated-attack; program: xtremed; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002370; sid:5002370; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[FATPIPE-CORRELATED] Login Success after suspicious activity"; content: "Login|3a| Success"; flowbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; program: xtremed; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002369; sid:5002369; rev:5;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg:"[FATPIPE-CORRELATED] Login Success - ADMINISTRATOR - after suspicious activity"; content: "Login|3a| Success"; content: "ADMINISTRATOR"; flowbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; program: xtremed; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002370; sid:5002370; rev:5;)
 

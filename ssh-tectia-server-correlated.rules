@@ -27,4 +27,4 @@
 #
 # These rules are for the SSH Tectia Server for Windows systems.
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[SSH-TECTIA-SERVER-CORRELATED] Authentication success after suspicious activity"; content: "Login_success"; flowbits: isset,by_src,recon|honeypot; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002380; parse_src_ip: 1; parse_dst_ip: 2; program: SSH_Tectia_Server; sid:5002380; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[SSH-TECTIA-SERVER-CORRELATED] Authentication success after suspicious activity"; content: "Login_success"; flowbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002380; parse_src_ip: 1; parse_dst_ip: 2; program: SSH_Tectia_Server; sid:5002380; rev:2;)
