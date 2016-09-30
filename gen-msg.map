@@ -5,3 +5,5 @@
 100 || 100 || sagan_track_clients: No log activity from remote agent in timeout period!
 100 || 101 || sagan_track_clients: Log activity resumed. 
 
+101 || 100 || sagan_hints: New logs detected. Loading rules dynamically.
+101 || 101 || sagan_hints: New logs detected. Manual rule loading needed.
