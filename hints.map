@@ -1,9 +1,0 @@
-
-# type || ruleset || case/nocase || search for (in message or program)
-
-#message || $RULE_PATH/cisco-pixasa.rules || case ||%ASA-
-#message || $RULE_PATH/grsec.rules || nocase ||grsec
-#message || $RULE_PATH/grsec.rules || case ||grsec
-
-program||$RULE_PATH/grsec.rules||nocase||GRSEC Logs||kernel
-
