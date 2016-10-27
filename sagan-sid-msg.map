@@ -1046,9 +1046,9 @@
 5001090 || [SONICWALL] IPS Detection Alert || url,wiki.quadrantsec.com/bin/view/Main/5001090
 5001091 || [CISCO-PIXASA] Access denied URL - HTTPS || url, wiki.quadrantsec.com/bin/view/Main/5001091
 5001092 || [CISCO-PIXASA] AAA user authentication Reject [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5001092
-5001093 || [MISC] Weblabyrinth - New host logged! || url,wiki.quadrantsec.com/bin/view/Main/5001093
+5001093 || [WEBLABYRINTH] New host logged! || url,wiki.quadrantsec.com/bin/view/Main/5001093
 5001094 || [SENDMAIL] Insufficient system resources [Remote] [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5001094
-5001095 || [MISC] Weblabyrinth - Crawler Ensnared! || url,wiki.quadrantsec.com/bin/view/Main/5001095
+5001095 || [WEBLABYRINTH] Weblabyrinth - Crawler Ensnared! || url,wiki.quadrantsec.com/bin/view/Main/5001095
 5001096 || [WINDOWS-MISC] MSSQLServer I/O error || url,wiki.quadrantsec.com/bin/view/Main/5001096
 5001097 || [VMWARE] User login successful || url,wiki.quadrantsec.com/bin/view/Main/5001097
 5001098 || [VMWARE] User logoff successful || url,wiki.quadrantsec.com/bin/view/Main/5001098
