@@ -36,7 +36,6 @@
 # Digital personal_pro needs tobe DigitalPersonal*
 # should ipop3d have ipop3d-ssl as well? 
 # ntp program is nptd_initres add "ntpd"?
-# fix squid program (squid) isn't valid
 # weblabrinth.rules rules have wrong msg
 # All windows rules should be reviewed by program
 
