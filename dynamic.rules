@@ -33,7 +33,6 @@
 # Look at barracuda rules
 # Add "snoopy" to bash.rules
 # See cisco-acs.rules - wierd programs
-# Digital personal_pro needs tobe DigitalPersonal*
 # should ipop3d have ipop3d-ssl as well? 
 # All windows rules should be reviewed by program
 
