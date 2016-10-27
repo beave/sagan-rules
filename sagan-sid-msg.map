@@ -2845,7 +2845,7 @@
 5002948 || [NGINX] Nginx brute force authentication attempt [5/1] || url,wiki.quadrantsec.com/bin/view/Main/5002948
 5002949 || [ORACLE] Brute force authentication failure [5/1] || url, wiki.quadrantsec.com/bin/view/Main/5002949
 5002950 || [FTPD] FTPCHK3 file accessed by user || url,blog.ftptoday.com/ftp-password-stealing-malware || url,wiki.quadrantsec.com/bin/view/Main/5002950
-5002951 || [PROFTP] FTPCHK3 file accessed by user || url,wiki.quadrantsec.com/bin/view/Main/5002951 || blog.ftptoday.com/ftp-password-stealing-malware
+5002951 || [PROFTP] FTPCHK3 file accessed by user || url,wiki.quadrantsec.com/bin/view/Main/5002951 || url,blog.ftptoday.com/ftp-password-stealing-malware
 5002952 || [PUREFTPD] FTPCHK3 file accessed by user || url,wiki.quadrantsec.com/bin/view/Main/5002952 || url,blog.ftptoday.com/ftp-password-stealing-malware
 5002953 || [VSFTPD] FTPCHK3 file accessed by user || url,wiki.quadrantsec.com/bin/view/Main/5002953 || url,blog.ftptoday.com/ftp-password-stealing-malware
 5002954 || [WINDOWS-MISC] Event log has been cleared. || url,wiki.quadrantsec.com/bin/view/Main/5002954
@@ -2853,6 +2853,70 @@
 5002956 || [WINDOWS-MALWARE] Suspicious Service Control Manager Call || url,twitter.com/jackcr/status/779716898296520704
 5002957 || [WINDOWS-CORRELATED] Successful RDP login from a recon source || url,wiki.quadrantsec.com/bin/view/Main/5002957
 5002958 || [WINDOWS-CORRELATED] Successful RDP login from a exploit attempt source || url,wiki.quadrantsec.com/bin/view/Main/5002958
+5002959 || [DYNAMIC] APC-EMU logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002959
+5002960 || [DYNAMIC] Arpalert or Arpwatch logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002960
+5002961 || [DYNAMIC] Artillery logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002961
+5002962 || [DYNAMIC] Asterisk logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002962
+5002963 || [DYNAMIC] Bash logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002963
+5002964 || [DYNAMIC] Bind logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002964
+5002965 || [DYNAMIC] Bit9 logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002965
+5002966 || [DYNAMIC] Bro logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002966
+5002967 || [DYNAMIC] Cisco ASA logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002967
+5002968 || [DYNAMIC] Courier/IMAP logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002968
+5002969 || [DYNAMIC] OpenSSH logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002969
+5002970 || [DYNAMIC] DigitalPersona logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002970
+5002971 || [DYNAMIC] Dovecot logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002971
+5002972 || [DYNAMIC] FIPAYPIN logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002972
+5002973 || [DYNAMIC] FTPD logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002973
+5002974 || [DYNAMIC] Grsec logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002974
+5002975 || [DYNAMIC] Honeyd logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002975
+5002976 || [DYNAMIC] Horde logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002976
+5002977 || [DYNAMIC] Hostapd logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002977
+5002978 || [DYNAMIC] IMAPD logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002978
+5002979 || [DYNAMIC] IPOP3D logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002979
+5002980 || [DYNAMIC] Kismet_Server logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002980
+5002981 || [DYNAMIC] Knockd logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002981
+5002982 || [DYNAMIC] Linux kernel logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002982
+5002983 || [DYNAMIC] SMTP milter logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002983
+5002984 || [DYNAMIC] MongoDB logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002984
+5002985 || [DYNAMIC] MySQL logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002985
+5002986 || [DYNAMIC] NeXpose logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002986
+5002987 || [DYNAMIC] Nfcapd logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002987
+5002988 || [DYNAMIC] Nginx logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002988
+5002989 || [DYNAMIC] OpenVPN logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002989
+5002990 || [DYNAMIC] OSSEC logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002990
+5002991 || [DYNAMIC] Postfix logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002991
+5002992 || [DYNAMIC] Postgres logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002992
+5002993 || [DYNAMIC] pptpd logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002993
+5002994 || [DYNAMIC] Pure-FTP logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002994
+5002995 || [DYNAMIC] Racoon logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002995
+5002996 || [DYNAMIC] Riverbed logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002996
+5002998 || [DYNAMIC] Roundcube logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002998
+5002999 || [DYNAMIC] Rsync logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002999
+5003000 || [DYNAMIC] Samba logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003000
+5003001 || [DYNAMIC] Sendmail logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003001
+5003002 || [DYNAMIC] Snort logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003002
+5003004 || [DYNAMIC] SSH-Tectia-Server logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003004
+5003005 || [DYNAMIC] su/sudo logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003005
+5003006 || [DYNAMIC] Symantec EMS logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003006
+5003007 || [DYNAMIC] Telnet logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003007
+5003008 || [DYNAMIC] Trendmicro Antivirus logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003008
+5003009 || [DYNAMIC] Tripwire logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003009
+5003010 || [DYNAMIC] Vmpop3d logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003010
+5003011 || [DYNAMIC] VMWare ESXi logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003011
+5003012 || [DYNAMIC] VPopmail logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003012
+5003013 || [DYNAMIC] VSFTPD logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003013
+5003014 || [DYNAMIC] Weblabyrinth logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003014
+5003015 || [DYNAMIC] MSSQL logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003015
+5003016 || [DYNAMIC] Windows Sysmon logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003016
+5003017 || [DYNAMIC] Wordpress logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003017
+5003018 || [DYNAMIC] xinetd logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003018
+5003019 || [DYNAMIC] Yubikey logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003019
+5003020 || [DYNAMIC] Zeus logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003020
+5003021 || [DYNAMIC] Juniper logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003021
+5003022 || [DYNAMIC] Proftp logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003022 sid:5003022
+5003023 || [DYNAMIC] Apache logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003023
+5003032 || [DYNAMIC] Squid logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003003
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

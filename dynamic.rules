@@ -40,8 +40,8 @@
 # weblabrinth.rules rules have wrong msg
 # All windows rules should be reviewed by program
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Proftp logs detected via program."; program: proftpd; dynamic_load: $RULE_PATH/proftpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002957; sid:5002957; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Apache logs detected via program."; program: proftpd|httpd; dynamic_load: $RULE_PATH/apache.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002958; sid:5002958; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Proftp logs detected via program."; program: proftpd; dynamic_load: $RULE_PATH/proftpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003022 sid:5003022; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Apache logs detected via program."; program: proftpd|httpd; dynamic_load: $RULE_PATH/apache.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003023; sid:5003023; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] APC-EMU logs detected via program."; program: EMU; dynamic_load: $RULE_PATH/apc-emu.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002959; sid:5002959; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Arpalert or Arpwatch logs detected via program."; program: arpalert|arpwatch; dynamic_load: $RULE_PATH/arp.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002960; sid:5002960; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Artillery logs detected via program."; program: Artillery; dynamic_load: $RULE_PATH/artillery.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002961; sid:5002961; rev:1;)
