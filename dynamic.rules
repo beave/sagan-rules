@@ -1,0 +1,107 @@
+# Sagan dynamic.rules
+# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+# These are 'dynamic' rules.  The purpose of them is to detect logs that might not 
+# be being monitored and automatically enable rules and/or warn the operator! 
+
+
+# Load "attack" rules based off program ? look at them
+# Look at barracuda rules
+# Add "snoopy" to bash.rules
+# See cisco-acs.rules - wierd programs
+# Digital personal_pro needs tobe DigitalPersonal*
+# should ipop3d have ipop3d-ssl as well? 
+# ntp program is nptd_initres add "ntpd"?
+# fix squid program (squid) isn't valid
+# weblabrinth.rules rules have wrong msg
+# All windows rules should be reviewed by program
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Proftp logs detected via program."; program: proftpd; dynamic_load: $RULE_PATH/proftpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002957; sid:5002957; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Apache logs detected via program."; program: proftpd|httpd; dynamic_load: $RULE_PATH/apache.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002958; sid:5002958; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] APC-EMU logs detected via program."; program: EMU; dynamic_load: $RULE_PATH/apc-emu.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002959; sid:5002959; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Arpalert or Arpwatch logs detected via program."; program: arpalert|arpwatch; dynamic_load: $RULE_PATH/arp.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002960; sid:5002960; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Artillery logs detected via program."; program: Artillery; dynamic_load: $RULE_PATH/artillery.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002961; sid:5002961; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Asterisk logs detected via program."; program: asterisk; dynamic_load: $RULE_PATH/asterisk.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002962; sid:5002962; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Bash logs detected via program."; program: bash|-bash|sh|-sh; dynamic_load: $RULE_PATH/bash.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002963; sid:5002963; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Bind logs detected via program."; program: named; dynamic_load: $RULE_PATH/bind.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002964; sid:5002964; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Bit9 logs detected via program."; program: bit9; dynamic_load: $RULE_PATH/bit9.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002965; sid:5002965; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Bro logs detected via program."; program: bro; dynamic_load: $RULE_PATH/bro-ids.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002966; sid:5002966; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Cisco ASA logs detected via program."; program: %ASA*|%FWSM*; dynamic_load: $RULE_PATH/bro-ids.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002967; sid:5002967; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Courier/IMAP logs detected via program."; program: imapd|imapd-sslcourierlogger; dynamic_load: $RULE_PATH/courier.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002968; sid:5002968; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] OpenSSH logs detected via program."; program: sshd; dynamic_load: $RULE_PATH/openssh.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002969; sid:5002969; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] DigitalPersona logs detected via program."; program: DigitalPersona*; dynamic_load: $RULE_PATH/digitalpersona.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002970; sid:5002970; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Dovecot logs detected via program."; program: dovecot; dynamic_load: $RULE_PATH/dovecot.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002971; sid:5002971; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] FIPAYPIN logs detected via program."; program: *PIPAYPIN*; dynamic_load: $RULE_PATH/fipaypin.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002972; sid:5002972; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] FTPD logs detected via program."; program: ftpd|ftp|FTP|FTPD; dynamic_load: $RULE_PATH/ftpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002973; sid:5002973; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Grsec logs detected via program."; program: grsec; dynamic_load: $RULE_PATH/grsec.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002974; sid:5002974; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Honeyd logs detected via program."; program: honeyd; dynamic_load: $RULE_PATH/honeyd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002975; sid:5002975; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Horde logs detected via program."; program: HORDE; dynamic_load: $RULE_PATH/hordeimp.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002976; sid:5002976; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Hostapd logs detected via program."; program: hostapd; dynamic_load: $RULE_PATH/hostapd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002977; sid:5002977; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] IMAPD logs detected via program."; program: imapd|imapd-ssl; dynamic_load: $RULE_PATH/imapd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002978; sid:5002978; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] IPOP3D logs detected via program."; program: ipop3d; dynamic_load: $RULE_PATH/ipop3d.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002979; sid:5002979; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Juniper logs detected via program."; program: Juniper; dynamic_load: $RULE_PATH/juniper.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003021; sid:5003021; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Kismet_Server logs detected via program."; program: kismet_server; dynamic_load: $RULE_PATH/kismet.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002980; sid:5002980; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Knockd logs detected via program."; program: knockd; dynamic_load: $RULE_PATH/knockd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002981; sid:5002981; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Linux kernel logs detected via program."; program: kernel; dynamic_load: $RULE_PATH/linux-kernel.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002982; sid:5002982; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] SMTP milter logs detected via program."; program: mimedefang|smf-sav; dynamic_load: $RULE_PATH/milter.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002983; sid:5002983; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] MongoDB logs detected via program."; program: mongodb; dynamic_load: $RULE_PATH/mongodb.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002984; sid:5002984; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] MySQL logs detected via program."; program: mysqld|MySQL; dynamic_load: $RULE_PATH/mysql.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002985; sid:5002985; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] NeXpose logs detected via program."; program: NeXpose; dynamic_load: $RULE_PATH/nexpose.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002986; sid:5002986; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Nfcapd logs detected via program."; program: nfcapd; dynamic_load: $RULE_PATH/nfcapd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002987; sid:5002987; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Nginx logs detected via program."; program: nginx; dynamic_load: $RULE_PATH/nginx.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002988; sid:5002988; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] OpenVPN logs detected via program."; program: openvpn; dynamic_load: $RULE_PATH/openvpn.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002989; sid:5002989; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] OSSEC logs detected via program."; program: ossec; dynamic_load: $RULE_PATH/ossec.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002990; sid:5002990; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Postfix logs detected via program."; program: postfix; dynamic_load: $RULE_PATH/postfix.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002991; sid:5002991; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Postgres logs detected via program."; program: postgres; dynamic_load: $RULE_PATH/postgres.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002992; sid:5002992; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] pptpd logs detected via program."; program: pptpd; dynamic_load: $RULE_PATH/pptpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002993; sid:5002993; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Pure-FTP logs detected via program."; program: pure-ftpd; dynamic_load: $RULE_PATH/pure-ftpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002994; sid:5002994; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Racoon logs detected via program."; program: racoon; dynamic_load: $RULE_PATH/racoon.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002995; sid:5002995; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Riverbed logs detected via program."; program: webasd; dynamic_load: $RULE_PATH/riverbed.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002996; sid:5002996; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Roundcube logs detected via program."; program: webasd; dynamic_load: $RULE_PATH/roundcube.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002998; sid:5002998; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Rsync logs detected via program."; program: rsync; dynamic_load: $RULE_PATH/rsync.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002999; sid:5002999; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Samba logs detected via program."; program: smbd; dynamic_load: $RULE_PATH/samba.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003000; sid:5003000; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Sendmail logs detected via program."; program: sm-mta|sendmail; dynamic_load: $RULE_PATH/sendmail.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003001; sid:5003001; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Snort logs detected via program."; program: snort; dynamic_load: $RULE_PATH/snort.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003002; sid:5003002; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Squid logs detected via program."; program: squid; dynamic_load: $RULE_PATH/squid.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003003; sid:5003032; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] SSH-Tectia-Server logs detected via program."; program: SSH_Tectia_Server; dynamic_load: $RULE_PATH/ssh-tectia-server.rules.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003004; sid:5003004; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] su/sudo logs detected via program."; program: -su|su|sudo; dynamic_load: $RULE_PATH/su.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003005; sid:5003005; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Symantec EMS logs detected via program."; program: pgp/client; dynamic_load: $RULE_PATH/symantec-ems.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003006; sid:5003006; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Telnet logs detected via program."; program: telnetd; dynamic_load: $RULE_PATH/telnet.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003007; sid:5003007; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Trendmicro Antivirus logs detected via program."; program: TMCM; dynamic_load: $RULE_PATH/trendmicro.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003008; sid:5003008; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Tripwire logs detected via program."; program: tripwire; dynamic_load: $RULE_PATH/tripwire.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003009; sid:5003009; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Vmpop3d logs detected via program."; program: vm-pop3d; dynamic_load: $RULE_PATH/vmpop3d.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003010; sid:5003010; rev:1;) 
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] VMWare ESXi logs detected via program."; program: vmware-hostd|vmware-authd|Hostd|vmkernel; dynamic_load: $RULE_PATH/vmpop3d.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003011; sid:5003011; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] VPopmail logs detected via program."; program: vpopmail; dynamic_load: $RULE_PATH/vpopmail.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003012; sid:5003012; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] VSFTPD logs detected via program."; program: vsftpd; dynamic_load: $RULE_PATH/vsftpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003013; sid:5003013; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Weblabyrinth logs detected via program."; program: weblabyrinth; dynamic_load: $RULE_PATH/weblabrinth.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003014; sid:5003014; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] MSSQL logs detected via program."; program: MSSQL*; dynamic_load: $RULE_PATH/windows-mssql.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003015; sid:5003015; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Windows Sysmon logs detected via program."; program: Sysmon; dynamic_load: $RULE_PATH/windows-sysmon.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003016; sid:5003016; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Wordpress logs detected via program."; program: WPsyslog; dynamic_load: $RULE_PATH/wordpress.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003017; sid:5003017; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] xinetd logs detected via program."; program: xinetd; dynamic_load: $RULE_PATH/xinetd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003018; sid:5003018; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Yubikey logs detected via program."; program: yk_chkpwd; dynamic_load: $RULE_PATH/yubikey.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003019; sid:5003019; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Zeus logs detected via program."; program: zeus; dynamic_load: $RULE_PATH/zeus.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003020; sid:5003020; rev:1;)
+
