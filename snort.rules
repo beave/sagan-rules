@@ -25,9 +25,9 @@
 #
 #*************************************************************
 
-# alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Snort syslog message"; program: snort; content: "Classification"; content: "Priority"; classtype: suspicious-command; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000386; sid: 5000386; rev:4;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Snort syslog message"; program: snort; content: "Classification"; content: "Priority"; classtype: suspicious-command; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000386; sid: 5000386; rev:4;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Not Suspicious Traffic"; program: snort; content: "Classification|3a| Not Suspicious Traffic"; classtype: not-suspicious; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000976; sid: 5000976; rev:4;)
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Not Suspicious Traffic"; program: snort; content: "Classification|3a| Not Suspicious Traffic"; classtype: not-suspicious; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000976; sid: 5000976; rev:4;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Unknown Traffic"; program: snort; content: "Classification|3a| Unknown Traffic"; classtype: unknown; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000977; sid: 5000977; rev:4;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Bad Traffic"; program: snort; content: "Classification|3a| Bad Traffic"; classtype: bad-unknown; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000978; sid: 5000978; rev:4;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted Information Leak"; program: snort; content: "Classification|3a| Attempted Information Leak"; classtype: attempted-recon; flowbits: set, recon, 86400; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000979; sid: 5000979; rev:5;)
