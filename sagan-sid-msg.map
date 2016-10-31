@@ -2916,6 +2916,7 @@
 5003021 || [DYNAMIC] Juniper logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003021
 5003022 || [DYNAMIC] Proftp logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003022 sid:5003022
 5003023 || [DYNAMIC] Apache logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003023
+5003024 || [WINDOWS-MALWARE] WonderCrypter ransomware extension or note detected. || url,www.virustotal.com/en/file/be3afa19c76c2270ccac7eacf68f89603032c0588f721215e15a9d1421567969/analysis/ || url,  || url,wiki.quadrantsec.com/bin/view/Main/5003024
 5003032 || [DYNAMIC] Squid logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003003
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
