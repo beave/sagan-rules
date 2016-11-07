@@ -1,4 +1,48 @@
-09/23/2016 - 	Sagan rule release
+2016/11/07 -    Sagan rule release
+
+	* Fixed "[WINDOWS-MALWARE] Lower case drive letter used in process" with meta_content.
+	  https://github.com/beave/sagan-rules/commit/bf830056ab68aa090d680e2540926e4bb0fa3e18
+
+	* Disabled two noisy iptables rules by default (sid 5001104 & 5001105(
+	  https://github.com/beave/sagan-rules/commit/889c5cc894e3cdca9545d5771e0c3a97ab800f47
+
+	* Fixed PCRE error in sid 5002011 ("[WINDOWS-MALWARE] System protection disabled").
+	  https://github.com/beave/sagan-rules/commit/af62f8d6b2163934160c8499fcebcac9f65ca31d
+
+	* Dsiabled Snort "not suspicious" rules sid 5000976 & 5000386.
+	  https://github.com/beave/sagan-rules/commit/f033c7b856d1a861c4d96310193cbe047a5107a0
+
+	* Disabled generic rsync connection rules 5001052 & 5001053.
+	  https://github.com/beave/sagan-rules/commit/a4050c989a678d1db55af49d2eb333acfb56ff9d
+
+	* Added content:!"access denied by ACL" to generic/catchall sid 5000119.
+	  https://github.com/beave/sagan-rules/commit/e6a6da892bc4b8ef7ace13aeb05ef4ee185b2221
+
+	* Fixed bad PCRE in sid 5002956 ("Suspicious Service Control Manager Call")
+	  https://github.com/beave/sagan-rules/commit/7ce9197c811ed0203e73195910db0501daec75c9
+
+	* Added sid 5003024 "Alcatraz ransomware" detection.
+	  https://github.com/beave/sagan-rules/commit/c879a1900dda19ad1cfd96e92e6d0dc33fa1eb5b
+	
+	* Removed program "(squid)" for various "squid.rules". 
+
+	* New rule set "dynamic.rules".  These rules detect "new" logs and automatically load
+	  other rulesets. 
+
+	* Added program "Application" to windows-mssql.rules
+	  https://github.com/beave/sagan-rules/commit/39233a9841fe1e572dafc54b6d5db08eea2e8459
+
+	* Disabled noisy sid 5000677 ("ICMPv6 Denied").
+	  https://github.com/beave/sagan-rules/commit/a0637cb189b2f86a43de0a3742ab89ea8b7ffa7c
+
+	* Added "exploit_attempt" flowbit for correlated rules.
+	  https://github.com/beave/sagan-rules/commit/89a19da7c803be97ee7e83929fd406138c8a20db
+
+	* New "Suspicious Service Control Manager Call" signatures as @jackcr Derbycon talk.
+	  https://github.com/beave/sagan-rules/commit/8b3655c41499404972649cbf2f7614655cc12d90
+
+
+2016/09/23 - 	Sagan rule release
 
 	* Disabled many nfcapd.rules. These are low value rules 
 	  https://github.com/beave/sagan-rules/commit/00df337cefc41f84d53ab1e17a9a05c7c2f2e433
@@ -18,7 +62,7 @@
 	* Two new rules targetting Evtsys errors. Sid 5001185 changed to address evtsys issue.
 	  https://github.com/beave/sagan-rules/commit/079e19f9f9dc300a879de51b1e2991b846f79e19
 
-08/30/2016 -	Sagan rule release
+2016/08/30 -	Sagan rule release
 
 	* vsftp, proftp, pureftp and generic ftp rules for "ftpchk3".  See https://blog.ftptoday.com/ftp-password-stealing-malware
 	  https://github.com/beave/sagan-rules/commit/9f04bf22570801f4fa4f4f96ef561d95010d717e
