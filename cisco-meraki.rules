@@ -1,0 +1,1 @@
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-MERAKI] SSID Spoofing Detected"; content: "type=ssid_spoofing_detected"; classtype: suspicious-traffic; reference: url,https://meraki.cisco.com/lib/pdf/meraki_whitepaper_air_marshal.pdf; sid: 5003026; rev:1;)
