@@ -2369,7 +2369,7 @@
 5002468 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x7 - Server not found in Kerberos database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002468
 5002469 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x8 - Multiple principal entries in database [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002469
 5002470 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0x9 - The client or server has a null key [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002470
-5002471 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xA - Ticket not eligible for postdating [25/1]
+5002471 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xA - Ticket not eligible for postdating [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002471
 5002472 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xB - Requested start time is later than end time [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002472
 5002473 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xC - KDC policy rejects request [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002473
 5002475 || [WINDOWS-BLUEDOT] Windows DC Login failure from a Bluedot listed IP - Brute force 0xD - KDC cannot accommodate requested option [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5002475
@@ -2914,9 +2914,11 @@
 5003019 || [DYNAMIC] Yubikey logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003019
 5003020 || [DYNAMIC] Zeus logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003020
 5003021 || [DYNAMIC] Juniper logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003021
-5003022 || [DYNAMIC] Proftp logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003022 sid:5003022
+5003022 || [DYNAMIC] Proftp logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003022
 5003023 || [DYNAMIC] Apache logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003023
 5003024 || [WINDOWS-MALWARE] WonderCrypter ransomware extension or note detected. || url,www.virustotal.com/en/file/be3afa19c76c2270ccac7eacf68f89603032c0588f721215e15a9d1421567969/analysis/ || url,  || url,wiki.quadrantsec.com/bin/view/Main/5003024
+5003025 || [FORTINET-MALWARE] Potential malware traffic detected
+5003026 || [CISCO-MERAKI] SSID Spoofing Detected || url,https://meraki.cisco.com/lib/pdf/meraki_whitepaper_air_marshal.pdf
 5003032 || [DYNAMIC] Squid logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003003
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
