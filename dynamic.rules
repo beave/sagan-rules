@@ -28,7 +28,7 @@
 # These are 'dynamic' rules.  The purpose of them is to detect logs that might not 
 # be being monitored and automatically enable rules and/or warn the operator! 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Proftp logs detected via program."; program: proftpd; dynamic_load: $RULE_PATH/proftpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003022 sid:5003022; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Proftp logs detected via program."; program: proftpd; dynamic_load: $RULE_PATH/proftpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003022; sid:5003022; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Apache logs detected via program."; program: proftpd|httpd; dynamic_load: $RULE_PATH/apache.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003023; sid:5003023; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] APC-EMU logs detected via program."; program: EMU; dynamic_load: $RULE_PATH/apc-emu.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002959; sid:5002959; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Arpalert or Arpwatch logs detected via program."; program: arpalert|arpwatch; dynamic_load: $RULE_PATH/arp.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002960; sid:5002960; rev:1;)
