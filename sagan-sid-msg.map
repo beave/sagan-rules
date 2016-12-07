@@ -2919,7 +2919,18 @@
 5003024 || [WINDOWS-MALWARE] WonderCrypter ransomware extension or note detected. || url,www.virustotal.com/en/file/be3afa19c76c2270ccac7eacf68f89603032c0588f721215e15a9d1421567969/analysis/ || url,  || url,wiki.quadrantsec.com/bin/view/Main/5003024
 5003025 || [FORTINET-MALWARE] Potential malware traffic detected
 5003026 || [CISCO-MERAKI] SSID Spoofing Detected || url,https://meraki.cisco.com/lib/pdf/meraki_whitepaper_air_marshal.pdf
+5003027 || [ZIMBRA] Postfix/SMTPS/SMTPD - Brute force [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003027
+5003028 || [ZIMBRA] SASLAUTHD - Brute force [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003028
+5003029 || [ZIMBRA] SOAP Invalid user - Brute force account not found [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003029
+5003030 || [ZIMBRA] SOAP Invalid user - Brute force invalid password [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003030
+5003031 || [ZIMBRA] MS ActiveSync - Brute force invalid password [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003031
 5003032 || [DYNAMIC] Squid logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003003
+5003033 || [ZIMBRA] SYNC - Brute force invalid username or password [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003033
+5003034 || [ZIMBRA-GEOIP] SASL Authentication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003034
+5003035 || [ZIMBRA-GEOIP] NGNIX Authentication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003035
+5003036 || [ZIMBRA-GEOIP] EWS Authentication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003036
+5003037 || [ZIMBRA] SYNC - User password mismatch [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003037
+5003038 || [ZIMBRA] Clamd - Threat Detected || url,wiki.quadrantsec.com/bin/view/Main/5003038
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

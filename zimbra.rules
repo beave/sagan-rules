@@ -1,0 +1,81 @@
+# Sagan zimbra.rules
+# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+# Zimbra rules require that you are sending over the Zimbra data.  We use rsyslog,  and this is what we did: 
+#
+#
+#module(load="imfile" PollingInterval="10")
+#input(type="imfile" File="/opt/zimbra/log/gc.log" Tag="gc" StateFile="gc" Severity="info" Facility="local7")
+#input(type="imfile" File="/opt/zimbra/log/audit.log" Tag="audit" StateFile="audit" Severity="info" Facility="local7")
+#input(type="imfile" File="/opt/zimbra/log/nginx.log" Tag="nginx" StateFile="nginx" Severity="info" Facility="local7")
+#input(type="imfile" File="/opt/zimbra/log/clamd.log" Tag="clamd" StateFile="clamd" Severity="info" Facility="local7")
+#input(type="imfile" File="/opt/zimbra/log/sync.log" Tag="sync" StateFile="sync" Severity="info" Facility="local7")
+#input(type="imfile" File="/opt/zimbra/log/ews.log" Tag="ews" StateFile="ews" Severity="info" Facility="local7")
+#input(type="imfile" File="/opt/zimbra/log/mailbox.log" Tag="mailbox" StateFile="mailbox" Severity="info" Facility="local7")
+
+# For /var/log/zimbra.log
+
+# Dec  7 06:51:58 a postfix/smtps/smtpd[25583]: warning: unknown[88.85.171.103]: SASL PLAIN authentication failed: authentication failure
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET 465 (msg:"[ZIMBRA] Postfix/SMTPS/SMTPD - Brute force [5/3]"; content: "authentication failed"; flowbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003027; parse_src_ip: 1; program: zimbra; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003027; rev:1;)
+
+# * Dec  7 07:58:40 a saslauthd[18200]: do_auth         : auth failure: [user=frank] [service=smtp] [realm=] [mech=zimbra] [reason=Unknown]
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SASLAUTHD - Brute force [5/3]"; content: "auth failure"; content: "saslauthd"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003028; program: zimbra; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; sid:5003028; rev:1;)
+
+# For /opt/zimbra/log/mailbox.log
+
+# 2016-12-07 14:29:28,990 INFO  [qtp1684106402-2039242:http://localhost:8080/service/soap/AuthRequest] [oip=10.10.10.5;ua=zclient/8.7.0_GA_1659;] SoapEngine - handler exception: authentication failed for [oggie], account not found
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SOAP Invalid user - Brute force account not found [5/3]"; content: "authentication failed"; conent: "account not found"; flowbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003029; parse_src_ip: 1; program: mailbox; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003029; rev:1;)
+
+# 2016-12-07 14:30:45,802 INFO  [qtp1684106402-2039253:http://localhost:8080/service/soap/AuthRequest] [name=frank@example.com;oip=10.10.10.5;ua=zclient/8.7.0_GA_1659;] SoapEngine - handler exception: authentication failed for [frank@example.com], invalid password
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SOAP Invalid user - Brute force invalid password [5/3]"; content: "authentication failed"; content: "invalid password"; flowbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003030; parse_src_ip: 1; program: mailbox; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003030; rev:1;)
+
+# For /opt/zimbra/log/audit.log
+
+# 2016-12-07 00:00:00,128 WARN  [qtp1684106402-2033684:https:https://webmail.example.com/Microsoft-Server-ActiveSync?Cmd=Ping&User=frank%40example.com&DeviceId=android55555555&DeviceType=Android] [ip=10.10.10.5;] security - cmd=Auth; account=frank@example.com; protocol=zsync; error=authentication failed for [frank@example.com], invalid password;
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] MS ActiveSync - Brute force invalid password [5/3]"; content: "error=authentication failed"; content: "invalid password"; flowbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003031; parse_src_ip: 1; program: audit; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003031; rev:1;)
+
+# For /opt/zimbra/log/clamd.log
+
+# Tue Dec  6 09:48:39 2016 -> /opt/zimbra/data/amavisd/tmp/amavis-20161206T092039-20531-7XZZrPHk/parts/p005: Heuristics.Phishing.Email.SSL-Spoof FOUND
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] Clamd - Threat Detected"; content: "FOUND"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003038; program: misc-activity; sid:5003038; rev:1;)
+
+# For /opt/zimbra/log/sync.log
+
+# 2016-12-07 00:00:00,425 INFO  [qtp1684106402-2033672:https:https://webmail.example.com/Microsoft-Server-ActiveSync?Cmd=Ping&User=frank%40example.com&DeviceId=android555555 60&DeviceType=Android] [ip=10.10.10.5;] sync - HTTP/1.1 401 Invalid username or password
+# 2016-12-07 00:00:05,536 INFO  [qtp1684106402-2033684:https:https://webmail.example.com/Microsoft-Server-ActiveSync?Cmd=Ping&User=frank%40quadrantsec.com&DeviceId=android555555&DeviceType=Android] [ip=10.10.10.5;] sync - User password mismatch; name=frank@example.com
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SYNC - Brute force invalid username or password [5/3]"; content: "Invalid username or password"; flowbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003033; parse_src_ip: 1; program: sync; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003033; rev:1;)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SYNC - User password mismatch [5/3]"; content: "User password mismatch"; flowbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003037; parse_src_ip: 1; program: sync; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003037; rev:1;)
+
+
