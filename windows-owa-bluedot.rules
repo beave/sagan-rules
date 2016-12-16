@@ -24,5 +24,5 @@
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[WINDOWS-OWA-BLUEDOT] Login failure - Brute force [5/5]"; content: "/ews/exchange.asmx"; nocase; bluedot: type ip_reputation, track by_src, none, Malicious, Tor, Honeypot; classtype: suspicious-traffic; fwsam: src, 1 day; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002352; sid:5002352; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[WINDOWS-OWA-BLUEDOT] Login failure - Brute force [5/5]"; content: "/ews/exchange.asmx"; nocase; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; fwsam: src, 1 day; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002352; sid:5002352; rev:3;)
 
