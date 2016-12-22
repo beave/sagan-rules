@@ -223,3 +223,8 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User accoun
 
 # Added by Adam Hall (Jan, 11th 2016).  You'll need to make sure your audit policy/GPO have logging for this enabled!
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Domain policy was changed"; pcre: "/ 4739: | 643: /"; classtype: system-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002775; sid: 5002775; rev:2;)
+
+# Steve Rawls (2016/12/22) - detect "administrator" logins.  Disabled by default
+
+#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Successful Administrator Logon Detected"; pcre: "/ 540: | 4624: /"; classtype: successful-user; program: *Security*; content: "Account Name|58| Administrator"; parse_src_ip: 1; parse_port; reference: url,wiki.quadrantsec.com/bin/view/Main/5003039; sid:5003039; rev:1;)
+

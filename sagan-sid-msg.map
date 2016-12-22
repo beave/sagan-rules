@@ -2931,6 +2931,7 @@
 5003036 || [ZIMBRA-GEOIP] EWS Authentication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003036
 5003037 || [ZIMBRA] SYNC - User password mismatch [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003037
 5003038 || [ZIMBRA] Clamd - Threat Detected || url,wiki.quadrantsec.com/bin/view/Main/5003038
+5003039 || [WINDOWS-AUTH] Successful Administrator Logon Detected || url,wiki.quadrantsec.com/bin/view/Main/5003039
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
