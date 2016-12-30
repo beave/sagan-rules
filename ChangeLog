@@ -1,3 +1,27 @@
+2016/12/30 - 	Sagan rule release
+
+	* New rule to detect MS Windows "administrator" logins (disabled by default):
+	  https://github.com/beave/sagan-rules/commit/6f7f610504b4cc6fc4f9054c75be68dc4d9ac866
+	
+	* New Bluedot "Proxy" category added to "categories.conf"
+	  https://github.com/beave/sagan-rules/commit/e9cc591f3578afb21dad53013b4e419a0b2b6b31
+
+	* Modification to "fortinet-malware.rules", quote: "Remove ip-reputation detection type (too many false positives) - waysidekt @ Github.  Merged. 
+	  https://github.com/beave/sagan-rules/commit/faa146e76f0cd681d78d9402b8e520af01ca05cc
+	  https://github.com/beave/sagan-rules/commit/60d67e3ef9241984e97cd63ddafd9603acf1d557
+
+	* New "zimbra.rules" & "zimbra-geoip.rules.rules"
+	  https://github.com/beave/sagan-rules/commit/4cbe174e239620d217a69acf7cd072b169e61e84
+
+	* Removed unneeded "dynamic" classification. 
+	  https://github.com/beave/sagan-rules/commit/21e351a2aa2649e48fc9ccec5b184e9bd5c457ff
+
+	* Fixed typo in "dynamic.rules"
+	  https://github.com/beave/sagan-rules/commit/4142ff22b0c7d2bce147a3720a89bbbea5a0dcde
+
+	* New "cisco-meraki.rules" rules,  thanks to waysidekt @ Github. 
+	  https://github.com/beave/sagan-rules/commit/ccd78559dc18ded5a677f88b19d5907352daacd2
+
 2016/11/07 -    Sagan rule release
 
 	* Fixed "[WINDOWS-MALWARE] Lower case drive letter used in process" with meta_content.
@@ -9,7 +33,7 @@
 	* Fixed PCRE error in sid 5002011 ("[WINDOWS-MALWARE] System protection disabled").
 	  https://github.com/beave/sagan-rules/commit/af62f8d6b2163934160c8499fcebcac9f65ca31d
 
-	* Dsiabled Snort "not suspicious" rules sid 5000976 & 5000386.
+	* Disabled Snort "not suspicious" rules sid 5000976 & 5000386.
 	  https://github.com/beave/sagan-rules/commit/f033c7b856d1a861c4d96310193cbe047a5107a0
 
 	* Disabled generic rsync connection rules 5001052 & 5001053.
