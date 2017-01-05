@@ -1,5 +1,5 @@
 # Sagan snort.rules
-# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -30,9 +30,9 @@
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Not Suspicious Traffic"; program: snort; content: "Classification|3a| Not Suspicious Traffic"; classtype: not-suspicious; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000976; sid: 5000976; rev:4;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Unknown Traffic"; program: snort; content: "Classification|3a| Unknown Traffic"; classtype: unknown; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000977; sid: 5000977; rev:4;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Bad Traffic"; program: snort; content: "Classification|3a| Bad Traffic"; classtype: bad-unknown; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000978; sid: 5000978; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted Information Leak"; program: snort; content: "Classification|3a| Attempted Information Leak"; classtype: attempted-recon; flowbits: set, recon, 86400; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000979; sid: 5000979; rev:5;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Information Leak"; program: snort; content: "Classification|3a| Information Leak"; classtype: successful-recon-limited; flowbits: set, recon, 86400; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000980; sid: 5000980; rev:5;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Large Scale Information Leak"; program: snort; content: "Classification|3a| Large Scale Information Leak"; classtype: successful-recon-largescale; flowbits: set, recon, 86400; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000981; sid: 5000981; rev:5;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted Information Leak"; program: snort; content: "Classification|3a| Attempted Information Leak"; classtype: attempted-recon; xbits: set, recon, 86400; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000979; sid: 5000979; rev:5;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Information Leak"; program: snort; content: "Classification|3a| Information Leak"; classtype: successful-recon-limited; xbits: set, recon, 86400; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000980; sid: 5000980; rev:5;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Large Scale Information Leak"; program: snort; content: "Classification|3a| Large Scale Information Leak"; classtype: successful-recon-largescale; xbits: set, recon, 86400; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000981; sid: 5000981; rev:5;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted Denial of Service"; program: snort; content: "Classification|3a| Attempted Denial of Service"; classtype: attempted-dos; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000982; sid: 5000982; rev:4;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Denial of Service"; program: snort; content: "Classification|3a| Denial of Service"; classtype: successful-dos; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000983; sid: 5000983; rev:4;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted User Privilege Gain"; program: snort; content: "Classification|3a| Attempted User Privilege Gain"; classtype: attempted-user; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000984; sid: 5000984; rev:4;)

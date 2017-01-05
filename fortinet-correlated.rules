@@ -1,5 +1,5 @@
 # Sagan fortinet-correlated.rules
-# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -25,8 +25,8 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-CORRELATED] Login accepted after suspicious activity"; content: "32006 type="; content: "login"; pcre: "/accepted|successfully/"; parse_src_ip: 1; flowbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002371; sid:5002371; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-CORRELATED] Administrator Login after suspicious activity"; content: "32001 type="; content: "logged in"; parse_src_ip: 1; flowbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002372; sid:5002372; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-CORRELATED] Admin authentication success after suspicious activity"; content: "38001 type="; content: "succeeded in authentication"; parse_src_ip: 1; flowbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002373; sid:5002373; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-CORRELATED] SSH traffic detected after suspicious activity"; content: " service=SSH "; content:!"duration=0 sentbyte=0 rcvdbyte=0"; flowbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002374; sid:5002374; rev:4;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-CORRELATED] Login accepted after suspicious activity"; content: "32006 type="; content: "login"; pcre: "/accepted|successfully/"; parse_src_ip: 1; xbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002371; sid:5002371; rev:4;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-CORRELATED] Administrator Login after suspicious activity"; content: "32001 type="; content: "logged in"; parse_src_ip: 1; xbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002372; sid:5002372; rev:4;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-CORRELATED] Admin authentication success after suspicious activity"; content: "38001 type="; content: "succeeded in authentication"; parse_src_ip: 1; xbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002373; sid:5002373; rev:4;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-CORRELATED] SSH traffic detected after suspicious activity"; content: " service=SSH "; content:!"duration=0 sentbyte=0 rcvdbyte=0"; xbits: isset,by_src,recon|honeypot|exploit_attempt; classtype: correlated-attack; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002374; sid:5002374; rev:4;)
 

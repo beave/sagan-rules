@@ -1,5 +1,5 @@
 # Sagan windows-applocker.rules
-# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -39,6 +39,6 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-EMET] Detected C
 
 # 10.5.1.1|daemon|notice|notice|1d|2014-08-20|12:03:23|Security-Auditing| 4689: A process has exited. Subject: Security ID: S-1-5-21-148272361-2449339356-1462517947-1000 Account Name: champ Account Domain: Champ-BOX Logon ID: 0x1a285 Process Information: Process ID: 0x120 Process Name: C:\Program Files\EMET 4.1\EMET_Agent.exe Exit Status: 0x40010004
 
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-EMET] EMET process stopped, but not due to reboot"; pcre: "/ 4689: | 593: /" ; content: "EMET_Agent.exe"; nocase; flowbits: isnotset, by_src, windows_reboot; program: *Security*; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002102; sid:5002102; rev:2;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-EMET] EMET process stopped, but not due to reboot"; pcre: "/ 4689: | 593: /" ; content: "EMET_Agent.exe"; nocase; xbits: isnotset, by_src, windows_reboot; program: *Security*; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002102; sid:5002102; rev:2;)
 
 

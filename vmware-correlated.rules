@@ -1,5 +1,5 @@
 # Sagan vmware-correlated.rules
-# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -26,6 +26,6 @@
 #*************************************************************
 # VMWare ESX
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE-CORRELATED] User login successful after suspicious activity"; pcre: "/Accepted password for|login from/i"; classtype: correlated-attack; flowbits: isset,by_src,recon|honeypot|exploit_attempt; program: vmware-hostd|vmware-authd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002384; sid:5002384; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE-CORRELATED] User login successful after suspicious activity"; content: " logged in "; classtype: correlated-attack; flowbits: isset,by_src,recon|honeypot|exploit_attempt; program: Hostd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002385; sid:5002385; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE-CORRELATED] User login successful after suspicious activity"; content: "Accepted password"; classtype: correlated-attack; flowbits: isset,by_src,recon|honeypot|exploit_attempt; program: Hostd; normalize; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002386; sid:5002386; rev:3;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE-CORRELATED] User login successful after suspicious activity"; pcre: "/Accepted password for|login from/i"; classtype: correlated-attack; xbits: isset,by_src,recon|honeypot|exploit_attempt; program: vmware-hostd|vmware-authd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002384; sid:5002384; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE-CORRELATED] User login successful after suspicious activity"; content: " logged in "; classtype: correlated-attack; xbits: isset,by_src,recon|honeypot|exploit_attempt; program: Hostd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002385; sid:5002385; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE-CORRELATED] User login successful after suspicious activity"; content: "Accepted password"; classtype: correlated-attack; xbits: isset,by_src,recon|honeypot|exploit_attempt; program: Hostd; normalize; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002386; sid:5002386; rev:3;)

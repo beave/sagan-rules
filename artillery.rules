@@ -1,5 +1,5 @@
 # Sagan artillery.rules
-# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -45,7 +45,7 @@
 # ftp_monitor.py
 # write_log("Artillery has blocked (blacklisted) the following IP for FTP brute forcing violations: " + ipaddress)
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[ARTILLERY] FTP brute force violation"; content: "FTP brute forcing"; flowbits: set,brute_force&honeypot,21600; classtype: unsuccessful-user; parse_src_ip: 1; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002081; reference: url,www.trustedsec.com/downloads/artillery; sid:5002081; rev:5;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[ARTILLERY] FTP brute force violation"; content: "FTP brute forcing"; xbits: set,brute_force&honeypot,21600; classtype: unsuccessful-user; parse_src_ip: 1; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002081; reference: url,www.trustedsec.com/downloads/artillery; sid:5002081; rev:5;)
 
 # harden.py
 # Issue identified: %s permissions are not set to root. If an attacker compromises the system and is running under the Apache user account, could view these files. Recommendation: Change the permission of %s to root:root. Command: chown root:root %s\n\n" % (filename,filename,filename)
@@ -70,12 +70,12 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] Issue identifi
 # honeypot.py
 # %s [!] Artillery has blocked (and blacklisted) the IP Address: %s for connecting to a honeypot restricted port: %s" % (now, ip, port)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] Honeyport blocked/blacklisted address"; content: "honeypot restricted port"; content: "blocked"; parse_src_ip: 1; flowbits: set,honeypot,86400; classtype: suspicious-traffic; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002086; reference: url,www.trustedsec.com/downloads/artillery; sid:5002086; rev:3;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] Honeyport blocked/blacklisted address"; content: "honeypot restricted port"; content: "blocked"; parse_src_ip: 1; xbits: set,honeypot,86400; classtype: suspicious-traffic; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002086; reference: url,www.trustedsec.com/downloads/artillery; sid:5002086; rev:3;)
 
 # honeypot.py
 # %s [!] Artillery has detected an attack from IP address: %s for a connection on a honeypot port: %s" % (now, ip, port)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] Honeyport attack detected"; content: "detected an attack"; content: "honeypot"; parse_src_ip: 1; flowbits: set,honeypot,86400; classtype: suspicious-traffic; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002087; reference: url,www.trustedsec.com/downloads/artillery; sid:5002087; rev:2;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] Honeyport attack detected"; content: "detected an attack"; content: "honeypot"; parse_src_ip: 1; xbits: set,honeypot,86400; classtype: suspicious-traffic; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002087; reference: url,www.trustedsec.com/downloads/artillery; sid:5002087; rev:2;)
 
 # monitor.py
 # output_file = "********************************** The following changes were detect at %s **********************************\n" % (datetime.datetime.now()) + output_file + "\n********************************** End of changes. **********************************\n\n"
@@ -86,6 +86,6 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] File changes h
 # ssh_monitor.py
 # alert = "Artillery has blocked (blacklisted) the following IP for SSH brute forcing violations: " + ipaddress
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[ARTILLERY] SSH brute force violation"; content: "SSH brute forcing violations"; flowbits: set,brute_force&honeypot,86400; classtype: unsuccessful-user; parse_src_ip: 1; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002089; reference: url,www.trustedsec.com/downloads/artillery; sid:5002089; rev:2;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[ARTILLERY] SSH brute force violation"; content: "SSH brute forcing violations"; xbits: set,brute_force&honeypot,86400; classtype: unsuccessful-user; parse_src_ip: 1; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002089; reference: url,www.trustedsec.com/downloads/artillery; sid:5002089; rev:2;)
 
 

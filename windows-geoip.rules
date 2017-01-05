@@ -1,5 +1,5 @@
 # Sagan windows-geoip.rules
-# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -36,5 +36,5 @@ alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-GEOIP] Windows Sess
 
 alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-GEOIP] Windows RDP Session Disconnected from outside HOME_COUNTRY "; pcre: "/ 683: | 4779: /"; content: "Session"; content: "RDP"; country_code: track by_src, isnot $HOME_COUNTRY; program: *Security*; parse_src_ip: 1; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002339; sid: 5002339; rev:2;)
 
-alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-GEOIP] Attempted explicit windows logon "; pcre: "/ 552: | 4648: /"; content: "Target"; content: "Process"; country_code: track by_src, isnot $HOME_COUNTRY; program: *Security*; parse_src_ip: 1; flowbits: set, recon, 86400; threshold: type limit, track by_src, count 2, seconds 300; content:!"0.0 Port|3a| 0"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002340; sid: 5002340; rev:4;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-GEOIP] Attempted explicit windows logon "; pcre: "/ 552: | 4648: /"; content: "Target"; content: "Process"; country_code: track by_src, isnot $HOME_COUNTRY; program: *Security*; parse_src_ip: 1; xbits: set, recon, 86400; threshold: type limit, track by_src, count 2, seconds 300; content:!"0.0 Port|3a| 0"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002340; sid: 5002340; rev:4;)
 

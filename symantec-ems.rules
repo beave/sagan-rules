@@ -1,5 +1,5 @@
 # Sagan symantic-ems.rules
-# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -36,7 +36,7 @@
 
 # Multiple login failures - Brute Force
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Multiple authentication failures"; content: "failed authentication for internal PGP Desktop"; content:!"null"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; threshold:type limit, track by_src, count 5, seconds 300; flowbits: set,brute_force,21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5001677; sid: 5001677; rev:4;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 389 (msg:"[SYMANTEC-EMS] Multiple authentication failures"; content: "failed authentication for internal PGP Desktop"; content:!"null"; parse_src_ip: 2; classtype: unsuccessful-user; program: pgp/client; threshold:type limit, track by_src, count 5, seconds 300; xbits: set,brute_force,21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5001677; sid: 5001677; rev:4;)
 
 # Unsuccessful login
 

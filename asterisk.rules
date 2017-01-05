@@ -1,5 +1,5 @@
 # Sagan asterisk.rules
-# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -33,7 +33,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Login session f
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Login session failed [invalid extension] [0/5]"; content: "No matching peer found"; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5000181; threshold:type limit, track by_src, count 5, seconds 900; sid:5000181; rev:3;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Invalid to address"; content: "Invalid to address"; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5001065; sid: 5001065; rev:1;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Brute force login session failed [5/5]"; content: "Wrong password"; flowbits: set,brute_force,21600; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5002942; after: track by_src, count 5, seconds 300; threshold:type limit, track by_src, count 5, seconds 900; sid:5002942; rev:1;)  
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Brute force login session failed [invalid user] [5/5]"; content: "Username/auth name mismatch"; flowbits: set,brute_force,21600; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5002943; after: track by_src, count 5, seconds 300; threshold:type limit, track by_src, count 5, seconds 900; sid:5002943; rev:1;)  
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Brute force login session failed [invalid extension] [5/5]"; content: "No matching peer found"; flowbits: set,brute_force,21600; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5002944; after: track by_src, count 5, seconds 300; threshold:type limit, track by_src, count 5, seconds 900; sid:5002944; rev:1;) 
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Brute force login session failed [5/5]"; content: "Wrong password"; xbits: set,brute_force,21600; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5002942; after: track by_src, count 5, seconds 300; threshold:type limit, track by_src, count 5, seconds 900; sid:5002942; rev:1;)  
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Brute force login session failed [invalid user] [5/5]"; content: "Username/auth name mismatch"; xbits: set,brute_force,21600; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5002943; after: track by_src, count 5, seconds 300; threshold:type limit, track by_src, count 5, seconds 900; sid:5002943; rev:1;)  
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Brute force login session failed [invalid extension] [5/5]"; content: "No matching peer found"; xbits: set,brute_force,21600; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5002944; after: track by_src, count 5, seconds 300; threshold:type limit, track by_src, count 5, seconds 900; sid:5002944; rev:1;) 
 

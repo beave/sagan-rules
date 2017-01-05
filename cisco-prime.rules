@@ -1,5 +1,5 @@
 # Sagan cisco-prime.rules
-# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -340,7 +340,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue auto 
 # User Authentication Failure.
 # ''%s'' ''%s'' failed authentication on Controller ''%s''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] User authentication failure"; program: snmptrapd; content: "=USER_AUTHENTICATION_FAILURE|28|"; flowbits: set,recon,86400; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002175; sid:5002175; rev:3;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] User authentication failure"; program: snmptrapd; content: "=USER_AUTHENTICATION_FAILURE|28|"; xbits: set,recon,86400; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002175; sid:5002175; rev:3;)
 
 # WIPS_TRAPS
 # Dynamically generated per alarm.

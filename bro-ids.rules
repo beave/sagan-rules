@@ -1,5 +1,5 @@
 # Sagan bro-ids.rules
-# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -51,7 +51,7 @@
 
 # Robert Nunley & Champ Clark -  06/10/2014
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[BRO] SSH Password_Guessing [0/5]"; content: "SSH|3a 3a|Password_Guessing"; program: bro; classtype: misc-attack; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 1, seconds 120; flowbits: set,brute_force,21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002063; sid: 5002063; rev:4;) 
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg:"[BRO] SSH Password_Guessing [0/5]"; content: "SSH|3a 3a|Password_Guessing"; program: bro; classtype: misc-attack; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 1, seconds 120; xbits: set,brute_force,21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002063; sid: 5002063; rev:4;) 
 
 # Note: You will need licensing to use the Team Cymru Malware Hash Registry for corporate use.  See http://www.team-cymru.org/Services/MHR/
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] TeamCymruMalwareHashRegistry Match"; content: "TeamCymruMalwareHashRegistry|3a 3a|Match"; parse_src_ip: 1; parse_dst_ip: 2; program: bro; reference: url,www.team-cymru.org/Services/MHR/; classtype: trojan-activity; sid: 5002064; rev:2;) 
@@ -60,7 +60,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] TeamCymruMalwareHas
 #alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORT (msg: "[BRO] HTTP SQL_Injection_Attacker"; content: "HTTP|3a 3a|SQL_Injection_Attacker"; parse_src_ip: 1; parse_dst_ip: 2; program: bro; reference: url,wiki.quadrantsec.com/bin/view/Main/5002065; classtype: web-application-attack; sid: 5002065; rev:2;)
 #alert tcp $EXTERNAL_NET any -> $HTTP_PORT any (msg: "[BRO] HTTP SQL_Injection_Victim"; content: "HTTP|3a 3a|SQL_Injection_Victim"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002066; classtype: web-application-attack; sid: 5002066; rev:2;)
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[BRO] SSH Login_By_Password_Guesser"; content: "SSH|3a 3a|Login_By_Password_Guesser"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; flowbits: set,brute_force,21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002067; classtype: successful-user; sid: 5002067; rev:3;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[BRO] SSH Login_By_Password_Guesser"; content: "SSH|3a 3a|Login_By_Password_Guesser"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; xbits: set,brute_force,21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002067; classtype: successful-user; sid: 5002067; rev:3;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[BRO] SSH Watched_Country_Login"; content: "SSH|3a 3a|Watched_Country_Login"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002068; classtype: successful-user; sid: 5002068; rev:2;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[BRO] 10+ SSL Invalid_Server_Cert in 30 seconds [10/5]"; content: "SSL|3a 3a|Invalid_Server_Cert"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; after: track by_src, count 10, seconds 30; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5002069; classtype: suspicious-traffic; sid: 5002069; rev:4;)
 
@@ -97,7 +97,7 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[BRO] Sidejacking at
 
 #1459283371.705967       -       -       -       -       -       -       -       -       -       Scan::Port_Scan 10.1.0.34 scanned at least 15 unique ports of host 10.1.0.4 in 0m2s        local   10.1.0.34     10.1.0.4     -       -     bro      Notice::ACTION_LOG      3600.000000     F       -       -       -       -       - 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] RFC1918 address scanning the network"; content: "Scan|3a 3a|Port_Scan"; pcre:"/((192)\.(168)\.(\d+)\.(\d+)|(10)\.(\d+)\.(\d+)\.(\d+)|(172)\.(1[6,7,8,9])\.(\d+)\.(\d+)|(172)\.(2[0,1,2,3,4,5,6,7,8,9])\.(\d+)\.(\d+)|(172)\.(3[0,1])\.(\d+)\.(\d+)) scanned at least \d+ unique ports/smi"; program: bro; parse_src_ip: 1; threshold: type limit, track by_src, count 1, seconds 86400; flowbits: set,recon,86400; classtype: attempted-recon; reference: url,wiki.quadrantsec.com/bin/view/Main/5002798; sid:5002798; rev:3;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] RFC1918 address scanning the network"; content: "Scan|3a 3a|Port_Scan"; pcre:"/((192)\.(168)\.(\d+)\.(\d+)|(10)\.(\d+)\.(\d+)\.(\d+)|(172)\.(1[6,7,8,9])\.(\d+)\.(\d+)|(172)\.(2[0,1,2,3,4,5,6,7,8,9])\.(\d+)\.(\d+)|(172)\.(3[0,1])\.(\d+)\.(\d+)) scanned at least \d+ unique ports/smi"; program: bro; parse_src_ip: 1; threshold: type limit, track by_src, count 1, seconds 86400; xbits: set,recon,86400; classtype: attempted-recon; reference: url,wiki.quadrantsec.com/bin/view/Main/5002798; sid:5002798; rev:3;)
 
 
 

@@ -1,5 +1,5 @@
 # Sagan cisco-ios.rules
-# Copyright (c) 2009-2016, Quadrant Information Security <www.quadrantsec.com>
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
@@ -25,7 +25,7 @@
 #
 #*************************************************************
 
-alert udp $EXTERNAL_NET any -> $HOME_NET $SNMP_PORT (msg: "[CISCO-IOS] SNMP Authentication Failure [0/5]"; content: "SNMP-3-AUTHFAIL"; classtype: attempted-recon; flowbits: set, recon, 86400; parse_src_ip: 1; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000051; sid: 5000051; rev:7;)
+alert udp $EXTERNAL_NET any -> $HOME_NET $SNMP_PORT (msg: "[CISCO-IOS] SNMP Authentication Failure [0/5]"; content: "SNMP-3-AUTHFAIL"; classtype: attempted-recon; xbits: set, recon, 86400; parse_src_ip: 1; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000051; sid: 5000051; rev:7;)
 alert tcp $EXTERNAL_NET any -> $HOME_NET 514 (msg: "[CISCO-IOS] Attempted RSHELL connection"; content: "RCMD-4-RSHPORTATTEMPT"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000052; sid: 5000052; rev:2;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Line protocol changed state up/down"; content: "LINK-3-UPDOWN"; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000053; sid: 5000053; rev:2;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Line protocol changed state up/down"; content: "LINEPROTO-5-UPDOWN"; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000054; sid: 5000054; rev:2;)
@@ -33,7 +33,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Configuration
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] IOS configuration changed"; content: "SYS-5-CONFIG"; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000111; sid:5000111; rev:4;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Successful login"; content: "SEC_LOGIN-5-LOGIN_SUCCESS"; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5000112; sid:5000112; rev:2;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Failed login"; content: "SEC_LOGIN-4-LOGIN_FAILED"; classtype: unsuccessful-admin; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001520; sid:5001520; rev:2;)
-drop syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Failed login - Brute Force [10/1]"; content: "SEC_LOGIN-4-LOGIN_FAILED"; classtype: unsuccessful-admin; flowbits: set,brute_force,21600; after: track by_src, count 10, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; fwsam: src, 1 day; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000113; sid:5000113; rev:10;)
+drop syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Failed login - Brute Force [10/1]"; content: "SEC_LOGIN-4-LOGIN_FAILED"; classtype: unsuccessful-admin; xbits: set,brute_force,21600; after: track by_src, count 10, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; fwsam: src, 1 day; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000113; sid:5000113; rev:10;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Fan failure - Fan not rotating [0/2]"; content: "ENVMON-3-FAN_FAILED"; classtype: hardware-event; threshold: type limit, track by_src, count 2, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000388; sid:5000388; rev:4;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Fans had a rotation error reported [0/2]"; content: "%FAN-3-FAN_FAILED"; classtype: hardware-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001198; sid:5001198; rev:3;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Power Controller reports power Imax error detected"; content: "%ILPOWER-3-CONTROLLER_PORT_ERR"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001190; sid:5001199; rev:1;)
@@ -85,13 +85,13 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Switch Port D
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Bad CRC on ASIC Line Card"; content: "CONST_DIAG-SP-4-ERROR_COUNTER_WARNING"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#module; sid: 5001518; rev:2;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Switch Detected Unknown Protocol"; content: "SYS-3-PORT_RX_BADCODE"; classtype: network-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#badcode; sid: 5001519; rev:1;)
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Login Failed"; content: "SEC_LOGIN-4-LOGIN_FAILED"; classtype: unsuccessful-user; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001625; sid: 5001625; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Login Failed - Brute Force [10/1]"; content: "SEC_LOGIN-4-LOGIN_FAILED"; flowbits: set,brute_force,21600; after: track by_src, count 10, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; fwsam: src, 1 day; classtype: unsuccessful-user; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001686; sid: 5001686; rev:7;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Login Failed - Brute Force [10/1]"; content: "SEC_LOGIN-4-LOGIN_FAILED"; xbits: set,brute_force,21600; after: track by_src, count 10, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; fwsam: src, 1 day; classtype: unsuccessful-user; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001686; sid: 5001686; rev:7;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] High CPU usage detected"; content: "HIGH CPU DETECTED"; threshold: type limit, track by_src, count 1, seconds 3600; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001626; sid: 5001626; rev:2;)
 
 # %AUTHPRIV-3-SYSTEM_MSG: pam_aaa:Authentication failed for user cisco from 10.10.10.10 - sshd[27924]
 
 #alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[CISCO-IOS] Authentication Failure SSH"; content: "%AUTHPRIV-3-SYSTEM_MSG|3a|"; content: "sshd["; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001668; sid: 5001668; rev:3;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[CISCO-IOS] Authentication Failure SSH - Brute force [5/5]"; content: "%AUTHPRIV-3-SYSTEM_MSG|3a|"; content: "sshd["; flowbits: set,brute_force,21600; classtype: unsuccessful-admin; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001670; sid: 5001670; rev:6;)
+alert tcp $EXTERNAL_NET any -> $HOME_NET $SSH_PORT (msg: "[CISCO-IOS] Authentication Failure SSH - Brute force [5/5]"; content: "%AUTHPRIV-3-SYSTEM_MSG|3a|"; content: "sshd["; xbits: set,brute_force,21600; classtype: unsuccessful-admin; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001670; sid: 5001670; rev:6;)
 
 # %DAEMON-3-SYSTEM_MSG: error: PAM: Authentication failure for illegal user cisco from 10.10.10.10 - sshd[27926]
 
