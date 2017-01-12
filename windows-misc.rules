@@ -133,4 +133,4 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Suspicious
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Event log has been cleared."; content: " 104|3a| "; content: "cleared"; classtype: suspicious-traffic; program: Eventlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5002954; sid:5002954; rev:1;)
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Subscription calledback error recieved. Logging has likely stopped."; content: " 570|3a| "; content: "callback"; classtype: suspicious-traffic; program: The; reference: url,wiki.quadrantsec.com/bin/view/Main/5002955; sid:5002955; rev:1;)
 
-
+alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Fan failure detected"; content:" 10|3a| Fan "; content:" has failed"; classtype: hardware-event; program: System; reference: url,wiki.quadrantsec.com/bin/view/Main/5003040; sid:5003040; rev:1;)
