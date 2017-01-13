@@ -107,7 +107,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows au
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] A directory service object was moved"; content: " 5139|3a| "; classtype: configuration-change; program: *Security*; sid:5002275; rev:2;)
 
 
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdown [FLOWBIT SET]"; content: " 1074|3a| "; program: USER32; xbits: set, reboot.windows, 60; xbits: noalert; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002014; sid: 5002014; rev:6;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdown [FLOWBIT SET]"; content: " 1074|3a| "; program: System|USER32; xbits: set, reboot.windows, 60; xbits: noalert; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002014; sid: 5002014; rev:7;)
 
 # Added by Brian Echeverry (09/22/2015)
 
