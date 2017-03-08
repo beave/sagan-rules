@@ -1809,7 +1809,7 @@
 5001877 || [SSH-TECTIA-SERVER] Authentication Failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001877
 5001878 || [SSH-TECTIA-SERVER-GEOIP] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001878
 5001879 || [CISCO-GEOIP] Login permitted from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001879
-5001880 || [WINDOWS-AUTH] User account created [FLOWBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5001880
+5001880 || [WINDOWS-AUTH] User account created [XBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5001880
 5001881 || [WINDOWS-AUTH] User account re-enabled || url,wiki.quadrantsec.com/bin/view/Main/5001881
 5001882 || [PROXY-MALWARE] Zeus bin Request 1 || url,labs.snort.org/papers/zeus.html
 5001883 || [PROXY-MALWARE] Zeus bin Request 2 || url,labs.snort.org/papers/zeus.html
@@ -2649,7 +2649,7 @@
 5002751 || [PALO-ALTO] Spyware or Adware URL Blocked || url,www.brightcloud.com/tools/url-ip-lookup.php
 5002752 || [PALO-ALTO] Url Blocked by policy or category || url,www.brightcloud.com/tools/url-ip-lookup.php
 5002753 || [PALO-ALTO] Foreign URL of unknown category || url,www.brightcloud.com/tools/url-ip-lookup.php
-5002754 || [PALO-ALTO] Url silent flowbit set || url,www.brightcloud.com/tools/url-ip-lookup.php
+5002754 || [PALO-ALTO] Url silent xbit set || url,www.brightcloud.com/tools/url-ip-lookup.php
 5002755 || [PALO-ALTO] Virus Detected || url,threatvault.paloaltonetworks.com
 5002756 || [PALO-ALTO] Critical Severity Exploit Inbound || url,threatvault.paloaltonetworks.com
 5002757 || [PALO-ALTO] Critical Severity Exploit Outbound || url,threatvault.paloaltonetworks.com
@@ -2918,7 +2918,7 @@
 5003023 || [DYNAMIC] Apache logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5003023
 5003024 || [WINDOWS-MALWARE] WonderCrypter ransomware extension or note detected. || url,www.virustotal.com/en/file/be3afa19c76c2270ccac7eacf68f89603032c0588f721215e15a9d1421567969/analysis/ || url,  || url,wiki.quadrantsec.com/bin/view/Main/5003024
 5003025 || [FORTINET-MALWARE] Potential malware traffic detected
-5003026 || [CISCO-MERAKI] SSID Spoofing Detected || url,https://meraki.cisco.com/lib/pdf/meraki_whitepaper_air_marshal.pdf
+5003026 || [CISCO-MERAKI] SSID Spoofing Detected || url,meraki.cisco.com/lib/pdf/meraki_whitepaper_air_marshal.pdf
 5003027 || [ZIMBRA] Postfix/SMTPS/SMTPD - Brute force [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003027
 5003028 || [ZIMBRA] SASLAUTHD - Brute force [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003028
 5003029 || [ZIMBRA] SOAP Invalid user - Brute force account not found [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003029
@@ -2932,6 +2932,20 @@
 5003037 || [ZIMBRA] SYNC - User password mismatch [5/3] || url,wiki.quadrantsec.com/bin/view/Main/5003037
 5003038 || [ZIMBRA] Clamd - Threat Detected || url,wiki.quadrantsec.com/bin/view/Main/5003038
 5003039 || [WINDOWS-AUTH] Successful Administrator Logon Detected || url,wiki.quadrantsec.com/bin/view/Main/5003039
+5003040 || [WINDOWS-MISC] Fan failure detected || url,wiki.quadrantsec.com/bin/view/Main/5003040
+5003042 || [CISCO-MERAKI] VPN connectivity change
+5003043 || [CISCO-MERAKI] Uplink connectivity change
+5003044 || [CISCO-MERAKI] Uplink connectivity change
+5003045 || [CISCO-MERAKI] Malicious file blocked by amp || url,documentation.meraki.com/MX-Z/Content_Filtering_and_Threat_Protection/
+5003046 || [CISCO-MERAKI] File issued retrospective malicious disposition || url,documentation.meraki.com/MX-Z/Content_Filtering_and_Threat_Protection/
+5003047 || [CISCO-MERAKI] WPA failed authentication attempt
+5003048 || [CISCO-MERAKI] 802.1x failed authentication attempt
+5003049 || [CISCO-MERAKI] WPA failed authentication attempt || url,meraki.cisco.com/lib/pdf/meraki_whitepaper_air_marshal.pdf
+5003050 || [CISCO-MERAKI] Flow denied by Layer 3 firewall
+5003051 || [CISCO-MERAKI] Port status changed
+5003052 || [CISCO-MERAKI] Virtual router collision
+5003053 || [CISCO-MERAKI] VRRP transition
+5003054 || [CISCO-MERAKI] Blocked DHCP server response
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
