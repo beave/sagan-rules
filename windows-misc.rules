@@ -96,7 +96,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope
 # BAD RULE BELOW
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope if full.  No IP addresses left"; content: " 5001650|3a| "; classtype: network-event; program: DHCP-Server; reference: url,wiki.quadrantsec.com/bin/view/Main/5001650; sid: 5001650; rev:2;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows audit log was cleared"; pcre: "/ 517: | 1102: /"; classtype: system-event; program: *Security*|Eventlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5001185; sid: 5001185; rev:6;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows audit log was cleared"; pcre: "/ 517: | 1102: /"; content: "audit log was cleared"; classtype: system-event; program: *Security*|Eventlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5001185; sid: 5001185; rev:7;)
 
 # Brian Echeverry - 05/07/2015
 # SID 5002272 and 5002273 are noisy. 
