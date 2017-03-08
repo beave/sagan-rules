@@ -2946,6 +2946,52 @@
 5003052 || [CISCO-MERAKI] Virtual router collision
 5003053 || [CISCO-MERAKI] VRRP transition
 5003054 || [CISCO-MERAKI] Blocked DHCP server response
+5003055 || [WATCHGUARD] IPv4 source route attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003056 || [WATCHGUARD] IPv4 SYN flood attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003057 || [WATCHGUARD] IPv4 ICMP flood attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003058 || [WATCHGUARD] IPv4 UDP flood attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003059 || [WATCHGUARD] IPv4 IPSEC flood attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003060 || [WATCHGUARD] IPv4 IKE flood attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003061 || [WATCHGUARD] IPv4 scan attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003062 || [WATCHGUARD] IPv4 port scan attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003063 || [WATCHGUARD] IPv4 DDOS attack against a server was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003064 || [WATCHGUARD] IPv4 DDOS attack from a client was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003065 || [WATCHGUARD] IPv6 SYN flood attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003066 || [WATCHGUARD] IPv6 ICMP flood attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003067 || [WATCHGUARD] IPv6 UDP flood attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003068 || [WATCHGUARD] IPv6 IPSEC flood attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003069 || [WATCHGUARD] IPv6 IKE flood attack was detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003070 || [WATCHGUARD] Traffic was detected to or from a blocked site || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003071 || [WATCHGUARD] IP spoofing was detected from the IP address specified || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003072 || [WATCHGUARD] Possible loop or ARP spoofing detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003073 || [WATCHGUARD] Firewall is shutting down || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003074 || [WATCHGUARD] Detected an ARP spoofing attack || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003075 || [WATCHGUARD] Feature key for Application Control subscription has expired || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003076 || [WATCHGUARD] Feature key for Intrusion Prevention Services subscription has expired || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003077 || [WATCHGUARD] Capture stopped due to the specified reason || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003078 || [WATCHGUARD] Starting wireless AP service || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003079 || [WATCHGUARD] Wireless access point model mismatch || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003080 || [WATCHGUARD] Wireless access point activation failure || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003081 || [WATCHGUARD] APT threat identification and notification || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003082 || [WATCHGUARD] Gateway AntiVirus (GAV) detected a virus or malware in an email attachment. || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003083 || [WATCHGUARD] Gateway AntiVirus (GAV) cannot perform scan || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003084 || [WATCHGUARD] APT threat detected || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003085 || [WATCHGUARD] Gateway AntiVirus (GAV) virus found - FTP || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003086 || [WATCHGUARD] Gateway AntiVirus (GAV) scan error || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003087 || [WATCHGUARD] Gateway AntiVirus (GAV) virus found - POP3 || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003088 || [WATCHGUARD] Administrative accounts reset to default || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003089 || [WATCHGUARD] LIVESECURITY feature not found || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003090 || [WATCHGUARD] Member promoted to master || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003091 || [WATCHGUARD] Failed to start the signature update for the specified services || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003092 || [WATCHGUARD] VPN - User login || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003093 || [WATCHGUARD] VPN (SSL) - User login || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003094 || [WATCHGUARD] Failed Login Attempt - Brute force [WATCHGUARD] [5/5] || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003095 || [WATCHGUARD-GEOIP] VPN login from outside HOME_COUNTRY || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003096 || [WATCHGUARD-GEOIP] FTP file transfer to outside HOME_COUNTRY || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003097 || [WATCHGUARD] Signature update process for the specified version failed || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003098 || [WATCHGUARD] IP spoofing was detected from the IP address specified || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003099 || [WATCHGUARD] Wireless Access Point Model Mismatch || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003100 || [WATCHGUARD] IPS detected an intrusion in the client request or server response content body || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
