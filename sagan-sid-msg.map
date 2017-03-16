@@ -1935,7 +1935,7 @@
 5002006 || [WINDOWS-MALWARE] Suspicious Tool Event || url,wiki.quadrantsec.com/bin/view/Main/5002006
 5002007 || [WINDOWS-MALWARE] Virus Found! || url,wiki.quadrantsec.com/bin/view/Main/5002007
 5002011 || [WINDOWS-MALWARE] System protection disabled || url,wiki.quadrantsec.com/bin/view/Main/5002011
-5002014 || [WINDOWS-MISC] System shutdown [FLOWBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5002014
+5002014 || [WINDOWS-MISC] System shutdown [XBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5002014
 5002015 || [WINDOWS-AUTH] RDP / Logon type 10 || url,wiki.quadrantsec.com/bin/view/Main/5002015
 5002016 || [WINDOWS-GEOIP] RDP / Logon type 10 from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002016
 5002017 || [WINDOWS-AUTH] Pass-The-Hash detected! || url, http://en.wikipedia.org/wiki/Pass_the_hash || url,wiki.quadrantsec.com/bin/view/Main/5002017
@@ -2213,7 +2213,7 @@
 5002312 || [BASH] Perl subproces execution
 5002313 || [BASH] Ruby socket execution
 5002314 || [BASH] Ruby subproces execution
-5002315 || [BASH] mknod execution [FLOWBIT SET]
+5002315 || [BASH] mknod execution [XBIT SET]
 5002316 || [BASH] telnet reverse shell execution
 5002317 || [BASH] /dev/tcp access
 5002318 || [BASH] /dev/udp access
