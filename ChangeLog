@@ -1,3 +1,20 @@
+2017/03/16 - 	Sagan rule release
+
+	* Excluded of NTP traffic on cisco-bluedot.rules sid 5002869.
+	  https://github.com/beave/sagan-rules/commit/123600f5060b7741a9755d4af10a7b064b755052
+
+	* New watchguard.rules and watchguard-geoip.rules added!
+	  https://github.com/beave/sagan-rules/commit/32e7d4493c6be69648692d82e24611b120198e5b
+
+	* New "cisco-meraki.rules" added! 
+	  https://github.com/beave/sagan-rules/commit/51df9273d9972d0175afdd51dd429b2fb0cab678
+
+	* Added program "System" to sid 5002015 (System shutdown with xbit set). 
+	  https://github.com/beave/sagan-rules/commit/603748ee69c311b84bc7c19bcf075dc9dd76a0a3
+
+	* New Windows "Fan failure" rule added to windows-misc.rules
+	  https://github.com/beave/sagan-rules/commit/d67ad74096528018c6870c35fb2318f334923a83
+
 2016/12/30 - 	Sagan rule release
 
 	* New rule to detect MS Windows "administrator" logins (disabled by default):
