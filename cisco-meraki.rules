@@ -76,7 +76,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Flow denie
 
 # Virtual router collision
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Virtual router collision"; content: "VRRP"; classtype: system-event; sid:5003052; rev:1;)
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Virtual router collision"; content: "VRRP packet"; classtype: system-event; sid:5003052; rev:2;)
 
 # VRRP transition
 
