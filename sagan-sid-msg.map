@@ -2995,6 +2995,7 @@
 5003101 || [WINDOWS-AUTH] Possible Windows Broken Domain Trust [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5003101
 5003102 || [WINDOWS-AUTH] Possible Windows Broken Domain Trust [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5003102
 5003103 || [WINDOWS-AUTH] Windows Possible Broken Domain Trust [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5003103
+5003104 || [WINDOWS-AUTH] User added to Schema Admins || url,wiki.quadrantsec.com/bin/view/Main/5003104
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
