@@ -107,7 +107,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows au
 #alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] A directory service object was moved"; content: " 5139|3a| "; classtype: configuration-change; program: *Security*; sid:5002275; rev:2;)
 
 
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdown [XBIT SET]"; content: " 1074|3a| "; program: System|USER32; xbits: set, reboot.windows, 60; xbits: noalert; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002014; sid: 5002014; rev:8;)
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdown [XBIT SET]"; content: " 1074|3a| "; program: System|USER32; xbits: set, reboot.windows,120; xbits: noalert; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002014; sid: 5002014; rev:9;)
 
 # Added by Brian Echeverry (09/22/2015)
 
@@ -134,3 +134,7 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Event log 
 alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Subscription calledback error recieved. Logging has likely stopped."; content: " 570|3a| "; content: "callback"; classtype: suspicious-traffic; program: The; reference: url,wiki.quadrantsec.com/bin/view/Main/5002955; sid:5002955; rev:1;)
 
 alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Fan failure detected"; content:" 10|3a| Fan "; content:" has failed"; classtype: hardware-event; program: System; reference: url,wiki.quadrantsec.com/bin/view/Main/5003040; sid:5003040; rev:1;)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of PSEXEC service via Security Audit "; pcre: "/ 4697: | 601: /"; classtype: suspicious-traffic; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5003105; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5003105; rev:1;)
+
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of PSEXEC service via SCM"; content: "PSEXEC"; nocase; content: " 7045|3a| "; content:!"ForeScout"; nocase; content:!"nxlog"; nocase; content:!"ccmsetup"; nocase; classtype: suspicious-traffic; program: System|Service_Control_Manager; reference: url,wiki.quadrantsec.com/bin/view/Main/5003106; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5003106; rev:1;)
