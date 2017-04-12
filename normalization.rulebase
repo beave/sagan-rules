@@ -1,3 +1,4 @@
+#version=2
 # Sagan arp-normalize.rulebase
 # Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
@@ -56,7 +57,7 @@ rule=: %uptime:word% %authfail:word% Authentication failure for SNMP req from ho
 
 #  Dec 26 19:59:26: %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host 10.1.128.27
 
-rule=: %month:word% %day:word% %hour:word% %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host %src-ip:ipv4%
+rule=: %month:word% %day:word% %hour:word% %%SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host %src-ip:ipv4%
 
 # Access denied URL http://www.example.com/somethings.txt SRC 192.168.0.1 DEST 10.10.10.10 on interface inside
 
@@ -174,7 +175,7 @@ rule=: time=%-:word% devname=%-:word% devid=%-:word% logid=%-:word% type=%-:word
 #*****************************************************************************
 
 rule=: Logout user=%username:word% host=%-:word% [%src-ip:ipv4%]
-rule=: Login excessive login failures user=%username:word% auth=%-:word% host=%-t:word% [%src-ip:ipv4]]
+rule=: Login excessive login failures user=%username:word% auth=%-:word% host=%-:word% [%src-ip:ipv4%]
 rule=: Login failed user=%username:word% auth=%-:word% host=%-:word% [%src-ip:ipv4%]
 rule=: authentication failure; logname= uid=%-:word% euid=%-:word% tty=%-:word% ruser=%-:word% rhost=%src-ip:ipv4% user=%username:word%
 
