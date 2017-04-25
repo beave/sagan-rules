@@ -65,7 +65,7 @@ alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[PALO-ALTO] Foreign URL of u
 #####
 ##### Following rule is used in conjunction with meta_content variable IGNOREDL and set silent xbit which are checked in rule 5002762
 
-#alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[PALO-ALTO] Url silent xbit set"; content:",THREAT,url,"; content:!",block-url,"; meta_content: "%sagan%",$IGNOREDL; meta_nocase; xbits:set,downloadnolog,60; xbits:noalert; normalize; parse_port; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: suspicious-traffic; reference: url,www.brightcloud.com/tools/url-ip-lookup.php; sid: 5002754; pri: 3; rev:3;)
+#alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[PALO-ALTO] Url silent xbit set"; content:",THREAT,url,"; content:!",block-url,"; meta_content: "%sagan%",$IGNOREDL; meta_nocase; xbits:set,downloadnolog,60; xbits:nounified2; normalize; parse_port; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: suspicious-traffic; reference: url,www.brightcloud.com/tools/url-ip-lookup.php; sid: 5002754; rev:4;)
 
 #####VIRI
 

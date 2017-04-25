@@ -82,7 +82,7 @@ alert tcp $HOME_NET any -> $EXTERNAL_NET 23 (msg: "[NFCAPD] Telnet Traffic Detec
 
 # Tor traffic via nfcapd - Robert Nunley 05/08/2015
 
-#alert tcp $HOME_NET any -> $EXTERNAL_NET 9001 (msg: "[NFCAPD] Possible TOR - Port 9001"; program: nfcapd; normalize; content: "/9001, protocol|3a| TCP,"; xbits: set, tor_traffic, 15; xbits: noalert; content:"flags|3a| |7c|.AP...|7c|,"; classtype: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; parse_port; reference: url, wiki.quadrantsec.com/bin/view/Main/5002300; reference: url, torstatus.blutmagie.de; sid: 5002300; rev: 6;)
+#alert tcp $HOME_NET any -> $EXTERNAL_NET 9001 (msg: "[NFCAPD] Possible TOR - Port 9001"; program: nfcapd; normalize; content: "/9001, protocol|3a| TCP,"; xbits: set, tor_traffic, 15; xbits:nounified2; content:"flags|3a| |7c|.AP...|7c|,"; classtype: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; parse_port; reference: url, wiki.quadrantsec.com/bin/view/Main/5002300; reference: url, torstatus.blutmagie.de; sid: 5002300; rev: 7;)
 
 #alert tcp $HOME_NET any -> $EXTERNAL_NET 9030 (msg: "[NFCAPD] Possible TOR - Port 9030 after Port 9001"; program: nfcapd; normalize; content: "/9030, protocol|3a| TCP,"; xbits: isset, by_src, tor_traffic; content:"flags|3a| |7c|.AP...|7c|,"; classtype: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; parse_port; threshold: type limit, track by_src, count 5, seconds 120; after: track by_src, count 5, seconds 300; reference: url, wiki.quadrantsec.com/bin/view/Main/5002301; reference: url, torstatus.blutmagie.de; sid: 5002301; rev: 6;)
 
