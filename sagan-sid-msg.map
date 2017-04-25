@@ -2999,6 +2999,10 @@
 5003105 || [WINDOWS-MISC] Installation of PSEXEC service via Security Audit  || url,pastebin.com/raw/0SNSvyjJ || url,wiki.quadrantsec.com/bin/view/Main/5003105
 5003106 || [WINDOWS-MISC] Installation of PSEXEC service via SCM || url,pastebin.com/raw/0SNSvyjJ || url,wiki.quadrantsec.com/bin/view/Main/5003106
 5003107 || [SYSLOG] Possible Windows Broken Domain Trust [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5003107
+5003108 || [NXLOG] Unable to read eventlog || url,wiki.quadrantsec.com/bin/view/Main/5003108
+5003109 || [NXLOG] Service stopping || url,wiki.quadrantsec.com/bin/view/Main/5003109
+5003110 || [NXLOG] Termination Request || url,wiki.quadrantsec.com/bin/view/Main/5003110
+5003111 || [NXLOG] Windows Message Missing || url,wiki.quadrantsec.com/bin/view/Main/5003111
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
