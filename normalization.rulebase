@@ -321,7 +321,13 @@ rule=: %-:word%: [%src-ip:ipv4%]: Possible SMTP RCPT flood, throttling.
 
 # Jun  2 00:41:47 demo snort: [1:19559:5] INDICATOR-SCAN SSH brute force login attempt [Classification: Misc activity] [Priority: 3] {TCP} 43.255.188.148:35236 -> 10.5.1.3:22
 
-rule=: [%generator_id:number%:%sig_id:number%:%rev:number%] %sig_name:char-to:\x5b%[Classification: %classtype:char-to:\x5d%] [Priority: %pri:number%] {%proto:char-to:\x7d%} %dst-ip:ipv4%:%dst-port:number% -> %src-ip:ipv4%:%src-port:number%
+
+rule=: [%generator_id:number%:%sig_id:number%:%rev:number%] %sig_name:char-to:\x5b%[Classification: %classtype:char-to:\x5d%] [Priority: %pri:number%] {%proto:char-to:\x7d%} %src-ip:ipv4%:%src-port:number% -> %dst-ip:ipv4%:%dst-port:number%
+
+# Appears the later version of Snort add a : after the "Priority" field. 
+
+rule=: [%generator_id:number%:%sig_id:number%:%rev:number%] %sig_name:char-to:\x5b%[Classification: %classtype:char-to:\x5d%] [Priority: %pri:number%]: {%proto:char-to:\x7d%} %src-ip:ipv4%:%src-port:number% -> %dst-ip:ipv4%:%dst-port:number%
+
 
 #*****************************************************************************
 # Sonicwall
