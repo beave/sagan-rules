@@ -28,6 +28,6 @@
 
 # 10.10.10.5|authpriv|info|info|56|2014-02-12|18:53:52|xtremed| UI Login: Success, User Name: bob, Remote IP: 10.10.10.1, Privilege: ADMINISTRATOR
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FATPIPE-AETAS] Login Success at suspicious time"; content: "Login|3a| Success"; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: successful-admin; program: xtremed; parse_src_ip: 1; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; reference: url,wiki.quadrantsec.com/bin/view/Main/5002041; sid: 5002041; rev:2;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FATPIPE-AETAS] Login Success - ADMINISTRATOR - at supicious time"; content: "Login|3a| Success"; content: "ADMINISTRATOR"; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: successful-admin; program: xtremed; parse_src_ip: 1; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; reference: url,wiki.quadrantsec.com/bin/view/Main/5002042; sid: 5002042; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FATPIPE-AETAS] Login Success at suspicious time"; content: "Login|3a| Success"; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-admin; program: xtremed; parse_src_ip: 1; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; reference: url,wiki.quadrantsec.com/bin/view/Main/5002041; sid: 5002041; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FATPIPE-AETAS] Login Success - ADMINISTRATOR - at supicious time"; content: "Login|3a| Success"; content: "ADMINISTRATOR"; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-admin; program: xtremed; parse_src_ip: 1; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; reference: url,wiki.quadrantsec.com/bin/view/Main/5002042; sid: 5002042; rev:2;)
 

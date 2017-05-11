@@ -25,7 +25,7 @@
 #
 #*************************************************************
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] SNMP Authentication Failure [0/5]"; content: "SNMP-3-AUTHFAIL"; default_proto: udp; default_dst_port: $DEFAULT_SNMP_PORT; classtype: attempted-recon; xbits: set, recon, 86400; parse_src_ip: 1; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000051; sid: 5000051; rev:8;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] SNMP Authentication Failure [0/5]"; content: "SNMP-3-AUTHFAIL"; default_proto: udp; default_dst_port: $SNMP_PORT; classtype: attempted-recon; xbits: set, recon, 86400; parse_src_ip: 1; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000051; sid: 5000051; rev:8;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Attempted RSHELL connection"; content: "RCMD-4-RSHPORTATTEMPT"; default_proto: tcp; default_dst_port: 514; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000052; sid: 5000052; rev:4;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Line protocol changed state up/down"; content: "LINK-3-UPDOWN"; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000053; sid: 5000053; rev:3;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Line protocol changed state up/down"; content: "LINEPROTO-5-UPDOWN"; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000054; sid: 5000054; rev:3;)
@@ -90,12 +90,12 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Login Failed - B
 
 # %AUTHPRIV-3-SYSTEM_MSG: pam_aaa:Authentication failed for user cisco from 10.10.10.10 - sshd[27924]
 
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Authentication Failure SSH"; content: "%AUTHPRIV-3-SYSTEM_MSG|3a|"; content: "sshd["; default_proto: tcp; default_dst_port: $DEFAULT_SSH_PORT; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001668; sid: 5001668; rev:4;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Authentication Failure SSH - Brute force [5/5]"; content: "%AUTHPRIV-3-SYSTEM_MSG|3a|"; content: "sshd["; xbits: set,brute_force,21600; default_proto: tcp; default_dst_port: $DEFAULT_SSH_PORT; classtype: unsuccessful-admin; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001670; sid: 5001670; rev:7;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Authentication Failure SSH"; content: "%AUTHPRIV-3-SYSTEM_MSG|3a|"; content: "sshd["; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001668; sid: 5001668; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Authentication Failure SSH - Brute force [5/5]"; content: "%AUTHPRIV-3-SYSTEM_MSG|3a|"; content: "sshd["; xbits: set,brute_force,21600; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-admin; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; fwsam: src, 1 day; reference: url,wiki.quadrantsec.com/bin/view/Main/5001670; sid: 5001670; rev:7;)
 
 # %DAEMON-3-SYSTEM_MSG: error: PAM: Authentication failure for illegal user cisco from 10.10.10.10 - sshd[27926]
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Illegal User SSH"; content: "%DAEMON-3-SYSTEM_MSG|3a|"; content: "sshd["; parse_src_ip: 1; default_proto: tcp; default_dst_port: $DEFAULT_SSH_PORT; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001669; sid: 5001669; rev:6;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Illegal User SSH"; content: "%DAEMON-3-SYSTEM_MSG|3a|"; content: "sshd["; parse_src_ip: 1; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001669; sid: 5001669; rev:6;)
 
 # %USER-3-SYSTEM_MSG: FATAL: bad tty - login (no program)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] FATAL - bad tty - login (no program)"; content: "%USER-3-SYSTEM_MSG|3a|"; content: "FATAL: bad tty"; content: "no program";  classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001671; sid: 5001671; rev:5;)

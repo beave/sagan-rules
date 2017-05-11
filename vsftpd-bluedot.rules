@@ -25,6 +25,6 @@
 #
 #*************************************************************
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD-BLUEDOT] Authentication successful from a suspicious IP"; content: "OK LOGIN"; default_proto:tcp; default_dst_port: $DEFAULT_FTP_PORT; classtype: successful-user; program: vsftpd; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; reference: url,wiki.quadrantsec.com/bin/view/Main/5002919; sid:5002919; rev:4;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD-BLUEDOT] File uploaded from a suspicious IP"; content: "OK UPLOAD"; default_proto:tcp; default_dst_port: $DEFAULT_FTP_PORT; classtype: suspicious-traffic; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002920; sid:5002920; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD-BLUEDOT] Authentication successful from a suspicious IP"; content: "OK LOGIN"; default_proto:tcp; default_dst_port: $FTP_PORT; classtype: successful-user; program: vsftpd; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; reference: url,wiki.quadrantsec.com/bin/view/Main/5002919; sid:5002919; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD-BLUEDOT] File uploaded from a suspicious IP"; content: "OK UPLOAD"; default_proto:tcp; default_dst_port: $FTP_PORT; classtype: suspicious-traffic; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002920; sid:5002920; rev:4;)
 

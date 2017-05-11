@@ -27,4 +27,4 @@
 #
 # These rules are for the SSH Tectia Server for Windows systems.
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SSH-TECTIA-SERVER-BLUEDOT] Authentication success from a suspicious source"; content: "Login_success"; default_proto: tcp; default_dst_port: $DEFAULT_SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002915; parse_src_ip: 1; parse_dst_ip: 2; program: SSH_Tectia_Server; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; sid:5002915; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SSH-TECTIA-SERVER-BLUEDOT] Authentication success from a suspicious source"; content: "Login_success"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002915; parse_src_ip: 1; parse_dst_ip: 2; program: SSH_Tectia_Server; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; sid:5002915; rev:4;)

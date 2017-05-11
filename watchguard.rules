@@ -183,7 +183,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] APT threat dete
 
 # Gateway AntiVirus (GAV) virus found - FTP
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) virus found - FTP"; program: WatchGuard*; content: "msg_id=|22|1CFF-000E|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $DEFAULT_FTP_PORT; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003085; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) virus found - FTP"; program: WatchGuard*; content: "msg_id=|22|1CFF-000E|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $FTP_PORT; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003085; rev:2;)
 
 
 # Gateway AntiVirus (GAV) scan error
@@ -193,7 +193,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVir
 
 # Gateway AntiVirus (GAV) virus found - POP3
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) virus found - POP3"; program: WatchGuard*; content: "msg_id=|22|21FF-000F|22|"; default_proto:tcp; default_dst_port: $DEFAULT_POP3_PORT; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003087; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) virus found - POP3"; program: WatchGuard*; content: "msg_id=|22|21FF-000F|22|"; default_proto:tcp; default_dst_port: $POP3_PORT; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003087; rev:2;)
 
 
 # Administrative accounts reset to default
@@ -218,12 +218,12 @@ alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Failed to start the
 
 # VPN (PPTP) - User login
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] VPN - User login"; program: WatchGuard*; content: "msg_id=|22|1400-0000|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $DEFAULT_PPTP_PORT; classtype: successful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003092; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] VPN - User login"; program: WatchGuard*; content: "msg_id=|22|1400-0000|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $PPTP_PORT; classtype: successful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003092; rev:2;)
 
 
 # VPN (SSL) - User login
 
-# alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] VPN (SSL) - User login"; program: WatchGuard*; content: "msg_id=|22|2500-0000|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: successful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003093; rev:2;)
+# alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] VPN (SSL) - User login"; program: WatchGuard*; content: "msg_id=|22|2500-0000|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003093; rev:2;)
 
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WATCHGUARD] Failed Login Attempt - Brute force [WATCHGUARD] [5/5]"; program: WatchGuard*; content: "msg_id=|22|1100-0005|22|" content: "Authentication of"; content "rejected"; parse_src_ip: 1; parse_dst_ip: 2; xbits: set,brute_force,21600; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300;  classtype: unsuccessful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003094; rev:1;)

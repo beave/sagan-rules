@@ -59,12 +59,12 @@
 
 # SSH 
 
-#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[NFCAPD] PUSH/ACK Traffic Detected [5/5]"; program: nfcapd; normalize; content: "/22, protocol|3a| TCP,"; content:"flags|3a| |7c|.AP...|7c|,"; default_proto: tcp; default_dst_port: $DEFAULT_SSH_PORT; classtype: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; parse_port; threshold: type limit, track by_src, count 5, seconds 120; after: track by_src, count 5, seconds 300; reference: url, wiki.quadrantsec.com/bin/view/Main/5001996; sid: 5001996; rev: 8;)
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[NFCAPD] PUSH/ACK Traffic Detected [5/5]"; program: nfcapd; normalize; content: "/22, protocol|3a| TCP,"; content:"flags|3a| |7c|.AP...|7c|,"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; parse_port; threshold: type limit, track by_src, count 5, seconds 120; after: track by_src, count 5, seconds 300; reference: url, wiki.quadrantsec.com/bin/view/Main/5001996; sid: 5001996; rev: 8;)
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[NFCAPD] PUSH/ACK Traffic Detected - Port 2222 [5/5]"; program: nfcapd; normalize; content: "/2222, protocol|3a| TCP,";  content:"flags|3a| |7c|.AP...|7c|,"; default_proto: tcp; default_dst_port: 2222; classtype: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; parse_port; threshold: type limit, track by_src, count 20, seconds 120; after: track by_src, count 5, seconds 300; reference: url, wiki.quadrantsec.com/bin/view/Main/5001997; sid: 5001997; rev: 9;)
 
 # Telnet 
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[NFCAPD] Telnet Traffic Detected via PUSH/ACK [5/5]"; program: nfcapd; normalize; content: "/23, protocol|3a| TCP,"; content:"flags|3a| |7c|.AP...|7c|,"; default_proto: tcp; default_dst_port: $DEFAULT_TELNET_PORT;  classtype: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; parse_port; threshold: type limit, track by_src, count 5, seconds 120; after: track by_src, count 5, seconds 300; reference: url, wiki.quadrantsec.com/bin/view/Main/5001998; sid: 5001998; rev:8;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[NFCAPD] Telnet Traffic Detected via PUSH/ACK [5/5]"; program: nfcapd; normalize; content: "/23, protocol|3a| TCP,"; content:"flags|3a| |7c|.AP...|7c|,"; default_proto: tcp; default_dst_port: $TELNET_PORT;  classtype: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; parse_port; threshold: type limit, track by_src, count 5, seconds 120; after: track by_src, count 5, seconds 300; reference: url, wiki.quadrantsec.com/bin/view/Main/5001998; sid: 5001998; rev:8;)
 
 
 

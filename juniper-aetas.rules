@@ -26,7 +26,7 @@
 #*************************************************************
 
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[JUNIPER-AETAS] VPN Login at suspicious time"; program: Juniper; pcre: "/Authentication successful|Login succeeded/i"; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002047; sid:5002047; rev:3;)
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[JUNIPER-AETAS] VPN Logout at suspicious time"; program: Juniper; content: "Logout from"; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002048; sid:5002048; rev:3;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[JUNIPER-AETAS] VPN Login at suspicious time"; program: Juniper; pcre: "/Authentication successful|Login succeeded/i"; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002047; sid:5002047; rev:3;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[JUNIPER-AETAS] VPN Logout at suspicious time"; program: Juniper; content: "Logout from"; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002048; sid:5002048; rev:3;)
 
 

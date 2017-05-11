@@ -45,7 +45,7 @@
 # ftp_monitor.py
 # write_log("Artillery has blocked (blacklisted) the following IP for FTP brute forcing violations: " + ipaddress)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] FTP brute force violation"; content: "FTP brute forcing"; xbits: set,brute_force&honeypot,21600; default_proto: tcp; default_dst_port: $DEFAULT_FTP_PORT; classtype: unsuccessful-user; parse_src_ip: 1; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002081; reference: url,www.trustedsec.com/downloads/artillery; sid:5002081; rev:6;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] FTP brute force violation"; content: "FTP brute forcing"; xbits: set,brute_force&honeypot,21600; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: unsuccessful-user; parse_src_ip: 1; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002081; reference: url,www.trustedsec.com/downloads/artillery; sid:5002081; rev:6;)
 
 # harden.py
 # Issue identified: %s permissions are not set to root. If an attacker compromises the system and is running under the Apache user account, could view these files. Recommendation: Change the permission of %s to root:root. Command: chown root:root %s\n\n" % (filename,filename,filename)
@@ -86,6 +86,6 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] File changes have
 # ssh_monitor.py
 # alert = "Artillery has blocked (blacklisted) the following IP for SSH brute forcing violations: " + ipaddress
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] SSH brute force violation"; content: "SSH brute forcing violations"; xbits: set,brute_force&honeypot,86400; default_proto: tcp; default_dst_port: $DEFAULT_SSH_PORT; classtype: unsuccessful-user; parse_src_ip: 1; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002089; reference: url,www.trustedsec.com/downloads/artillery; sid:5002089; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] SSH brute force violation"; content: "SSH brute forcing violations"; xbits: set,brute_force&honeypot,86400; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-user; parse_src_ip: 1; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002089; reference: url,www.trustedsec.com/downloads/artillery; sid:5002089; rev:3;)
 
 
