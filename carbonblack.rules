@@ -1,0 +1,68 @@
+# Sagan carbonblack.rules
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+# rules by "Corey Fisher" <cfisher@quadrantsec.com>
+# 07/26/2016
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Agent blocked an attempt to create file"; content: "Agent blocked an attempt to create"; content: "because of tamper protection"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002928; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Agent blocked an attempt to delete file"; content: "Agent blocked an attempt to delete"; content: "because of tamper protection"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002929; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Permission change was blocked"; content: "Permission change on"; content: "was blocked"; content: "event"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002930; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Modification of registry was blocked"; content: "of registry"; content: "was blocked because of tamper protection"; content: "event"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002931; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Agent failed a health check"; content: "Agent failed a health check"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002932; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] File was identified by Software Reputation Service as a potential risk"; content: "Software Reputation Service as a potential risk"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002933; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Server detected revocation of certificate"; content: "Server detected revocation of certificate"; content: "event"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002934; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Agent detected a problem"; content: "Agent detected a problem"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002935; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Exclusive access to a file was blocked because of tamper protection"; content: "Exclusive access to"; content: "was blocked because of tamper protection"; content: "event"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002936; rev:2;)
+
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Agent had to rebuild its primary database cache and now has to re-initialize"; content: "Agent had to rebuild its primary database cache and now has to re-initialize"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002937; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Computer failed to receive Notifier Logo"; content: "Computer failed to receive Notifier Logo"; content: "event"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002938; rev:2;)
+
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Agent had to restore its primary database cache"; content: "Agent had to restore its primary database cache"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002939; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Non-System Filemods to system32"; content: "Carbon Black process watchlist |27|Non-System Filemods to system32|27|"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002921; rev:2;)
+
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Newly Loaded Modules"; content: "Carbon Black binary watchlist |27|Newly Loaded Modules|27|"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002922; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] A new device was mounted"; content: "A new device"; content: "was mounted as drive"; content: "event"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002923; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] File was executed for the first time"; content: "File"; content: "was executed for the first time"; content: "event"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002924; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Computer reported that signature on file is invalid"; content: "reported that signature on file"; content: "is invalid"; content: "event"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002925; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Server discovered new certificate"; content: "Server discovered new certificate"; content: "event"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002926; rev:2;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Disk configuration change detected"; content: "Disk configuration change detected"; content: "event"; parse_src_ip: 1; program: 1|bit9; classtype: system-event; sid: 5002927; rev:2;)
+
