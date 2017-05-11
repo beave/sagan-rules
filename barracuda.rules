@@ -25,34 +25,34 @@
 #
 # Barracuda rules by Corey Fisher - 02/17/2016
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Last Auto Backup Time Changed"; content: "CHANGE last_auto_backup_time"; content: "debug|8f"; program: web; reference: url,wiki.quadrantsec.com/bin/view/Main/5002782; classtype: system-event; sid:5002782; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Last Auto Backup Time Changed"; content: "CHANGE last_auto_backup_time"; content: "debug|8f"; program: web; reference: url,wiki.quadrantsec.com/bin/view/Main/5002782; classtype: system-event; sid:5002782; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Spyware Exploit"; content: "Spyware.Exploit.Misc.MD"; content: "pcaptor"; program: pcaptor; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002783; classtype: suspicious-traffic; sid:5002783; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Spyware Exploit"; content: "Spyware.Exploit.Misc.MD"; content: "pcaptor"; program: pcaptor; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002783; classtype: suspicious-traffic; sid:5002783; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] AdWare Win32 Agent"; content: "AdWare.Win32.Agent.bjx"; content: "pcaptor"; program: pcaptor; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002784; classtype: suspicious-traffic; sid:5002784; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] AdWare Win32 Agent"; content: "AdWare.Win32.Agent.bjx"; content: "pcaptor"; program: pcaptor; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002784; classtype: suspicious-traffic; sid:5002784; rev:3;)
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[Barracuda] Login"; content: "LOGIN"; content: !"FAILED_LOGIN"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002785; classtype: system-event; sid:5002785; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Login"; content: "LOGIN"; content: !"FAILED_LOGIN"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002785; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: system-event; sid:5002785; rev:3;)
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[Barracuda] Failed Login"; content: "FAILED_LOGIN"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002786; classtype: unsuccessful-admin; sid:5002786; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Failed Login"; content: "FAILED_LOGIN"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002786; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: unsuccessful-admin; sid:5002786; rev:3;)
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[Barracuda] Brute force login attempt [5/5]"; content: "FAILED_LOGIN"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002945; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; xbits: set,brute_force,21600; classtype: unsuccessful-admin; sid:5002945; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Brute force login attempt [5/5]"; content: "FAILED_LOGIN"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002945; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; xbits: set,brute_force,21600; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: unsuccessful-admin; sid:5002945; rev:4;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Spyware Filter Change"; content: "spy_exempted"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002787; classtype: system-event; sid:5002787; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Spyware Filter Change"; content: "spy_exempted"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002787; classtype: system-event; sid:5002787; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Snort Enabled"; content: "snort_enabled"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002788; classtype: system-event; sid:5002788; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Snort Enabled"; content: "snort_enabled"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002788; classtype: system-event; sid:5002788; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Ipoque Enabled"; content: "ipoque_enabled"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002789; classtype: system-event; sid:5002789; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Ipoque Enabled"; content: "ipoque_enabled"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002789; classtype: system-event; sid:5002789; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Failed Login Log Change"; content: "failed_login"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002790; classtype: system-event; sid:5002790; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Failed Login Log Change"; content: "failed_login"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002790; classtype: system-event; sid:5002790; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Change to URL Whitelist"; content: "spy_url_whitelist"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002791; classtype: system-event; sid:5002791; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Change to URL Whitelist"; content: "spy_url_whitelist"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002791; classtype: system-event; sid:5002791; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Change to URL Blacklist"; content: "spy_url_blacklist"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002792; classtype: system-event; sid:5002792; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Change to URL Blacklist"; content: "spy_url_blacklist"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002792; classtype: system-event; sid:5002792; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Policy Block Change"; content: "policy_block"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002793; classtype: system-event; sid:5002793; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Policy Block Change"; content: "policy_block"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002793; classtype: system-event; sid:5002793; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] User Password Changed"; content: "user_password"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002794; classtype: system-event; sid:5002794; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] User Password Changed"; content: "user_password"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002794; classtype: system-event; sid:5002794; rev:3;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] System Password Changed"; content: "system_password"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002795; classtype: system-event; sid:5002795; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] System Password Changed"; content: "system_password"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002795; classtype: system-event; sid:5002795; rev:3;)
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] System Shutdown"; content: "set_set_shutdown"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002796; classtype: system-event; sid:5002796; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] System Shutdown"; content: "set_set_shutdown"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002796; classtype: system-event; sid:5002796; rev:3;)

@@ -25,5 +25,5 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[F5-BIG-IP] Brute force Attempt [5/1]"; content: "failed to login after"; content: "sshd"; xbits: set,brute_force,21600; classtype: unsuccessful-user; parse_src_ip: 1; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 1, seconds 300; reference: url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002946; sid:5002946; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[F5-BIG-IP] Brute force Attempt [5/1]"; content: "failed to login after"; content: "sshd"; xbits: set,brute_force,21600; default_proto: tcp; default_dst_port: $DEFAULT_SSH_PORT; classtype: unsuccessful-user; parse_src_ip: 1; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 1, seconds 300; reference: url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002946; sid:5002946; rev:2;)
 

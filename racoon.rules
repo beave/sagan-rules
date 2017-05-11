@@ -25,11 +25,11 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Informational message"; content: "INFO"; classtype: program-error; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000269; sid: 5000269; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Error message"; content: "ERROR"; classtype: program-error; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000270; sid: 5000270; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Warning message"; content: "WARNING"; classtype: program-error; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000271; sid: 5000271; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - ISAKMP-SA - VPN established"; content: "ISAKMP-SA established"; classtype: successful-user ; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000272; sid: 5000272; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Roadwarrior configuration error [ignored error]"; content: "such policy does not already exist"; classtype: unsuccessful-user; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000273; sid: 5000273; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Roadwarrior configuration error [ignored warning]"; content: "ignore INITIAL-CONTACT notification"; classtype: unsuccessful-user; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000274; sid: 5000274; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Invalid configuration settings [ignored error]"; content: "ERROR"; pcre: "/invalid attribute|rejected/i"; classtype: program-error; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000275; sid: 5000275; rev:1;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Informational message"; content: "INFO"; classtype: program-error; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000269; sid: 5000269; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Error message"; content: "ERROR"; classtype: program-error; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000270; sid: 5000270; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Warning message"; content: "WARNING"; classtype: program-error; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000271; sid: 5000271; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - ISAKMP-SA - VPN established"; content: "ISAKMP-SA established"; classtype: successful-user ; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000272; sid: 5000272; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Roadwarrior configuration error [ignored error]"; content: "such policy does not already exist"; classtype: unsuccessful-user; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000273; sid: 5000273; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Roadwarrior configuration error [ignored warning]"; content: "ignore INITIAL-CONTACT notification"; classtype: unsuccessful-user; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000274; sid: 5000274; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Invalid configuration settings [ignored error]"; content: "ERROR"; pcre: "/invalid attribute|rejected/i"; classtype: program-error; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000275; sid: 5000275; rev:2;)
 

@@ -28,10 +28,10 @@
 
 # Login from blacklisted IP (Champ Clark / 04/01/2015)
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[CITRIX-BLACKLIST] Login from outside blacklisted IP"; content: "SSLVPN LOGIN"; classtype: unsuccessful-user; parse_src_ip: 1; parse_dst_ip: 2; blacklist: by_src; fwsam: src, 1 day; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5002261; sid: 5002261; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX-BLACKLIST] Login from outside blacklisted IP"; content: "SSLVPN LOGIN"; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: unsuccessful-user; parse_src_ip: 1; parse_dst_ip: 2; blacklist: by_src; fwsam: src, 1 day; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5002261; sid: 5002261; rev:2;)
 
-#alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[CITRIX-BLACKLIST] AAA LOGIN_FAILED from blacklisted IP"; content: "AAA LOGIN_FAILED"; classtype: unsuccessful-user; parse_src_ip: 1; normalize; blacklist: by_src; fwsam: src, 1 day; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5002281; sid:5002281; rev:1;)
+#alert any $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[CITRIX-BLACKLIST] AAA LOGIN_FAILED from blacklisted IP"; content: "AAA LOGIN_FAILED"; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: unsuccessful-user; parse_src_ip: 1; normalize; blacklist: by_src; fwsam: src, 1 day; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5002281; sid:5002281; rev:2;)
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[CITRIX-BLACKLIST] SSLVPN HTTPREQUEST from blacklisted IP"; content: "SSLVPN HTTPREQUEST"; classtype: unsuccessful-user; parse_src_ip: 1; normalize; blacklist: by_src; fwsam: src, 1 day; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5002285; sid:5002285; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[CITRIX-BLACKLIST] SSLVPN HTTPREQUEST from blacklisted IP"; content: "SSLVPN HTTPREQUEST"; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: unsuccessful-user; parse_src_ip: 1; normalize; blacklist: by_src; fwsam: src, 1 day; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5002285; sid:5002285; rev:3;)
 
 

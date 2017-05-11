@@ -41,41 +41,41 @@
 
 # Dec  7 06:51:58 a postfix/smtps/smtpd[25583]: warning: unknown[88.85.171.103]: SASL PLAIN authentication failed: authentication failure
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET 465 (msg:"[ZIMBRA] Postfix/SMTPS/SMTPD - Brute force [5/3]"; content: "authentication failed"; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003027; parse_src_ip: 1; program: zimbra; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003027; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] Postfix/SMTPS/SMTPD - Brute force [5/3]"; content: "authentication failed"; xbits: set,brute_force,21600; default_proto: tcp; default_dst_port: 465; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003027; parse_src_ip: 1; program: zimbra; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003027; rev:2;)
 
 # * Dec  7 07:58:40 a saslauthd[18200]: do_auth         : auth failure: [user=frank] [service=smtp] [realm=] [mech=zimbra] [reason=Unknown]
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SASLAUTHD - Brute force [5/3]"; content: "auth failure"; content: "saslauthd"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003028; program: zimbra; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; sid:5003028; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SASLAUTHD - Brute force [5/3]"; content: "auth failure"; content: "saslauthd"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003028; program: zimbra; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; sid:5003028; rev:2;)
 
 # For /opt/zimbra/log/mailbox.log
 
 # 2016-12-07 14:29:28,990 INFO  [qtp1684106402-2039242:http://localhost:8080/service/soap/AuthRequest] [oip=10.10.10.5;ua=zclient/8.7.0_GA_1659;] SoapEngine - handler exception: authentication failed for [oggie], account not found
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SOAP Invalid user - Brute force account not found [5/3]"; content: "authentication failed"; conent: "account not found"; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003029; parse_src_ip: 1; program: mailbox; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003029; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SOAP Invalid user - Brute force account not found [5/3]"; content: "authentication failed"; conent: "account not found"; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003029; parse_src_ip: 1; program: mailbox; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003029; rev:2;)
 
 # 2016-12-07 14:30:45,802 INFO  [qtp1684106402-2039253:http://localhost:8080/service/soap/AuthRequest] [name=frank@example.com;oip=10.10.10.5;ua=zclient/8.7.0_GA_1659;] SoapEngine - handler exception: authentication failed for [frank@example.com], invalid password
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SOAP Invalid user - Brute force invalid password [5/3]"; content: "authentication failed"; content: "invalid password"; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003030; parse_src_ip: 1; program: mailbox; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003030; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SOAP Invalid user - Brute force invalid password [5/3]"; content: "authentication failed"; content: "invalid password"; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003030; parse_src_ip: 1; program: mailbox; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003030; rev:2;)
 
 # For /opt/zimbra/log/audit.log
 
 # 2016-12-07 00:00:00,128 WARN  [qtp1684106402-2033684:https:https://webmail.example.com/Microsoft-Server-ActiveSync?Cmd=Ping&User=frank%40example.com&DeviceId=android55555555&DeviceType=Android] [ip=10.10.10.5;] security - cmd=Auth; account=frank@example.com; protocol=zsync; error=authentication failed for [frank@example.com], invalid password;
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] MS ActiveSync - Brute force invalid password [5/3]"; content: "error=authentication failed"; content: "invalid password"; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003031; parse_src_ip: 1; program: audit; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003031; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] MS ActiveSync - Brute force invalid password [5/3]"; content: "error=authentication failed"; content: "invalid password"; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003031; parse_src_ip: 1; program: audit; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003031; rev:2;)
 
 # For /opt/zimbra/log/clamd.log
 
 # Tue Dec  6 09:48:39 2016 -> /opt/zimbra/data/amavisd/tmp/amavis-20161206T092039-20531-7XZZrPHk/parts/p005: Heuristics.Phishing.Email.SSL-Spoof FOUND
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] Clamd - Threat Detected"; content: "FOUND"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003038; program: misc-activity; sid:5003038; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] Clamd - Threat Detected"; content: "FOUND"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003038; program: misc-activity; sid:5003038; rev:2;)
 
 # For /opt/zimbra/log/sync.log
 
 # 2016-12-07 00:00:00,425 INFO  [qtp1684106402-2033672:https:https://webmail.example.com/Microsoft-Server-ActiveSync?Cmd=Ping&User=frank%40example.com&DeviceId=android555555 60&DeviceType=Android] [ip=10.10.10.5;] sync - HTTP/1.1 401 Invalid username or password
 # 2016-12-07 00:00:05,536 INFO  [qtp1684106402-2033684:https:https://webmail.example.com/Microsoft-Server-ActiveSync?Cmd=Ping&User=frank%40quadrantsec.com&DeviceId=android555555&DeviceType=Android] [ip=10.10.10.5;] sync - User password mismatch; name=frank@example.com
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SYNC - Brute force invalid username or password [5/3]"; content: "Invalid username or password"; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003033; parse_src_ip: 1; program: sync; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003033; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SYNC - Brute force invalid username or password [5/3]"; content: "Invalid username or password"; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003033; parse_src_ip: 1; program: sync; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003033; rev:2;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SYNC - User password mismatch [5/3]"; content: "User password mismatch"; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003037; parse_src_ip: 1; program: sync; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003037; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SYNC - User password mismatch [5/3]"; content: "User password mismatch"; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003037; parse_src_ip: 1; program: sync; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; fwsam: src, 1 day; sid:5003037; rev:2;)
 
 

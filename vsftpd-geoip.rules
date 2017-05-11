@@ -25,6 +25,6 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[VSFTPD-GEOIP] Authentication successful from outside HOME_COUNTRY"; content: "OK LOGIN"; classtype: successful-user; program: vsftpd; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5002387; sid:5002387; rev:1;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[VSFTPD-GEOIP] File uploaded from outside HOME_COUNTRY"; content: "OK UPLOAD"; classtype: suspicious-traffic; country_code: track by_src, isnot $HOME_COUNTRY; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002388; sid:5002388; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD-GEOIP] Authentication successful from outside HOME_COUNTRY"; content: "OK LOGIN"; default_proto: tcp; default_dst_port: $DEFAULT_FTP_PORT; classtype: successful-user; program: vsftpd; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5002387; sid:5002387; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD-GEOIP] File uploaded from outside HOME_COUNTRY"; content: "OK UPLOAD"; default_proto: tcp; default_dst_port: $DEFAULT_FTP_PORT; classtype: suspicious-traffic; country_code: track by_src, isnot $HOME_COUNTRY; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002388; sid:5002388; rev:2;)
 

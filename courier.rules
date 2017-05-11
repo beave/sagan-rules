@@ -25,24 +25,24 @@
 #
 #*************************************************************
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Connection established"; content: "Connection,"; classtype: not-suspicious; program: courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000258; sid:5000258; rev:1;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Connection established"; content: "Connection,"; classtype: not-suspicious; program: courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000258; sid:5000258; rev:1;)
 
 # Sep 24 12:29:52 bundy imapd: LOGIN FAILED, user=champtest, ip=[::ffff:10.0.0.1]
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Authentication failure"; content: "LOGIN FAILED,"; parse_src_ip: 1; classtype: unsuccessful-user; program: imapd|imapd-sslcourierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000259; sid:5000259; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Authentication failure"; content: "LOGIN FAILED,"; parse_src_ip: 1; default_proto: tcp; classtype: unsuccessful-user; program: imapd|imapd-sslcourierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000259; sid:5000259; rev:4;)
 
 # Sep 23 07:29:40 bundy imapd-ssl: DISCONNECTED, user=champ, ip=[::ffff:10.0.0.1], headers=0, body=0, rcvd=70, sent=576, time=4, starttls=1
 # Sep 24 07:14:17 bundy imapd-ssl: LOGOUT, user=champ, ip=[::ffff:10.0.0.1], headers=0, body=0, rcvd=1011, sent=9534, time=5, starttls=1
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Logout/disconnect"; pcre: "/LOGOUT|DISCONNECTED/"; classtype: not-suspicious; parse_src_ip: 1; program: imapd|imapd-ssl|courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000260; sid:5000260; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Logout/disconnect"; pcre: "/LOGOUT|DISCONNECTED/"; default_proto: tcp; classtype: not-suspicious; parse_src_ip: 1; program: imapd|imapd-ssl|courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000260; sid:5000260; rev:4;)
 
 # May 24 16:03:15 bundy imapd-ssl: LOGIN, user=champ, ip=[::ffff:10.0.0.1], port=[45018], protocol=IMAP
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] User login"; content: "LOGIN,"; parse_src_ip: 1;classtype: successful-user; program: imapd|imapd-ssl|courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000261; sid:5000261; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] User login"; content: "LOGIN,"; parse_src_ip: 1; default_proto: tcp; classtype: successful-user; program: imapd|imapd-ssl|courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000261; sid:5000261; rev:3;)
 
 # May 24 16:44:21 bundy imapd-ssl: TIMEOUT, user=champ, ip=[::ffff:10.0.0.1], headers=104, body=19823, rcvd=474, sent=22380, time=2466, starttls=1
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Timeout"; content: "TIMEOUT"; parse_src_ip: 1;classtype: successful-user; program: imapd|imapd-ssl|courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5002393; sid:5002393; rev:1;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Timeout"; content: "TIMEOUT"; parse_src_ip: 1; default_proto: tcp; classtype: successful-user; program: imapd|imapd-ssl|courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5002393; sid:5002393; rev:2;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Authentication failure - Brute Force [5/5]"; content: "LOGIN FAILED,"; parse_src_ip: 1; xbits: set,brute_force,21600; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 1, seconds 300; fwsam: src, 1 day; classtype: unsuccessful-user; program: imapd|imapd-sslcourierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5002398; sid:5002398; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Authentication failure - Brute Force [5/5]"; content: "LOGIN FAILED,"; parse_src_ip: 1; xbits: set,brute_force,21600; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 1, seconds 300; fwsam: src, 1 day; default_proto: tcp; classtype: unsuccessful-user; program: imapd|imapd-sslcourierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5002398; sid:5002398; rev:3;)
 

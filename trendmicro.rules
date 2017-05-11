@@ -25,4 +25,4 @@
 #
 # Trendmicro rules by Corey Fisher - 02/18/2016
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Virus Found Unable to Quarantine"; content: "SLF_INCIDENT_EVT_VIRUS_FOUND_PASS_THRU"; content: "Unable to quarantine file"; program: TMCM; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002797; classtype: suspicious-traffic; sid:5002797; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Virus Found Unable to Quarantine"; content: "SLF_INCIDENT_EVT_VIRUS_FOUND_PASS_THRU"; content: "Unable to quarantine file"; program: TMCM; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002797; classtype: suspicious-traffic; sid:5002797; rev:3;)

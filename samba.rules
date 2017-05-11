@@ -25,10 +25,10 @@
 #
 #*************************************************************
 
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] Startup network problem"; content: "getpeername failed. Error was Transport endpoint"; classtype: program-error; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000145; sid: 5000145; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] Connection denied"; pcre: "/denied connection from|connection denied from/i"; nocase; classtype:  unsuccessful-user; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000146; sid: 5000146; rev:1;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] Connection reset by peer"; content: "Connection reset by peer"; classtype: not-suspicious; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000147; sid: 5000147; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] User action denied by configuration"; content: "Permission denied"; classtype: unsuccessful-user; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000375; sid: 5000375; rev:1;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] Unable to connect to CUPS server"; content: "Unable to connect to CUPS server"; classtype: program-error; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000148; sid: 5000148; rev:1;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] Startup network problem"; content: "getpeername failed. Error was Transport endpoint"; classtype: program-error; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000145; sid: 5000145; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] Connection denied"; pcre: "/denied connection from|connection denied from/i"; nocase; classtype:  unsuccessful-user; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000146; sid: 5000146; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] Connection reset by peer"; content: "Connection reset by peer"; classtype: not-suspicious; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000147; sid: 5000147; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] User action denied by configuration"; content: "Permission denied"; classtype: unsuccessful-user; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000375; sid: 5000375; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] Unable to connect to CUPS server"; content: "Unable to connect to CUPS server"; classtype: program-error; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000148; sid: 5000148; rev:2;)
 
 

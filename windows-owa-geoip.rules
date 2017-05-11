@@ -26,6 +26,6 @@
 
 # 10.1.2.1|user|notice|notice|0d|2015-04-23|00:39:14|SERVER.local  IISWebLog       0       2015-04-23| 00:31:33 10.1.2.1 POST /ews/exchange.asmx - 443 - 12.12.12.12 MS-WebServices/1.0 - - 401 0 0 0  
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[WINDOWS-OWA-GEOIP] Login failure - Brute force [5/5]"; content: "/ews/exchange.asmx"; nocase; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; fwsam: src, 1 day; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002265; sid: 5002265; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-OWA-GEOIP] Login failure - Brute force [5/5]"; content: "/ews/exchange.asmx"; nocase; country_code: track by_src, isnot $HOME_COUNTRY; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: suspicious-traffic; fwsam: src, 1 day; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002265; sid: 5002265; rev:3;)
 
 

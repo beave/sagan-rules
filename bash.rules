@@ -33,71 +33,71 @@
 # Gentoo users can rebuild bash with the "logger" USE flag.
 #
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] ./a.out execution attempt"; content:"./a.out"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000000; program: bash|-bash|sh|-sh; sid:5000000; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] gcc execution"; content:"gcc "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000001; program: bash|-bash|sh|-sh; sid:5000001; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] telnet execution"; content:"telnet "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000002; program: bash|-bash|sh|-sh; sid:5000002; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] nmap execution"; content:"nmap "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000003; program: bash|-bash|sh|-sh; sid:5000003; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /etc/passwd access"; content:"/etc/passwd"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000004; program: bash|-bash|sh|-sh; sid:5000004; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /etc/shadow access"; content:"/etc/shadow"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000005; program: bash|-bash|sh|-sh; sid:5000005; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] make execution"; content:"make"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000006; program: bash|-bash|sh|-sh; sid:5000006; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] make execution"; content:"make "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000007; program: bash|-bash|sh|-sh; sid:5000007; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /bin/sh command line call"; content:"/bin/sh"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000008; program: bash|-bash|sh|-sh; sid:5000008; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /bin/bash command line call"; content:"/bin/bash"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000009; program: bash|-bash|sh|-sh; sid:5000009; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] HISTORY=/dev/null"; content:"HISTORY=/dev/null"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000010; program: bash|-bash|sh|-sh; sid:5000010; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] .bash_history access"; content:".bash_history"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000011; program: bash|-bash|sh|-sh; sid:5000011; rev:4;) 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /tmp/sh access"; content:"/tmp/sh"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000012; program: bash|-bash|sh|-sh; sid:5000012; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] suidperl access"; content:"suidperl"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000013; program: bash|-bash|sh|-sh; sid:5000013; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] histfile=/dev/null"; content:"histfile=/dev/null"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000014; program: bash|-bash|sh|-sh; sid:5000014; rev:4;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] iptables command access"; content:"iptables"; content: "HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000385; program: bash|-bash|sh|-sh; sid:5000385; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] ./a.out execution attempt"; content:"./a.out"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000000; program: bash|-bash|sh|-sh; sid:5000000; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] gcc execution"; content:"gcc "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000001; program: bash|-bash|sh|-sh; sid:5000001; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] telnet execution"; content:"telnet "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000002; program: bash|-bash|sh|-sh; sid:5000002; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] nmap execution"; content:"nmap "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000003; program: bash|-bash|sh|-sh; sid:5000003; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /etc/passwd access"; content:"/etc/passwd"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000004; program: bash|-bash|sh|-sh; sid:5000004; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /etc/shadow access"; content:"/etc/shadow"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000005; program: bash|-bash|sh|-sh; sid:5000005; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] make execution"; content:"make"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000006; program: bash|-bash|sh|-sh; sid:5000006; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] make execution"; content:"make "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000007; program: bash|-bash|sh|-sh; sid:5000007; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /bin/sh command line call"; content:"/bin/sh"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000008; program: bash|-bash|sh|-sh; sid:5000008; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /bin/bash command line call"; content:"/bin/bash"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000009; program: bash|-bash|sh|-sh; sid:5000009; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] HISTORY=/dev/null"; content:"HISTORY=/dev/null"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000010; program: bash|-bash|sh|-sh; sid:5000010; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] .bash_history access"; content:".bash_history"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000011; program: bash|-bash|sh|-sh; sid:5000011; rev:5;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /tmp/sh access"; content:"/tmp/sh"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000012; program: bash|-bash|sh|-sh; sid:5000012; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] suidperl access"; content:"suidperl"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000013; program: bash|-bash|sh|-sh; sid:5000013; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] histfile=/dev/null"; content:"histfile=/dev/null"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000014; program: bash|-bash|sh|-sh; sid:5000014; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] iptables command access"; content:"iptables"; content: "HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000385; program: bash|-bash|sh|-sh; sid:5000385; rev:5;)
 
 # CVS-2014-6271 (09/24/2014 - Champ Clark III)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Remote execution attempt via CVE-2014-6271"; content:"|28 29| { |3a 3b|}"; content: "HISTORY"; program: bash|-bash|sh|-sh; classtype: exploit-attempt; xbits: set, exploit_attempt, 86400; reference: url,wiki.quadrantsec.com/bin/view/Main/5002179; reference: url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271; sid:5002179; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Remote execution attempt via CVE-2014-6271"; content:"|28 29| { |3a 3b|}"; content: "HISTORY"; program: bash|-bash|sh|-sh; classtype: exploit-attempt; xbits: set, exploit_attempt, 86400; reference: url,wiki.quadrantsec.com/bin/view/Main/5002179; reference: url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271; sid:5002179; rev:3;)
 
 # Submitted by Aleksey Chudov (07/14/2015). 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] History hiding"; content:"HISTORY"; pcre:"/\s+(HISTFILE|HISTFILESIZE|HISTSIZE)/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002303; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] History hiding"; content:"HISTORY"; pcre:"/\s+history\s+(-\w+\s+)*-\w*(c|d|w)/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002304; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] .mysql_history access"; content:"HISTORY"; content:".mysql_history"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002305; rev:1;);
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] History hiding"; content:"HISTORY"; pcre:"/\s+(HISTFILE|HISTFILESIZE|HISTSIZE)/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002303; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] History hiding"; content:"HISTORY"; pcre:"/\s+history\s+(-\w+\s+)*-\w*(c|d|w)/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002304; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] .mysql_history access"; content:"HISTORY"; content:".mysql_history"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002305; rev:2;);
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Netcat execution"; content:"HISTORY"; pcre:"/\s+(nc|ncat|netcat)\s+/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002306; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Netcat execution"; content:"HISTORY"; pcre:"/\s+(nc|ncat|netcat)\s+/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002306; rev:2;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Python socket execution"; content:"HISTORY"; content:"python"; content:"socket"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002307; rev:1;);
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Python subproces execution"; content:"HISTORY"; content:"python"; content:"subproces"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002308; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] PHP socket execution"; content:"HISTORY"; content:"php"; content:"sock"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002309; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] PHP subproces execution"; content:"HISTORY"; content:"php"; content:"exec"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002310; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Perl socket execution"; content:"HISTORY"; content:"perl"; content:"ocket"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002311; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Perl subproces execution"; content:"HISTORY"; content:"perl"; content:"fork"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002312; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Ruby socket execution"; content:"HISTORY"; content:"ruby"; content:"ocket"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002313; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Ruby subproces execution"; content:"HISTORY"; content:"ruby"; content:"exec"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002314; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Python socket execution"; content:"HISTORY"; content:"python"; content:"socket"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002307; rev:2;);
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Python subproces execution"; content:"HISTORY"; content:"python"; content:"subproces"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002308; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] PHP socket execution"; content:"HISTORY"; content:"php"; content:"sock"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002309; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] PHP subproces execution"; content:"HISTORY"; content:"php"; content:"exec"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002310; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Perl socket execution"; content:"HISTORY"; content:"perl"; content:"ocket"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002311; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Perl subproces execution"; content:"HISTORY"; content:"perl"; content:"fork"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002312; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Ruby socket execution"; content:"HISTORY"; content:"ruby"; content:"ocket"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002313; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Ruby subproces execution"; content:"HISTORY"; content:"ruby"; content:"exec"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002314; rev:2;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] mknod execution [XBIT SET]"; content:"HISTORY"; content:"mknod"; xbits:set,mknod_executed,60; xbits:nounified2; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002315; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] mknod execution [XBIT SET]"; content:"HISTORY"; content:"mknod"; xbits:set,mknod_executed,60; xbits:nounified2; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002315; rev:4;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] telnet reverse shell execution"; content:"HISTORY"; content:"telnet"; xbits:isset,by_src,mknod_executed; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002316; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] telnet reverse shell execution"; content:"HISTORY"; content:"telnet"; xbits:isset,by_src,mknod_executed; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002316; rev:3;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /dev/tcp access"; content:"HISTORY"; content:"/dev/tcp"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002317; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /dev/udp access"; content:"HISTORY"; content:"/dev/udp"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002318; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /dev/tcp access"; content:"HISTORY"; content:"/dev/tcp"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002317; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /dev/udp access"; content:"HISTORY"; content:"/dev/udp"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002318; rev:2;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] csh shell execution"; content:"HISTORY"; pcre:"/\s+((\/usr)?\/s?bin\/)?csh/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002319; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] ksh shell execution"; content:"HISTORY"; pcre:"/\s+((\/usr)?\/s?bin\/)?ksh/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002320; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] tcsh shell execution"; content:"HISTORY"; pcre:"/\s+((\/usr)?\/s?bin\/)?tcsh/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002321; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] zsh shell execution"; content:"HISTORY"; pcre:"/\s+((\/usr)?\/s?bin\/)?zsh/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002322; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] csh shell execution"; content:"HISTORY"; pcre:"/\s+((\/usr)?\/s?bin\/)?csh/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002319; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] ksh shell execution"; content:"HISTORY"; pcre:"/\s+((\/usr)?\/s?bin\/)?ksh/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002320; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] tcsh shell execution"; content:"HISTORY"; pcre:"/\s+((\/usr)?\/s?bin\/)?tcsh/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002321; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] zsh shell execution"; content:"HISTORY"; pcre:"/\s+((\/usr)?\/s?bin\/)?zsh/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002322; rev:2;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] stunnel execution"; content:"HISTORY"; content:"stunnel"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002323; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] stunnel execution"; content:"HISTORY"; content:"stunnel"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002323; rev:2;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH agent forwarding"; content:"HISTORY"; content:"ssh"; content:"-A "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002324; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH dynamic forwarding"; content:"HISTORY"; content:"ssh"; content:"-D "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002325; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH GSSAPI forwarding"; content:"HISTORY"; content:"ssh"; content:"-K "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002326; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH local forwarding"; content:"HISTORY"; content:"ssh"; content:"-L "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002327; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH remote forwarding"; content:"HISTORY"; content:"ssh"; content:"-R "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002328; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH input and output forwarding"; content:"HISTORY"; content:"ssh"; content:"-W "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002329; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH tunnel forwarding"; content:"HISTORY"; content:"ssh"; content:"-w "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002330; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH X11 forwarding"; content:"HISTORY"; content:"ssh"; content:"-X "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002331; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH X11 trusted forwarding"; content:"HISTORY"; content:"ssh"; content:"-Y "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002332; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH agent forwarding"; content:"HISTORY"; content:"ssh"; content:"-A "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002324; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH dynamic forwarding"; content:"HISTORY"; content:"ssh"; content:"-D "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002325; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH GSSAPI forwarding"; content:"HISTORY"; content:"ssh"; content:"-K "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002326; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH local forwarding"; content:"HISTORY"; content:"ssh"; content:"-L "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002327; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH remote forwarding"; content:"HISTORY"; content:"ssh"; content:"-R "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002328; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH input and output forwarding"; content:"HISTORY"; content:"ssh"; content:"-W "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002329; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH tunnel forwarding"; content:"HISTORY"; content:"ssh"; content:"-w "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002330; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH X11 forwarding"; content:"HISTORY"; content:"ssh"; content:"-X "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002331; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH X11 trusted forwarding"; content:"HISTORY"; content:"ssh"; content:"-Y "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002332; rev:2;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] LD_PRELOAD environment variable access"; content:"HISTORY"; content:"LD_PRELOAD"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002333; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] LD_LIBRARY_PATH environment variable access"; content:"HISTORY"; content:"LD_LIBRARY_PATH"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002334; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] LD_PRELOAD environment variable access"; content:"HISTORY"; content:"LD_PRELOAD"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002333; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] LD_LIBRARY_PATH environment variable access"; content:"HISTORY"; content:"LD_LIBRARY_PATH"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002334; rev:2;)
 
 #  Rules added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/21/2015
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] root password change attempt"; content:"passwd"; content:"root"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5002565; program: bash|-bash|sh|-sh; sid:5002565; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] root password change attempt"; content:"passwd"; content:"root"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5002565; program: bash|-bash|sh|-sh; sid:5002565; rev:2;)

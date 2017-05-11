@@ -25,11 +25,11 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORT (msg: "[PHP] Fatal error"; content: "PHP Fatal error"; classtype: program-error; program: apache; reference: url,wiki.quadrantsec.com/bin/view/Main/5000236; sid: 5000236; rev:2;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORT (msg: "[PHP] Warning message"; content: "PHP Warning"; classtype: program-error; program: apache; reference: url,wiki.quadrantsec.com/bin/view/Main/5000237; sid: 5000237; rev:2;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORT (msg: "[PHP] Parse error"; content: "PHP Parse error"; classtype: program-error; program: apache; reference: url,wiki.quadrantsec.com/bin/view/Main/5000238; sid: 5000238; rev:2;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORT (msg: "[PHP] Possible web attack"; content: "expects parameter 1 to be string, array given in"; classtype: exploit-attempt; program: apache;  reference: url,wiki.quadrantsec.com/bin/view/Main/5000240; sid: 5000240; rev:2;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORT (msg: "[PHP] Internal error [missing file]"; pcre: "/failed opening|failed to open stream/i"; classtype: program-error; program: apache; reference: url,wiki.quadrantsec.com/bin/view/Main/5000241; sid: 5000241; rev:2;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORT (msg: "[PHP] Internal error [call to undefined function]"; pcre: "/failed opening required|call to undefined function/i"; classtype: program-error; program: apache; reference: url,wiki.quadrantsec.com/bin/view/Main/5000242; sid: 5000242; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PHP] Fatal error"; content: "PHP Fatal error"; default_proto: tcp; default_dst_port: $DEFAULT_HTTP_PORT; classtype: program-error; program: apache; reference: url,wiki.quadrantsec.com/bin/view/Main/5000236; sid: 5000236; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PHP] Warning message"; content: "PHP Warning"; default_proto: tcp; default_dst_port: $DEFAULT_HTTP_PORT; classtype: program-error; program: apache; reference: url,wiki.quadrantsec.com/bin/view/Main/5000237; sid: 5000237; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PHP] Parse error"; content: "PHP Parse error"; default_proto: tcp; default_dst_port: $DEFAULT_HTTP_PORT; classtype: program-error; program: apache; reference: url,wiki.quadrantsec.com/bin/view/Main/5000238; sid: 5000238; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PHP] Possible web attack"; content: "expects parameter 1 to be string, array given in"; default_proto: tcp; default_dst_port: $DEFAULT_HTTP_PORT; classtype: exploit-attempt; program: apache;  reference: url,wiki.quadrantsec.com/bin/view/Main/5000240; sid: 5000240; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PHP] Internal error [missing file]"; pcre: "/failed opening|failed to open stream/i"; default_proto: tcp; default_dst_port: $DEFAULT_HTTP_PORT; classtype: program-error; program: apache; reference: url,wiki.quadrantsec.com/bin/view/Main/5000241; sid: 5000241; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PHP] Internal error [call to undefined function]"; pcre: "/failed opening required|call to undefined function/i"; default_proto: tcp; default_dst_port: $DEFAULT_HTTP_PORT; classtype: program-error; program: apache; reference: url,wiki.quadrantsec.com/bin/view/Main/5000242; sid: 5000242; rev:3;)
 
 

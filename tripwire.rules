@@ -25,4 +25,4 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[TRIPWIRE] Integrity Check failed"; content: "Integrity Check failed"; content: "File could not"; classtype: system-event; program: tripwire; reference: url,wiki.quadrantsec.com/bin/view/Main/5000129; sid: 5000129; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[TRIPWIRE] Integrity Check failed"; content: "Integrity Check failed"; content: "File could not"; classtype: system-event; program: tripwire; reference: url,wiki.quadrantsec.com/bin/view/Main/5000129; sid: 5000129; rev:2;)

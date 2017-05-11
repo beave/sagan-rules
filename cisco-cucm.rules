@@ -26,9 +26,9 @@
 #*************************************************************
 # These rules are for the Cisco Unified Call Manager (VoIP) systems. 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Call Manager Telephony Subsystem Shutdown"; content: "SS_SHUTDOWN"; content: "CMT subsystem"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001709; sid: 5001709; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Call Manager Telephony Subsystem ModuleStop"; content: "ModuleStop"; content: "CMT Subsystem"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001710; sid: 5001710; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Grammar Manager Telephony Subsystem ModuleStop"; content: "ModuleStop"; content: "Grammar Manager"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001711; sid: 5001711; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Cisco Unified CCX MGR Shutdown"; content: "MGR_SHUTDOWN"; content: "Cisco Unified CCX"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001712; sid: 5001712; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Socket Manager Telephony Subsystem ModuleStart"; content: "ModuleStart"; content: "Socket Manager"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001713; sid: 5001713; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Call Manager Telephony Subsystem Shutdown"; content: "SS_SHUTDOWN"; content: "CMT subsystem"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001709; sid: 5001709; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Call Manager Telephony Subsystem ModuleStop"; content: "ModuleStop"; content: "CMT Subsystem"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001710; sid: 5001710; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Grammar Manager Telephony Subsystem ModuleStop"; content: "ModuleStop"; content: "Grammar Manager"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001711; sid: 5001711; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Cisco Unified CCX MGR Shutdown"; content: "MGR_SHUTDOWN"; content: "Cisco Unified CCX"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001712; sid: 5001712; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Socket Manager Telephony Subsystem ModuleStart"; content: "ModuleStart"; content: "Socket Manager"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001713; sid: 5001713; rev:2;)
 

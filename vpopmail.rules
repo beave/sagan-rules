@@ -25,8 +25,8 @@
 #
 #*************************************************************
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $POP3_PORT (msg:"[VPOPMAIL] Authentication failure for POP3 service"; content: "password fail"; classtype: unsuccessful-user; program: vpopmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000211; sid: 5000211; rev:3;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $POP3_PORT (msg:"[VPOPMAIL] User not found/Invalid login for POP3 service"; content: "vpopmail user not found"; classtype: unsuccessful-user; program: vpopmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000212; sid: 5000212; rev:3;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $POP3_PORT (msg:"[VPOPMAIL] Successful POP3 login"; content: "login success"; classtype: successful-user; program: vpopmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000213; sid: 5000213; rev:3;)
-alert tcp $EXTERNAL_NET any -> $HOME_NET $POP3_PORT (msg:"[VPOPMAIL] Null password given for POP3 service"; content: "null password given"; classtype: unsuccessful-user; program: vpopmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000214; sid: 5000214; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VPOPMAIL] Authentication failure for POP3 service"; content: "password fail"; default_proto: tcp; default_dst_port: $DEFAULT_POP3_PORT; classtype: unsuccessful-user; program: vpopmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000211; sid: 5000211; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VPOPMAIL] User not found/Invalid login for POP3 service"; content: "vpopmail user not found"; default_proto: tcp; default_dst_port: $DEFAULT_POP3_PORT; classtype: unsuccessful-user; program: vpopmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000212; sid: 5000212; rev:4;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VPOPMAIL] Successful POP3 login"; content: "login success"; default_proto: tcp; default_dst_port: $DEFAULT_POP3_PORT; classtype: successful-user; program: vpopmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000213; sid: 5000213; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VPOPMAIL] Null password given for POP3 service"; content: "null password given"; default_proto: tcp; default_dst_port: $DEFAULT_POP3_PORT; classtype: unsuccessful-user; program: vpopmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000214; sid: 5000214; rev:4;)
 

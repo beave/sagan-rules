@@ -25,7 +25,5 @@
 #
 #
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[PROFTPD-GEOIP] Authentication success from outside HOME_COUNTRY"; content: "Login successful"; country_code: track by_src, isnot $HOME_COUNTRY; parse_src_ip: 3; classtype: successful-user; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001870; sid: 5001870; rev:4;)
-
-
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD-GEOIP] Authentication success from outside HOME_COUNTRY"; content: "Login successful"; country_code: track by_src, isnot $HOME_COUNTRY; parse_src_ip: 3; default_proto: tcp; default_dst_port: $DEFAULT_FTP_PORT; classtype: successful-user; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001870; sid: 5001870; rev:5;)
 

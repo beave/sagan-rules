@@ -28,8 +28,8 @@
 # Watchguard rules by Kenneth Comollo <kcomollo@quadrantsec.com>;
 # 2017/03/08
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[WATCHGUARD-GEOIP] VPN login from outside HOME_COUNTRY"; program WatchGuard*; content: "msg_id=|22|0207-0001|22|"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 2; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003095; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD-GEOIP] VPN login from outside HOME_COUNTRY"; program WatchGuard*; content: "msg_id=|22|0207-0001|22|"; country_code: track by_src, isnot $HOME_COUNTRY; default_proto:tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: successful-user; parse_src_ip: 2; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003095; rev:2;)
 
-alert syslog $HOME_NET any -> $EXTERNAL_NET $FTP_PORT (msg: "[WATCHGUARD-GEOIP] FTP file transfer to outside HOME_COUNTRY"; program: WatchGuard*; country_code: track by_dst, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003096; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WATCHGUARD-GEOIP] FTP file transfer to outside HOME_COUNTRY"; program: WatchGuard*; country_code: track by_dst, isnot $HOME_COUNTRY; default_proto:tcp; default_dst_port: $DEFAULT_FTP_PORT; classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003096; rev:2;)
 
 

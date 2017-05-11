@@ -26,6 +26,6 @@
 #*************************************************************
 #
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CACTI] CPU went above threshold"; content: "CPU went above threshold"; classtype: system-event; program: CactiTholdLog; reference: url,wiki.quadrantsec.com/bin/view/Main/5001076; sid: 5001076; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[CACTI] CPU restored to normal"; content: "CPU restored to normal"; classtype: system-event; program: CactiTholdLog; reference: url,wiki.quadrantsec.com/bin/view/Main/5001077; sid: 5001077; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CACTI] CPU went above threshold"; content: "CPU went above threshold"; classtype: system-event; program: CactiTholdLog; reference: url,wiki.quadrantsec.com/bin/view/Main/5001076; sid: 5001076; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CACTI] CPU restored to normal"; content: "CPU restored to normal"; classtype: system-event; program: CactiTholdLog; reference: url,wiki.quadrantsec.com/bin/view/Main/5001077; sid: 5001077; rev:2;)
 

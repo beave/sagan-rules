@@ -25,5 +25,5 @@
 #
 #*************************************************************
 
-drop tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"TCP Treason uncloaked"; content: "Treason uncloaked"; classtype: bad-unknown; program: TCP; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000031; sid: 5000031; rev:3;)
+drop any $EXTERNAL_NET any -> $HOME_NET any (msg:"TCP Treason uncloaked"; content: "Treason uncloaked"; default_proto: tcp; classtype: bad-unknown; program: TCP; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000031; sid: 5000031; rev:4;)
 

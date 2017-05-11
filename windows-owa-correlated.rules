@@ -24,6 +24,6 @@
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[WINDOWS-OWA-CORRELATED] Login failure after suspicious activity"; content: "/ews/exchange.asmx"; nocase; classtype: correlated-attack; xbits: isset,by_src,recon|honeypot|exploit_attempt; fwsam: src, 1 day; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002391; sid:5002391; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-OWA-CORRELATED] Login failure after suspicious activity"; content: "/ews/exchange.asmx"; nocase; default_proto: tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: correlated-attack; xbits: isset,by_src,recon|honeypot|exploit_attempt|brute_force; fwsam: src, 1 day; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002391; sid:5002391; rev:3;)
 
 

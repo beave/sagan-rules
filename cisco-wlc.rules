@@ -28,7 +28,7 @@
 # Cisco-WLC to point to the Sagan device.   Setup snmptrapd on the Sagan device to receive the SNMP trap messages
 # and forward them to syslog.  When snmptrapd is used,  Sagan will look for the OID of the offending message.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Rogue AP detected [0/5]"; program: snmptrapd; content: "14179.2.6.3.36"; classtype: suspicious-traffic; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001689; sid:5001689; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Rogue AP detected [0/5]"; program: snmptrapd; content: "14179.2.6.3.36"; classtype: suspicious-traffic; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001689; sid:5001689; rev:3;)
 
 # Champ Clark (cclark@quadrantsec.com) - 08/27/2014
 #
@@ -37,74 +37,74 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Rogue AP dete
 
 # Revision = 1.000 Name = "Bcast deauth", Ver = 0, Preced= 1, FrmType = mgmt, Pattern = 0:0x00C0:0x03FF, Pattern = 4:0x01:0x01, Freq=30, Quiet = 300, Action = report, Desc="Broadcast Deauthentication Frame"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Bcast Deauth"; program: snmptrapd; content: "signatureName=Bcast deauth"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002104; sid:5002104; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Bcast Deauth"; program: snmptrapd; content: "signatureName=Bcast deauth"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002104; sid:5002104; rev:2;)
 
 # Name = "NULL probe resp 1", Ver = 0, Preced = 2, FrmType = mgmt, Pattern = 0:0x0050:0x03FF, Pattern = 36:0x0000:0xFFFF, Freq=1, Quiet = 300, Action = report, Desc = "NULL Probe Response - Zero length SSID element" 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Null probe resp 1"; program: snmptrapd; content: "signatureName=NULL probe resp 1"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002105; sid:5002105; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Null probe resp 1"; program: snmptrapd; content: "signatureName=NULL probe resp 1"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002105; sid:5002105; rev:2;)
 
 # Name = "NULL probe resp 2", Ver = 0, Preced = 3, FrmType = mgmt, Pattern = 0:0x0050:0x03FF, Pattern = !36:0x00:0xFF, Freq=1, Quiet = 300, Action = report, Desc = "NULL Probe Response - No SSID element"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Null probe resp 2"; program: snmptrapd; content: "signatureName=NULL probe resp 2"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002106; sid:5002106; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Null probe resp 2"; program: snmptrapd; content: "signatureName=NULL probe resp 2"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002106; sid:5002106; rev:2;)
 
 # Name = "Assoc flood", Ver = 0, Preced= 4, FrmType = mgmt, Pattern = 0:0x0000:0x03FF, Freq=50, Quiet = 600, Action = report, Desc="Association Request flood" Name = "Auth Flood", Ver = 0, Preced= 5, FrmType = mgmt, Pattern = 0: 0x00b0: 0x03FF, Freq=50, Quiet = 600, Action = report, Desc="Authentication Request flood"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Assoc Flood"; program: snmptrapd; content: "signatureName=Assoc flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002107; sid:5002107; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Assoc Flood"; program: snmptrapd; content: "signatureName=Assoc flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002107; sid:5002107; rev:2;)
 
 # Name = "Reassoc flood", Ver = 0, Preced= 5, FrmType = mgmt, Pattern = 0:0x0020:0x03FF, Freq=50, Quiet = 600, Action = report, Desc="Reassociation Request flood"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Reassoc Flood"; program: snmptrapd; content: "signatureName=Reassoc flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002108; sid:5002108; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Reassoc Flood"; program: snmptrapd; content: "signatureName=Reassoc flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002108; sid:5002108; rev:2;)
 
 # Name = "Broadcast Probe flood", Ver = 0, Preced= 6, FrmType = mgmt, Pattern = 0:0x0040:0x03FF, Pattern = 4:0x01:0x01, Pattern = 24:0x0000:0xFFFF, Freq=50, Quiet = 600, Action = report, Desc="Broadcast Probe Request flood"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Broadcast Probe flood"; program: snmptrapd; content: "signatureName=Broadcast Probe flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002109; sid:5002109; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Broadcast Probe flood"; program: snmptrapd; content: "signatureName=Broadcast Probe flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002109; sid:5002109; rev:2;)
 
 # Name = "Disassoc flood", Ver = 0, Preced= 7, FrmType = mgmt, Pattern = 0:0x00A0:0x03FF, Freq=50, Quiet = 600, Action = report, Desc="Disassociation flood"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Disassoc flood"; program: snmptrapd; content: "signatureName=Disassoc flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002110; sid:5002110; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Disassoc flood"; program: snmptrapd; content: "signatureName=Disassoc flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002110; sid:5002110; rev:2;)
 
 # Name = "Deauth flood", Ver = 0, Preced= 8, FrmType = mgmt, Pattern = 0:0x00C0:0x03FF, Freq=50, Quiet = 600, Action = report, Desc="Deauthentication flood"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Deauth flood"; program: snmptrapd; content: "signatureName=Deauth flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002111; sid:5002111; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Deauth flood"; program: snmptrapd; content: "signatureName=Deauth flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002111; sid:5002111; rev:2;)
 
 # Name = "Res mgmt 6 & 7", Ver = 0, Preced= 9, FrmType = mgmt, Pattern = 0:0x0060:0x03EF, Freq=5, Quiet = 600, Action = report, Desc="Reserved management sub-types 6 and 7"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Res mgmt 6 & 7"; program: snmptrapd; content: "signatureName=Res mgmt 6 & 7"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002112; sid:5002112; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Res mgmt 6 & 7"; program: snmptrapd; content: "signatureName=Res mgmt 6 & 7"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002112; sid:5002112; rev:2;)
 
 # Name = "Res mgmt D", Ver = 0, Preced= 10, FrmType = mgmt, Pattern = 0:0x00D0:0x03FF, Freq=5, Quiet = 600, Action = report, Desc="Reserved management sub-type D"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Res mgmt D"; program: snmptrapd; content: "signatureName=Res mgmt D"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002113; sid:5002113; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Res mgmt D"; program: snmptrapd; content: "signatureName=Res mgmt D"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002113; sid:5002113; rev:2;)
 
 # Name = "Res mgmt E & F", Ver = 0, Preced= 11, FrmType = mgmt, Pattern = 0:0x00E0:0x03EF, Freq=5, Quiet = 600, Action = report, Desc="Reserved management sub-types E and F"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Res mgmt E & F"; program: snmptrapd; content: "signatureName=Res mgmt E & F"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002114; sid:5002114; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Res mgmt E & F"; program: snmptrapd; content: "signatureName=Res mgmt E & F"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002114; sid:5002114; rev:2;)
 
 # Name = "EAPOL flood", Ver = 0, Preced= 12, FrmType = data, Pattern = 0:0x0108:0x03FF, Pattern = 30:0x888E:0xFFFF, Freq=50, Quiet = 300, Action = report, Desc="EAPOL Flood Attack"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] EAPOL flood"; program: snmptrapd; content: "signatureName=EAPOL flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002115; sid:5002115; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] EAPOL flood"; program: snmptrapd; content: "signatureName=EAPOL flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002115; sid:5002115; rev:2;)
 
 # Name = "NetStumbler 3.2.0", Ver = 0, Preced= 13, FrmType = data, Pattern = 0:0x0108:0x03FF, Pattern = 27:0x00601d:0xFFFFFF, Pattern = 30:0x0001:0xFFFF, Pattern = 36:0x466c7572:0xFFFFFFFF, Freq = 1, Quiet = 300, Action = report, Desc="NetStumbler 3.2.0"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] NetStumbler 3.2.0 detected"; program: snmptrapd; content: "signatureName=NetStumbler 3.2.0"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002116; sid:5002116; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] NetStumbler 3.2.0 detected"; program: snmptrapd; content: "signatureName=NetStumbler 3.2.0"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002116; sid:5002116; rev:2;)
 
 # Name = "NetStumbler 3.2.3", Ver = 0, Preced= 14, FrmType = data, Pattern = 0:0x0108:0x03FF, Pattern = 27:0x00601d:0xFFFFFF, Pattern = 30:0x0001:0xFFFF, Pattern = 36:0x416C6C20:0xFFFFFFFF, Freq = 1, Quiet = 600, Action = report, Desc="NetStumbler 3.2.3"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] NetStumbler 3.2.3 detected"; program: snmptrapd; content: "signatureName=NetStumbler 3.2.3"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002117; sid:5002117; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] NetStumbler 3.2.3 detected"; program: snmptrapd; content: "signatureName=NetStumbler 3.2.3"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002117; sid:5002117; rev:2;)
 
 # Name = "NetStumbler 3.3.0", Ver = 0, Preced= 15, FrmType = data, Pattern = 0:0x0108:0x03FF, Pattern = 27:0x00601d:0xFFFFFF, Pattern = 30:0x0001:0xFFFF, Pattern = 36:0x20202020:0xFFFFFFFF, Freq = 1, Quiet = 600, Action = report, Desc="NetStumbler 3.3.0"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] NetStumbler 3.3.0 detected"; program: snmptrapd; content: "signatureName=NetStumbler 3.3.0"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002118; sid:5002118; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] NetStumbler 3.3.0 detected"; program: snmptrapd; content: "signatureName=NetStumbler 3.3.0"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002118; sid:5002118; rev:2;)
 
 # Name = "NetStumbler generic", Ver = 0, Preced= 16, FrmType = data, Pattern = 0:0x0108:0x03FF, Pattern = 27:0x00601d:0xFFFFFF, Pattern = 30:0x0001:0xFFFF, Freq = 1, Quiet = 600, Action = report, Desc="NetStumbler"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] NetStumbler generic detected"; program: snmptrapd; content: "signatureName=NetStumbler generic"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002119; sid:5002119; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] NetStumbler generic detected"; program: snmptrapd; content: "signatureName=NetStumbler generic"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002119; sid:5002119; rev:2;)
 
 # Name = "Wellenreiter", Ver = 0, Preced= 17, FrmType = mgmt, Pattern = 0:0x0040:0x03FF, Pattern = 24:0x001d746869735f69735f757365645f666f725f77656c6c656e726569: 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff, Freq = 1, Quiet = 600, Action = report, Desc="Wellenreiter"
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Wellenreiter detected"; program: snmptrapd; content: "signatureName=Wellenreiter"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002120; sid:5002120; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Wellenreiter detected"; program: snmptrapd; content: "signatureName=Wellenreiter"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002120; sid:5002120; rev:2;)
 
 # Big NAV Dos attack from AP with Base Radio MAC 00:0f:23:xx:xx:xx, Slot ID 0 and Source MAC 00:00:00:00:00:00
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Big NAV Dos attack"; program: snmptrapd; content: "Big NAV Dos attack"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002121; sid:5002121; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Big NAV Dos attack"; program: snmptrapd; content: "Big NAV Dos attack"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002121; sid:5002121; rev:2;)
 
 

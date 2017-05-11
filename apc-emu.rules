@@ -26,9 +26,9 @@
 #*************************************************************
 #
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[APC-EMU] Humidity violation"; content: "humidity violation,"; classtype: hardware-event; program: EMU; reference: url,wiki.quadrantsec.com/bin/view/Main/5001057; sid: 5001057; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[APC-EMU] Humidity violation cleared"; content: "humidity violation cleared,"; classtype: hardware-event; program: EMU; reference: url,wiki.quadrantsec.com/bin/view/Main/5001058; sid: 5001058; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[APC-EMU] Front door opened"; content: "Front Door' opened,"; classtype: hardware-event; program: EMU; reference: url,wiki.quadrantsec.com/bin/view/Main/5001059; sid: 5001059; rev:1;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[APC-EMU] Front door closed"; content: "Front Door' closed,"; classtype: hardware-event; program: EMU; reference: url,wiki.quadrantsec.com/bin/view/Main/5001060; sid: 5001060; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[APC-EMU] Humidity violation"; content: "humidity violation,"; classtype: hardware-event; program: EMU; reference: url,wiki.quadrantsec.com/bin/view/Main/5001057; sid: 5001057; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[APC-EMU] Humidity violation cleared"; content: "humidity violation cleared,"; classtype: hardware-event; program: EMU; reference: url,wiki.quadrantsec.com/bin/view/Main/5001058; sid: 5001058; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[APC-EMU] Front door opened"; content: "Front Door' opened,"; classtype: hardware-event; program: EMU; reference: url,wiki.quadrantsec.com/bin/view/Main/5001059; sid: 5001059; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[APC-EMU] Front door closed"; content: "Front Door' closed,"; classtype: hardware-event; program: EMU; reference: url,wiki.quadrantsec.com/bin/view/Main/5001060; sid: 5001060; rev:2;)
 
 

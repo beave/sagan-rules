@@ -27,8 +27,8 @@
 
 # Brian Echeverry - NeXpose rules (security scanning software)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan paused"; content: "SCAN PAUSED|3a|"; classtype: program-error; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002276; sid:5002276; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan failed"; content: "SCAN FAILED|3a|"; classtype: program-error; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002277; sid:5002277; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan stopped"; content: "SCAN STOPPED|3a|"; classtype: program-error; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002289; sid:5002289; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan paused"; content: "SCAN PAUSED|3a|"; classtype: program-error; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002276; sid:5002276; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan failed"; content: "SCAN FAILED|3a|"; classtype: program-error; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002277; sid:5002277; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan stopped"; content: "SCAN STOPPED|3a|"; classtype: program-error; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002289; sid:5002289; rev:2;)
 
 

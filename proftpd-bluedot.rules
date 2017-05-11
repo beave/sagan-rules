@@ -25,7 +25,5 @@
 #
 #
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg:"[PROFTPD-BLUEDOT] Authentication success from suspicious source"; content: "Login successful"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; parse_src_ip: 3; classtype: successful-user; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002908; sid:5002908; rev:3;)
-
-
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD-BLUEDOT] Authentication success from suspicious source"; content: "Login successful"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; parse_src_ip: 3; default_proto: tcp; default_dst_port: $DEFAULT_FTP_PORT; classtype: successful-user; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002908; sid:5002908; rev:4;)
 

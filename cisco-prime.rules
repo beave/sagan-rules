@@ -33,139 +33,139 @@
 # The AP ''{0}'' with protocol ''{1}'' receives a message with a large NAV field and all traffic on the channel is suspended. This is most likely a malicious denial of service attack.
 # The system detected a possible denial of service attack and suspended all traffic to the affected channel. 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] BIG NAV DOS Attack"; program: snmptrapd; content: "=AP_BIG_NAV_DOS_ATTACK|28|"; classtype: attempted-dos; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002122; sid:5002122; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] BIG NAV DOS Attack"; program: snmptrapd; content: "=AP_BIG_NAV_DOS_ATTACK|28|"; classtype: attempted-dos; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002122; sid:5002122; rev:3;)
 
 # AP_CONTAINED_AS_ROGUE
 # AP ''{0}'' is being contained. This is due to rogue device spoofing or targeting AP ''{0}'' BSSID on ''{1}'' radio.
 # An access point is reporting that it is being contained as a rogue. 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP detect and contained"; program: snmptrapd; content: "=AP_CONTAINED_AS_ROGUE|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002123; sid:5002123; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP detect and contained"; program: snmptrapd; content: "=AP_CONTAINED_AS_ROGUE|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002123; sid:5002123; rev:3;)
 
 # AP_MAX_ROGUE_COUNT_EXCEEDED
 # AP ''{0}'' is being contained. This is due to rogue device spoofing or targeting AP ''{0}'' BSSID on ''{1}'' radio.
 # The number of rogues detected by a switch (controller) exceeds the internal threshold. 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP detected exceed theshold"; program: snmptrapd; content: "=AP_MAX_ROGUE_COUNT_EXCEEDED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002124; sid:5002124; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP detected exceed theshold"; program: snmptrapd; content: "=AP_MAX_ROGUE_COUNT_EXCEEDED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002124; sid:5002124; rev:3;)
 
 # AUTHENTICATION_FAILURE
 # Switch ''{0}''. Authentication failure reported.
 # There was an SNMP authentication failure on the switch (controller). 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] SNMP Authentication failure"; program: snmptrapd; content: "=AUTHENTICATION_FAILURE|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002125; sid:5002125; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] SNMP Authentication failure"; program: snmptrapd; content: "=AUTHENTICATION_FAILURE|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002125; sid:5002125; rev:3;)
 
 # BSN_AUTHENTICATION_FAILURE
 # Switch ''{0}." User authentication from Switch ''{0}'' failed for username ''{1}'' and user type ''{2}."
 # A user authentication failure is reported for a local management user or a MAC filter is configured on the controller. 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Authentication failure by local management user/MAC "; program: snmptrapd; content: "=BSN_AUTHENTICATION_FAILURE|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002126; sid:5002126; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Authentication failure by local management user/MAC "; program: snmptrapd; content: "=BSN_AUTHENTICATION_FAILURE|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002126; sid:5002126; rev:3;)
 
 # ROGUE_AP_DETECTED
 # Rogue AP or ad hoc rogue ''{0}'' with SSID ''{3}'' and channel number ''{4}'' is detected by AP ''{1}'' Radio type ''{2}'' with RSSI ''{5}'' and SNR ''{6}."
 # The system has detected a rogue access point. 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP or ADHOC detected"; program: snmptrapd; content: "=ROGUE_AP_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002127; sid:5002127; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP or ADHOC detected"; program: snmptrapd; content: "=ROGUE_AP_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002127; sid:5002127; rev:3;)
 
 # ROGUE_AP_ON_NETWORK
 # Rogue AP or ad hoc rogue ''{0}'' is on the wired network.
 # A rogue access point is found reachable through the wired network.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP on the network!"; program: snmptrapd; content: "=ROGUE_AP_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002128; sid:5002128; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP on the network!"; program: snmptrapd; content: "=ROGUE_AP_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002128; sid:5002128; rev:3;)
 
 # ROGUE_AP_REMOVED
 # Rogue AP or ad hoc rogue ''{0}'' is removed; it was detected as Rogue AP by AP ''{1}'' Radio type ''{2}.''
 # The system is no longer detecting a rogue access point.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP has been removed"; program: snmptrapd; content: "=ROGUE_AP_REMOVED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002129; sid:5002129; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP has been removed"; program: snmptrapd; content: "=ROGUE_AP_REMOVED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002129; sid:5002129; rev:3;)
 
 # SENSED_TEMPERATURE_HIGH
 # The sensed temperature on the Switch ''{0}'' is too high. The current sensed temperature is ''{1}.''
 # The internal temperature of the system has crossed the configured thresholds.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Internal high temperature detected!"; program: snmptrapd; content: "=SENSED_TEMPERATURE_HIGH|28|"; classtype: hardware-event; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002130; sid:5002130; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Internal high temperature detected!"; program: snmptrapd; content: "=SENSED_TEMPERATURE_HIGH|28|"; classtype: hardware-event; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002130; sid:5002130; rev:3;)
 
 # SENSED_TEMPERATURE_LOW
 # The sensed temperature on the Switch ''{0}'' is too low. The current sensed temperature is ''{1}.''
 # The internal temperature of the device is below the configured limit in the system.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Internal low temperature detected!"; program: snmptrapd; content: "=SENSED_TEMPERATURE_LOW|28|"; classtype: hardware-event; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002131; sid:5002131; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Internal low temperature detected!"; program: snmptrapd; content: "=SENSED_TEMPERATURE_LOW|28|"; classtype: hardware-event; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002131; sid:5002131; rev:3;)
 
 # STATION_AUTHENTICATION_FAIL
 # Client ''{0}'' has failed authenticating with AP ''{1},'' interface ''{2}.'' The reason code is ''{3}.''
 # The system failed to authenticate a client.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Station authentication failure"; program: snmptrapd; content: "=STATION_AUTHENTICATION_FAIL|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002132; sid:5002132; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Station authentication failure"; program: snmptrapd; content: "=STATION_AUTHENTICATION_FAIL|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002132; sid:5002132; rev:3;)
 
 # STATION_ASSOCIATE_FAIL
 # Client ''{0}'' failed to associate with AP ''{1},'' interface ''{2}.'' The reason code is ''{3}.''
 # A client station failed to associate with the system.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Station association failure"; program: snmptrapd; content: "=STATION_ASSOCIATE_FAIL|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002133; sid:5002133; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Station association failure"; program: snmptrapd; content: "=STATION_ASSOCIATE_FAIL|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002133; sid:5002133; rev:3;)
 
 # STATION_BLACKLISTED
 # Client ''{0}'' which was associated with AP ''{1},'' interface ''{2}'' is excluded. The reason code is ''{3}.''
 # A client is in the exclusion list and is not allowed to authenticate for a configured interval.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Station blacklisted"; program: snmptrapd; content: "=STATION_BLACKLISTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002134; sid:5002134; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Station blacklisted"; program: snmptrapd; content: "=STATION_BLACKLISTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002134; sid:5002134; rev:3;)
 
 # SWITCH_DETECTED_DUPLICATE_IP
 # Switch ''{0}'' detected duplicate IP address ''{0}'' being used by machine with mac address ''{1}.''
 # The system has detected a duplicate IP address in the network that is assigned to the switch (controller).
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Duplicate IP address assigned to controller"; program: snmptrapd; content: "=SWITCH_DETECTED_DUPLICATE_IP|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002135; sid:5002135; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Duplicate IP address assigned to controller"; program: snmptrapd; content: "=SWITCH_DETECTED_DUPLICATE_IP|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002135; sid:5002135; rev:3;)
 
 # TOO_MANY_USER_UNSUCCESSFUL_LOGINS
 # User ''{1}'' with IP Address ''{0}'' has made too many unsuccessful login attempts.
 # A management user has made too many login attempts.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Possible brute force from management user!"; program: snmptrapd; content: "=TOO_MANY_USER_UNSUCCESSFUL_LOGINS|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002136; sid:5002136; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Possible brute force from management user!"; program: snmptrapd; content: "=TOO_MANY_USER_UNSUCCESSFUL_LOGINS|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002136; sid:5002136; rev:3;)
 
 # ADHOC_ROGUE_AUTO_CONTAINED
 # Adhoc Rogue ''{0}'' was found and is auto contained as per WPS policy.
 # An ad hoc rogue that the system has detected earlier is now clear.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue ADHOC contained"; program: snmptrapd; content: "=ADHOC_ROGUE_AUTO_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002137; sid:5002137; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue ADHOC contained"; program: snmptrapd; content: "=ADHOC_ROGUE_AUTO_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002137; sid:5002137; rev:3;)
 
 # ROGUE_AP_AUTO_CONTAINED
 # Rogue AP ''{0}'' is advertising our SSID and is auto contained as per WPS policy.
 # The system has automatically contained a rogue access point.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP auto contained"; program: snmptrapd; content: "=ROGUE_AP_AUTO_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002138; sid:5002138; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP auto contained"; program: snmptrapd; content: "=ROGUE_AP_AUTO_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002138; sid:5002138; rev:3;)
 
 # TRUSTED_AP_INVALID_ENCRYPTION
 # Trusted AP ''{0}'' is invalid encryption. It is using ''{1}'' instead of ''{2}." It is auto contained as per WPS policy.
 # The system automatically contained a trusted access point that has invalid encryption.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Trusted AP has invalid encryption"; program: snmptrapd; content: "=TRUSTED_AP_INVALID_ENCRYPTION|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002140; sid:5002140; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Trusted AP has invalid encryption"; program: snmptrapd; content: "=TRUSTED_AP_INVALID_ENCRYPTION|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002140; sid:5002140; rev:3;)
 
 # TRUSTED_AP_INVALID_RADIO_POLICY
 # Trusted AP ''{0}'' has invalid radio policy. It is using ''{1}'' instead of ''{2}." It has been auto contained as per WPS policy.
 # The system has contained a trusted access point with an invalid radio policy.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Trusted AP has invalid radio policy"; program: snmptrapd; content: "=TRUSTED_AP_INVALID_RADIO_POLICY|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002141; sid:5002141; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Trusted AP has invalid radio policy"; program: snmptrapd; content: "=TRUSTED_AP_INVALID_RADIO_POLICY|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002141; sid:5002141; rev:3;)
 
 # TRUSTED_AP_INVALID_SSID
 # Trusted AP ''{0}'' has invalid SSID. It was auto contained as per WPS policy.
 # The system has automatically contained a trusted access point for advertising an invalid SSID.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Trusted AP has invalid SSID"; program: snmptrapd; content: "=TRUSTED_AP_INVALID_SSID|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002142; sid:5002142; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Trusted AP has invalid SSID"; program: snmptrapd; content: "=TRUSTED_AP_INVALID_SSID|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002142; sid:5002142; rev:3;)
 
 # TRUSTED_AP_MISSING
 # Trusted AP ''{0}'' is missing or has failed.
 # The wireless system no longer detects a trusted access point.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Trusted AP missing"; program: snmptrapd; content: "=TRUSTED_AP_MISSING|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002143; sid:5002143; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Trusted AP missing"; program: snmptrapd; content: "=TRUSTED_AP_MISSING|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002143; sid:5002143; rev:3;)
 
 # AP_IMPERSONATION_DETECTED
 # AP Impersonation with MAC ''{0}'' is detected by authenticated AP ''{1}'' on ''{2}'' radio and Slot ID ''{3}.''
 # A radio of an authenticated access point has heard from another access point whose MAC address neither matches that of a rogue nor is it an authenticated neighbor of the detecting access point.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] AP impersionation detected!"; program: snmptrapd; content: "=AP_IMPERSONATION_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002144; sid:5002144; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] AP impersionation detected!"; program: snmptrapd; content: "=AP_IMPERSONATION_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002144; sid:5002144; rev:3;)
 
 # SIGNATURE_ATTACK_DETECTED
 # IDS Signature attack detected on Switch ''{0}." The Signature Type is ''{1}," Signature Name is ''{2},'' and Signature description is ''{3}."
 # The switch (controller) is detecting a signature attack. The switch (controller) has a list of signatures that it monitors. When it detects a signature, it provides the name of the signature attack in the alert it generates.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] WIDS / Signature attack detected!"; program: snmptrapd; content: "=SIGNATURE_ATTACK_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002145; sid:5002145; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] WIDS / Signature attack detected!"; program: snmptrapd; content: "=SIGNATURE_ATTACK_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002145; sid:5002145; rev:3;)
 
 # AP_AUTHORIZATION_FAILURE
 # * Failed to authorize AP "{0}." Authorization entry does not exist in Controllers "{1}" AP Authorization List.
@@ -174,179 +174,179 @@ alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] WIDS / Sign
 # * Failed to authorize AP "{0}." AP has a self signed certificate where as the Controllers "{1}" AP authorization list has Manufactured Installed Certificate for this AP.
 # An alert is generated when an access point fails to associate with a controller due to authorization issues.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] WIDS / Signature attack detected!"; program: snmptrapd; content: "=SIGNATURE_ATTACK_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002146; sid:5002146; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] WIDS / Signature attack detected!"; program: snmptrapd; content: "=SIGNATURE_ATTACK_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002146; sid:5002146; rev:3;)
 
 # CISCO_LWAPP_MESH_CONSOLE_LOGIN
 # Console login successful or failed.
 # The console port provides the ability for the customer to change the username and password to recover the stranded outdoor access point. To prevent any unauthorized user access to the access point, the NCS sends an alarm when someone tries to log in. This alarm is required to provide protection because the access point is physically vulnerable being located outdoors.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] MESH Console login"; program: snmptrapd; content: "=CISCO_LWAPP_MESH_CONSOLE_LOGIN|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002147; sid:5002147; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] MESH Console login"; program: snmptrapd; content: "=CISCO_LWAPP_MESH_CONSOLE_LOGIN|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002147; sid:5002147; rev:3;)
 
 # CISCO_LWAPP_MESH_AUTHORIZATION_FAILURE
 # Fails to authenticate with controller.
 # The NCS receives a trap from the controller. The trap contains the MAC addresses of those access points that failed authorization.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] MESH authorization failure"; program: snmptrapd; content: "=CISCO_LWAPP_MESH_AUTHORIZATION_FAILURE|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002148; sid:5002148; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] MESH authorization failure"; program: snmptrapd; content: "=CISCO_LWAPP_MESH_AUTHORIZATION_FAILURE|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002148; sid:5002148; rev:3;)
 
 # IDS_SHUN_CLIENT_TRAP
 # The Cisco Intrusion Detection System "{0}" has detected a possible intrusion attack by the wireless client "{1}."
 # This trap is generated in response to a shun client clear alert originated from a Cisco IDS/IPs appliance ("{0}") installed in the data path between the wireless client ("{1}") and the intranet of the site.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Shun client alert from IDS/IPS appliance!"; program: snmptrapd; content: "=IDS_SHUN_CLIENT_TRAP|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002149; sid:5002149; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Shun client alert from IDS/IPS appliance!"; program: snmptrapd; content: "=IDS_SHUN_CLIENT_TRAP|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002149; sid:5002149; rev:3;)
 
 # MFP_ANOMALY_DETECTED_TRAP
 # MFP configuration of the WLAN was violated by the radio interface "{0}" and detected by the radio interface "{1}" of the access point with MAC address "{2}." The violation is "{3}."
 # This notification is sent by the agent when the MFP configuration of the WLAN was violated by the radio interface cLApIfSmtDot11Bssid and detected by the radio interface cLApDot11IfSlotId of the access point cLApSysMacAddress. This violation is indicated by cLMfpEventType.  When observing the management frame(s) given by cLMfpEventFrames for the last cLMfpEventPeriod time units, the controller reports the occurrence of a total of cLMfpEventTotal violation events of type cLMfpEventType. When the cLMfpEventTotal is 0, no further anomalies have recently been detected, and the NMS should clear any alarm raised about the MFP errors.  Note This notification is generated by the controller only if MFP was configured as the protection mechanism through cLMfpProtectType.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] MFP anomaly detected"; program: snmptrapd; content: "=MFP_ANOMALY_DETECTED_TRAP|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002150; sid:5002150; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] MFP anomaly detected"; program: snmptrapd; content: "=MFP_ANOMALY_DETECTED_TRAP|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002150; sid:5002150; rev:3;)
 
 # MESH_AUTHORIZATIONFAILURE
 # MESH "{0}" fails to authenticate with controller because "{1}".
 # A mesh access point failed to join the mesh network because its MAC address is not listed in the MAC filter list. The alarm includes the MAC address of the mesh access point that failed to join.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] MESH authentication failure"; program: snmptrapd; content: "=MFP_ANOMALY_DETECTED_TRAP|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002151; sid:5002151; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] MESH authentication failure"; program: snmptrapd; content: "=MFP_ANOMALY_DETECTED_TRAP|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002151; sid:5002151; rev:3;)
 
 # GUEST_USER_ADDED
 # Guest user "{0}" created on the controller "{1}."
 # This notification is sent by the agent when the GuestUser account is created successfully.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] GUEST user created on controller"; program: snmptrapd; content: "=GUEST_USER_ADDED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002152; sid:5002152; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] GUEST user created on controller"; program: snmptrapd; content: "=GUEST_USER_ADDED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002152; sid:5002152; rev:3;)
 
 # GUEST_USER_AUTHENTICATED
 # Guest user "{1}" logged into controller "{0}."
 # This notification is sent by the agent when the GuestUser logged into the network through webauth successfully.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] GUEST user authenticated"; program: snmptrapd; content: "=GUEST_USER_AUTHENTICATED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002153; sid:5002153; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] GUEST user authenticated"; program: snmptrapd; content: "=GUEST_USER_AUTHENTICATED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002153; sid:5002153; rev:3;)
 
 # GUEST_USER_LOGOFF
 # Guest user "{1}" logged out from the controller "{0}."
 # This notification is sent by the agent when a GuestUser who was previously logged into the network logs out.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] GUEST user logoff"; program: snmptrapd; content: "=GUEST_USER_LOGOFF|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002154; sid:5002154; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] GUEST user logoff"; program: snmptrapd; content: "=GUEST_USER_LOGOFF|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002154; sid:5002154; rev:3;)
 
 # SI_SECURITY_TRAPS
 # Raised when Interferer marked as a security threat is detected by the network.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] SI Security trap raised!"; program: snmptrapd; content: "=SI_SECURITY_TRAPS|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002155; sid:5002155; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] SI Security trap raised!"; program: snmptrapd; content: "=SI_SECURITY_TRAPS|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002155; sid:5002155; rev:3;)
 
 # FAN_MONITOR
 # Cooling fan failure [ applies to MSE-3355 only]. One of the CPU cooling fans on $HOST [$IP] has failed.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Cooling fan failure [MSE-3355]"; program: snmptrapd; content: "=FAN_MONITOR|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002156; sid:5002156; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Cooling fan failure [MSE-3355]"; program: snmptrapd; content: "=FAN_MONITOR|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002156; sid:5002156; rev:3;)
 
 # FRIENDLY_ROGUE_AP_DETECTED_ON_NETWORK
 # A rogue access point was detected on network by the system with classification "Friendly".
 # Rogue AP ''{0}'' with SSID ''{3}'' and channel number ''{4}'' is detected by AP ''{1}'' Radio type ''{2}'' with RSSI ''{5}'' and SNR ''{6}''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Friendly rogue AP detected on network"; program: snmptrapd; content: "=FRIENDLY_ROGUE_AP_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002157; sid:5002157; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Friendly rogue AP detected on network"; program: snmptrapd; content: "=FRIENDLY_ROGUE_AP_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002157; sid:5002157; rev:3;)
 
 # FRIENDLY_ROGUE_AP_DETECTED
 # A rogue access point was detected by the system with classification "Friendly".
 # Rogue AP ''{0}'' with SSID ''{3}'' and channel number ''{4}'' is detected by AP ''{1}'' Radio type ''{2}'' with RSSI ''{5}'' and SNR ''{6}''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Friendly rogue AP detected"; program: snmptrapd; content: "=FRIENDLY_ROGUE_AP_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002158; sid:5002158; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Friendly rogue AP detected"; program: snmptrapd; content: "=FRIENDLY_ROGUE_AP_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002158; sid:5002158; rev:3;)
 
 # UNCLASSIFIED_ROGUE_AP_DETECTED_ON_NETWORK
 # A rogue access point was detected on network by the system with classification "Unclassified" in contained state.
 # Rogue AP ''{0}'' with SSID ''{3}'' and channel number ''{4}'' is detected by AP ''{1}'' Radio type ''{2}'' with RSSI ''{5}'' and SNR ''{6}''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Unclassified rogue AP detected on network"; program: snmptrapd; content: "=UNCLASSIFIED_ROGUE_AP_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002159; sid:5002159; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Unclassified rogue AP detected on network"; program: snmptrapd; content: "=UNCLASSIFIED_ROGUE_AP_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002159; sid:5002159; rev:3;)
 
 # UNCLASSIFIED_ROGUE_AP_DETECTED_ON_NETWORK_AND_CONTAINED
 # A rogue access point was detected on network by the system with classification "Unclassified" in contained state.
 # Rogue AP ''{0}'' with SSID ''{3}'' and channel number ''{4}'' is detected by AP ''{1}'' Radio type ''{2}'' with RSSI ''{5}'' and SNR ''{6}''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Unclassified rogue AP detected on network contained"; program: snmptrapd; content: "=UNCLASSIFIED_ROGUE_AP_DETECTED_ON_NETWORK_AND_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002160; sid:5002160; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Unclassified rogue AP detected on network contained"; program: snmptrapd; content: "=UNCLASSIFIED_ROGUE_AP_DETECTED_ON_NETWORK_AND_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002160; sid:5002160; rev:3;)
 
 # UNCLASSIFIED_ROGUE_AP_DETECTED_CONTAINED
 # A rogue access point was detected on network by the system with classification "Unclassified" in contained state.
 # Rogue AP ''{0}'' with SSID ''{3}'' and channel number ''{4}'' is detected by AP ''{1}'' Radio type ''{2}'' with RSSI ''{5}'' and SNR ''{6}''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Unclassified rogue AP detected contained"; program: snmptrapd; content: "=UNCLASSIFIED_ROGUE_AP_DETECTED_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002161; sid:5002161; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Unclassified rogue AP detected contained"; program: snmptrapd; content: "=UNCLASSIFIED_ROGUE_AP_DETECTED_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002161; sid:5002161; rev:3;)
 
 # UNCLASSIFIED_ROGUE_AP_DETECTED
 # A rogue access point was detected on network by the system with classification "Unclassified" in contained state.
 # Rogue AP ''{0}'' with SSID ''{3}'' and channel number ''{4}'' is detected by AP ''{1}'' Radio type ''{2}'' with RSSI ''{5}'' and SNR ''{6}''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Unclassified rogue AP detected"; program: snmptrapd; content: "=UNCLASSIFIED_ROGUE_AP_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002162; sid:5002162; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Unclassified rogue AP detected"; program: snmptrapd; content: "=UNCLASSIFIED_ROGUE_AP_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002162; sid:5002162; rev:3;)
 
 # MALICIOUS_ROGUE_AP_DETECTED_ON_NETWORK
 # A rogue access point was detected on network by the system with classification "Malicious" in contained state.
 # Rogue AP ''{0}'' with SSID ''{3}'' and channel number ''{4}'' is detected by AP ''{1}'' Radio type ''{2}'' with RSSI ''{5}'' and SNR ''{6}''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Malicious rogue AP detected on the network"; program: snmptrapd; content: "=MALICIOUS_ROGUE_AP_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002163; sid:5002163; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Malicious rogue AP detected on the network"; program: snmptrapd; content: "=MALICIOUS_ROGUE_AP_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002163; sid:5002163; rev:3;)
 
 # MALICIOUS_ROGUE_AP_DETECTED_ON_NETWORK_AND_CONTAINED
 # A rogue access point was detected on network by the system with classification "Malicious" in contained state.
 # Rogue AP ''{0}'' with SSID ''{3}'' and channel number ''{4}'' is detected by AP ''{1}'' Radio type ''{2}'' with RSSI ''{5}'' and SNR ''{6}''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Malicious rogue AP detected on the network contained"; program: snmptrapd; content: "=MALICIOUS_ROGUE_AP_DETECTED_ON_NETWORK_AND_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002164; sid:5002164; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Malicious rogue AP detected on the network contained"; program: snmptrapd; content: "=MALICIOUS_ROGUE_AP_DETECTED_ON_NETWORK_AND_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002164; sid:5002164; rev:3;)
 
 # MALICIOUS_ROGUE_AP_DETECTED_CONTAINED
 # Malicious Rogue AP detected as contained.
 # A rogue access point was detected on network by the system with classification "Malicious" in contained state.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Malicious rogue AP detected contained"; program: snmptrapd; content: "=MALICIOUS_ROGUE_AP_DETECTED_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002165; sid:5002165; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Malicious rogue AP detected contained"; program: snmptrapd; content: "=MALICIOUS_ROGUE_AP_DETECTED_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002165; sid:5002165; rev:3;)
 
 # MALICIOUS_ROGUE_AP_DETECTED
 # A rogue access point was detected on network by the system with classification "Malicious" in contained state.
 # Rogue AP ''{0}'' with SSID ''{3}'' and channel number ''{4}'' is detected by AP ''{1}'' Radio type ''{2}'' with RSSI ''{5}'' and SNR ''{6}''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Malicious rogue AP"; program: snmptrapd; content: "=MALICIOUS_ROGUE_AP_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002166; sid:5002166; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Malicious rogue AP"; program: snmptrapd; content: "=MALICIOUS_ROGUE_AP_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002166; sid:5002166; rev:3;)
 
 # ROGUE_ADHOC_DETECTED_ON_NETWORK
 # Adhoc Rogue detected on network.
 # Rogue AP ''{0}'' is on wired network.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue ADHOC detected on network"; program: snmptrapd; content: "=ROGUE_ADHOC_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002167; sid:5002167; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue ADHOC detected on network"; program: snmptrapd; content: "=ROGUE_ADHOC_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002167; sid:5002167; rev:3;)
 
 # ROGUE_ADHOC_DETECTED_CONTAINED
 # Adhoc Rogue detected contained.
 # Rogue AP contained.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue ADHOC detected on network contained"; program: snmptrapd; content: "=ROGUE_ADHOC_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002168; sid:5002168; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue ADHOC detected on network contained"; program: snmptrapd; content: "=ROGUE_ADHOC_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002168; sid:5002168; rev:3;)
 
 # ROGUE_AP_STATE_CHANGE
 # Rogue detected.
 # Rogue AP marked as {0} AP.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP state change"; program: snmptrapd; content: "=ROGUE_AP_STATE_CHANGE|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002170; sid:5002170; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP state change"; program: snmptrapd; content: "=ROGUE_AP_STATE_CHANGE|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002170; sid:5002170; rev:3;)
 
 # ROGUE_DETECTED
 # Rogue detected.
 # Rogue AP ''{0}'' with SSID ''{3}'' and channel number ''{4}'' is detected by AP ''{1}'' Radio type ''{2}'' with RSSI ''{5}'' and SNR ''{6}''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue detected"; program: snmptrapd; content: "=ROGUE_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002171; sid:5002171; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue detected"; program: snmptrapd; content: "=ROGUE_DETECTED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002171; sid:5002171; rev:3;)
 
 # ROGUE_DETECTED_CONTAINED
 # Rogue detected contained.
 # Adhoc Rogue contained.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue detected contained"; program: snmptrapd; content: "=ROGUE_DETECTED_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002172; sid:5002172; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue detected contained"; program: snmptrapd; content: "=ROGUE_DETECTED_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002172; sid:5002172; rev:3;)
 
 # ROGUE_DETECTED_ON_NETWORK
 # Rogue detected on network.
 # None
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue detected on network"; program: snmptrapd; content: "=ROGUE_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002173; sid:5002173; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue detected on network"; program: snmptrapd; content: "=ROGUE_DETECTED_ON_NETWORK|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002173; sid:5002173; rev:3;)
 
 # ROGUE_AUTO_CONTAINED
 # Rogue auto contained.
 # Rogue AP ''{0}'' on Controller ''{1}'' was advertising our SSID and has been auto contained as per WPS policy.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue auto contained"; program: snmptrapd; content: "=ROGUE_AUTO_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002174; sid:5002174; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue auto contained"; program: snmptrapd; content: "=ROGUE_AUTO_CONTAINED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002174; sid:5002174; rev:3;)
 
 # USER_AUTHENTICATION_FAILURE
 # User Authentication Failure.
 # ''%s'' ''%s'' failed authentication on Controller ''%s''.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] User authentication failure"; program: snmptrapd; content: "=USER_AUTHENTICATION_FAILURE|28|"; xbits: set,recon,86400; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002175; sid:5002175; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] User authentication failure"; program: snmptrapd; content: "=USER_AUTHENTICATION_FAILURE|28|"; xbits: set,recon,86400; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002175; sid:5002175; rev:4;)
 
 # WIPS_TRAPS
 # Dynamically generated per alarm.
 # See the wIPS alarm encyclopedia under NCS > Configuration > wIPS Profiles.
 # READ ME:  This could be split out more.  Cisco documentation has the "alarm names",  but lacks SNMP Trap examples.  
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] WIPS Event!"; program: snmptrapd; content: "=WIPS_TRAPS|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002176; sid:5002176; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] WIPS Event!"; program: snmptrapd; content: "=WIPS_TRAPS|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002176; sid:5002176; rev:3;)
 
 

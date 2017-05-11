@@ -272,22 +272,6 @@
 5000282 || [ZEUS] Warning message || url,wiki.quadrantsec.com/bin/view/Main/5000282
 5000283 || [ZEUS] Serious message || url,wiki.quadrantsec.com/bin/view/Main/5000283
 5000284 || [ZEUS] Fatal message || url,wiki.quadrantsec.com/bin/view/Main/5000284
-5000285 || [OSSEC] Agent started || url,wiki.quadrantsec.com/bin/view/Main/5000285
-5000287 || [OSSEC] Ossec started || url,wiki.quadrantsec.com/bin/view/Main/5000287
-5000288 || [OSSEC] Agent disconnect || url,wiki.quadrantsec.com/bin/view/Main/5000288
-5000289 || [OSSEC] Ignored common NTFS ADS entries || url,wiki.quadrantsec.com/bin/view/Main/5000289
-5000290 || [OSSEC] Windows Audit || url,wiki.quadrantsec.com/bin/view/Main/5000290
-5000291 || [OSSEC] Windows Malware || url,wiki.quadrantsec.com/bin/view/Main/5000291
-5000292 || [OSSEC] Windows application monitor event || url,wiki.quadrantsec.com/bin/view/Main/5000292
-5000293 || [OSSEC] Ignoring rootcheck/syscheck scan messages || url,wiki.quadrantsec.com/bin/view/Main/5000293
-5000294 || [OSSEC] System Audit || url,wiki.quadrantsec.com/bin/view/Main/5000294
-5000295 || [OSSEC] Windows Adware/Spyware application found || url,wiki.quadrantsec.com/bin/view/Main/5000295
-5000296 || [OSSEC] Partition usage reached 100% [disk space monitor] || url,wiki.quadrantsec.com/bin/view/Main/5000296
-5000297 || [OSSEC] Ignoring external medias || url,wiki.quadrantsec.com/bin/view/Main/5000297
-5000298 || [OSSEC] Integrity checksum for agentless device changed || url,wiki.quadrantsec.com/bin/view/Main/5000298
-5000299 || [OSSEC] Log file rotated || url,wiki.quadrantsec.com/bin/view/Main/5000299
-5000300 || [OSSEC] File size reduced || url,wiki.quadrantsec.com/bin/view/Main/5000300
-5000301 || [OSSEC] Microsoft event log cleared || url,wiki.quadrantsec.com/bin/view/Main/5000301
 5000306 || [WINDOWS-MISC] Detection of net listening application [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5000306
 5000307 || [WINDOWS-MISC] Privileged Service Called || url,wiki.quadrantsec.com/bin/view/Main/5000307
 5000308 || [WINDOWS-MISC] Apple Bonjour service detect [iTunes installed?] || url,wiki.quadrantsec.com/bin/view/Main/5000308
@@ -598,10 +582,10 @@
 5000633 || [CISCO-PIXASA] Deny inbound UDP || url, wiki.quadrantsec.com/bin/view/Main/5000633
 5000634 || [CISCO-PIXASA] Deny inbound UDP from outside due to DNS {Response|Query} || url, wiki.quadrantsec.com/bin/view/Main/5000634
 5000635 || [CISCO-PIXASA] Dropping echo request || url, wiki.quadrantsec.com/bin/view/Main/5000635
-5000636 || [CISCO-PIXASA] Deny IP spoof [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000636
-5000637 || [CISCO-PIXASA] Deny IP due to Land Attack [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000637
+5000636 || [CISCO-PIXASA] Deny IP spoof [0/1] || url, wiki.quadrantsec.com/bin/view/Main/5000636
+5000637 || [CISCO-PIXASA] Deny IP due to Land Attack [0/1] || url, wiki.quadrantsec.com/bin/view/Main/5000637
 5000638 || [CISCO-PIXASA] ICMP denied by outbound ACL || url, wiki.quadrantsec.com/bin/view/Main/5000638
-5000639 || [CISCO-PIXASA] Deny IP teardrop fragment [0/5] || url, wiki.quadrantsec.com/bin/view/Main/5000639
+5000639 || [CISCO-PIXASA] Deny IP teardrop fragment [0/1] || url, wiki.quadrantsec.com/bin/view/Main/5000639
 5000640 || [CISCO-PIXASA] Bad route_compress || url, wiki.quadrantsec.com/bin/view/Main/5000640
 5000641 || [CISCO-PIXASA] Failed Identification Test in slot || url, wiki.quadrantsec.com/bin/view/Main/5000641
 5000642 || [CISCO-PIXASA] Dropped DNS responses with mis-matched id || url, wiki.quadrantsec.com/bin/view/Main/5000642
@@ -733,7 +717,7 @@
 5000771 || [CISCO-PIXASA] Dropped UDP SNMP packet || url, wiki.quadrantsec.com/bin/view/Main/5000771
 5000772 || [CISCO-PIXASA] Filter violation error conn number || url, wiki.quadrantsec.com/bin/view/Main/5000772
 5000773 || [CISCO-PIXASA] Through-the-device packet to/from management-only network is denied || url, wiki.quadrantsec.com/bin/view/Main/5000773
-5000774 || [CISCO-PIXASA] Dropping TCP packet, reason MSS exceeded, MSS size, data size || url, wiki.quadrantsec.com/bin/view/Main/5000774
+5000774 || [CISCO-PIXASA] Dropping TCP packet, MSS exceeded/size - possible network scan. || url, wiki.quadrantsec.com/bin/view/Main/5000774
 5000775 || [CISCO-PIXASA] RTP conformance Dropping RTP packet || url, wiki.quadrantsec.com/bin/view/Main/5000775
 5000776 || [CISCO-PIXASA] RTCP conformance Dropping RTCP packet || url, wiki.quadrantsec.com/bin/view/Main/5000776
 5000777 || [CISCO-PIXASA] Dropping Skinny message length value too small || url, wiki.quadrantsec.com/bin/view/Main/5000777
@@ -907,7 +891,7 @@
 5000949 || [FORTINET] L2TP/PPTP/PPPoE Authentication failed || url,wiki.quadrantsec.com/bin/view/Main/5000949
 5000950 || [FORTINET] L2TP/PPTP/PPPoE Max connection reached || url,wiki.quadrantsec.com/bin/view/Main/5000950
 5000951 || [FORTINET] L2TP/PPTP/PPPoE Not enough memory || url,wiki.quadrantsec.com/bin/view/Main/5000951
-5000952 || [FORTINET] Data Leack Prevention Rule Matched || url,wiki.quadrantsec.com/bin/view/Main/5000952
+5000952 || [FORTINET] Data Leak Prevention Rule Matched || url,wiki.quadrantsec.com/bin/view/Main/5000952
 5000953 || [FORTINET] Application control instant messaging message || url,wiki.quadrantsec.com/bin/view/Main/5000953
 5000954 || [FORTINET] Application control instant message file tranfer message || url,wiki.quadrantsec.com/bin/view/Main/5000954
 5000955 || [FORTINET] Application control instant message chat message || url,wiki.quadrantsec.com/bin/view/Main/5000955
@@ -1997,7 +1981,6 @@
 5002075 || [IMAPD-BLUEDOT] Login from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002075
 5002076 || [IMAPD-BLUEDOT] Logout from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002076
 5002077 || [IMAPD-BLUEDOT] Timeout from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002077
-5002078 || [IMAPD-BLUEDOT] Disconnect from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002078
 5002079 || [IMAPD-BLUEDOT] Connection from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002079
 5002080 || [ARTILLERY] General Artillery Message || url,www.trustedsec.com/downloads/artillery || url,wiki.quadrantsec.com/bin/view/Main/5002080
 5002081 || [ARTILLERY] FTP brute force violation || url,www.trustedsec.com/downloads/artillery || url,wiki.quadrantsec.com/bin/view/Main/5002081
@@ -2464,19 +2447,6 @@
 5002564 || [WINDOWS-MISC] Unable to log events to security log || url,wiki.quadrantsec.com/bin/view/Main/5002564
 5002565 || [BASH] root password change attempt || url,wiki.quadrantsec.com/bin/view/Main/5002565
 5002566 || [SU] root password change attempt || url,wiki.quadrantsec.com/bin/view/Main/5002566
-5002567 || [CYLANCE] AuditLog - Device Edit || url,wiki.quadrantsec.com/bin/view/Main/5002567
-5002568 || [CYLANCE] AuditLog - Login Success || url,wiki.quadrantsec.com/bin/view/Main/5002568
-5002569 || [CYLANCE] AuditLog - Syslog Settings Saved || url,wiki.quadrantsec.com/bin/view/Main/5002569
-5002570 || [CYLANCE] AuditLog - Zone Add Device || url,wiki.quadrantsec.com/bin/view/Main/5002570
-5002571 || [CYLANCE] Device - Action Taken || url,wiki.quadrantsec.com/bin/view/Main/5002571
-5002572 || [CYLANCE] Device - Registration || url,wiki.quadrantsec.com/bin/view/Main/5002572
-5002573 || [CYLANCE] Device - System Security || url,wiki.quadrantsec.com/bin/view/Main/5002573
-5002574 || [CYLANCE] ExploitAttempt - Blocked || url,wiki.quadrantsec.com/bin/view/Main/5002574
-5002575 || [CYLANCE] ExploitAttempt - No Action Taken || url,wiki.quadrantsec.com/bin/view/Main/5002575
-5002576 || [CYLANCE] Threat - Changed || url,wiki.quadrantsec.com/bin/view/Main/5002576
-5002577 || [CYLANCE] Threat - Found || url,wiki.quadrantsec.com/bin/view/Main/5002577
-5002578 || [CYLANCE] Threat - Quarantined || url,wiki.quadrantsec.com/bin/view/Main/5002578
-5002579 || [CYLANCE] Threat - Removed || url,wiki.quadrantsec.com/bin/view/Main/5002579
 5002580 || [PALO-ALTO] Certificate has illegal URL || url,live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
 5002581 || [PALO-ALTO] Accepted SSH Connection From Outside Home Country || url,live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
 5002582 || [PALO-ALTO] AntiVirus update job failed || url,live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx
@@ -2635,6 +2605,8 @@
 5002735 || [YUBIKEY] Invalid OTP || url,wiki.quadrantsec.com/bin/view/Main/5002735
 5002736 || [WEB-ATTACKS] RFI Attempt || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 5002737 || [WEB-ATTACKS] Possible LFI Attempt || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002738 || [WEB-ATTACKS] Attempt to Access Default WordPress Login Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
+5002739 || [WEB-ATTACKS] Attempt to Access a Webshell via WordPress || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 5002740 || [WEB-ATTACKS] Attempt to Access Default Cacti Login Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 5002741 || [WEB-ATTACKS] Attempt to Access PHPMyAdmin Changelog Page || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
 5002742 || [WEB-ATTACKS] Attempt to Access robots.txt File || url,www.doomedraven.com/2013/05/cheat-sheet-web-application-exploitation.html
@@ -2669,7 +2641,7 @@
 5002771 || [ScreenOS] Juniper ScreenOS Login for Suspicious Admin user - system || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search || cve,2015-7755
 5002772 || [ScreenOS] Juniper ScreenOS Login for Suspicious Admin user - username || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search || cve,2015-7755
 5002773 || [ScreenOS-GEOIP] Juniper ScreenOS Admin Login from Outside of Home Country || url, wiki.quadrantsec.com/bin/view/Main/5002773 || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search
-5002774 || [ScreenOS] Juniper ScreenOS Admin Login From a Malicious IP || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search || cve,2015-7755
+5002774 || [JUNIPER-BLUEDOT] Juniper ScreenOS Admin Login from a known malicious IP || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search || cve,2015-7755
 5002775 || [WINDOWS-MISC] Domain policy was changed || url,wiki.quadrantsec.com/bin/view/Main/5002775
 5002776 || [F5-BIG-IP-GEOIP] Command-line Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002776 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
 5002777 || [F5-BIG-IP-GEOIP] Command-line Logout from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002777 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
@@ -2796,9 +2768,6 @@
 5002899 || [IMAPD-BLUEDOT] Timeout from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002899
 5002900 || [IMAPD-BLUEDOT] Disconnect from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002900
 5002901 || [IMAPD-BLUEDOT] Connection from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002901
-5002902 || [JUNIPER-BLUEDOT] VPN Login from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002902
-5002903 || [JUNIPER-BLUEDOT] VPN Logout from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002903
-5002904 || [ScreenOS-BLUEDOT] Juniper ScreenOS Admin Login from suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002904 || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search
 5002905 || [OPENSSH-BLUEDOT] Authentication success via password from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002905
 5002906 || [OPENSSH-BLUEDOT] Authentication success via publickey from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002906
 5002907 || [OPENSSH-BLUEDOT] Authentication success via keyboard from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002907
@@ -2813,27 +2782,27 @@
 5002916 || [VMWARE-BLUEDOT] User login successful from a suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002916
 5002917 || [VMWARE-BLUEDOT] User login successful from a suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002917
 5002918 || [VMWARE-BLUEDOT] User login successful from a suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002918
-5002919 || [VSFTPD-BLUEDOT] Authentication successful from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002919
-5002920 || [VSFTPD-BLUEDOT] File uploaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002920
-5002921 || [BIT9] Non-System Filemods to system32
-5002922 || [BIT9] Newly Loaded Modules
-5002923 || [BIT9] A new device was mounted
-5002924 || [BIT9] File was executed for the first time
-5002925 || [BIT9] Computer reported that signature on file is invalid
-5002926 || [BIT9] Server discovered new certificate
-5002927 || [BIT9] Disk configuration change detected
-5002928 || [BIT9] Bit9 Agent blocked an attempt to create file
-5002929 || [BIT9] Bit9 Agent blocked an attempt to delete file
-5002930 || [BIT9] Permission change was blocked
-5002931 || [BIT9] Modification of registry was blocked
-5002932 || [BIT9] Bit9 Agent failed a health check
-5002933 || [BIT9] File was identified by Bit9 Software Reputation Service as a potential risk
-5002934 || [BIT9] Server detected revocation of certificate
-5002935 || [BIT9] Bit9 Agent detected a problem
-5002936 || [BIT9] Exclusive access to a file was blocked because of tamper protection
-5002937 || [BIT9] Bit9 Agent had to rebuild its primary database cache and now has to re-initialize
-5002938 || [BIT9] Computer failed to receive Notifier Logo
-5002939 || [BIT9] Bit9 Agent had to restore its primary database cache
+5002919 || [VSFTPD-BLUEDOT] Authentication successful from a suspicious IP || url,wiki.quadrantsec.com/bin/view/Main/5002919
+5002920 || [VSFTPD-BLUEDOT] File uploaded from a suspicious IP || url,wiki.quadrantsec.com/bin/view/Main/5002920
+5002921 || [CARBONBLACK] Non-System Filemods to system32
+5002922 || [CARBONBLACK] Newly Loaded Modules
+5002923 || [CARBONBLACK] A new device was mounted
+5002924 || [CARBONBLACK] File was executed for the first time
+5002925 || [CARBONBLACK] Computer reported that signature on file is invalid
+5002926 || [CARBONBLACK] Server discovered new certificate
+5002927 || [CARBONBLACK] Disk configuration change detected
+5002928 || [CARBONBLACK] Bit9 Agent blocked an attempt to create file
+5002929 || [CARBONBLACK] Bit9 Agent blocked an attempt to delete file
+5002930 || [CARBONBLACK] Permission change was blocked
+5002931 || [CARBONBLACK] Modification of registry was blocked
+5002932 || [CARBONBLACK] Bit9 Agent failed a health check
+5002933 || [CARBONBLACK] File was identified by Bit9 Software Reputation Service as a potential risk
+5002934 || [CARBONBLACK] Server detected revocation of certificate
+5002935 || [CARBONBLACK] Bit9 Agent detected a problem
+5002936 || [CARBONBLACK] Exclusive access to a file was blocked because of tamper protection
+5002937 || [CARBONBLACK] Bit9 Agent had to rebuild its primary database cache and now has to re-initialize
+5002938 || [CARBONBLACK] Computer failed to receive Notifier Logo
+5002939 || [CARBONBLACK] Bit9 Agent had to restore its primary database cache
 5002940 || [BLUEDOT] Suspicious file hash detected || url,wiki.quadrantsec.com/bin/view/Main/5002940
 5002941 || [WINDOWS-MISC] Suspicious event logging service shut down. || url,wiki.quadrantsec.com/bin/view/Main/5002941
 5002942 || [ASTERISK] Brute force login session failed [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002942
@@ -3003,467 +2972,9 @@
 5003109 || [NXLOG] Service stopping || url,wiki.quadrantsec.com/bin/view/Main/5003109
 5003110 || [NXLOG] Termination Request || url,wiki.quadrantsec.com/bin/view/Main/5003110
 5003111 || [NXLOG] Missing Windows Log Message || url,wiki.quadrantsec.com/bin/view/Main/5003111
-6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
-6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
-6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
-6000531 || [OSSEC] Level 7 - Partition usage reached 100% (disk space monitor). (ossec_rules.xml:ossec)
-6000550 || [OSSEC] Level 7 - Integrity checksum changed. (ossec_rules.xml:ossec)
-6000551 || [OSSEC] Level 7 - Integrity checksum changed again (2nd time). (ossec_rules.xml:ossec)
-6000552 || [OSSEC] Level 7 - Integrity checksum changed again (3rd time). (ossec_rules.xml:ossec)
-6000553 || [OSSEC] Level 7 - File deleted. Unable to retrieve checksum. (ossec_rules.xml:ossec)
-6000555 || [OSSEC] Level 7 - Integrity checksum for agentless device changed. (ossec_rules.xml:ossec)
-6000580 || [OSSEC] Level 8 - Host information changed. (ossec_rules.xml:ossec)
-6000581 || [OSSEC] Level 8 - Host information added. (ossec_rules.xml:ossec)
-6000592 || [OSSEC] Level 8 - Log file size reduced. (ossec_rules.xml:ossec)
-6000593 || [OSSEC] Level 9 - Microsoft Event log cleared. (ossec_rules.xml:ossec)
-6001003 || [OSSEC] Level 13 - Non standard syslog message (size too large). (syslog_rules.xml:syslog,errors)
-6001004 || [OSSEC] Level 5 - Syslogd exiting (logging stopped). (syslog_rules.xml:syslog,errors)
-6001005 || [OSSEC] Level 5 - Syslogd restarted. (syslog_rules.xml:syslog,errors)
-6001006 || [OSSEC] Level 5 - Syslogd restarted. (syslog_rules.xml:syslog,errors)
-6001007 || [OSSEC] Level 7 - File system full. (syslog_rules.xml:syslog,errors)
-6001008 || [OSSEC] Level 5 - Process exiting (killed). (syslog_rules.xml:syslog,errors)
-6002301 || [OSSEC] Level 10 - Excessive number connections to a service. (syslog_rules.xml:syslog,xinetd)
-6002551 || [OSSEC] Level 10 - Connection to rshd from unprivileged port. Possible network scan. (syslog_rules.xml:syslog,access_control)
-6002832 || [OSSEC] Level 5 - Crontab entry changed. (syslog_rules.xml:syslog,cron)
-6002833 || [OSSEC] Level 8 - Root's crontab entry changed. (syslog_rules.xml:syslog,cron)
-6002834 || [OSSEC] Level 5 - Crontab opened for editing. (syslog_rules.xml:syslog,cron)
-6002902 || [OSSEC] Level 7 - New dpkg (Debian Package) installed. (syslog_rules.xml:syslog,dpkg)
-6002903 || [OSSEC] Level 7 - Dpkg (Debian Package) removed. (syslog_rules.xml:syslog,dpkg)
-6002932 || [OSSEC] Level 7 - New Yum package installed. (syslog_rules.xml:syslog,yum)
-6002933 || [OSSEC] Level 7 - Yum package updated. (syslog_rules.xml:syslog,yum)
-6002934 || [OSSEC] Level 7 - Yum package deleted. (syslog_rules.xml:syslog,yum)
-6003102 || [OSSEC] Level 5 - Sender domain does not have any valid MX record (Requested action aborted). (sendmail_rules.xml:syslog,sendmail)
-6003103 || [OSSEC] Level 6 - Rejected by access list (55x: Requested action not taken). (sendmail_rules.xml:syslog,sendmail)
-6003104 || [OSSEC] Level 6 - Attepmt to use mail server as relay (550: Requested action not taken). (sendmail_rules.xml:syslog,sendmail)
-6003105 || [OSSEC] Level 5 - Sender domain is not found  (553: Requested action not taken). (sendmail_rules.xml:syslog,sendmail)
-6003106 || [OSSEC] Level 5 - Sender address does not have domain (553: Requested action not taken). (sendmail_rules.xml:syslog,sendmail)
-6003108 || [OSSEC] Level 6 - Sendmail rejected due to pre-greeting. (sendmail_rules.xml:syslog,sendmail)
-6003109 || [OSSEC] Level 8 - Sendmail save mail panic. (sendmail_rules.xml:syslog,sendmail)
-6003151 || [OSSEC] Level 10 - Sender domain has bogus MX record. It should not be sending e-mail. (sendmail_rules.xml:syslog,sendmail)
-6003152 || [OSSEC] Level 6 - Multiple attempts to send e-mail from a previously rejected sender (access). (sendmail_rules.xml:syslog,sendmail)
-6003153 || [OSSEC] Level 6 - Multiple relaying attempts of spam. (sendmail_rules.xml:syslog,sendmail)
-6003154 || [OSSEC] Level 10 - Multiple attempts to send e-mail from invalid/unknown sender domain. (sendmail_rules.xml:syslog,sendmail)
-6003155 || [OSSEC] Level 10 - Multiple attempts to send e-mail from invalid/unknown sender. (sendmail_rules.xml:syslog,sendmail)
-6003156 || [OSSEC] Level 10 - Multiple rejected e-mails from same source ip. (sendmail_rules.xml:syslog,sendmail)
-6003158 || [OSSEC] Level 10 - Multiple pre-greetings rejects. (sendmail_rules.xml:syslog,sendmail)
-6003191 || [OSSEC] Level 6 - SMF-SAV sendmail milter unable to verify address (REJECTED). (sendmail_rules.xml:syslog,sendmail)
-6003301 || [OSSEC] Level 6 - Attempt to use mail server as relay (client host rejected). (postfix_rules.xml:syslog,postfix)
-6003302 || [OSSEC] Level 6 - Rejected by access list (Requested action not taken). (postfix_rules.xml:syslog,postfix)
-6003303 || [OSSEC] Level 5 - Sender domain is not found (450: Requested mail action not taken). (postfix_rules.xml:syslog,postfix)
-6003304 || [OSSEC] Level 5 - Improper use of SMTP command pipelining (503: Bad sequence of commands). (postfix_rules.xml:syslog,postfix)
-6003305 || [OSSEC] Level 5 - Receipent address must contain FQDN (504: Command parameter not implemented). (postfix_rules.xml:syslog,postfix)
-6003306 || [OSSEC] Level 6 - IP Address black-listed by anti-spam (blocked). (postfix_rules.xml:syslog,postfix)
-6003330 || [OSSEC] Level 10 - Postfix process error. (postfix_rules.xml:syslog,postfix)
-6003331 || [OSSEC] Level 10 - Postfix insufficient disk space error. (postfix_rules.xml:syslog,postfix)
-6003332 || [OSSEC] Level 5 - Postfix SASL authentication failure. (postfix_rules.xml:syslog,postfix)
-6003333 || [OSSEC] Level 7 - Postfix stopped. (postfix_rules.xml:syslog,postfix)
-6003351 || [OSSEC] Level 6 - Multiple relaying attempts of spam. (postfix_rules.xml:syslog,postfix)
-6003352 || [OSSEC] Level 6 - Multiple attempts to send e-mail from a rejected sender IP (access). (postfix_rules.xml:syslog,postfix)
-6003353 || [OSSEC] Level 10 - Multiple attempts to send e-mail from invalid/unknown sender domain. (postfix_rules.xml:syslog,postfix)
-6003354 || [OSSEC] Level 12 - Multiple misuse of SMTP service (bad sequence of commands). (postfix_rules.xml:syslog,postfix)
-6003355 || [OSSEC] Level 10 - Multiple attempts to send e-mail to invalid recipient or from unknown sender domain. (postfix_rules.xml:syslog,postfix)
-6003356 || [OSSEC] Level 10 - Multiple attempts to send e-mail from black-listed IP address (blocked). (postfix_rules.xml:syslog,postfix)
-6003357 || [OSSEC] Level 10 - Multiple SASL authentication failures. (postfix_rules.xml:syslog,postfix)
-6003601 || [OSSEC] Level 5 - Imapd user login failed. (imapd_rules.xml:syslog,imapd)
-6003651 || [OSSEC] Level 10 - Multiple failed logins from same source ip. (imapd_rules.xml:syslog,imapd)
-6003702 || [OSSEC] Level 5 - Mail Scanner spam detected. (mailscanner_rules.xml:syslog,mailscanner)
-6003751 || [OSSEC] Level 6 - Multiple attempts of spam. (mailscanner_rules.xml:syslog,mailscanner)
-6003851 || [OSSEC] Level 9 - Multiple e-mail attempts to an invalid account. (ms-exchange_rules.xml:ms,exchange)
-6003852 || [OSSEC] Level 9 - Multiple e-mail 500 error code (spam). (ms-exchange_rules.xml:ms,exchange)
-6003902 || [OSSEC] Level 5 - Courier (imap/pop3) authentication failed. (courier_rules.xml:syslog,courier)
-6003910 || [OSSEC] Level 10 - Courier brute force (multiple failed logins). (courier_rules.xml:syslog,courier)
-6003911 || [OSSEC] Level 10 - Multiple connection attempts from same source. (courier_rules.xml:syslog,courier)
-6004101 || [OSSEC] Level 5 - Firewall drop event. (firewall_rules.xml:firewall)
-6004151 || [OSSEC] Level 10 - Multiple Firewall drop events from same source. (firewall_rules.xml:firewall)
-6004310 || [OSSEC] Level 5 - PIX alert message. (pix_rules.xml:syslog,pix)
-6004311 || [OSSEC] Level 5 - PIX critical message. (pix_rules.xml:syslog,pix)
-6004321 || [OSSEC] Level 9 - Failed login attempt at the PIX firewall. (pix_rules.xml:syslog,pix)
-6004324 || [OSSEC] Level 9 - Password mismatch while running 'enable' on the PIX. (pix_rules.xml:syslog,pix)
-6004325 || [OSSEC] Level 8 - ARP collision detected by the PIX. (pix_rules.xml:syslog,pix)
-6004326 || [OSSEC] Level 8 - Attempt to connect from a blocked (shunned) IP. (pix_rules.xml:syslog,pix)
-6004327 || [OSSEC] Level 8 - Connection limit exceeded. (pix_rules.xml:syslog,pix)
-6004330 || [OSSEC] Level 8 - Attack in progress detected by the PIX. (pix_rules.xml:syslog,pix)
-6004331 || [OSSEC] Level 8 - Attack in progress detected by the PIX. (pix_rules.xml:syslog,pix)
-6004332 || [OSSEC] Level 8 - Attack in progress detected by the PIX. (pix_rules.xml:syslog,pix)
-6004333 || [OSSEC] Level 8 - Attack in progress detected by the PIX. (pix_rules.xml:syslog,pix)
-6004334 || [OSSEC] Level 5 - AAA (VPN) authentication failed. (pix_rules.xml:syslog,pix)
-6004336 || [OSSEC] Level 8 - AAA (VPN) user locked out. (pix_rules.xml:syslog,pix)
-6004337 || [OSSEC] Level 8 - The PIX is disallowing new connections. (pix_rules.xml:syslog,pix)
-6004338 || [OSSEC] Level 8 - Firewall failover pair communication problem. (pix_rules.xml:syslog,pix)
-6004339 || [OSSEC] Level 8 - Firewall configuration deleted. (pix_rules.xml:syslog,pix)
-6004340 || [OSSEC] Level 8 - Firewall configuration changed. (pix_rules.xml:syslog,pix)
-6004342 || [OSSEC] Level 8 - User created or modified on the Firewall. (pix_rules.xml:syslog,pix)
-6004380 || [OSSEC] Level 10 - Multiple PIX alert messages. (pix_rules.xml:syslog,pix)
-6004381 || [OSSEC] Level 10 - Multiple PIX critical messages. (pix_rules.xml:syslog,pix)
-6004382 || [OSSEC] Level 10 - Multiple PIX error messages. (pix_rules.xml:syslog,pix)
-6004383 || [OSSEC] Level 10 - Multiple PIX warning messages. (pix_rules.xml:syslog,pix)
-6004385 || [OSSEC] Level 10 - Multiple attack in progress messages. (pix_rules.xml:syslog,pix)
-6004386 || [OSSEC] Level 10 - Nultiple AAA (VPN) authentication failures. (pix_rules.xml:syslog,pix)
-6004503 || [OSSEC] Level 5 - Netscreen critical/alert message. (netscreenfw_rules.xml:netscreenfw)
-6004504 || [OSSEC] Level 5 - Netscreen informational message. (netscreenfw_rules.xml:netscreenfw)
-6004505 || [OSSEC] Level 11 - Netscreen Erase sequence started. (netscreenfw_rules.xml:netscreenfw)
-6004506 || [OSSEC] Level 8 - Successfull admin login to the Netscreen firewall (netscreenfw_rules.xml:netscreenfw)
-6004507 || [OSSEC] Level 8 - Successfull admin login to the Netscreen firewall (netscreenfw_rules.xml:netscreenfw)
-6004508 || [OSSEC] Level 8 - Firewall policy changed. (netscreenfw_rules.xml:netscreenfw)
-6004509 || [OSSEC] Level 8 - Firewall configuration changed. (netscreenfw_rules.xml:netscreenfw)
-6004513 || [OSSEC] Level 5 - Netscreen critical/alert message. (netscreenfw_rules.xml:netscreenfw)
-6004550 || [OSSEC] Level 10 - Multiple Netscreen critical messages from same source IP. (netscreenfw_rules.xml:netscreenfw)
-6004551 || [OSSEC] Level 10 - Multiple Netscreen critical messages. (netscreenfw_rules.xml:netscreenfw)
-6004552 || [OSSEC] Level 10 - Multiple Netscreen alert messages from same source IP. (netscreenfw_rules.xml:netscreenfw)
-6004553 || [OSSEC] Level 10 - Multiple Netscreen alert messages. (netscreenfw_rules.xml:netscreenfw)
-6004710 || [OSSEC] Level 9 - Cisco IOS emergency message. (cisco-ios_rules.xml:syslog,cisco_ios)
-6004711 || [OSSEC] Level 5 - Cisco IOS alert message. (cisco-ios_rules.xml:syslog,cisco_ios)
-6004712 || [OSSEC] Level 5 - Cisco IOS critical message. (cisco-ios_rules.xml:syslog,cisco_ios)
-6004724 || [OSSEC] Level 9 - Failed login to the router. (cisco-ios_rules.xml:syslog,cisco_ios)
-6004801 || [OSSEC] Level 8 - SonicWall critical message. (sonicwall_rules.xml:syslog,sonicwall)
-6004802 || [OSSEC] Level 8 - SonicWall critical message. (sonicwall_rules.xml:syslog,sonicwall)
-6004811 || [OSSEC] Level 9 - Firewall authentication failure. (sonicwall_rules.xml:syslog,sonicwall)
-6004850 || [OSSEC] Level 10 - Multiple firewall warning messages. (sonicwall_rules.xml:syslog,sonicwall)
-6004851 || [OSSEC] Level 10 - Multiple firewall error messages. (sonicwall_rules.xml:syslog,sonicwall)
-6005103 || [OSSEC] Level 9 - Error message from the kernel. Ping of death attack. (syslog_rules.xml:syslog,linuxkernel)
-6005104 || [OSSEC] Level 8 - Interface entered in promiscuous(sniffing) mode. (syslog_rules.xml:syslog,linuxkernel)
-6005108 || [OSSEC] Level 12 - System running out of memory. Availability of the system is in risk. (syslog_rules.xml:syslog,linuxkernel)
-6005113 || [OSSEC] Level 7 - System is shutting down. (syslog_rules.xml:syslog,linuxkernel)
-6005130 || [OSSEC] Level 7 - Monitor ADSL line is down. (syslog_rules.xml:syslog,linuxkernel)
-6005301 || [OSSEC] Level 5 - User missed the password to change UID (user id). (syslog_rules.xml:syslog, su)
-6005302 || [OSSEC] Level 9 - User missed the password to change UID to root. (syslog_rules.xml:syslog, su)
-6005401 || [OSSEC] Level 10 - Three failed attempts to run sudo (syslog_rules.xml:syslog,sudo)
-6005503 || [OSSEC] Level 5 - User login failed. (pam_rules.xml:pam,syslog)
-6005504 || [OSSEC] Level 5 - Attempt to login with an invalid user. (pam_rules.xml:pam,syslog)
-6005551 || [OSSEC] Level 10 - Multiple failed logins in a small period of time. (pam_rules.xml:pam,syslog)
-6005601 || [OSSEC] Level 5 - Connection refused by TCP Wrappers. (telnetd_rules.xml:syslog,telnetd)
-6005603 || [OSSEC] Level 5 - Remote host invalid connection. (telnetd_rules.xml:syslog,telnetd)
-6005604 || [OSSEC] Level 5 - Reverse lookup error (bad hostname config). (telnetd_rules.xml:syslog,telnetd)
-6005631 || [OSSEC] Level 10 - Multiple connection attempts from same source (possible scan). (telnetd_rules.xml:syslog,telnetd)
-6005701 || [OSSEC] Level 8 - Possible attack on the ssh server (or version gathering). (sshd_rules.xml:syslog,sshd)
-6005702 || [OSSEC] Level 5 - Reverse lookup error (bad ISP or attack). (sshd_rules.xml:syslog,sshd)
-6005703 || [OSSEC] Level 10 - Possible breakin attempt (high number of reverse lookup errors). (sshd_rules.xml:syslog,sshd)
-6005705 || [OSSEC] Level 10 - Possible scan or breakin attempt (high number of login timeouts). (sshd_rules.xml:syslog,sshd)
-6005706 || [OSSEC] Level 6 - SSH insecure connection attempt (scan). (sshd_rules.xml:syslog,sshd)
-6005707 || [OSSEC] Level 14 - OpenSSH challenge-response exploit. (sshd_rules.xml:syslog,sshd)
-6005710 || [OSSEC] Level 5 - Attempt to login using a non-existent user (sshd_rules.xml:syslog,sshd)
-6005712 || [OSSEC] Level 10 - SSHD brute force trying to get access to the system. (sshd_rules.xml:syslog,sshd)
-6005713 || [OSSEC] Level 6 - Corrupted bytes on SSHD. (sshd_rules.xml:syslog,sshd)
-6005714 || [OSSEC] Level 14 - SSH CRC-32 Compensation attack (sshd_rules.xml:syslog,sshd)
-6005716 || [OSSEC] Level 5 - SSHD authentication failed. (sshd_rules.xml:syslog,sshd)
-6005718 || [OSSEC] Level 5 - Attempt to login using a denied user. (sshd_rules.xml:syslog,sshd)
-6005719 || [OSSEC] Level 10 - Multiple access attempts using a denied user. (sshd_rules.xml:syslog,sshd)
-6005720 || [OSSEC] Level 10 - Multiple SSHD authentication failures. (sshd_rules.xml:syslog,sshd)
-6005901 || [OSSEC] Level 8 - New group added to the system (syslog_rules.xml:syslog,adduser)
-6005902 || [OSSEC] Level 8 - New user added to the system (syslog_rules.xml:syslog,adduser)
-6005904 || [OSSEC] Level 8 - Information from the user was changed (syslog_rules.xml:syslog,adduser)
-6006101 || [OSSEC] Level 5 - Auditing session failed. (solaris_bsm_rules.xml:syslog,solaris_bsm)
-6006104 || [OSSEC] Level 5 - Login session failed. (solaris_bsm_rules.xml:syslog,solaris_bsm)
-6006106 || [OSSEC] Level 5 - User failed to change UID (user id). (solaris_bsm_rules.xml:syslog,solaris_bsm)
-6006210 || [OSSEC] Level 5 - Login session failed. (asterisk_rules.xml:syslog,asterisk)
-6006211 || [OSSEC] Level 5 - Login session failed (invalid user). (asterisk_rules.xml:syslog,asterisk)
-6006212 || [OSSEC] Level 5 - Login session failed (invalid extension). (asterisk_rules.xml:syslog,asterisk)
-6006250 || [OSSEC] Level 10 - Multiple failed logins (user enumeration in process). (asterisk_rules.xml:syslog,asterisk)
-6006251 || [OSSEC] Level 10 - Multiple failed logins. (asterisk_rules.xml:syslog,asterisk)
-6006252 || [OSSEC] Level 10 - Extension enumeration. (asterisk_rules.xml:syslog,asterisk)
-6006303 || [OSSEC] Level 10 - The log was temporarily paused due to low disk space. (ms_dhcp_rules.xml:windows,dhcp)
-6006308 || [OSSEC] Level 12 - A lease request could not be satisfied because the scope's address pool was exhausted. (ms_dhcp_rules.xml:windows,dhcp)
-6006309 || [OSSEC] Level 7 - A lease was denied. (ms_dhcp_rules.xml:windows,dhcp)
-6006314 || [OSSEC] Level 10 - A BOOTP request could not be satisfied because the scope's  address pool for BOOTP was exhausted. (ms_dhcp_rules.xml:windows,dhcp)
-6006319 || [OSSEC] Level 7 - DNS update failed. (ms_dhcp_rules.xml:windows,dhcp)
-6006321 || [OSSEC] Level 12 - Codes above 50 are used for Rogue Server Detection information. (ms_dhcp_rules.xml:windows,dhcp)
-6006323 || [OSSEC] Level 12 - Packet dropped due to NAP policy. (ms_dhcp_rules.xml:windows,dhcp)
-6006357 || [OSSEC] Level 7 - DHCP Decline. (ms_dhcp_rules.xml:windows,dhcp)
-6006360 || [OSSEC] Level 12 - Scope Full. (ms_dhcp_rules.xml:windows,dhcp)
-6006362 || [OSSEC] Level 7 - Stopped. (ms_dhcp_rules.xml:windows,dhcp)
-6006363 || [OSSEC] Level 10 - Audit log paused. (ms_dhcp_rules.xml:windows,dhcp)
-6006364 || [OSSEC] Level 7 - DHCP Log File. (ms_dhcp_rules.xml:windows,dhcp)
-6006365 || [OSSEC] Level 7 - Bad Address. (ms_dhcp_rules.xml:windows,dhcp)
-6006373 || [OSSEC] Level 12 - Service not authorized in AD. (ms_dhcp_rules.xml:windows,dhcp)
-6006376 || [OSSEC] Level 12 - Service has not determined if it is authorized in AD. (ms_dhcp_rules.xml:windows,dhcp)
-6007101 || [OSSEC] Level 8 - Problems with the tripwire checking (syslog_rules.xml:syslog,tripwire)
-6007202 || [OSSEC] Level 9 - Arpwatch "flip flop" message. IP address/MAC relation changing too often. (arpwatch_rules.xml:syslog,arpwatch)
-6007204 || [OSSEC] Level 9 - Changed network interface for ip address. (arpwatch_rules.xml:syslog,arpwatch)
-6007310 || [OSSEC] Level 9 - Virus detected. (symantec-av_rules.xml:symantec)
-6007410 || [OSSEC] Level 5 - Login failed accessing the web proxy. (symantec-ws_rules.xml:symantec)
-6007504 || [OSSEC] Level 12 - McAfee Windows AV - Virus detected and not removed. (mcafee_av_rules.xml:mcafee)
-6007505 || [OSSEC] Level 7 - McAfee Windows AV - Virus detected and properly removed. (mcafee_av_rules.xml:mcafee)
-6007506 || [OSSEC] Level 7 - McAfee Windows AV - Virus detected and file will be deleted. (mcafee_av_rules.xml:mcafee)
-6007509 || [OSSEC] Level 7 - McAfee Windows AV - Virus scan cancelled. (mcafee_av_rules.xml:mcafee)
-6007510 || [OSSEC] Level 5 - McAfee Windows AV - Virus scan cancelled due to shutdown. (mcafee_av_rules.xml:mcafee)
-6007512 || [OSSEC] Level 7 - McAfee Windows AV - Virus program or DAT update failed. (mcafee_av_rules.xml:mcafee)
-6007513 || [OSSEC] Level 7 - McAfee Windows AV - Virus program or DAT update cancelled. (mcafee_av_rules.xml:mcafee)
-6007514 || [OSSEC] Level 5 - McAfee Windows AV - EICAR test file detected. (mcafee_av_rules.xml:mcafee)
-6007550 || [OSSEC] Level 10 - Multiple McAfee AV warning events. (mcafee_av_rules.xml:mcafee)
-6007610 || [OSSEC] Level 5 - Virus detected and cleaned/quarantined/remved (trend-osce_rules.xml:trend_micro,ocse)
-6007611 || [OSSEC] Level 9 - Virus detected and unable to clean up. (trend-osce_rules.xml:trend_micro,ocse)
-6007613 || [OSSEC] Level 5 - Virus scan passed by found potential security risk. (trend-osce_rules.xml:trend_micro,ocse)
-6007710 || [OSSEC] Level 12 - Microsoft Security Essentials - Virus detected, but unable to remove. (ms-se_rules.xml:windows,mse)
-6007711 || [OSSEC] Level 7 - Microsoft Security Essentials - Virus detected and properly removed. (ms-se_rules.xml:windows,mse)
-6007712 || [OSSEC] Level 7 - Microsoft Security Essentials - Virus detected. (ms-se_rules.xml:windows,mse)
-6007731 || [OSSEC] Level 5 - Microsoft Security Essentials - EICAR test file detected. (ms-se_rules.xml:windows,mse)
-6007750 || [OSSEC] Level 10 - Multiple Microsoft Security Essentials AV warnings detected. (ms-se_rules.xml:windows,mse)
-6007751 || [OSSEC] Level 10 - Multiple Microsoft Security Essentials AV warnings detected. (ms-se_rules.xml:windows,mse)
-6009303 || [OSSEC] Level 5 - Horde IMP error message. (hordeimp_rules.xml:syslog,hordeimp)
-6009304 || [OSSEC] Level 9 - Horde IMP emergency message. (hordeimp_rules.xml:syslog,hordeimp)
-6009306 || [OSSEC] Level 5 - Horde IMP Failed login. (hordeimp_rules.xml:syslog,hordeimp)
-6009351 || [OSSEC] Level 10 - Horde brute force (multiple failed logins). (hordeimp_rules.xml:syslog,hordeimp)
-6009352 || [OSSEC] Level 10 - Multiple Horde emergency messages. (hordeimp_rules.xml:syslog,hordeimp)
-6009401 || [OSSEC] Level 5 - Roundcube authentication failed. (roundcube_rules.xml:syslog,roundcube)
-6009501 || [OSSEC] Level 5 - Wordpress authentication failed. (wordpress_rules.xml:syslog,wordpress)
-6009505 || [OSSEC] Level 7 - Wordpress Comment Flood Attempt. (wordpress_rules.xml:syslog,wordpress)
-6009510 || [OSSEC] Level 7 - Attack against Wordpress detected. (wordpress_rules.xml:syslog,wordpress)
-6009551 || [OSSEC] Level 10 - Multiple wordpress authentication failures. (wordpress_rules.xml:syslog,wordpress)
-6009610 || [OSSEC] Level 5 - Compaq Insight Manager authentication failure. (cimserver_rules.xml:syslog,cimserver)
-6009611 || [OSSEC] Level 12 - Compaq Insight Manager stopped. (cimserver_rules.xml:syslog,cimserver)
-6009702 || [OSSEC] Level 5 - Dovecot Authentication Failed. (dovecot_rules.xml:dovecot)
-6009705 || [OSSEC] Level 5 - Dovecot Invalid User Login Attempt. (dovecot_rules.xml:dovecot)
-6009707 || [OSSEC] Level 5 - Dovecot Aborted Login. (dovecot_rules.xml:dovecot)
-6009750 || [OSSEC] Level 10 - Dovecot Multiple Authentication Failures. (dovecot_rules.xml:dovecot)
-6009751 || [OSSEC] Level 10 - Dovecot brute force attack (multiple auth failures). (dovecot_rules.xml:dovecot)
-6009801 || [OSSEC] Level 5 - Login failed accessing the pop3 server. (vmpop3d_rules.xml:syslog,vm-pop3d)
-6009820 || [OSSEC] Level 10 - POP3 brute force (multiple failed logins). (vmpop3d_rules.xml:syslog,vm-pop3d)
-6009901 || [OSSEC] Level 5 - Login failed for vpopmail. (vpopmail_rules.xml:syslog,vpopmail)
-6009902 || [OSSEC] Level 5 - Attempt to login to vpopmail with invalid username. (vpopmail_rules.xml:syslog,vpopmail)
-6009903 || [OSSEC] Level 5 - Attempt to login to vpopmail with empty password. (vpopmail_rules.xml:syslog,vpopmail)
-6009951 || [OSSEC] Level 10 - Vpopmail brute force (multiple failed logins). (vpopmail_rules.xml:syslog,vpopmail)
-6009952 || [OSSEC] Level 10 - Vpopmail brute force (email harvesting). (vpopmail_rules.xml:syslog,vpopmail)
-6009953 || [OSSEC] Level 10 - VPOPMAIL brute force (empty password). (vpopmail_rules.xml:syslog,vpopmail)
-6011101 || [OSSEC] Level 5 - FTP connection refused. (ftpd_rules.xml:syslog,ftpd)
-6011107 || [OSSEC] Level 5 - Connection blocked by Tcp Wrappers. (ftpd_rules.xml:syslog,ftpd)
-6011108 || [OSSEC] Level 5 - Reverse lookup error (bad ISP config). (ftpd_rules.xml:syslog,ftpd)
-6011109 || [OSSEC] Level 10 - Multiple FTP failed login attempts. (ftpd_rules.xml:syslog,ftpd)
-6011111 || [OSSEC] Level 9 - Attempt to login with disabled account. (ftpd_rules.xml:syslog,ftpd)
-6011112 || [OSSEC] Level 5 - FTP authentication failure. (ftpd_rules.xml:syslog,ftpd)
-6011113 || [OSSEC] Level 5 - FTP authentication failure. (ftpd_rules.xml:syslog,ftpd)
-6011203 || [OSSEC] Level 5 - Attempt to login using a non-existent user. (proftpd_rules.xml:syslog,proftpd)
-6011204 || [OSSEC] Level 5 - Login failed accessing the FTP server (proftpd_rules.xml:syslog,proftpd)
-6011206 || [OSSEC] Level 5 - Connection denied by ProFTPD configuration. (proftpd_rules.xml:syslog,proftpd)
-6011207 || [OSSEC] Level 5 - Connection refused by TCP Wrappers. (proftpd_rules.xml:syslog,proftpd)
-6011209 || [OSSEC] Level 14 - Attempt to bypass firewall that can't adequately keep state of FTP traffic. (proftpd_rules.xml:syslog,proftpd)
-6011210 || [OSSEC] Level 10 - Multiple failed login attempts. (proftpd_rules.xml:syslog,proftpd)
-6011212 || [OSSEC] Level 5 - Reverse lookup error (bad ISP config). (proftpd_rules.xml:syslog,proftpd)
-6011218 || [OSSEC] Level 12 - FTP process crashed. (proftpd_rules.xml:syslog,proftpd)
-6011219 || [OSSEC] Level 12 - FTP server Buffer overflow attempt. (proftpd_rules.xml:syslog,proftpd)
-6011251 || [OSSEC] Level 10 - FTP brute force (multiple failed logins). (proftpd_rules.xml:syslog,proftpd)
-6011252 || [OSSEC] Level 10 - Multiple connection attempts from same source. (proftpd_rules.xml:syslog,proftpd)
-6011253 || [OSSEC] Level 10 - Multiple timed out logins from same source. (proftpd_rules.xml:syslog,proftpd)
-6011302 || [OSSEC] Level 5 - FTP Authentication failed. (pure-ftpd_rules.xml:syslog,pure-ftpd)
-6011305 || [OSSEC] Level 5 - Attempt to access invalid directory (pure-ftpd_rules.xml:syslog,pure-ftpd)
-6011306 || [OSSEC] Level 10 - FTP brute force (multiple failed logins). (pure-ftpd_rules.xml:syslog,pure-ftpd)
-6011307 || [OSSEC] Level 10 - Multiple connection attempts from same source. (pure-ftpd_rules.xml:syslog,pure-ftpd)
-6011403 || [OSSEC] Level 5 - Login failed accessing the FTP server. (vsftpd_rules.xml:syslog,vsftpd)
-6011451 || [OSSEC] Level 10 - FTP brute force (multiple failed logins). (vsftpd_rules.xml:syslog,vsftpd)
-6011452 || [OSSEC] Level 10 - Multiple FTP connection attempts from same source IP. (vsftpd_rules.xml:syslog,vsftpd)
-6011502 || [OSSEC] Level 5 - FTP Authentication failed. (ms_ftpd_rules.xml:syslog,msftp)
-6011510 || [OSSEC] Level 10 - FTP brute force (multiple failed logins). (ms_ftpd_rules.xml:syslog,msftp)
-6011511 || [OSSEC] Level 10 - Multiple connection attempts from same source. (ms_ftpd_rules.xml:syslog,msftp)
-6011512 || [OSSEC] Level 10 - Multiple FTP errors from same source. (ms_ftpd_rules.xml:syslog,msftp)
-6012101 || [OSSEC] Level 12 - Invalid DNS packet. Possibility of attack. (named_rules.xml:syslog,named)
-6012102 || [OSSEC] Level 9 - Failed attempt to perform a zone transfer. (named_rules.xml:syslog,named)
-6012109 || [OSSEC] Level 12 - Named fatal error. DNS service going down. (named_rules.xml:syslog,named)
-6012110 || [OSSEC] Level 8 - Serial number from master is lower than stored. (named_rules.xml:syslog,named)
-6012111 || [OSSEC] Level 8 - Unable to perform zone transfer. (named_rules.xml:syslog,named)
-6013102 || [OSSEC] Level 5 - Samba connection denied. (smbd_rules.xml:syslog,smbd)
-6013104 || [OSSEC] Level 5 - User action denied by configuration. (smbd_rules.xml:syslog,smbd)
-6014101 || [OSSEC] Level 5 - VPN authentication failed. (racoon_rules.xml:syslog,racoon)
-6014151 || [OSSEC] Level 9 - Multiple failed VPN logins. (racoon_rules.xml:syslog,racoon)
-6014202 || [OSSEC] Level 5 - VPN authentication failed. (vpn_concentrator_rules.xml:syslog,cisco_vpn)
-6014251 || [OSSEC] Level 10 - Multiple VPN authentication failures. (vpn_concentrator_rules.xml:syslog,cisco_vpn)
-6017101 || [OSSEC] Level 9 - Successful login during non-business hours. (policy_rules.xml:policy_violation)
-6017102 || [OSSEC] Level 9 - Successful login during weekend. (policy_rules.xml:policy_violation)
-6018103 || [OSSEC] Level 5 - Windows error event. (msauth_rules.xml:windows)
-6018106 || [OSSEC] Level 5 - Windows Logon Failure. (msauth_rules.xml:windows)
-6018110 || [OSSEC] Level 8 - User account enabled or created. (msauth_rules.xml:windows)
-6018111 || [OSSEC] Level 8 - User account changed. (msauth_rules.xml:windows)
-6018112 || [OSSEC] Level 8 - User account disabled or deleted. (msauth_rules.xml:windows)
-6018113 || [OSSEC] Level 8 - Windows Audit Policy changed. (msauth_rules.xml:windows)
-6018114 || [OSSEC] Level 5 - Group Account Changed (msauth_rules.xml:windows)
-6018115 || [OSSEC] Level 8 - General account database changed. (msauth_rules.xml:windows)
-6018116 || [OSSEC] Level 9 - User account locked out (multiple login errors). (msauth_rules.xml:windows)
-6018117 || [OSSEC] Level 7 - Windows is shutting down. (msauth_rules.xml:windows)
-6018118 || [OSSEC] Level 9 - Windows audit log was cleared. (msauth_rules.xml:windows)
-6018125 || [OSSEC] Level 5 - Remote access login failure. (msauth_rules.xml:windows)
-6018127 || [OSSEC] Level 8 - Computer account changed/deleted. (msauth_rules.xml:windows)
-6018128 || [OSSEC] Level 8 - Group account added/changed/deleted. (msauth_rules.xml:windows)
-6018129 || [OSSEC] Level 8 - Windows file system full. (msauth_rules.xml:windows)
-6018130 || [OSSEC] Level 5 - Logon Failure - Unknown user or bad password. (msauth_rules.xml:windows)
-6018131 || [OSSEC] Level 5 - Logon Failure - Account logon time restriction violation. (msauth_rules.xml:windows)
-6018132 || [OSSEC] Level 5 - Logon Failure - Account currently disabled. (msauth_rules.xml:windows)
-6018133 || [OSSEC] Level 5 - Logon Failure - Specified account expired. (msauth_rules.xml:windows)
-6018134 || [OSSEC] Level 7 - Logon Failure - User not allowed to login at this computer. (msauth_rules.xml:windows)
-6018135 || [OSSEC] Level 5 - Logon Failure - User not granted logon type. (msauth_rules.xml:windows)
-6018136 || [OSSEC] Level 5 - Logon Failure - Account's password expired. (msauth_rules.xml:windows)
-6018137 || [OSSEC] Level 5 - Logon Failure - Internal error. (msauth_rules.xml:windows)
-6018138 || [OSSEC] Level 7 - Logon Failure - Account locked out. (msauth_rules.xml:windows)
-6018139 || [OSSEC] Level 5 - Windows DC Logon Failure. (msauth_rules.xml:windows)
-6018140 || [OSSEC] Level 7 - System time changed. (msauth_rules.xml:windows)
-6018141 || [OSSEC] Level 7 - Unexpected Windows shutdown. (msauth_rules.xml:windows)
-6018142 || [OSSEC] Level 5 - User account unlocked. (msauth_rules.xml:windows)
-6018143 || [OSSEC] Level 8 - Security enabled group created. (msauth_rules.xml:windows)
-6018144 || [OSSEC] Level 8 - Security enabled group deleted. (msauth_rules.xml:windows)
-6018146 || [OSSEC] Level 5 - Application Uninstalled. (msauth_rules.xml:windows)
-6018147 || [OSSEC] Level 5 - Application Installed. (msauth_rules.xml:windows)
-6018151 || [OSSEC] Level 10 - Multiple failed attempts to perform a privileged operation by the same user. (msauth_rules.xml:windows)
-6018152 || [OSSEC] Level 10 - Multiple Windows Logon Failures. (msauth_rules.xml:windows)
-6018153 || [OSSEC] Level 10 - Multiple Windows audit failure events. (msauth_rules.xml:windows)
-6018154 || [OSSEC] Level 10 - Multiple Windows error events. (msauth_rules.xml:windows)
-6018155 || [OSSEC] Level 10 - Multiple Windows warning events. (msauth_rules.xml:windows)
-6018156 || [OSSEC] Level 10 - Multiple remote access login failures. (msauth_rules.xml:windows)
-6018170 || [OSSEC] Level 10 - Windows DC integrity check on decrypted field failed. (msauth_rules.xml:windows)
-6018171 || [OSSEC] Level 10 - Windows DC - Possible replay attack. (msauth_rules.xml:windows)
-6018172 || [OSSEC] Level 7 - Windows DC - Clock skew too great. (msauth_rules.xml:windows)
-6018180 || [OSSEC] Level 5 - MS SQL Server Logon Failure. (msauth_rules.xml:windows)
-6018200 || [OSSEC] Level 5 - Group Account Created (msauth_rules.xml:windows)
-6018201 || [OSSEC] Level 5 - Group Account Deleted (msauth_rules.xml:windows)
-6018202 || [OSSEC] Level 5 - Security Enabled Global Group Created (msauth_rules.xml:windows)
-6018203 || [OSSEC] Level 5 - Security Enabled Global Group Member Added (msauth_rules.xml:windows)
-6018204 || [OSSEC] Level 5 - Security Enabled Global Group Member Removed (msauth_rules.xml:windows)
-6018205 || [OSSEC] Level 5 - Security Enabled Global Group Deleted (msauth_rules.xml:windows)
-6018206 || [OSSEC] Level 5 - Security Enabled Local Group Created (msauth_rules.xml:windows)
-6018207 || [OSSEC] Level 5 - Security Enabled Local Group Member Added (msauth_rules.xml:windows)
-6018208 || [OSSEC] Level 5 - Security Enabled Local Group Member Removed (msauth_rules.xml:windows)
-6018209 || [OSSEC] Level 5 - Security Enabled Local Group Deleted (msauth_rules.xml:windows)
-6018210 || [OSSEC] Level 5 - Security Enabled Local Group Changed (msauth_rules.xml:windows)
-6018211 || [OSSEC] Level 5 - Security Enabled Global Group Changed (msauth_rules.xml:windows)
-6018212 || [OSSEC] Level 5 - Security Enabled Universal Group Created (msauth_rules.xml:windows)
-6018213 || [OSSEC] Level 5 - Security Enabled Universal Group Changed (msauth_rules.xml:windows)
-6018214 || [OSSEC] Level 5 - Security Enabled Universal Group Member Added (msauth_rules.xml:windows)
-6018215 || [OSSEC] Level 5 - Security Enabled Universal Group Member Removed (msauth_rules.xml:windows)
-6018216 || [OSSEC] Level 5 - Security Enabled Universal Group Deleted (msauth_rules.xml:windows)
-6018217 || [OSSEC] Level 12 - Administrators Group Changed (msauth_rules.xml:windows)
-6018218 || [OSSEC] Level 5 - Everyone Group Changed (msauth_rules.xml:windows)
-6018219 || [OSSEC] Level 12 - Enterprise Domain Controllers Group Changed (msauth_rules.xml:windows)
-6018220 || [OSSEC] Level 5 - Authenticated Users Group Changed (msauth_rules.xml:windows)
-6018221 || [OSSEC] Level 5 - Terminal Server Users Group Changed (msauth_rules.xml:windows)
-6018222 || [OSSEC] Level 12 - Domain Admins Group Changed (msauth_rules.xml:windows)
-6018223 || [OSSEC] Level 5 - Domain Users Group Changed (msauth_rules.xml:windows)
-6018225 || [OSSEC] Level 12 - Domain Guests Group Changed (msauth_rules.xml:windows)
-6018226 || [OSSEC] Level 5 - Domain Computers Group Changed (msauth_rules.xml:windows)
-6018227 || [OSSEC] Level 12 - Domain Controllers Group Changed (msauth_rules.xml:windows)
-6018228 || [OSSEC] Level 10 - Cert Publishers Group Changed (msauth_rules.xml:windows)
-6018229 || [OSSEC] Level 12 - Schema Admins Group Changed (msauth_rules.xml:windows)
-6018230 || [OSSEC] Level 12 - Enterprise Admins Group Changed (msauth_rules.xml:windows)
-6018231 || [OSSEC] Level 10 - Group Policy Creator Owners Group Changed (msauth_rules.xml:windows)
-6018232 || [OSSEC] Level 10 - RAS and IAS Servers Group Changed (msauth_rules.xml:windows)
-6018233 || [OSSEC] Level 5 - Users Group Changed (msauth_rules.xml:windows)
-6018234 || [OSSEC] Level 12 - Guests Group Changed (msauth_rules.xml:windows)
-6018235 || [OSSEC] Level 10 - Power Users Group Changed (msauth_rules.xml:windows)
-6018236 || [OSSEC] Level 10 - Account Operators Group Changed (msauth_rules.xml:windows)
-6018237 || [OSSEC] Level 10 - Server Operators Group Changed (msauth_rules.xml:windows)
-6018238 || [OSSEC] Level 8 - Print Operators Group Changed (msauth_rules.xml:windows)
-6018239 || [OSSEC] Level 12 - Backup Operators Group Changed (msauth_rules.xml:windows)
-6018240 || [OSSEC] Level 10 - Replicators Group Changed (msauth_rules.xml:windows)
-6018241 || [OSSEC] Level 8 - Pre-Windows 2000 Compatible Access Group Changed (msauth_rules.xml:windows)
-6018242 || [OSSEC] Level 10 - Remote Desktop Users Group Changed (msauth_rules.xml:windows)
-6018243 || [OSSEC] Level 10 - Network Configuration Operators Group Changed (msauth_rules.xml:windows)
-6018244 || [OSSEC] Level 10 - Incoming Forest Trust Builders Group Changed (msauth_rules.xml:windows)
-6018245 || [OSSEC] Level 8 - Performance Monitor Users Group Changed (msauth_rules.xml:windows)
-6018246 || [OSSEC] Level 8 - Performance Log Users Group Changed (msauth_rules.xml:windows)
-6018247 || [OSSEC] Level 8 - Windows Authorization Access Group Changed (msauth_rules.xml:windows)
-6018248 || [OSSEC] Level 8 - Terminal Server License Servers Group Changed (msauth_rules.xml:windows)
-6018249 || [OSSEC] Level 8 - Distributed COM Users Group Changed (msauth_rules.xml:windows)
-6018250 || [OSSEC] Level 12 - Enterprise Read-only Domain Controllers Group Changed (msauth_rules.xml:windows)
-6018251 || [OSSEC] Level 12 - Read-only Domain Controllers Group Changed (msauth_rules.xml:windows)
-6018252 || [OSSEC] Level 12 - Cryptographic Operators Group Changed (msauth_rules.xml:windows)
-6018253 || [OSSEC] Level 10 - Allowed RODC Password Replication Group Changed (msauth_rules.xml:windows)
-6018254 || [OSSEC] Level 10 - Denied RODC Password Replication Group Changed (msauth_rules.xml:windows)
-6018255 || [OSSEC] Level 10 - Event Log Readers Group Changed (msauth_rules.xml:windows)
-6018256 || [OSSEC] Level 10 - Certificate Service DCOM Access Group Changed (msauth_rules.xml:windows)
-6019102 || [OSSEC] Level 8 - VMware ESX critical message. (vmware_rules.xml:vmware)
-6019111 || [OSSEC] Level 5 - VMWare ESX authentication failure. (vmware_rules.xml:vmware)
-6019120 || [OSSEC] Level 8 - Virtual machine state changed to OFF. (vmware_rules.xml:vmware)
-6019123 || [OSSEC] Level 5 - Virtual machine being reconfigured. (vmware_rules.xml:vmware)
-6019150 || [OSSEC] Level 10 - Multiple VMWare ESX warning messages. (vmware_rules.xml:vmware)
-6019151 || [OSSEC] Level 10 - Multiple VMWare ESX error messages. (vmware_rules.xml:vmware)
-6019152 || [OSSEC] Level 10 - Multiple VMWare ESX authentication failures. (vmware_rules.xml:vmware)
-6019153 || [OSSEC] Level 10 - Multiple VMWare ESX user authentication failures. (vmware_rules.xml:vmware)
-6020100 || [OSSEC] Level 8 - First time this IDS alert is generated. (ids_rules.xml:ids)
-6020101 || [OSSEC] Level 6 - IDS event. (ids_rules.xml:ids)
-6020151 || [OSSEC] Level 10 - Multiple IDS events from same source ip. (ids_rules.xml:ids)
-6020152 || [OSSEC] Level 10 - Multiple IDS alerts for same id. (ids_rules.xml:ids)
-6020161 || [OSSEC] Level 11 - Multiple IDS events from same source ip (ignoring now this srcip and id). (ids_rules.xml:ids)
-6020162 || [OSSEC] Level 11 - Multiple IDS alerts for same id (ignoring now this id). (ids_rules.xml:ids)
-6030104 || [OSSEC] Level 12 - Apache segmentation fault. (apache_rules.xml:apache)
-6030105 || [OSSEC] Level 5 - Attempt to access forbidden file or directory. (apache_rules.xml:apache)
-6030106 || [OSSEC] Level 5 - Attempt to access forbidden directory index. (apache_rules.xml:apache)
-6030107 || [OSSEC] Level 6 - Code Red attack. (apache_rules.xml:apache)
-6030108 || [OSSEC] Level 5 - User authentication failed. (apache_rules.xml:apache)
-6030109 || [OSSEC] Level 9 - Attempt to login using a non-existent user. (apache_rules.xml:apache)
-6030110 || [OSSEC] Level 5 - User authentication failed. (apache_rules.xml:apache)
-6030115 || [OSSEC] Level 5 - Invalid URI (bad client request). (apache_rules.xml:apache)
-6030116 || [OSSEC] Level 10 - Multiple Invalid URI requests from same source. (apache_rules.xml:apache)
-6030117 || [OSSEC] Level 10 - Invalid URI, file name too long. (apache_rules.xml:apache)
-6030118 || [OSSEC] Level 6 - Access attempt blocked by Mod Security. (apache_rules.xml:apache)
-6030119 || [OSSEC] Level 12 - Multiple attempts blocked by Mod Security. (apache_rules.xml:apache)
-6030120 || [OSSEC] Level 12 - Apache without resources to run. (apache_rules.xml:apache)
-6030200 || [OSSEC] Level 6 - Modsecurity alert. (apache_rules.xml:apache)
-6030201 || [OSSEC] Level 6 - Modsecurity access denied. (apache_rules.xml:apache)
-6030202 || [OSSEC] Level 10 - Multiple attempts blocked by Mod Security. (apache_rules.xml:apache)
-6031101 || [OSSEC] Level 5 - Web server 400 error code. (web_rules.xml:web,accesslog)
-6031103 || [OSSEC] Level 6 - SQL injection attempt. (web_rules.xml:web,accesslog)
-6031104 || [OSSEC] Level 6 - Common web attack. (web_rules.xml:web,accesslog)
-6031105 || [OSSEC] Level 6 - XSS (Cross Site Scripting) attempt. (web_rules.xml:web,accesslog)
-6031106 || [OSSEC] Level 6 - A web attack returned code 200 (success). (web_rules.xml:web,accesslog)
-6031115 || [OSSEC] Level 13 - URL too long. Higher than allowed on most browsers. Possible attack. (web_rules.xml:web,accesslog)
-6031120 || [OSSEC] Level 5 - Web server 500 error code (server error). (web_rules.xml:web,accesslog)
-6031122 || [OSSEC] Level 5 - Web server 500 error code (Internal Error). (web_rules.xml:web,accesslog)
-6031151 || [OSSEC] Level 10 - Mutiple web server 400 error codes from same source ip. (web_rules.xml:web,accesslog)
-6031152 || [OSSEC] Level 10 - Multiple SQL injection attempts from same souce ip. (web_rules.xml:web,accesslog)
-6031153 || [OSSEC] Level 10 - Multiple common web attacks from same souce ip. (web_rules.xml:web,accesslog)
-6031154 || [OSSEC] Level 10 - Multiple XSS (Cross Site Scripting) attempts from same souce ip. (web_rules.xml:web,accesslog)
-6031161 || [OSSEC] Level 10 - Multiple web server 501 error code (Not Implemented). (web_rules.xml:web,accesslog)
-6031162 || [OSSEC] Level 10 - Multiple web server 500 error code (Internal Error). (web_rules.xml:web,accesslog)
-6031163 || [OSSEC] Level 10 - Multiple web server 503 error code (Service unavailable). (web_rules.xml:web,accesslog)
-6031203 || [OSSEC] Level 9 - Zeus serious log. (zeus_rules.xml:zeus)
-6031204 || [OSSEC] Level 12 - Zeus fatal log. (zeus_rules.xml:zeus)
-6031205 || [OSSEC] Level 8 - Admin authentication failed. (zeus_rules.xml:zeus)
-6031251 || [OSSEC] Level 10 - Multiple Zeus warnings. (zeus_rules.xml:zeus)
-6031303 || [OSSEC] Level 5 - Nginx critical message. (nginx_rules.xml:apache)
-6031315 || [OSSEC] Level 5 - Web authentication failed. (nginx_rules.xml:apache)
-6031316 || [OSSEC] Level 10 - Multiple web authentication failures. (nginx_rules.xml:apache)
-6031320 || [OSSEC] Level 10 - Invalid URI, file name too long. (nginx_rules.xml:apache)
-6031411 || [OSSEC] Level 6 - PHP web attack. (php_rules.xml:apache)
-6031412 || [OSSEC] Level 5 - PHP internal error (missing file). (php_rules.xml:apache)
-6031420 || [OSSEC] Level 5 - PHP Fatal error. (php_rules.xml:apache)
-6031421 || [OSSEC] Level 5 - PHP internal error (missing file or function). (php_rules.xml:apache)
-6031430 || [OSSEC] Level 5 - PHP Parse error. (php_rules.xml:apache)
-6035003 || [OSSEC] Level 5 - Bad request/Invalid syntax. (squid_rules.xml:squid)
-6035004 || [OSSEC] Level 5 - Unauthorized: Failed attempt to access authorization-required file or directory. (squid_rules.xml:squid)
-6035005 || [OSSEC] Level 5 - Forbidden: Attempt to access forbidden file or directory. (squid_rules.xml:squid)
-6035006 || [OSSEC] Level 5 - Not Found: Attempt to access non-existent file or directory. (squid_rules.xml:squid)
-6035007 || [OSSEC] Level 5 - Proxy Authentication Required: User is not authorized to use proxy. (squid_rules.xml:squid)
-6035008 || [OSSEC] Level 5 - Squid 400 error code (request failed). (squid_rules.xml:squid)
-6035009 || [OSSEC] Level 5 - Squid 500/600 error code (server error). (squid_rules.xml:squid)
-6035021 || [OSSEC] Level 6 - Attempt to access a Beagle worm (or variant) file. (squid_rules.xml:squid)
-6035022 || [OSSEC] Level 6 - Attempt to access a worm/trojan related site. (squid_rules.xml:squid)
-6035051 || [OSSEC] Level 10 - Multiple attempts to access forbidden file or directory from same source ip. (squid_rules.xml:squid)
-6035052 || [OSSEC] Level 10 - Multiple unauthorized attempts to use proxy. (squid_rules.xml:squid)
-6035053 || [OSSEC] Level 10 - Multiple Bad requests/Invalid syntax. (squid_rules.xml:squid)
-6035054 || [OSSEC] Level 12 - Infected machine with W32.Beagle.DP. (squid_rules.xml:squid)
-6035055 || [OSSEC] Level 10 - Multiple attempts to access a non-existent file. (squid_rules.xml:squid)
-6035056 || [OSSEC] Level 12 - Multiple attempts to access a worm/trojan/virus related web site. System probably infected. (squid_rules.xml:squid)
-6035057 || [OSSEC] Level 10 - Multiple 400 error codes (requests failed). (squid_rules.xml:squid)
-6035058 || [OSSEC] Level 10 - Multiple 500/600 error codes (server error). (squid_rules.xml:squid)
-6040101 || [OSSEC] Level 12 - System user successfully logged to the system. (attack_rules.xml:syslog,attacks)
-6040102 || [OSSEC] Level 14 - Buffer overflow attack on rpc.statd (attack_rules.xml:syslog,attacks)
-6040103 || [OSSEC] Level 14 - Buffer overflow on WU-FTPD versions prior to 2.6 (attack_rules.xml:syslog,attacks)
-6040104 || [OSSEC] Level 13 - Possible buffer overflow attempt. (attack_rules.xml:syslog,attacks)
-6040105 || [OSSEC] Level 12 - "Null" user changed some information. (attack_rules.xml:syslog,attacks)
-6040106 || [OSSEC] Level 12 - Buffer overflow attempt (probably on yppasswd). (attack_rules.xml:syslog,attacks)
-6040107 || [OSSEC] Level 14 - Heap overflow in the Solaris cachefsd service. (attack_rules.xml:syslog,attacks)
-6040109 || [OSSEC] Level 12 - Stack overflow attempt or program exiting with SEGV (Solaris). (attack_rules.xml:syslog,attacks)
-6040111 || [OSSEC] Level 10 - Multiple authentication failures. (attack_rules.xml:syslog,attacks)
-6040112 || [OSSEC] Level 12 - Multiple authentication failures followed by a success. (attack_rules.xml:syslog,attacks)
-6040113 || [OSSEC] Level 12 - Multiple viruses detected - Possible outbreak. (attack_rules.xml:syslog,attacks)
-6040501 || [OSSEC] Level 15 - Attacks followed by the addition of an user. (attack_rules.xml:syslog,elevation_of_privilege)
-6040601 || [OSSEC] Level 10 - Network scan from same source ip. (attack_rules.xml:syslog,recon)
-6050106 || [OSSEC] Level 9 - Database authentication failure. (mysql_rules.xml:mysql_log)
-6050120 || [OSSEC] Level 12 - Database shutdown messge. (mysql_rules.xml:mysql_log)
-6050125 || [OSSEC] Level 5 - Database error. (mysql_rules.xml:mysql_log)
-6050126 || [OSSEC] Level 12 - Database fatal error. (mysql_rules.xml:mysql_log)
-6050180 || [OSSEC] Level 10 - Multiple database errors. (mysql_rules.xml:mysql_log)
-6050504 || [OSSEC] Level 5 - PostgreSQL error message. (postgresql_rules.xml:postgresql_log)
-6050512 || [OSSEC] Level 9 - Database authentication failure. (postgresql_rules.xml:postgresql_log)
-6050520 || [OSSEC] Level 12 - Database shutdown messge. (postgresql_rules.xml:postgresql_log)
-6050521 || [OSSEC] Level 12 - Database shutdown messge. (postgresql_rules.xml:postgresql_log)
-6050580 || [OSSEC] Level 10 - Multiple database errors. (postgresql_rules.xml:postgresql_log)
-6050581 || [OSSEC] Level 10 - Multiple database errors. (postgresql_rules.xml:postgresql_log)
+5003112 || [JUNIPER-BLUEDOT] VPN Login from a known malicious source || url, wiki.quadrantsec.com/bin/view/Main/5003112
+5003113 || [JUNIPER-GEOIP] VPN Logout from a known malicious source || url, wiki.quadrantsec.com/bin/view/Main/5003113
+5003114 || [JUNIPER-BLUEDOT] Juniper ScreenOS Admin Login from a known malicous source || url, wiki.quadrantsec.com/bin/view/Main/5003114 || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search
 6100000 || [CISCO-SDEE] IPS/IDS License Expiration || url,wiki.quadrantsec.com/bin/view/Main/6100000
 6101000 || [CISCO-SDEE] IP options-Bad Option List || url,wiki.quadrantsec.com/bin/view/Main/6101000
 6101001 || [CISCO-SDEE] IP options-Record Packet Route || url,wiki.quadrantsec.com/bin/view/Main/6101001

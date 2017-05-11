@@ -26,5 +26,5 @@
 
 # These are CATCH ALL rules.  This means it will parse _all_ logs. 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLACKLIST] Suspicious communications detected via Blacklist"; blacklist: all; classtype: suspicious-traffic; after: track by_src, count 5, seconds 30; threshold: type limit, track by_src, count 10, seconds 60; parse_src_ip: 1; parse_dst_ip: 2; normalize; parse_proto; parse_proto_program; reference: url,wiki.quadrantsec.com/bin/view/Main/5002271; sid: 5002271; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLACKLIST] Suspicious communications detected via Blacklist"; blacklist: all; classtype: suspicious-traffic; after: track by_src, count 5, seconds 30; threshold: type limit, track by_src, count 10, seconds 60; parse_src_ip: 1; parse_dst_ip: 2; normalize; parse_proto; parse_proto_program; reference: url,wiki.quadrantsec.com/bin/view/Main/5002271; sid: 5002271; rev:3;)
 

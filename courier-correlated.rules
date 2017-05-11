@@ -25,8 +25,8 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-CORRELATED] Logout/disconnect after suspicious activity"; pcre: "/LOGOUT|DISCONNECTED/"; classtype: not-suspicious; parse_src_ip: 1; program: imapd|imapd-ssl|courierlogger;  xbits: isset,by_src,recon|honeypot|exploit_attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/5002399; sid:5002399; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-CORRELATED] User login after suspicious activity"; content: "LOGIN,"; parse_src_ip: 1;classtype: successful-user; program: imapd|imapd-ssl|courierlogger;  xbits: isset,by_src,recon|honeypot|exploit_attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/5002400; sid:5002400; rev:2;)
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-CORRELATED] Timeout after suspicious activity"; content: "TIMEOUT"; parse_src_ip: 1;classtype: successful-user; program: imapd|imapd-ssl|courierlogger;  xbits: isset,by_src,recon|honeypot|exploit_attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/5002401; sid:5002401; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-CORRELATED] Logout/disconnect after suspicious activity"; pcre: "/LOGOUT|DISCONNECTED/"; default_proto: tcp; classtype: not-suspicious; parse_src_ip: 1; program: imapd|imapd-ssl|courierlogger;  xbits: isset,by_src,recon|honeypot|exploit_attempt|brute_force; reference: url,wiki.quadrantsec.com/bin/view/Main/5002399; sid:5002399; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-CORRELATED] User login after suspicious activity"; content: "LOGIN,"; parse_src_ip: 1; default_proto: tcp; classtype: successful-user; program: imapd|imapd-ssl|courierlogger;  xbits: isset,by_src,recon|honeypot|exploit_attempt|brute_force; reference: url,wiki.quadrantsec.com/bin/view/Main/5002400; sid:5002400; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-CORRELATED] Timeout after suspicious activity"; content: "TIMEOUT"; parse_src_ip: 1; default_proto: tcp; classtype: successful-user; program: imapd|imapd-ssl|courierlogger;  xbits: isset,by_src,recon|honeypot|exploit_attempt|brute_force; reference: url,wiki.quadrantsec.com/bin/view/Main/5002401; sid:5002401; rev:3;)
 
 

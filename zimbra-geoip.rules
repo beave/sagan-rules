@@ -31,17 +31,17 @@
 
 # Dec  7 13:59:30 a postfix/smtps/smtpd[28325]: 755F86401D84: client=unknown[10.10.1.10], sasl_method=PLAIN, sasl_username=frank
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA-GEOIP] SASL Authentication from outside HOME_COUNTRY"; content: "sasl_method="; content: "sasl_username="; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003034; parse_src_ip: 1; program: zimbra; country_code: track by_src, isnot $HOME_COUNTRY; sid:5003034; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA-GEOIP] SASL Authentication from outside HOME_COUNTRY"; content: "sasl_method="; content: "sasl_username="; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003034; parse_src_ip: 1; program: zimbra; country_code: track by_src, isnot $HOME_COUNTRY; sid:5003034; rev:2;)
 
 # For /var/log/nginx.log
 
 # 10.10.1.10|local7|info|info|be|2016-12-07|15:06:10|nginx| 2016/12/07 10:28:47 [info] 28154#0: *4727323 client logged in, client: 91.131.2.231:57872, server: 0.0.0.0:993, login: "frank", upstream: 10.10.1.10:7993 (91.131.2.231:57872->10.7.1.73:993) <=> (10.10.1.10:35026->10.7.1.73:7993)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA-GEOIP] NGNIX Authentication from outside HOME_COUNTRY"; content: "client logged in"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003035; parse_src_ip: 1; program: ngnix; country_code: track by_src, isnot $HOME_COUNTRY; sid:5003035; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA-GEOIP] NGNIX Authentication from outside HOME_COUNTRY"; content: "client logged in"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003035; parse_src_ip: 1; program: ngnix; country_code: track by_src, isnot $HOME_COUNTRY; sid:5003035; rev:2;)
 
 # For /var/log/ews.log
 
 # 2016-12-07 00:05:42,514 INFO  [qtp1684106402-2033718:https:https://webmail.example.com:8443/ews/Exchange.asmx] [name=frank@example.com;ip=73.15.217.31;port=51998;ua=MacOSX/(G)ExchangeWebServices/()AddressBookSourceSync/();] ews - The account: 9d89ec1f-19b1-4785-8f3a-c4e0427ce48b is on local server.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA-GEOIP] EWS Authentication from outside HOME_COUNTRY"; content: "is on local server"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003036; parse_src_ip: 1; program: ews; country_code: track by_src, isnot $HOME_COUNTRY; sid:5003036; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA-GEOIP] EWS Authentication from outside HOME_COUNTRY"; content: "is on local server"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003036; parse_src_ip: 1; program: ews; country_code: track by_src, isnot $HOME_COUNTRY; sid:5003036; rev:2;)
 

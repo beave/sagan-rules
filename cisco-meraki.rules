@@ -30,59 +30,59 @@
 # "Casey Pennington" <cpennington@quadrantsec.com>
 # 2017/03/07
 
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-MERAKI] SSID Spoofing Detected"; content: "type=ssid_spoofing_detected"; classtype: suspicious-traffic; reference: url,meraki.cisco.com/lib/pdf/meraki_whitepaper_air_marshal.pdf; sid:5003026; rev:2;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-MERAKI] SSID Spoofing Detected"; content: "type=ssid_spoofing_detected"; classtype: suspicious-traffic; reference: url,meraki.cisco.com/lib/pdf/meraki_whitepaper_air_marshal.pdf; sid:5003026; rev:3;)
 
 # VPN connectivity change
 
-# alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-MERAKI] VPN connectivity change"; content: "type=vpn_connectivity_change"; classtype: suspicious-traffic; sid:5003042; rev:1;)
+# alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-MERAKI] VPN connectivity change"; content: "type=vpn_connectivity_change"; classtype: suspicious-traffic; sid:5003042; rev:2;)
 
 # Uplink connectivity down
 
-# alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-MERAKI] Uplink connectivity change"; content: "MX84 events"; content: "down"; classtype: system-event; sid:5003043; rev:1;)
+# alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-MERAKI] Uplink connectivity change"; content: "MX84 events"; content: "down"; classtype: system-event; sid:5003043; rev:2;)
 
 # Uplink conectivity failover
 
-# alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-MERAKI] Uplink connectivity change"; content: "MX84 events"; content: "failover"; classtype: system-event; sid:5003044; rev:1;)
+# alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-MERAKI] Uplink connectivity change"; content: "MX84 events"; content: "failover"; classtype: system-event; sid:5003044; rev:2;)
 
 # Security_event
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Malicious file blocked by amp"; content: "malicious action=block"; classtype: suspicious-traffic; reference: url,documentation.meraki.com/MX-Z/Content_Filtering_and_Threat_Protection/; sid:5003045; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Malicious file blocked by amp"; content: "malicious action=block"; classtype: suspicious-traffic; reference: url,documentation.meraki.com/MX-Z/Content_Filtering_and_Threat_Protection/; sid:5003045; rev:2;)
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] File issued retrospective malicious disposition"; content: "malicious action=allow"; classtype: suspicious-traffic; reference: url,documentation.meraki.com/MX-Z/Content_Filtering_and_Threat_Protection/; sid:5003046; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] File issued retrospective malicious disposition"; content: "malicious action=allow"; classtype: suspicious-traffic; reference: url,documentation.meraki.com/MX-Z/Content_Filtering_and_Threat_Protection/; sid:5003046; rev:2;)
 
 ## MERAKI MR Access Points Rules ##
 
 # WPA failed authentication attempt
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] WPA failed authentication attempt"; content: "auth_neg_failed='1'"; content: "type=disassociation"; classtype: attempted-user; sid:5003047; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] WPA failed authentication attempt"; content: "auth_neg_failed='1'"; content: "type=disassociation"; classtype: attempted-user; sid:5003047; rev:2;)
 
 # 802.1x failed authentication attempt
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] 802.1x failed authentication attempt"; content: "type=8021x_eap_failure radio='0'"; content: "type=disassociation"; classtype: attempted-user; sid:5003048; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] 802.1x failed authentication attempt"; content: "type=8021x_eap_failure radio='0'"; content: "type=disassociation"; classtype: attempted-user; sid:5003048; rev:2;)
 
 # Wireless packet flood detected
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] WPA failed authentication attempt"; content: "type=device_packet_flood"; content: "packet='deauth'"; classtype: attempted-user; reference: url,meraki.cisco.com/lib/pdf/meraki_whitepaper_air_marshal.pdf; sid:5003049; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] WPA failed authentication attempt"; content: "type=device_packet_flood"; content: "packet='deauth'"; classtype: attempted-user; reference: url,meraki.cisco.com/lib/pdf/meraki_whitepaper_air_marshal.pdf; sid:5003049; rev:2;)
 
 # Flow denied by Layer 3 firewall
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Flow denied by Layer 3 firewall"; content: "MR18 flows deny"; classtype: suspicious-traffic; sid:5003050; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Flow denied by Layer 3 firewall"; content: "MR18 flows deny"; classtype: suspicious-traffic; sid:5003050; rev:2;)
 
 #* MERAKI MS Switches Rules ##
 
 # Port status changed
 
-# alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Port status changed"; content: "MS220_8P events port"; content: "status"; classtype: system-event; sid:5003051; rev:1;)
+# alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Port status changed"; content: "MS220_8P events port"; content: "status"; classtype: system-event; sid:5003051; rev:2;)
 
 # Virtual router collision
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Virtual router collision"; content: "VRRP packet"; classtype: system-event; sid:5003052; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Virtual router collision"; content: "VRRP packet"; classtype: system-event; sid:5003052; rev:3;)
 
 # VRRP transition
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] VRRP transition"; content: "VRRP"; content: "changed"; classtype: system-event; sid:5003053; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] VRRP transition"; content: "VRRP"; content: "changed"; classtype: system-event; sid:5003053; rev:2;)
 
 # Blocked DHCP server response
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Blocked DHCP server response"; content: "Blocked DHCP"; classtype: system-event; sid:5003054; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Blocked DHCP server response"; content: "Blocked DHCP"; classtype: system-event; sid:5003054; rev:2;)
 

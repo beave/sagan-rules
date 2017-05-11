@@ -34,210 +34,210 @@
 
 # IPv4 source route attack was detected
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 source route attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0152|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: misc-attack; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003055; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 source route attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0152|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: misc-attack; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003055; rev:2;)
 
 # IPv4 SYN flood attack was detected
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 SYN flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0153|22|"; parse_src_ip: 1; parse_dst_ip: 2; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003056; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 SYN flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0153|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003056; rev:2;)
 
 
 # IPv4 ICMP flood attack was detected
 
-alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 ICMP flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0154|22|"; parse_src_ip: 1; parse_dst_ip: 2; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003057; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 ICMP flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0154|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto: icmp; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003057; rev:2;)
 
 
 # IPv4 UDP flood attack was detected
 
-alert udp $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 UDP flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0155|22|"; parse_src_ip: 1; parse_dst_ip: 2; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003058; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 UDP flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0155|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto: udp; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003058; rev:2;)
 
 
 # IPv4 IPSEC flood attack was detected
 
-alert udp $EXTERNAL_NET any -> $HOME_NET 500 (msg: "[WATCHGUARD] IPv4 IPSEC flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0156|22|"; parse_src_ip: 1; parse_dst_ip: 2; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003059; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET 500 (msg: "[WATCHGUARD] IPv4 IPSEC flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0156|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:udp; default_dst_port: 500; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003059; rev:2;)
 
 
 # IPv4 IKE flood attack was detected
 
-alert udp $EXTERNAL_NET any -> $HOME_NET 500 (msg: "[WATCHGUARD] IPv4 IKE flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0157|22|"; parse_src_ip: 1; parse_dst_ip: 2; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003060; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 IKE flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0157|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:udp; default_dst_port: 500; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003060; rev:2;)
 
 
 # IPv4 scan attack was detected
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 scan attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0158|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: network-scan; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003061; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 scan attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0158|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: network-scan; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003061; rev:2;)
 
 
 # IPv4 port scan attack was detected
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 port scan attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0159|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: network-scan; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003062; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 port scan attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0159|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: network-scan; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003062; rev:2;)
 
 
 # IPv4 DDOS attack against a server was detected
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 DDOS attack against a server was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0160|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003063; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 DDOS attack against a server was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0160|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003063; rev:2;)
 
 
 # IPv4 DDOS attack from a client was detected
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 DDOS attack from a client was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0161|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003064; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv4 DDOS attack from a client was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0161|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003064; rev:2;)
 
 
 # IPv6 SYN flood attack was detected
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv6 SYN flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0162|22|"; parse_src_ip: 1; parse_dst_ip: 2; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003065; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv6 SYN flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0162|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003065; rev:2;)
 
 
 # IPv6 ICMP flood attack was detected
 
-alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv6 ICMP flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0163|22|"; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003066; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv6 ICMP flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0163|22|"; default_proto: icmp; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003066; rev:2;)
 
 
 # IPv6 UDP flood attack was detected
 
-alert udp $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv6 UDP flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0164|22|"; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003067; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv6 UDP flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0164|22|"; default_proto: udp; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003067; rev:2;)
 
 
 # IPv6 IPSEC flood attack was detected
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv6 IPSEC flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0165|22|"; parse_proto; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003068; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv6 IPSEC flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0165|22|"; parse_proto; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003068; rev:2;)
 
 
 # IPv6 IKE flood attack was detected
 
-alert udp $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv6 IKE flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0166|22|"; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003069; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPv6 IKE flood attack was detected"; program: WatchGuard*; content: "msg_id=|22|3000-0166|22|"; default_proto: udp; classtype: denial-of-service; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003069; rev:2;)
 
 
 # Traffic was detected to or from a blocked site
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Traffic was detected to or from a blocked site"; program: WatchGuard*; content: "msg_id=|22|3000-0168|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003070; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Traffic was detected to or from a blocked site"; program: WatchGuard*; content: "msg_id=|22|3000-0168|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003070; rev:2;)
 
 
 # IP Spoofing Detected
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IP spoofing was detected from the IP address specified"; program: WatchGuard*; content: "msg_id=|22|3000-0169|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003071; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IP spoofing was detected from the IP address specified"; program: WatchGuard*; content: "msg_id=|22|3000-0169|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003071; rev:2;)
 
 
 # Possible loop or ARP spoofing detected
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Possible loop or ARP spoofing detected"; program: WatchGuard*; content: "msg_id=|22|3000-012E|22|"; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003072; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Possible loop or ARP spoofing detected"; program: WatchGuard*; content: "msg_id=|22|3000-012E|22|"; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003072; rev:2;)
 
 
 # Firewall is shutting down
 
-alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Firewall is shutting down"; program: WatchGuard*; content: "msg_id=|22|3000-0028|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003073; rev: 1;)
+#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Firewall is shutting down"; program: WatchGuard*; content: "msg_id=|22|3000-0028|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003073; rev:2;)
 
 
 # Detected an ARP spoofing attack
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Detected an ARP spoofing attack"; program: WatchGuard*; content: "msg_id=|22|3000-012C|22|"; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003074; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Detected an ARP spoofing attack"; program: WatchGuard*; content: "msg_id=|22|3000-012C|22|"; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003074; rev:2;)
 
 
 # Feature key for Application Control subscription has expired
 
-alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Feature key for Application Control subscription has expired"; program: WatchGuard*; content: "msg_id=|22|3000-0004|22|"; classtype: system-event; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003075; rev: 1;)
+#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Feature key for Application Control subscription has expired"; program: WatchGuard*; content: "msg_id=|22|3000-0004|22|"; classtype: system-event; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003075; rev:2;)
 
 
 # Feature key for Intrusion Prevention Services subscription has expired
 
-alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Feature key for Intrusion Prevention Services subscription has expired"; program: WatchGuard*; content: "msg_id=|22|3000-0005|22|"; classtype: system-event; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003076; rev: 1;)
+#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Feature key for Intrusion Prevention Services subscription has expired"; program: WatchGuard*; content: "msg_id=|22|3000-0005|22|"; classtype: system-event; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003076; rev:2;)
 
 
 # Capture stopped due to the specified reason
 
-alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Capture stopped due to the specified reason"; program: WatchGuard*; content: "msg_id=|22|3113-0001|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003077; rev: 1;)
+#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Capture stopped due to the specified reason"; program: WatchGuard*; content: "msg_id=|22|3113-0001|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003077; rev:2;)
 
 
 # Starting wireless AP service
 
-alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Starting wireless AP service"; program: WatchGuard*; content: "msg_id=|22|3100-0052|22|"; classtype: system-event; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003078; rev: 1;)
+#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Starting wireless AP service"; program: WatchGuard*; content: "msg_id=|22|3100-0052|22|"; classtype: system-event; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003078; rev:2;)
 
 
 # Wireless access point model mismatch
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless access point model mismatch"; program: WatchGuard*; content: "msg_id=|22|6100-0002|22|"; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003079; rev: 1;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless access point model mismatch"; program: WatchGuard*; content: "msg_id=|22|6100-0002|22|"; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003079; rev:2;)
 
 
 # Wireless access point activation failure
 
-alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless access point activation failure"; program: WatchGuard*; content: "msg_id=|22|6100-0003|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003080; rev: 1;)
+#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless access point activation failure"; program: WatchGuard*; content: "msg_id=|22|6100-0003|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003080; rev:2;)
 
 
 # APT threat identification and notification
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] APT threat identification and notification"; program: WatchGuard*; content: "msg_id=|22|0F00-0015|22|"; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003081; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] APT threat identification and notification"; program: WatchGuard*; content: "msg_id=|22|0F00-0015|22|"; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003081; rev:2;)
 
 
 # Gateway AntiVirus (GAV) detected a virus or malware in an email attachment.
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) detected a virus or malware in an email attachment."; program: WatchGuard*; content: "msg_id=|22|1BFF-000C|22|"; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003082; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) detected a virus or malware in an email attachment."; program: WatchGuard*; content: "msg_id=|22|1BFF-000C|22|"; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003082; rev:2;)
 
 
 # Gateway AntiVirus (GAV) cannot perform scan
 
-alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) cannot perform scan"; program: WatchGuard*; content: "msg_id=|22|1BFF-000E|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003083; rev: 1;)
+#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) cannot perform scan"; program: WatchGuard*; content: "msg_id=|22|1BFF-000E|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003083; rev:2;)
 
 
 # APT threat detected
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] APT threat detected"; program: WatchGuard*; content: "msg_id=|22|1BFF-0028|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003084; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] APT threat detected"; program: WatchGuard*; content: "msg_id=|22|1BFF-0028|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003084; rev:2;)
 
 
 # Gateway AntiVirus (GAV) virus found - FTP
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $FTP_PORT (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) virus found - FTP"; program: WatchGuard*; content: "msg_id=|22|1CFF-000E|22|"; parse_src_ip: 1; parse_dst_ip: 2; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003085; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) virus found - FTP"; program: WatchGuard*; content: "msg_id=|22|1CFF-000E|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $DEFAULT_FTP_PORT; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003085; rev:2;)
 
 
 # Gateway AntiVirus (GAV) scan error
 
-alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) scan error"; program: WatchGuard*; content: "msg_id=|22|1CFF-000F|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003086; rev: 1;)
+#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) scan error"; program: WatchGuard*; content: "msg_id=|22|1CFF-000F|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003086; rev:2;)
 
 
 # Gateway AntiVirus (GAV) virus found - POP3
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $POP3_PORT (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) virus found - POP3"; program: WatchGuard*; content: "msg_id=|22|21FF-000F|22|"; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003087; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) virus found - POP3"; program: WatchGuard*; content: "msg_id=|22|21FF-000F|22|"; default_proto:tcp; default_dst_port: $DEFAULT_POP3_PORT; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003087; rev:2;)
 
 
 # Administrative accounts reset to default
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Administrative accounts reset to default"; program: WatchGuard*; content: "msg_id=|22|0101-0002|22|"; classtype: configuration-change; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003088; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Administrative accounts reset to default"; program: WatchGuard*; content: "msg_id=|22|0101-0002|22|"; classtype: configuration-change; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003088; rev:2;)
 
 
 # LIVESECURITY feature not found
 
-alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] LIVESECURITY feature not found"; program: WatchGuard*; content: "msg_id=|22|5501-0002|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003089; rev: 1;)
+#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] LIVESECURITY feature not found"; program: WatchGuard*; content: "msg_id=|22|5501-0002|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003089; rev:2;)
 
 
 # Member promoted to master
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Member promoted to master"; program: WatchGuard*; content: "msg_id=|22|3900-0005|22|"; classtype: configuration-change; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003090; rev: 1;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Member promoted to master"; program: WatchGuard*; content: "msg_id=|22|3900-0005|22|"; classtype: configuration-change; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003090; rev:2;)
 
 
 # Failed to start the signature update for the specified services
 
-alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Failed to start the signature update for the specified services"; program: WatchGuard*; content: "msg_id=|22|2E01-0018|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003091; rev: 1;)
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Failed to start the signature update for the specified services"; program: WatchGuard*; content: "msg_id=|22|2E01-0018|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003091; rev:2;)
 
 
 # VPN (PPTP) - User login
 
-alert tcp $EXTERNAL_NET any -> $HOME_NET $PPTP_PORT (msg: "[WATCHGUARD] VPN - User login"; program: WatchGuard*; content: "msg_id=|22|1400-0000|22|"; parse_src_ip: 1; parse_dst_ip: 2; classtype: successful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003092; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] VPN - User login"; program: WatchGuard*; content: "msg_id=|22|1400-0000|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $DEFAULT_PPTP_PORT; classtype: successful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003092; rev:2;)
 
 
 # VPN (SSL) - User login
 
-# alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTPS_PORT (msg: "[WATCHGUARD] VPN (SSL) - User login"; program: WatchGuard*; content: "msg_id=|22|2500-0000|22|"; parse_src_ip: 1; parse_dst_ip: 2; classtype: successful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003093; rev: 1;)
+# alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] VPN (SSL) - User login"; program: WatchGuard*; content: "msg_id=|22|2500-0000|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $DEFAULT_HTTPS_PORT; classtype: successful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003093; rev:2;)
 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg:"[WATCHGUARD] Failed Login Attempt - Brute force [WATCHGUARD] [5/5]"; program: WatchGuard*; content: "msg_id=|22|1100-0005|22|" content: "Authentication of"; content "rejected"; parse_src_ip: 1; parse_dst_ip: 2; xbits: set,brute_force,21600; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300;  classtype: unsuccessful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003094; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WATCHGUARD] Failed Login Attempt - Brute force [WATCHGUARD] [5/5]"; program: WatchGuard*; content: "msg_id=|22|1100-0005|22|" content: "Authentication of"; content "rejected"; parse_src_ip: 1; parse_dst_ip: 2; xbits: set,brute_force,21600; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300;  classtype: unsuccessful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003094; rev:1;)
 
 
-alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[WATCHGUARD] Signature update process for the specified version failed"; program: WatchGuard*; content: "msg_id=|22|2E02-0067|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003097; rev: 1;) 
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WATCHGUARD] Signature update process for the specified version failed"; program: WatchGuard*; content: "msg_id=|22|2E02-0067|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003097; rev:2;) 
 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IP spoofing was detected from the IP address specified"; program: WatchGuard*; content: "msg_id=|22|3000-0169|22|"; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003098; rev: 1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IP spoofing was detected from the IP address specified"; program: WatchGuard*; content: "msg_id=|22|3000-0169|22|"; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003098; rev:2;)
 
 
-alert syslog $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless Access Point Model Mismatch"; program: WatchGuard*; content: "msg_id=|22|6100-0002|22|"; class-type: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003099; rev:1;)
+#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless Access Point Model Mismatch"; program: WatchGuard*; content: "msg_id=|22|6100-0002|22|"; class-type: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003099; rev:1;)
 
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPS detected an intrusion in the client request or server response content body"; program: WatchGuard*; content: "msg_id=|22|1AFF-0026|22|"; class-type: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003100; rev: 1;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPS detected an intrusion in the client request or server response content body"; program: WatchGuard*; content: "msg_id=|22|1AFF-0026|22|"; class-type: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003100; rev:2;) 
 
 

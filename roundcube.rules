@@ -25,6 +25,6 @@
 #
 #*************************************************************
 
-alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ROUNDCUBE] - Authentication failed"; content: "failed"; content: "LOGIN"; classtype: unsuccessful-user; program: roundcube; reference: url,wiki.quadrantsec.com/bin/view/Main/5000277; sid: 5000277; rev:1;)
-#alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[ROUNDCUBE] - Authentication success"; content: "Successful login"; classtype: successful-user; program: roundcube; reference: url,wiki.quadrantsec.com/bin/view/Main/5000278; sid: 5000278; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ROUNDCUBE] - Authentication failed"; content: "failed"; content: "LOGIN"; default_proto: tcp; default_dst_port: $DEFAULT_HTTP_PORT; classtype: unsuccessful-user; program: roundcube; reference: url,wiki.quadrantsec.com/bin/view/Main/5000277; sid: 5000277; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ROUNDCUBE] - Authentication success"; content: "Successful login"; default_proto: tcp; default_dst_port: $DEFAULT_HTTP_PORT; classtype: successful-user; program: roundcube; reference: url,wiki.quadrantsec.com/bin/view/Main/5000278; sid: 5000278; rev:2;)
 
