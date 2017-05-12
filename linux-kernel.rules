@@ -43,4 +43,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] hostbyte=DID_E
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] Hard drive/RAID - FAILED abort on device"; content: "hpsa "; content: "FAILED abort on device"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002278; program: kernel; sid:5002278; rev:2;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] Hard drive/RAID - probably means device no longer present"; content: "hpsa "; content: "probably means device no longer present"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002279; program: kernel; sid:5002279; rev:2;)
 
+# UDP: bad checksum. From 10.XX.X.XXX:137 to 10.XX.X.XXX:137 ulen 76
+
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] Bad UDP checksum"; program: UDP; content: "bad checksum.""; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5003115; sid:5003115; rev:1;)
 
