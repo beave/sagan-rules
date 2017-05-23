@@ -158,7 +158,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Detected an ARP
 
 # Wireless access point activation failure
 
-#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless access point activation failure"; program: WatchGuard*; content: "msg_id=|22|6100-0003|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003080; rev:2;)
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless access point activation failure"; program: WatchGuard*; content: "msg_id=|22|6100-0003|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003080; rev:2;)
 
 
 # APT threat identification and notification
@@ -173,7 +173,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVir
 
 # Gateway AntiVirus (GAV) cannot perform scan
 
-#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) cannot perform scan"; program: WatchGuard*; content: "msg_id=|22|1BFF-000E|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003083; rev:2;)
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) cannot perform scan"; program: WatchGuard*; content: "msg_id=|22|1BFF-000E|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003083; rev:2;)
 
 
 # APT threat detected
@@ -188,7 +188,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVir
 
 # Gateway AntiVirus (GAV) scan error
 
-#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) scan error"; program: WatchGuard*; content: "msg_id=|22|1CFF-000F|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003086; rev:2;)
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) scan error"; program: WatchGuard*; content: "msg_id=|22|1CFF-000F|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003086; rev:2;)
 
 
 # Gateway AntiVirus (GAV) virus found - POP3
@@ -203,7 +203,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Administrative 
 
 # LIVESECURITY feature not found
 
-#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] LIVESECURITY feature not found"; program: WatchGuard*; content: "msg_id=|22|5501-0002|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003089; rev:2;)
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] LIVESECURITY feature not found"; program: WatchGuard*; content: "msg_id=|22|5501-0002|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003089; rev:2;)
 
 
 # Member promoted to master
@@ -213,7 +213,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Administrative 
 
 # Failed to start the signature update for the specified services
 
-alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Failed to start the signature update for the specified services"; program: WatchGuard*; content: "msg_id=|22|2E01-0018|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003091; rev:2;)
+lert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Failed to start the signature update for the specified services"; program: WatchGuard*; content: "msg_id=|22|2E01-0018|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003091; rev:2;)
 
 
 # VPN (PPTP) - User login
@@ -229,13 +229,13 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] VPN - User logi
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WATCHGUARD] Failed Login Attempt - Brute force [WATCHGUARD] [5/5]"; program: WatchGuard*; content: "msg_id=|22|1100-0005|22|" content: "Authentication of"; content "rejected"; parse_src_ip: 1; parse_dst_ip: 2; xbits: set,brute_force,21600; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300;  classtype: unsuccessful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003094; rev:1;)
 
 
-#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WATCHGUARD] Signature update process for the specified version failed"; program: WatchGuard*; content: "msg_id=|22|2E02-0067|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003097; rev:2;) 
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WATCHGUARD] Signature update process for the specified version failed"; program: WatchGuard*; content: "msg_id=|22|2E02-0067|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003097; rev:2;) 
 
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IP spoofing was detected from the IP address specified"; program: WatchGuard*; content: "msg_id=|22|3000-0169|22|"; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003098; rev:2;)
 
 
-#alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless Access Point Model Mismatch"; program: WatchGuard*; content: "msg_id=|22|6100-0002|22|"; class-type: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003099; rev:1;)
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless Access Point Model Mismatch"; program: WatchGuard*; content: "msg_id=|22|6100-0002|22|"; class-type: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003099; rev:1;)
 
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPS detected an intrusion in the client request or server response content body"; program: WatchGuard*; content: "msg_id=|22|1AFF-0026|22|"; class-type: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003100; rev:2;) 
