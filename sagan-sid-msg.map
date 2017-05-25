@@ -2967,7 +2967,6 @@
 5003088 || [WATCHGUARD] Administrative accounts reset to default || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
 5003089 || [WATCHGUARD] LIVESECURITY feature not found || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
 5003090 || [WATCHGUARD] Member promoted to master || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
-5003091 || [WATCHGUARD] Failed to start the signature update for the specified services || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
 5003092 || [WATCHGUARD] VPN - User login || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
 5003093 || [WATCHGUARD] VPN (SSL) - User login || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
 5003094 || [WATCHGUARD] Failed Login Attempt - Brute force [WATCHGUARD] [5/5] || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
