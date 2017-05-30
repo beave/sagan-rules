@@ -1,3 +1,47 @@
+3017/05/31 -	Sagan rule release
+
+	* Threshold of sid 5000096 and 5000100 (attack.rules - "possible biffer overflow attempt")
+	  https://github.com/beave/sagan-rules/commit/b39ce84bbafc365c07fb9212bcc4dbb0164ad427
+
+	* Modification of 5003052 (cisco-meraki) to prevent false positives.
+	  https://github.com/beave/sagan-rules/commit/b647b31e3c3cf2761260cf536b3e9fc052675d40
+
+	* New 5003101 & 5003102 "broken domain trust" rules added to "windows-auth.rules". Modified
+	  5001763 to only identify brute force attacks.
+	  https://github.com/beave/sagan-rules/commit/bf9286858a7cb880906726d277f91b4480233fc3
+
+	* New sid 5003104 "User added to schema group" (windows-auth.rules).
+	  https://github.com/beave/sagan-rules/commit/3923d1d2184acda8d5e4cc68ed03db0dd358215f
+
+	* Incorrect normalization for Snort fix (normalization.rulebase)
+	  https://github.com/beave/sagan-rules/commit/bdd1e83664138a81121df0011a50650127f5f3b0
+
+	* Change to more traditional rule format.  Sagan now mimics Snort/Suricata.  "bit9.rules"
+	  are now "carbonblack.rules".
+	  https://github.com/beave/sagan-rules/commit/6b3130d9bb9ea19b2e81ae1e43a22a91e06e60ee
+
+	* Disable many program-error and hardware-event classtype rules.  For example,  by 
+	  older EOL Cisco hardware errors are no longer enabled.
+	  https://github.com/beave/sagan-rules/commit/5bf0638d0d2a57b32941c6b7bfa81edf4977e492
+
+	* Added more clear description of sid 5002955 (windows-misc.rules) - "Logging has been
+	  stopped on this device" rather than "subscription callback error recieved".
+	  https://github.com/beave/sagan-rules/commit/55b3cdfc16da0f36b3052054f826a260f00a5f4e
+
+	* Theshold of sid 5000068 (openssh.rules - bad protocol - network scan). 
+	  https://github.com/beave/sagan-rules/commit/d68d69766cbc07a18de8f2c8afbfa47f2362504a
+
+	* New linux-kernel.rules 5003115 (disabled by default) - "Bad UDP checksum".
+	  https://github.com/beave/sagan-rules/commit/c8e0d6bd573766c665e439dcf49c0151f9ae9389
+
+	* New Adykuzz rules (windows-malware.ruels) - 5003116, 5003117. 
+	  https://github.com/beave/sagan-rules/commit/1c17149f17654c13a3e8368cb8e7f685da41ef32
+	
+	* Disable Cisco "LAND" attack rules.  Because,  well,  it's not 1998 anymore.
+	  https://github.com/beave/sagan-rules/commit/552ab5295427c12437f99210a555162e3bbf2fd9
+		
+	* Various other minor fixes.....
+
 2017/03/16 - 	Sagan rule release
 
 	* Excluded of NTP traffic on cisco-bluedot.rules sid 5002869.
