@@ -2158,7 +2158,7 @@
 5002248 || [CISCO-BLACKLIST] FTP file transfer from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002248
 5002249 || [CISCO-BLACKLIST] FTP file transfer from blacklisted IP || url, wiki.quadrantsec.com/bin/view/Main/5002249
 5002250 || [CISCO-BROINTEL] VPN Login from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002250
-5002251 || [CISCO-BROINTEL] Console login from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002251 sid: 5002251
+5002251 || [CISCO-BROINTEL] Console login from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002251
 5002252 || [CISCO-BROINTEL] Login permitted from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002252
 5002253 || [CISCO-BROINTEL] WebVPN login from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002253
 5002254 || [CISCO-BROINTEL] VPN disconnect from Bro Intel IP || url, wiki.quadrantsec.com/bin/view/Main/5002254

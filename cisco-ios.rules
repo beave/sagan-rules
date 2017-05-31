@@ -36,7 +36,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] IOS configuratio
 drop any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Failed login - Brute Force [10/1]"; content: "SEC_LOGIN-4-LOGIN_FAILED"; classtype: unsuccessful-admin; xbits: set,brute_force,21600; after: track by_src, count 10, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; fwsam: src, 1 day; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000113; sid:5000113; rev:11;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Fan failure - Fan not rotating [0/2]"; content: "ENVMON-3-FAN_FAILED"; classtype: hardware-event; threshold: type limit, track by_src, count 2, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000388; sid:5000388; rev:5;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Fans had a rotation error reported [0/2]"; content: "%FAN-3-FAN_FAILED"; classtype: hardware-event; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001198; sid:5001198; rev:4;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Power Controller reports power Imax error detected"; content: "%ILPOWER-3-CONTROLLER_PORT_ERR"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001190; sid:5001199; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Power Controller reports power Imax error detected"; content: "%ILPOWER-3-CONTROLLER_PORT_ERR"; threshold: type limit, track by_src, count 1, seconds 3600; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001190; sid:5001199; rev:3;)
 
 # Rules submitted by Sniffty Dugen (July 31, 2012) 
 
