@@ -3006,6 +3006,9 @@
 5003115 || [LINUX-KERNEL] Bad UDP checksum || url,wiki.quadrantsec.com/bin/view/Main/5003115
 5003116 || [WINDOWS-MALWARE] Adylkuzz Trojan service installation detected || url, www.symantec.com/security_response/writeup.jsp?docid=2017-051707-0237-99&tabid=2 || url,wiki.quadrantsec.com/bin/view/Main/5003117
 5003117 || [WINDOWS-MALWARE] Adylkuzz Trojan log file detected || url, www.symantec.com/security_response/writeup.jsp?docid=2017-051707-0237-99&tabid=2 || url,wiki.quadrantsec.com/bin/view/Main/5003117
+5003118 || [BLUEDOT] Malicious MD5 hash detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002288
+5003119 || [BLUEDOT] Malicious SHA1 hash detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002288
+5003120 || [BLUEDOT] Malicious SHA256 hash detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002288
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

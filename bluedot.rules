@@ -28,3 +28,9 @@
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLUEDOT] Suspicious IP detected via Bluedot"; bluedot: type ip_reputation, track all, mdate_effective_period 1 months, Malicious,Tor,Proxy; content:!"drop"; nocase; content:!"denied"; nocase; content:!"deny"; nocase; content:!"qipapikey"; classtype: suspicious-traffic; after: track by_src, count 10, seconds 30; threshold: type limit, track by_src, count 2, seconds 3600; parse_src_ip: 1; parse_dst_ip: 2; normalize; parse_proto; parse_proto_program; reference: url,wiki.quadrantsec.com/bin/view/Main/5002288; sid:5002288; rev:7;)
 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLUEDOT] Malicious MD5 hash detected via Bluedot"; bluedot: type file_hash,Malicious; parse_hash: md5; classtype: suspicious-traffic; parse_src_ip: 1; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5002288; sid:5003118; rev:1;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLUEDOT] Malicious SHA1 hash detected via Bluedot"; bluedot: type file_hash,Malicious; parse_hash: sha1; classtype: suspicious-traffic; parse_src_ip: 1; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5002288; sid:5003119; rev:1;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLUEDOT] Malicious SHA256 hash detected via Bluedot"; bluedot: type file_hash,Malicious; parse_hash: sha256; classtype: suspicious-traffic; parse_src_ip: 1; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5002288; sid:5003120; rev:1;)
+
