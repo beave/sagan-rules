@@ -123,7 +123,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User added to 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User added to Schema Admins"; pcre: "/ 660: | 4756: /"; pcre: "/S-1-5-21-\d{5,15}\-\d{5,15}\-\d{5,15}-518 /"; program: *Security*; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5003104; sid:5003104; rev:2;)
 
 # User enabled
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account enabled"; pcre: "/ 626: | 4722: /"; content:!"$ Account Domain"; program: *Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001687; sid: 5001687; rev:9;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account enabled"; pcre: "/ 626: | 4722: /"; content:!"$ Account Domain"; program: *Security*; xbits: isset, by_src, created_enabled; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001687; sid: 5001687; rev:10;)
 
 # User created
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account created"; pcre: "/ 624: | 4720: /"; program: *Security*; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001786; sid: 5001791; rev:20;)
