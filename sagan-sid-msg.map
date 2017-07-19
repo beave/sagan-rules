@@ -3013,6 +3013,7 @@
 5003122 || [WINDOWS-MALWARE] Petya payload delivery SHA1 hash detected - Open source || url,isc.sans.edu/forums/diary/Widescale+Petya+variant+ransomware+attack+noted/22560/ || url,gist.github.com/vulnersCom/65fe44d27d29d7a5de4c176baba45759
 5003123 || [WINDOWS-MALWARE] Petya payload delivery MD5 hash detected - Open source || url,isc.sans.edu/forums/diary/Widescale+Petya+variant+ransomware+attack+noted/22560/ || url,gist.github.com/vulnersCom/65fe44d27d29d7a5de4c176baba45759
 5003124 || [WINDOWS-MALWARE] Petya detected by filename - Open source || url,isc.sans.edu/forums/diary/Widescale+Petya+variant+ransomware+attack+noted/22560/ || url,gist.github.com/vulnersCom/65fe44d27d29d7a5de4c176baba45759
+5003125 || [NXLOG] Service restart to correct problem [CLEAR XBIT] || url,wiki.quadrantsec.com/bin/view/Main/5003125
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
