@@ -26,7 +26,7 @@
 #*************************************************************
 
 # Sagan rules for Zscaler proxy. Currently mostly user-agent rules. 
-# Added by W.S Restepo & Jennifer Shannon (2017/07/24)
+# Added by W.E Restepo & Jennifer Shannon (2017/07/24)
 
 # These rules only search for "allowed" traffic, not blocked traffic. Zscaler must send in CEF format.
 
