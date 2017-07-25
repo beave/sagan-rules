@@ -1,4 +1,30 @@
-3017/05/31 -	Sagan rule release
+2017/07/25 - 	Sagan rule release.
+
+	* New Proxy/Zscaler rules
+	  https://github.com/beave/sagan-rules/commit/fb0b90e23479a791adfa0cf685464aaec2776375
+
+	* Changed "file system full" windows event to "system-error".
+	  https://github.com/beave/sagan-rules/commit/6eeaccc37f38115919176ac3258da7419591cdd3
+
+	* New & modifications to nxlog rules. To better detect failures with nxlog
+	  https://github.com/beave/sagan-rules/commit/15b8c63d025d543195496916ff85bf7dd75d5605
+
+	* Removed port number from 5001695 (Windows domain administrator rule)
+	  https://github.com/beave/sagan-rules/commit/989bb56e280c10c4b6f144b1c994edc6caca9d8e
+
+	* Removed redundant IOC from Petya rule
+	  https://github.com/beave/sagan-rules/commit/492bb3d8a726d9c53faef23fcb8915dfc9af31ca
+
+	* Modifications and new hashes add to Petya rules
+	  https://github.com/beave/sagan-rules/commit/18c6a8cebcafc1ba88da9608b19da44e39c7f213
+
+	* Set xbit windows.reboot / 900 seconds
+	  https://github.com/beave/sagan-rules/commit/37b1eef4977af3fa991b402f981fe9937c81f1a5
+
+	* New Bluedot md5/sha1/sha256 generic rule lookup.
+	  https://github.com/beave/sagan-rules/commit/5425e268fd7e491af9c85dafbfa0db76c098d0d6
+
+2017/05/31 -	Sagan rule release
 
 	* Threshold of sid 5000096 and 5000100 (attack.rules - "possible biffer overflow attempt")
 	  https://github.com/beave/sagan-rules/commit/b39ce84bbafc365c07fb9212bcc4dbb0164ad427
