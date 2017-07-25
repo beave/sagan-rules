@@ -114,4 +114,4 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[ZSCALER] Detected known Malw
 
 # Mobile leakages is content! as triggers a lot 
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[ZSCALER] Detected known Threat Name"; content:!"cs5|3d|None"; parse_src_ip: 2; parse_dst_ip: 1; program: CEF; content: "Zscaler"; content:"act=Allowed"; content:!"Mobile Device information leakage"; default_dst_port: $HTTP_PORT; default_proto: tcp; xbits: set,web-attack,86400; classtype:trojan-activity; sid:5003198; rev:1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[ZSCALER] Detected known Threat Name"; content:!"cs5|3d|None"; parse_src_ip: 2; parse_dst_ip: 1; program: CEF; content: "Zscaler"; content:"act=Allowed"; content:!"Mobile Device information leakage"; content:!"Mobile PII Information Leakage"; default_dst_port: $HTTP_PORT; default_proto: tcp; xbits: set,web-attack,86400; classtype:trojan-activity; sid:5003198; rev:2;)
