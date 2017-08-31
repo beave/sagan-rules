@@ -37,7 +37,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] PSExec execu
 
 # Sysmon| 1: Process Create: UtcTime: 2016-04-08 05:29:03.829 ProcessGuid: {E67F94C7-419F-5707-0000-00103FB11D00} ProcessId: 2920 Image: C:\Windows\System32\notepad.exe CommandLine: "C:\Windows\system32\NOTEPAD.EXE" C:\Users\frankw\Desktop\_HELP_instructions.txt CurrentDirectory: C:\Users\frankw\AppData\Local\Temp\ User: frankw-PC\frankw LogonGuid: {E67F94C7-32CC-5707-0000-0020F4440100} LogonId: 0x144f4 TerminalSessionId: 1 IntegrityLevel: High Hashes: SHA1=7EB0139D2175739B3CCB0D1110067820BE6ABD29,MD5=F2C7BB8ACC97F92E987A2D4087D021B1,SHA256=142E1D688EF0568370C37187FD9F2351D7DDEDA574F8BFA9B0FA4EF42DB85AA2 ParentProcessGuid: {E67F94C7-414A-5707-0000-001049CA1900} ParentProcessId: 1704 ParentImage: C:\Users\frankw\AppData\Local\Temp\30e22374e00af038d06063db14cb3797.exe ParentCommandLine: "C:\Users\frankw\AppData\Local\Temp\30e22374e00af038d06063db14cb3797.exe" 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Locky ransomware instructions detected!"; content: " 1: "; content: "notepad.exe"; nocase; content: "_HELP_instructions.txt "; classtype: trojan-activity; program: Sysmon; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002802; sid:5002802; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Locky/CrypoMix ransomware instructions detected!"; content: " 1: "; content: "notepad.exe"; nocase; content: "_HELP_instructions.txt "; classtype: trojan-activity; program: Sysmon; reference: url,wiki.quadrantsec.com/bin/view/Main/sid:5002802; sid:5002802; rev:3;)
 
 # vssadmin.exe is sometimes used by malware to delete shadow volume copied.  Below is Locky:
 # Champ Clark 04/08/2016

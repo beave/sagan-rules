@@ -246,3 +246,10 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Possible Wind
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Possible Windows Broken Domain Trust [25/1]"; pcre: "/failed to authorize|wrong password given|repeated login failures|authentication failed|authentication failures|access denied|access not allowed|failed to authenticate/i"; content: "|24| Session ID|3a|"; content:!"access denied by ACL"; content:!"Kerberos"; parse_src_ip: 1; parse_port; parse_proto; classtype: unsuccessful-user; after: track by_src, count 25, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; flowbits: set,brute_force,21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5003107; sid:5003107; rev:2;)
 
 
+# Steve Rawls (2017/08/31)
+
+# 172.16.1.1|daemon|err|err|1b|2017-08-29|14:42:22|Directory-Services-SAM| 12294: The SAM database was unable to lockout the account of Administrator due to a resource error, such as a hard disk write failure (the specific error code is in the error data) . Accounts are locked after a certain number of bad passwords are provided so please consider resetting the password of the account mentioned above.
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] SAM Database Unable to Lock Account"; program: "Directory-Services-SAM"; content: "12294|3a| "; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003203; reference: url,technet.microsoft.com/en-us/library/cc733228(v=ws.10).aspx; sid:5003203; rev:1;)
+
+
