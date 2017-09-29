@@ -62,7 +62,7 @@
 5000065 || [ARP] arpwatch - Changed network interface for IP address || url,wiki.quadrantsec.com/bin/view/Main/5000065
 5000066 || [ARP] arpwatch - Startup/Exiting message || url,wiki.quadrantsec.com/bin/view/Main/5000066
 5000067 || [ARP] arpwatch - Detected bad address len - ignored || url,wiki.quadrantsec.com/bin/view/Main/5000067
-5000068 || [OPENSSH] Bad protocol version - possible attack [0/3] || url,wiki.quadrantsec.com/bin/view/Main/5000068
+5000068 || [OPENSSH] Bad protocol version - network scan or possible attack [0/3] || url,wiki.quadrantsec.com/bin/view/Main/5000068
 5000069 || [OPENSSH] Timeout while logging in || url,wiki.quadrantsec.com/bin/view/Main/5000069
 5000070 || [OPENSSH] No identification string - possible scan || url,wiki.quadrantsec.com/bin/view/Main/5000070
 5000071 || [OPENSSH] OpenSSH challenge-response exploit || url,wiki.quadrantsec.com/bin/view/Main/5000071
@@ -2697,7 +2697,7 @@
 5002798 || [BRO] RFC1918 address scanning the network || url,wiki.quadrantsec.com/bin/view/Main/5002798
 5002799 || [WINDOWS-SYSMON] PSExec execution detected || url,wiki.quadrantsec.com/bin/view/Main/sid:5002799
 5002801 || [WINDOWS-MALWARE] Locky or AutoLocky ransomware extension detected. || url,decrypter.emsisoft.com || url,wiki.quadrantsec.com/bin/view/Main/5002801
-5002802 || [WINDOWS-SYSMON] Locky ransomware instructions detected! || url,wiki.quadrantsec.com/bin/view/Main/sid:5002802
+5002802 || [WINDOWS-SYSMON] Locky/CrypoMix ransomware instructions detected! || url,wiki.quadrantsec.com/bin/view/Main/sid:5002802
 5002803 || [WINDOWS-SYSMON] vssadmin.exe execution. Possible ransomware || url,wiki.quadrantsec.com/bin/view/Main/sid:5002803
 5002804 || [WINDOWS-MALWARE] Locky ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002804 || url,http://www.bleepingcomputer.com/news/security/the-locky-ransomware-encrypts-local-files-and-unmapped-network-shares/
 5002805 || [WINDOWS-MALWARE] Cryptowall 4.0 ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002805 || url,http://www.bleepingcomputer.com/virus-removal/cryptowall-ransomware-information#cryptowall4
@@ -3014,6 +3014,83 @@
 5003123 || [WINDOWS-MALWARE] Petya payload delivery MD5 hash detected - Open source || url,isc.sans.edu/forums/diary/Widescale+Petya+variant+ransomware+attack+noted/22560/ || url,gist.github.com/vulnersCom/65fe44d27d29d7a5de4c176baba45759
 5003124 || [WINDOWS-MALWARE] Petya detected by filename - Open source || url,isc.sans.edu/forums/diary/Widescale+Petya+variant+ransomware+attack+noted/22560/ || url,gist.github.com/vulnersCom/65fe44d27d29d7a5de4c176baba45759
 5003125 || [NXLOG] Service restart to correct problem [CLEAR XBIT] || url,wiki.quadrantsec.com/bin/view/Main/5003125
+5003126 || [ZSCALER] known Malicious user agent - MSIE 9.0 in version 10 format || url,www.virustotal.com/en/file/aaf9b99314eb5201407bc82ee948c0a3a1c6b0a3288e230bc03e4c2a2b4287e3/analysis/
+5003127 || [ZSCALER] known malicious user-agent string - MSIE 7.0 na - Win.Trojan.Koobface || url,www.virustotal.com/en/file/ef420005a10d73b840604b517c4760400ccfc6c5baba0ae5d05ec6f88e56821e/analysis/
+5003128 || [ZSCALER] known malicious user-agent string - Downloader 1.8 - Win.Trojan.Graftor || url,www.virustotal.com/en/file/0F45FB61856437CB3123C4DEAC68942C17ADC6534719E583F22E3DE1F31C1CA5/analysis/
+5003129 || [ZSCALER] known malicious User-Agent string - HttpCall - Win.Trojan.Rukypee || url,www.virustotal.com/en/file/74f22eced680ca26b767b4b07ba26b98536a385249d751586915b15b56509e0d/analysis/
+5003130 || [ZSCALER] known malicious User-Agent string - MyProgramm - Win.Trojan.Rukypee || url,www.virustotal.com/en/file/74f22eced680ca26b767b4b07ba26b98536a385249d751586915b15b56509e0d/analysis/
+5003131 || [ZSCALER] known malicious User-Agent string - Skypee - Win.Trojan.Rukypee || url,www.virustotal.com/en/file/74f22eced680ca26b767b4b07ba26b98536a385249d751586915b15b56509e0d/analysis/
+5003132 || [ZSCALER] known malicous user agent string - XAgent - Operation Pawn Storm || url,www.virustotal.com/en/file/7313eaf95a8a8b4c206b9afe306e7c0675a21999921a71a5a16456894571d21d/analysis/
+5003133 || [ZSCALER] known malicious user-agent string crackim || url,www.virustotal.com/en/file/27fa65a3166def75feb75f8feb25dd9784b8f2518c73defcc4ed3e9f46868e76/analysis/
+5003134 || [ZSCALER] Win.Trojan.Darkcpn outbound connection || url,virustotal.com/file/cab7cd418b1114c277f84c4fe59d05bcf53babf64f16ebe86ab11641bd6bbd94/analysis/
+5003135 || [ZSCALER] known malicious User-Agent string - MyIE 3.01 || url,virustotal.com/en/file/8553b945e2d4b9f45c438797d6b5e73cfe2899af1f9fd87593af4fd7fb51794a/analysis/
+5003136 || [ZSCALER] Suspicious User Agent (agent) || url,doc.emergingthreats.net/bin/view/Main/2001891
+5003137 || [ZSCALER] Drivecleaner.com Spyware User-Agent (DriveCleaner Updater) || url,doc.emergingthreats.net/2003486 || url,research.sunbelt-software.com/threatdisplay.aspx?name=DriveCleaner&threatid=44533 || url,www.drivecleaner.com
+5003138 || [ZSCALER] Winfixmaster.com Fake Anti-Spyware User-Agent 2 (WinFix Master) || url,doc.emergingthreats.net/2003545
+5003139 || [ZSCALER] Vaccineprogram.co.kr Related Spyware User-Agent (Museon) || url,doc.emergingthreats.net/2006418
+5003140 || [ZSCALER] Vaccineprogram.co.kr Related Spyware User Agent (pcsafe) || url,doc.emergingthreats.net/2006420
+5003141 || [ZSCALER] klm123.com Spyware User Agent || url,doc.emergingthreats.net/2007616
+5003142 || [ZSCALER] Suspicious User Agent (_) || url,doc.emergingthreats.net/bin/view/Main/2007942
+5003143 || [ZSCALER] Casino Related Spyware User-Agent Detected (Viper 4.0) || url,doc.emergingthreats.net/2008586
+5003144 || [ZSCALER] Suspicious User Agent (BlackSun) || url,doc.emergingthreats.net/bin/view/Main/2008983 || url,www.bitdefender.com/VIRUS-1000328-en--Trojan.Pws.Wow.NCY.html
+5003145 || [ZSCALER] Win32.Tdss User Agent Detected (Mozzila) || url,doc.emergingthreats.net/2010889
+5003146 || [ZSCALER] Suspicious User Agent (ScrapeBox)
+5003147 || [ZSCALER] Malware Related msndown || url,www.sunbeltsecurity.com/partnerresources/cwsandbox/md5.aspx?id=17fdf0cb5970b71b81b1a5406e017ac1
+5003148 || [ZSCALER] W32/Goolbot.E Checkin UA Detected iamx
+5003149 || [ZSCALER] Suspicious Win32 User Agent
+5003150 || [ZSCALER] Suspicious User-Agent (Our_Agent)
+5003151 || [ZSCALER] suspicious user-agent (REKOM)
+5003152 || [ZSCALER] Suspicious User-Agent Moxilla
+5003153 || [ZSCALER] Suspicious User-Agent VCTestClient
+5003154 || [ZSCALER] Suspicious User-Agent PrivacyInfoUpdate
+5003155 || [ZSCALER] Suspicious User-Agent (VMozilla) || url,www.avira.com/en/support-threats-description/tid/6259/tlang/en || url,www.microsoft.com/security/portal/Threat/Encyclopedia/Entry.aspx?Name=Worm%3aWin32%2fNeeris.BF
+5003156 || [ZSCALER] Suspicious User-Agent Sample
+5003157 || [ZSCALER] Suspicious User-Agent Mozilla/3.0
+5003158 || [ZSCALER] Optimum Installer User-Agent IE6 on Windows XP
+5003159 || [ZSCALER] suspicious User Agent (Lotto)
+5003160 || [ZSCALER] Suspicious User-Agent String (AskPartnerCobranding)
+5003161 || [ZSCALER] Backdoor.Win32.Vertexbot.A User-Agent (VERTEXNET) || url,www.symantec.com/business/security_response/writeup.jsp?docid=2011-032315-2902-99&tabid=2
+5003162 || [ZSCALER] suspicious user agent string (changhuatong)
+5003163 || [ZSCALER] suspicious user agent string (CholTBAgent)
+5003164 || [ZSCALER] Suspicious user agent (mdms)
+5003165 || [ZSCALER] Suspicious user agent (asd)
+5003166 || [ZSCALER] Suspicious User-Agent SimpleClient 1.0 || url,www.fortiguard.com/encyclopedia/virus/symbos_sagasi.a!tr.html
+5003167 || [ZSCALER] Known Skunkx DDOS Bot User-Agent Cyberdog || url,asert.arbornetworks.com/2011/03/skunkx-ddos-bot-analysis/
+5003168 || [ZSCALER] EmailSiphon Suspicious User-Agent Inbound || url,www.useragentstring.com/pages/useragentstring.php
+5003169 || [ZSCALER] EmailSiphon Suspicious User-Agent Outbound || url,www.useragentstring.com/pages/useragentstring.php
+5003170 || [ZSCALER] Binget PHP Library User Agent Outbound || url,www.useragentstring.com/pages/useragentstring.php || url,www.bin-co.com/php/scripts/load/
+5003171 || [ZSCALER] pxyscand/ Suspicious User Agent Outbound || url,www.useragentstring.com/pages/useragentstring.php
+5003172 || [ZSCALER] PyCurl Suspicious User Agent Outbound || url,www.useragentstring.com/pages/useragentstring.php
+5003173 || [ZSCALER] Atomic_Email_Hunter User-Agent Inbound || url,www.useragentstring.com/pages/useragentstring.php
+5003174 || [ZSCALER] Atomic_Email_Hunter User-Agent Outbound || url,www.useragentstring.com/pages/useragentstring.php
+5003175 || [ZSCALER] Avzhan DDoS Bot User-Agent MyIE || url,blog.fireeye.com/research/2010/10/avzhan-botnet-the-story-of-evolution.html || url,asert.arbornetworks.com/2010/09/another-family-of-ddos-bots-avzhan/
+5003176 || [ZSCALER] Win32/OnLineGames User-Agent (Revolution Win32) || url,threatexpert.com/report.aspx?md5=1431f4ab4bbe3ad1087eb14cf4d7dff9
+5003177 || [ZSCALER] Trojan Downloader User-Agent BGroom
+5003178 || [ZSCALER] Trojan Downloader User-Agent (Tiny)
+5003179 || [ZSCALER] Suspicious User-Agent (adlib) || url,blog.trendmicro.com/connections-between-droiddreamlight-and-droidkungfu/
+5003180 || [ZSCALER] W32/Kazy User-Agent (Windows NT 5.1 \; v.) space infront of semi-colon
+5003181 || [ZSCALER] W32/Renos.Downloader User Agent zeroup || md5,35ba53f6aeb6b38c1107018f271189af || url,www.f-secure.com/v-descs/trojan_w32_renos_h.shtml
+5003182 || [ZSCALER] Suspicious User-Agent (DownloadMR) || md5,0da0d8e664f44400c19898b4c9e71456 || url,www.virustotal.com/en/file/93236b781e147e3ac983be1374a5f807fabd27ee2b92e6d99e293a6eb070ac2b/analysis/
+5003183 || [ZSCALER] User-Agent (ChilkatUpload) || url,chilkatsoft.com
+5003184 || [ZSCALER] Suspicious user agent (Google page)
+5003185 || [ZSCALER] FOCA User-Agent || url,blog.bannasties.com/2013/08/vulnerability-scans/
+5003186 || [ZSCALER] MSF Meterpreter Default User Agent || url,blog.didierstevens.com/2015/03/16/quickpost-metasploit-user-agent-strings
+5003187 || [ZSCALER] WildTangent User-Agent (WT Games App)
+5003188 || [ZSCALER] BLEXBot User-Agent || url,webmeup.com/about.html
+5003189 || [ZSCALER] Microsoft Edge on Windows 10 SET
+5003190 || [ZSCALER] Fake Opera 8.11 UA related to Trojan Activity
+5003191 || [ZSCALER] Gator Agent Traffic || url,doc.emergingthreats.net/2000026
+5003192 || [ZSCALER] ISearchTech.com XXXPornToolbar Activity (IST) || url,doc.emergingthreats.net/2001493 || url,www.isearchtech.com
+5003193 || [ZSCALER] Better Internet Spyware User-Agent (poller) || url,doc.emergingthreats.net/2002005
+5003194 || [ZSCALER] SideStep User-Agent || url,github.com/chetan51/sidestep/ || url,doc.emergingthreats.net/2002078
+5003195 || [ZSCALER] 180 Solutions (Zango Installer) User Agent || url,doc.emergingthreats.net/2003062
+5003196 || [ZSCALER] Suspicious User-Agent Fragment (WORKED)
+5003197 || [ZSCALER] Detected known Malware Category
+5003198 || [ZSCALER] Detected known Threat Name
+5003199 || [ZSCALER] Suspicious IP detected via Bluedo 
+5003201 || [WINDOWS-MALWARE] CryptoMix ransomware extension detected. || url,www.bleepingcomputer.com/news/security/new-error-cryptomix-ransomware-variant-released/ || url,wiki.quadrantsec.com/bin/view/Main/5003202
+5003202 || [WINDOWS-MALWARE] Locky/CryptoMix ransomware note detected || url,www.bleepingcomputer.com/news/security/new-error-cryptomix-ransomware-variant-released/ || url,wiki.quadrantsec.com/bin/view/Main/5003202
+5003203 || [WINDOWS-AUTH] SAM Database Unable to Lock Account || url,technet.microsoft.com/en-us/library/cc733228(v=ws.10).aspx || url,wiki.quadrantsec.com/bin/view/Main/5003203
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
