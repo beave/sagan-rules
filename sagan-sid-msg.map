@@ -3091,6 +3091,7 @@
 5003201 || [WINDOWS-MALWARE] CryptoMix ransomware extension detected. || url,www.bleepingcomputer.com/news/security/new-error-cryptomix-ransomware-variant-released/ || url,wiki.quadrantsec.com/bin/view/Main/5003202
 5003202 || [WINDOWS-MALWARE] Locky/CryptoMix ransomware note detected || url,www.bleepingcomputer.com/news/security/new-error-cryptomix-ransomware-variant-released/ || url,wiki.quadrantsec.com/bin/view/Main/5003202
 5003203 || [WINDOWS-AUTH] SAM Database Unable to Lock Account || url,technet.microsoft.com/en-us/library/cc733228(v=ws.10).aspx || url,wiki.quadrantsec.com/bin/view/Main/5003203
+5003204 || [WINDOWS-MALWARE] Bad Rabbit Malware scheduled task detected || url,wiki.quadrantsec.com/bin/view/Main/5003204 || url,blog.talosintelligence.com/2017/10/bad-rabbit.html
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
