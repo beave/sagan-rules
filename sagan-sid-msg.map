@@ -2286,7 +2286,7 @@
 5002386 || [VMWARE-CORRELATED] User login successful after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002386
 5002387 || [VSFTPD-GEOIP] Authentication successful from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002387
 5002388 || [VSFTPD-GEOIP] File uploaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002388
-5002389 || [VSFTPD-CORRELATED] Authentication successful from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002389
+5002389 || [VSFTPD-CORRELATED] Authentication after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002389
 5002390 || [VSFTPD-CORRELATED] File uploaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002390
 5002391 || [WINDOWS-OWA-CORRELATED] Login failure after suspicious activity || url,wiki.quadrantsec.com/bin/view/Main/5002391
 5002392 || [WINDOWS-MISC] Microsoft Antimalware has encountered an error trying to update signatures || url,wiki.quadrantsec.com/bin/view/Main/5002392

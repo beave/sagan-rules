@@ -25,6 +25,7 @@
 #
 #*************************************************************
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD-CORRELATED] Authentication successful from outside HOME_COUNTRY"; content: "OK LOGIN"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: correlated-attack; program: vsftpd; xbits: isset,by_src,recon|honeypot|exploit_attempt|brute_force; reference: url,wiki.quadrantsec.com/bin/view/Main/5002389; sid:5002389; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD-CORRELATED] Authentication after suspicious activity"; content: "OK LOGIN"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: correlated-attack; program: vsftpd; xbits: isset,by_src,recon|honeypot|exploit_attempt|brute_force; reference: url,wiki.quadrantsec.com/bin/view/Main/5002389; sid:5002389; rev:4;)
+
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD-CORRELATED] File uploaded from outside HOME_COUNTRY"; content: "OK UPLOAD"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: correlated-attack; xbits: isset,by_src,recon|honeypot|exploit_attempt|brute_force; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002390; sid:5002390; rev:3;)
 
