@@ -1693,7 +1693,7 @@
 5001760 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x15 - Client not yet valid - try again later [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001760
 5001761 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x16 - Server not yet valid - try again later [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001761
 5001762 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x17 - Password has expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001762
-5001763 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x18 - Pre-authentication information was invalid [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001763
+5001763 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x18 - Kerberos password authentication failure [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001763
 5001764 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x19 - Additional pre-authentication required [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001764
 5001765 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x1F - Integrity check on decrypted field failed [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001765
 5001766 || [WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x20 - Ticket expired [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001766
