@@ -377,3 +377,25 @@ rule=: %-:word% %-:word% %-:word% %-:word% : AAA LOGIN_FAILED %-:word% :  User %
 rule=: %-:word% %-:word% %-:word% %-:word% : SSLVPN LOGIN %-:number% : Context %-:word% - SessionId: %-:word% User %username:word% - Client_ip %src-ip:ipv4% %-:rest%
 rule=: %-:word% %-:word% %-:word% %-:word% : SSLVPN LOGOUT %-:number% : Context %-:word% - SessionId: %-:word% User %username:word% - Client_ip %src-ip:ipv4% %-:rest%
 
+# New normalization rules from Sam Castellango (2017/11/07)
+
+# This is for Microsoft Windows event 4624: 
+
+rule=: %-:string-to:Account Name:%Account Name: %-:string-to:Account Name:%Account Name: %Username:word% %-:string-to:Network Address:%Network Address: %Src-IP:ipv4% %-:rest%
+
+# Palo Alto Firewall 
+
+# 10.11.11.11|user|info|info|0e|2017-01-11|11:50:31|1,2017/01/28| 13:20:31,1009A101774,SYSTEM,general,0,2017/08/28 13:20:31,,general,,0,0,general,informational,User frank logged in via CLI from \ 10.1.9.3,891392,0x0,0,0,0,0,,XXXXXXXX-1
+
+rule=: %-:string-to:User%User %Username:word% %-:char-to:\\%\ %Src-ip:char-to:\x2c%%-:rest%
+
+# HP switches
+
+# 10.1.11.1|syslog|info|info|2e|2017-01-28|01:19:00|01342| auth: User 'frank' logged in from 10.1.1.1 to SSH session
+
+rule=: %-:string-to:User%User %Username:word% logged in from %Src-IP:ipv4% %-:rest%
+
+# This is for Microsoft Windows event 4769:
+
+rule=: %-:string-to:Account Name:%Account Name: %User:char-to:\x40%%-:string-to:Client Address:%Client Address: ::ffff:%Src-ip:ipv4% %-:rest%
+

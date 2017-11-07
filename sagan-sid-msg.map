@@ -3092,6 +3092,11 @@
 5003202 || [WINDOWS-MALWARE] Locky/CryptoMix ransomware note detected || url,www.bleepingcomputer.com/news/security/new-error-cryptomix-ransomware-variant-released/ || url,wiki.quadrantsec.com/bin/view/Main/5003202
 5003203 || [WINDOWS-AUTH] SAM Database Unable to Lock Account || url,technet.microsoft.com/en-us/library/cc733228(v=ws.10).aspx || url,wiki.quadrantsec.com/bin/view/Main/5003203
 5003204 || [WINDOWS-MALWARE] Bad Rabbit Malware scheduled task detected || url,wiki.quadrantsec.com/bin/view/Main/5003204 || url,blog.talosintelligence.com/2017/10/bad-rabbit.html
+5003205 || [HP-E-SERIES-L3-SWITCH] Invalid username/password - Brute Force [5/1] || url,wiki.quadrantsec.com/bin/view/Main/5003205
+5003206 || [WINDOWS-MALWARE] Bad Rabbit payload delivery SHA256 hash detected  || url,wiki.quadrantsec.com/bin/view/Main/5003206 || url,hybrid-analysis.com/sample/8ebc97e05c8e1073bda2efb6f4d00ad7e789260afa2c276f0c72740b838a0a93?environmentId=100 || url,bleepingcomputer.com/news/security/bad-rabbit-ransomware-outbreak-hits-eastern-europe/
+5003207 || [WINDOWS-MALWARE] Bad Rabbit payload delivery SHA1 hash detected  || url,wiki.quadrantsec.com/bin/view/Main/5003207 || url,hybrid-analysis.com/sample/8ebc97e05c8e1073bda2efb6f4d00ad7e789260afa2c276f0c72740b838a0a93?environmentId=100
+5003208 || [WINDOWS-MALWARE] Bad Rabbit payload delivery MD5 hash detected  || url,wiki.quadrantsec.com/bin/view/Main/5003208 || url,hybrid-analysis.com/sample/8ebc97e05c8e1073bda2efb6f4d00ad7e789260afa2c276f0c72740b838a0a93?environmentId=100
+5003209 || [WINDOWS-MALWARE] Bad Rabbit detected by filename  || url,wiki.quadrantsec.com/bin/view/Main/5003209 || url,hybrid-analysis.com/sample/8ebc97e05c8e1073bda2efb6f4d00ad7e789260afa2c276f0c72740b838a0a93?environmentId=100
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
