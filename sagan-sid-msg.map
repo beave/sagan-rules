@@ -2187,7 +2187,7 @@
 5002280 || [CITRIX-GEOIP] AAA LOGIN_FAILED from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002280 || url,support.citrix.com/article/CTX123875
 5002281 || [CITRIX-BLACKLIST] AAA LOGIN_FAILED from blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002281 || url,support.citrix.com/article/CTX123875
 5002282 || [CITRIX-BROINTEL] AAA LOGIN_FAILED from Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002282 || url,support.citrix.com/article/CTX123875
-5002284 || [CITRIX-GEOIP] SSLVPN HTTPREQUEST from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002284 || url,support.citrix.com/article/CTX123875
+5002284 || [CITRIX-GEOIP] SSLVPN HTTPREQUEST from outside HOME_COUNTRY [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002284 || url,support.citrix.com/article/CTX123875
 5002285 || [CITRIX-BLACKLIST] SSLVPN HTTPREQUEST from blacklisted IP || url,wiki.quadrantsec.com/bin/view/Main/5002285 || url,support.citrix.com/article/CTX123875
 5002286 || [CITRIX-BROINTEL] SSLVPN HTTPREQUEST from Bro Intel listed IP || url,wiki.quadrantsec.com/bin/view/Main/5002286 || url,support.citrix.com/article/CTX123875
 5002288 || [BLUEDOT] Suspicious IP detected via Bluedot || url,wiki.quadrantsec.com/bin/view/Main/5002288
