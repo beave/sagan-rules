@@ -3194,6 +3194,40 @@
 5003339 || [WINDOWS-OWA-CORRELATED] Login failure after exploit attempt || url,wiki.quadrantsec.com/bin/view/Main/5003339
 5003340 || [WINDOWS-OWA-CORRELATED] Login failure after brute force activity || url,wiki.quadrantsec.com/bin/view/Main/5003340
 5003341 || [WINDOWS-CORRELATED] Successful RDP login after honeypot activity || url,wiki.quadrantsec.com/bin/view/Main/5003341
+5003342 || [PasswordState] Access was Granted || url,wiki.quadrantsec.com/bin/view/Main/5003342 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003343 || [PasswordState] Access has been Removed || url,wiki.quadrantsec.com/bin/view/Main/5003343 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003344 || [PasswordState] All Passwords Exported || url,wiki.quadrantsec.com/bin/view/Main/5003344 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003345 || [PasswordState] Audit Records Purged || url,wiki.quadrantsec.com/bin/view/Main/5003345 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003346 || [PasswordState] Password Reset Task Deleted || url,wiki.quadrantsec.com/bin/view/Main/5003346 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003347 || [PasswordState] Discovery Job Updated || url,wiki.quadrantsec.com/bin/view/Main/5003347 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003348 || [PasswordState] Discovery Job Permissions Added || url,wiki.quadrantsec.com/bin/view/Main/5003348 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003349 || [PasswordState] Discovery Job Removed || url,wiki.quadrantsec.com/bin/view/Main/5003349 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003350 || [PasswordState] Discovery Job Deleted || url,wiki.quadrantsec.com/bin/view/Main/5003350 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003351 || [PasswordState] Document Deleted || url,wiki.quadrantsec.com/bin/view/Main/5003351 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003352 || [PasswordState] Encryption Keys Exported || url,wiki.quadrantsec.com/bin/view/Main/5003352 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003353 || [PasswordState] Password Updated || url,wiki.quadrantsec.com/bin/view/Main/5003353 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003354 || [PasswordState] Login Attempt Failed || url,wiki.quadrantsec.com/bin/view/Main/5003354 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003355 || [PasswordState] Privileged Account Credentials Deleted || url,wiki.quadrantsec.com/bin/view/Main/5003355 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003356 || [PasswordState] Privileged Account Credentials Permissions Added || url,wiki.quadrantsec.com/bin/view/Main/5003356 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003357 || [PasswordState] Privileged Account Credentials Permissions Removed || url,wiki.quadrantsec.com/bin/view/Main/5003357 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003358 || [PasswordState] Security Administrator Added || url,wiki.quadrantsec.com/bin/view/Main/5003358 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003359 || [PasswordState] Security Administrator Removed || url,wiki.quadrantsec.com/bin/view/Main/5003359 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003360 || [PasswordState] Security Administrator Role Updated || url,wiki.quadrantsec.com/bin/view/Main/5003360 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003361 || [PasswordState] Security Group Added || url,wiki.quadrantsec.com/bin/view/Main/5003361 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003362 || [PasswordState] Security Group Updated || url,wiki.quadrantsec.com/bin/view/Main/5003362 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003363 || [PasswordState] Security Group Deleted || url,wiki.quadrantsec.com/bin/view/Main/5003363 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003364 || [PasswordState] User Account Added to Security Group || url,wiki.quadrantsec.com/bin/view/Main/5003364 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003365 || [PasswordState] User Account Disabled || url,wiki.quadrantsec.com/bin/view/Main/5003365 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003366 || [PasswordState] User Removed From Security Group || url,wiki.quadrantsec.com/bin/view/Main/5003366 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003367 || [PasswordState] Password Copied Between Password Lists || url,wiki.quadrantsec.com/bin/view/Main/5003367 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003368 || [PasswordState] Password Deleted || url,wiki.quadrantsec.com/bin/view/Main/5003368 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003369 || [PasswordState] Password History Exported || url,wiki.quadrantsec.com/bin/view/Main/5003369 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003370 || [PasswordState] Password List Deleted || url,wiki.quadrantsec.com/bin/view/Main/5003370 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003371 || [PasswordState] Password Moved || url,wiki.quadrantsec.com/bin/view/Main/5003371 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003372 || [PasswordState] Password Reset Failed || url,wiki.quadrantsec.com/bin/view/Main/5003372 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003373 || [PasswordState] Password Reset Removed from Queue || url,wiki.quadrantsec.com/bin/view/Main/5003373 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003374 || [PasswordState] Password Reset Task Updated || url,wiki.quadrantsec.com/bin/view/Main/5003374 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
+5003375 || [PasswordState] Brute Force Login Attempt [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5003375 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
