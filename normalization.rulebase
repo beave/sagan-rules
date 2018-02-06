@@ -399,3 +399,14 @@ rule=: %-:string-to:User%User %username:word% logged in from %src-ip:ipv4% %-:re
 
 rule=: %-:string-to:Account Name:%Account Name: %username:char-to:\x40%%-:string-to:Client Address:%Client Address: ::ffff:%src-ip:ipv4% %-:rest%
 
+# Added 2017/02/06
+
+# These for Microsoft Windows events 6272: and 6273:
+#6273: Network Policy Server denied access to a user.
+
+rule=: %-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Called Station Identifier:%Called Station Identifier: %nasMAC:char-to  :\ x3a%:%-:string-to:Calling Station Identifier:%Calling Station Identifier: %userMAC:char-to  :\ x20% %-:string-to:NAS IPv4 Address:%NAS IPv4 Address: %nasIP:ipv4% %-:string-to:NAS Identifier:%NAS Identifier: %nasHost:word% %-:string-to:Reason Code:%Reason Code: %reasonCode:word% %-:rest%
+
+#6272: Network Policy Server granted access to a user
+
+rule=: %-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Called Station Identifier:%Called Station Identifier: %nasMAC:char-to  :\ x3a%:%-:string-to:Calling Station Identifier:%Calling Station Identifier: %userMAC:char-to  :\ x20% %-:string-to:NAS IPv4 Address:%NAS IPv4 Address: %nasIP:ipv4% %-:string-to:NAS Identifier:%NAS Identifier: %nasHost:word% %-:string-to:Result:%Result: %reasonCode:word% %-:rest%
+
