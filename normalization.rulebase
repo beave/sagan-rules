@@ -410,3 +410,47 @@ rule=: %-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Cal
 
 rule=: %-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Called Station Identifier:%Called Station Identifier: %nasMAC:char-to  :\ x3a%:%-:string-to:Calling Station Identifier:%Calling Station Identifier: %userMAC:char-to  :\ x20% %-:string-to:NAS IPv4 Address:%NAS IPv4 Address: %nasIP:ipv4% %-:string-to:NAS Identifier:%NAS Identifier: %nasHost:word% %-:string-to:Result:%Result: %reasonCode:word% %-:rest%
 
+# -- HERE
+
+# Zscaler rule update 
+
+rule=: act=Blocked%-:string-to:dst=%dst=%dst-ip:ipv4% src=%src-ip:ipv4%%-:string-to:suser=%suser=%username:char-to:\x40%%-:rest%
+
+#Cylance rule update
+
+rule=: %-:string-to:Event Type:%Event Type: Threat%-:string-to:Device Name:%Device Name: %username:char-to:\x2D%%-:char-to:\x28%(%src-ip:char-to:\x29%%-:rest%
+
+#NPS IAS rule 
+
+rule=: %-:string-to:IAS%%-:string-to:User-Name%%-:char-to:\x3E%>%username:char-to:\x3C%</User-Name><NAS-IP-Address data_type=%-:char-to:\x3E%>%src-ip:char-to:\x3C%%-:string-to:Calling-Station-Id%%-:char-to:\x3E%>%filename:char-to:\x3C%<%-:rest%
+
+# Windows Account Lockout: There are 2 rules for the first log. The idea is if there is a caller computer both rules will fire off and the 2nd rule will just not have a caller computer name. If there is not a caller computer, only rule 2 will fire and rule 1 will not work... in theory
+
+#4740: A user account was locked out. Subject: Security ID: S-1-5-18 Account Name: XXXXX$ Account Domain: XXXXXX Logon ID: 0x3E7 Account That Was Locked Out: Security ID: S-1-5-21-2455855555-3858555555-3953555555-55555 Account Name: XXXXX Additional Information: Caller Computer Name: XXXXXX
+
+#Rule 1
+rule=: 4740: A user account was locked out. %-:string-to:Locked Out%%-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Computer Name:%Computer Name: %filename:word%
+
+#Rule 2
+rule=: 4740: A user account was locked out. %-:string-to:Locked Out%%-:string-to:Account Name:%Account Name: %usernameser:word% %-:rest%
+
+#Kerberos ticket request
+#10.21.8.10.log:10.21.8.10|user|info|info|0e|2017-08-30|10:16:31|Security| 4769: A Kerberos service ticket was requested. Account Information: Account Name: XXX@XXXXX Account Domain: XXXXXX Logon GUID: {B7666966-6666-6666-6666-666666666666} Service Information: Service Name: XXXXXX$ Service ID: S-1-5-21-1716666666-1105666666-319566666-1166666 Network Information: Client Address: ::ffff:172.27.1.1 Client Port: 49350 Additional Information: Ticket Options: 0x40810000 Ticket Encryption Type: 0x12 Failure Code: 0x0 Transited Services: - This event is generated every time access is requested to a resource such as a computer or a Windows service. The service name indicates the resource to which access was requested. This event can be correlated with Windows logon events by comparing the Logon GUID fields in each event. The logon event occurs on the machine that was accessed, which is often a different machine than the domain controller which issued the service ticket. Ticket options, encryption types, and failure codes are defined in RFC 4120.
+
+rule=: %-:string-to:Account Name:%Account Name: %username:char-to:\x40%%-:string-to:Client Address:%Client Address: ::ffff:%src-ip:ipv4% %-:rest%
+
+# SSH login
+#10.144.11.8|syslog|info|info|2e|2017-08-28|09:49:19|03362| auth: User 'XXXXXX' logged in from 10.10.10.10 to SSH session
+
+rule=: %-:string-to:User%User %username:word% logged in from %src-ip:ipv4% %-:rest%
+
+#10.78.11.51|user|info|info|0e|2017-08-28|13:20:31|1,2017/08/28| 13:20:31,0008C101111,SYSTEM,general,0,2017/08/28 13:20:31,,general,,0,0,general,informational,User XXXXXX logged in via CLI from \ j10.10.10.10,809792,0x0,0,0,0,0,,XXXXXX
+
+rule=: %-:string-to:User%User %username:word% %-:char-to:\\%\ %src-ip:char-to:\x2c%%-:rest%
+
+# Account logged on - Windows event id 4624
+#10.41.43.253|user|info|info|0e|2017-08-28|13:02:55|Security| 4624: An account was successfully logged on. Subject: Security ID: S-1-0-0 Account Name: - Account Domain: - Logon ID: 0x0 Logon Type: 3 Impersonation Level: Impersonation New Logon: Security ID: S-1-5-21-2466666666-3858666666-3953666666-130966 Account Name: xxxx Account Domain: XXXXXX Logon ID: 0x5A31095D Logon GUID: {55555555-5555-5553-6666-966666666666} Process Information: Process ID: 0x0 Process Name: - Network Information: Workstation Name: - Source Network Address: 10.10.10.10 Source Port: 52526 Detailed Authentication Information: Logon Process: Kerberos Authentication Package: Kerberos Transited Services: - Package Name (NTLM only): - Key Length: 0 This event is generated when a logon session is created. It is generated on the computer that was accessed. The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe. The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network). The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on. The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases. The impersonation level field indicates the extent to which a process in the logon session can impersonate. The authentication information fields provide detailed information about this specific logon request. - Logon GUID is a unique identifier that can be used to correlate this event with a KDC event. - Transited services indicate which intermediate services have participated in this logon request. - Package name indicates which sub-protocol was used among the NTLM protocols. - Key length indicates the length of the generated session key. This will be 0 if no session key was requested.
+
+rule=: %-:string-to:Account Name:%Account Name: %-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Network Address:%Network Address: %src-ip:ipv4% %-:rest%
+
+
