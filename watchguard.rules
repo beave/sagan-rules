@@ -213,7 +213,7 @@ alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] LIVESECURITY featur
 
 # Failed to start the signature update for the specified services
 
-lert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Failed to start the signature update for the specified services"; program: WatchGuard*; content: "msg_id=|22|2E01-0018|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003091; rev:2;)
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Failed to start the signature update for the specified services"; program: WatchGuard*; content: "msg_id=|22|2E01-0018|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003091; rev:2;)
 
 
 # VPN (PPTP) - User login
