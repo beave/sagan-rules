@@ -3622,6 +3622,15 @@
 5003768 || [WINDOWS-SECURITY] System audit policy was changed || url,wiki.quadrantsec.com/bin/view/Main/5003768 || url,github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/identity/ad-ds/plan/Appendix-L--Events-to-Monitor.md
 5003769 || [WINDOWS-SECURITY] SID History was added to an account || url,wiki.quadrantsec.com/bin/view/Main/5003769 || url,github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/identity/ad-ds/plan/Appendix-L--Events-to-Monitor.md
 5003770 || [WINDOWS-SECURITY] An attempt to add SID History to an account failed || url,wiki.quadrantsec.com/bin/view/Main/5003770 || url,github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/identity/ad-ds/plan/Appendix-L--Events-to-Monitor.md
+5003771 || [AS400] AUTFAIL An incorrect password was entered || url,wiki.quadrantsec.com/bin/view/Main/5003771
+5003772 || [AS400] AUTFAIL fail - password expired [no username] || url,wiki.quadrantsec.com/bin/view/Main/5003772
+5003773 || [AS400] AUTFAIL - incorrect network password was used; content: " MVP1600  || url,wiki.quadrantsec.com/bin/view/Main/5003773
+5003774 || [AS400] AUTFAIL - Not authorized to object || url,wiki.quadrantsec.com/bin/view/Main/5003774
+5003775 || [AS400] AUTFAIL - User name not valid || url,wiki.quadrantsec.com/bin/view/Main/5003775
+5003776 || [AS400] AUTFAIL - Operation SVRPGM wihtout authority || url,wiki.quadrantsec.com/bin/view/Main/5003776
+5003777 || [AS400] AUTFAIL - Failed because profile was disabled || url,wiki.quadrantsec.com/bin/view/Main/5003777
+5003778 || [AS400] AUTFAIL - User not authorized to object || url,wiki.quadrantsec.com/bin/view/Main/5003778
+5003779 || [AS400] AUTFAIL - Changed audit status of user || url,wiki.quadrantsec.com/bin/view/Main/5003779
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

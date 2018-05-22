@@ -1,0 +1,68 @@
+# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+# These rules were created from output from iSecurity for AS/400's.  The signature are probably 
+# generic enough to work with anything. 
+# https://seasoft.com/products/solutions-for-ibm-i/audit-compliance-management/isecurity-syslog
+
+# 10.16.10.200|local6|crit|crit|b2|2018-04-27|13:28:13|CSYS| iSecurity/Audit: MPW1600 PW/P *AUTFAIL An incorrect password was entered. User GUEST. Device XXXXXXXX. Remote location . Local location . Network Id .
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL An incorrect password was entered"; content: " MPW1600 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003771; sid:5003771; rev:1;)
+
+# 10.16.101.200|local6|alert|alert|b1|2018-03-19|11:39:12|CSYS| iSecurity/Audit: MPW1800 PW/R *AUTFAIL Attempted signon (user authentication) failed because password was expired.
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL fail - password expired [no username]"; content: " MPW1800 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003772; sid:5003772; rev:1;)
+
+# 10.16.101.200|local6|alert|alert|b1|2018-03-19|05:25:26|CSYS| iSecurity/Audit: MVP1600 VP/P *AUTFAIL User GUEST; An incorrect network password was used. Server *SYSTEM. Computer ::ffff:1.
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - incorrect network password was used; content: " MVP1600 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003773; sid:5003773; rev:1;)
+
+# 10.16.101.200|local6|alert|alert|b1|2018-03-14|14:41:26|CSYS| iSecurity/Audit: MAF0100 AF/A *AUTFAIL User GUEST; Not authorized to object QSYS/XXXXXXX *LIB in program /. Path name .
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - Not authorized to object"; content: " MAF0100 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003774; sid:5003774; rev:1;)
+
+# 10.16.101.200|local6|crit|crit|b2|2018-03-23|17:32:56|CSYS| iSecurity/Audit: MPW2100 PW/U *AUTFAIL User name GUEST not valid. Device . Remote location . Local location . Network Id .
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - User name not valid"; content: " MAF0100 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003775; sid:5003775; rev:1;)
+
+# 10.16.101.200|local6|err|err|b3|2018-03-19|19:33:32|CSYS| iSecurity/Audit: MAF1100 AF/K *AUTFAIL User GUEST attempted to perform an operation on QSYS/QTEDBGS *SRVPGM without the required Special Authority. JOB 111111/GUEST/XXXXXXXXXX.
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - Operation SVRPGM wihtout authority"; content: " MAF1100 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003776; sid:5003776; rev:1;)
+
+# 10.16.101.200|local6|alert|alert|b1|2018-04-27|14:01:07|CSYS| iSecurity/Audit: MPW1700 PW/Q *AUTFAIL User GUEST. Attempted signon (user authentication) failed because user GUEST profile was disabled.
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - Failed because profile was disabled"; content: " MPW1700 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003777; sid:5003777; rev:1;)
+
+# Might be noisey
+#
+# 10.16.101.200|local6|alert|alert|b1|2018-03-12|20:07:26|CSYS| iSecurity/Audit: MAF0100 AF/A *AUTFAIL User GUEST; Not authorized to object *N/*N *DIR in program /. Path name /home/GUEST.
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - User not authorized to object"; content: " MAF0100 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003778; sid:5003778; rev:1;)
+
+# 10.16.101.200|local6|notice|notice|b5|2018-04-24|18:18:50|CSYS| iSecurity/Audit: MAD2100 AD/U *SECURITY User GUEST; XXXXXXX used to change auditing of user GUEST. Job 111111/GUEST/XXXXXXXXX.
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - Changed audit status of user"; content: " MAD2100 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003779; sid:5003779; rev:1;)
+

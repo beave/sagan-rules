@@ -453,4 +453,9 @@ rule=: %-:string-to:User%User %username:word% %-:char-to:\\%\ %src-ip:char-to:\x
 
 rule=: %-:string-to:Account Name:%Account Name: %-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Network Address:%Network Address: %src-ip:ipv4% %-:rest%
 
+# AS/400 rules (as400.rules)
+
+rule=: iSecurity/Audit: %-:word% %-:word% *AUTFAIL An incorrect password was entered. User %username:word% %-:rest%
+rule=: iSecurity/Audit: %-:word% %-:word% *AUTFAIL User %username:word% %-:rest%
+rule=: iSecurity/Audit: %-:word% %-:word% *SECURITY User %username:word% %-:rest%
 
