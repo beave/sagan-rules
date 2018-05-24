@@ -107,7 +107,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows audit
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] A directory service object was moved"; content: " 5139|3a| "; classtype: configuration-change; program: *Security*; sid:5002275; rev:3;)
 
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdown [XBIT SET]"; content: " 1074|3a| "; program: System|USER32; xbits: set, reboot.windows,900; xbits:nounified2; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002014; sid: 5002014; rev:22;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdown [XBIT SET]"; content: " 1074|3a| "; program: System|USER32; xbits: set, reboot.windows,900; xbits:nounified2; xbits:noeve; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002014; sid: 5002014; rev:23;)
 
 # Added by Brian Echeverry (09/22/2015)
 

@@ -195,7 +195,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows DC Lo
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows DC Logon Failure - Brute force 0x3D - Field is too long for this implementation [25/1]"; pcre: "/ 675: | 676: | 681: | 4771: | 4768: /"; content: " 0x3D "; classtype: unsuccessful-user; program: *Security*; xbits: set,brute_force,21600; after: track by_src, count 25, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001785; sid: 5001785; rev:8;) 
 # Account "re-enabled" via xbit (12/03/2013) 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account created [XBIT SET]"; pcre: "/ 624: | 4720: /"; program: *Security*; classtype: successful-user; xbits: set, created_enabled, 30; xbits:nounified2; reference: url,wiki.quadrantsec.com/bin/view/Main/5001880; sid: 5001880; rev:7;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account created [XBIT SET]"; pcre: "/ 624: | 4720: /"; program: *Security*; classtype: successful-user; xbits: set, created_enabled, 30; xbits:nounified2; xbits:noeve; reference: url,wiki.quadrantsec.com/bin/view/Main/5001880; sid: 5001880; rev:8;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account re-enabled"; pcre: "/ 626: | 4722: /"; content:! "$" ;program: *Security*; xbits: isnotset, by_src, created_enabled; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001881; sid: 5001881; rev:6;)
 
 # Rule added by Brian Echeverry ( becheverry@quadrantsec.com) - 02/21/2014
