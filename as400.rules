@@ -30,7 +30,7 @@
 
 # 10.16.10.200|local6|crit|crit|b2|2018-04-27|13:28:13|CSYS| iSecurity/Audit: MPW1600 PW/P *AUTFAIL An incorrect password was entered. User GUEST. Device XXXXXXXX. Remote location . Local location . Network Id .
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL An incorrect password was entered"; content: " MPW1600 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003771; sid:5003771; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL An incorrect password was entered"; content: " MPW1600 "; parse_src_ip: 1; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003771; sid:5003771; rev:2;)
 
 # 10.16.101.200|local6|alert|alert|b1|2018-03-19|11:39:12|CSYS| iSecurity/Audit: MPW1800 PW/R *AUTFAIL Attempted signon (user authentication) failed because password was expired.
 
@@ -38,7 +38,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL fail - passwo
 
 # 10.16.101.200|local6|alert|alert|b1|2018-03-19|05:25:26|CSYS| iSecurity/Audit: MVP1600 VP/P *AUTFAIL User GUEST; An incorrect network password was used. Server *SYSTEM. Computer ::ffff:1.
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - incorrect network password was used; content: " MVP1600 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003773; sid:5003773; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - incorrect network password was used; content: " MVP1600 "; parse_src_ip: 1; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003773; sid:5003773; rev:2;)
 
 # 10.16.101.200|local6|alert|alert|b1|2018-03-14|14:41:26|CSYS| iSecurity/Audit: MAF0100 AF/A *AUTFAIL User GUEST; Not authorized to object QSYS/XXXXXXX *LIB in program /. Path name .
 
@@ -46,7 +46,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - Not authori
 
 # 10.16.101.200|local6|crit|crit|b2|2018-03-23|17:32:56|CSYS| iSecurity/Audit: MPW2100 PW/U *AUTFAIL User name GUEST not valid. Device . Remote location . Local location . Network Id .
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - User name not valid"; content: " MAF0100 "; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003775; sid:5003775; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[AS400] AUTFAIL - User name not valid"; content: " MAF0100 "; parse_src_ip: 1; default_proto: tcp; classtype: unsuccessful-user; normalize; after: track by_username, count 3, seconds 900; threshold: type limit, track by_username, count 2, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003775; sid:5003775; rev:2;)
 
 # 10.16.101.200|local6|err|err|b3|2018-03-19|19:33:32|CSYS| iSecurity/Audit: MAF1100 AF/K *AUTFAIL User GUEST attempted to perform an operation on QSYS/QTEDBGS *SRVPGM without the required Special Authority. JOB 111111/GUEST/XXXXXXXXXX.
 
