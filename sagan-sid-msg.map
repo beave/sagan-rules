@@ -1588,8 +1588,8 @@
 5001652 || [OPENVPN] Authentication success || url,wiki.quadrantsec.com/bin/view/Main/5001652
 5001653 || [OPENVPN] Unencrypted VPN connection initiated || url,wiki.quadrantsec.com/bin/view/Main/5001653
 5001654 || [CISCO-PIXASA] User authentication failed - Brute force [5/1] || url, wiki.quadrantsec.com/bin/view/Main/5001654
-5001655 || [CISCO-ACS] Failed Login Attempt || url,wiki.quadrantsec.com/bin/view/Main/5001655
-5001656 || [CISCO-ACS] Failed Login Attempt - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001656
+5001655 || [CISCO-ISE] Failed Login Attempt || url,wiki.quadrantsec.com/bin/view/Main/5001655
+5001656 || [CISCO-ISE] Failed Login Attempt - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001656
 5001657 || [WINDOWS-AUTH] Auth failed - Bad Account/Incorrect Password - Brute Force [25/1] || url,wiki.quadrantsec.com/bin/view/Main/5001657
 5001658 || [WINDOWS-AUTH] Auth failed - Bad Account/Incorrect Password || url,wiki.quadrantsec.com/bin/view/Main/5001658
 5001659 || [WINDOWS-AUTH] User account does not exist || url,wiki.quadrantsec.com/bin/view/Main/5001659
@@ -1903,8 +1903,6 @@
 5001972 || [SYSLOG] SCSI task abort || url,wiki.quadrantsec.com/bin/view/Main/5001972
 5001973 || [SYSLOG] Remounting filesystem read-only || url,wiki.quadrantsec.com/bin/view/Main/5001973
 5001974 || [OPENSSH] Fail2Ban SSH Suspicious Activity || url,wiki.quadrantsec.com/bin/view/Main/5001974
-5001975 || [CISCO-ACS] Failed Login Attempt [CisACS] || url,wiki.quadrantsec.com/bin/view/Main/5001975
-5001976 || [CISCO-ACS] Failed Login Attempt - Brute force [CisACS] [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001976
 5001977 || [CISCO-GEOIP] ACS Login success from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001977
 5001978 || [WINDOWS-AUTH] Account locked out (ADMINISTRATOR) || url,wiki.quadrantsec.com/bin/view/Main/5001978
 5001979 || [FILE-GEOIP] Executable Downloaded from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001979
@@ -3631,6 +3629,10 @@
 5003777 || [AS400] AUTFAIL - Failed because profile was disabled || url,wiki.quadrantsec.com/bin/view/Main/5003777
 5003778 || [AS400] AUTFAIL - User not authorized to object || url,wiki.quadrantsec.com/bin/view/Main/5003778
 5003779 || [AS400] AUTFAIL - Changed audit status of user || url,wiki.quadrantsec.com/bin/view/Main/5003779
+5003781 || [CISCO-ISE-GEOIP] Successful authentication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003781
+5003782 || [CISCO-ISE-BLUEDOT] Successful authentication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003782
+5003783 || [CISCO-ISE-BLACKLIST] Successful authentication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003783
+5003784 || [CISCO-ISE-BROINTEL] Successful authentication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003784
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)
