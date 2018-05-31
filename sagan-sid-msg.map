@@ -3633,6 +3633,9 @@
 5003782 || [CISCO-ISE-BLUEDOT] Successful authentication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003782
 5003783 || [CISCO-ISE-BLACKLIST] Successful authentication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003783
 5003784 || [CISCO-ISE-BROINTEL] Successful authentication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003784
+5003785 || [DYNAMIC] Cisco ISE detected via program || url,wiki.quadrantsec.com/bin/view/Main/5003785
+5003786 || [WINDOWS-AUTH] LDAP authentication error - Account expired. || url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan || url,wiki.quadrantsec.com/bin/view/Main/5003786
+5003787 || [WINDOWS-AUTH] LDAP authentication error - Account locked. || url,wiki.quadrantsec.com/bin/view/Main/5003787
 6000510 || [OSSEC] Level 7 - Host-based anomaly detection event (rootcheck). (ossec_rules.xml:ossec)
 6000513 || [OSSEC] Level 9 - Windows malware detected. (ossec_rules.xml:ossec)
 6000518 || [OSSEC] Level 9 - Windows Adware/Spyware application found. (ossec_rules.xml:ossec)

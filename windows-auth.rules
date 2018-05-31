@@ -262,3 +262,9 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Suspicious ne
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Suspicious WMIC/Net/Powershell execution"; program: *Security*; content: " 4648|3a| "; content:!"Account Name|3a| -"; content:!"Target Server Name|3a| localhost"; pcre: "/Target Server Name: (.*)\$ /"; pcre: "/Process Name: (.*)(net\.exe|wmic\.exe|powershell\.exe)(.*)/i"; reference: url,findingbad.blogspot.cz/2017/12/a-few-of-my-favorite-things-continued.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5003387; reference: url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan; classtype:misc-attack; sid:5003387; rev:1;)
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Suspicious Mount of a $ share"; program: *Security*; content: " 5140|3a| "; pcre: "/^((?!Account Name: (.*)\$ ).)*$/"; pcre: "/Share Name: (.*)\$/"; reference: url,findingbad.blogspot.cz/2017/12/a-few-of-my-favorite-things-continued.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5003389; reference: url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan; classtype:misc-attack; sid:5003389; rev:1;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] LDAP authentication error - Account expired."; program: *System*; content: " 40960|3a| "; content: "0xc0000193"; reference: url,wiki.quadrantsec.com/bin/view/Main/5003786; reference: url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan; classtype:suspicious-login; sid:5003786; rev:1;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] LDAP authentication error - Account locked."; program: *System*; content: " 40960|3a| "; content: "0xc0000234"; threshold: type limit, track by_src, count 1, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5003787; classtype: unsuccessful-user; sid:5003787; rev:1;)
+
+
