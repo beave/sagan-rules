@@ -26,7 +26,7 @@
 #*************************************************************
 
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[POSTGRESQL] Log message"; content: "LOG"; default_proto: tcp; default_dst_port: 5432; classtype:  program-error; program: postgres; reference: url,wiki.quadrantsec.com/bin/view/Main/5000229; sid: 5000229; rev:2;)
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[POSTGRESQL] Informational message"; pcre: "/NOTICE|INFO/"; default_proto: tcp; default_dst_port: 5432; classtype: program-error; program: postgres; reference: url,wiki.quadrantsec.com/bin/view/Main/5000373; sid: 5000373; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[POSTGRESQL] Informational message"; meta_content: "%sagan%",NOTICE,INFO; default_proto: tcp; default_dst_port: 5432; classtype: program-error; program: postgres; reference: url,wiki.quadrantsec.com/bin/view/Main/5000373; sid: 5000373; rev:3;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[POSTGRESQL] Error message"; content: "ERROR"; default_proto: tcp; default_dst_port: 5432; classtype: program-error; program: postgres; reference: url,wiki.quadrantsec.com/bin/view/Main/5000230; sid: 5000230; rev:2;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[POSTGRESQL] Fatal error message"; content: "FATAL"; default_proto: tcp; default_dst_port: 5432; classtype: program-error; program: postgres; reference: url,wiki.quadrantsec.com/bin/view/Main/5000231; sid: 5000231; rev:2;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[POSTGRESQL] Debug message"; content: "DEBUG"; default_proto: tcp; default_dst_port: 5432; classtype: program-error; program: postgres; reference: url,wiki.quadrantsec.com/bin/view/Main/5000232; sid: 5000232; rev:2;)

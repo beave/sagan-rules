@@ -34,7 +34,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Authentication fai
 # Sep 23 07:29:40 bundy imapd-ssl: DISCONNECTED, user=champ, ip=[::ffff:10.0.0.1], headers=0, body=0, rcvd=70, sent=576, time=4, starttls=1
 # Sep 24 07:14:17 bundy imapd-ssl: LOGOUT, user=champ, ip=[::ffff:10.0.0.1], headers=0, body=0, rcvd=1011, sent=9534, time=5, starttls=1
 
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Logout/disconnect"; pcre: "/LOGOUT|DISCONNECTED/"; default_proto: tcp; classtype: not-suspicious; parse_src_ip: 1; program: imapd|imapd-ssl|courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000260; sid:5000260; rev:4;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Logout/disconnect"; meta_content: "%sagan%",LOGOUT,DISCONNECTED; default_proto: tcp; classtype: not-suspicious; parse_src_ip: 1; program: imapd|imapd-ssl|courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000260; sid:5000260; rev:5;)
 
 # May 24 16:03:15 bundy imapd-ssl: LOGIN, user=champ, ip=[::ffff:10.0.0.1], port=[45018], protocol=IMAP
 

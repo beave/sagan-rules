@@ -56,11 +56,11 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Remote execution attem
 
 # Submitted by Aleksey Chudov (07/14/2015). 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] History hiding"; content:"HISTORY"; pcre:"/\s+(HISTFILE|HISTFILESIZE|HISTSIZE)/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002303; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] History hiding"; content:"HISTORY"; meta_content: " %sagan%",HISTFILE,HISTFILESIZE,HISTSIZE; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002303; rev:3;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] History hiding"; content:"HISTORY"; pcre:"/\s+history\s+(-\w+\s+)*-\w*(c|d|w)/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002304; rev:2;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] .mysql_history access"; content:"HISTORY"; content:".mysql_history"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002305; rev:2;);
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Netcat execution"; content:"HISTORY"; pcre:"/\s+(nc|ncat|netcat)\s+/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002306; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Netcat execution"; content:"HISTORY"; meta_content: " %sagan% ",nc,ncat,netcat; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002306; rev:3;)
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Python socket execution"; content:"HISTORY"; content:"python"; content:"socket"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002307; rev:2;);
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Python subproces execution"; content:"HISTORY"; content:"python"; content:"subproces"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002308; rev:2;)

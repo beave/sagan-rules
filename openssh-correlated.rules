@@ -42,7 +42,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-CORRELATED] Authenti
 
 # Added by Champ Clark - 09/17/2014 - Required xbit.  Valid login _after_ brute force.
 
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-CORRELATED] SSH login success after brute force attack!"; pcre: "/accepted|authenticated/i"; xbits: isset,by_src,brute_force; xbits: set,attacker,86400; normalize; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: correlated-attack; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002176; sid:5002177; rev:8;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-CORRELATED] SSH login success after brute force attack!"; meta_content: "%sagan%",accepted,authenticated; meta_nocase; xbits: isset,by_src,brute_force; xbits: set,attacker,86400; normalize; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: correlated-attack; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5002176; sid:5002177; rev:9;)
 
 # We could later use "attacker" xbit to "track" the attacker! 
 
