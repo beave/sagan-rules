@@ -196,7 +196,8 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows DC Lo
 # Account "re-enabled" via xbit (12/03/2013) 
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account created [XBIT SET]"; meta_content: " %sagan%|3a| ",4720,624; meta_depth: 8; program: *Security*; classtype: successful-user; xbits: set, created_enabled, 30; xbits:nounified2; xbits:noeve; reference: url,wiki.quadrantsec.com/bin/view/Main/5001880; sid: 5001880; rev:9;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account re-enabled"; meta_content: " %sagan%|3a| ",4720,624; meta_depth: 8; content:! "$" ;program: *Security*; xbits: isnotset, by_src, created_enabled; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001881; sid: 5001881; rev:7;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account re-enabled"; meta_content: " %sagan%|3a| ",4722,626; meta_depth: 8; content:! "$" ;program: *Security*; xbits: isnotset, by_src, created_enabled; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001881; sid: 5001881; rev:8;)
 
 # Rule added by Brian Echeverry ( becheverry@quadrantsec.com) - 02/21/2014
 # Disabled by default.  Possible xbit rule canidate (?)
