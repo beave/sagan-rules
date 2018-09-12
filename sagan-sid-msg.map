@@ -3620,3 +3620,13 @@
 5003785 || [DYNAMIC] Cisco ISE detected via program || url,wiki.quadrantsec.com/bin/view/Main/5003785
 5003786 || [WINDOWS-AUTH] LDAP authentication error - Account expired. || url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan || url,wiki.quadrantsec.com/bin/view/Main/5003786
 5003787 || [WINDOWS-AUTH] LDAP authentication error - Account locked. || url,wiki.quadrantsec.com/bin/view/Main/5003787
+5003788 || [Trendmicro] Application Control Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003788
+5003789 || [Trendmicro] Device Control Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003789
+5003790 || [Trendmicro] Behavior Monitoring Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003790
+5003791 || [Trendmicro] Network Virus Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003791
+5003792 || [Trendmicro] Outbreak Defense Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003792
+5003793 || [Trendmicro] Predictive Machine Learning Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003793
+5003794 || [Trendmicro] Spyware Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003794
+5003795 || [Trendmicro] Url Filtering Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003795
+5003796 || [Trendmicro] Virus Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003796
+5003797 || [Trendmicro] Web Reputation Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003797
