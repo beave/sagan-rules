@@ -34,9 +34,39 @@
 # 
 # Champ Clark III 2018/09/12
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] Impossible ravel activity"; content: "ALERT_ANUBIS_DETECTION_VELOCITY"; parse_src_ip: 1;classtype:successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003802; sid:5003802; rev:2;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] Multiple failed user log on attempts"; content: "ALERT_CABINET_EVENT_MATCH_AUDIT"; classtype:unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003803; sid:5003803; rev:2;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] Activity from infrequent country"; content: "ALERT_ANUBIS_DETECTION_NEW_COUNTRY"; classtype:unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003804; sid:5003804; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_ANUBIS_DETECTION_VELOCITY"; content: "ALERT_ANUBIS_DETECTION_VELOCITY"; parse_src_ip: 1;classtype:successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003802; sid:5003802; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_CABINET_EVENT_MATCH_AUDIT"; content: "ALERT_CABINET_EVENT_MATCH_AUDIT"; classtype:unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003803; sid:5003803; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_ANUBIS_DETECTION_NEW_COUNTRY"; content: "ALERT_ANUBIS_DETECTION_NEW_COUNTRY"; classtype:unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003804; sid:5003804; rev:2;)
+
+# "Custom Alerts"
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_SUSPICIOUS_ACTIVITY"; content: "ALERT_SUSPICIOUS_ACTIVITY"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003805; sid:5003805; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_DISCOVERY_ANOMALY_DETECTION"; content: "ALERT_DISCOVERY_ANOMALY_DETECTION"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003806; sid:5003806; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_CABINET_EVENT_MATCH_FILE"; content: "ALERT_CABINET_EVENT_MATCH_FILE"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003807; sid:5003807; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_CABINET_INLINE_EVENT_MATCH"; content: "ALERT_CABINET_INLINE_EVENT_MATCH"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003808; sid:5003808; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_CABINET_EVENT_MATCH_OBJECT"; content: "ALERT_CABINET_EVENT_MATCH_OBJECT"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003809; sid:5003809; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_CABINET_DISCOVERY_NEW_SERVICE"; content: "ALERT_CABINET_DISCOVERY_NEW_SERVICE"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003810; sid:5003810; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_PERSONAL_USER_SAGE"; content: "ALERT_PERSONAL_USER_SAGE"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003818; sid:5003818; rev:1;)
+
+# Built in
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_GEOLOCATION_NEW_COUNTRY"; content: "ALERT_GEOLOCATION_NEW_COUNTRY"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003811; sid:5003811; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_ADMIN_USER"; content: "ALERT_ADMIN_USER"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003812; sid:5003812; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_ZOMBIE_USER"; content: "ALERT_ZOMBIE_USER"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003813; sid:5003813; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_NEW_ADMIN_LOCATION"; content: "ALERT_NEW_ADMIN_LOCATION"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003814; sid:5003814; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_COMPROMISED_ACCOUNT"; content: "ALERT_COMPROMISED_ACCOUNT"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003819; sid:5003819; rev:1;)
+
+
+# User activity
+
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] EVENT_CATEGORY_LOGOUT"; content: "EVENT_CATEGORY_LOGOUT"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003815; sid:5003815; rev:1;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] EVENT_CATEGORY_LOGIN"; content: "EVENT_CATEGORY_LOGIN"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003816; sid:5003816; rev:1;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] EVENT_CATEGORY_CREATE_USER"; content: "EVENT_CATEGORY_CREATE_USER"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003817; sid:5003817; rev:1;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] EVENT_CATEGORY_DELETE_USER"; content: "EVENT_CATEGORY_DELETE_USER"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003820; sid:5003820; rev:1;)
+
+
+
+
 
 
 

@@ -538,10 +538,10 @@
 5000585 || [CISCO-PIXASA] SSL lib error || url, wiki.quadrantsec.com/bin/view/Main/5000585
 5000586 || [CISCO-PIXASA] Dynamic DNS Update failed || url, wiki.quadrantsec.com/bin/view/Main/5000586
 5000587 || [CISCO-PIXASA] Switching to ACTIVE || url, wiki.quadrantsec.com/bin/view/Main/5000587
-5000588 || [CISCO-PIXASA]%PIX|ASA-1-104002 [Primary] Switching to STNDBY [cause string]. || url, wiki.quadrantsec.com/bin/view/Main/5000588
-5000589 || [CISCO-PIXASA]%PIX|ASA-1-104003 [Primary] Switching to FAILED || url, wiki.quadrantsec.com/bin/view/Main/5000589
-5000590 || [CISCO-PIXASA]%PIX|ASA-1-104004 [Primary] Switching to OK. || url, wiki.quadrantsec.com/bin/view/Main/5000590
-5000591 || [CISCO-PIXASA]%PIX|ASA-1-105037 The primary and standby units are switching back and forth as the active unit || url, wiki.quadrantsec.com/bin/view/Main/5000591
+5000588 || [CISCO-PIXASA] [Primary] Switching to STNDBY [cause string]. || url, wiki.quadrantsec.com/bin/view/Main/5000588
+5000589 || [CISCO-PIXASA] [Primary] Switching to FAILED || url, wiki.quadrantsec.com/bin/view/Main/5000589
+5000590 || [CISCO-PIXASA] [Primary] Switching to OK. || url, wiki.quadrantsec.com/bin/view/Main/5000590
+5000591 || [CISCO-PIXASA] The primary and standby units are switching back and forth as the active unit || url, wiki.quadrantsec.com/bin/view/Main/5000591
 5000592 || [CISCO-PIXASA] Failed Identification Test || url, wiki.quadrantsec.com/bin/view/Main/5000592
 5000595 || [CISCO-PIXASA] [Primary] Failover cable OK || url, wiki.quadrantsec.com/bin/view/Main/5000595
 5000596 || [CISCO-PIXASA] [Primary] Bad failover cable || url, wiki.quadrantsec.com/bin/view/Main/5000596
@@ -3634,6 +3634,22 @@
 5003799 || [WINDOWS-AUTH] Possible Password Spray Detected [50/1] || url,wiki.quadrantsec.com/bin/view/Main/5003799 || url,www.trimarcsecurity.com/single-post/2018/05/06/Trimarc-Research-Detecting-Password-Spraying-with-Security-Event-Auditing
 5003800 || [WINDOWS-AUTH] Possible Password Spray Detected [100/1] || url,wiki.quadrantsec.com/bin/view/Main/5003800 || url,www.trimarcsecurity.com/single-post/2018/05/06/Trimarc-Research-Detecting-Password-Spraying-with-Security-Event-Auditing
 5003801 || [McAfee-Web-Gateway] High Risk Connection Attempt Detected || url,wiki.quadrantsec.com/bin/view/Main/5003801
-5003802 || [OFFICE365] Impossible ravel activity || url,wiki.quadrantsec.com/bin/view/Main/5003802
-5003803 || [OFFICE365] Multiple failed user log on attempts || url,wiki.quadrantsec.com/bin/view/Main/5003803
-5003804 || [OFFICE365] Activity from infrequent country || url,wiki.quadrantsec.com/bin/view/Main/5003804
+5003802 || [OFFICE365] ALERT_ANUBIS_DETECTION_VELOCITY || url,wiki.quadrantsec.com/bin/view/Main/5003802
+5003803 || [OFFICE365] ALERT_CABINET_EVENT_MATCH_AUDIT || url,wiki.quadrantsec.com/bin/view/Main/5003803
+5003804 || [OFFICE365] ALERT_ANUBIS_DETECTION_NEW_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003804
+5003805 || [OFFICE365] ALERT_SUSPICIOUS_ACTIVITY || url,wiki.quadrantsec.com/bin/view/Main/5003805 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003806 || [OFFICE365] ALERT_DISCOVERY_ANOMALY_DETECTION || url,wiki.quadrantsec.com/bin/view/Main/5003806 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003807 || [OFFICE365] ALERT_CABINET_EVENT_MATCH_FILE || url,wiki.quadrantsec.com/bin/view/Main/5003807 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003808 || [OFFICE365] ALERT_CABINET_INLINE_EVENT_MATCH || url,wiki.quadrantsec.com/bin/view/Main/5003808 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003809 || [OFFICE365] ALERT_CABINET_EVENT_MATCH_OBJECT || url,wiki.quadrantsec.com/bin/view/Main/5003809 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003810 || [OFFICE365] ALERT_CABINET_DISCOVERY_NEW_SERVICE || url,wiki.quadrantsec.com/bin/view/Main/5003810 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003811 || [OFFICE365] ALERT_GEOLOCATION_NEW_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003811 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003812 || [OFFICE365] ALERT_ADMIN_USER || url,wiki.quadrantsec.com/bin/view/Main/5003812 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003813 || [OFFICE365] ALERT_ZOMBIE_USER || url,wiki.quadrantsec.com/bin/view/Main/5003813 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003814 || [OFFICE365] ALERT_NEW_ADMIN_LOCATION || url,wiki.quadrantsec.com/bin/view/Main/5003814 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003815 || [OFFICE365] EVENT_CATEGORY_LOGOUT || url,wiki.quadrantsec.com/bin/view/Main/5003815 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003816 || [OFFICE365] EVENT_CATEGORY_LOGIN || url,wiki.quadrantsec.com/bin/view/Main/5003816 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003817 || [OFFICE365] EVENT_CATEGORY_CREATE_USER || url,wiki.quadrantsec.com/bin/view/Main/5003817 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003818 || [OFFICE365] ALERT_PERSONAL_USER_SAGE || url,wiki.quadrantsec.com/bin/view/Main/5003818 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003819 || [OFFICE365] ALERT_COMPROMISED_ACCOUNT || url,wiki.quadrantsec.com/bin/view/Main/5003819 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003820 || [OFFICE365] EVENT_CATEGORY_DELETE_USER || url,wiki.quadrantsec.com/bin/view/Main/5003820 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
