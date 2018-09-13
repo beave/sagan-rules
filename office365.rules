@@ -34,6 +34,9 @@
 # 
 # Champ Clark III 2018/09/12
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[O365] Impossible ravel activity"; content: "ALERT_ANUBIS_DETECTION_VELOCITY"; parse_src_ip: 1;classtype:successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003802; sid:5003802; rev:1;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[O365] Multiple failed user log on attempts"; content: "ALERT_CABINET_EVENT_MATCH_AUDIT"; classtype:unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003803; sid:5003803; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] Impossible ravel activity"; content: "ALERT_ANUBIS_DETECTION_VELOCITY"; parse_src_ip: 1;classtype:successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003802; sid:5003802; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] Multiple failed user log on attempts"; content: "ALERT_CABINET_EVENT_MATCH_AUDIT"; classtype:unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003803; sid:5003803; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] Activity from infrequent country"; content: "ALERT_ANUBIS_DETECTION_NEW_COUNTRY"; classtype:unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003804; sid:5003804; rev:1;)
+
+
 

@@ -3634,5 +3634,6 @@
 5003799 || [WINDOWS-AUTH] Possible Password Spray Detected [50/1] || url,wiki.quadrantsec.com/bin/view/Main/5003799 || url,www.trimarcsecurity.com/single-post/2018/05/06/Trimarc-Research-Detecting-Password-Spraying-with-Security-Event-Auditing
 5003800 || [WINDOWS-AUTH] Possible Password Spray Detected [100/1] || url,wiki.quadrantsec.com/bin/view/Main/5003800 || url,www.trimarcsecurity.com/single-post/2018/05/06/Trimarc-Research-Detecting-Password-Spraying-with-Security-Event-Auditing
 5003801 || [McAfee-Web-Gateway] High Risk Connection Attempt Detected || url,wiki.quadrantsec.com/bin/view/Main/5003801
-5003802 || [O365] Impossible ravel activity || url,wiki.quadrantsec.com/bin/view/Main/5003802
-5003803 || [O365] Multiple failed user log on attempts || url,wiki.quadrantsec.com/bin/view/Main/5003803
+5003802 || [OFFICE365] Impossible ravel activity || url,wiki.quadrantsec.com/bin/view/Main/5003802
+5003803 || [OFFICE365] Multiple failed user log on attempts || url,wiki.quadrantsec.com/bin/view/Main/5003803
+5003804 || [OFFICE365] Activity from infrequent country || url,wiki.quadrantsec.com/bin/view/Main/5003804
