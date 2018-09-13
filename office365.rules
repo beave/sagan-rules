@@ -1,0 +1,39 @@
+# Sagan office365.rules
+# Copyright (c) 2009-2018, Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+# You'll need to use the Microsoft Java program to receive Office365 events.  Once that
+# is setup,  you can have them ingested by your syslog daemon.  For more info,  see:
+#
+# https://docs.microsoft.com/en-us/office365/securitycompliance/review-office-365-cas-alerts
+# https://docs.microsoft.com/en-us/office365/securitycompliance/anomaly-detection-policies-in-ocas
+# https://docs.microsoft.com/en-us/office365/securitycompliance/activity-policies-and-alerts
+# 
+# Champ Clark III 2018/09/12
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[O365] Impossible ravel activity"; content: "ALERT_ANUBIS_DETECTION_VELOCITY"; parse_src_ip: 1;classtype:successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003802; sid:5003802; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[O365] Multiple failed user log on attempts"; content: "ALERT_CABINET_EVENT_MATCH_AUDIT"; classtype:unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003803; sid:5003803; rev:1;)
+

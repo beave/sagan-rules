@@ -2456,7 +2456,7 @@
 5002610 || [SONICWALL] OS Upgrade Performed || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002611 || [SONICWALL] Attempted access from host out of compliance with GSC policy || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002612 || [SONICWALL] Access attempt from host without Anti-Virus agent installed || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
-5002613 || [SONICWALL] Security Services || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
+5002613 || [SONICWALL] Accept attempt from host without GSC || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002614 || [SONICWALL] Firewall Rule Added || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002615 || [SONICWALL] Firewall Rule Deleted || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
 5002616 || [SONICWALL] Firewall Rule Modified || url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf
@@ -3633,3 +3633,6 @@
 5003798 || [WINDOWS-AUTH] Possible Password Spray Detected [50/1] || url,wiki.quadrantsec.com/bin/view/Main/5003798 || url,www.trimarcsecurity.com/single-post/2018/05/06/Trimarc-Research-Detecting-Password-Spraying-with-Security-Event-Auditing
 5003799 || [WINDOWS-AUTH] Possible Password Spray Detected [50/1] || url,wiki.quadrantsec.com/bin/view/Main/5003799 || url,www.trimarcsecurity.com/single-post/2018/05/06/Trimarc-Research-Detecting-Password-Spraying-with-Security-Event-Auditing
 5003800 || [WINDOWS-AUTH] Possible Password Spray Detected [100/1] || url,wiki.quadrantsec.com/bin/view/Main/5003800 || url,www.trimarcsecurity.com/single-post/2018/05/06/Trimarc-Research-Detecting-Password-Spraying-with-Security-Event-Auditing
+5003801 || [McAfee-Web-Gateway] High Risk Connection Attempt Detected || url,wiki.quadrantsec.com/bin/view/Main/5003801
+5003802 || [O365] Impossible ravel activity || url,wiki.quadrantsec.com/bin/view/Main/5003802
+5003803 || [O365] Multiple failed user log on attempts || url,wiki.quadrantsec.com/bin/view/Main/5003803
