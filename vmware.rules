@@ -48,6 +48,6 @@ drop any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User authentication f
 #2012-01-30T17:51:04.919Z [24C79B90 info 'Vimsvc'] [Auth]: User root
 #2012-01-30T17:51:04.920Z [24C79B90 info 'ha-eventmgr'] Event 37 : User root@192.168.1.1 logged in
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Lost access to volume"; content: "Event 37 : "; default_proto:tcp; classtype: hardware-event; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001098; sid: 5001099; rev:2;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Possible HD/Datastore failure"; content: ": 1672: "; default_proto:tcp; classtype: hardware-event; program: vmkernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001100; sid: 5001100; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Lost access to volume"; content: "Event 37 : "; default_proto:tcp; classtype: hardware-event; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001098; sid: 5001099; rev:2;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Possible HD/Datastore failure"; content: ": 1672: "; default_proto:tcp; classtype: hardware-event; program: vmkernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001100; sid: 5001100; rev:2;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User login successful"; content: "Accepted password"; default_proto:tcp; classtype:  successful-admin; program: Hostd; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001101; sid: 5001101; rev:3;)
