@@ -27,6 +27,6 @@
 # Josh Johnson
 # 2018/04/28
 
-alert any any -> any any (msg: "[McAfee-Web-Gateway] High Risk Connection Attempt Detected"; content: "High Risk"; meta_content: " 200 %sagan% ",GET,POST; program: mwg; parse_src_ip: 1; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5003801; sid:5003801; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[McAfee-Web-Gateway] High Risk Connection Attempt Detected"; content: "High Risk"; meta_content: " 200 %sagan% ",GET,POST; program: mwg; parse_src_ip: 1; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5003801; sid:5003801; rev:1;)
 
 

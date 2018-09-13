@@ -28,18 +28,18 @@
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Virus Found Unable to Quarantine"; content: "SLF_INCIDENT_EVT_VIRUS_FOUND_PASS_THRU"; content: "Unable to quarantine file"; program: TMCM; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002797; classtype: suspicious-traffic; sid:5002797; rev:3;)
 
-alert any any any -> any any (msg: "[Trendmicro] Application Control Logs Detected"; content: "LogApplicationControl; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003788; sid:5003788; rev:1 ;) 
-alert any any any -> any any (msg: "[Trendmicro] Device Control Logs Detected"; content: "LogDeviceControl; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003789; sid:5003789; rev:1 ;) 
-alert any any any -> any any (msg: "[Trendmicro] Behavior Monitoring Logs Detected"; content: "LogBehaviorMonitoring; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003790; sid:5003790; rev:1 ;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Application Control Logs Detected"; content: "LogApplicationControl; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003788; sid:5003788; rev:1 ;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Device Control Logs Detected"; content: "LogDeviceControl; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003789; sid:5003789; rev:1 ;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Behavior Monitoring Logs Detected"; content: "LogBehaviorMonitoring; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003790; sid:5003790; rev:1 ;) 
 
 # Not enough data to complete these. 
 
-#alert any any any -> any any (msg: "[Trendmicro] Network Virus Logs Detected"; content: "xxxxxxxxx; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003791; sid:5003791; rev:1 ;) 
-#alert any any any -> any any (msg: "[Trendmicro] Outbreak Defense Logs Detected"; content: "xxxxxxxxx; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003792; sid:5003792; rev:1 ;) 
-#alert any any any -> any any (msg: "[Trendmicro] Predictive Machine Learning Logs Detected"; content: "xxxxxxxxx; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003793; sid:5003793; rev:1 ;) 
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Network Virus Logs Detected"; content: "xxxxxxxxx; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003791; sid:5003791; rev:1 ;) 
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Outbreak Defense Logs Detected"; content: "xxxxxxxxx; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003792; sid:5003792; rev:1 ;) 
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Predictive Machine Learning Logs Detected"; content: "xxxxxxxxx; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003793; sid:5003793; rev:1 ;) 
 
 
-alert any any any -> any any (msg: "[Trendmicro] Spyware Logs Detected"; content: "LogSpyware; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003794; sid:5003794; rev:1 ;) 
-alert any any any -> any any (msg: "[Trendmicro] Url Filtering Logs Detected"; content: "LogUrlFiltering; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003795; sid:5003795; rev:1 ;) 
-alert any any any -> any any (msg: "[Trendmicro] Virus Logs Detected"; content: "LogVirus; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003796; sid:5003796; rev:1 ;) 
-alert any any any -> any any (msg: "[Trendmicro] Web Reputation Logs Detected"; content: "LogWebReputation; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003797; sid:5003797; rev:1 ;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Spyware Logs Detected"; content: "LogSpyware; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003794; sid:5003794; rev:1 ;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Url Filtering Logs Detected"; content: "LogUrlFiltering; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003795; sid:5003795; rev:1 ;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Virus Logs Detected"; content: "LogVirus; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003796; sid:5003796; rev:1 ;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Web Reputation Logs Detected"; content: "LogWebReputation; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003797; sid:5003797; rev:1 ;) 

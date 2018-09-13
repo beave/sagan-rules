@@ -72,7 +72,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] 10+ unable to get loca
 
 # https://github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/zeroaccess
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] ZeroAccess ZeroAccess_Client [0/5]"; content: "ZeroAccess|3a 3a|ZeroAccess_Client"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 5, seconds 300; default_proto: udp; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002070; url,github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/zeroaccess; sid: 5002071; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] ZeroAccess ZeroAccess_Client [0/5]"; content: "ZeroAccess|3a 3a|ZeroAccess_Client"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 5, seconds 300; default_proto: udp; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002070; url,github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/zeroaccess; sid: 5002071; rev:3;)
 
 # https://github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/lurk0
 # Bitcoin mining detection
