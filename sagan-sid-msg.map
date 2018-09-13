@@ -3630,3 +3630,6 @@
 5003795 || [Trendmicro] Url Filtering Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003795
 5003796 || [Trendmicro] Virus Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003796
 5003797 || [Trendmicro] Web Reputation Logs Detected || url,wiki.quadrantsec.com/bin/view/Main/5003797
+5003798 || [WINDOWS-AUTH] Possible Password Spray Detected [50/1] || url,wiki.quadrantsec.com/bin/view/Main/5003798 || url,www.trimarcsecurity.com/single-post/2018/05/06/Trimarc-Research-Detecting-Password-Spraying-with-Security-Event-Auditing
+5003799 || [WINDOWS-AUTH] Possible Password Spray Detected [50/1] || url,wiki.quadrantsec.com/bin/view/Main/5003799 || url,www.trimarcsecurity.com/single-post/2018/05/06/Trimarc-Research-Detecting-Password-Spraying-with-Security-Event-Auditing
+5003800 || [WINDOWS-AUTH] Possible Password Spray Detected [100/1] || url,wiki.quadrantsec.com/bin/view/Main/5003800 || url,www.trimarcsecurity.com/single-post/2018/05/06/Trimarc-Research-Detecting-Password-Spraying-with-Security-Event-Auditing
