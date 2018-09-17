@@ -3653,3 +3653,96 @@
 5003818 || [OFFICE365] ALERT_PERSONAL_USER_SAGE || url,wiki.quadrantsec.com/bin/view/Main/5003818 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
 5003819 || [OFFICE365] ALERT_COMPROMISED_ACCOUNT || url,wiki.quadrantsec.com/bin/view/Main/5003819 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
 5003820 || [OFFICE365] EVENT_CATEGORY_DELETE_USER || url,wiki.quadrantsec.com/bin/view/Main/5003820 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003821 || [CISCO-AMP] Java compromise || url,wiki.quadrantsec.com/bin/view/Main/5003821
+5003822 || [CISCO-AMP] Adobe Reader compromise || url,wiki.quadrantsec.com/bin/view/Main/5003822
+5003823 || [CISCO-AMP] Microsoft Word compromise || url,wiki.quadrantsec.com/bin/view/Main/5003823
+5003824 || [CISCO-AMP] Microsoft Excel compromise || url,wiki.quadrantsec.com/bin/view/Main/5003824
+5003825 || [CISCO-AMP] Microsoft PowerPoint compromise || url,wiki.quadrantsec.com/bin/view/Main/5003825
+5003826 || [CISCO-AMP] Java launched a shell || url,wiki.quadrantsec.com/bin/view/Main/5003826
+5003827 || [CISCO-AMP] Adobe Reader launched a shell || url,wiki.quadrantsec.com/bin/view/Main/5003827
+5003828 || [CISCO-AMP] Microsoft Word launched a shell || url,wiki.quadrantsec.com/bin/view/Main/5003828
+5003829 || [CISCO-AMP] Microsoft Excel launched a shell || url,wiki.quadrantsec.com/bin/view/Main/5003829
+5003830 || [CISCO-AMP] Microsoft PowerPoint launched a shell || url,wiki.quadrantsec.com/bin/view/Main/5003830
+5003831 || [CISCO-AMP] Apple QuickTime compromise || url,wiki.quadrantsec.com/bin/view/Main/5003831
+5003832 || [CISCO-AMP] Apple QuickTime launched a shell || url,wiki.quadrantsec.com/bin/view/Main/5003832
+5003833 || [CISCO-AMP] Executed malware || url,wiki.quadrantsec.com/bin/view/Main/5003833
+5003834 || [CISCO-AMP] Suspected botnet connection || url,wiki.quadrantsec.com/bin/view/Main/5003834
+5003835 || [CISCO-AMP] Reboot Pending || url,wiki.quadrantsec.com/bin/view/Main/5003834
+5003836 || [CISCO-AMP] Reboot Completed || url,wiki.quadrantsec.com/bin/view/Main/5003836
+5003837 || [CISCO-AMP] Generic IOC || url,wiki.quadrantsec.com/bin/view/Main/5003837
+5003838 || [CISCO-AMP] Microsoft Calculator compromise || url,wiki.quadrantsec.com/bin/view/Main/5003838
+5003839 || [CISCO-AMP] Microsoft Notepad compromise || url,wiki.quadrantsec.com/bin/view/Main/5003839
+5003840 || [CISCO-AMP] File Fetch Completed || url,wiki.quadrantsec.com/bin/view/Main/5003840
+5003841 || [CISCO-AMP] File Fetch Failed || url,wiki.quadrantsec.com/bin/view/Main/5003841
+5003842 || [CISCO-AMP] Endpoint IOC Scan Started || url,wiki.quadrantsec.com/bin/view/Main/5003842
+5003843 || [CISCO-AMP] Endpoint IOC Scan Completed, No Detections || url,wiki.quadrantsec.com/bin/view/Main/5003843
+5003844 || [CISCO-AMP] Endpoint IOC Scan Completed With Detections || url,wiki.quadrantsec.com/bin/view/Main/5003844
+5003845 || [CISCO-AMP] Endpoint IOC Scan Failed || url,wiki.quadrantsec.com/bin/view/Main/5003845
+5003846 || [CISCO-AMP] Endpoint IOC Definition Update Failure || url,wiki.quadrantsec.com/bin/view/Main/5003846
+5003847 || [CISCO-AMP] Endpoint IOC Definition Update Success || url,wiki.quadrantsec.com/bin/view/Main/5003847
+5003848 || [CISCO-AMP] Endpoint IOC Configuration Update Failure || url,wiki.quadrantsec.com/bin/view/Main/5003848
+5003849 || [CISCO-AMP] Endpoint IOC Configuration Update Success || url,wiki.quadrantsec.com/bin/view/Main/5003849
+5003850 || [CISCO-AMP] Endpoint IOC Scan Detection Summary || url,wiki.quadrantsec.com/bin/view/Main/5003850
+5003851 || [CISCO-AMP] Connection to suspicious domain || url,wiki.quadrantsec.com/bin/view/Main/5003851
+5003852 || [CISCO-AMP] Threat Detected in Low Prevalence Executable || url,wiki.quadrantsec.com/bin/view/Main/5003852
+5003853 || [CISCO-AMP] Vulnerable Application Detected || url,wiki.quadrantsec.com/bin/view/Main/5003853
+5003854 || [CISCO-AMP] Suspicious Download || url,wiki.quadrantsec.com/bin/view/Main/5003854
+5003855 || [CISCO-AMP] Microsoft CHM Compromise || url,wiki.quadrantsec.com/bin/view/Main/5003855
+5003856 || [CISCO-AMP] Suspicious Cscript Launch || url,wiki.quadrantsec.com/bin/view/Main/5003856
+5003857 || [CISCO-AMP] Update: Reboot Required || url,wiki.quadrantsec.com/bin/view/Main/5003857
+5003858 || [CISCO-AMP] Update: Reboot Advised || url,wiki.quadrantsec.com/bin/view/Main/5003858
+5003859 || [CISCO-AMP] Update: Unexpected Reboot Required || url,wiki.quadrantsec.com/bin/view/Main/5003859
+5003860 || [CISCO-AMP] Product Update Failed || url,wiki.quadrantsec.com/bin/view/Main/5003860
+5003861 || [CISCO-AMP] Product Update Started || url,wiki.quadrantsec.com/bin/view/Main/5003861
+5003862 || [CISCO-AMP] Product Update Completed || url,wiki.quadrantsec.com/bin/view/Main/5003862
+5003863 || [CISCO-AMP] Potential Ransomware || url,wiki.quadrantsec.com/bin/view/Main/5003863
+5003864 || [CISCO-AMP] Possible Webshell || url,wiki.quadrantsec.com/bin/view/Main/5003864
+5003865 || [CISCO-AMP] Exploit Prevention || url,wiki.quadrantsec.com/bin/view/Main/5003865
+5003866 || [CISCO-AMP] Critical Fault Raised || url,wiki.quadrantsec.com/bin/view/Main/5003866
+5003867 || [CISCO-AMP] Major Fault Raised || url,wiki.quadrantsec.com/bin/view/Main/5003867
+5003868 || [CISCO-AMP] Minor Fault Raised || url,wiki.quadrantsec.com/bin/view/Main/5003868
+5003869 || [CISCO-AMP] Fault Cleared || url,wiki.quadrantsec.com/bin/view/Main/5003869
+5003870 || [CISCO-AMP] All Faults Cleared || url,wiki.quadrantsec.com/bin/view/Main/5003870
+5003871 || [CISCO-AMP] Rootkit Detection || url,wiki.quadrantsec.com/bin/view/Main/5003871
+5003872 || [CISCO-AMP] iOS Network Detection || url,wiki.quadrantsec.com/bin/view/Main/5003872
+5003874 || [CISCO-AMP] Policy Update || url,wiki.quadrantsec.com/bin/view/Main/5003874
+5003876 || [CISCO-AMP] Scan Completed, No Detections || url,wiki.quadrantsec.com/bin/view/Main/5003876
+5003877 || [CISCO-AMP] Scan Completed With Detections || url,wiki.quadrantsec.com/bin/view/Main/5003877
+5003878 || [CISCO-AMP] Scan Failed || url,wiki.quadrantsec.com/bin/view/Main/5003878
+5003879 || [CISCO-AMP] Threat Detected || url,wiki.quadrantsec.com/bin/view/Main/5003879
+5003880 || [CISCO-AMP] Threat Quarantined || url,wiki.quadrantsec.com/bin/view/Main/5003880
+5003881 || [CISCO-AMP] Quarantine Failure || url,wiki.quadrantsec.com/bin/view/Main/5003881
+5003882 || [CISCO-AMP] Threat Detected in Exclusion || url,wiki.quadrantsec.com/bin/view/Main/5003882
+5003883 || [CISCO-AMP] Quarantine Restore Requested || url,wiki.quadrantsec.com/bin/view/Main/5003883
+5003884 || [CISCO-AMP] Quarantined Item Restored || url,wiki.quadrantsec.com/bin/view/Main/5003884
+5003885 || [CISCO-AMP] Quarantine Restore Failed || url,wiki.quadrantsec.com/bin/view/Main/5003885
+5003886 || [CISCO-AMP] Quarantine Request Failed to be Delivered || url,wiki.quadrantsec.com/bin/view/Main/5003886
+5003887 || [CISCO-AMP] Quarantined Item Deleted || url,wiki.quadrantsec.com/bin/view/Main/5003887
+5003888 || [CISCO-AMP] Failed to Delete From Quarantine || url,wiki.quadrantsec.com/bin/view/Main/5003888
+5003889 || [CISCO-AMP] Attempting Quarantine Delete || url,wiki.quadrantsec.com/bin/view/Main/5003889
+5003890 || [CISCO-AMP] Cloud Recall Restore from Quarantine || url,wiki.quadrantsec.com/bin/view/Main/5003890
+5003891 || [CISCO-AMP] Cloud Recall Quarantine Successful || url,wiki.quadrantsec.com/bin/view/Main/5003891
+5003892 || [CISCO-AMP] Cloud Recall Restore from Quarantine Failed || url,wiki.quadrantsec.com/bin/view/Main/5003892
+5003893 || [CISCO-AMP] Cloud Recall Quarantine Attempt Failed || url,wiki.quadrantsec.com/bin/view/Main/5003893
+5003894 || [CISCO-AMP] Install Started || url,wiki.quadrantsec.com/bin/view/Main/5003894
+5003895 || [CISCO-AMP] Install Failure || url,wiki.quadrantsec.com/bin/view/Main/5003895
+5003896 || [CISCO-AMP] Uninstall || url,wiki.quadrantsec.com/bin/view/Main/5003896
+5003897 || [CISCO-AMP] Uninstall Failure || url,wiki.quadrantsec.com/bin/view/Main/50038907
+5003898 || [CISCO-AMP] Email Confirmation || url,wiki.quadrantsec.com/bin/view/Main/5003898
+5003899 || [CISCO-AMP] Forgotten Password Reset || url,wiki.quadrantsec.com/bin/view/Main/5003899
+5003900 || [CISCO-AMP] Password Has Been Reset || url,wiki.quadrantsec.com/bin/view/Main/5003900
+5003901 || [CISCO-AMP] Policy Update Failure || url,wiki.quadrantsec.com/bin/view/Main/5003901
+5003902 || [CISCO-AMP] Cloud Recall Restore of False Positive || url,wiki.quadrantsec.com/bin/view/Main/5003902
+5003903 || [CISCO-AMP] Cloud Recall Quarantine of False Negative || url,wiki.quadrantsec.com/bin/view/Main/5003903
+5003904 || [CISCO-AMP] Execution Blocked || url,wiki.quadrantsec.com/bin/view/Main/5003904
+5003905 || [CISCO-AMP] Quarantine Restore Started || url,wiki.quadrantsec.com/bin/view/Main/5003905
+5003906 || [CISCO-AMP] Application Registered || url,wiki.quadrantsec.com/bin/view/Main/5003906
+5003907 || [CISCO-AMP] Application Deregistered || url,wiki.quadrantsec.com/bin/view/Main/5003907
+5003908 || [CISCO-AMP] Application Authorized || url,wiki.quadrantsec.com/bin/view/Main/5003908
+5003909 || [CISCO-AMP] APK Threat Detected || url,wiki.quadrantsec.com/bin/view/Main/5003909
+5003910 || [CISCO-AMP] APK Custom Threat Detected || url,wiki.quadrantsec.com/bin/view/Main/5003910
+5003911 || [CISCO-AMP] DFC Threat Detected || url,wiki.quadrantsec.com/bin/view/Main/5003911
+5003912 || [CISCO-AMP] Multiple Infected Files || url,wiki.quadrantsec.com/bin/view/Main/5003912
+5003913 || [CISCO-AMP] Potential Dropper Infection || url,wiki.quadrantsec.com/bin/view/Main/5003913
+5003914 || [CISCO-AMP] Application Deauthorized || url,wiki.quadrantsec.com/bin/view/Main/5003914
+50038745 || [CISCO-AMP] Scan Started || url,wiki.quadrantsec.com/bin/view/Main/5003875
