@@ -30,5 +30,5 @@
 
 # alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ISE] Failed Login Attempt"; program: CISE_Failed_Attempts|CSCOacs_Failed_Attempts; parse_src_ip: 1; parse_dst_ip: 2; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001655; sid: 5001655; rev:4;)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ISE] Failed Login Attempt - Brute force [5/5]"; program: CISE_Failed_Attempts|CSCOacs_Failed_Attempts; xbits: set,brute_force,21600; content: "UserName="; content:!"session timed out"; parse_src_ip: 1; parse_dst_ip: 2; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001656; sid: 5001656; rev:8;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ISE] Failed Login Attempt - Brute force [5/5]"; program: CISE_Failed_Attempts|CSCOacs_Failed_Attempts; xbits: set,brute_force,21600; content: "UserName="; content:!"session timed out"; parse_src_ip: 1; parse_dst_ip: 2; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 1, seconds 21600; xbits: set,brute_force,21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001656; sid: 5001656; rev:9;)
 
