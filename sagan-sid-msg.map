@@ -321,7 +321,7 @@
 5000354 || [WINDOWS-MISC] WinVNC4 Connection closed || url,wiki.quadrantsec.com/bin/view/Main/5000354
 5000355 || [WINDOWS-MISC] WinVNC4 HTTPServer event || url,wiki.quadrantsec.com/bin/view/Main/5000355
 5000356 || [WINDOWS-MISC] Crypt32 Failed to extract third-party root list || url,wiki.quadrantsec.com/bin/view/Main/5000356
-5000357 || [SENDMAIL] Username with pipe symbol || url,wiki.quadrantsec.com/bin/view/Main/5000357
+5000357 || [SENDMAIL] Username with pipe symbol || url,wiki.quadrantsec.com/bin/view/Main/5000357 || url,www.jochentopf.com/email/chars.html
 5000359 || [APACHE] Directory traversal attempt - 1 || url,wiki.quadrantsec.com/bin/view/Main/5000359
 5000360 || [APACHE] Directory traversal attempt - 2 || url,wiki.quadrantsec.com/bin/view/Main/5000360
 5000361 || [APACHE] Robots.txt access || url,wiki.quadrantsec.com/bin/view/Main/5000361
@@ -3757,3 +3757,5 @@
 5003923 || [Incapsula] Illegal Resource Access || url,wiki.quadrantsec.com/bin/view/Main/5003923
 5003924 || [Incapsula] DDoS || url,wiki.quadrantsec.com/bin/view/Main/5003924
 5003925 || [Incapsula] Backdoor Protect || url,wiki.quadrantsec.com/bin/view/Main/5003925
+5003927 || [WINDOWS-AUTH] User added to Local Administrators group || url,wiki.quadrantsec.com/bin/view/Main/5003927
+5003928 || [SU] Successful sudo to user ROOT executed || url,wiki.quadrantsec.com/bin/view/Main/5003928
