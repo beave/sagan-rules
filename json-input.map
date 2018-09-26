@@ -24,12 +24,9 @@
 #  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #*************************************************************
-#
-# Not getting the source IP addresses that you'd expect?  Then you probably
-# have OpenSSH's "UseDNS" set to "Yes" in your sshd_config file.  You'll
-# need to set that to "No" so Sagan can "find" the source IP addresses and
-# port information.
 
+# If your named pipe (FIFO) is being feed JSON data, this is where you'll want to "map" 
+# it so Sagan understands it.
 
 {"software":"syslog-ng","syslog-source-ip":"SOURCEIP","facility":"FACILITY","level":"PRIORITY","priority":"PRIORITY","time":"DATE","date":"DATE","program":"PROGRAM","message":"MESSAGE"}
 
