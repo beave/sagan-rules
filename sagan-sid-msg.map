@@ -2607,13 +2607,13 @@
 5002761 || [PALO-ALTO] Medium Severity Exploit Outbound || url,threatvault.paloaltonetworks.com
 5002762 || [PALO-ALTO] Executable File Download
 5002763 || [PALO-ALTO] Suspicious DNS Request || url,threatvault.paloaltonetworks.com
-5002764 || [FIPAYPIN] Connection failed to Fipay [5/2] || url,wiki.quadrantsec.com/bin/view/Main/sid:5002764
-5002765 || [FIPAYPIN] Slow send! || url,wiki.quadrantsec.com/bin/view/Main/sid:5002765
-5002766 || [FIPAYPIN] Invalid credit card detected || url,wiki.quadrantsec.com/bin/view/Main/sid:5002766
-5002767 || [FIPAYPIN] Bad/No Pin Block and KSN returned || url,wiki.quadrantsec.com/bin/view/Main/sid:5002767
-5002768 || [FIPAYPIN] Blocked the response to POS || url,wiki.quadrantsec.com/bin/view/Main/sid:5002768
-5002769 || [FIPAYPIN] Failed to open pinpad [0/2] || url,wiki.quadrantsec.com/bin/view/Main/sid:5002769
-5002770 || [FIPAYPIN] Replace macro from outside RFC1918 || url,wiki.quadrantsec.com/bin/view/Main/sid:5002770
+5002764 || [FIPAYPIN] Connection failed to Fipay [5/2] || url,wiki.quadrantsec.com/bin/view/Main/5002764
+5002765 || [FIPAYPIN] Slow send! || url,wiki.quadrantsec.com/bin/view/Main/5002765
+5002766 || [FIPAYPIN] Invalid credit card detected || url,wiki.quadrantsec.com/bin/view/Main/5002766
+5002767 || [FIPAYPIN] Bad/No Pin Block and KSN returned || url,wiki.quadrantsec.com/bin/view/Main/5002767
+5002768 || [FIPAYPIN] Blocked the response to POS || url,wiki.quadrantsec.com/bin/view/Main/5002768
+5002769 || [FIPAYPIN] Failed to open pinpad [0/2] || url,wiki.quadrantsec.com/bin/view/Main/5002769
+5002770 || [FIPAYPIN] Replace macro from outside RFC1918 || url,wiki.quadrantsec.com/bin/view/Main/5002770
 5002771 || [ScreenOS] Juniper ScreenOS Login for Suspicious Admin user - system || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search || cve,2015-7755
 5002772 || [ScreenOS] Juniper ScreenOS Login for Suspicious Admin user - username || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search || cve,2015-7755
 5002773 || [ScreenOS-GEOIP] Juniper ScreenOS Admin Login from Outside of Home Country || url, wiki.quadrantsec.com/bin/view/Main/5002773 || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search
@@ -2642,23 +2642,23 @@
 5002796 || [Barracuda] System Shutdown || url,wiki.quadrantsec.com/bin/view/Main/5002796
 5002797 || [Trendmicro] Virus Found Unable to Quarantine || url,wiki.quadrantsec.com/bin/view/Main/5002797
 5002798 || [BRO] RFC1918 address scanning the network || url,wiki.quadrantsec.com/bin/view/Main/5002798
-5002799 || [WINDOWS-SYSMON] PSExec execution detected || url,wiki.quadrantsec.com/bin/view/Main/sid:5002799
+5002799 || [WINDOWS-SYSMON] PSExec execution detected || url,wiki.quadrantsec.com/bin/view/Main/5002799
 5002801 || [WINDOWS-MALWARE] Locky or AutoLocky ransomware extension detected. || url,decrypter.emsisoft.com || url,wiki.quadrantsec.com/bin/view/Main/5002801
-5002802 || [WINDOWS-SYSMON] Locky/CrypoMix ransomware instructions detected! || url,wiki.quadrantsec.com/bin/view/Main/sid:5002802
-5002803 || [WINDOWS-SYSMON] vssadmin.exe execution. Possible ransomware || url,wiki.quadrantsec.com/bin/view/Main/sid:5002803
+5002802 || [WINDOWS-SYSMON] Locky/CrypoMix ransomware instructions detected! || url,wiki.quadrantsec.com/bin/view/Main/5002802
+5002803 || [WINDOWS-SYSMON] vssadmin.exe execution. Possible ransomware || url,wiki.quadrantsec.com/bin/view/Main/5002803
 5002804 || [WINDOWS-MALWARE] Locky ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002804 || url,http://www.bleepingcomputer.com/news/security/the-locky-ransomware-encrypts-local-files-and-unmapped-network-shares/
 5002805 || [WINDOWS-MALWARE] Cryptowall 4.0 ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002805 || url,http://www.bleepingcomputer.com/virus-removal/cryptowall-ransomware-information#cryptowall4
 5002806 || [WINDOWS-MALWARE] Cryptowall ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002806
 5002807 || [WINDOWS-MALWARE] CryptInfinite/DecryptorMax ransomware note detected. || url,decrypter.emsisoft.com || url,wiki.quadrantsec.com/bin/view/Main/5002807 || url,http://www.bleepingcomputer.com/news/security/cryptinfinite-or-decryptormax-ransomware-decrypted/
 5002808 || [WINDOWS-MALWARE] TeslaCrypt ransomware note detected. || url,wiki.quadrantsec.com/bin/view/Main/5002808 || url,www.pcrisk.com/removal-guides/8724-teslacrypt-virus
 5002809 || [WINDOWS-MALWARE] Teslacrypt ransomware note type 2 detected. || url,wiki.quadrantsec.com/bin/view/Main/5002809 || url,www.virustotal.com/en/file/161d1b77a6867603745046e81e52a186ea764ba8c723c9698da707c245505e95/analysis/1458765163/
-5002810 || [WINDOWS-SYSMON] Suspicious WMIC call - shadowcopy delete || url,wiki.quadrantsec.com/bin/view/Main/sid:5002810
-5002811 || [WINDOWS-SYSMON] Suspicious WMIC call - csproduct GET UUID || url,wiki.quadrantsec.com/bin/view/Main/sid:5002811
-5002812 || [WINDOWS-SYSMON] Suspicious WMIC call - bios Get SerialNumber || url,wiki.quadrantsec.com/bin/view/Main/sid:5002812
-5002813 || [WINDOWS-SYSMON] Suspicious WMIC call - bios Get Version || url,wiki.quadrantsec.com/bin/view/Main/sid:5002813
-5002814 || [WINDOWS-SYSMON] Suspicious WMIC call - bios Get SerialNumber || url,wiki.quadrantsec.com/bin/view/Main/sid:5002814
-5002815 || [WINDOWS-SYSMON] Suspicious WMIC call - csproduct Get Name || url,wiki.quadrantsec.com/bin/view/Main/sid:5002815
-5002816 || [WINDOWS-SYSMON] Suspicious WMIC call - computersystem get model || url,wiki.quadrantsec.com/bin/view/Main/sid:5002816
+5002810 || [WINDOWS-SYSMON] Suspicious WMIC call - shadowcopy delete || url,wiki.quadrantsec.com/bin/view/Main/5002810
+5002811 || [WINDOWS-SYSMON] Suspicious WMIC call - csproduct GET UUID || url,wiki.quadrantsec.com/bin/view/Main/5002811
+5002812 || [WINDOWS-SYSMON] Suspicious WMIC call - bios Get SerialNumber || url,wiki.quadrantsec.com/bin/view/Main/5002812
+5002813 || [WINDOWS-SYSMON] Suspicious WMIC call - bios Get Version || url,wiki.quadrantsec.com/bin/view/Main/5002813
+5002814 || [WINDOWS-SYSMON] Suspicious WMIC call - bios Get SerialNumber || url,wiki.quadrantsec.com/bin/view/Main/5002814
+5002815 || [WINDOWS-SYSMON] Suspicious WMIC call - csproduct Get Name || url,wiki.quadrantsec.com/bin/view/Main/5002815
+5002816 || [WINDOWS-SYSMON] Suspicious WMIC call - computersystem get model || url,wiki.quadrantsec.com/bin/view/Main/5002816
 5002817 || [WINDOWS-MISC] Installation of service via SCM || url,pastebin.com/raw/0SNSvyjJ || url,wiki.quadrantsec.com/bin/view/Main/5002817
 5002818 || [WINDOWS-MISC] Installation of new service via Security Audit  || url,pastebin.com/raw/0SNSvyjJ || url,wiki.quadrantsec.com/bin/view/Main/5002818
 5002819 || [WINDOWS-MALWARE] TrueCrypter Rakhni or .CryptoHasYou. - Trojan:Win32/Dynamer!ac ransomware extension detected. || url,www.nyxbone.com/malware/RansomwareOverview.html || url,docs.google.com/spreadsheets/d/1TWS238xacAto-fLKh1n5uTsdijWdCEsGIM0Y0Hvmc5g || url,wiki.quadrantsec.com/bin/view/Main/5002819
@@ -3172,10 +3172,10 @@
 5003334 || [VSFTPD-CORRELATED] File uploaded after honeypot activity || url,wiki.quadrantsec.com/bin/view/Main/5003334
 5003335 || [VSFTPD-CORRELATED] File uploaded after exploit attempt || url,wiki.quadrantsec.com/bin/view/Main/5003335
 5003336 || [VSFTPD-CORRELATED] File uploaded after brute force activity || url,wiki.quadrantsec.com/bin/view/Main/5003336
-5003337 || [WINDOWS-OWA-CORRELATED] Login failure after recon activity || url,wiki.quadrantsec.com/bin/view/Main/5003336
-5003338 || [WINDOWS-OWA-CORRELATED] Login failure after honeypot activity || url,wiki.quadrantsec.com/bin/view/Main/5003338
-5003339 || [WINDOWS-OWA-CORRELATED] Login failure after exploit attempt || url,wiki.quadrantsec.com/bin/view/Main/5003339
-5003340 || [WINDOWS-OWA-CORRELATED] Login failure after brute force activity || url,wiki.quadrantsec.com/bin/view/Main/5003340
+5003337 || [WINDOWS-OWA-CORRELATED] Login after recon activity || url,wiki.quadrantsec.com/bin/view/Main/5003336
+5003338 || [WINDOWS-OWA-CORRELATED] Login after honeypot activity || url,wiki.quadrantsec.com/bin/view/Main/5003338
+5003339 || [WINDOWS-OWA-CORRELATED] Login after exploit attempt || url,wiki.quadrantsec.com/bin/view/Main/5003339
+5003340 || [WINDOWS-OWA-CORRELATED] Login after brute force activity || url,wiki.quadrantsec.com/bin/view/Main/5003340
 5003341 || [WINDOWS-CORRELATED] Successful RDP login after honeypot activity || url,wiki.quadrantsec.com/bin/view/Main/5003341
 5003342 || [PasswordState] Access was Granted || url,wiki.quadrantsec.com/bin/view/Main/5003342 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
 5003343 || [PasswordState] Access has been Removed || url,wiki.quadrantsec.com/bin/view/Main/5003343 || url,www.clickstudios.com.au/downloads/version8/Passwordstate_Security_Administrators_Manual.pdf
@@ -3214,7 +3214,7 @@
 5003376 || [WINDOWS-AUTH] Suspicious network login || url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan || url,wiki.quadrantsec.com/bin/view/Main/5003376 || url,indingbad.blogspot.cz/2017/12/a-few-of-my-favorite-things-continued.html
 5003377 || [WINDOWS-AUTH] Suspicious network login from non-RFC1918 || url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan || url,wiki.quadrantsec.com/bin/view/Main/5003377 || url,findingbad.blogspot.cz/2017/12/a-few-of-my-favorite-things-continued.html
 5003378 || [WINDOWS-SYSMON] IP detect in command line || url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan || url,wiki.quadrantsec.com/bin/view/Main/5003378 || url,findingbad.blogspot.cz/2017/12/a-few-of-my-favorite-things-continued.html
-5003379 || [WINDOWS-SYSMON] Command line $\\ type request || url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan sid:5003379 || url,wiki.quadrantsec.com/bin/view/Main/5003379 || url,findingbad.blogspot.cz/2017/12/a-few-of-my-favorite-things-continued.html
+5003379 || [WINDOWS-SYSMON] Command line $\\ type request || url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan || url,wiki.quadrantsec.com/bin/view/Main/5003379 || url,findingbad.blogspot.cz/2017/12/a-few-of-my-favorite-things-continued.html
 5003380 || [WINDOWS-SYSMON] Powershell execution || url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan || url,wiki.quadrantsec.com/bin/view/Main/5003380 || url,findingbad.blogspot.cz/2017/12/a-few-of-my-favorite-things-continued.html
 5003381 || [WINDOWS-CORRELATED] Suspicious file copy to a share [dst -> src] || url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan || url,wiki.quadrantsec.com/bin/view/Main/5003381 || url,findingbad.blogspot.cz/2017/12/a-few-of-my-favorite-things-continued.html
 5003382 || [WINDOWS-CORRELATED] Suspicious file copy to a share [XBIT SET] || url,www.quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan || url,wiki.quadrantsec.com/bin/view/Main/5003382 || url,findingbad.blogspot.cz/2017/12/a-few-of-my-favorite-things-continued.html
