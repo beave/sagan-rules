@@ -2824,7 +2824,7 @@
 5002982 || [DYNAMIC] Linux kernel logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002982
 5002983 || [DYNAMIC] SMTP milter logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002983
 5002984 || [DYNAMIC] MongoDB logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002984
-5002985 || [DYNAMIC] MySQL logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002985
+5002985 || [DYNAMIC] MySQL/MariaDB logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002985
 5002986 || [DYNAMIC] NeXpose logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002986
 5002987 || [DYNAMIC] Nfcapd logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002987
 5002988 || [DYNAMIC] Nginx logs detected via program. || url,wiki.quadrantsec.com/bin/view/Main/5002988
@@ -3761,3 +3761,9 @@
 5003928 || [SU] Successful sudo to user ROOT executed || url,wiki.quadrantsec.com/bin/view/Main/5003928
 5003929 || [OFFICE365] ALERT_ANUBIS_DETECTION_REPEATED_ACTIVITY_ADMIN_ACTIVITY || url,wiki.quadrantsec.com/bin/view/Main/5003929 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
 5003930 || [OFFICE365] ALERT_MANAGEMENT_DISCOVERY_BREACHED_APP || url,wiki.quadrantsec.com/bin/view/Main/5003930 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003931 || [DYNAMIC] AS400 logs detect via message || url,wiki.quadrantsec.com/bin/view/Main/5003931
+5003932 || [DYNAMIC] AS400 logs detect via program || url,wiki.quadrantsec.com/bin/view/Main/5003932
+5003933 || [DYNAMIC] Office365 logs detect via message || url,wiki.quadrantsec.com/bin/view/Main/5003933
+5003934 || [DYNAMIC] Watchguard logs detect via program || url,wiki.quadrantsec.com/bin/view/Main/5003934
+5003935 || [DYNAMIC] Oracle logs detect via message || url,wiki.quadrantsec.com/bin/view/Main/5003935
+5003936 || [DYNAMIC] Zscaler logs detect via message || url,wiki.quadrantsec.com/bin/view/Main/5003936
