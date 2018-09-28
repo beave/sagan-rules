@@ -64,9 +64,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_COMPROMISE
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] EVENT_CATEGORY_CREATE_USER"; content: "EVENT_CATEGORY_CREATE_USER"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003817; sid:5003817; rev:1;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] EVENT_CATEGORY_DELETE_USER"; content: "EVENT_CATEGORY_DELETE_USER"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003820; sid:5003820; rev:1;)
 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_ANUBIS_DETECTION_REPEATED_ACTIVITY_ADMIN_ACTIVITY"; content: "ALERT_ANUBIS_DETECTION_REPEATED_ACTIVITY_ADMIN_ACTIVITY"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003929; sid:5003929; rev:1;)
 
-
-
-
-
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_MANAGEMENT_DISCOVERY_BREACHED_APP"; content: "ALERT_MANAGEMENT_DISCOVERY_BREACHED_APP"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003930; sid:5003930; rev:1;)
 

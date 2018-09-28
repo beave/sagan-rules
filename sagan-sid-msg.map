@@ -3759,3 +3759,5 @@
 5003925 || [Incapsula] Backdoor Protect || url,wiki.quadrantsec.com/bin/view/Main/5003925
 5003927 || [WINDOWS-AUTH] User added to Local Administrators group || url,wiki.quadrantsec.com/bin/view/Main/5003927
 5003928 || [SU] Successful sudo to user ROOT executed || url,wiki.quadrantsec.com/bin/view/Main/5003928
+5003929 || [OFFICE365] ALERT_ANUBIS_DETECTION_REPEATED_ACTIVITY_ADMIN_ACTIVITY || url,wiki.quadrantsec.com/bin/view/Main/5003929 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
+5003930 || [OFFICE365] ALERT_MANAGEMENT_DISCOVERY_BREACHED_APP || url,wiki.quadrantsec.com/bin/view/Main/5003930 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
