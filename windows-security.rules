@@ -439,3 +439,9 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-SECURITY] Metadata 
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-SECURITY] Initial state check: Rolling volume conversion transaction on"; content: " 24621|3a| "; classtype: system-event; program: *Security*; reference: url,github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/identity/ad-ds/plan/Appendix-L--Events-to-Monitor.md; reference: url,wiki.quadrantsec.com/bin/view/Main/5003758; sid: 5003758; rev: 1;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-SECURITY] An IPsec Security Association was deleted"; content: " 5049|3a| "; classtype: system-event; program: *Security*; reference: url,github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/identity/ad-ds/plan/Appendix-L--Events-to-Monitor.md; reference: url,wiki.quadrantsec.com/bin/view/Main/5003759; sid: 5003759; rev: 1;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-SECURITY] IPsec Services has started successfully"; content: " 5478|3a| "; classtype: system-event; program: *Security*; reference: url,github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/identity/ad-ds/plan/Appendix-L--Events-to-Monitor.md; reference: url,wiki.quadrantsec.com/bin/view/Main/5003760; sid: 5003760; rev: 1;)
+
+# Rule based off something I saw from Casey Pennington @ Quadrant
+# Champ Clark III - 2018/10/02
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-SECURITY] Potential NetBIOS name spoofing"; content: " 8415|3a| "; depth: 8; content: "NBNS spoofer was discovered"; nocase; parse_src_ip: 1; classtype: suspicious-traffic; reference: url,www.packtpub.com/mapt/book/networking_and_servers/9781785285561/5/ch05lvl1sec32/nbns-spoofing; reference: url,wiki.quadrantsec.com/bin/view/Main/5003937; sid:5003937; rev: 1;)
+

@@ -3767,3 +3767,33 @@
 5003934 || [DYNAMIC] Watchguard logs detect via program || url,wiki.quadrantsec.com/bin/view/Main/5003934
 5003935 || [DYNAMIC] Oracle logs detect via message || url,wiki.quadrantsec.com/bin/view/Main/5003935
 5003936 || [DYNAMIC] Zscaler logs detect via message || url,wiki.quadrantsec.com/bin/view/Main/5003936
+5003937 || [WINDOWS-SECURITY] Potential NetBIOS name spoofing || url,wiki.quadrantsec.com/bin/view/Main/5003937 || url,www.packtpub.com/mapt/book/networking_and_servers/9781785285561/5/ch05lvl1sec32/nbns-spoofing
+5003938 || [RSA-DPM] Physical Memory status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003938
+5003939 || [RSA-DPM] Physical Memory status RED [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003939
+5003940 || [RSA-DPM] Swap-Memory Memory status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003940
+5003941 || [RSA-DPM] Swap-Memory Memory status Red [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003941
+5003942 || [RSA-DPM] Disk status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003942
+5003943 || [RSA-DPM] Disk status Red - [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003943
+5003944 || [RSA-DPM] CPU status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003944
+5003945 || [RSA-DPM] CPU status Red - [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003945
+5003946 || [RSA-DPM] APACHE status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003946
+5003947 || [RSA-DPM] APACHE status Red - [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003947
+5003948 || [RSA-DPM] TOMCAT status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003948
+5003949 || [RSA-DPM] TOMCAT status Red - [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003949
+5003950 || [RSA-DPM] ORACLE status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003950
+5003951 || [RSA-DPM] ORACLE status Red - [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003951
+5003952 || [RSA-DPM] AXM status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003952
+5003953 || [RSA-DPM] AXM status Red - [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003953
+5003954 || [RSA-DPM] APPLIANCE_SYSTEM status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003954
+5003955 || [RSA-DPM] APPLIANCE_SYSTEM status Red || url,wiki.quadrantsec.com/bin/view/Main/5003955
+5003956 || [RSA-DPM] URL:/appliance-console status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003956
+5003957 || [RSA-DPM] URL:/appliance-console status Red - [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003957
+5003958 || [RSA-DPM] URL:/admingui status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003958
+5003959 || [RSA-DPM] URL:/admingui status Red || url,wiki.quadrantsec.com/bin/view/Main/5003959
+5003960 || [RSA-DPM] URL:/KMS/diagnostics.jsp status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003960
+5003961 || [RSA-DPM] URL:/KMS/diagnostics.jsp status Red [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003961
+5003962 || [RSA-DPM] Certificate ServerCert status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003962
+5003963 || [RSA-DPM] Certificate ServerCert status Red [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003963
+5003964 || [RSA-DPM] Certificate RootCA status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003964
+5003965 || [RSA-DPM] Certificate RootCA status Red [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003965
+5003966 || [RSA-DPM] Certificate ChainCA status Red [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003966
