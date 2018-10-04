@@ -1793,7 +1793,7 @@
 5001877 || [SSH-TECTIA-SERVER] Authentication Failure - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5001877
 5001878 || [SSH-TECTIA-SERVER-GEOIP] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5001878
 5001879 || [CISCO-GEOIP] Login permitted from outside HOME_COUNTRY || url, wiki.quadrantsec.com/bin/view/Main/5001879
-5001880 || [WINDOWS-AUTH] User account created [XBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5001880
+5001880 || [WINDOWS-AUTH] User account created || url,wiki.quadrantsec.com/bin/view/Main/5001880
 5001881 || [WINDOWS-AUTH] User account re-enabled || url,wiki.quadrantsec.com/bin/view/Main/5001881
 5001882 || [PROXY-MALWARE] Zeus bin Request 1 || url,labs.snort.org/papers/zeus.html
 5001883 || [PROXY-MALWARE] Zeus bin Request 2 || url,labs.snort.org/papers/zeus.html
