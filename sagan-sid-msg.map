@@ -3797,3 +3797,5 @@
 5003964 || [RSA-DPM] Certificate RootCA status Yellow || url,wiki.quadrantsec.com/bin/view/Main/5003964
 5003965 || [RSA-DPM] Certificate RootCA status Red [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003965
 5003966 || [RSA-DPM] Certificate ChainCA status Red [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003966
+5003967 || [WATCHGUARD] Management User Log in || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003968 || [WATCHGUARD] Management User Log Out || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
