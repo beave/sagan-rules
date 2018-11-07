@@ -1,3 +1,122 @@
+2018/11/08 -	Sagan rule release.
+
+	* New watchguard.rules! 
+	  https://github.com/beave/sagan-rules/commit/590fb11851d7138cf2fcbff7ec1d815090ad625b
+
+	* New dynamic.rules for AS/400, Zscaler, Oracle, Office 365, Watchguard, Zscaler.
+	  https://github.com/beave/sagan-rules/commit/01a962742c867a279c75d4712476934bd6265ca0
+
+	* Various minor rule updates:
+	  https://github.com/beave/sagan-rules/commit/9a67d6227610fea69cf0d829b74f6af23c72e4e7
+	  https://github.com/beave/sagan-rules/commit/6f87a80f7a1662e6fd90bc75f891c1c0637c6e7e
+	  https://github.com/beave/sagan-rules/commit/46d7484e1c66b8ec7362768cad09b65d79c41fa7
+	  https://github.com/beave/sagan-rules/commit/8c8bab01cc4a237d9af44b90067f59e439721f7f
+	
+	* Better windows-owa-correlated.rules descriptions added.
+	  https://github.com/beave/sagan-rules/commit/53e313525fc98f451a4a25f4e2664e656216f877	
+
+	* New and improved su.rules
+	  https://github.com/beave/sagan-rules/commit/712260c64a7a5d3fc078d268d825ef17655ad9c4
+
+	* Minor sendmail.rules changes, new local administrator signature added.
+	  https://github.com/beave/sagan-rules/commit/289188972e8cb202ab0e072872e8c7e8ff46f68f
+
+	* Disabled "RPD detected an integrity violation" on sid 5003412 due to lack of 
+	  documentation about the threat from Microsoft.
+	  https://github.com/beave/sagan-rules/commit/75787d96b4dc167831d63b73e829bf30d586af97
+	
+	* New cisco-amp.rules (Cisco Advanced Malware Protection)
+	  https://github.com/beave/sagan-rules/commit/79dee293db6f0653429a69370ce19ff132b7f5ab
+
+	* Disabled a lot of older malware (zeroaccess, etc) and other fixes.
+	  https://github.com/beave/sagan-rules/commit/b25b43334d2b14f4360b9a16ef9408f204325a1b
+
+	* New office365.rules (Microsoft Office 365!)
+	  https://github.com/beave/sagan-rules/commits/master?before=6f463ef64ea94b680d5335ff8e3373375c5e455d+70
+	  https://github.com/beave/sagan-rules/commit/7249c194ef1508667166c13069bc8a394187441b
+	  https://github.com/beave/sagan-rules/commit/19189443fdd306769c4afd7ab837da316f2690b5
+
+	* Updates to sonicwall.rules
+	  https://github.com/beave/sagan-rules/commit/f590bf474bc4baa2876957a49a42d3c074a316ff
+
+	* New mcaffee-web-gateway.rule! 
+	  https://github.com/beave/sagan-rules/commit/f1f62f1563531ada58f35661530fe4b2aeef3c92
+
+	* New rules to detect "password spraying" attempts.
+	  https://github.com/beave/sagan-rules/commit/b460f86416a3dba8fc0f21e590015da76f35351f
+	  https://github.com/beave/sagan-rules/commit/5d327f43f54d78bde0b12daec44073a77ca57b8f
+	  https://github.com/beave/sagan-rules/commit/7d5b72e58d52168489454f29b3ff23d06bb1281f
+	  https://github.com/beave/sagan-rules/commit/eecd22b5d072f87edcc324169d56fadf302d7357
+
+	* New trendmicro.rules!  Other minor modifications.
+	  https://github.com/beave/sagan-rules/commit/16a4a394a07423c5d1891a275f0907631c761d8e
+
+	* Modification:  Removed many pcre in favor of meta_content.  This should give a 
+	  preformance increase to the Sagan engine! 
+	  https://github.com/beave/sagan-rules/commit/49177c25e993059435a4523b7f86f347aa338c2f
+	
+	* New "json-input.map" added.  This is for Sagan to decode JSON coming in from a
+	  FIFO. Minor fix for apahce.rules (removed $HTTP_SERVERS variable). 
+	  https://github.com/beave/sagan-rules/commit/e19e9cf62005592f9bd87e88c11d314ac4844c4f
+	  https://github.com/beave/sagan-rules/commit/e82034a21261c74f5df1fbb6a7c98994a4e3814d
+	  
+	* New dynamic.rules for Cisco ISE,  New Windows/LDAP rules.
+	  https://github.com/beave/sagan-rules/commit/a5916e4f43b3ac377a762e6ea38302f889bf7aba
+
+	* cisco-acs.rules became cisco-ise.rules.
+	  https://github.com/beave/sagan-rules/commit/0fba4959fc3d7ff0212a2ecb0fbac57a9a36e0ca
+
+	* "xbit: noeve" added to some rules.  
+	  https://github.com/beave/sagan-rules/commit/f2d8fc53613118203a3d6d5e888b477dff979be4
+
+	* New AS/400 rules! (as400.rules)
+	  https://github.com/beave/sagan-rules/commit/ab06ac4aa5d03d3ddabeda1e2c4f13db5c45cfe5
+
+	* New "windows-security.rules".  These rules are based off Microsoft's "what events
+	  to monitor" text.   That's located at:
+	  github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/identity/ad-ds/plan/Appendix-L--Events-to-Monitor.md
+	  https://github.com/beave/sagan-rules/commit/57315a3fcff9a3f1e360ff43934ab4110276a25f
+	  (Thank's Steve Rawls!)
+
+	* Typo fixes in Watchguard rules 
+	  https://github.com/beave/sagan-rules/commit/cd9ede3c5a3a87bd8d558f13f491456b72b3e858
+	  (Thanks Lillypad@github!)
+
+	* New rules based off Jack Crook's work.  See https://quadrantsec.com/about/blog/using_jack_crooks_log_analysis_concepts_with_sagan/
+	  https://github.com/beave/sagan-rules/commit/87080d02714d0cb73b379bfbf4458daae3f6d012
+
+	* Minor modification: program is now *Sysmon* in windows-sysmon.rules
+	  https://github.com/beave/sagan-rules/commit/93b186e9c7ee1a4339c90317718ba6e383cc8058
+
+	* New PasswordState rules!
+	  https://github.com/beave/sagan-rules/commit/a84b30bd279808b5730b687ae3b16e9f7b85c677
+
+	* Rewrite of many -correlated rules to use standalone xbits. 
+	  https://github.com/beave/sagan-rules/commit/0c8af0541024a0effdd924cf0f42840d060f47d9
+
+	* Rule modification: Ignore "anonmyous" request in Citrix rules.
+	  https://github.com/beave/sagan-rules/commit/97102417281a36f042cf3eba841e67a29cd9451d
+
+	* "Bad Rabbit" rules and HP Procurve normalization.
+	  https://github.com/beave/sagan-rules/commit/2d5c717d99b105f5d23311c7afd20df98498466d
+
+	* Minor fixes for vsftpd-correlated.rules
+	  https://github.com/beave/sagan-rules/commit/df9281a5ab10a3239412981460c4b44c4744f695
+
+	* New "Bad Rabbit" rules
+	  https://github.com/beave/sagan-rules/commit/8557a59bc4ab1323e39d5ab83ea180750b32c001
+
+	* Minor updates to openssh.rules & rsync.rules
+	  https://github.com/beave/sagan-rules/commit/618d8016f5a1430931a1b4d44e466e14ec146527
+
+	* New malware & authentication rules.
+	  https://github.com/beave/sagan-rules/commit/618d8016f5a1430931a1b4d44e466e14ec146527
+
+	* Added content negation to nessus user agent rule to prevent firing
+	  https://github.com/beave/sagan-rules/commit/9cfac7b8ab9f665baf624c813449ce6a67659991
+	  https://github.com/beave/sagan-rules/commit/c04839825088f1fe7a8c117127249737ac65273b
+	  (thanks Cyber Tao Flow@github!)
+
 2017/07/25 - 	Sagan rule release.
 
 	* New Proxy/Zscaler rules
