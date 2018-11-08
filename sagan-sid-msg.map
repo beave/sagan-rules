@@ -3746,17 +3746,17 @@
 5003912 || [CISCO-AMP] Multiple Infected Files || url,wiki.quadrantsec.com/bin/view/Main/5003912
 5003913 || [CISCO-AMP] Potential Dropper Infection || url,wiki.quadrantsec.com/bin/view/Main/5003913
 5003914 || [CISCO-AMP] Application Deauthorized || url,wiki.quadrantsec.com/bin/view/Main/5003914
-5003915 || [Incapsula] Visitor from blacklisted IPs || url,wiki.quadrantsec.com/bin/view/Main/5003915
-5003916 || [Incapsula] Visitor from blacklisted Countries || url,wiki.quadrantsec.com/bin/view/Main/5003916
-5003917 || [Incapsula] Visitor from blacklisted URLs || url,wiki.quadrantsec.com/bin/view/Main/5003917
-5003918 || [Incapsula] Bot Access Control || url,wiki.quadrantsec.com/bin/view/Main/5003918
-5003919 || [Incapsula] Suspected Bots || url,wiki.quadrantsec.com/bin/view/Main/5003919
-5003920 || [Incapsula] Remote File Inclusion || url,wiki.quadrantsec.com/bin/view/Main/5003920
-5003921 || [Incapsula] SQL Injection || url,wiki.quadrantsec.com/bin/view/Main/5003921
-5003922 || [Incapsula] Cross Site Scripting || url,wiki.quadrantsec.com/bin/view/Main/5003922
-5003923 || [Incapsula] Illegal Resource Access || url,wiki.quadrantsec.com/bin/view/Main/5003923
-5003924 || [Incapsula] DDoS || url,wiki.quadrantsec.com/bin/view/Main/5003924
-5003925 || [Incapsula] Backdoor Protect || url,wiki.quadrantsec.com/bin/view/Main/5003925
+5003915 || [Incapsula*|incapsula*] Visitor from blacklisted IPs || url,wiki.quadrantsec.com/bin/view/Main/5003915
+5003916 || [Incapsula*|incapsula*] Visitor from blacklisted Countries || url,wiki.quadrantsec.com/bin/view/Main/5003916
+5003917 || [Incapsula*|incapsula*] Visitor from blacklisted URLs || url,wiki.quadrantsec.com/bin/view/Main/5003917
+5003918 || [Incapsula*|incapsula*] Bot Access Control || url,wiki.quadrantsec.com/bin/view/Main/5003918
+5003919 || [Incapsula*|incapsula*] Suspected Bots || url,wiki.quadrantsec.com/bin/view/Main/5003919
+5003920 || [Incapsula*|incapsula*] Remote File Inclusion || url,wiki.quadrantsec.com/bin/view/Main/5003920
+5003921 || [Incapsula*|incapsula*] SQL Injection || url,wiki.quadrantsec.com/bin/view/Main/5003921
+5003922 || [Incapsula*|incapsula*] Cross Site Scripting || url,wiki.quadrantsec.com/bin/view/Main/5003922
+5003923 || [Incapsula*|incapsula*] Illegal Resource Access || url,wiki.quadrantsec.com/bin/view/Main/5003923
+5003924 || [Incapsula*|incapsula*] DDoS || url,wiki.quadrantsec.com/bin/view/Main/5003924
+5003925 || [Incapsula*|incapsula*] Backdoor Protect || url,wiki.quadrantsec.com/bin/view/Main/5003925
 5003927 || [WINDOWS-AUTH] User added to Local Administrators group || url,wiki.quadrantsec.com/bin/view/Main/5003927
 5003928 || [SU] Successful sudo to user ROOT executed || url,wiki.quadrantsec.com/bin/view/Main/5003928
 5003929 || [OFFICE365] ALERT_ANUBIS_DETECTION_REPEATED_ACTIVITY_ADMIN_ACTIVITY || url,wiki.quadrantsec.com/bin/view/Main/5003929 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
