@@ -33,10 +33,13 @@
 
 # 10.1.7.2|authpriv|info|info|56|2013-12-02|14:21:19|sshd| Accepted password for bob from 10.1.16.1 port 51860 ssh2
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-GEOIP] Authentication success via password from outside HOME_COUNTRY"; content: "Accepted password"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001874; normalize; program: sshd; country_code: track by_src, isnot $HOME_COUNTRY; sid: 5001874; rev:3;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-GEOIP] Authentication success via publickey from outside HOME_COUNTRY"; content: "Accepted publickey"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001875; normalize; program: sshd; country_code: track by_src, isnot $HOME_COUNTRY; sid: 5001875; rev:3;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-GEOIP] Authentication success via keyboard from outside HOME_COUNTRY"; content: "Accepted keyboard-interactive"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001876; normalize; program: sshd; country_code: track by_src, isnot $HOME_COUNTRY; sid: 5001876; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-GEOIP] Authentication success via password from outside HOME_COUNTRY"; content: "Accepted password"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001874; normalize; program: sshd; country_code: track by_src, isnot $HOME_COUNTRY; sid: 5001874; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-GEOIP] Authentication success via publickey from outside HOME_COUNTRY"; content: "Accepted publickey"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001875; normalize; program: sshd; country_code: track by_src, isnot $HOME_COUNTRY; sid: 5001875; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-GEOIP] Authentication success via keyboard from outside HOME_COUNTRY"; content: "Accepted keyboard-interactive"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001876; normalize; program: sshd; country_code: track by_src, isnot $HOME_COUNTRY; sid: 5001876; rev:3;)
 
+# New "catch all" ssh login success.  Watches for "Accepted" with a depth.
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-GEOIP] Authentication success from outside HOME_COUNTRY"; content: "Accepted"; nocase; depth: 10; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003969; normalize; program: sshd; country_code: track by_src, isnot $HOME_COUNTRY; sid:5003969; rev:1;)
 
 
 

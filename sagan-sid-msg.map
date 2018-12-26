@@ -3799,3 +3799,5 @@
 5003966 || [RSA-DPM] Certificate ChainCA status Red [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003966
 5003967 || [WATCHGUARD] Management User Log in || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
 5003968 || [WATCHGUARD] Management User Log Out || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
+5003969 || [OPENSSH-GEOIP] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003969
+5003970 || [OPENSSH-AETAS] Authentication success at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5003970

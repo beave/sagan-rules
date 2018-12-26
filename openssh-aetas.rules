@@ -33,11 +33,12 @@
 
 # 10.1.7.2|authpriv|info|info|56|2013-12-02|14:21:19|sshd| Accepted password for bob from 10.1.16.1 port 51860 ssh2
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-AETAS] Authentication success via password at suspicious time"; content: "Accepted password"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002049; normalize; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002049; rev:4;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-AETAS] Authentication success via publickey at suspicious time"; content: "Accepted publickey"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002050; normalize; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002050; rev:4;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-AETAS] Authentication success via keyboard at suspicious time"; content: "Accepted keyboard-interactive"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002051; normalize; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002051; rev:4;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-AETAS] Authentication success via password at suspicious time"; content: "Accepted password"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002049; normalize; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002049; rev:4;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-AETAS] Authentication success via publickey at suspicious time"; content: "Accepted publickey"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002050; normalize; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002050; rev:4;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-AETAS] Authentication success via keyboard at suspicious time"; content: "Accepted keyboard-interactive"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002051; normalize; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid: 5002051; rev:4;)
 
+# New "catch all" ssh login success.  Watches for "Accepted" with a depth. 
 
-
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-AETAS] Authentication success at suspicious time"; content: "Accepted"; nocase; depth: 10; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003970; normalize; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid:5003970; rev:1;)
 
 
