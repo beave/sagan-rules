@@ -39,6 +39,6 @@
 
 # New "catch all" ssh login success.  Watches for "Accepted" with a depth. 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-AETAS] Authentication success at suspicious time"; content: "Accepted"; nocase; depth: 10; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003970; normalize; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid:5003970; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-AETAS] Authentication success at suspicious time"; content: "accepted"; nocase; depth: 10; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003970; normalize; parse_src_ip: 1; program: sshd; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; sid:5003970; rev:1;)
 
 

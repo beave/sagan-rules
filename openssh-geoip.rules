@@ -39,8 +39,5 @@
 
 # New "catch all" ssh login success.  Watches for "Accepted" with a depth.
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH-GEOIP] Authentication success from outside HOME_COUNTRY"; content: "Accepted"; nocase; depth: 10; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003969; normalize; program: sshd; country_code: track by_src, isnot $HOME_COUNTRY; sid:5003969; rev:1;)
-
-
-
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Authentication success from outside HOME_COUNTRY"; content: "accepted"; nocase; depth: 10; default_proto: tcp; default_dst_port: $SSH_PORT; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003969; normalize; parse_src_ip: 1; program: sshd; sid:5003969; rev:1;)
 
