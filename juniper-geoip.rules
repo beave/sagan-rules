@@ -31,5 +31,5 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[JUNIPER-GEOIP] VPN Logout f
 
 # Juniper alerts for CVE 2015-7755 - Robert Nunley (rnunley@quadrantsec.com)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ScreenOS-GEOIP] Juniper ScreenOS Admin Login from Outside of Home Country"; content: "Admin user"; content:"has logged on via"; country_code: track by_src, isnot $HOME_COUNTRY; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; parse_src_ip: 1; reference:url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search; reference: url, wiki.quadrantsec.com/bin/view/Main/5002773; sid:5002773; rev:3;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[JUNIPER-GEOIP] Juniper ScreenOS Admin Login from Outside of Home Country"; content: "Admin user"; content:"has logged on via"; country_code: track by_src, isnot $HOME_COUNTRY; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; parse_src_ip: 1; reference:url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search; reference: url, wiki.quadrantsec.com/bin/view/Main/5002773; sid:5002773; rev:3;)
 
