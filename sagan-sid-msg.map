@@ -2616,7 +2616,7 @@
 5002770 || [FIPAYPIN] Replace macro from outside RFC1918 || url,wiki.quadrantsec.com/bin/view/Main/5002770
 5002771 || [ScreenOS] Juniper ScreenOS Login for Suspicious Admin user - system || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search || cve,2015-7755
 5002772 || [ScreenOS] Juniper ScreenOS Login for Suspicious Admin user - username || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search || cve,2015-7755
-5002773 || [ScreenOS-GEOIP] Juniper ScreenOS Admin Login from Outside of Home Country || url, wiki.quadrantsec.com/bin/view/Main/5002773 || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search
+5002773 || [JUNIPER-GEOIP] Juniper ScreenOS Admin Login from Outside of Home Country || url, wiki.quadrantsec.com/bin/view/Main/5002773 || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search
 5002774 || [JUNIPER-BLUEDOT] Juniper ScreenOS Admin Login from a known malicious IP || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search || cve,2015-7755
 5002775 || [WINDOWS-MISC] Domain policy was changed || url,wiki.quadrantsec.com/bin/view/Main/5002775
 5002776 || [F5-BIG-IP-GEOIP] Command-line Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002776 || url,support.f5.com/kb/en-us/solutions/public/13000/400/sol13426.html
@@ -2949,7 +2949,7 @@
 5003110 || [NXLOG] Termination Request || url,wiki.quadrantsec.com/bin/view/Main/5003110
 5003111 || [NXLOG] Missing Windows Log Message || url,wiki.quadrantsec.com/bin/view/Main/5003111
 5003112 || [JUNIPER-BLUEDOT] VPN Login from a known malicious source || url, wiki.quadrantsec.com/bin/view/Main/5003112
-5003113 || [JUNIPER-GEOIP] VPN Logout from a known malicious source || url, wiki.quadrantsec.com/bin/view/Main/5003113
+5003113 || [JUNIPER-BLUEDOT] VPN Logout from a known malicious source || url, wiki.quadrantsec.com/bin/view/Main/5003113
 5003114 || [JUNIPER-BLUEDOT] Juniper ScreenOS Admin Login from a known malicous source || url, wiki.quadrantsec.com/bin/view/Main/5003114 || url,kb.juniper.net/InfoCenter/index?page=content&id=JSA10713&actp=search
 5003115 || [LINUX-KERNEL] Bad UDP checksum || url,wiki.quadrantsec.com/bin/view/Main/5003115
 5003116 || [WINDOWS-MALWARE] Adylkuzz Trojan service installation detected || url, www.symantec.com/security_response/writeup.jsp?docid=2017-051707-0237-99&tabid=2 || url,wiki.quadrantsec.com/bin/view/Main/5003117
@@ -3137,9 +3137,8 @@
 5003299 || [IMAPD-CORRELATED] Connection after exploit attempt || url, wiki.quadrantsec.com/bin/view/Main/5003299
 5003300 || [IMAPD-CORRELATED] Connection after brute force activity || url, wiki.quadrantsec.com/bin/view/Main/5003300
 5003301 || [OPENSSH-CORRELATED] Authentication success via password after recon activity || url,wiki.quadrantsec.com/bin/view/Main/5003301
-5003302 || [OPENSSH-CORRELATED] Authentication success via password after honeypot activity || url,wiki.quadrantsec.com/bin/view/Main/5003302
 5003303 || [OPENSSH-CORRELATED] Authentication success via password after exploit attempt || url,wiki.quadrantsec.com/bin/view/Main/5003303
-5003304 || [OPENSSH-CORRELATED] Authentication success via password after brute force activity || url,wiki.quadrantsec.com/bin/view/Main/5003304
+5003304 || [OPENSSH-CORRELATED] Authentication success via password after brute force activity || url,wiki.quadrantsec.com/bin/view/main/5003304
 5003305 || [OPENSSH-CORRELATED] Authentication success via public key after recon activity || url,wiki.quadrantsec.com/bin/view/Main/5003305
 5003306 || [OPENSSH-CORRELATED] Authentication success via public key after honeypot activity || url,wiki.quadrantsec.com/bin/view/Main/5003306
 5003307 || [OPENSSH-CORRELATED] Authentication success via public key after exploit attempt || url,wiki.quadrantsec.com/bin/view/Main/5003307
@@ -3746,17 +3745,17 @@
 5003912 || [CISCO-AMP] Multiple Infected Files || url,wiki.quadrantsec.com/bin/view/Main/5003912
 5003913 || [CISCO-AMP] Potential Dropper Infection || url,wiki.quadrantsec.com/bin/view/Main/5003913
 5003914 || [CISCO-AMP] Application Deauthorized || url,wiki.quadrantsec.com/bin/view/Main/5003914
-5003915 || [Incapsula*|incapsula*] Visitor from blacklisted IPs || url,wiki.quadrantsec.com/bin/view/Main/5003915
-5003916 || [Incapsula*|incapsula*] Visitor from blacklisted Countries || url,wiki.quadrantsec.com/bin/view/Main/5003916
-5003917 || [Incapsula*|incapsula*] Visitor from blacklisted URLs || url,wiki.quadrantsec.com/bin/view/Main/5003917
-5003918 || [Incapsula*|incapsula*] Bot Access Control || url,wiki.quadrantsec.com/bin/view/Main/5003918
-5003919 || [Incapsula*|incapsula*] Suspected Bots || url,wiki.quadrantsec.com/bin/view/Main/5003919
-5003920 || [Incapsula*|incapsula*] Remote File Inclusion || url,wiki.quadrantsec.com/bin/view/Main/5003920
-5003921 || [Incapsula*|incapsula*] SQL Injection || url,wiki.quadrantsec.com/bin/view/Main/5003921
-5003922 || [Incapsula*|incapsula*] Cross Site Scripting || url,wiki.quadrantsec.com/bin/view/Main/5003922
-5003923 || [Incapsula*|incapsula*] Illegal Resource Access || url,wiki.quadrantsec.com/bin/view/Main/5003923
-5003924 || [Incapsula*|incapsula*] DDoS || url,wiki.quadrantsec.com/bin/view/Main/5003924
-5003925 || [Incapsula*|incapsula*] Backdoor Protect || url,wiki.quadrantsec.com/bin/view/Main/5003925
+5003915 || [INCAPSULA] Visitor from blacklisted IPs || url,wiki.quadrantsec.com/bin/view/Main/5003915
+5003916 || [INCAPSULA] Visitor from blacklisted Countries || url,wiki.quadrantsec.com/bin/view/Main/5003916
+5003917 || [INCAPSULA] Visitor from blacklisted URLs || url,wiki.quadrantsec.com/bin/view/Main/5003917
+5003918 || [INCAPSULA] Bot Access Control || url,wiki.quadrantsec.com/bin/view/Main/5003918
+5003919 || [INCAPSULA] Suspected Bots || url,wiki.quadrantsec.com/bin/view/Main/5003919
+5003920 || [INCAPSULA] Remote File Inclusion || url,wiki.quadrantsec.com/bin/view/Main/5003920
+5003921 || [INCAPSULA] SQL Injection || url,wiki.quadrantsec.com/bin/view/Main/5003921
+5003922 || [INCAPSULA] Cross Site Scripting || url,wiki.quadrantsec.com/bin/view/Main/5003922
+5003923 || [INCAPSULA] Illegal Resource Access || url,wiki.quadrantsec.com/bin/view/Main/5003923
+5003924 || [INCAPSULA] DDoS || url,wiki.quadrantsec.com/bin/view/Main/5003924
+5003925 || [INCAPSULA] Backdoor Protect || url,wiki.quadrantsec.com/bin/view/Main/5003925
 5003927 || [WINDOWS-AUTH] User added to Local Administrators group || url,wiki.quadrantsec.com/bin/view/Main/5003927
 5003928 || [SU] Successful sudo to user ROOT executed || url,wiki.quadrantsec.com/bin/view/Main/5003928
 5003929 || [OFFICE365] ALERT_ANUBIS_DETECTION_REPEATED_ACTIVITY_ADMIN_ACTIVITY || url,wiki.quadrantsec.com/bin/view/Main/5003929 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
@@ -3799,5 +3798,326 @@
 5003966 || [RSA-DPM] Certificate ChainCA status Red [Critical] || url,wiki.quadrantsec.com/bin/view/Main/5003966
 5003967 || [WATCHGUARD] Management User Log in || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
 5003968 || [WATCHGUARD] Management User Log Out || url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html
-5003969 || [OPENSSH-GEOIP] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003969
+5003969 || [OPENSSH] Authentication success from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5003969
 5003970 || [OPENSSH-AETAS] Authentication success at suspicious time || url,wiki.quadrantsec.com/bin/view/Main/5003970
+5003971 || [OPENSSH-BLUEDOT] Authentication success via keyboard from suspicious source || url,wiki.quadrantsec.com/bin/view/Main/5002907
+5003972 || [OPENSSH-CORRELATED] Authentication success after honeypot activity || url,wiki.quadrantsec.com/bin/view/Main/5003972
+5003973 || [OPENSSH-CORRELATED] Authentication success after exploit attempt || url,wiki.quadrantsec.com/bin/view/Main/5003973
+5003974 || [OPENSSH-CORRELATED] Authentication success after brute force activity || url,wiki.quadrantsec.com/bin/view/main/5003974
+5003975 || [OPENSSH-CORRELATED] Authentication success after recon activity || url,wiki.quadrantsec.com/bin/view/main/5003975
+5003977 || [CENTRIFY] PAM authentication denied [Brute Force] [10/1] || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003977
+5003979 || [CENTRIFY] PAM open session denied [Brute Force] [10/1] || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003979
+5003991 || [CENTRIFY] Create new installation succeeded   || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003991
+5003992 || [CENTRIFY] Create new installation failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003992
+5003993 || [CENTRIFY] Installation update succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003993
+5003994 || [CENTRIFY] Installation update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003994
+5003995 || [CENTRIFY] Installation permissions update succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003995
+5003996 || [CENTRIFY] Installation permissions update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003996
+5003997 || [CENTRIFY] Remove installation succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003997
+5003998 || [CENTRIFY] Remove installation failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003998
+5003999 || [CENTRIFY] Audit options updated || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003999
+5004000 || [CENTRIFY] Add Management Database succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004000
+5004001 || [CENTRIFY] Add Management Database failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004001
+5004002 || [CENTRIFY] Management Database update || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004002
+5004003 || [CENTRIFY] Management Database update || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004003
+5004004 || [CENTRIFY] Management Database succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004004
+5004005 || [CENTRIFY] Management Database failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004005
+5004006 || [CENTRIFY] Remove Management Database succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004006
+5004007 || [CENTRIFY] Remove Management Database failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004007
+5004008 || [CENTRIFY] Add Audit Store succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004008
+5004009 || [CENTRIFY] Add Audit Store failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004009
+5004010 || [CENTRIFY] Audit Store update succeeded    || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004010
+5004011 || [CENTRIFY] Audit Store update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004011
+5004012 || [CENTRIFY] Audit Store permissions update succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004012
+5004013 || [CENTRIFY] Audit Store permissions update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004013
+5004014 || [CENTRIFY] Remove Audit Store succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004014
+5004015 || [CENTRIFY] Remove Audit Store failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004015
+5004016 || [CENTRIFY] Add Audit Store Database succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004016
+5004017 || [CENTRIFY] Add Audit Store Database failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004017
+5004018 || [CENTRIFY] Attach Audit Store Database succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004018
+5004019 || [CENTRIFY] Attach Audit Store Database failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004019
+5004020 || [CENTRIFY] Attach DirectAudit Version 1 succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004020
+5004021 || [CENTRIFY] Attach DirectAudit Version 1 failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004021
+5004022 || [CENTRIFY] Set Active Audit Store succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004022
+5004023 || [CENTRIFY] Set Active Audit Store failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004023
+5004024 || [CENTRIFY] Audit Store Database update succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004024
+5004025 || [CENTRIFY] Audit Store Database update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004025
+5004026 || [CENTRIFY] Detach Audit Store Database succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004026
+5004027 || [CENTRIFY] Detach Audit Store Database failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004027
+5004028 || [CENTRIFY] Delete Audit Store Database succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004028
+5004029 || [CENTRIFY] Delete Audit Store Database failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004029
+5004030 || [CENTRIFY] Add Audit Role succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004030
+5004031 || [CENTRIFY] Add Audit Role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004031
+5004032 || [CENTRIFY] Audit Role update succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004032
+5004033 || [CENTRIFY] Audit Role update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004033
+5004034 || [CENTRIFY] Audit Role permissions update succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004034
+5004035 || [CENTRIFY] Audit Role permissions update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004035
+5004036 || [CENTRIFY] Audit Role assign member succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004036
+5004037 || [CENTRIFY] Audit Role assign member failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004037
+5004038 || [CENTRIFY] Audit Role remove member succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004038
+5004039 || [CENTRIFY] Audit Role remove member failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004039
+5004040 || [CENTRIFY] Delete Audit Role succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004040
+5004041 || [CENTRIFY] Delete Audit Role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004041
+5004042 || [CENTRIFY] Start collector service succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004042
+5004043 || [CENTRIFY] Start collector service failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004043
+5004044 || [CENTRIFY] Stop collector service succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004044
+5004045 || [CENTRIFY] Stop collector service failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004045
+5004046 || [CENTRIFY] Collector settings update succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004046
+5004047 || [CENTRIFY] Collector settings update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004047
+5004048 || [CENTRIFY] Start agent service succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004048
+5004049 || [CENTRIFY] Start agent service failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004049
+5004050 || [CENTRIFY] Stop agent service succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004050
+5004051 || [CENTRIFY] Stop agent service failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004051
+5004052 || [CENTRIFY] Agent settings update succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004052
+5004053 || [CENTRIFY] Agent settings update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004053
+5004054 || [CENTRIFY] Delete session || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004054
+5004055 || [CENTRIFY] Delete session by criteria || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004055
+5004056 || [CENTRIFY] Set session reviewers succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004056
+5004057 || [CENTRIFY] Set session reviewers failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004057
+5004058 || [CENTRIFY] Remove session reviewers succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004058
+5004059 || [CENTRIFY] Remove session reviewers failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004059
+5004060 || [CENTRIFY] Console login success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004060
+5004061 || [CENTRIFY] Console login failure     || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004061
+5004062 || [CENTRIFY] Remote login success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004062
+5004063 || [CENTRIFY] Remote login failure     || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004063
+5004064 || [CENTRIFY] Run with privilege success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004064
+5004065 || [CENTRIFY] Run with privilege failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004065
+5004066 || [CENTRIFY] Create desktop success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004066
+5004067 || [CENTRIFY] Create desktop failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004067
+5004068 || [CENTRIFY] Network access success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004068
+5004069 || [CENTRIFY] Console logon failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004069
+5004070 || [CENTRIFY] Remote login failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004070
+5004071 || [CENTRIFY] Run with privilege success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004071
+5004072 || [CENTRIFY] Run with privilege failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004072
+5004073 || [CENTRIFY] Create desktop success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004073
+5004074 || [CENTRIFY] Create desktop failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004074
+5004075 || [CENTRIFY] Switch desktop success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004075
+5004076 || [CENTRIFY] Switch desktop failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004076
+5004077 || [CENTRIFY] Run with privilege failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004077
+5004078 || [CENTRIFY] Create desktop failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004078
+5004079 || [CENTRIFY] Switch desktop failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004079
+5004080 || [CENTRIFY] Join to zone success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004080
+5004081 || [CENTRIFY] Join to zone failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004081
+5004082 || [CENTRIFY] Leave from zone success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004082
+5004083 || [CENTRIFY] Leave from zone failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004083
+5004084 || [CENTRIFY] Add role success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004084
+5004085 || [CENTRIFY] Add role failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004085
+5004086 || [CENTRIFY] Add role assignment success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004086
+5004087 || [CENTRIFY] Add role assignment failure || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004087
+5004088 || [CENTRIFY] login success || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004088
+5004089 || [CENTRIFY] Zone administrative tasks delegated || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004089
+5004090 || [CENTRIFY] Delegation of zone administrative tasks failed  || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004090
+5004091 || [CENTRIFY] Computer administrative tasks delegated || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004091
+5004092 || [CENTRIFY] Delegation of computer administrative tasks failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004092
+5004093 || [CENTRIFY] Computer role administrative tasks delegated || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004093
+5004094 || [CENTRIFY] Delegation of computer role administrative tasks failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004094
+5004095 || [CENTRIFY] Zone created || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004095
+5004096 || [CENTRIFY] Zone creation failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004096
+5004097 || [CENTRIFY] Zone deleted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004097
+5004098 || [CENTRIFY] Zone deletion failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004098
+5004099 || [CENTRIFY] Zone modified || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004099
+5004100 || [CENTRIFY] Zone update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004100
+5004101 || [CENTRIFY] User added to a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004101
+5004102 || [CENTRIFY] Add user to a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004102
+5004103 || [CENTRIFY] User deleted from a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004103
+5004104 || [CENTRIFY] Delete user from a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004104
+5004105 || [CENTRIFY] User profile modified in a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004105
+5004106 || [CENTRIFY] Modify user in a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004106
+5004107 || [CENTRIFY] User added to a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004107
+5004108 || [CENTRIFY] Add user to a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004108
+5004109 || [CENTRIFY] User deleted from computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004109
+5004110 || [CENTRIFY] Delete user from a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004110
+5004111 || [CENTRIFY] User profile modified on a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004111
+5004112 || [CENTRIFY] Modify user on a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004112
+5004113 || [CENTRIFY] Group added to a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004113
+5004114 || [CENTRIFY] Add group to a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004114
+5004115 || [CENTRIFY] Group deleted from a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004115
+5004116 || [CENTRIFY] Delete group from a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004116
+5004117 || [CENTRIFY] Group profile modified in a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004117
+5004118 || [CENTRIFY] Modify group in a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004118
+5004119 || [CENTRIFY] Group added to a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004119
+5004120 || [CENTRIFY] Add group to a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004120
+5004121 || [CENTRIFY] Group deleted from a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004121
+5004122 || [CENTRIFY] Delete group from a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004122
+5004123 || [CENTRIFY] Group profile modified on a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004123
+5004124 || [CENTRIFY] Modify group for a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004124
+5004125 || [CENTRIFY] Computer added || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004125
+5004126 || [CENTRIFY] Add computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004126
+5004127 || [CENTRIFY] Computer deleted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004127
+5004128 || [CENTRIFY] Delete computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004128
+5004129 || [CENTRIFY] Computer modified || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004129
+5004130 || [CENTRIFY] Modify computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004130
+5004131 || [CENTRIFY] PAM access right added || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004131
+5004132 || [CENTRIFY] Add PAM right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004132
+5004133 || [CENTRIFY] PAM right deleted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004133
+5004134 || [CENTRIFY] Delete PAM right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004134
+5004135 || [CENTRIFY] PAM right modified || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004135
+5004136 || [CENTRIFY] Modify PAM right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004136
+5004137 || [CENTRIFY] Desktop right added || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004137
+5004138 || [CENTRIFY] Add Desktop Right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004138
+5004139 || [CENTRIFY] Desktop right deleted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004139
+5004140 || [CENTRIFY] Delete desktop right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004140
+5004141 || [CENTRIFY] desktop right modified || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004141
+5004142 || [CENTRIFY] Modify desktop right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004142
+5004143 || [CENTRIFY] Network right added || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004143
+5004144 || [CENTRIFY] Add network right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004144
+5004145 || [CENTRIFY] network right deleted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004145
+5004146 || [CENTRIFY] Delete network right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004146
+5004147 || [CENTRIFY] Network right modified || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004147
+5004148 || [CENTRIFY] Modify network right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004148
+5004149 || [CENTRIFY] Application right added || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004149
+5004150 || [CENTRIFY] Add application right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004150
+5004151 || [CENTRIFY] Application right deleted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004151
+5004152 || [CENTRIFY] Delete application right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004152
+5004153 || [CENTRIFY] Application right modified || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004153
+5004154 || [CENTRIFY] Modify application right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004154
+5004155 || [CENTRIFY] UNIX command right added || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004155
+5004156 || [CENTRIFY] Add command right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004156
+5004157 || [CENTRIFY] UNIX command right deleted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004157
+5004158 || [CENTRIFY] Delete command right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004158
+5004159 || [CENTRIFY] UNIX command right modified || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004159
+5004160 || [CENTRIFY] Modify command right failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004160
+5004161 || [CENTRIFY] Role added || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004161
+5004162 || [CENTRIFY] Add role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004162
+5004163 || [CENTRIFY] Role deleted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004163
+5004164 || [CENTRIFY] Delete role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004164
+5004165 || [CENTRIFY] Role modified || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004165
+5004166 || [CENTRIFY] Modify role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004166
+5004167 || [CENTRIFY] Add right to role was successful || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004167
+5004168 || [CENTRIFY] Add right to role failed   || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004168
+5004169 || [CENTRIFY] Delete right from role was successful || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004169
+5004170 || [CENTRIFY] Delete right from role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004170
+5004171 || [CENTRIFY] Role assignment added || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004171
+5004172 || [CENTRIFY] Role assignment failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004172
+5004173 || [CENTRIFY] Role assignment removed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004173
+5004174 || [CENTRIFY] Delete role assignment failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004174
+5004175 || [CENTRIFY] Role assignment modified || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004175
+5004176 || [CENTRIFY] Modify role assignment failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004176
+5004177 || [CENTRIFY] Role assignment added to a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004177
+5004178 || [CENTRIFY] Add role assignment to computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004178
+5004179 || [CENTRIFY] Role assignment deleted from a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004179
+5004180 || [CENTRIFY] Delete role assignment from computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004180
+5004181 || [CENTRIFY] Role assignment modified for a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004181
+5004182 || [CENTRIFY] Modify role assignment for a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004182
+5004183 || [CENTRIFY] Role assignment added to a computer role || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004183
+5004184 || [CENTRIFY] Role assignment for a computer role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004184
+5004185 || [CENTRIFY] Role assignment deleted from a computer role || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004185
+5004186 || [CENTRIFY] Delete role assignment from a computer role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004186
+5004187 || [CENTRIFY] Role assignment modified for a computer role || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004187
+5004188 || [CENTRIFY] Modify role assignment in a computer role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004188
+5004189 || [CENTRIFY] Computer role added || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004189
+5004190 || [CENTRIFY] Add computer role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004190
+5004191 || [CENTRIFY] Computer role deleted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004191
+5004192 || [CENTRIFY] Delete computer role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004192
+5004193 || [CENTRIFY] Computer role modified || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004193
+5004194 || [CENTRIFY] Modify computer role failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004194
+5004195 || [CENTRIFY] User added to a group || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004195
+5004196 || [CENTRIFY] Add user to a group failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004196
+5004197 || [CENTRIFY] Password reset || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004197
+5004198 || [CENTRIFY] Reset password failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004198
+5004199 || [CENTRIFY] Local user added to a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004199
+5004200 || [CENTRIFY] Add local user to a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004200
+5004201 || [CENTRIFY] Local user deleted from a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004201
+5004202 || [CENTRIFY] Delete local user from a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004202
+5004203 || [CENTRIFY] Local user profile modified in a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004203
+5004204 || [CENTRIFY] Modify local user in a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004204
+5004205 || [CENTRIFY] Local user added to a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004205
+5004206 || [CENTRIFY] Add local user to a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004206
+5004207 || [CENTRIFY] Local user deleted from computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004207
+5004208 || [CENTRIFY] Delete local user from a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004208
+5004209 || [CENTRIFY] Local user profile modified on a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004209
+5004210 || [CENTRIFY] Modify local user on a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004210
+5004211 || [CENTRIFY] Local group added to a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004211
+5004212 || [CENTRIFY] Add local group to a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004212
+5004213 || [CENTRIFY] Local group deleted from a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004213
+5004214 || [CENTRIFY] Delete local group from a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004214
+5004215 || [CENTRIFY] Local group profile modified in a zone || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004215
+5004216 || [CENTRIFY] Modify local group in a zone failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004216
+5004217 || [CENTRIFY] Local group added to a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004217
+5004218 || [CENTRIFY] Add local group to a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004218
+5004219 || [CENTRIFY] Local group deleted from a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004219
+5004220 || [CENTRIFY] Delete local group from a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004220
+5004221 || [CENTRIFY] Local group profile modified on a computer || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004221
+5004222 || [CENTRIFY] Modify local group for a computer failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004222
+5004223 || [CENTRIFY] Centrify agent (adclient) started    || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004223
+5004224 || [CENTRIFY] Centrify agent (adclient) failed to start || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004224
+5004225 || [CENTRIFY] Centrify agent (adclient) stopped    || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004225
+5004226 || [CENTRIFY] Centrify agent (adclient) failed to stop || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004226
+5004227 || [CENTRIFY] DirectAudit agent (dad) started    || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004227
+5004228 || [CENTRIFY] DirectAudit agent (dad) failed to start || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004228
+5004229 || [CENTRIFY] DirectAudit agent (dad) stopped    || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004229
+5004230 || [CENTRIFY] DirectAudit agent (dad) failed to stop || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004230
+5004231 || [CENTRIFY] Auditing enabled || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004231
+5004232 || [CENTRIFY] Auditing not enabled || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004232
+5004233 || [CENTRIFY] Auditing disabled || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004233
+5004234 || [CENTRIFY] Auditing not disabled || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004234
+5004235 || [CENTRIFY] The user login to the system successfully || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004235
+5004236 || [CENTRIFY] Joined domain || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004236
+5004237 || [CENTRIFY] Join failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004237
+5004238 || [CENTRIFY] Left domain || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004238
+5004239 || [CENTRIFY] Leaving domain failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004239
+5004240 || [CENTRIFY] Query as root was successful || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004240
+5004241 || [CENTRIFY] Query was successful || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004241
+5004242 || [CENTRIFY] Query request failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004242
+5004243 || [CENTRIFY] Password changed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004243
+5004244 || [CENTRIFY] Password change failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004244
+5004245 || [CENTRIFY] Configuration settings (centrifydc.conf) reloaded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004245
+5004246 || [CENTRIFY] Configuration settings (centrifydc.conf) failed to || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004246
+5004247 || [CENTRIFY] Local cache flushed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004247
+5004248 || [CENTRIFY] Cache flush failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004248
+5004249 || [CENTRIFY] Object refreshed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004249
+5004250 || [CENTRIFY] Object refresh failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004250
+5004251 || [CENTRIFY] License modes changed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004251
+5004252 || [CENTRIFY] License modes change failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004252
+5004253 || [CENTRIFY] Trusted path granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004253
+5004254 || [CENTRIFY] Trusted path denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004254
+5004255 || [CENTRIFY] PAM authentication granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004255
+5004256 || [CENTRIFY] PAM authentication denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004256
+5004257 || [CENTRIFY] PAM set credentials granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004257
+5004258 || [CENTRIFY] PAM set credentials denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004258
+5004259 || [CENTRIFY] PAM account management granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004259
+5004260 || [CENTRIFY] PAM account management denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004260
+5004261 || [CENTRIFY] PAM change password granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004261
+5004262 || [CENTRIFY] PAM change password denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004262
+5004263 || [CENTRIFY] PAM open session granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004263
+5004264 || [CENTRIFY] PAM open session denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004264
+5004265 || [CENTRIFY] PAM close session granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004265
+5004266 || [CENTRIFY] PAM close session denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004266
+5004267 || [CENTRIFY] DZ SSH right granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004267
+5004268 || [CENTRIFY] DZ SSH right denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004268
+5004269 || [CENTRIFY] SSHD granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004269
+5004270 || [CENTRIFY] SSHD denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004270
+5004271 || [CENTRIFY] SSHD connection close successfully || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004271
+5004272 || [CENTRIFY] dzdo granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004272
+5004273 || [CENTRIFY] dzdo denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004273
+5004274 || [CENTRIFY] Trouble ticket entered ticket: ticket   || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004274
+5004275 || [CENTRIFY] dzsh command execution granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004275
+5004276 || [CENTRIFY] dzsh command execution denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004276
+5004277 || [CENTRIFY] dzsh role change granted || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004277
+5004278 || [CENTRIFY] dzsh role change denied || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004278
+5004279 || [CENTRIFY] Dzinfo successful || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004279
+5004280 || [CENTRIFY] Dzinfo failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004280
+5004281 || [CENTRIFY] Audited command is executed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004281
+5004282 || [CENTRIFY] Audited command fails to be executed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004282
+5004283 || [CENTRIFY] Adding enabled local user to local passwd || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004283
+5004284 || [CENTRIFY] Adding disabled local user to local passwd || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004284
+5004285 || [CENTRIFY] Removing local user from local passwd file || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004285
+5004286 || [CENTRIFY] Local user is marked as disabled || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004286
+5004287 || [CENTRIFY] Local user is marked as enabled || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004287
+5004288 || [CENTRIFY] Local passwd file update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004288
+5004289 || [CENTRIFY] Invoking notification cli succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004289
+5004290 || [CENTRIFY] Invoking notification cli failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004290
+5004291 || [CENTRIFY] Adding enabled local group to local group || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004291
+5004292 || [CENTRIFY] Removing local group from local group file || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004292
+5004293 || [CENTRIFY] Local group file update failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004293
+5004294 || [CENTRIFY] Managing local accounts succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004294
+5004295 || [CENTRIFY] Managing local accounts failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004295
+5004296 || [CENTRIFY] MFA challenge succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004296
+5004297 || [CENTRIFY] MFA challenge failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004297
+5004298 || [CENTRIFY] MFA challenge succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004298
+5004299 || [CENTRIFY] MFA challenge failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5004299
+5004300 || [CENTRIFY] SSHD Denied [Brute Force] [10/1]
+5004301 || [CENTRIFY] Failed Publickey [Brute Force] [10/1]
+5004302 || [CENTRIFY] Invalid or Invalidated user [Brute Force] [10/1]
+5004303 || [CENTRIFY] Gssapi/Kerberos Authentication Failure [Brute Force] [10/1]
+5004304 || [CENTRIFY] Successful dzdo to user ROOT executed
