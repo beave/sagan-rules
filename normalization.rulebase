@@ -347,6 +347,7 @@ rule=: id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr
  
 rule=: Successful su for %-:word% by %username:word%
 rule=: pam_unix(sudo:auth): authentication failure; logname= uid=%uid:number% euid=%-:number% %-:word% ruser= rhost=  user=%username:word%
+rule=: %username:char-to:\x3a%: TTY=%-:rest%
 
 #*****************************************************************************
 # VMWare (ESXi, etc)
