@@ -35,7 +35,7 @@
 
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Failed Login"; content: "FAILED_LOGIN"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002786; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: unsuccessful-admin; sid:5002786; rev:3;)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Brute force login attempt [5/5]"; content: "FAILED_LOGIN"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002945; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; xbits: set,brute_force,21600; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: unsuccessful-admin; sid:5002945; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Brute force login attempt [5/5]"; content: "FAILED_LOGIN"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002945; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; xbits: set, brute_force ,track ip_src, expire 21600; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: unsuccessful-admin; sid:5002945; rev:6;)
 
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Spyware Filter Change"; content: "spy_exempted"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002787; classtype: system-event; sid:5002787; rev:3;)
 

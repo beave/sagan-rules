@@ -52,7 +52,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] iptables command acces
 
 # CVS-2014-6271 (09/24/2014 - Champ Clark III)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Remote execution attempt via CVE-2014-6271"; content:"|28 29| { |3a 3b|}"; content: "HISTORY"; program: bash|-bash|sh|-sh; classtype: exploit-attempt; xbits: set, exploit_attempt, 86400; reference: url,wiki.quadrantsec.com/bin/view/Main/5002179; reference: url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271; sid:5002179; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Remote execution attempt via CVE-2014-6271"; content:"|28 29| { |3a 3b|}"; content: "HISTORY"; program: bash|-bash|sh|-sh; classtype: exploit-attempt; xbits: set, exploit_attempt,track ip_src, expire 86400; reference: url,wiki.quadrantsec.com/bin/view/Main/5002179; reference: url,web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271; sid:5002179; rev:4;)
 
 # Submitted by Aleksey Chudov (07/14/2015). 
 
@@ -71,9 +71,8 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Perl subproces executi
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Ruby socket execution"; content:"HISTORY"; content:"ruby"; content:"ocket"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002313; rev:2;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Ruby subproces execution"; content:"HISTORY"; content:"ruby"; content:"exec"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002314; rev:2;)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] mknod execution [XBIT SET]"; content:"HISTORY"; content:"mknod"; xbits:set,mknod_executed,60; xbits:nounified2; xbits:noeve; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002315; rev:5;)
-
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] telnet reverse shell execution"; content:"HISTORY"; content:"telnet"; xbits:isset,by_src,mknod_executed; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002316; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] mknod execution [XBIT SET]"; content:"HISTORY"; content:"mknod"; xbits: set,mknod ,track ip_src, expire 60; xbits:nounified2; xbits:noeve; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002315; rev:7;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] telnet reverse shell execution"; content:"HISTORY"; content:"telnet"; xbits: isset,mknod,track ip_src; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002316; rev:4;)
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /dev/tcp access"; content:"HISTORY"; content:"/dev/tcp"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002317; rev:2;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /dev/udp access"; content:"HISTORY"; content:"/dev/udp"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002318; rev:2;)

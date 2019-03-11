@@ -107,7 +107,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows audit
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS] A directory service object was moved"; content: " 5139|3a| "; classtype: configuration-change; program: *Security*; sid:5002275; rev:3;)
 
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdown [XBIT SET]"; content: " 1074|3a| "; program: System|USER32; xbits: set, reboot.windows,900; xbits:nounified2; xbits:noeve; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002014; sid: 5002014; rev:23;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdown [XBIT SET]"; content: " 1074|3a| "; program: System|USER32; xbits: set,reboot.windows,track ip_src, expire 1200; xbits:nounified2; xbits:noeve; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002014; sid: 5002014; rev:24;)
 
 # Added by Brian Echeverry (09/22/2015)
 
@@ -125,7 +125,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation 
 
 # Added by Champ Clark III (08/19/2016) 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Suspicious event logging service shut down."; content: " 1100|3a| "; xbits: isnotset,by_src,reboot.windows; classtype: suspicious-traffic; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002941; sid:5002941; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Suspicious event logging service shut down."; content: " 1100|3a| "; xbits: isnotset,reboot.windows,track ip_src; classtype: suspicious-traffic; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002941; sid:5002941; rev:5;)
 
 # Added by Champ Clark III (09/01/2016)
 # These target strange errors seen by evtsys.  

@@ -25,5 +25,5 @@
 #
 #*************************************************************
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[IPOP3D] Excessive login failures"; content:"Login excessive login failures"; default_proto: tcp; default_dst_port: $POP3_PORT; classtype: misc-attack; program: ipop3d|ipop3d-ssl; threshold:type limit, track by_src, count 5, seconds 300; xbits: set,brute_force,21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5000032; sid:5000032; rev:6;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[IPOP3D] Excessive login failures"; content:"Login excessive login failures"; default_proto: tcp; default_dst_port: $POP3_PORT; classtype: misc-attack; program: ipop3d|ipop3d-ssl; threshold:type limit, track by_src, count 5, seconds 300; xbits: set,brute_force,track ip_src, expire 21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5000032; sid:5000032; rev:7;)
 
