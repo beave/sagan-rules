@@ -3805,6 +3805,7 @@
 5003973 || [OPENSSH-CORRELATED] Authentication success after exploit attempt || url,wiki.quadrantsec.com/bin/view/Main/5003973
 5003974 || [OPENSSH-CORRELATED] Authentication success after brute force activity || url,wiki.quadrantsec.com/bin/view/main/5003974
 5003975 || [OPENSSH-CORRELATED] Authentication success after recon activity || url,wiki.quadrantsec.com/bin/view/main/5003975
+5003976 || [PALO-ALTO] SMB DoublePulsar Ping Detection || url,threatvault.paloaltonetworks.com
 5003977 || [CENTRIFY] PAM authentication denied [Brute Force] [10/1] || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003977
 5003979 || [CENTRIFY] PAM open session denied [Brute Force] [10/1] || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003979
 5003991 || [CENTRIFY] Create new installation succeeded   || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003991
