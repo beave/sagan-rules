@@ -194,7 +194,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Windows DC Lo
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account created"; meta_content: " %sagan%|3a| ",4720,624; meta_depth: 8; program: *Security*; classtype: successful-user; xbits: set,create_enabled,track ip_src, expire 30; reference: url,wiki.quadrantsec.com/bin/view/Main/5001880; sid: 5001880; rev:11;)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account re-enabled"; meta_content: " %sagan%|3a| ",4722,626; meta_depth: 8; content:! "$" ;program: *Security*; xbits: isset,create_enabled,track ip_src; xbit_upause: 5; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001881; sid: 5001881; rev:9;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account re-enabled"; meta_content: " %sagan%|3a| ",4722,626; meta_depth: 8; content:! "$" ;program: *Security*; xbits: isset,create_enabled,track ip_src; xbits_pause: 5; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001881; sid: 5001881; rev:10;)
 
 # User enabled
 
