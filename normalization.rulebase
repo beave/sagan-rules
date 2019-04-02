@@ -460,3 +460,6 @@ rule=: iSecurity/Audit: %-:word% %-:word% *AUTFAIL An incorrect password was ent
 rule=: iSecurity/Audit: %-:word% %-:word% *AUTFAIL User %username:word% %-:rest%
 rule=: iSecurity/Audit: %-:word% %-:word% *SECURITY User %username:word% %-:rest%
 
+
+rule=: Did not receive identification string from %src-ip:ipv4% port %src-port:number%
+rule=: Did not receive identification string from %src-ip:ipv6% port %src-port:number%  
