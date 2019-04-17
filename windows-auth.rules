@@ -245,7 +245,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Possible Wind
 
 # Steve Rawls (2017/04/13) - Broken domain trust (generic). 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Possible Windows Broken Domain Trust [25/1]"; pcre: "/failed to authorize|wrong password given|repeated login failures|authentication failed|authentication failures|access denied|access not allowed|failed to authenticate/i"; content: "|24| Session ID|3a|"; content:!"access denied by ACL"; content:!"Kerberos"; parse_src_ip: 1; parse_port; parse_proto; classtype: unsuccessful-user; after: track by_src, count 25, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; xbits: set,brute_force,track ip_src, expire 21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5003107; sid:5003107; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Possible Windows Broken Domain Trust [25/1]"; pcre: "/failed to authorize|wrong password given|repeated login failures|authentication failed|authentication failures|access denied|access not allowed|failed to authenticate/i"; content: "|24| Session ID|3a|"; content:!"access denied by ACL"; content:!"Kerberos"; parse_src_ip: 1; parse_port; parse_proto; classtype: unsuccessful-user; after: track by_src, count 25, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; reference: url,wiki.quadrantsec.com/bin/view/Main/5003107; sid:5003107; rev:4;)
 
 
 # Steve Rawls (2017/08/31)
