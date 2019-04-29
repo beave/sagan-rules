@@ -90,5 +90,5 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PALO-ALTO] Suspicious DNS R
 
 ####### SMB DoublePulsar Ping Detect
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PALO-ALTO] SMB DoublePulsar Ping Detection"; content:"THREAT,vulnerability"; content:"SMB DoublePulsar Ping Detection"; default_proto: tcp; parse_src_ip: 1; parse_dst_ip: 2; threshold: type threshold, track by_src, count 1, seconds 86400; classtype: bad-unknown; reference: url,threatvault.paloaltonetworks.com; sid:5003976; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PALO-ALTO] SMB DoublePulsar Ping Detection"; content:"THREAT,vulnerability"; content:"SMB DoublePulsar Ping Detection"; default_proto: tcp; parse_src_ip: 1; parse_dst_ip: 2; threshold: type threshold, track by_src, count 1, seconds 86400; normalize; classtype: bad-unknown; reference: url,threatvault.paloaltonetworks.com; sid:5003976; rev:2;)
 
