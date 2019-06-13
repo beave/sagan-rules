@@ -234,7 +234,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User account d
 
 # Steve Rawls (2016/12/22) - detect "administrator" logins.  Disabled by default
 
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Successful Administrator Logon Detected"; meta_content: " %sagan%|3a| ",4724,540; meta_depth: 8; classtype: successful-user; program: *Security*; content: "Account Name|58| Administrator"; parse_src_ip: 1; parse_port; reference: url,wiki.quadrantsec.com/bin/view/Main/5003039; sid:5003039; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Successful Administrator Logon Detected"; meta_content: " %sagan%|3a| ",4724,548; meta_depth: 8; classtype: successful-user; program: *Security*; content: "Account Name|3a| Administrator"; nocase; parse_src_ip: 1; parse_port; reference: url,wiki.quadrantsec.com/bin/view/Main/5003039; sid:5003039; rev:4;)
 
 # Steve Rawls (2017/03/27) - Split off from sid 5001763 which detects from _user_ brute force_.  5003101 & 5003102 detect "Broken Domain Trust". 
 
@@ -298,4 +298,11 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Suspicious WM
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-AUTH] User added to Local Administrators group";  meta_content: " %sagan%|3a| ",636,4732; meta_depth: 8; content: "Group|3a| Security ID|3a| S-1-5-32-544 "; program: *Security*; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5003927; sid:5003927; rev:1;) 
 
+# Champ Clark 2019/06/12
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Repeated login attempt to a suspicious username [5/1]"; meta_content: " %sagan%|3a| ",4625,4776; meta_depth: 8; meta_content: "Account|3a| %sagan% ",guest,administrator,sql,demo,db2admin,pos,accounting,letmein,mysql,oracle,test,testing,support,sales,ansible,ec2-user,azureuser; meta_nocase; xbits: set,brute_force,track ip_src, expire 21600; classtype: unsuccessful-user; program: *Security*; parse_src_ip: 1; after: track by_src, count 5, seconds 3600; threshold: type limit, track by_src, count 1, seconds 86400; reference: url,wiki.quadrantsec.com/bin/view/Main/5003980; sid:5003980; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-AUTH] Login via RDP from a suspicious user"; meta_content: " %sagan%|3a| ",4724,528; meta_depth: 8; content: "Logon Type|3a| 10 "; meta_content: "Account Name|3a| %sagan%",guest,administrator,sql,demo,db2admin,pos,accounting,letmein,mysql,oracle,test,testing,support,sales,ansible,ec2-user,azureuser; meta_nocase; program: *Security*; parse_src_ip: 1; default_proto: tcp; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003981; sid:5003981; rev:1;)
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-AUTH] Suspicious Account Lockout"; meta_content: " %sagan%|3a| ",4740,644; meta_depth: 8; meta_content: "Account Name|3a| %sagan% ",guest,administrator,sql,demo,db2admin,pos,accounting,letmein,mysql,oracle,test,testing,support,sales,ansible,ec2-user,azureuser; meta_nocase; classtype: unsuccessful-user; xbits: set,brute_force,track ip_src, expire 21600; program: *Security*; parse_src_ip: 1; threshold: type limit, track by_src, count 1, seconds 86400; reference: url,wiki.quadrantsec.com/bin/view/Main/5003982; sid:5003982; rev:1;)
 

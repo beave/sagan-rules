@@ -14,7 +14,7 @@
 5000013 || [BASH] suidperl access || url,wiki.quadrantsec.com/bin/view/Main/5000013
 5000014 || [BASH] histfile=/dev/null || url,wiki.quadrantsec.com/bin/view/Main/5000014
 5000015 || [OPENSSH] PAM Authentication failure - Brute force [10/1] || url,wiki.quadrantsec.com/bin/view/Main/5000015
-5000016 || [OPENSSH] Authentication failure - Brute force [10/1] || url,wiki.quadrantsec.com/bin/view/Main/5000016
+5000016 || [OPENSSH] Authentication failure IPv4 - Brute force [10/1] || url,wiki.quadrantsec.com/bin/view/Main/5000016
 5000017 || [OPENSSH] Authentication failure for root - Brute force [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5000017
 5000018 || [OPENSSH] Possible break-in attempt || url,wiki.quadrantsec.com/bin/view/Main/5000018
 5000020 || [OPENSSH] Not executable shell - login attempt || url,wiki.quadrantsec.com/bin/view/Main/5000020
@@ -3808,6 +3808,10 @@
 5003976 || [PALO-ALTO] SMB DoublePulsar Ping Detection || url,threatvault.paloaltonetworks.com
 5003977 || [CENTRIFY] PAM authentication denied [Brute Force] [10/1] || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003977
 5003979 || [CENTRIFY] PAM open session denied [Brute Force] [10/1] || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003979
+5003980 || [WINDOWS-AUTH] Repeated login attempt to a suspicious username [5/1] || url,wiki.quadrantsec.com/bin/view/Main/5003980
+5003981 || [WINDOWS-AUTH] Login via RDP from a suspicious user || url,wiki.quadrantsec.com/bin/view/Main/5003981
+5003982 || [WINDOWS-AUTH] Suspicious Account Lockout || url,wiki.quadrantsec.com/bin/view/Main/5003982
+5003983 || [SONICWALL] Gateway Anti-Virus Alert || url,software.sonicwall.com/Manual/232-001655-00_Rev_A_SonicOS_Enhanced_5.1_Log_Event_Reference_Guide.pdf
 5003991 || [CENTRIFY] Create new installation succeeded   || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003991
 5003992 || [CENTRIFY] Create new installation failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003992
 5003993 || [CENTRIFY] Installation update succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003993

@@ -1,6 +1,6 @@
-#version=2
-# Sagan arp-normalize.rulebase
-# Copyright (c) 2009-2017, Quadrant Information Security <www.quadrantsec.com>
+# version=2
+# Sagan normalize.rulebase
+# Copyright (c) 2009-2019, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
 # This file is used in conjunction with liblognorm.
@@ -238,6 +238,17 @@ rule=: Failed keyboard-interactive/pam for invalid user %username:word% from %sr
 rule=: input_userauth_request: invalid user %username:word% [preauth]
 rule=: Invalid user %username:word% from %src-ip:ipv4%
 rule=: Disconnecting: Too many authentication failures for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2 [preauth]
+rule=: Did not receive identification string from %src-ip:ipv6% port %src-port:number%
+rule=: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=%src-host:word%
+rule=: Did not receive identification string from %src-p:ipv4%
+rule=: Did not receive identification string from %src-ip:ipv6%
+rule=: Bad protocol version identification '%-:char-to:\x27%' from %src-ip:ipv4% port %src-port:number%
+rule=: Bad protocol version identification '%-:char-to:\x27%' from %src-ip:ipv6% port %src-port:number%
+rule=: Bad protocol version identification '' from %src-ip:ipv4% port %src-port:number%
+rule=: Bad protocol version identification '' from %src-ip:ipv6% port %src-port:number%
+rule=: password check failed for user (%src-ip:char-to:\x29%)
+rule=: User %username:word% from %src-ip:ipv4% not allowed %-:rest%
+rule=: User %username:word% from %src-ip:ipv6% not allowed %-:rest%
 
 #*****************************************************************************
 # Palo-Alto
@@ -348,7 +359,17 @@ rule=: id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr
 rule=: Successful su for %-:word% by %username:word%
 rule=: pam_unix(sudo:auth): authentication failure; logname= uid=%uid:number% euid=%-:number% %-:word% ruser= rhost=  user=%username:word%
 rule=: %username:char-to:\x3a%: TTY=%-:rest%
-rule=: %username:char-to:\x3a%: command not allowed ; TTY=%-:rest%
+rule=: %username:char-to:\x3a%: command not allowed %-:rest%
+rule=: %username:char-to:\x3a%: user NOT in sudoers %-:rest%
+rule=: %username:char-to:\x3a%: ignoring time stamp from the future %-:rest%
+rule=: %username:char-to:\x3a%: %-:number% incorrect password attempt ; %-:rest%
+rule=: %username:char-to:\x3a%: %-:number% incorrect password attempts %-:rest% 
+
+#*****************************************************************************
+# Rsync
+#*****************************************************************************
+
+rule=: auth failed on module %-:word% from %-:word% (%src-ip:char-to:\x29%): %-:rest%
 
 #*****************************************************************************
 # VMWare (ESXi, etc)
@@ -412,8 +433,6 @@ rule=: %-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Cal
 
 rule=: %-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Called Station Identifier:%Called Station Identifier: %nasMAC:char-to  :\ x3a%:%-:string-to:Calling Station Identifier:%Calling Station Identifier: %userMAC:char-to  :\ x20% %-:string-to:NAS IPv4 Address:%NAS IPv4 Address: %nasIP:ipv4% %-:string-to:NAS Identifier:%NAS Identifier: %nasHost:word% %-:string-to:Result:%Result: %reasonCode:word% %-:rest%
 
-# -- HERE
-
 # Zscaler rule update 
 
 rule=: act=Blocked%-:string-to:dst=%dst=%dst-ip:ipv4% src=%src-ip:ipv4%%-:string-to:suser=%suser=%username:char-to:\x40%%-:rest%
@@ -455,12 +474,53 @@ rule=: %-:string-to:User%User %username:word% %-:char-to:\\%\ %src-ip:char-to:\x
 
 rule=: %-:string-to:Account Name:%Account Name: %-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Network Address:%Network Address: %src-ip:ipv4% %-:rest%
 
+#*****************************************************************************
 # AS/400 rules (as400.rules)
+#*****************************************************************************
 
 rule=: iSecurity/Audit: %-:word% %-:word% *AUTFAIL An incorrect password was entered. User %username:word% %-:rest%
 rule=: iSecurity/Audit: %-:word% %-:word% *AUTFAIL User %username:word% %-:rest%
 rule=: iSecurity/Audit: %-:word% %-:word% *SECURITY User %username:word% %-:rest%
 
+#*****************************************************************************
+# TACACS
+#*****************************************************************************
 
-rule=: Did not receive identification string from %src-ip:ipv4% port %src-port:number%
-rule=: Did not receive identification string from %src-ip:ipv6% port %src-port:number%  
+rule=: TACACS+ Client: Authentication error. Server is %DSTIP:ipv4%, user name is '%username:char-to:\x27%', remote address is %src-ip:ipv4%. %-:rest%
+
+
+#*****************************************************************************
+# Windows
+#*****************************************************************************
+
+# 18456:
+
+rule=: %eventid:word% Login failed for user '%username:char-to:\x27%'. Reason: Could not find a login matching the name provided. [CLIENT: %src-ip:ipv4%]
+
+# 4771: - IPv4 in IPv6
+
+rule=: %eventid:word% Kerberos pre-authentication failed. Account Information: Security ID: %ID:word% Account Name: %username:word% Service Information: Service Name: %-:word% Network Information: Client Address: ::ffff:%src-ip:ipv4% Client Port: %src-port:number% %-:rest%
+
+# 4771: -IPv4
+
+rule=: %eventid:word% Kerberos pre-authentication failed. Account Information: Security ID: %ID:word% Account Name: %username:word% Service Information: Service Name: %-:word% Network Information: Client Address: %src-ip:ipv4% Client Port: %src-port:number% %-:rest%
+
+# 4771: - IPv6
+
+rule=: %eventid:word% Kerberos pre-authentication failed. Account Information: Security ID: %ID:word% Account Name: %username:word% Service Information: Service Name: %-:word% Network Information: Client Address: %src-ip:ipv6% Client Port: %src-port:number% %-:rest%
+
+# 4776:
+
+rule=: %eventid:word% The computer attempted to validate the credentials for an account. Authentication Package: %-:word% Logon Account: %username:word% Source Workstation: %device:word% %-:rest%
+
+rule=: %-:word% A user account was unlocked. Subject: Security ID: %-:word% Account Name: %username:word% %-:rest%
+
+# PAM 
+
+rule=: PAM %-:number% more authentication failures; logname= %-:word% %-:word% tty=ssh ruser= rhost=%src-ip:ipv4%  user=%username:word%
+rule=: PAM %-:number% more authentication failures; logname= %-:word% %-:word% tty=ssh ruser= rhost=%src-ip:ipv6%  user=%username:word%
+rule=: PAM %-:number% more authentication failure; logname= %-:word% %-:word% tty=ssh ruser= rhost=%src-ip:ipv4%  user=%username:word%
+rule=: PAM %-:number% more authentication failure; logname= %-:word% %-:word% tty=ssh ruser= rhost=%src-ip:ipv6%  user=%username:word%
+
+rule=: error: PAM: Authentication failure for %username:word% from %src-ip:ipv6%
+
