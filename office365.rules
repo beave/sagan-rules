@@ -68,3 +68,5 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_ANUBIS_DET
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_MANAGEMENT_DISCOVERY_BREACHED_APP"; content: "ALERT_MANAGEMENT_DISCOVERY_BREACHED_APP"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003930; sid:5003930; rev:1;)
 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_ANUBIS_DETECTION_INBOX_HIDING"; content: "ALERT_ANUBIS_DETECTION_INBOX_HIDING"; classtype:suspicious-command; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003984; sid:5003984; rev:1;)
+
