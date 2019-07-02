@@ -40,6 +40,6 @@
 
 # 10.5.1.1|daemon|notice|notice|1d|2014-08-20|12:03:23|Security-Auditing| 4689: A process has exited. Subject: Security ID: S-1-5-21-148272361-2449339356-1462517947-1000 Account Name: champ Account Domain: Champ-BOX Logon ID: 0x1a285 Process Information: Process ID: 0x120 Process Name: C:\Program Files\EMET 4.1\EMET_Agent.exe Exit Status: 0x40010004
 
-#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-EMET] EMET process stopped, but not due to reboot"; meta_content: " %sagan%|3a| ",4689,593; meta_depth: 8; ; content: "EMET_Agent.exe"; nocase; xbits: isset,reboot.windows,track ip_src; program: *Security*; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002102; sid:5002102; rev:6;)
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-EMET] EMET process stopped, but not due to reboot"; meta_content: " %sagan%|3a| ",4689,593; meta_depth: 8; ; content: "EMET_Agent.exe"; nocase; flexbits: isset,by_src,reboot.windows; program: *Security*; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002102; sid:5002102; rev:7;)
 
 
