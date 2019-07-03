@@ -1,4 +1,13 @@
-2018/11/08 -	Sagan rule release.
+2019/07/03 - Sagan rule release.
+
+	* New Centrify (centrify.rules)
+	  https://github.com/beave/sagan-rules/commit/251640141966d1810885c9c97f61c9f53fa89ba8
+
+	* A lot of improvements on exsisting rules.  
+
+	* A lot of single rule additions to exsisting rule sets. 
+
+2018/11/08 - Sagan rule release.
 
 	* New watchguard.rules! 
 	  https://github.com/beave/sagan-rules/commit/590fb11851d7138cf2fcbff7ec1d815090ad625b
