@@ -30,7 +30,7 @@
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Unable to read eventlog"; content: "EvtNext failed with error 15007|3a| "; flexbits: isnotset,by_src,nxlog_problem;after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; flexbits: set,nxlog_problem,86400; classtype: program-error; program: nxlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5003108; sid:5003108; rev:6;)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Service stopping"; content: "stopping nxlog service"; flexbits: isnotset,by_src,reboot.windows; flexbits: isnotset,by_src,nxlog_problem; classtype: program-error; program: nxlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5003109; sid:5003109; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Service stopping"; content: "stopping nxlog service"; flexbits: isnotset,by_src,reboot.windows; flexbits: isnotset,by_src,nxlog_problem; flexbit_pause: 60; classtype: program-error; program: nxlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5003109; sid:5003109; rev:6;)
 
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Termination Request"; content: "nxlog received a termination request signal"; flexbits: isnotset,by_src,reboot.windows; flexbits: isnotset,by_src,nxlog_problem; classtype: program-error; program: nxlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5003110; sid:5003110; rev:5;)
 
