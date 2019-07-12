@@ -125,7 +125,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation 
 
 # Added by Champ Clark III (08/19/2016) 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Suspicious event logging service shut down."; content: " 1100|3a| "; flexbits: isnotset,by_src,reboot.windows; classtype: suspicious-traffic; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002941; sid:5002941; rev:6;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Suspicious event logging service shutdown."; content: " 1100|3a| "; flexbits: isnotset,by_src,reboot.windows; flexbits_pause: 60; classtype: suspicious-traffic; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002941; sid:5002941; rev:7;)
 
 # Added by Champ Clark III (09/01/2016)
 # These target strange errors seen by evtsys.  
