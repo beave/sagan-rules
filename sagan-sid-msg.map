@@ -2780,7 +2780,7 @@
 5002938 || [CARBONBLACK] Computer failed to receive Notifier Logo
 5002939 || [CARBONBLACK] Agent had to restore its primary database cache
 5002940 || [BLUEDOT] Suspicious file hash detected || url,wiki.quadrantsec.com/bin/view/Main/5002940
-5002941 || [WINDOWS-MISC] Suspicious event logging service shut down. || url,wiki.quadrantsec.com/bin/view/Main/5002941
+5002941 || [WINDOWS-MISC] Suspicious event logging service shutdown. || url,wiki.quadrantsec.com/bin/view/Main/5002941
 5002942 || [ASTERISK] Brute force login session failed [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002942
 5002943 || [ASTERISK] Brute force login session failed [invalid user] [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002943
 5002944 || [ASTERISK] Brute force login session failed [invalid extension] [5/5] || url,wiki.quadrantsec.com/bin/view/Main/5002944
@@ -3814,6 +3814,7 @@
 5003983 || [SONICWALL] Gateway Anti-Virus Alert || url,software.sonicwall.com/Manual/232-001655-00_Rev_A_SonicOS_Enhanced_5.1_Log_Event_Reference_Guide.pdf
 5003984 || [OFFICE365] ALERT_ANUBIS_DETECTION_INBOX_HIDING || url,wiki.quadrantsec.com/bin/view/Main/5003984 || url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts
 5003985 || [NXLOG] Problem nxlog system has recovered || url,wiki.quadrantsec.com/bin/view/Main/5003985
+5003986 || [OPENSSH] Bad protocol version from UNKNOWN IP - network scan or possible attack [0/3] || url,wiki.quadrantsec.com/bin/view/Main/5003986
 5003991 || [CENTRIFY] Create new installation succeeded   || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003991
 5003992 || [CENTRIFY] Create new installation failed || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003992
 5003993 || [CENTRIFY] Installation update succeeded || url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html || url,wiki.quadrantsec.com/bin/view/Main/5003993
