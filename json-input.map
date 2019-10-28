@@ -30,6 +30,10 @@
 
 {"software":"syslog-ng","syslog-source-ip":"SOURCEIP","facility":"FACILITY","level":"PRIORITY","priority":"PRIORITY","time":"DATE","date":"DATE","program":"PROGRAM","message":"MESSAGE"}
 
+{"software":"rsyslog","syslog-source-ip":"fromhost-ip","facility":"syslogfacility","level":"syslogseverity","priority":"pri","tags":"syslogtag","time":"timereported","date":"timereported","program":"programname","message":"msg"}
+
+{"software":"rsyslog-alt","syslog-source-ip":"fromhost-ip","facility":"syslogfacility-text","level":"syslogseverity-text","priority":"pri","tags":"syslogtag","time":"time","date":"date","program":"programname","message":"msg"}
+
 {"software":"nxlog","syslog-source-ip":"MessageSourceAddress","facility":"SyslogFacility","level":"SyslogSeverity","priority":"Severity","time":"EventTime","date":"EventTime","program":"SourceName","message":"Message"}
 
 
