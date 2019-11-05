@@ -31,7 +31,7 @@
 prefix=
 
 #*****************************************************************************
-# arpalert 
+# arpalert
 #*****************************************************************************
 
 # arpalert
@@ -48,7 +48,7 @@ rule=: seq=%-:word%, mac=%-:word%, ip=%src-ip:ipv4%, reference=%dst-ip:ipv4%, %-
 rule=: files: %-:word% %-:word% %src-ip:ipv4% %dst-ip:ipv4% %-:word% %-:word% %-:number% %-:word% %mime-type:word% %-:word% %-:word% %-:word% %-:word% %-:number% %-:number% %-:number% %-:number% %-:word% %-:word% %filehash-md5:word% %filehash-sha1:word% %filehash-sha256:word% %-:rest%
 
 #*****************************************************************************
-# Cisco 
+# Cisco
 #*****************************************************************************
 
 #  1w3d: %SNMP-3-AUTHFAIL: Authentication failure for SNMP req from host 192.168.0.1
@@ -69,11 +69,11 @@ rule=: Access denied URL %url:word% SRC %src-ip:ipv4% DEST %dst-ip:ipv4% %-:rest
 rule=: AAA user authentication Successful : server =  %ip-src:ipv4% : user = %username:word%
 rule=: AAA user authentication Rejected : reason = AAA failure : server = %src-ip:ipv4% : user = %username:word%
 
-# User authentication failed: Uname: timothy
+# User authentication failed: Uname: timothy 
 
-rule=: User authentication failed: Uname: %username:word% 
+rule=: User authentication failed: Uname: %username:word%\x20
 
-# Space at the end of this line! 
+# Space at the end of this line!
 # %ASA-6-315011: SSH session from 192.168.0.1  on interface Outside2 for user "test" disconnected by SSH server, reason: "Internal error" (0x00)
 #                SSH session from 10.20.10.200 on interface Outside2 for user "root" disconnected by SSH server, reason: "Internal error" (0x00)
 
@@ -104,7 +104,7 @@ rule=: Deny inbound UDP from %src-ip:ipv4%/%src-port:number% to %dst-ip:ipv4%/%d
 #
 rule=: Denied ICMP type=%-:number%, code=%-:number% from %src-ip:ipv4% %-:rest%
 
-# These cover a lot of WebVPN, etc rules. 
+# These cover a lot of WebVPN, etc rules.
 #
 # Group <GroupPolicy1> User <Bob> IP <10.10.10.10> WebVPN session terminated: User Requested.
 # Group <GroupPolicy1> User <Bob> IP <10.10.10.10> WebVPN session terminated: Idle Timeout.
@@ -151,7 +151,7 @@ rule =: TCP access denied by ACL from %src-ip:ipv4%/%src-port:number% to %-:char
 
 rule=: Teardown %proto:word% connection %-:number% for outside:%src-ip:ipv4%/%src-port:number%%-:word% to inside:%dst-ip:ipv4%/%dst-port:number% %-:rest%
 
-# Cisco ACS normalization 
+# Cisco ACS normalization
 
 rule=: %-:word% %-:number% %-:number% %-:word% %-:word% %-:word% %-:word% %-:word% NOTICE Failed-Attempt: Authentication failed, ACSVersion=%-:word% ConfigVersionId=%-:word% Device IP Address=%src-ip:char-to:\x2c%, Device Port=%src-port:char-to:\x2c%, UserName=%username:char-to:\x2c%, Protocol=%-:word% RequestLatency=%-:word% NetworkDeviceName=%-:word% Type=Authentication, Action=Login, Privilege-Level=%-:word% Authen-Type=%-:word% Service=Login, User=%-:word% Port=%-:word% Remote-Address=%dst-ip:char-to:\x2c%, %-:rest%
 
@@ -168,7 +168,7 @@ rule=: error (unexpected RCODE %-:word% resolving '%-:char-to:\x27%': %src-ip:ip
 # Fortinet/Fortigate
 #*****************************************************************************
 
-rule=: time=%-:word% devname=%-:word% devid=%-:word% logid=%-:word% type=%-:word% subtype=%-:word% level=%-:word% vd=%-:word% srcip=%src-ip:ipv4% srcport=%src-port:number% srcintf=%-:word% dstip=%dst-ip:ipv4% dstport=%dst-port:number% dstintf=%-:word% %-:rest% 
+rule=: time=%-:word% devname=%-:word% devid=%-:word% logid=%-:word% type=%-:word% subtype=%-:word% level=%-:word% vd=%-:word% srcip=%src-ip:ipv4% srcport=%src-port:number% srcintf=%-:word% dstip=%dst-ip:ipv4% dstport=%dst-port:number% dstintf=%-:word% %-:rest%
 
 #*****************************************************************************
 # IMAP
@@ -189,18 +189,18 @@ rule=: act=Block dst=%dst-ip:ipv4% dpt=%src-port:number% duser=%username:word% s
 # Linux kernel
 #*****************************************************************************
 
-# Rulebase notes: 
+# Rulebase notes:
 #
-# iptables TCP : iptables flags "--state NEW,INVALID -j LOG"  (NOTE: no --prefix!)
+# iptables TCP : iptables flags "--state NEW,INVALID -j LOG"  (NOTE: no --prefix!) (trailing space!)
 #
 #
-# [6251572.861709] IN=fire OUT=fire PHYSIN=eth0 PHYSOUT=eth1 SRC=X.X.X.X DST=X.X.X.X LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=9133 DF PROTO=TCP SPT=50661 DPT=113 WINDOW=5840 RES=0x00 SYN URGP=0
+# [6251572.861709] IN=fire OUT=fire PHYSIN=eth0 PHYSOUT=eth1 SRC=X.X.X.X DST=X.X.X.X LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=9133 DF PROTO=TCP SPT=50661 DPT=113 WINDOW=5840 RES=0x00 SYN URGP=0 
 
 rule=: %-:word% IN=%-:word% OUT=%-:word% PHYSIN=%-:word% PHYSOUT=%-:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%-:number% TOS=%-:word% PREC=%-:word% TTL=%-:number% ID=%-:number% %-:word% PROTO=%proto:word% SPT=%src-port:number% DPT=%dst-port:number% %-:rest%
 
-# iptables UDP : iptables flags "--state NEW,INVALID -j LOG"  (NOTE: no --prefix!)
+# iptables UDP : iptables flags "--state NEW,INVALID -j LOG"  (NOTE: no --prefix!) (trailing space!)
 #
-# [6252395.294134] IN=fire OUT=fire PHYSIN=eth1 PHYSOUT=eth0 SRC=X.X.X.X DST=X.X.X.X LEN=78 TOS=0x00 PREC=0x00 TTL=50 ID=8658 DF PROTO=UDP SPT=137 DPT=137 LEN=52
+# [6252395.294134] IN=fire OUT=fire PHYSIN=eth1 PHYSOUT=eth0 SRC=X.X.X.X DST=X.X.X.X LEN=78 TOS=0x00 PREC=0x00 TTL=50 ID=8658 DF PROTO=UDP SPT=137 DPT=137 LEN=52 
 # [6255730.106539] IN=fire OUT=fire PHYSIN=eth0 SRC=X.X.X.X DST=X.X.X.X LEN=76 TOS=0x00 PREC=0xC0 TTL=63 ID=34162 PROTO=UDP SPT=123 DPT=123 LEN=56 
 # [6256275.991117] IN=fire OUT=fire PHYSIN=eth0 PHYSOUT=eth1 SRC=X.X.X.X DST=X.X.X.X LEN=241 TOS=0x00 PREC=0x00 TTL=64 ID=0 DF PROTO=UDP SPT=138 DPT=138 LEN=221 
 
@@ -209,7 +209,7 @@ rule=: %-:word% IN=%-:word% OUT=%-:word% PHYSIN=%-:word% PHYSOUT=%-:word% SRC=%s
 rule=: %-:word% IN=%-:word% OUT=%-:word% PHYSIN=%-:word% SRC=%src-ip:ipv4% DST=%dst-ip:ipv4% LEN=%-:number% TOS=%-:word% PREC=%-:word% TTL=%-:number% ID=%-:number% PROTO=%proto:word% SPT=%src-port:number% DPT=%dst-port:number% %-:rest%
 
 #*****************************************************************************
-# nfcap / nfdump 
+# nfcap / nfdump
 #*****************************************************************************
 
 # source_ip: 10.1.1.1/54630, destination_ip: 12.159.2.100/13620, protocol: TCP, duration: 0.204, flags: |.A..S.|, tos: 0, packets: 2, bytes: 92, last_time: 2015-06-04 18:29:58, reported by 10.5.1.1
@@ -227,9 +227,9 @@ rule=: Accepted password for %username:word% from %src-ip:ipv4% port %src-port:n
 rule=: error: PAM: Authentication failure for %username:word% from %src-ip:ipv4%
 rule=: error: PAM: Authentication failure for %username:word% from %src-host:word%
 rule=: pam_unix(sshd:auth): authentication failure; logname= uid=%uid:number% euid=%-:number% tty=ssh ruser= rhost=%src-ip:ipv4%  user=%username:word%
-rule=: pam_unix(sshd:auth): authentication failure; logname= uid=%uid:number% euid=%-:number% tty=ssh ruser= rhost=%src-ip:ipv4% 
-rule=: PAM %number:number% more authentication failure; logname= uid=%uid:number% euid=%-:number% tty=ssh ruser= rhost=%src-ip:ipv4% 
-rule=: Accepted publickey for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2 
+rule=: pam_unix(sshd:auth): authentication failure; logname= uid=%uid:number% euid=%-:number% tty=ssh ruser= rhost=%src-ip:ipv4%\x20
+rule=: PAM %number:number% more authentication failure; logname= uid=%uid:number% euid=%-:number% tty=ssh ruser= rhost=%src-ip:ipv4%\x20
+rule=: Accepted publickey for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2\x20
 rule=: error: PAM: Authentication failure for illegal user %username:word% from %src-ip:ipv4%
 rule=: Failed password for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2
 rule=: Accepted gssapi-with-mic for %username:word% from %src-ip:ipv4% port %src-port:number% ssh2
@@ -255,8 +255,8 @@ rule=: User %username:word% from %src-ip:ipv6% not allowed %-:rest%
 #
 # Tested 04/10/17 by Cyber.Tao.Flow
 # These logs lack a program in the syslog header causing (at least on syslog-ng) the date field from the log message to become the program like so:
-# 
-# 10.10.10.1|user|notice|notice|0d|2017-04-11|08:39:21|1,2017/04/11| 08:39:21,123456790,THREAT,url,0,2017/04/11 
+#
+# 10.10.10.1|user|notice|notice|0d|2017-04-11|08:39:21|1,2017/04/11| 08:39:21,123456790,THREAT,url,0,2017/04/11
 #
 #Therefore the two prefix's are included below.  IF YOUR LOGGER LEAVES THE DATE AS PART OF THE MSG THEN USE THE OTHER PREFIX STARTING WITH  %-:number
 #
@@ -266,7 +266,7 @@ rule=: User %username:word% from %src-ip:ipv6% not allowed %-:rest%
 #prefix= %-:number,%date:date-iso% %time:time-24hr%,%devserial:char-sep:\x2C%,
 prefix= %time:time-24hr%,%devserial:char-sep:\x2C%,
 
-rule=url-log,pattern4:THREAT,url,%dtm:char-sep:\x2C%,%genyear:number%/%genmonth:number%/%genday:number% %gentime:time-24hr%,%src-ip:ipv4%,%dst-ip:ipv4%,%natsrcip:ipv4%,%natdstip:ipv4%,%policy:char-sep:\x2C%,%-:char-sep:\x2C%,%-:char-sep:\x2C%,%app:char-sep:\x2C%,%vsys:char-sep:\x2C%,%srczone:char-sep:\x2C%,%dstzone:char-sep:\x2C%,%srcintf:char-sep:\x2C%,%dstintf:char-sep:\x2C%,%logprofile:char-sep:\x2C%,%year:number%/%month:number%/%day:number% %time:time-24hr%,%session:number%,%count:number%,%src-port:number%,%dst-port:number%,%nat-src-port:number%,%nat-dst-port:number%,%flags:char-sep:\x2C%,tcp,%action:char-sep:\x2C%,%http_uri:char-sep:\x2C%,(9999),%url-catagory:char-sep:\x2C%,%severity:char-sep:\x2C%,%direction:char-sep:\x2C%,%sequence_number:number%,%actionflags:char-sep:\x2C%,%geo_source:char-sep:\x2C%,%geo_dest:char-sep:\x2C%,%therest:rest%,
+rule=url-log,pattern4:THREAT,url,%dtm:char-sep:\x2C%,%genyear:number%/%genmonth:number%/%genday:number% %gentime:time-24hr%,%src-ip:ipv4%,%dst-ip:ipv4%,%natsrcip:ipv4%,%natdstip:ipv4%,%policy:char-sep:\x2C%,%-:char-sep:\x2C%,%-:char-sep:\x2C%,%app:char-sep:\x2C%,%vsys:char-sep:\x2C%,%srczone:char-sep:\x2C%,%dstzone:char-sep:\x2C%,%srcintf:char-sep:\x2C%,%dstintf:char-sep:\x2C%,%logprofile:char-sep:\x2C%,%year:number%/%month:number%/%day:number% %time:time-24hr%,%session:number%,%count:number%,%src-port:number%,%dst-port:number%,%nat-src-port:number%,%nat-dst-port:number%,%flags:char-sep:\x2C%,tcp,%action:char-sep:\x2C%,%http_uri:char-sep:\x2C%,(9999),%url-catagory:char-sep:\x2C%,%severity:char-sep:\x2C%,%direction:char-sep:\x2C%,%sequence_number:number%,%actionflags:char-sep:\x2C%,%geo_source:char-sep:\x2C%,%geo_dest:char-sep:\x2C%,%therest:rest%
 
 rule=url-log,pattern1:THREAT,url,%dtm:char-sep:\x2C%,%genyear:number%/%genmonth:number%/%genday:number% %gentime:time-24hr%,%src-ip:ipv4%,%dst-ip:ipv4%,%natsrcip:char-sep:\x2C%,%natdstip:char-sep:\x2C%,%policy:char-sep:\x2C%,%source_user:char-sep:\x2C%,%destination_user:char-sep:\x2C%,%app:char-sep:\x2C%,%vsys:char-sep:\x2C%,%srczone:char-sep:\x2C%,%dstzone:char-sep:\x2C%,%srcintf:char-sep:\x2C%,%dstintf:char-sep:\x2C%,%logprofile:char-sep:\x2C%,%year:number%/%month:number%/%day:number% %time:time-24hr%,%session_id:number%,%count:number%,%src-port:number%,%dst-port:number%,%nat-src-port:char-sep:\x2C%,%nat-dst-port:char-sep:\x2C%,%flags:char-sep:\x2C%,tcp,%action:char-sep:\x2C%,%url:quoted-string%,(%threatid:char-sep:\x2C%),%url-catagory:char-sep:\x2C%,%severity:char-sep:\x2C%,%direction:char-sep:\x2C%,%sequence_number:number%,%actionflags:char-sep:\x2C%,%geo_source:char-sep:\x2C%,%geo_dest:char-sep:\x2C%,%therest:rest%
 
@@ -313,7 +313,7 @@ prefix=
 rule=:  port %-:number% - Security Violation
 
 #*****************************************************************************
-# SMTP 
+# SMTP
 #*****************************************************************************
 
 rule=: %-:word% %-:word% [%src-ip:ipv4%]: expn %username:word%
@@ -335,7 +335,7 @@ rule=: %-:word%: [%src-ip:ipv4%]: Possible SMTP RCPT flood, throttling.
 
 rule=: [%generator_id:number%:%sig_id:number%:%rev:number%] %sig_name:char-to:\x5b%[Classification: %classtype:char-to:\x5d%] [Priority: %pri:number%] {%proto:char-to:\x7d%} %src-ip:ipv4%:%src-port:number% -> %dst-ip:ipv4%:%dst-port:number%
 
-# Appears the later version of Snort add a : after the "Priority" field. 
+# Appears the later version of Snort add a : after the "Priority" field.
 
 rule=: [%generator_id:number%:%sig_id:number%:%rev:number%] %sig_name:char-to:\x5b%[Classification: %classtype:char-to:\x5d%] [Priority: %pri:number%]: {%proto:char-to:\x7d%} %src-ip:ipv4%:%src-port:number% -> %dst-ip:ipv4%:%dst-port:number%
 
@@ -346,16 +346,16 @@ rule=: [%generator_id:number%:%sig_id:number%:%rev:number%] %sig_name:char-to:\x
 
 # Remember the space at the end of the rule..  Also " counts as part of a %thing:word%
 
-rule=: id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr%" fw=%fire-ip:ipv4% pri=%pri:number% c=%c:number% m=%m:number% msg="Possible port scan detected" n=%n:number% src=%src-ip:ipv4%:%src-port:number%:%interface:word% dst=%dst-ip:ipv4%:%dst-port:number%:%interface:word% note=%ports-scanned:quoted-string% 
+rule=: id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr%" fw=%fire-ip:ipv4% pri=%pri:number% c=%c:number% m=%m:number% msg="Possible port scan detected" n=%n:number% src=%src-ip:ipv4%:%src-port:number%:%interface:word% dst=%dst-ip:ipv4%:%dst-port:number%:%interface:word% note=%ports-scanned:quoted-string%\x20
 
-#rule=:  msg="%alert:char-to:\x22%" sid=%sid:number% ipscat=%proto:word% ipspri=%ipspri:number% n=%n:number% src=%src-ip:ipv4%:%src-port:number%:%interface:word% dst=%dst-ip:ipv4%:%dst-port:number%:%interface:word% 
+#rule=:  msg="%alert:char-to:\x22%" sid=%sid:number% ipscat=%proto:word% ipspri=%ipspri:number% n=%n:number% src=%src-ip:ipv4%:%src-port:number%:%interface:word% dst=%dst-ip:ipv4%:%dst-port:number%:%interface:word%\x20
 
-rule=: id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr%" fw=%fire-ip:ipv4% pri=%pri:number% c=%c:number% m=%m:number% msg=%alert:quoted-string% sid=%sid:number% ipscat=%proto:word% ipspri=%ipspri:number% n=%n:number% src=%src-ip:ipv4%:%src-port:number%:%interface:word% dst=%dst-ip:ipv4%:%dst-port:number%:%interface:word% 
+rule=: id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr%" fw=%fire-ip:ipv4% pri=%pri:number% c=%c:number% m=%m:number% msg=%alert:quoted-string% sid=%sid:number% ipscat=%proto:word% ipspri=%ipspri:number% n=%n:number% src=%src-ip:ipv4%:%src-port:number%:%interface:word% dst=%dst-ip:ipv4%:%dst-port:number%:%interface:word%\x20
 
 #*****************************************************************************
 # su/sudo
 #*****************************************************************************
- 
+
 rule=: Successful su for %-:word% by %username:word%
 rule=: pam_unix(sudo:auth): authentication failure; logname= uid=%uid:number% euid=%-:number% %-:word% ruser= rhost=  user=%username:word%
 rule=: %username:char-to:\x3a%: TTY=%-:rest%
@@ -363,7 +363,7 @@ rule=: %username:char-to:\x3a%: command not allowed %-:rest%
 rule=: %username:char-to:\x3a%: user NOT in sudoers %-:rest%
 rule=: %username:char-to:\x3a%: ignoring time stamp from the future %-:rest%
 rule=: %username:char-to:\x3a%: %-:number% incorrect password attempt ; %-:rest%
-rule=: %username:char-to:\x3a%: %-:number% incorrect password attempts %-:rest% 
+rule=: %username:char-to:\x3a%: %-:number% incorrect password attempts %-:rest%
 
 #*****************************************************************************
 # Rsync
@@ -383,9 +383,9 @@ rule=: Accepted password for %username:word% from %src-ip:ipv4%
 
 # Note the space at the end!
 #
-#rule=: 529: NT AUTHORITY\\SYSTEM: Logon Failure: Reason: Unknown user name or bad password User Name: %username:word% Domain: %-:word% Logon Type: 3 Logon Process: NtLmSsp Authentication Package: NTLM Workstation Name: %-:word% Caller User Name: - Caller Domain: - Caller Logon ID: - Caller Process ID: - Transited Services: - Source Network Address: %src-ip:ipv4% Source Port: %src-port:number% 
+#rule=: 529: NT AUTHORITY\\SYSTEM: Logon Failure: Reason: Unknown user name or bad password User Name: %username:word% Domain: %-:word% Logon Type: 3 Logon Process: NtLmSsp Authentication Package: NTLM Workstation Name: %-:word% Caller User Name: - Caller Domain: - Caller Logon ID: - Caller Process ID: - Transited Services: - Source Network Address: %src-ip:ipv4% Source Port: %src-port:number%\x20
 
-#rule=: 529: S-1-5-18: Logon Failure: Reason: Unknown user name or bad password User Name: %username:word% Domain: %-:word% Logon Type: 3 Logon Process: NtLmSsp Authentication Package: NTLM Workstation Name: %-:word% Caller User Name: - Caller Domain: - Caller Logon ID: - Caller Process ID: - Transited Services: - Source Network Address: %src-ip:ipv4% Source Port: %src-port:number% 
+#rule=: 529: S-1-5-18: Logon Failure: Reason: Unknown user name or bad password User Name: %username:word% Domain: %-:word% Logon Type: 3 Logon Process: NtLmSsp Authentication Package: NTLM Workstation Name: %-:word% Caller User Name: - Caller Domain: - Caller Logon ID: - Caller Process ID: - Transited Services: - Source Network Address: %src-ip:ipv4% Source Port: %src-port:number%\x20
 
 #*****************************************************************************
 # Citrix
@@ -402,11 +402,11 @@ rule=: %-:word% %-:word% %-:word% %-:word% : SSLVPN LOGOUT %-:number% : Context 
 
 # New normalization rules from Sam Castellango (2017/11/07)
 
-# This is for Microsoft Windows event 4624: 
+# This is for Microsoft Windows event 4624:
 
 rule=: %-:string-to:Account Name:%Account Name: %-:string-to:Account Name:%Account Name: %Username:word% %-:string-to:Network Address:%Network Address: %Src-IP:ipv4% %-:rest%
 
-# Palo Alto Firewall 
+# Palo Alto Firewall
 
 # 10.11.11.11|user|info|info|0e|2017-01-11|11:50:31|1,2017/01/28| 13:20:31,1009A101774,SYSTEM,general,0,2017/08/28 13:20:31,,general,,0,0,general,informational,User frank logged in via CLI from \ 10.1.9.3,891392,0x0,0,0,0,0,,XXXXXXXX-1
 
@@ -433,7 +433,7 @@ rule=: %-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Cal
 
 rule=: %-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Called Station Identifier:%Called Station Identifier: %nasMAC:char-to  :\ x3a%:%-:string-to:Calling Station Identifier:%Calling Station Identifier: %userMAC:char-to  :\ x20% %-:string-to:NAS IPv4 Address:%NAS IPv4 Address: %nasIP:ipv4% %-:string-to:NAS Identifier:%NAS Identifier: %nasHost:word% %-:string-to:Result:%Result: %reasonCode:word% %-:rest%
 
-# Zscaler rule update 
+# Zscaler rule update
 
 rule=: act=Blocked%-:string-to:dst=%dst=%dst-ip:ipv4% src=%src-ip:ipv4%%-:string-to:suser=%suser=%username:char-to:\x40%%-:rest%
 
@@ -441,7 +441,7 @@ rule=: act=Blocked%-:string-to:dst=%dst=%dst-ip:ipv4% src=%src-ip:ipv4%%-:string
 
 rule=: %-:string-to:Event Type:%Event Type: Threat%-:string-to:Device Name:%Device Name: %username:char-to:\x2D%%-:char-to:\x28%(%src-ip:char-to:\x29%%-:rest%
 
-#NPS IAS rule 
+#NPS IAS rule
 
 rule=: %-:string-to:IAS%%-:string-to:User-Name%%-:char-to:\x3E%>%username:char-to:\x3C%</User-Name><NAS-IP-Address data_type=%-:char-to:\x3E%>%src-ip:char-to:\x3C%%-:string-to:Calling-Station-Id%%-:char-to:\x3E%>%filename:char-to:\x3C%<%-:rest%
 
@@ -515,7 +515,7 @@ rule=: %eventid:word% The computer attempted to validate the credentials for an 
 
 rule=: %-:word% A user account was unlocked. Subject: Security ID: %-:word% Account Name: %username:word% %-:rest%
 
-# PAM 
+# PAM
 
 rule=: PAM %-:number% more authentication failures; logname= %-:word% %-:word% tty=ssh ruser= rhost=%src-ip:ipv4%  user=%username:word%
 rule=: PAM %-:number% more authentication failures; logname= %-:word% %-:word% tty=ssh ruser= rhost=%src-ip:ipv6%  user=%username:word%
