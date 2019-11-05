@@ -1,4 +1,5 @@
 version=2
+
 # Sagan normalize.rulebase
 # Copyright (c) 2009-2019, Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
@@ -29,6 +30,7 @@ version=2
 #*************************************************************
 
 # IPv4 or IPv6 address
+
 type=@ipaddr:::ffff:%..:ipv4%
 type=@ipaddr:%..:ipv4%
 type=@ipaddr:%..:ipv6%
