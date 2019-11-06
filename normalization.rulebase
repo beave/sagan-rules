@@ -175,7 +175,7 @@ rule=: error (unexpected RCODE %-:word% resolving '%-:char-to:\x27%': %src-ip:@i
 # Fortinet/Fortigate
 #*****************************************************************************
 
-rule=: time=%-:word% devname=%-:word% devid=%-:word% logid=%-:word% type=%-:word% subtype=%-:word% level=%-:word% vd=%-:word% srcip=%src-ip:@ipaddr% srcport=%src-port:number% srcintf=%-:word% dstip=%dst-ip:@ipaddr% dstport=%dst-port:number% dstintf=%-:word% %-:rest% 
+rule=: time=%-:word% devname=%-:word% devid=%-:word% logid=%-:word% type=%-:word% subtype=%-:word% level=%-:word% vd=%-:word% srcip=%src-ip:@ipaddr% srcport=%src-port:number% srcintf=%-:word% dstip=%dst-ip:@ipaddr% dstport=%dst-port:number% dstintf=%-:word% %-:rest%
 
 #*****************************************************************************
 # IMAP
@@ -234,8 +234,8 @@ rule=: Accepted password for %username:word% from %src-ip:@ipaddr% port %src-por
 rule=: error: PAM: Authentication failure for %username:word% from %src-ip:@ipaddr%
 rule=: error: PAM: Authentication failure for %username:word% from %src-host:word%
 rule=: pam_unix(sshd:auth): authentication failure; logname= uid=%uid:number% euid=%-:number% tty=ssh ruser= rhost=%src-ip:@ipaddr%  user=%username:word%
-rule=: pam_unix(sshd:auth): authentication failure; logname= uid=%uid:number% euid=%-:number% tty=ssh ruser= rhost=%src-ip:@ipaddr% 
-rule=: PAM %number:number% more authentication failure; logname= uid=%uid:number% euid=%-:number% tty=ssh ruser= rhost=%src-ip:@ipaddr% 
+rule=: pam_unix(sshd:auth): authentication failure; logname= uid=%uid:number% euid=%-:number% tty=ssh ruser= rhost=%src-ip:@ipaddr%\x20
+rule=: PAM %number:number% more authentication failure; logname= uid=%uid:number% euid=%-:number% tty=ssh ruser= rhost=%src-ip:@ipaddr%\x20
 rule=: Accepted publickey for %username:word% from %src-ip:@ipaddr% port %src-port:number% ssh2%-:rest%
 rule=: error: PAM: Authentication failure for illegal user %username:word% from %src-ip:@ipaddr%
 rule=: Failed password for %username:word% from %src-ip:@ipaddr% port %src-port:number% ssh2
@@ -356,7 +356,7 @@ rule=: id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr
 
 #rule=:  msg="%alert:char-to:\x22%" sid=%sid:number% ipscat=%proto:word% ipspri=%ipspri:number% n=%n:number% src=%src-ip:@ipaddr%:%src-port:number%:%interface:word% dst=%dst-ip:@ipaddr%:%dst-port:number%:%interface:word% 
 
-rule=: id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr%" fw=%fire-ip:@ipaddr% pri=%pri:number% c=%c:number% m=%m:number% msg=%alert:quoted-string% sid=%sid:number% ipscat=%proto:word% ipspri=%ipspri:number% n=%n:number% src=%src-ip:@ipaddr%:%src-port:number%:%interface:word% dst=%dst-ip:@ipaddr%:%dst-port:number%:%interface:word%\x20 
+rule=: id=%firewall:word% sn=%serial:word% time="%date:date-iso% %time:time-24hr%" fw=%fire-ip:@ipaddr% pri=%pri:number% c=%c:number% m=%m:number% msg=%alert:quoted-string% sid=%sid:number% ipscat=%proto:word% ipspri=%ipspri:number% n=%n:number% src=%src-ip:@ipaddr%:%src-port:number%:%interface:word% dst=%dst-ip:@ipaddr%:%dst-port:number%:%interface:word%\x20
 
 #*****************************************************************************
 # su/sudo
@@ -389,9 +389,9 @@ rule=: Accepted password for %username:word% from %src-ip:@ipaddr%
 
 # Note the space at the end!
 #
-#rule=: 529: NT AUTHORITY\\SYSTEM: Logon Failure: Reason: Unknown user name or bad password User Name: %username:word% Domain: %-:word% Logon Type: 3 Logon Process: NtLmSsp Authentication Package: NTLM Workstation Name: %-:word% Caller User Name: - Caller Domain: - Caller Logon ID: - Caller Process ID: - Transited Services: - Source Network Address: %src-ip:@ipaddr% Source Port: %src-port:number% 
+#rule=: 529: NT AUTHORITY\\SYSTEM: Logon Failure: Reason: Unknown user name or bad password User Name: %username:word% Domain: %-:word% Logon Type: 3 Logon Process: NtLmSsp Authentication Package: NTLM Workstation Name: %-:word% Caller User Name: - Caller Domain: - Caller Logon ID: - Caller Process ID: - Transited Services: - Source Network Address: %src-ip:@ipaddr% Source Port: %src-port:number%\x20
 
-#rule=: 529: S-1-5-18: Logon Failure: Reason: Unknown user name or bad password User Name: %username:word% Domain: %-:word% Logon Type: 3 Logon Process: NtLmSsp Authentication Package: NTLM Workstation Name: %-:word% Caller User Name: - Caller Domain: - Caller Logon ID: - Caller Process ID: - Transited Services: - Source Network Address: %src-ip:@ipaddr% Source Port: %src-port:number% 
+#rule=: 529: S-1-5-18: Logon Failure: Reason: Unknown user name or bad password User Name: %username:word% Domain: %-:word% Logon Type: 3 Logon Process: NtLmSsp Authentication Package: NTLM Workstation Name: %-:word% Caller User Name: - Caller Domain: - Caller Logon ID: - Caller Process ID: - Transited Services: - Source Network Address: %src-ip:@ipaddr% Source Port: %src-port:number%\x20
 
 #*****************************************************************************
 # Citrix
