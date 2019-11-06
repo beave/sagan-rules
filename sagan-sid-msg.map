@@ -4129,3 +4129,14 @@
 5004302 || [CENTRIFY] Invalid or Invalidated user [Brute Force] [10/1]
 5004303 || [CENTRIFY] Gssapi/Kerberos Authentication Failure [Brute Force] [10/1]
 5004304 || [CENTRIFY] Successful dzdo to user ROOT executed
+5004305 || [ZINGBOX] Anonymous netbios-ssn login attempt detected || url,wiki.quadrantsec.com/bin/view/Main/5004305
+5004306 || [ZINGBOX] HTTP connection to risky Internet site detected || url,wiki.quadrantsec.com/bin/view/Main/5004306
+5004307 || [ZINGBOX] https connection to risky Internet site detected || url,wiki.quadrantsec.com/bin/view/Main/5004307
+5004308 || [ZINGBOX] Manufacturer default username and password in inbound http login detected || url,wiki.quadrantsec.com/bin/view/Main/5004308
+5004309 || [ZINGBOX] Risk level increased to Medium || url,wiki.quadrantsec.com/bin/view/Main/5004309
+5004310 || [ZINGBOX] Risk level increased to High || url,wiki.quadrantsec.com/bin/view/Main/5004310
+5004311 || [ZINGBOX] Unencrypted sensitive information in HTTP request detected || url,wiki.quadrantsec.com/bin/view/Main/5004311
+5004312 || [ZINGBOX] Unsecure application usage by camera || url,wiki.quadrantsec.com/bin/view/Main/5004312
+5004313 || [ZINGBOX] Unsecured outbound HTTP connections to the Internet detected || url,wiki.quadrantsec.com/bin/view/Main/5004313
+5004314 || [ZINGBOX] Username same as password in FTP login || url,wiki.quadrantsec.com/bin/view/Main/5004314
+5004315 || [ZINGBOX] Weak Basic Authentication over HTTP detected || url,wiki.quadrantsec.com/bin/view/Main/5004315

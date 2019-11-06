@@ -1,0 +1,50 @@
+# Sagan zingbox.rules
+# Copyright (c) 2009-2019. Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Anonymous netbios-ssn login attempt detected"; content: "Anonymous netbios-ssn login attempt"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004305; sid:5004305; rev: 2;) 
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] HTTP connection to risky Internet site detected"; content: "HTTP connection to risky Internet site detecte"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004306; sid:5004306; rev: 2;) 
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] https connection to risky Internet site detected"; content: "https connection to risky Internet site detected"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004307; sid:5004307; rev: 2;) 
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Manufacturer default username and password in inbound http login detected"; content: "Manufacturer default username and password in inbound http login"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004308; sid:5004308; rev: 2;) 
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Risk level increased to Medium"; content: "Risk level increase"; content: "|34|label|34 3a 34|updated risk level|34 2c 34|value|34 3a 34|Medium|34|"; parse_src_ip: 1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004309; sid:5004309; rev: 2;) 
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Risk level increased to High"; content: "Risk level increase"; content: "|34|label|34 3a 34|updated risk level|34 2c 34|value|34 3a 34|High|34|"; parse_src_ip: 1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004310; sid:5004310; rev: 2;) 
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Unencrypted sensitive information in HTTP request detected"; content: "Unencrypted sensitive information in HTTP request"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004311; sid:5004311; rev: 2;) 
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Unsecure application usage by camera"; content: "Unsecure application usage by camera"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004312; sid:5004312; rev: 2;) 
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Unsecured outbound HTTP connections to the Internet detected"; content: "Unsecured outbound HTTP connections to the Internet"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004313; sid:5004313; rev: 2;) 
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Username same as password in FTP login"; content: "Username same as password in FTP login"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004314; sid:5004314; rev: 2;) 
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Weak Basic Authentication over HTTP detected"; content: "Weak Basic Authentication over HTTP"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004315; sid:5004315; rev: 2;) 
+
