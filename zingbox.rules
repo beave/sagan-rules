@@ -34,9 +34,9 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] https connection t
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Manufacturer default username and password in inbound http login detected"; content: "Manufacturer default username and password in inbound http login"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004308; sid:5004308; rev: 2;) 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Risk level increased to Medium"; content: "Risk level increase"; content: "|34|label|34 3a 34|updated risk level|34 2c 34|value|34 3a 34|Medium|34|"; parse_src_ip: 1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004309; sid:5004309; rev: 2;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Risk level increased to Medium"; content: "Risk level increase"; content: "|22|label|22 3a 22|updated risk level|22 2c 22|value|22 3a 22|Medium|22|"; parse_src_ip: 1; classtype: suspicious-traffic; priority: 3; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004309; sid:5004309; rev: 3;) 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Risk level increased to High"; content: "Risk level increase"; content: "|34|label|34 3a 34|updated risk level|34 2c 34|value|34 3a 34|High|34|"; parse_src_ip: 1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004310; sid:5004310; rev: 2;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Risk level increased to High"; content: "Risk level increase"; content: "|22|label|22 3a 22|updated risk level|22 2c 22|value|22 3a 22|High|22|"; parse_src_ip: 1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004310; sid:5004310; rev: 3;)
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Unencrypted sensitive information in HTTP request detected"; content: "Unencrypted sensitive information in HTTP request"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004311; sid:5004311; rev: 2;) 
 
