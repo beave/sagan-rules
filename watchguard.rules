@@ -226,7 +226,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] VPN - User logi
 # alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] VPN (SSL) - User login"; content: "msg_id=|22|2500-0000|22|"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003093; rev:3;)
 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WATCHGUARD] Failed Login Attempt - Brute force [WATCHGUARD] [5/5]"; content: "msg_id=|22|1100-0005|22|" content: "Authentication of"; content "rejected"; parse_src_ip: 1; parse_dst_ip: 2; xbits: set,brute_force,track ip_src, expire 21600; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300;  classtype: unsuccessful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003094; rev:2;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WATCHGUARD] Failed Login Attempt - Brute force [WATCHGUARD] [5/5]"; content: "msg_id=|22|1100-0005|22|" content: "Authentication of"; content: "rejected"; parse_src_ip: 1; parse_dst_ip: 2; xbits: set,brute_force,track ip_src, expire 21600; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300;  classtype: unsuccessful-user; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003094; rev:3;)
 
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WATCHGUARD] Signature update process for the specified version failed"; content: "msg_id=|22|2E02-0067|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003097; rev:3;) 
@@ -235,10 +235,10 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WATCHGUARD] Signature updat
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IP spoofing was detected from the IP address specified"; content: "msg_id=|22|3000-0169|22|"; classtype: bad-unknown; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003098; rev:3;)
 
 
-alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless Access Point Model Mismatch"; content: "msg_id=|22|6100-0002|22|"; class-type: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003099; rev:1;)
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Wireless Access Point Model Mismatch"; content: "msg_id=|22|6100-0002|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003099; rev:2;)
 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPS detected an intrusion in the client request or server response content body"; content: "msg_id=|22|1AFF-0026|22|"; class-type: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003100; rev:3;) 
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPS detected an intrusion in the client request or server response content body"; content: "msg_id=|22|1AFF-0026|22|"; classtype: suspicious-traffic; parse_src_ip: 1; parse_dst_ip: 2; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003100; rev:4;) 
 
 
 # Rules by Jeremy Grove - 2018/11/05
@@ -246,7 +246,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] IPS detected an
 #171.11.211.1|local0|info|info|something.local|2018-10-05|10:47:27|sessiond| msg_id="3E00-0002" Management user bob@somehost from 10.10.10.10 logged in 
 #171.11.211.1|local0|info|info|something.local|2018-10-05|10:57:06|sessiond| msg_id="3E00-0004" Management user bob@somehost from 10.10.10.10 logged out 
 
-alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Management User Log in"; content: "msg_id=|22|3E00-0002|22|"; parse_src_ip: 1; class-type: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003967; rev:1;) 
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Management User Log in"; content: "msg_id=|22|3E00-0002|22|"; parse_src_ip: 1; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003967; rev:2;) 
 
-alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Management User Log Out"; content: "msg_id=|22|3E00-0004|22|"; parse_src_ip: 1; class-type: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003968; rev:1;) 
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Management User Log Out"; content: "msg_id=|22|3E00-0004|22|"; parse_src_ip: 1; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003968; rev:2;) 
 

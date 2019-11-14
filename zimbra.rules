@@ -51,7 +51,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SASLAUTHD - Brute fo
 
 # 2016-12-07 14:29:28,990 INFO  [qtp1684106402-2039242:http://localhost:8080/service/soap/AuthRequest] [oip=10.10.10.5;ua=zclient/8.7.0_GA_1659;] SoapEngine - handler exception: authentication failed for [oggie], account not found
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SOAP Invalid user - Brute force account not found [5/3]"; content: "authentication failed"; conent: "account not found"; xbits: set,brute_force,track ip_src, expire 21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003029; parse_src_ip: 1; program: mailbox; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; sid:5003029; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SOAP Invalid user - Brute force account not found [5/3]"; content: "authentication failed"; content: "account not found"; xbits: set,brute_force,track ip_src, expire 21600; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003029; parse_src_ip: 1; program: mailbox; after: track by_src, count 5, seconds 900; threshold: type limit, track by_src, count 3, seconds 900; sid:5003029; rev:5;)
 
 # 2016-12-07 14:30:45,802 INFO  [qtp1684106402-2039253:http://localhost:8080/service/soap/AuthRequest] [name=frank@example.com;oip=10.10.10.5;ua=zclient/8.7.0_GA_1659;] SoapEngine - handler exception: authentication failed for [frank@example.com], invalid password
 

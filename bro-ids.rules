@@ -77,12 +77,12 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] 10+ unable to get loca
 # https://github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/lurk0
 # Bitcoin mining detection
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] Bitcoin Miner [0/10]"; content: "Bitcoin|3a 3a|Miner"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 10, seconds 300; default_proto: tcp; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002074; url,github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/lurk0; sid: 5002074; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] Bitcoin Miner [0/10]"; content: "Bitcoin|3a 3a|Miner"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; threshold: type limit, track by_src, count 10, seconds 300; default_proto: tcp; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002074; reference: url,github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/lurk0; sid: 5002074; rev:5;)
 
 # https://github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/lurk0
 # Lurk0 RAT ::Lurk0_Client
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] Probable LURK0 RAT C&C Access"; content: "Lurk0|3a 3a|Lurk0_Client"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; default_prot: tcp; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002072; url,github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/lurk0; sid: 5002072; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO] Probable LURK0 RAT C&C Access"; content: "Lurk0|3a 3a|Lurk0_Client"; program: bro; parse_src_ip: 1; parse_dst_ip: 2; default_proto: tcp; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002072; reference: url,github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/lurk0; sid: 5002072; rev:5;)
 
 # Sidejacking
 # Added in the main Bro repo.  See http://matthias.vallentin.net/blog/2010/10/taming-the-sheep-detecting-sidejacking-with-bro/ for more details.

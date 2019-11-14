@@ -37,10 +37,12 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpalert - MAC address 
 
 # "arpwatch" rules - http://en.wikipedia.org/wiki/Arpwatch
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - Detected new machine on the network"; content: "new station"; classtype: suspicious-traffic; program: arpwatch; parse_src_ip: 1; peference: url,wiki.quadrantsec.com/bin/view/Main/5000062; sid: 5000062; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - Detected new machine on the network"; content: "new station"; classtype: suspicious-traffic; program: arpwatch; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000062; sid: 5000062; rev:5;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - 'flip flop' message."; content: "flip flop "; classtype: suspicious-traffic; program: arpwatch; reference: url,wiki.quadrantsec.com/bin/view/Main/5000063; sid: 5000063; rev:2;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - Exiting"; content: "reaper|3a| pid"; classtype: program-error; program: arpwatch; reference: url,wiki.quadrantsec.com/bin/view/Main/5000064; sid: 5000064; rev:3;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - Changed network interface for IP address"; content: "changed ethernet address"; classtype: suspicious-traffic; program: arpwatch; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000065; sid: 5000065; rev:5; )
+
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - Changed network interface for IP address"; content: "changed ethernet address"; classtype: suspicious-traffic; program: arpwatch; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000065; sid: 5000065; rev:6;)
+
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - Startup/Exiting message"; pcre: "/exiting|Running as/"; classtype: not-suspicious; program: arpwatch; reference: url,wiki.quadrantsec.com/bin/view/Main/5000066; sid: 5000066; rev:2;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - Detected bad address len - ignored"; content: "sent bad addr len"; classtype: network-event; program: arpwatch; reference: url,wiki.quadrantsec.com/bin/view/Main/5000067; sid: 5000067; rev:2;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - New activity [new machine]"; content: "new activity"; classtype: network-event; program: arpwatch; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001061; sid: 5001061; rev:4;)

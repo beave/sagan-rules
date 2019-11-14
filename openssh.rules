@@ -88,7 +88,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Failed password - 
 # syslog  ssh: failed login attempt for UNKNOWN_USER from 10.1.1.4
 
 
-drop any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] SYSLOG Authentication failure - Brute force [5/1]"; content: "ssh|3a| failed login attempt"; xbits: set,brute_force,track ip_src, expire 21600; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001954; program: syslog; after: track by_src, count 5, seconds 300; parse_ip_src: 1; threshold: type limit, track by_src, count 1, seconds 300; sid: 5001954; rev:12;)
+drop any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] SYSLOG Authentication failure - Brute force [5/1]"; content: "ssh|3a| failed login attempt"; xbits: set,brute_force,track ip_src, expire 21600; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001954; program: syslog; after: track by_src, count 5, seconds 300; parse_src_ip: 1; threshold: type limit, track by_src, count 1, seconds 300; sid: 5001954; rev:13;)
 
 # Added by Robert Nunley - 02/20/2014 (rnunley@quadrantsec.com)
 
