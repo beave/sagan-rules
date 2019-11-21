@@ -44,5 +44,5 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Authentication fai
 
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Timeout"; content: "TIMEOUT"; parse_src_ip: 1; default_proto: tcp; classtype: successful-user; program: imapd|imapd-ssl|courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5002393; sid:5002393; rev:2;)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Authentication failure - Brute Force [5/5]"; content: "LOGIN FAILED,"; parse_src_ip: 1; xbits: set,brute_force,track ip_src, expire 21600; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 1, seconds 300; default_proto: tcp; classtype: unsuccessful-user; program: imapd|imapd-sslcourierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5002398; sid:5002398; rev:6;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Authentication failure - Brute Force [5/5]"; content: "LOGIN FAILED,"; parse_src_ip: 1; xbits: set,brute_force,track ip_src, expire 21600; after: track by_src, count 5, seconds 300; threshold: suppress, track by_src, count 1, seconds 300; default_proto: tcp; classtype: unsuccessful-user; program: imapd|imapd-sslcourierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5002398; sid:5002398; rev:6;)
 

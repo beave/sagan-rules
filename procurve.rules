@@ -40,6 +40,6 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] Port Se
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-L3-SWITCH] port is off-line"; program: 00077; classtype: hardware-event; sid: 5001124; reference: url,wiki.quadrantsec.com/bin/view/Main/5001124; rev:3;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-L3-SWITCH] Invalid username/password"; program: 00419; classtype: unsuccessful-user; sid: 5001125; reference: url,wiki.quadrantsec.com/bin/view/Main/5001125; rev:2;)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-L3-SWITCH] Invalid username/password - Brute Force [5/1]"; program: 00419; classtype: unsuccessful-user; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 1, seconds 86400; parse_src_ip: 1; sid:5003205; reference: url,wiki.quadrantsec.com/bin/view/Main/5003205; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-L3-SWITCH] Invalid username/password - Brute Force [5/1]"; program: 00419; classtype: unsuccessful-user; after: track by_src, count 5, seconds 300; threshold: suppress, track by_src, count 1, seconds 86400; parse_src_ip: 1; sid:5003205; reference: url,wiki.quadrantsec.com/bin/view/Main/5003205; rev:1;)
 
 

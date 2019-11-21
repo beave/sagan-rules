@@ -28,7 +28,7 @@
 # Eventlog to syslog service.  This is what we primarily use.
 # http://code.google.com/p/eventlog-to-syslog/
 
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Detection of net listening application [0/5]"; meta_content: " %sagan%|3a| ",5154,861; meta_depth: 8; threshold: type limit, track by_src, count 5, seconds 300; classtype: network-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000306; sid: 5000306; rev:9;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Detection of net listening application [0/5]"; meta_content: " %sagan%|3a| ",5154,861; meta_depth: 8; threshold: suppress, track by_src, count 5, seconds 300; classtype: network-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000306; sid: 5000306; rev:9;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Privileged Service Called"; meta_content: " %sagan%|3a| ",4673,577; meta_depth: 8; classtype: successful-admin; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000307; sid: 5000307; rev:8;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Apple Bonjour service detect [iTunes installed?]"; classtype: policy-violation; program: Bonjour; reference: url,wiki.quadrantsec.com/bin/view/Main/5000308; sid: 5000308; rev:3;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application error"; content: " 1001|3a| "; classtype: program-error; program: Application; reference: url,wiki.quadrantsec.com/bin/view/Main/5000309; sid: 5000309; rev:4;)
@@ -79,7 +79,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] WinVNC4 Conne
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] WinVNC4 Connection closed"; content: "Clean disconnection"; content: "closed"; parse_src_ip: 1; parse_port; default_proto: tcp; default_dst_port: 5900; classtype: not-suspicious; program: WinVNC4; reference: url,wiki.quadrantsec.com/bin/view/Main/5000354; sid: 5000354; rev:5;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] WinVNC4 HTTPServer event"; content: "HTTPServer"; default_proto: tcp; default_dst_port: 5900; classtype: network-event; program: WinVNC4; parse_src_ip: 1; parse_port; reference: url,wiki.quadrantsec.com/bin/view/Main/5000355; sid: 5000355; rev:4;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Crypt32 Failed to extract third-party root list"; content: " 4107|3a| "; classtype: program-error; program: crypt32; reference: url,wiki.quadrantsec.com/bin/view/Main/5000356; sid: 5000356; rev:4;)
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Disk corruption [0/2]"; content: " 55|3a| "; classtype: hardware-event; program: Ntfs; threshold:type limit, track by_src, count 1, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001056; sid: 5001056; rev:5;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Disk corruption [0/2]"; content: " 55|3a| "; classtype: hardware-event; program: Ntfs; threshold:suppress, track by_src, count 1, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001056; sid: 5001056; rev:5;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] MSSQLServer I/O error"; content: " 823|3a| "; classtype: program-error; program: Ntfs; reference: url,wiki.quadrantsec.com/bin/view/Main/5001096; sid: 5001096; rev:4;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application uninstall"; content: " 11724|3a| "; classtype: program-error; program: MsiInstaller; reference: url,wiki.quadrantsec.com/bin/view/Main/5001182; sid: 5001182; rev:3;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application install"; content: " 11707|3a| "; classtype: program-error; program: MsiInstaller; reference: url,wiki.quadrantsec.com/bin/view/Main/5001183; sid: 5001183; rev:3;)
@@ -90,8 +90,8 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] System time h
 # DHCP-Server| 1063: There are no IP addresses available for lease in the scope or superscope "VLAN_311_Example".
 # DHCP-Server| 1020: Scope, 10.100.1.0, is 97 percent full with only 2 IP addresses remaining.
 
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope is almost full"; content: " 1020|3a| "; classtype: program-error; program: DHCP-Server; threshold: type limit, track by_src, count 1, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5001649; sid: 5001649; rev:4;)
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope is FULL";  content: "100 percent full"; content: " 1020|3a| "; classtype: program-error; program: DHCP-Server; threshold: type limit, track by_src, count 1, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5001716; sid: 5001716; rev:5;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope is almost full"; content: " 1020|3a| "; classtype: program-error; program: DHCP-Server; threshold: suppress, track by_src, count 1, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5001649; sid: 5001649; rev:4;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope is FULL";  content: "100 percent full"; content: " 1020|3a| "; classtype: program-error; program: DHCP-Server; threshold: suppress, track by_src, count 1, seconds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5001716; sid: 5001716; rev:5;)
 
 # BAD RULE BELOW
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope if full.  No IP addresses left"; content: " 5001650|3a| "; classtype: network-event; program: DHCP-Server; reference: url,wiki.quadrantsec.com/bin/view/Main/5001650; sid: 5001650; rev:3;)
@@ -111,11 +111,11 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdo
 
 # Added by Brian Echeverry (09/22/2015)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Microsoft Antimalware has encountered an error trying to update signatures"; program: Microsoft_Antimalware; content: " 2001|3A| "; reference: url,wiki.quadrantsec.com/bin/view/Main/5002392; threshold: type limit, track by_src, count 1, seconds 86400; classtype: program-error; sid:5002392; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Microsoft Antimalware has encountered an error trying to update signatures"; program: Microsoft_Antimalware; content: " 2001|3A| "; reference: url,wiki.quadrantsec.com/bin/view/Main/5002392; threshold: suppress, track by_src, count 1, seconds 86400; classtype: program-error; sid:5002392; rev:3;)
 
 # Rules added by Brian Echeverry ( becheverry@quadrantsec.com) - 10/21/2015
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Unable to log events to security log"; content: " 521|3a| "; threshold: type limit, track by_src, count 1, seconds 86400; classtype: program-error; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002564; sid:5002564; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Unable to log events to security log"; content: " 521|3a| "; threshold: suppress, track by_src, count 1, seconds 86400; classtype: program-error; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002564; sid:5002564; rev:4;)
 
 # Added by Champ Clark III (04/20/2016) - Great read at http://pastebin.com/raw/0SNSvyjJ
 

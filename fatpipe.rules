@@ -34,6 +34,6 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FATPIPE] Login Success - ADM
 # 10.10.10.5|authpriv|info|info|56|2014-02-12|19:01:06|xtremed| UI Login: Attempt Failed, User Name: bob, Remote IP: 10.10.0.1
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FATPIPE] Login Failed"; content: "Login|3a| Attempt Failed"; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: unsuccessful-admin; program: xtremed; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001957; sid: 5001957; rev:2;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FATPIPE] Login Failed - Brute Force [5/5]"; content: "Login|3a| Attempt Failed"; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: unsuccessful-admin; xbits: set,brute_force,track ip_src, expire 21600; program: xtremed; parse_src_ip: 1; after: track by_src, count 5, seconds 300; threshold: type limit, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001958; sid: 5001958; rev:6;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FATPIPE] Login Failed - Brute Force [5/5]"; content: "Login|3a| Attempt Failed"; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: unsuccessful-admin; xbits: set,brute_force,track ip_src, expire 21600; program: xtremed; parse_src_ip: 1; after: track by_src, count 5, seconds 300; threshold: suppress, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001958; sid: 5001958; rev:6;)
 
 
