@@ -28,8 +28,8 @@
 # Eventlog to syslog service.  This is what we primarily use.
 # http://code.google.com/p/eventlog-to-syslog/
 
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Detection of net listening application [0/5]"; meta_content: " %sagan%|3a| ",5154,861; meta_depth: 8; threshold: suppress, track by_src, count 5, seconds 300; classtype: network-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000306; sid: 5000306; rev:9;)
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Privileged Service Called"; meta_content: " %sagan%|3a| ",4673,577; meta_depth: 8; classtype: successful-admin; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000307; sid: 5000307; rev:8;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Detection of net listening application [0/5]"; event_id: 5154,861; threshold: suppress, track by_src, count 5, seconds 300; classtype: network-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000306; sid: 5000306; rev:10;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Privileged Service Called"; event_id: 4673,577; classtype: successful-admin; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000307; sid: 5000307; rev:9;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Apple Bonjour service detect [iTunes installed?]"; classtype: policy-violation; program: Bonjour; reference: url,wiki.quadrantsec.com/bin/view/Main/5000308; sid: 5000308; rev:3;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application error"; content: " 1001|3a| "; classtype: program-error; program: Application; reference: url,wiki.quadrantsec.com/bin/view/Main/5000309; sid: 5000309; rev:4;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application hang"; content: " 1002|3a| "; classtype: program-error; program: Application; reference: url,wiki.quadrantsec.com/bin/view/Main/5000310; sid: 5000310; rev:4;)
@@ -83,9 +83,9 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] WinVNC4 Conne
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] MSSQLServer I/O error"; content: " 823|3a| "; classtype: program-error; program: Ntfs; reference: url,wiki.quadrantsec.com/bin/view/Main/5001096; sid: 5001096; rev:4;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application uninstall"; content: " 11724|3a| "; classtype: program-error; program: MsiInstaller; reference: url,wiki.quadrantsec.com/bin/view/Main/5001182; sid: 5001182; rev:3;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application install"; content: " 11707|3a| "; classtype: program-error; program: MsiInstaller; reference: url,wiki.quadrantsec.com/bin/view/Main/5001183; sid: 5001183; rev:3;)
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows is shutting down"; meta_content: " %sagan%|3a| ",4609,513; meta_depth: 8; classtype: program-error; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001184; sid: 5001184; rev:7;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows is shutting down"; event_id: 4609,513; classtype: program-error; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001184; sid: 5001184; rev:8;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] File system full"; content: " 13570|3a| "; classtype: system-error; program: NtFrs|Ntfs; reference: url,wiki.quadrantsec.com/bin/view/Main/5001191; sid: 5001191; rev:4;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] System time has changed"; meta_content: " %sagan%|3a| ",4616,520; meta_depth: 8; content:!"|3a|\Program Files\VMware\VMware Tools\vmtoolsd.exe"; classtype: system-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001194; sid: 5001194; rev:10;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] System time has changed"; event_id: 4616,520; content:!"|3a|\Program Files\VMware\VMware Tools\vmtoolsd.exe"; classtype: system-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001194; sid: 5001194; rev:11;)
 
 # DHCP-Server| 1063: There are no IP addresses available for lease in the scope or superscope "VLAN_311_Example".
 # DHCP-Server| 1020: Scope, 10.100.1.0, is 97 percent full with only 2 IP addresses remaining.
@@ -96,7 +96,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] System time h
 # BAD RULE BELOW
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope if full.  No IP addresses left"; content: " 5001650|3a| "; classtype: network-event; program: DHCP-Server; reference: url,wiki.quadrantsec.com/bin/view/Main/5001650; sid: 5001650; rev:3;)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows audit log was cleared"; meta_content: " %sagan%|3a| ",1102,517; meta_depth: 8; content: "audit log was cleared"; classtype: system-event; program: *Security*|Eventlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5001185; sid: 5001185; rev:9;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Windows audit log was cleared"; event_id: 1102,517; content: "audit log was cleared"; classtype: system-event; program: *Security*|Eventlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5001185; sid: 5001185; rev:10;)
 
 # Brian Echeverry - 05/07/2015
 # SID 5002272 and 5002273 are noisy. 
@@ -121,7 +121,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Unable to log
 
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of service via SCM"; content: " 7045|3a| "; content:!"ForeScout"; nocase; content:!"nxlog"; nocase; content:!"ccmsetup"; nocase; classtype: suspicious-traffic; program: System|Service_Control_Manager; reference: url,wiki.quadrantsec.com/bin/view/Main/5002817; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5002817; rev:4;)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of new service via Security Audit "; meta_content: " %sagan%|3a| ",4697,601; meta_depth: 8; classtype: suspicious-traffic; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002818; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5002818; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of new service via Security Audit "; event_id: 4697,601; classtype: suspicious-traffic; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002818; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5002818; rev:5;)
 
 # Added by Champ Clark III (08/19/2016) 
 
@@ -135,6 +135,6 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Logging has b
 
 #alert any $HOME_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Fan failure detected"; content:" 10|3a| Fan "; content:" has failed"; classtype: hardware-event; program: System; reference: url,wiki.quadrantsec.com/bin/view/Main/5003040; sid:5003040; rev:2;)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of PSEXEC service via Security Audit "; content: "PSEXEC"; nocase; meta_content: " %sagan%|3a| ",4697,601; meta_depth: 8; classtype: suspicious-traffic; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5003105; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5003105; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of PSEXEC service via Security Audit "; content: "PSEXEC"; nocase; event_id: 4697,601; classtype: suspicious-traffic; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5003105; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5003105; rev:5;)
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of PSEXEC service via SCM"; content: "PSEXEC"; nocase; content: " 7045|3a| "; content:!"ForeScout"; nocase; content:!"nxlog"; nocase; content:!"ccmsetup"; nocase; classtype: suspicious-traffic; program: System|Service_Control_Manager; reference: url,wiki.quadrantsec.com/bin/view/Main/5003106; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5003106; rev:2;)
