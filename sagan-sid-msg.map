@@ -56,7 +56,7 @@
 5000059 || [SYSLOG] Martian source packet || url,wiki.quadrantsec.com/bin/view/Main/5000059
 5000060 || [ARP] arpalert - Detected new machine on the network || url,wiki.quadrantsec.com/bin/view/Main/5000060
 5000061 || [ARP] arpalert - Detected ip change || url,wiki.quadrantsec.com/bin/view/Main/5000061
-5000062 || [ARP] arpwatch - Detected new machine on the network
+5000062 || [ARP] arpwatch - Detected new machine on the network || url,wiki.quadrantsec.com/bin/view/Main/5000062
 5000063 || [ARP] arpwatch - 'flip flop' message. || url,wiki.quadrantsec.com/bin/view/Main/5000063
 5000064 || [ARP] arpwatch - Exiting || url,wiki.quadrantsec.com/bin/view/Main/5000064
 5000065 || [ARP] arpwatch - Changed network interface for IP address || url,wiki.quadrantsec.com/bin/view/Main/5000065
@@ -1920,7 +1920,7 @@
 5002014 || [WINDOWS-MISC] System shutdown [XBIT SET] || url,wiki.quadrantsec.com/bin/view/Main/5002014
 5002015 || [WINDOWS-AUTH] RDP / Logon type 10 || url,wiki.quadrantsec.com/bin/view/Main/5002015
 5002016 || [WINDOWS-GEOIP] RDP / Logon type 10 from outside HOME_COUNTRY  || url,wiki.quadrantsec.com/bin/view/Main/5002016
-5002017 || [WINDOWS-AUTH] Pass-The-Hash detected! || url, http://en.wikipedia.org/wiki/Pass_the_hash || url,wiki.quadrantsec.com/bin/view/Main/5002017
+5002017 || [WINDOWS-AUTH] Pass-The-Hash detected! || url,en.wikipedia.org/wiki/Pass_the_hash || url,wiki.quadrantsec.com/bin/view/Main/5002017
 5002018 || [WINDOWS-AUTH] Logon attempt using explicit credentials || url,wiki.quadrantsec.com/bin/view/Main/5002018
 5002020 || [WINDOWS-GEOIP] Logon attempt using explicit credentials from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5002020
 5002022 || [JUNIPER] VPN Login failed || url,wiki.quadrantsec.com/bin/view/Main/5002022
@@ -1973,9 +1973,9 @@
 5002069 || [BRO] 10+ SSL Invalid_Server_Cert in 30 seconds [10/5] || url,wiki.quadrantsec.com/bin/view/Main/5002069
 5002070 || [BRO] 10+ unable to get local issuer certificate in 30 seconds [10/5] || url,wiki.quadrantsec.com/bin/view/Main/5002070
 5002071 || [BRO] ZeroAccess ZeroAccess_Client [0/5] || url,wiki.quadrantsec.com/bin/view/Main/5002070
-5002072 || [BRO] Probable LURK0 RAT C&C Access || url,wiki.quadrantsec.com/bin/view/Main/5002072
+5002072 || [BRO] Probable LURK0 RAT C&C Access || url,github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/lurk0 || url,wiki.quadrantsec.com/bin/view/Main/5002072
 5002073 || [BRO] Sidejacking attach detected || url,matthias.vallentin.net/blog/2010/10/taming-the-sheep-detecting-sidejacking-with-bro || url,wiki.quadrantsec.com/bin/view/Main/5002073
-5002074 || [BRO] Bitcoin Miner [0/10] || url,wiki.quadrantsec.com/bin/view/Main/5002074
+5002074 || [BRO] Bitcoin Miner [0/10] || url,github.com/LiamRandall/BroMalware-Exercise/tree/master/solutions/lurk0 || url,wiki.quadrantsec.com/bin/view/Main/5002074
 5002075 || [IMAPD-BLUEDOT] Login from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002075
 5002076 || [IMAPD-BLUEDOT] Logout from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002076
 5002077 || [IMAPD-BLUEDOT] Timeout from a suspicious source || url, wiki.quadrantsec.com/bin/view/Main/5002077
@@ -3016,7 +3016,7 @@
 5003177 || [ZSCALER] Trojan Downloader User-Agent BGroom
 5003178 || [ZSCALER] Trojan Downloader User-Agent (Tiny)
 5003179 || [ZSCALER] Suspicious User-Agent (adlib) || url,blog.trendmicro.com/connections-between-droiddreamlight-and-droidkungfu/
-5003180 || [ZSCALER] W32/Kazy User-Agent (Windows NT 5.1 \; v.) space infront of semi-colon
+5003180 || [ZSCALER] W32/Kazy User-Agent (Windows NT 5.1 - space infront of semi-colon
 5003181 || [ZSCALER] W32/Renos.Downloader User Agent zeroup || md5,35ba53f6aeb6b38c1107018f271189af || url,www.f-secure.com/v-descs/trojan_w32_renos_h.shtml
 5003182 || [ZSCALER] Suspicious User-Agent (DownloadMR) || md5,0da0d8e664f44400c19898b4c9e71456 || url,www.virustotal.com/en/file/93236b781e147e3ac983be1374a5f807fabd27ee2b92e6d99e293a6eb070ac2b/analysis/
 5003183 || [ZSCALER] User-Agent (ChilkatUpload) || url,chilkatsoft.com
@@ -4140,3 +4140,130 @@
 5004313 || [ZINGBOX] Unsecured outbound HTTP connections to the Internet detected || url,wiki.quadrantsec.com/bin/view/Main/5004313
 5004314 || [ZINGBOX] Username same as password in FTP login || url,wiki.quadrantsec.com/bin/view/Main/5004314
 5004315 || [ZINGBOX] Weak Basic Authentication over HTTP detected || url,wiki.quadrantsec.com/bin/view/Main/5004315
+5100000 || airportd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100001 || com.apple.xpc.launchd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100002 || powerd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100003 || syspolicyd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100004 || usernoted service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100005 || hidd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100006 || acpid service running || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100007 || eSMTP or lSMTP detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100008 || anacron service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100009 || Apache web server running || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100010 || auditd service running || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100011 || bash shell in use || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100012 || certbot execution for TLS/SSL cert updates || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100013 || clamd anti-virus detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100014 || ksh shell in use || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100015 || tcsh shell in use || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100016 || csh shell in use || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100017 || Generic /bin/sh shell in use || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100018 || HP Hardware services detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100019 || Generic crond detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100020 || Cuckoo malware analysis detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100021 || Daemonlogger full packet capture engine || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100022 || dbus service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100023 || dhclient service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100024 || dhcpd - DHCP server detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100025 || exim4 SMTP service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100026 || Firefox web browser detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100029 || SysV init service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100030 || Unix 'kernel' messages detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100031 || knockd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100032 || mattermost || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100033 || MySQL services detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100034 || nginx web server running || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100035 || Linux name service cache daemon detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100036 || Network Time Protocol Server detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100037 || opendkim for SMTP services detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100038 || OpenVPN services detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100039 || Postfix SMTP services detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100040 || procmail || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100041 || rsync client execution || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100042 || rsyncd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100043 || RSyslog detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100044 || Sagan detected!! || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100045 || SASL authentication daemon detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100046 || Synology Command Execution Management Daemon || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100047 || Sendmail detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100048 || slapd ldap daemon || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100050 || snmpd service running || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100051 || snmptrapd service running || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100052 || Snort IDS engine || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100053 || sshd detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100054 || sSMTP service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100055 || stunnel service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100056 || Suricata IDS engine is running || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100057 || Generic syslog service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100059 || syslog-ng service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100060 || systemd detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100062 || unattended-upgrade (Debian/Ubuntu) detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100063 || yk_chkpwd - Yubikey usage || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100064 || Zimbra services running || url,wiki.quadrantsec.com/bin/view/Main/5100003
+5100065 || Proftp detected || url,wiki.quadrantsec.com/bin/view/Main/5100065
+5100066 || APC-EMU logs detected || url,wiki.quadrantsec.com/bin/view/Main/5100066
+5100067 || Arpalert or Arpwatch logs detected || url,wiki.quadrantsec.com/bin/view/Main/5100067
+5100068 || Asterisk Phone system detected detected || url,wiki.quadrantsec.com/bin/view/Main/5100068
+5100069 ||  Bind/DNS server detected || url,wiki.quadrantsec.com/bin/view/Main/5100069
+5100070 || Bit9 detected || url,wiki.quadrantsec.com/bin/view/Main/5100070
+5100071 || Bro/Zeek detected || url,wiki.quadrantsec.com/bin/view/Main/5100071
+5100072 ||  Cisco ASA detected || url,wiki.quadrantsec.com/bin/view/Main/5100072
+5100073 || Courier/IMAP detected || url,wiki.quadrantsec.com/bin/view/Main/5100073
+5100074 || DigitalPersona detected || url,wiki.quadrantsec.com/bin/view/Main/5100074
+5100075 || Dovecot detected || url,wiki.quadrantsec.com/bin/view/Main/5100075
+5100076 || FIPAYPIN detected || url,wiki.quadrantsec.com/bin/view/Main/5100076
+5100077 || Gerneric FTPD detected || url,wiki.quadrantsec.com/bin/view/Main/5100077
+5100078 || Grsec detected || url,wiki.quadrantsec.com/bin/view/Main/5100078
+5100079 || Honeyd detected || url,wiki.quadrantsec.com/bin/view/Main/5100079
+5100080 || Hostapd detected || url,wiki.quadrantsec.com/bin/view/Main/5100080
+5100081 || IMAPD detected || url,wiki.quadrantsec.com/bin/view/Main/5100081
+5100082 || IPOP3D detected || url,wiki.quadrantsec.com/bin/view/Main/5100082
+5100083 || Juniper detected || url,wiki.quadrantsec.com/bin/view/Main/5100083
+5100084 || Kismet_Server detected || url,wiki.quadrantsec.com/bin/view/Main/5100084
+5100085 || SMTP milter detected || url,wiki.quadrantsec.com/bin/view/Main/5100085
+5100086 || MongoDB server detected || url,wiki.quadrantsec.com/bin/view/Main/5100086
+5100087 || NeXpose detected || url,wiki.quadrantsec.com/bin/view/Main/5100087
+5100088 ||  Nfcapd detected || url,wiki.quadrantsec.com/bin/view/Main/5100088
+5100089 || Postgres detected || url,wiki.quadrantsec.com/bin/view/Main/5100089
+5100090 || pptpd detected || url,wiki.quadrantsec.com/bin/view/Main/5100090
+5100091 ||  PureFTP server detected || url,wiki.quadrantsec.com/bin/view/Main/5100091
+5100092 || Racoon detected || url,wiki.quadrantsec.com/bin/view/Main/5100092
+5100093 || Riverbed detected || url,wiki.quadrantsec.com/bin/view/Main/5100093
+5100094 || Samba server detected || url,wiki.quadrantsec.com/bin/view/Main/5100094
+5100095 || Squid server detected || url,wiki.quadrantsec.com/bin/view/Main/5100095
+5100096 || SSH-Tectia-Server detected || url,wiki.quadrantsec.com/bin/view/Main/5100096
+5100097 || su/sudo detected || url,wiki.quadrantsec.com/bin/view/Main/5100097
+5100098 || Symantec EMS detected || url,wiki.quadrantsec.com/bin/view/Main/5100098
+5100099 || Telnet service detected || url,wiki.quadrantsec.com/bin/view/Main/5100099
+5100100 || Trendmicro Antivirus Service detected || url,wiki.quadrantsec.com/bin/view/Main/5100100
+5100101 || Tripwire detected || url,wiki.quadrantsec.com/bin/view/Main/5100101
+5100102 || Vmpop3d service detected || url,wiki.quadrantsec.com/bin/view/Main/5100102
+5100103 || VMWare ESXi detected || url,wiki.quadrantsec.com/bin/view/Main/5100103
+5100104 || VPopmail detected || url,wiki.quadrantsec.com/bin/view/Main/5100104
+5100105 || VSFTPD server detected || url,wiki.quadrantsec.com/bin/view/Main/5100105
+5100106 || Microsoft MSSQL server detected || url,wiki.quadrantsec.com/bin/view/Main/5100106
+5100107 || Windows Sysmon detected || url,wiki.quadrantsec.com/bin/view/Main/5100107
+5100108 || xinetd detected || url,wiki.quadrantsec.com/bin/view/Main/5100108
+5100109 || Zeus detected || url,wiki.quadrantsec.com/bin/view/Main/5100109
+5100111 ||  AS400 Server detected || url,wiki.quadrantsec.com/bin/view/Main/5100111
+5100112 || AS400 Server detect - 2 || url,wiki.quadrantsec.com/bin/view/Main/5100112
+5100113 || Office365 detect || url,wiki.quadrantsec.com/bin/view/Main/5100113
+5100114 || Watchguard detect || url,wiki.quadrantsec.com/bin/view/Main/5100114
+5100115 || Oracle server detect || url,wiki.quadrantsec.com/bin/view/Main/5100115
+5100116 || Wordpress detected || url,wiki.quadrantsec.com/bin/view/Main/5100116
+5100117 || Zscaler detect || url,wiki.quadrantsec.com/bin/view/Main/5100117
+5100118 || Microsoft Windows detected || url,wiki.quadrantsec.com/bin/view/Main/5100118
+5100119 || Cisco ISE detected || url,wiki.quadrantsec.com/bin/view/Main/5100110
+5100120 || DHCP-Server detected || url,wiki.quadrantsec.com/bin/view/Main/5100120
+5100121 || MS-SQL service detected || url,wiki.quadrantsec.com/bin/view/Main/5100121
+5100122 || Terminal Services detected || url,wiki.quadrantsec.com/bin/view/Main/5100122
+5100123 || Sysmon detected || url,wiki.quadrantsec.com/bin/view/Main/5100123
+5100124 || Symantec detected || url,wiki.quadrantsec.com/bin/view/Main/5100124
+5100125 || Applocker detected || url,wiki.quadrantsec.com/bin/view/Main/5100125
+5100126 || VNC detected || url,wiki.quadrantsec.com/bin/view/Main/5100126
+5100127 || Apple Bonjour service detected || url,wiki.quadrantsec.com/bin/view/Main/5100127
+5100128 || SNMP service detected || url,wiki.quadrantsec.com/bin/view/Main/5100128
+5100129 || Google updater detected || url,wiki.quadrantsec.com/bin/view/Main/5100129
+5100130 || Tenable security tool detected [1] || url,wiki.quadrantsec.com/bin/view/Main/5100130
+5100131 || Tenable security tool detected [2] || url,wiki.quadrantsec.com/bin/view/Main/5100131
+5100132 || NXLog detected || url,wiki.quadrantsec.com/bin/view/Main/5100132
