@@ -28,6 +28,6 @@
 # Detect Weblabrinth traffic.  See Ben Jackson's https://code.google.com/p/weblabyrinth/
 #
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WEBLABYRINTH] New host logged!"; default_proto:tcp; default_dst_port: $HTTP_PORT; xbits: set,recon,track ip_src,expire 86400; classtype: misc-activity; program: weblabyrinth; content: "New host logged!"; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001093; sid: 5001093; rev:8;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WEBLABYRINTH] Weblabyrinth - Crawler Ensnared!"; default_proto:tcp; default_dst_port: $HTTP_PORT; xbits: set,recon,track ip_src,expire 86400; classtype: misc-activity; program: weblabyrinth; content: "Crawler Ensnared!"; threshold: suppress, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001095; sid: 5001095; rev:5;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WEBLABYRINTH] Weblabyrinth - Crawler Ensnared!"; default_proto:tcp; default_dst_port: $HTTP_PORT; xbits: set,recon,track ip_src,expire 86400; classtype: misc-activity; program: weblabyrinth; content: "Crawler Ensnared!"; threshold: type suppress, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001095; sid: 5001095; rev:5;)
 
 

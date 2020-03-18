@@ -26,5 +26,5 @@
 
 # These are CATCH ALL rules.  This means it will parse _all_ logs. 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO-INTEL] Suspicious communications detected via Bro-Intel";  bro-intel: all; classtype: suspicious-traffic; after: track by_src, count 5, seconds 30; threshold: suppress, track by_src, count 10, seconds 60; parse_src_ip: 1; parse_dst_ip: 2; normalize; parse_proto; parse_proto_program; reference: url,wiki.quadrantsec.com/bin/view/Main/5002270; sid: 5002270; rev:3;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BRO-INTEL] Suspicious communications detected via Bro-Intel";  bro-intel: all; classtype: suspicious-traffic; after: track by_src, count 5, seconds 30; threshold: type suppress, track by_src, count 10, seconds 60; parse_src_ip: 1; parse_dst_ip: 2; normalize; parse_proto; parse_proto_program; reference: url,wiki.quadrantsec.com/bin/view/Main/5002270; sid: 5002270; rev:3;)
 

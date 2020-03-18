@@ -28,7 +28,7 @@
 # These rules use "flexbits" because they might need faster access to data via mmap(). 
 # If xbits with redis is used,  these can be a bottle neck.
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Unable to read eventlog"; content: "EvtNext failed with error 15007|3a| "; flexbits: isnotset,by_src,nxlog_problem;after: track by_src, count 5, seconds 300; threshold: suppress, track by_src, count 1, seconds 86400; flexbits: set,nxlog_problem,86400; classtype: program-error; program: nxlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5003108; sid:5003108; rev:6;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Unable to read eventlog"; content: "EvtNext failed with error 15007|3a| "; flexbits: isnotset,by_src,nxlog_problem;after: track by_src, count 5, seconds 300; threshold: type suppress, track by_src, count 1, seconds 86400; flexbits: set,nxlog_problem,86400; classtype: program-error; program: nxlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5003108; sid:5003108; rev:6;)
 
 # flexbits: isnotset,by_src,nxlog_problem;
 
@@ -36,7 +36,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Service stopping"; c
 
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Termination Request"; content: "nxlog received a termination request signal"; flexbits: isnotset,by_src,reboot.windows; flexbits: isnotset,by_src,nxlog_problem; classtype: program-error; program: nxlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5003110; sid:5003110; rev:5;)
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Missing Windows Log Message"; pcre: "/ [0-9][0-9][0-9][0-9]?: $/"; program: *Security*|AppLocker|Application|Backup|Bonjour|CPQCISSE|Citrix|DAC|DHCP-Server|EMET|Eventlog|MSSQL*|MsiInstaller|NtFrs|Ntfs|RemoteAccess|Service|Service_Control_Manager|Symantec|Sysmon|System|USER32|Tenable|TermService|The|WinVNC4|crypt32; after: track by_src, count 30, seconds 300; threshold: suppress, track by_src, count 1, seconds 86400; flexbits: set,nxlog_problem,86400; classtype: program-error; reference: url,wiki.quadrantsec.com/bin/view/Main/5003111; sid:5003111; rev:7;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Missing Windows Log Message"; pcre: "/ [0-9][0-9][0-9][0-9]?: $/"; program: *Security*|AppLocker|Application|Backup|Bonjour|CPQCISSE|Citrix|DAC|DHCP-Server|EMET|Eventlog|MSSQL*|MsiInstaller|NtFrs|Ntfs|RemoteAccess|Service|Service_Control_Manager|Symantec|Sysmon|System|USER32|Tenable|TermService|The|WinVNC4|crypt32; after: track by_src, count 30, seconds 300; threshold: type suppress, track by_src, count 1, seconds 86400; flexbits: set,nxlog_problem,86400; classtype: program-error; reference: url,wiki.quadrantsec.com/bin/view/Main/5003111; sid:5003111; rev:7;)
 
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Service restart to correct problem [CLEAR XBIT]"; content: "stopping nxlog service"; flexbits: isnotset,by_src,reboot.windows; flexbits: isset,by_src,nxlog_problem; flexbits: unset,by_src,nxlog_problem; flexbits:noeve; classtype: system-event; program: nxlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5003125; sid:5003125; rev:4;)
 

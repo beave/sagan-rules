@@ -27,4 +27,4 @@
 #
 # These rules are for the SSH Tectia Server for Windows systems.
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SSH-TECTIA-SERVER] Authentication Failure - Brute force [5/5]"; content: "Login_failure"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-user; xbits: set,brute_force,track ip_src, expire 21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5001877; parse_src_ip: 1; parse_dst_ip: 2; program: SSH_Tectia_Server; after: track by_src, count 5, seconds 300; threshold: suppress, track by_src, count 5, seconds 300; sid: 5001877; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SSH-TECTIA-SERVER] Authentication Failure - Brute force [5/5]"; content: "Login_failure"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-user; xbits: set,brute_force,track ip_src, expire 21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5001877; parse_src_ip: 1; parse_dst_ip: 2; program: SSH_Tectia_Server; after: track by_src, count 5, seconds 300; threshold: type suppress, track by_src, count 5, seconds 300; sid: 5001877; rev:4;)

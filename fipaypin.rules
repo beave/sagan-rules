@@ -34,11 +34,11 @@
 # 10.11.11.11|daemon|warning|warning|1c|2015-11-28|16:31:49|xxx_RTS_FIPEMV2| 8: 2015/11/28 16:31:49.423 C-400008 FIPAYPIN FIPEMV2 : Call Remote: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 10.11.11.11:26008
 # 10.11.11.11|daemon|warning|warning|1c|2015-12-07|02:06:24|xxx_RTS_FIPAYPIN| 8: 2015/12/07 02:06:24.537 C-400008 FIPAYPIN FIPAYPIN : Unable to connect Fipay Node 'whatever'
 
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Connection failed to Fipay [5/2]"; content: "C-400008"; default_proto: tcp; classtype: misc-activity; program: *FIPAYPIN*; parse_src_ip: 1; parse_port; after: track by_src, count 5, seconds 300; threshold: suppress, track by_src, count 2, seconds 3600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002764; sid:5002764; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Connection failed to Fipay [5/2]"; content: "C-400008"; default_proto: tcp; classtype: misc-activity; program: *FIPAYPIN*; parse_src_ip: 1; parse_port; after: track by_src, count 5, seconds 300; threshold: type suppress, track by_src, count 2, seconds 3600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002764; sid:5002764; rev:3;)
 
 # 10.11.11.11|daemon|warning|warning|1c|2015-11-07|16:55:15|xxx_RTS_FIPEMV1| 2046: 2015/11/07 16:55:15.154 S-302046 FIPAYPIN FIPEMV1 : Slow send (from 16:55:14.622 --> 531ms).Thread ID:9
 
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Slow send!"; content: "S-302046"; default_proto: tcp; classtype: misc-activity; program: *FIPEMV*; after: track by_src, count 5, seconds 300; threshold: suppress, track by_src, count 2, seconds 3600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002765; sid:5002765; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Slow send!"; content: "S-302046"; default_proto: tcp; classtype: misc-activity; program: *FIPEMV*; after: track by_src, count 5, seconds 300; threshold: type suppress, track by_src, count 2, seconds 3600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002765; sid:5002765; rev:3;)
 
 # See sagan.conf for $CREDIT_CARD_PREFIXES. 
 # 10.11.11.11|daemon|warning|warning|1c|2015-11-03|10:27:43|xxx_RTS_FIPAYPIN| 0: 2015/11/03 10:27:43.379 S-300000 FIPAYPIN FIPAYPIN : Swpe: Response Success track2=666666******6666 svc=6666
@@ -55,7 +55,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Blocked the respon
 
 # 10.30.1.131|daemon|warning|warning|1c|2015-11-19|11:33:13|xxx_RTS_FIPAYPIN| 0: 2015/11/19 11:33:13.015 S-300000 FIPAYPIN FIPAYPIN : Failed to open pinpad COM9.
 
-#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Failed to open pinpad [0/2]"; content: "S-300000"; content: "Failed to open pinpad"; default_proto: tcp; classtype: misc-activity; program: *FIPAYPIN*; threshold: suppress, track by_src, count 2, seconds 3600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002769; sid:5002769; rev:3;)
+#alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Failed to open pinpad [0/2]"; content: "S-300000"; content: "Failed to open pinpad"; default_proto: tcp; classtype: misc-activity; program: *FIPAYPIN*; threshold: type suppress, track by_src, count 2, seconds 3600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002769; sid:5002769; rev:3;)
 
 # 10.11.11.11|daemon|warning|warning|1c|2015-11-04|13:57:27|xxx_RTS_FIPAYPIN| 0: 2015/11/04 13:57:27.037 S-300000 FIPAYPIN FIPAYPIN : Replace macro [RTS1_IP] with value '10.11.11.11'
 

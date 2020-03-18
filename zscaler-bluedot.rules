@@ -25,6 +25,6 @@
 #  
 #*************************************************************  
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[ZSCALER] Suspicious IP detected via Bluedo "; threshold: suppress, track by_dst, count 2, seconds 3600; parse_src_ip: 2; parse_dst_ip: 1; program: CEF; content: "Zscaler"; content:"act=Allowed"; bluedot: type ip_reputation, track all, mdate_effective_period 1 months, Malicious,Tor,Proxy; default_dst_port: $HTTP_PORT; default_proto: tcp;  classtype:trojan-activity; sid:5003199; rev:2;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[ZSCALER] Suspicious IP detected via Bluedo "; threshold: type suppress, track by_dst, count 2, seconds 3600; parse_src_ip: 2; parse_dst_ip: 1; program: CEF; content: "Zscaler"; content:"act=Allowed"; bluedot: type ip_reputation, track all, mdate_effective_period 1 months, Malicious,Tor,Proxy; default_dst_port: $HTTP_PORT; default_proto: tcp;  classtype:trojan-activity; sid:5003199; rev:2;)
 
 
