@@ -36,4 +36,5 @@
 
 {"software":"nxlog","syslog-source-ip":"MessageSourceAddress","facility":"SyslogFacility","level":"SyslogSeverity","priority":"Severity","time":"EventTime","date":"EventTime","program":"SourceName","message":"Message"}
 
+{"software":"quadrant", "syslog-source-ip":"src", "facility":"facility", "level":"level", "priority":"priority", "time":"receive_date", "date":"receive_date","program":"program","message":"message"}
 
