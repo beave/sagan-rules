@@ -62,7 +62,7 @@ alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Not executable shel
 
 # General "illegal user" 
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Invalid or illegal user [Brute Force] [10/1]"; pcre: "/invalid user|illegal user/i"; content:!"input_userauth_request"; xbits: set,brute_force,track ip_src, expire 21600; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: attempted-user; program: sshd; normalize; parse_src_ip: 1; parse_port; after: track by_src, count 10, seconds 300; threshold:suppress, track by_src, count 1, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000022; sid: 5000022; rev:18;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Invalid or illegal user [Brute Force] [10/1]"; pcre: "/invalid user|illegal user/i"; content:!"input_userauth_request"; xbits: set,brute_force,track ip_src, expire 21600; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: attempted-user; program: sshd; normalize; parse_src_ip: 1; parse_port; after: track by_src, count 10, seconds 300; threshold: type suppress, track by_src, count 1, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000022; sid: 5000022; rev:19;)
 
 # Champ Clark (Quadrant Information Security) - Jan 27th 2010 - Out of band challenge - for more info see: http://sourceforge.net/projects/pamobc/
 
