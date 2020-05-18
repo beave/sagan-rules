@@ -4140,6 +4140,26 @@
 5004313 || [ZINGBOX] Unsecured outbound HTTP connections to the Internet detected || url,wiki.quadrantsec.com/bin/view/Main/5004313
 5004314 || [ZINGBOX] Username same as password in FTP login || url,wiki.quadrantsec.com/bin/view/Main/5004314
 5004315 || [ZINGBOX] Weak Basic Authentication over HTTP detected || url,wiki.quadrantsec.com/bin/view/Main/5004315
+5004316 || [WINDOWS-MALWARE] Possible suspicious process SyncTask.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004316
+5004317 || [WINDOWS-MALWARE] Suspicious RDPV.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004317
+5004318 || [WINDOWS-MALWARE] Suspicious Wirelesskeyview.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004318
+5004319 || [WINDOWS-MALWARE] Suspicious Wirelesskeyview_2.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004319
+5004320 || [WINDOWS-MALWARE] Suspicious Speedtest.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004320
+5004321 || [WINDOWS-MALWARE] Possible webshell u.aspx detected || url,wiki.quadrantsec.com/bin/view/Main/5004321
+5004322 || [WINDOWS-MALWARE] Suspicious MsMpEng detected || url,wiki.quadrantsec.com/bin/view/Main/5004322
+5004323 || [WINDOWS-MALWARE] Suspicious Error3.aspx detected || url,wiki.quadrantsec.com/bin/view/Main/5004323
+5004324 || [WINDOWS-MALWARE] Suspicious issstart.aspx detected || url,wiki.quadrantsec.com/bin/view/Main/5004324
+5004325 || [WINDOWS-MALWARE] Suspicious global.aspx detected || url,wiki.quadrantsec.com/bin/view/Main/5004325
+5004326 || [WINDOWS-MALWARE] Suspicious scripts.aspx detected || url,wiki.quadrantsec.com/bin/view/Main/5004326
+5004327 || [WINDOWS-MALWARE] Suspicious Winsrv.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004327
+5004328 || [WINDOWS-MALWARE] Suspicious Scksp.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004328
+5004329 || [WINDOWS-MALWARE] Possible Dimitry malware Dispex.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004329
+5004330 || [WINDOWS-MALWARE] Possible Dimitry malware Dispex.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004330
+5004331 || [WINDOWS-MALWARE] Suspicious Sysclass.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004331
+5004332 || [WINDOWS-MALWARE] Suspicous SKCI.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004332
+5004333 || [WINDOWS-MALWARE] Suspicous msimsg.exe detected || url,wiki.quadrantsec.com/bin/view/Main/5004333
+5004334 || [WINDOWS-MALWARE] Suspicous DLLHOST detected || url,wiki.quadrantsec.com/bin/view/Main/5004334
+5004335 || [WINDOWS-MALWARE] Suspicous HomeGroupClient detected || url,wiki.quadrantsec.com/bin/view/Main/5004335
 5100000 || airportd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100001 || com.apple.xpc.launchd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100002 || powerd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
