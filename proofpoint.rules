@@ -26,7 +26,7 @@
 #*************************************************************
 #
 
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PROOFPOINT] - Malware message delivered"; content: "classification|5c 22 3a 5c 22|malware"; content: "MSGDLV"; classtype: misc-attack; program: PROOFPOINT; reference: url,wiki.quadrantsec.com/bin/view/Main/5004336; sid: 5004336; rev:1;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PROOFPOINT] - Malware message delivered"; content: "classification|5c 22 3a 5c 22|malware"; content: "MSGDLV"; classtype: misc-attack; program: PROOFPOINT; reference: url,wiki.quadrantsec.com/bin/view/Main/5004755; sid: 5004755; rev:1;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PROOFPOINT] - Phish message delivered"; content: "classification|5c 22 3a 5c 22|phish"; content: "MSGDLV"; classtype: misc-attack; program: PROOFPOINT; reference: url,wiki.quadrantsec.com/bin/view/Main/5004337; sid: 5004337; rev:1;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PROOFPOINT] - Unknown event classification"; meta_content:!"%sagan%",classification|5c 22 3a 5c 22|phish,class|3d 22|phish,classification|5c 22 3a 5c 22|spam,class|3d 22|spam,classification|5c 22 3a 5c 22|malware,class|3d 22|malware; meta_nocase; classtype: misc-attack; program: PROOFPOINT; reference: url,wiki.quadrantsec.com/bin/view/Main/5004338; sid:5004338; rev:1;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PROOFPOINT] - Malware click permitted"; content: "class|3d 22|malware"; content: "CLKPER"; classtype: misc-attack; program: PROOFPOINT; reference: url,wiki.quadrantsec.com/bin/view/Main/5004339; sid: 5004339; rev:1;)
