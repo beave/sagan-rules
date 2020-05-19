@@ -28,7 +28,7 @@
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] Possible TCP Port Scan"; content: "Possible port scan detected"; content: "TCP scanned port list"; default_proto: tcp; parse_src_ip: 2; parse_dst_ip: 3; classtype: network-scan; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001085; sid: 5001083; rev:4;)
 alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] Possible UDP Port Scan"; content: "Possible port scan detected"; content: "UDP scanned port list"; default_proto: udp; parse_src_ip: 2; parse_dst_ip: 3; classtype: network-scan; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001085; sid: 5001085; rev:4;)
 #alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert"; content: "IPS Detection Alert"; content: "ICMP PING"; default_proto: icmp; classtype: network-scan; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001084; sid: 5001084; rev:3;)
-alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert"; content: "IPS Detection Alert"; default_proto: icmp; classtype: network-scan; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001090; sid: 5001090; rev:4;)
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert [0/5]"; content: "IPS Detection Alert"; threshold: type suppress, track by_src, count 5, seconds 300; default_proto: icmp; classtype: network-scan; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001090; sid: 5001090; rev:5;)
 
 # These where created by Kevin Gross (kgross@quadrantsec.com)
 
