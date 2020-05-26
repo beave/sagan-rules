@@ -28,17 +28,44 @@
 # If your named pipe (FIFO) is being feed JSON data, this is where you'll want to "map" 
 # it so Sagan understands it.
 
+# ------------------------------------------
+# Standard syslog-ng template. 
+# ------------------------------------------
+
 {"software":"syslog-ng","syslog-source-ip":"SOURCEIP","facility":"FACILITY","level":"PRIORITY","priority":"PRIORITY","time":"DATE","date":"DATE","program":"PROGRAM","message":"MESSAGE"}
+
+# ------------------------------------------
+# Various rsyslog formats
+# ------------------------------------------
 
 {"software":"rsyslog","syslog-source-ip":"fromhost-ip","facility":"syslogfacility","level":"syslogseverity","priority":"pri","tags":"syslogtag","time":"timereported","date":"timereported","program":"programname","message":"msg"}
 
 {"software":"rsyslog-alt","syslog-source-ip":"fromhost-ip","facility":"syslogfacility-text","level":"syslogseverity-text","priority":"pri","tags":"syslogtag","time":"time","date":"date","program":"programname","message":"msg"}
 
+# ------------------------------------------
+# nxlog
+# ------------------------------------------
+
 {"software":"nxlog","syslog-source-ip":"MessageSourceAddress","facility":"SyslogFacility","level":"SyslogSeverity","priority":"Severity","time":"EventTime","date":"EventTime","program":"SourceName","message":"Message"}
+
+{"software":"nxlog-straight","syslog-source-ip":"HOST_FROM","facility":"Severity","level":"Severity","priority":"Severity","time":"EventReceivedTime","date":"EventReceivedTime","program":"SourceName","message":"Message","event_id":"EventID"}
+
+# ------------------------------------------
+# journald
+# ------------------------------------------
+
+# This is for journald support.  When the command "sudo journalctl -f -o json",  journald will output JSON.  This JSON 
+# can be redirected to a named pipe and Sagan and analyze incoming data.  Unforunately,  I don't see a way to display
+# ISO8601 timestamps in JSON
+
+{"software":"journald","hostname":"_HOSTNAME","facility":"SYSLOG_FACILITY","level":"PRIORITY","priority":"PRIORITY","time":"__REALTIME_TIMESTAMP","date":"__REALTIME_TIMESTAMP","program":"_COMM","message":"MESSAGE"}
+
+# ------------------------------------------
+# Customer formats
+# ------------------------------------------
 
 {"software":"quadrant", "syslog-source-ip":"src", "facility":"facility", "level":"level", "priority":"priority", "time":"receive_date", "date":"receive_date","program":"program","message":"message"}
 
 {"software":"quadrant1","syslog-source-ip":"src","facility":"facility","level":"level","priority":"priority","time":"eventdate","date":"eventdate","program":"program","message":"message"}  
 
-{"software":"nxlog-straight","syslog-source-ip":"HOST_FROM","facility":"Severity","level":"Severity","priority":"Severity","time":"EventReceivedTime","date":"EventReceivedTime","program":"SourceName","message":"Message","event_id":"EventID"}
 
