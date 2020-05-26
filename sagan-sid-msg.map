@@ -4580,6 +4580,10 @@
 5004753 || [ONELOGIN] PROVISIONING_EVENT || url,wiki.quadrantsec.com/bin/view/Main/5004753
 5004754 || [ONELOGIN] USER_DOWNLOADED_CERT || url,wiki.quadrantsec.com/bin/view/Main/5004754
 5004755 || [PROOFPOINT] - Malware message delivered || url,wiki.quadrantsec.com/bin/view/Main/5004755
+5004756 || [CROWDSTRIKE] CrowdStrike High Severity Event Reported  || url,wiki.quadrantsec.com/bin/view/Main/5004756
+5004757 || [CROWDSTRIKE] CrowdStrike Critical Severity Event Reported  || url,wiki.quadrantsec.com/bin/view/Main/5004757
+5004758 || [CROWDSTRIKE] CrowdStrike Low Severity Event Reported  || url,wiki.quadrantsec.com/bin/view/Main/5004758
+5004759 || [CROWDSTRIKE] CrowdStrike Medium Severity Event Reported  || url,wiki.quadrantsec.com/bin/view/Main/5004759
 5100000 || airportd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100001 || com.apple.xpc.launchd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100002 || powerd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
