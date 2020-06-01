@@ -4584,6 +4584,25 @@
 5004757 || [CROWDSTRIKE] CrowdStrike Critical Severity Event Reported  || url,wiki.quadrantsec.com/bin/view/Main/5004757
 5004758 || [CROWDSTRIKE] CrowdStrike Low Severity Event Reported  || url,wiki.quadrantsec.com/bin/view/Main/5004758
 5004759 || [CROWDSTRIKE] CrowdStrike Medium Severity Event Reported  || url,wiki.quadrantsec.com/bin/view/Main/5004759
+5004760 || [AZURE EVENTHUB AD] Risk Event Detected - unlikelyTravel || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004761 || [AZURE EVENTHUB AD] Risk Event Detected - anonymizedIPAddress || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004762 || [AZURE EVENTHUB AD] Risk Event Detected - maliciousIPAddress || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004763 || [AZURE EVENTHUB AD] Risk Event Detected - unfamiliarFeatures || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004764 || [AZURE EVENTHUB AD] Risk Event Detected - malwareInfectedIPAddress || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004765 || [AZURE EVENTHUB AD] Risk Event Detected - suspiciousIPAddress || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004766 || [AZURE EVENTHUB AD] Risk Event Detected - leakedCredentials || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004767 || [AZURE EVENTHUB AD] Risk Event Detected - investigationsThreatIntelligence || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004768 || [AZURE EVENTHUB AD] Risk Event Detected - generic || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004769 || [AZURE EVENTHUB AD] Risk Event Detected - unknownFutureValue || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004770 || [AZURE EVENTHUB AD] atRisk Event Detected || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004771 || [AZURE EVENTHUB AD] confirmedCompromised Event Detected || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004772 || [AZURE EVENTHUB AD] unknownFutureValue Event Detected || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004773 || [AZURE EVENTHUB AD] High Risk During Sign in || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema
+5004774 || [AZURE EVENTHUB AD] Account lockout || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes
+5004775 || [AZURE EVENTHUB AD GEOIP] Account lockout from outside HOME_COUNTRY || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes
+5004776 || [AZURE EVENTHUB AD] Brute Force (Invalid username or password) || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes
+5004777 || [AZURE EVENTHUB AD] Brute Force (Invalid password) || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes
+5004778 || [AZURE EVENTHUB AD GEOIP] Brute Force [2] || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-audit-log-schema
 5100000 || airportd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100001 || com.apple.xpc.launchd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100002 || powerd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
