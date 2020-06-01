@@ -1,0 +1,63 @@
+# Sagan azure-eventhub-ad.rules
+# Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+
+# These rules read JSON,  so Sagan message JSON processing needs to be enabled within your sagan.yaml
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Risk Event Detected - unlikelyTravel"; program: azureEventHub; json_content:"riskEventTypes","unlikelyTravel"; json_strstr; classtype: suspicious-traffic; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004760; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Risk Event Detected - anonymizedIPAddress"; program: azureEventHub; json_content:"riskEventTypes","anonymizedIPAddress"; json_strstr; classtype: suspicious-traffic; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004761; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Risk Event Detected - maliciousIPAddress"; program: azureEventHub; json_content:"riskEventTypes","maliciousIPAddress"; json_strstr; classtype: suspicious-traffic; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004762; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Risk Event Detected - unfamiliarFeatures"; program: azureEventHub; json_content:"riskEventTypes","unfamiliarFeatures"; json_strstr; classtype: bad-unknown; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004763; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Risk Event Detected - malwareInfectedIPAddress"; program: azureEventHub; json_content:"riskEventTypes","malwareInfectedIPAddress"; json_strstr; classtype: suspicious-traffic; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004764; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Risk Event Detected - suspiciousIPAddress"; program: azureEventHub; json_content:"riskEventTypes","suspiciousIPAddress"; json_strstr; classtype: suspicious-traffic; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004765; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Risk Event Detected - leakedCredentials"; program: azureEventHub; content:"riskEventTypes","leakedCredentials"; json_strstr; classtype: correlated-attack; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004766; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Risk Event Detected - investigationsThreatIntelligence"; program: azureEventHub; json_content:"riskEventTypes","investigationsThreatIntelligence"; json_strstr; classtype: correlated-attack; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004767; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Risk Event Detected - generic"; program: azureEventHub; json_content:"riskEventTypes","generic"; json_strstr; classtype: suspicious-traffic; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004768; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Risk Event Detected - unknownFutureValue"; program: azureEventHub; json_content:"riskEventTypes","unknownFutureValue"; json_strstr; classtype: suspicious-traffic; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004769; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] atRisk Event Detected"; program: azureEventHub; json_content:"riskState","atRisk"; json_strstr; classtype: suspicious-traffic; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004770; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] confirmedCompromised Event Detected"; program: azureEventHub; json_content:"riskState","confirmedCompromised"; json_strstr; classtype: correlated-attack; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004771; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] unknownFutureValue Event Detected"; program: azureEventHub; json_content:"riskState","unknownFutureValue"; json_strstr; classtype: bad-unknown; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004772; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] High Risk During Sign in"; program: azureEventHub; json_content:"riskLevelDuringSignIn","high"; classtype: correlated-attack; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004773; rev: 1;)
+
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Account lockout"; program: azureEventHub; json_content:"resultType",”50053”; classtype: unsuccessful-user; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes; sid:5004774; rev: 1;)
+
+alert any $home_net any -> $external_net any (msg: "[AZURE EVENTHUB AD] Brute Force (Invalid username or password)"; program: azureEventHub; json_content:"resulttype","50126”; classtype: unsuccessful-user; reference: url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes; sid:5004776; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Brute Force (Invalid password)"; program: azureEventHub; json_content:"resultType,"50056”; classtype: unsuccessful-user; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes; sid:5004777; rev: 1;)
+
