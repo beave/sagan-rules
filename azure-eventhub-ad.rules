@@ -57,7 +57,7 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] High Ris
 
 #alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Account lockout"; program: azureEventHub; json_content:"resultType",”50053”; classtype: unsuccessful-user; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes; sid:5004774; rev: 1;)
 
-alert any $home_net any -> $external_net any (msg: "[AZURE EVENTHUB AD] Brute Force (Invalid username or password)"; program: azureEventHub; json_content:"resulttype","50126”; classtype: unsuccessful-user; reference: url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes; sid:5004776; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Brute Force (Invalid username or password)"; program: azureEventHub; json_content:"resulttype","50126”; classtype: unsuccessful-user; reference: url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes; sid:5004776; rev: 2;)
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Brute Force (Invalid password)"; program: azureEventHub; json_content:"resultType,"50056”; classtype: unsuccessful-user; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes; sid:5004777; rev: 1;)
 
