@@ -459,7 +459,7 @@ rule=: %-:string-to:IAS%%-:string-to:User-Name%%-:char-to:\x3E%>%username:char-t
 rule=: 4740: A user account was locked out. %-:string-to:Locked Out%%-:string-to:Account Name:%Account Name: %username:word% %-:string-to:Computer Name:%Computer Name: %filename:word%
 
 #Rule 2
-rule=: 4740: A user account was locked out. %-:string-to:Locked Out%%-:string-to:Account Name:%Account Name: %usernameser:word% %-:rest%
+rule=: 4740: A user account was locked out. %-:string-to:Locked Out%%-:string-to:Account Name:%Account Name: %username:word% %-:rest%
 
 #Kerberos ticket request
 #10.21.8.10.log:10.21.8.10|user|info|info|0e|2017-08-30|10:16:31|Security| 4769: A Kerberos service ticket was requested. Account Information: Account Name: XXX@XXXXX Account Domain: XXXXXX Logon GUID: {B7666966-6666-6666-6666-666666666666} Service Information: Service Name: XXXXXX$ Service ID: S-1-5-21-1716666666-1105666666-319566666-1166666 Network Information: Client Address: ::ffff:172.27.1.1 Client Port: 49350 Additional Information: Ticket Options: 0x40810000 Ticket Encryption Type: 0x12 Failure Code: 0x0 Transited Services: - This event is generated every time access is requested to a resource such as a computer or a Windows service. The service name indicates the resource to which access was requested. This event can be correlated with Windows logon events by comparing the Logon GUID fields in each event. The logon event occurs on the machine that was accessed, which is often a different machine than the domain controller which issued the service ticket. Ticket options, encryption types, and failure codes are defined in RFC 4120.

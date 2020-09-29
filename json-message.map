@@ -31,11 +31,11 @@
 # Netskope
 # ----------------------------------
 
-{ "software":"netskope", "event_type": "alert_type", "src_ip": "srcip", "dst_ip": "dstip", "message": "%JSON%", "user": "user", "site": "site", "organization_unit": "organization_unit", "category": "category", "appcategory": "appcategory", "app": "app", "alert_name": "alert_name", "alert": "alert", "access_method": "access_method", "os": "os", "device": "device", "browser": "browser", "_insertion_epoch_timestamp": "_insertion_epoch_timestamp", "object_type": "object_type", "activity": "activity", "object": "object", "md5": "md5", "file_type": "file_type", "url": "url", "dst_country": "dst_country", "dst_region": "dst_region", "policy": "policy", "action":"action", "src_country": "src_country"}
+{ "software":"netskope", "event_type": ".alert_type", "src_ip": ".srcip", "dst_ip": ".dstip", "message": "%JSON%", "user": ".user", "site": ".site", "organization_unit": ".organization_unit", "category": ".category", "appcategory": ".appcategory", "app": ".app", "alert_name": ".alert_name", "alert": ".alert", "access_method": ".access_method", "os": ".os", "device": ".device", "browser": ".browser", "_insertion_epoch_timestamp": "._insertion_epoch_timestamp", "object_type": ".object_type", "activity": ".activity", "object": ".object", "md5": ".md5", "file_type": ".file_type", "url": ".url", "dst_country": ".dst_country", "dst_region": ".dst_region", "policy": ".policy", "action":".action", "src_country": ".src_country"}
 
 # ----------------------------------
 # Suricata 
 # ----------------------------------
 
-{"software":"suricata", "event_type":"event_type","src_ip":"src_ip","dest_ip":"dest_ip","src_port":"src_port","dest_port":"dest_port","proto":"proto","action":"action","gid":"gid","signature_id":"signature_id"}
+{"software":"suricata", "event_type":".event_type","src_ip":".src_ip","dest_ip":".dest_ip","src_port":".src_port","dest_port":".dest_port","proto":".proto","action":".alert.action","gid":".alert.gid","signature_id":".signature_id"}
 
