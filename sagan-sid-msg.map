@@ -4604,6 +4604,9 @@
 5004777 || [AZURE EVENTHUB AD] Brute Force (Invalid password) || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes
 5004778 || [AZURE EVENTHUB AD GEOIP] Brute Force [2] || url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-audit-log-schema
 5004779 || [WINDOWS-MALWARE] Suspicious Powershell execution || url,wiki.quadrantsec.com/bin/view/Main/5004779
+5004780 || [WINDOWS-AUTH] Vulnerable Netlogon/Zerologon connection is allowed - CVE-2020-1472 || url,support.microsoft.com/en-us/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc
+5004781 || [WINDOWS-AUTH] Vulnerable Netlogon/Zerologon connection was denied - CVE-2020-1472 || url,support.microsoft.com/en-us/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc
+5004782 || [WINDOWS-AUTH] Vulnerable Netlogon/Zerologon connection allowed during deployment phase - CVE-2020-1472 || url,support.microsoft.com/en-us/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc
 5100000 || airportd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100001 || com.apple.xpc.launchd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100002 || powerd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
