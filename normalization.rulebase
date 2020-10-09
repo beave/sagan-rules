@@ -152,7 +152,7 @@ rule=: FTP connection from %-:char-to:\x3a%:%src-ip:@ipaddr%/%src-port:number% t
 
 # TCP access denied by ACL from 10.10.10.10/28490 to inside:192.168.1.1/80
 
-rule =: TCP access denied by ACL from %src-ip:@ipaddr%/%src-port:number% to %-:char-to:\x3a%:%dst-ip:@ipaddr%/%dst-port:number%
+rule=: TCP access denied by ACL from %src-ip:@ipaddr%/%src-port:number% to %-:char-to:\x3a%:%dst-ip:@ipaddr%/%dst-port:number%
 
 # Teardown TCP connection 361112504 for outside:10.10.1.100/61160(LOCAL\Bob) to inside:12.159.2.124/443 duration 0:00:13 bytes 3216 TCP FINs (Bob)
 
@@ -517,4 +517,8 @@ rule=: %-:word% A user account was unlocked. Subject: Security ID: %-:word% Acco
 
 rule=: PAM %-:number% more authentication failures; logname= %-:word% %-:word% tty=ssh ruser= rhost=%src-ip:@ipaddr%  user=%username:word%
 rule=: PAM %-:number% more authentication failure; logname= %-:word% %-:word% tty=ssh ruser= rhost=%src-ip:@ipaddr%  user=%username:word%
+
+# 5829 - ZeroLogon
+
+rule=: %event_id:word% The Netlogon service allowed a vulnerable Netlogon secure channel connection. Warning: This connection will be denied once the enforcement phase is released. To better understand the enforcement phase, please visit %-:word% Machine SamAccountName: %username:word% Domain: %domain:word% Account Type: Domain Member Machine Operating System: %os:rest%
 
