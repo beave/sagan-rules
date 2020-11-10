@@ -4607,6 +4607,10 @@
 5004780 || [WINDOWS-AUTH] Vulnerable Netlogon/Zerologon connection is allowed - CVE-2020-1472 || url,support.microsoft.com/en-us/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc
 5004781 || [WINDOWS-AUTH] Vulnerable Netlogon/Zerologon connection was denied - CVE-2020-1472 || url,support.microsoft.com/en-us/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc
 5004782 || [WINDOWS-AUTH] Vulnerable Netlogon/Zerologon connection allowed during deployment phase - CVE-2020-1472 || url,support.microsoft.com/en-us/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc
+5004783 || [WINDOWS-MALWARE] Ryuk ransomware RyukReadMe.txt detected || url,wiki.quadrantsec.com/bin/view/Main/5004783 || url,www.crowdstrike.com/blog/big-game-hunting-with-ryuk-another-lucrative-targeted-ransomware/
+5004784 || [WINDOWS-MALWARE] Ryuk ransomware extension detected. || url,wiki.quadrantsec.com/bin/view/Main/5004784 || url,decrypter.emsisoft.com || www.crowdstrike.com/blog/big-game-hunting-with-ryuk-another-lucrative-targeted-ransomware/
+5004785 || [CROWDSTRIKE] CrowdStrike Remote Response Session Start Event Reported || url,wiki.quadrantsec.com/bin/view/Main/5004785
+5004786 || [CROWDSTRIKE] CrowdStrike Remote Response Session End Event Reported || url,wiki.quadrantsec.com/bin/view/Main/5004786
 5100000 || airportd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100001 || com.apple.xpc.launchd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100002 || powerd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
