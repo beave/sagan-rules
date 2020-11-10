@@ -33,3 +33,10 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Low
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Medium Severity Event Reported "; content: "DetectionSummaryEvent"; nocase; content: "SeverityName=|22|Medium"; nocase; parse_src_ip:1; classtype:suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004759; sid:5004759; rev:1;)
 
+# Added by Joseph Suain @ Quadrant (2020/11/10)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Remote Response Session Start Event Reported"; content: "RemoteResponseSessionStartEvent"; nocase; parse_src_ip:1; classtype:suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004785; sid:5004785; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Remote Response Session End Event Reported"; content: "RemoteResponseSessionEndEvent"; nocase; parse_src_ip:1; classtype:suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004786; sid:5004786; rev:1;)
+
+
