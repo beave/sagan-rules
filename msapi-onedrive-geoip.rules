@@ -135,7 +135,7 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] Shari
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ShortcutAdded from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ShortcutAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004950; sid:5004950; rev: 1;)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ShortcutAdded from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ShortcutAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004950; sid:5004950; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ShortcutAdded from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ShortcutAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005013; sid:5005013; rev: 1;)
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] SiteCollectionAdminAdded from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "SiteCollectionAdminAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004951; sid:5004951; rev: 1;)
 

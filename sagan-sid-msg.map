@@ -4713,6 +4713,122 @@
 5004891 || [MSAPI-MICROSOFTSTREAM-GEOIP] Stream action from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004891
 5004892 || [MSAPI-MICROSOFTSTREAM-BLUEDOT] Stream action from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004892
 5004893 || [MSAPI-MICROSOFTFORMS-GEOIP] Action from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5004893
+5004894 || [MSAPI-MICROSOFTTEAMS-BLUEDOT] Teams session started from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004894
+5004895 || [MSAPI-MICROSOFTTEAMS-GEOIP] Teams session started from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004895
+5004896 || [MSAPI-ONEDRIVE-GEOIP] AccessRequestApproved from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004896
+5004897 || [MSAPI-ONEDRIVE-GEOIP] AccessRequestCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004897
+5004898 || [MSAPI-ONEDRIVE-GEOIP] AddedToGroup from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004898
+5004900 || [MSAPI-ONEDRIVE-GEOIP] AddedToSecureLink from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004900
+5004901 || [MSAPI-ONEDRIVE-GEOIP] AnonymousLinkCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004901
+5004902 || [MSAPI-ONEDRIVE-GEOIP] AnonymousLinkUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004902
+5004903 || [MSAPI-ONEDRIVE-GEOIP] AnonymousLinkUsed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004903
+5004904 || [MSAPI-ONEDRIVE-GEOIP] CompanyLinkCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004904
+5004905 || [MSAPI-ONEDRIVE-GEOIP] CompanyLinkUsed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004905
+5004906 || [MSAPI-ONEDRIVE-GEOIP] FileAccessed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004906
+5004907 || [MSAPI-ONEDRIVE-GEOIP] FileAccessed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004907
+5004908 || [MSAPI-ONEDRIVE-GEOIP] FileAccessedExtended from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004908
+5004910 || [MSAPI-ONEDRIVE-GEOIP] FileCopied from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004910
+5004911 || [MSAPI-ONEDRIVE-GEOIP] FileDeleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004911
+5004913 || [MSAPI-ONEDRIVE-GEOIP] FileDeletedFirstStageRecycleBin from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004913
+5004914 || [MSAPI-ONEDRIVE-GEOIP] FileDownloaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004914
+5004915 || [MSAPI-ONEDRIVE-GEOIP] FileModified from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004915
+5004916 || [MSAPI-ONEDRIVE-GEOIP] FileModifiedExtended from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004916
+5004917 || [MSAPI-ONEDRIVE-GEOIP] FileMoved from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004917
+5004918 || [MSAPI-ONEDRIVE-GEOIP] FilePreviewed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004918
+5004919 || [MSAPI-ONEDRIVE-GEOIP] FileRenamed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004919
+5004920 || [MSAPI-ONEDRIVE-GEOIP] FileRestored from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004920
+5004921 || [MSAPI-ONEDRIVE-GEOIP] FileSyncDownloadedFull from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004921
+5004922 || [MSAPI-ONEDRIVE-GEOIP] FileSyncDownloadedPartial from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004922
+5004923 || [MSAPI-ONEDRIVE-GEOIP] FileSyncUploadedFull from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004923
+5004924 || [MSAPI-ONEDRIVE-GEOIP] FileUploaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004924
+5004925 || [MSAPI-ONEDRIVE-GEOIP] FolderCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004925
+5004926 || [MSAPI-ONEDRIVE-GEOIP] FolderDeleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004926
+5004927 || [MSAPI-ONEDRIVE-GEOIP] FolderModified from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004927
+5004928 || [MSAPI-ONEDRIVE-GEOIP] FolderMoved from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004928
+5004930 || [MSAPI-ONEDRIVE-GEOIP] FolderRenamed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004930
+5004931 || [MSAPI-ONEDRIVE-GEOIP] GroupAdded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004931
+5004932 || [MSAPI-ONEDRIVE-GEOIP] ListColumnCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004932
+5004933 || [MSAPI-ONEDRIVE-GEOIP] ListColumnUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004933
+5004934 || [MSAPI-ONEDRIVE-GEOIP] ListCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004934
+5004935 || [MSAPI-ONEDRIVE-GEOIP] ListItemCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004935
+5004936 || [MSAPI-ONEDRIVE-GEOIP] ListItemUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004936
+5004937 || [MSAPI-ONEDRIVE-GEOIP] ListUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004937
+5004938 || [MSAPI-ONEDRIVE-GEOIP] ListViewUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004938
+5004939 || [MSAPI-ONEDRIVE-GEOIP] ListViewed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004939
+5004940 || [MSAPI-ONEDRIVE-GEOIP] PageViewed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004940
+5004941 || [MSAPI-ONEDRIVE-GEOIP] PageViewedExtended from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004941
+5004942 || [MSAPI-ONEDRIVE-GEOIP] PermissionLevelAdded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004942
+5004943 || [MSAPI-ONEDRIVE-GEOIP] SearchQueryPerformed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004943
+5004944 || [MSAPI-ONEDRIVE-GEOIP] SecureLinkCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004944
+5004945 || [MSAPI-ONEDRIVE-GEOIP] SecureLinkUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004945
+5004946 || [MSAPI-ONEDRIVE-GEOIP] SecureLinkUsed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004946
+5004947 || [MSAPI-ONEDRIVE-GEOIP] SharingInheritanceBroken from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004947
+5004948 || [MSAPI-ONEDRIVE-GEOIP] SharingRevoked from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004948
+5004949 || [MSAPI-ONEDRIVE-GEOIP] SharingSet from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004949
+5004950 || [MSAPI-ONEDRIVE-GEOIP] ShortcutAdded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004950
+5004951 || [MSAPI-ONEDRIVE-GEOIP] SiteCollectionAdminAdded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004951
+5004952 || [MSAPI-ONEDRIVE-GEOIP] SiteCollectionAdminRemoved from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004952
+5004953 || [MSAPI-ONEDRIVE-GEOIP] SiteCollectionCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004953
+5004954 || [MSAPI-ONEDRIVE-GEOIP] WACTokenShared from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004954
+5004955 || [MSAPI-ONEDRIVE-GEOIP] Catch all from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004955
+5004956 || [MSAPI-ONEDRIVE-BLUEDOT] Catch all from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004956
+5004957 || [MSAPI-ONEDRIVE-BLUEDOT] AccessRequestApproved from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004957
+5004958 || [MSAPI-ONEDRIVE-BLUEDOT] AccessRequestCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004958
+5004959 || [MSAPI-ONEDRIVE-BLUEDOT] AddedToGroup from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004959
+5004960 || [MSAPI-ONEDRIVE-BLUEDOT] AddedToSecureLink from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004960
+5004961 || [MSAPI-ONEDRIVE-BLUEDOT] AnonymousLinkCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004961
+5004962 || [MSAPI-ONEDRIVE-BLUEDOT] AnonymousLinkUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004962
+5004963 || [MSAPI-ONEDRIVE-BLUEDOT] AnonymousLinkUsed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004963
+5004964 || [MSAPI-ONEDRIVE-BLUEDOT] CompanyLinkCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004964
+5004965 || [MSAPI-ONEDRIVE-BLUEDOT] CompanyLinkUsed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004965
+5004966 || [MSAPI-ONEDRIVE-BLUEDOT] FileAccessed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004966
+5004967 || [MSAPI-ONEDRIVE-BLUEDOT] FileAccessed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004967
+5004968 || [MSAPI-ONEDRIVE-BLUEDOT] FileAccessedExtended from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004968
+5004969 || [MSAPI-ONEDRIVE-BLUEDOT] FileCopied from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004969
+5004970 || [MSAPI-ONEDRIVE-BLUEDOT] FileDeleted from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004970
+5004971 || [MSAPI-ONEDRIVE-BLUEDOT] FileDeletedFirstStageRecycleBin from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004971
+5004972 || [MSAPI-ONEDRIVE-BLUEDOT] FileDownloaded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004972
+5004973 || [MSAPI-ONEDRIVE-BLUEDOT] FileModified from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004973
+5004974 || [MSAPI-ONEDRIVE-BLUEDOT] FileModifiedExtended from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004974
+5004975 || [MSAPI-ONEDRIVE-BLUEDOT] FileMoved from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004975
+5004976 || [MSAPI-ONEDRIVE-BLUEDOT] FilePreviewed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004976
+5004977 || [MSAPI-ONEDRIVE-BLUEDOT] FileRenamed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004977
+5004978 || [MSAPI-ONEDRIVE-BLUEDOT] FileRestored from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004978
+5004979 || [MSAPI-ONEDRIVE-BLUEDOT] FileSyncDownloadedFull from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004979
+5004980 || [MSAPI-ONEDRIVE-BLUEDOT] FileSyncDownloadedPartial from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004980
+5004981 || [MSAPI-ONEDRIVE-BLUEDOT] FileSyncUploadedFull from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004981
+5004982 || [MSAPI-ONEDRIVE-BLUEDOT] FileUploaded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004982
+5004983 || [MSAPI-ONEDRIVE-BLUEDOT] FolderCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004983
+5004984 || [MSAPI-ONEDRIVE-BLUEDOT] FolderDeleted from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004984
+5004985 || [MSAPI-ONEDRIVE-BLUEDOT] FolderModified from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004985
+5004986 || [MSAPI-ONEDRIVE-BLUEDOT] FolderMoved from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004986
+5004987 || [MSAPI-ONEDRIVE-BLUEDOT] FolderRenamed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004987
+5004988 || [MSAPI-ONEDRIVE-BLUEDOT] GroupAdded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004988
+5004989 || [MSAPI-ONEDRIVE-BLUEDOT] ListColumnCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004989
+5004990 || [MSAPI-ONEDRIVE-BLUEDOT] ListColumnUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004990
+5004991 || [MSAPI-ONEDRIVE-BLUEDOT] ListCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004991
+5004992 || [MSAPI-ONEDRIVE-BLUEDOT] ListItemCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004992
+5004993 || [MSAPI-ONEDRIVE-BLUEDOT] ListItemUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004993
+5004994 || [MSAPI-ONEDRIVE-BLUEDOT] ListUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004994
+5004995 || [MSAPI-ONEDRIVE-BLUEDOT] ListViewUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004995
+5004996 || [MSAPI-ONEDRIVE-BLUEDOT] ListViewed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004996
+5004997 || [MSAPI-ONEDRIVE-BLUEDOT] PageViewed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004997
+5004998 || [MSAPI-ONEDRIVE-BLUEDOT] PageViewedExtended from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004998
+5004999 || [MSAPI-ONEDRIVE-BLUEDOT] PermissionLevelAdded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5004999
+5005000 || [MSAPI-ONEDRIVE-BLUEDOT] SearchQueryPerformed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005000
+5005001 || [MSAPI-ONEDRIVE-BLUEDOT] SecureLinkCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005001
+5005002 || [MSAPI-ONEDRIVE-BLUEDOT] SecureLinkUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005002
+5005003 || [MSAPI-ONEDRIVE-BLUEDOT] SecureLinkUsed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005003
+5005004 || [MSAPI-ONEDRIVE-BLUEDOT] SharingInheritanceBroken from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005004
+5005005 || [MSAPI-ONEDRIVE-BLUEDOT] SharingRevoked from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005005
+5005006 || [MSAPI-ONEDRIVE-BLUEDOT] SharingSet from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005006
+5005007 || [MSAPI-ONEDRIVE-BLUEDOT] ShortcutAdded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005007
+5005008 || [MSAPI-ONEDRIVE-BLUEDOT] ShortcutAdded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005008
+5005009 || [MSAPI-ONEDRIVE-BLUEDOT] SiteCollectionAdminAdded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005009
+5005010 || [MSAPI-ONEDRIVE-BLUEDOT] SiteCollectionAdminRemoved from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005010
+5005011 || [MSAPI-ONEDRIVE-BLUEDOT] SiteCollectionCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005011
+5005012 || [MSAPI-ONEDRIVE-BLUEDOT] WACTokenShared from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005012
+5005013 || [MSAPI-ONEDRIVE-GEOIP] ShortcutAdded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005013
 5100000 || airportd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100001 || com.apple.xpc.launchd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100002 || powerd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
