@@ -4645,43 +4645,68 @@
 5004819 || [MSAPI-AZURE-AD-GEOIP] Policy updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004819
 5004820 || [MSAPI-AZURE-AD-GEOIP] Service principal updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004820
 5004821 || [MSAPI-AZURE-AD-GEOIP] User updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004821
-5004822 || [MSAPI-AZURE-AD-GEOIP] Catch all outside HOME_COUNTRY event || url,wiki.quadrantsec.com/bin/view/Main/5004821
-5004823 || [MSAPI-AZURE-AD-GEOIP] Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004823
-5004824 || [MSAPI-AZURE-AD-GEOIP] App role assignment grant from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004824
-5004825 || [MSAPI-AZURE-AD-GEOIP] App role assignment grant from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004825
-5004826 || [MSAPI-AZURE-AD-GEOIP] Add delegate permission grant from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004826
-5004827 || [MSAPI-AZURE-AD-GEOIP] Device added from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004827
-5004828 || [MSAPI-AZURE-AD-GEOIP] Group added from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004828
-5004829 || [MSAPI-AZURE-AD-GEOIP] Member add to group from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004829
-5004830 || [MSAPI-AZURE-AD-GEOIP] Member add to role from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004830
-5004831 || [MSAPI-AZURE-AD-GEOIP] Owner added to group from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004831
-5004832 || [MSAPI-AZURE-AD-GEOIP] Registered owner added to device from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004832
-5004833 || [MSAPI-AZURE-AD-GEOIP] Added service principal from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004833
-5004834 || [MSAPI-AZURE-AD-GEOIP] User added from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004834
-5004835 || [MSAPI-AZURE-AD-GEOIP] Change user license from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004835
-5004836 || [MSAPI-AZURE-AD-GEOIP] Change user password from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004836
-5004837 || [MSAPI-AZURE-AD-GEOIP] Consent to application from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004837
-5004838 || [MSAPI-AZURE-AD-GEOIP] Application password created for user from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004838
-5004839 || [MSAPI-AZURE-AD-GEOIP] Device deleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004839
-5004840 || [MSAPI-AZURE-AD-GEOIP] User deleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004840
-5004841 || [MSAPI-AZURE-AD-GEOIP] Account disabled from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004841
-5004842 || [MSAPI-AZURE-AD-GEOIP] Strong authentication enabled from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004842
-5004843 || [MSAPI-AZURE-AD-GEOIP] Account enabled from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004843
-5004844 || [MSAPI-AZURE-AD-GEOIP] Hard delete application from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004844
-5004845 || [MSAPI-AZURE-AD-GEOIP] Remove member from group from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004845
-5004846 || [MSAPI-AZURE-AD-GEOIP] Remove owner from group from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004846
-5004847 || [MSAPI-AZURE-AD-GEOIP] Password reset from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004847
-5004848 || [MSAPI-AZURE-AD-GEOIP] User restored from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004848
-5004849 || [MSAPI-AZURE-AD-GEOIP] Company information set from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004849
-5004850 || [MSAPI-AZURE-AD-GEOIP] Update StsRefreshTokenValidFrom Timestamp from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004850
-5004851 || [MSAPI-AZURE-AD-GEOIP] Device updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004851
-5004852 || [MSAPI-AZURE-AD-GEOIP] Group updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004852
-5004853 || [MSAPI-AZURE-AD-GEOIP] Policy updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004853
-5004854 || [MSAPI-AZURE-AD-GEOIP] Service principal updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004854
-5004855 || [MSAPI-AZURE-AD-GEOIP] User updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004855
+5004822 || [MSAPI-AZURE-AD-BLUEDOT] Catch all outside HOME_COUNTRY event || url,wiki.quadrantsec.com/bin/view/Main/5004821
+5004823 || [MSAPI-AZURE-AD-BLUEDOT] Login from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004823
+5004824 || [MSAPI-AZURE-AD-BLUEDOT] App role assignment grant from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004824
+5004825 || [MSAPI-AZURE-AD-BLUEDOT] App role assignment grant from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004825
+5004826 || [MSAPI-AZURE-AD-BLUEDOT] Add delegate permission grant from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004826
+5004827 || [MSAPI-AZURE-AD-BLUEDOT] Device added from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004827
+5004828 || [MSAPI-AZURE-AD-BLUEDOT] Group added from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004828
+5004829 || [MSAPI-AZURE-AD-BLUEDOT] Member add to group from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004829
+5004830 || [MSAPI-AZURE-AD-BLUEDOT] Member add to role from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004830
+5004831 || [MSAPI-AZURE-AD-BLUEDOT] Owner added to group from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004831
+5004832 || [MSAPI-AZURE-AD-BLUEDOT] Registered owner added to device from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004832
+5004833 || [MSAPI-AZURE-AD-BLUEDOT] Added service principal from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004833
+5004834 || [MSAPI-AZURE-AD-BLUEDOT] User added from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004834
+5004835 || [MSAPI-AZURE-AD-BLUEDOT] Change user license from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004835
+5004836 || [MSAPI-AZURE-AD-BLUEDOT] Change user password from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004836
+5004837 || [MSAPI-AZURE-AD-BLUEDOT] Consent to application from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004837
+5004838 || [MSAPI-AZURE-AD-BLUEDOT] Application password created for user from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004838
+5004839 || [MSAPI-AZURE-AD-BLUEDOT] Device deleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004839
+5004840 || [MSAPI-AZURE-AD-BLUEDOT] User deleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004840
+5004841 || [MSAPI-AZURE-AD-BLUEDOT] Account disabled from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004841
+5004842 || [MSAPI-AZURE-AD-BLUEDOT] Strong authentication enabled from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004842
+5004843 || [MSAPI-AZURE-AD-BLUEDOT] Account enabled from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004843
+5004844 || [MSAPI-AZURE-AD-BLUEDOT] Hard delete application from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004844
+5004845 || [MSAPI-AZURE-AD-BLUEDOT] Remove member from group from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004845
+5004846 || [MSAPI-AZURE-AD-BLUEDOT] Remove owner from group from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004846
+5004847 || [MSAPI-AZURE-AD-BLUEDOT] Password reset from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004847
+5004848 || [MSAPI-AZURE-AD-BLUEDOT] User restored from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004848
+5004849 || [MSAPI-AZURE-AD-BLUEDOT] Company information set from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004849
+5004850 || [MSAPI-AZURE-AD-BLUEDOT] Update StsRefreshTokenValidFrom Timestamp from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004850
+5004851 || [MSAPI-AZURE-AD-BLUEDOT] Device updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004851
+5004852 || [MSAPI-AZURE-AD-BLUEDOT] Group updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004852
+5004853 || [MSAPI-AZURE-AD-BLUEDOT] Policy updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004853
+5004854 || [MSAPI-AZURE-AD-BLUEDOT] Service principal updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004854
+5004855 || [MSAPI-AZURE-AD-BLUEDOT] User updated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004855
 5004856 || [MSAPI-AZURE-AD-GEOIP] Device deleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004856
-5004857 || [MSAPI-AZURE-AD-GEOIP] Registered users added to device from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004857
+5004857 || [MSAPI-AZURE-AD-BLUEDOT] Registered users added to device from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004857
 5004858 || [MSAPI-AZUREAD] User Login Failed - Brute Force [10/1] || url,wiki.quadrantsec.com/bin/view/Main/5004858
+5004859 || [MSAPI-THREATINTEL] Phishing attempt detected || url,wiki.quadrantsec.com/bin/view/Main/5004859
+5004860 || [MSAPI-THREATINTEL] Possible malware detected || url,wiki.quadrantsec.com/bin/view/Main/5004860
+5004861 || [MSAPI-THREATINTEL] Spam detected || url,wiki.quadrantsec.com/bin/view/Main/5004861
+5004862 || [MSAPI-THREATINTEL] AirInvestigation Started || url,docs.microsoft.com/en-us/microsoft-365/security/office-365-security/automated-investigation-response-office?view=o365-worldwide || url,wiki.quadrantsec.com/bin/view/Main/5004862
+5004863 || [MSAPI-EXCHANGE] Data Loss Prevention Rule Match || url,wiki.quadrantsec.com/bin/view/Main/5004863
+5004864 || [MSAPI-EXCHANGE-GEOIP] AddFolderPermissions from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004864
+5004865 || [MSAPI-EXCHANGE-GEOIP] Copy from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004865
+5004866 || [MSAPI-EXCHANGE-GEOIP] MailboxLogin from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004866
+5004867 || [MSAPI-EXCHANGE-GEOIP] ModifyFolderPermissions from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004867
+5004868 || [MSAPI-EXCHANGE-GEOIP] MoveToDeletedItems from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004868
+5004869 || [MSAPI-EXCHANGE-GEOIP] RemoveFolderPermissions from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004869
+5004870 || [MSAPI-EXCHANGE-GEOIP] Send from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004870
+5004871 || [MSAPI-EXCHANGE-GEOIP] SendAs from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004871
+5004872 || [MSAPI-EXCHANGE-GEOIP] SendOnBehalf from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004872
+5004873 || [MSAPI-EXCHANGE-GEOIP] Update from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004873
+5004874 || [MSAPI-EXCHANGE-BLUEDOT] AddFolderPermissions from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004874
+5004875 || [MSAPI-EXCHANGE-BLUEDOT] Copy from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004875
+5004876 || [MSAPI-EXCHANGE-BLUEDOT] MailboxLogin from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004876
+5004877 || [MSAPI-EXCHANGE-BLUEDOT] ModifyFolderPermissions from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004877
+5004878 || [MSAPI-EXCHANGE-BLUEDOT] MoveToDeletedItems from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004878
+5004879 || [MSAPI-EXCHANGE-BLUEDOT] RemoveFolderPermissions from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004879
+5004880 || [MSAPI-EXCHANGE-BLUEDOT] Send from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004880
+5004881 || [MSAPI-EXCHANGE-BLUEDOT] SendAs from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004881
+5004882 || [MSAPI-EXCHANGE-BLUEDOT] SendOnBehalf from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004882
+5004883 || [MSAPI-EXCHANGE-BLUEDOT] Update from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5004883
 5100000 || airportd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100001 || com.apple.xpc.launchd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100002 || powerd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
