@@ -1,0 +1,103 @@
+# Sagan msapi-azuread-geoip.rules
+# Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+# These rules work best with a JSON input map.  See the "msapi" mapping.  See the Sagan
+# JSON documentation for more information
+#
+
+# Catch "all" rule.
+#
+# alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Catch all outside HOME_COUNTRY event"; json_content: "Workload", "AzureActiveDirectory"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004787; sid:5004787; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Login from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "UserLoggedIn"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004788; sid:5004788; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] App role assignment grant from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add app role assignment grant to user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004789; sid:5004789; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] App role assignment grant from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add app role assignment grant to user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004790; sid:5004790; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Add delegate permission grant from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add delegated permission grant."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004791; sid:5004791; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Device added from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add device."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004792; sid:5004792; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Group added from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add group."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004794; sid:5004794; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Member add to group from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add member to group."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004795; sid:5004795; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Member add to role from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add member to role."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004796; sid:5004796; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Owner added to group from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add owner to group."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004797; sid:5004797; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Registered owner added to device from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add registered owner to device."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004798; sid:5004798; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Registered users added to device from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add registered users to device."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004799; sid:5004799; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Added service principal from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add service principal."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004800; sid:5004800; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] User added from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Add user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004801; sid:5004801; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Change user license from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Change user license."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004802; sid:5004802; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Change user password from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Change user password."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004803; sid:5004803; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Consent to application from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Consent to application."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004804; sid:5004804; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Application password created for user from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Create application password for user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004805; sid:5004805; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Device deleted from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Create application password for user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004805; sid:5004805; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] User deleted from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Delete user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004806; sid:5004806; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Account disabled from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Disable account."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004807; sid:5004807; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Strong authentication enabled from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Enable Strong Authentication."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004808; sid:5004808; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Account enabled from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Enable account."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004809; sid:5004809; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Hard delete application from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Hard Delete application."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004810; sid:5004810; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Remove member from group from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Remove member from group."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004811; sid:5004811; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Remove owner from group from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Remove member from group."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004812; sid:5004812; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Password reset from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Reset user password."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004813; sid:5004813; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] User restored from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Restore user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004814; sid:5004814; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Company information set from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Set Company Information."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004815; sid:5004815; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Update StsRefreshTokenValidFrom Timestamp from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Update StsRefreshTokenValidFrom Timestamp."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004816; sid:5004816; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Device updated from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Update device."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004817; sid:5004817; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Group updated from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Update group."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004818; sid:5004818; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Policy updated from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Update policy."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004819; sid:5004819; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Service principal updated from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Update service principal."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004820; sid:5004820; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] User updated from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Update user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004821; sid:5004821; rev:1;)
+
