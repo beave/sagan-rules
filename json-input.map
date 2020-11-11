@@ -61,6 +61,12 @@
 {"software":"journald","hostname":"._HOSTNAME","facility":".SYSLOG_FACILITY","level":".PRIORITY","priority":".PRIORITY","time":".__REALTIME_TIMESTAMP","date":".__REALTIME_TIMESTAMP","program":"._COMM","message":".MESSAGE"}
 
 # ------------------------------------------
+# Microsoft Office365 API
+# ------------------------------------------
+
+{"software":"msapi", "program":".Workload", "time":".CreationTime", "date":".CreationTime", "message":"%JSON%", "src_ip":".ClientIP", "username":".UserId" }
+
+# ------------------------------------------
 # Custom formats
 # ------------------------------------------
 
