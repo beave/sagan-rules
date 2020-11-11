@@ -1,0 +1,54 @@
+# Sagan msapi-exchange.rules
+# Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+# These rules work best with a JSON input map.  See the "msapi" mapping.  See the Sagan
+# JSON documentation for more information
+#
+# For some reason,  Microsoft decided with the "ClientIP" to make the value inconsistent.  It might be
+# 192.168.1.1 (which is great), or "[192.168.1.1]:1234" or "192.168.1.1:1231", etc.  This only allows 
+# us to lookup certain types of Exchange events.   Might want to revisit this later. 
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] AddFolderPermissions from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "AddFolderPermissions"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004864; sid:5004864; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] Copy from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "Copy"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004865; sid:5004865; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] MailboxLogin from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "MailboxLogin"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-login; reference: url,wiki.quadrantsec.com/bin/view/Main/5004866; sid:5004866; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] ModifyFolderPermissions from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "ModifyFolderPermissions"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004867; sid:5004867; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] MoveToDeletedItems from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "MoveToDeletedItems"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004868; sid:5004868; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] RemoveFolderPermissions from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "RemoveFolderPermissions"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004869; sid:5004869; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] Send from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "Send"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004870; sid:5004870; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] SendAs from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "SendAs"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004871; sid:5004871; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] SendOnBehalf from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "SendOnBehalf"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004872; sid:5004872; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] Update from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "Update"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004873; sid:5004873; rev: 1;)
+
