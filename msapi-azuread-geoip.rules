@@ -67,7 +67,7 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Conse
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Application password created for user from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Create application password for user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004805; sid:5004805; rev:1;)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Device deleted from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Create application password for user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004805; sid:5004805; rev:1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Device deleted from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Create application password for user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004856; sid:5004856; rev:1;)
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] User deleted from outside HOME_COUNTRY"; json_content: "Workload", "AzureActiveDirectory"; json_content: "Operation", "Delete user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004806; sid:5004806; rev:1;)
 
