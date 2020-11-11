@@ -1,4 +1,4 @@
-# Sagan msapi-microsoftflow.rules
+# Sagan msapi-microsoftflow-bluedot.rules
 # Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -29,10 +29,7 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTFLOW-BLUEDOT] CreateFlow from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "CreateFlow"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004887; sid:5004887; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTFLOW-BLUEDOT] Flow action from Bluedot listed IP address"; json_content: "Workload","MicrosoftFlow"; json_content: bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004887; sid:5004887; rev: 1;)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTFLOW-BLUEDOT] DeleteFlow from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "DeleteFlow"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004888; sid:5004888; rev: 1;)
-
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTFLOW-BLUEDOT] EditFlow from outside HOME_COUNTRY"; json_content: "Workload","Exchange"; json_content: "Operation", "EditFlow"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004889; sid:5004889; rev: 1;)
 
 

@@ -1,4 +1,4 @@
-# Sagan msapi-microsoftflow-geoip.rules
+# Sagan msapi-microsoftforms-bluedot.rules
 # Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -29,6 +29,5 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTFLOW-GEOIP] Flow action from outside HOME_COUNTRY"; json_content: "Workload","MicrosoftFlow"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004884; sid:5004884; rev: 1;)
-
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTFORMS-GEOIP] Action from Bluedot listed IP"; json_content: "Workload","MicrosoftForms"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004890; sid:5004890; rev: 1;)
 
