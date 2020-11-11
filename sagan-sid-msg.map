@@ -4829,6 +4829,73 @@
 5005011 || [MSAPI-ONEDRIVE-BLUEDOT] SiteCollectionCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005011
 5005012 || [MSAPI-ONEDRIVE-BLUEDOT] WACTokenShared from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005012
 5005013 || [MSAPI-ONEDRIVE-GEOIP] ShortcutAdded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005013
+5005014 || [MSAPI-ONEDRIVE-GEOIP] DLP Rule Match || url,wiki.quadrantsec.com/bin/view/Main/5005014
+5005015 || [MSAPI-POWERBI-GEOIP] Catch all from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005015
+5005016 || [MSAPI-POWERBI-GEOIP] AnalyzedByExternalApplication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005016
+5005017 || [MSAPI-POWERBI-GEOIP] ChangeGatewayDatasourceUsers from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005017
+5005018 || [MSAPI-POWERBI-GEOIP] CreateDataset from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005018
+5005019 || [MSAPI-POWERBI-GEOIP] CreateEmailSubscription from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005019
+5005020 || [MSAPI-POWERBI-GEOIP] CreateEmailSubscription from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005020
+5005021 || [MSAPI-POWERBI-GEOIP] CreateFolder from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005021
+5005022 || [MSAPI-POWERBI-GEOIP] CreateReport from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005022
+5005023 || [MSAPI-POWERBI-GEOIP] DeleteDataset from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005023
+5005024 || [MSAPI-POWERBI-GEOIP] DeleteEmailSubscription from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005024
+5005025 || [MSAPI-POWERBI-GEOIP] DeleteReport from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005025
+5005026 || [MSAPI-POWERBI-GEOIP] DownloadReport from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005026
+5005027 || [MSAPI-POWERBI-GEOIP] EditDataset from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005027
+5005028 || [MSAPI-POWERBI-GEOIP] EditReport from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005028
+5005029 || [MSAPI-POWERBI-GEOIP] ExportArtifact from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005029
+5005030 || [MSAPI-POWERBI-GEOIP] ExportReport from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005030
+5005031 || [MSAPI-POWERBI-GEOIP] GenerateCustomVisualAADAccessToken from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005031
+5005032 || [MSAPI-POWERBI-GEOIP] GenerateDataflowSasToken from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005032
+5005033 || [MSAPI-POWERBI-GEOIP] GenerateScreenshot from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005033
+5005034 || [MSAPI-POWERBI-GEOIP] GetGroupsAsAdmin from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005034
+5005035 || [MSAPI-POWERBI-GEOIP] Import from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005035
+5005036 || [MSAPI-POWERBI-GEOIP] PrintReport from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005036
+5005037 || [MSAPI-POWERBI-GEOIP] RefreshDataset from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005037
+5005038 || [MSAPI-POWERBI-GEOIP] SetScheduledRefresh from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005038
+5005039 || [MSAPI-POWERBI-GEOIP] ShareReport from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005039
+5005040 || [MSAPI-POWERBI-GEOIP] UnpublishApp from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005040
+5005041 || [MSAPI-POWERBI-GEOIP] UnpublishApp from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005041
+5005042 || [MSAPI-POWERBI-GEOIP] UpdateApp from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005042
+5005043 || [MSAPI-POWERBI-GEOIP] UpdateDatasourceCredentials from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005043
+5005044 || [MSAPI-POWERBI-GEOIP] UpdateEmailSubscription from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005044
+5005045 || [MSAPI-POWERBI-GEOIP] UpdatedAdminFeatureSwitch from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005045
+5005046 || [MSAPI-POWERBI-GEOIP] ViewDashboard from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005046
+5005047 || [MSAPI-POWERBI-GEOIP] ViewUsageMetrics from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005047
+5005048 || [MSAPI-POWERBI-BLUEDOT] Catch all from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005048
+5005049 || [MSAPI-POWERBI-BLUEDOT] AnalyzedByExternalApplication from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005049
+5005050 || [MSAPI-POWERBI-BLUEDOT] ChangeGatewayDatasourceUsers from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005050
+5005051 || [MSAPI-POWERBI-BLUEDOT] CreateDataset from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005051
+5005052 || [MSAPI-POWERBI-BLUEDOT] CreateEmailSubscription from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005052
+5005053 || [MSAPI-POWERBI-BLUEDOT] CreateEmailSubscription from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005053
+5005054 || [MSAPI-POWERBI-BLUEDOT] CreateFolder from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005054
+5005055 || [MSAPI-POWERBI-BLUEDOT] CreateReport from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005055
+5005056 || [MSAPI-POWERBI-BLUEDOT] DeleteDataset from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005056
+5005057 || [MSAPI-POWERBI-BLUEDOT] DeleteEmailSubscription from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005057
+5005058 || [MSAPI-POWERBI-BLUEDOT] DeleteReport from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005058
+5005059 || [MSAPI-POWERBI-BLUEDOT] DownloadReport from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005059
+5005060 || [MSAPI-POWERBI-BLUEDOT] EditDataset from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005060
+5005061 || [MSAPI-POWERBI-BLUEDOT] EditReport from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005061
+5005062 || [MSAPI-POWERBI-BLUEDOT] ExportArtifact from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005062
+5005063 || [MSAPI-POWERBI-BLUEDOT] ExportReport from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005063
+5005064 || [MSAPI-POWERBI-BLUEDOT] GenerateCustomVisualAADAccessToken from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005064
+5005065 || [MSAPI-POWERBI-BLUEDOT] GenerateDataflowSasToken from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005065
+5005066 || [MSAPI-POWERBI-BLUEDOT] GenerateScreenshot from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005066
+5005067 || [MSAPI-POWERBI-BLUEDOT] GetGroupsAsAdmin from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005067
+5005068 || [MSAPI-POWERBI-BLUEDOT] Import from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005068
+5005069 || [MSAPI-POWERBI-BLUEDOT] PrintReport from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005069
+5005070 || [MSAPI-POWERBI-BLUEDOT] RefreshDataset from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005070
+5005071 || [MSAPI-POWERBI-BLUEDOT] SetScheduledRefresh from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005071
+5005072 || [MSAPI-POWERBI-BLUEDOT] ShareReport from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005072
+5005073 || [MSAPI-POWERBI-BLUEDOT] UnpublishApp from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005073
+5005074 || [MSAPI-POWERBI-BLUEDOT] UnpublishApp from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005074
+5005075 || [MSAPI-POWERBI-BLUEDOT] UpdateApp from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005075
+5005076 || [MSAPI-POWERBI-BLUEDOT] UpdateDatasourceCredentials from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005076
+5005077 || [MSAPI-POWERBI-BLUEDOT] UpdateEmailSubscription from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005077
+5005078 || [MSAPI-POWERBI-BLUEDOT] UpdatedAdminFeatureSwitch from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005078
+5005079 || [MSAPI-POWERBI-BLUEDOT] ViewDashboard from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005079
+5005080 || [MSAPI-POWERBI-BLUEDOT] ViewUsageMetrics from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005080
 5100000 || airportd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100001 || com.apple.xpc.launchd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100002 || powerd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
