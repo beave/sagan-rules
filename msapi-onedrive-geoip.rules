@@ -1,0 +1,148 @@
+# Sagan msapi-microsoftteams-geoip.rules
+# Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+# These rules work best with a JSON input map.  See the "msapi" mapping.  See the Sagan
+# JSON documentation for more information
+#
+
+# Catch all
+#
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] Catch all from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "WACTokenShared"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004955; sid:5004955; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] AccessRequestApproved from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "AccessRequestApproved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004896; sid:5004896; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] AccessRequestCreated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "AccessRequestCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004897; sid:5004897; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] AddedToGroup from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "AddedToGroup"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004898; sid:5004898; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] AddedToSecureLink from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "AddedToGroup"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004900; sid:5004900; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] AnonymousLinkCreated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "AnonymousLinkCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004901; sid:5004901; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] AnonymousLinkUpdated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "AnonymousLinkCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004902; sid:5004902; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] AnonymousLinkUsed from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "AnonymousLinkUsed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004903; sid:5004903; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] CompanyLinkCreated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "CompanyLinkCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004904; sid:5004904; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] CompanyLinkUsed from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "CompanyLinkUsed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004905; sid:5004905; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileAccessed from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileAccessed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004906; sid:5004906; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileAccessed from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileAccessed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004907; sid:5004907; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileAccessedExtended from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileAccessedExtended"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004908; sid:5004908; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileCopied from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileCopied"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004910; sid:5004910; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileDeleted from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileDeleted"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004911; sid:5004911; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileDeletedFirstStageRecycleBin from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileDeletedFirstStageRecycleBin"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004913; sid:5004913; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileDownloaded from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileDownloaded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004914; sid:5004914; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileModified from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileModified"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004915; sid:5004915; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileModifiedExtended from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileModifiedExtended"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004916; sid:5004916; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileMoved from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileMoved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004917; sid:5004917; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FilePreviewed from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FilePreviewed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004918; sid:5004918; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileRenamed from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileRenamed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004919; sid:5004919; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileRestored from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileRestored"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004920; sid:5004920; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileSyncDownloadedFull from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileSyncDownloadedFull"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004921; sid:5004921; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileSyncDownloadedPartial from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileSyncDownloadedPartial"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004922; sid:5004922; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileSyncUploadedFull from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileSyncUploadedFull"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004923; sid:5004923; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileUploaded from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FileUploaded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004924; sid:5004924; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FolderCreated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FolderCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004925; sid:5004925; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FolderDeleted from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FolderDeleted"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004926; sid:5004926; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FolderModified from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FolderModified"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004927; sid:5004927; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FolderMoved from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FolderMoved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004928; sid:5004928; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FolderRenamed from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "FolderRenamed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004930; sid:5004930; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] GroupAdded from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "GroupAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004931; sid:5004931; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ListColumnCreated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ListColumnCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004932; sid:5004932; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ListColumnUpdated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ListColumnUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004933; sid:5004933; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ListCreated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ListCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004934; sid:5004934; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ListItemCreated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ListItemCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004935; sid:5004935; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ListItemUpdated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ListItemUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004936; sid:5004936; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ListUpdated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ListUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004937; sid:5004937; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ListViewUpdated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ListViewUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004938; sid:5004938; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ListViewed from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ListViewed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004939; sid:5004939; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] PageViewed from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "PageViewed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004940; sid:5004940; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] PageViewedExtended from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "PageViewedExtended"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004941; sid:5004941; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] PermissionLevelAdded from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "PermissionLevelAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004942; sid:5004942; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] SearchQueryPerformed from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "SearchQueryPerformed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004943; sid:5004943; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] SecureLinkCreated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "SecureLinkCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004944; sid:5004944; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] SecureLinkUpdated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "SecureLinkUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004945; sid:5004945; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] SecureLinkUsed from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "SecureLinkUsed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004946; sid:5004946; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] SharingInheritanceBroken from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "SharingInheritanceBroken"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004947; sid:5004947; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] SharingRevoked from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "SharingRevoked"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004948; sid:5004948; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] SharingSet from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "SharingSet"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004949; sid:5004949; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ShortcutAdded from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ShortcutAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004950; sid:5004950; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ShortcutAdded from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "ShortcutAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004950; sid:5004950; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] SiteCollectionAdminAdded from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "SiteCollectionAdminAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004951; sid:5004951; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] SiteCollectionAdminRemoved from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "SiteCollectionAdminRemoved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004952; sid:5004952; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] SiteCollectionCreated from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "SiteCollectionCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004953; sid:5004953; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] WACTokenShared from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "WACTokenShared"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004954; sid:5004954; rev: 1;)
+
+
