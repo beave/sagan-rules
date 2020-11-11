@@ -29,7 +29,7 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTSTREAM-BLUEDOT] Stream action from Bluedot listed IP address"; json_content: "Workload","MicrosoftStream"; json_content: bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004892; sid:5004892; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTSTREAM-BLUEDOT] Stream action from Bluedot listed IP address"; json_content: "Workload","MicrosoftStream"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004892; sid:5004892; rev: 1;)
 
 
 

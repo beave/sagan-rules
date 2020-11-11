@@ -1,4 +1,4 @@
-# Sagan msapi-microsoftflow-bluedot.rules
+# Sagan msapi-microsoftteams-bluedot.rules
 # Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -29,7 +29,7 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTFLOW-BLUEDOT] Flow action from Bluedot listed IP address"; json_content: "Workload","MicrosoftFlow"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004887; sid:5004887; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTTEAMS-BLUEDOT] Teams session started from Bluedot listed IP address"; json_content: "Workload","MicrosoftTeams"; json_content: "Operation", "TeamsSessionStarted"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004894; sid:5004894; rev: 1;)
 
 
 
