@@ -1,0 +1,99 @@
+# Sagan msapi-powerbi-bluedot.rules
+# Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+# These rules work best with a JSON input map.  See the "msapi" mapping.  See the Sagan
+# JSON documentation for more information
+#
+
+# Catch all
+#
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] Catch all from Bluedot listed IP"; json_content: "Workload","PowerBI"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005048; sid:5005048; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] AnalyzedByExternalApplication from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "AnalyzedByExternalApplication"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005049; sid:5005049; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] ChangeGatewayDatasourceUsers from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "ChangeGatewayDatasourceUsers"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005050; sid:5005050; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] CreateDataset from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "CreateDataset"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005051; sid:5005051; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] CreateEmailSubscription from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "CreateEmailSubscription"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005052; sid:5005052; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] CreateEmailSubscription from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "CreateEmailSubscription"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005053; sid:5005053; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] CreateFolder from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "CreateFolder"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005054; sid:5005054; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] CreateReport from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "CreateReport"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005055; sid:5005055; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] DeleteDataset from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "DeleteDataset"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005056; sid:5005056; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] DeleteEmailSubscription from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "DeleteEmailSubscription"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005057; sid:5005057; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] DeleteReport from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "DeleteReport"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005058; sid:5005058; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] DownloadReport from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "DownloadReport"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005059; sid:5005059; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] EditDataset from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "EditDataset"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005060; sid:5005060; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] EditReport from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "EditReport"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005061; sid:5005061; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] ExportArtifact from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "ExportArtifact"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005062; sid:5005062; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] ExportReport from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "ExportReport"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005063; sid:5005063; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] GenerateCustomVisualAADAccessToken from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "GenerateCustomVisualAADAccessToken"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005064; sid:5005064; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] GenerateDataflowSasToken from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "GenerateDataflowSasToken"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005065; sid:5005065; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] GenerateScreenshot from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "GenerateScreenshot"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005066; sid:5005066; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] GetGroupsAsAdmin from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "GetGroupsAsAdmin"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005067; sid:5005067; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] Import from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "Import"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005068; sid:5005068; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] PrintReport from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "PrintReport"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005069; sid:5005069; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] RefreshDataset from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "RefreshDataset"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005070; sid:5005070; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] SetScheduledRefresh from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "SetScheduledRefresh"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005071; sid:5005071; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] ShareReport from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "ShareReport"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005072; sid:5005072; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] UnpublishApp from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "UnpublishApp"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005073; sid:5005073; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] UnpublishApp from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "UnpublishApp"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005074; sid:5005074; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] UpdateApp from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "UpdateApp"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005075; sid:5005075; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] UpdateDatasourceCredentials from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "UpdateDatasourceCredentials"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005076; sid:5005076; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] UpdateEmailSubscription from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "UpdateEmailSubscription"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005077; sid:5005077; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] UpdatedAdminFeatureSwitch from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "UpdatedAdminFeatureSwitch"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005078; sid:5005078; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] ViewDashboard from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "ViewDashboard"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005079; sid:5005079; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-BLUEDOT] ViewUsageMetrics from Bluedot listed IP"; json_content: "Workload","PowerBI"; json_content: "Operation", "ViewUsageMetrics"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005080; sid:5005080; rev: 1;)
+

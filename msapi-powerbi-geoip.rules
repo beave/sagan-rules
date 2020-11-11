@@ -1,0 +1,99 @@
+# Sagan msapi-powerbi-geoip.rules
+# Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+# These rules work best with a JSON input map.  See the "msapi" mapping.  See the Sagan
+# JSON documentation for more information
+#
+
+# Catch all
+#
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] Catch all from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005015; sid:5005015; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] AnalyzedByExternalApplication from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "AnalyzedByExternalApplication"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005016; sid:5005016; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] ChangeGatewayDatasourceUsers from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "ChangeGatewayDatasourceUsers"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005017; sid:5005017; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] CreateDataset from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "CreateDataset"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005018; sid:5005018; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] CreateEmailSubscription from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "CreateEmailSubscription"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005019; sid:5005019; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] CreateEmailSubscription from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "CreateEmailSubscription"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005020; sid:5005020; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] CreateFolder from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "CreateFolder"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005021; sid:5005021; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] CreateReport from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "CreateReport"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005022; sid:5005022; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] DeleteDataset from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "DeleteDataset"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005023; sid:5005023; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] DeleteEmailSubscription from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "DeleteEmailSubscription"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005024; sid:5005024; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] DeleteReport from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "DeleteReport"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005025; sid:5005025; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] DownloadReport from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "DownloadReport"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005026; sid:5005026; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] EditDataset from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "EditDataset"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005027; sid:5005027; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] EditReport from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "EditReport"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005028; sid:5005028; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] ExportArtifact from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "ExportArtifact"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005029; sid:5005029; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] ExportReport from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "ExportReport"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005030; sid:5005030; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] GenerateCustomVisualAADAccessToken from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "GenerateCustomVisualAADAccessToken"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005031; sid:5005031; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] GenerateDataflowSasToken from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "GenerateDataflowSasToken"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005032; sid:5005032; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] GenerateScreenshot from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "GenerateScreenshot"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005033; sid:5005033; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] GetGroupsAsAdmin from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "GetGroupsAsAdmin"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005034; sid:5005034; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] Import from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "Import"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005035; sid:5005035; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] PrintReport from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "PrintReport"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005036; sid:5005036; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] RefreshDataset from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "RefreshDataset"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005037; sid:5005037; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] SetScheduledRefresh from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "SetScheduledRefresh"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005038; sid:5005038; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] ShareReport from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "ShareReport"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005039; sid:5005039; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] UnpublishApp from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "UnpublishApp"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005040; sid:5005040; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] UnpublishApp from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "UnpublishApp"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005041; sid:5005041; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] UpdateApp from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "UpdateApp"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005042; sid:5005042; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] UpdateDatasourceCredentials from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "UpdateDatasourceCredentials"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005043; sid:5005043; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] UpdateEmailSubscription from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "UpdateEmailSubscription"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005044; sid:5005044; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] UpdatedAdminFeatureSwitch from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "UpdatedAdminFeatureSwitch"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005045; sid:5005045; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] ViewDashboard from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "ViewDashboard"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005046; sid:5005046; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] ViewUsageMetrics from outside HOME_COUNTRY"; json_content: "Workload","PowerBI"; json_content: "Operation", "ViewUsageMetrics"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005047; sid:5005047; rev: 1;)
+
