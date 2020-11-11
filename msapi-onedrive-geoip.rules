@@ -1,4 +1,4 @@
-# Sagan msapi-microsoftteams-geoip.rules
+# Sagan msapi-onedrive-geoip.rules
 # Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -31,7 +31,7 @@
 
 # Catch all
 #
-#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] Catch all from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "WACTokenShared"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004955; sid:5004955; rev: 1;)
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] Catch all from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004955; sid:5004955; rev: 1;)
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] AccessRequestApproved from outside HOME_COUNTRY"; json_content: "Workload","OneDrive"; json_content: "Operation", "AccessRequestApproved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004896; sid:5004896; rev: 1;)
 

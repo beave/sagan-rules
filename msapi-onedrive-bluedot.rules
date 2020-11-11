@@ -1,4 +1,4 @@
-# Sagan msapi-microsoftteams-bluedot.rules
+# Sagan msapi-onedrive-bluedot.rules
 # Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
 # All rights reserved.
 #
@@ -31,7 +31,7 @@
 
 # Catch all
 #
-#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-BLUEDOT] Catch all from Bluedot listed IP address"; json_content: "Workload","OneDrive"; json_content: "Operation", "WACTokenShared"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004956; sid:5004956; rev: 1;)
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-BLUEDOT] Catch all from Bluedot listed IP address"; json_content: "Workload","OneDrive"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004956; sid:5004956; rev: 1;)
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-BLUEDOT] AccessRequestApproved from Bluedot listed IP address"; json_content: "Workload","OneDrive"; json_content: "Operation", "AccessRequestApproved"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004957; sid:5004957; rev: 1;)
 
