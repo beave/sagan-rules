@@ -4829,7 +4829,7 @@
 5005011 || [MSAPI-ONEDRIVE-BLUEDOT] SiteCollectionCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005011
 5005012 || [MSAPI-ONEDRIVE-BLUEDOT] WACTokenShared from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005012
 5005013 || [MSAPI-ONEDRIVE-GEOIP] ShortcutAdded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005013
-5005014 || [MSAPI-ONEDRIVE-GEOIP] DLP Rule Match || url,wiki.quadrantsec.com/bin/view/Main/5005014
+5005014 || [MSAPI-ONEDRIVE] DLP Rule Match || url,wiki.quadrantsec.com/bin/view/Main/5005014
 5005015 || [MSAPI-POWERBI-GEOIP] Catch all from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005015
 5005016 || [MSAPI-POWERBI-GEOIP] AnalyzedByExternalApplication from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005016
 5005017 || [MSAPI-POWERBI-GEOIP] ChangeGatewayDatasourceUsers from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005017
@@ -4896,6 +4896,156 @@
 5005078 || [MSAPI-POWERBI-BLUEDOT] UpdatedAdminFeatureSwitch from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005078
 5005079 || [MSAPI-POWERBI-BLUEDOT] ViewDashboard from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005079
 5005080 || [MSAPI-POWERBI-BLUEDOT] ViewUsageMetrics from Bluedot listed IP || url,wiki.quadrantsec.com/bin/view/Main/5005080
+5005081 || [MSAPI-SECURITYCOMPLIANCECENTER] Alert Triggered || url,wiki.quadrantsec.com/bin/view/Main/5005081
+5005082 || [MSAPI-SECURITYCOMPLIANCECENTER] Alert Entity Generated || url,wiki.quadrantsec.com/bin/view/Main/5005082
+5005083 || [MSAPI-SECURITYCOMPLIANCECENTER] Alert Updated || url,wiki.quadrantsec.com/bin/view/Main/5005083
+5005084 || [MSAPI-SHAREPOINT-GEOIP] Catch all from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005084
+5005085 || [MSAPI-SHAREPOINT-GEOIP] AccessRequestApproved from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005085
+5005086 || [MSAPI-SHAREPOINT-GEOIP] AccessRequestCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005086
+5005087 || [MSAPI-SHAREPOINT-GEOIP] AccessRequestUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005087
+5005089 || [MSAPI-SHAREPOINT-GEOIP] AddedToGroup from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005089
+5005090 || [MSAPI-SHAREPOINT-GEOIP] AddedToSecureLink from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005090
+5005091 || [MSAPI-SHAREPOINT-GEOIP] AnonymousLinkCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005091
+5005092 || [MSAPI-SHAREPOINT-GEOIP] AnonymousLinkUsed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005092
+5005093 || [MSAPI-SHAREPOINT-GEOIP] ClientViewSignaled from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005093
+5005094 || [MSAPI-SHAREPOINT-GEOIP] CompanyLinkCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005094
+5005095 || [MSAPI-SHAREPOINT-GEOIP] CompanyLinkUsed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005095
+5005096 || [MSAPI-SHAREPOINT-GEOIP] FileAccessed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005096
+5005097 || [MSAPI-SHAREPOINT-GEOIP] FileAccessedExtended from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005097
+5005098 || [MSAPI-SHAREPOINT-GEOIP] FileCheckOutDiscarded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005098
+5005099 || [MSAPI-SHAREPOINT-GEOIP] FileCheckedIn from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005099
+5005100 || [MSAPI-SHAREPOINT-GEOIP] FileCheckedOut from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005100
+5005101 || [MSAPI-SHAREPOINT-GEOIP] FileCopied from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005101
+5005102 || [MSAPI-SHAREPOINT-GEOIP] FileDeleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005102
+5005103 || [MSAPI-SHAREPOINT-GEOIP] FileDeletedFirstStageRecycleBin from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005103
+5005104 || [MSAPI-SHAREPOINT-GEOIP] FileDownloaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005104
+5005105 || [MSAPI-SHAREPOINT-GEOIP] FileModified from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005105
+5005106 || [MSAPI-SHAREPOINT-GEOIP] FileModifiedExtended from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005106
+5005107 || [MSAPI-SHAREPOINT-GEOIP] FileMoved from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005107
+5005108 || [MSAPI-SHAREPOINT-GEOIP] FilePreviewed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005108
+5005109 || [MSAPI-SHAREPOINT-GEOIP] FileRenamed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005109
+5005110 || [MSAPI-SHAREPOINT-GEOIP] FileRestored from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005110
+5005111 || [MSAPI-SHAREPOINT-GEOIP] FileSyncDownloadedFull from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005111
+5005112 || [MSAPI-SHAREPOINT-GEOIP] FileSyncUploadedFull from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005112
+5005113 || [MSAPI-SHAREPOINT-GEOIP] FileUploaded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005113
+5005114 || [MSAPI-SHAREPOINT-GEOIP] FolderCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005114
+5005115 || [MSAPI-SHAREPOINT-GEOIP] FolderDeleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005115
+5005116 || [MSAPI-SHAREPOINT-GEOIP] FolderModified from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005116
+5005117 || [MSAPI-SHAREPOINT-GEOIP] FolderMoved from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005117
+5005118 || [MSAPI-SHAREPOINT-GEOIP] FolderRenamed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005118
+5005119 || [MSAPI-SHAREPOINT-GEOIP] GroupAdded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005119
+5005120 || [MSAPI-SHAREPOINT-GEOIP] GroupUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005120
+5005121 || [MSAPI-SHAREPOINT-GEOIP] ListColumnCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005121
+5005122 || [MSAPI-SHAREPOINT-GEOIP] ListColumnDeleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005122
+5005123 || [MSAPI-SHAREPOINT-GEOIP] ListColumnUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005123
+5005124 || [MSAPI-SHAREPOINT-GEOIP] ListContentTypeDeleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005124
+5005125 || [MSAPI-SHAREPOINT-GEOIP] ListContentTypeUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005125
+5005126 || [MSAPI-SHAREPOINT-GEOIP] ListCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005126
+5005127 || [MSAPI-SHAREPOINT-GEOIP] ListDeleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005127
+5005128 || [MSAPI-SHAREPOINT-GEOIP] ListItemCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005128
+5005129 || [MSAPI-SHAREPOINT-GEOIP] ListItemRecycled from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005129
+5005130 || [MSAPI-SHAREPOINT-GEOIP] ListItemUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005130
+5005131 || [MSAPI-SHAREPOINT-GEOIP] ListItemViewed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005131
+5005132 || [MSAPI-SHAREPOINT-GEOIP] ListUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005132
+5005133 || [MSAPI-SHAREPOINT-GEOIP] ListViewUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005133
+5005134 || [MSAPI-SHAREPOINT-GEOIP] ListViewed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005134
+5005135 || [MSAPI-SHAREPOINT-GEOIP] PagePrefetched from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005135
+5005136 || [MSAPI-SHAREPOINT-GEOIP] PageViewed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005136
+5005137 || [MSAPI-SHAREPOINT-GEOIP] PageViewedExtended from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005137
+5005138 || [MSAPI-SHAREPOINT-GEOIP] PermissionLevelAdded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005138
+5005139 || [MSAPI-SHAREPOINT-GEOIP] RemovedFromGroup from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005139
+5005140 || [MSAPI-SHAREPOINT-GEOIP] SearchQueryPerformed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005140
+5005141 || [MSAPI-SHAREPOINT-GEOIP] SecureLinkCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005141
+5005142 || [MSAPI-SHAREPOINT-GEOIP] SecureLinkUpdated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005142
+5005143 || [MSAPI-SHAREPOINT-GEOIP] SecureLinkUsed from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005143
+5005144 || [MSAPI-SHAREPOINT-GEOIP] SharingInheritanceBroken from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005144
+5005145 || [MSAPI-SHAREPOINT-GEOIP] SharingInheritanceReset from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005145
+5005146 || [MSAPI-SHAREPOINT-GEOIP] SharingInvitationCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005146
+5005147 || [MSAPI-SHAREPOINT-GEOIP] SharingPolicyChanged from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005147
+5005148 || [MSAPI-SHAREPOINT-GEOIP] SharingRevoked from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005148
+5005149 || [MSAPI-SHAREPOINT-GEOIP] SharingSet from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005149
+5005150 || [MSAPI-SHAREPOINT-GEOIP] SiteCollectionAdminAdded from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005150
+5005151 || [MSAPI-SHAREPOINT-GEOIP] SiteCollectionAdminRemoved from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005151
+5005152 || [MSAPI-SHAREPOINT-GEOIP] SiteCollectionCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005152
+5005153 || [MSAPI-SHAREPOINT-GEOIP] SiteColumnCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005153
+5005154 || [MSAPI-SHAREPOINT-GEOIP] SiteContentTypeCreated from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005154
+5005155 || [MSAPI-SHAREPOINT-GEOIP] SiteDeleted from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005155
+5005156 || [MSAPI-SHAREPOINT-GEOIP] WACTokenShared from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005156
+5005157 || [MSAPI-SHAREPOINT-GEOIP] DLPRuleUndo from outside HOME_COUNTRY || url,wiki.quadrantsec.com/bin/view/Main/5005157
+5005158 || [MSAPI-SHAREPOINT] Data loss prevention rule match. || url,wiki.quadrantsec.com/bin/view/Main/5005159
+5005159 || [MSAPI-SHAREPOINT-BLUEDOT] Catch all from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005159
+5005160 || [MSAPI-SHAREPOINT-BLUEDOT] AccessRequestApproved from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005160
+5005161 || [MSAPI-SHAREPOINT-BLUEDOT] AccessRequestCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005161
+5005162 || [MSAPI-SHAREPOINT-BLUEDOT] AccessRequestUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005162
+5005163 || [MSAPI-SHAREPOINT-BLUEDOT] AddedToGroup from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005163
+5005164 || [MSAPI-SHAREPOINT-BLUEDOT] AddedToSecureLink from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005164
+5005165 || [MSAPI-SHAREPOINT-BLUEDOT] AnonymousLinkCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005165
+5005166 || [MSAPI-SHAREPOINT-BLUEDOT] AnonymousLinkUsed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005166
+5005167 || [MSAPI-SHAREPOINT-BLUEDOT] ClientViewSignaled from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005167
+5005168 || [MSAPI-SHAREPOINT-BLUEDOT] CompanyLinkCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005168
+5005169 || [MSAPI-SHAREPOINT-BLUEDOT] CompanyLinkUsed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005169
+5005170 || [MSAPI-SHAREPOINT-BLUEDOT] FileAccessed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005170
+5005171 || [MSAPI-SHAREPOINT-BLUEDOT] FileAccessedExtended from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005171
+5005172 || [MSAPI-SHAREPOINT-BLUEDOT] FileCheckOutDiscarded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005172
+5005173 || [MSAPI-SHAREPOINT-BLUEDOT] FileCheckedIn from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005173
+5005174 || [MSAPI-SHAREPOINT-BLUEDOT] FileCheckedOut from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005174
+5005175 || [MSAPI-SHAREPOINT-BLUEDOT] FileCopied from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005175
+5005176 || [MSAPI-SHAREPOINT-BLUEDOT] FileDeleted from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005176
+5005177 || [MSAPI-SHAREPOINT-BLUEDOT] FileDeletedFirstStageRecycleBin from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005177
+5005178 || [MSAPI-SHAREPOINT-BLUEDOT] FileDownloaded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005178
+5005179 || [MSAPI-SHAREPOINT-BLUEDOT] FileModified from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005179
+5005180 || [MSAPI-SHAREPOINT-BLUEDOT] FileModifiedExtended from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005180
+5005181 || [MSAPI-SHAREPOINT-BLUEDOT] FileMoved from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005181
+5005182 || [MSAPI-SHAREPOINT-BLUEDOT] FilePreviewed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005182
+5005183 || [MSAPI-SHAREPOINT-BLUEDOT] FileRenamed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005183
+5005184 || [MSAPI-SHAREPOINT-BLUEDOT] FileRestored from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005184
+5005185 || [MSAPI-SHAREPOINT-BLUEDOT] FileSyncDownloadedFull from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005185
+5005186 || [MSAPI-SHAREPOINT-BLUEDOT] FileSyncUploadedFull from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005186
+5005187 || [MSAPI-SHAREPOINT-BLUEDOT] FileUploaded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005187
+5005188 || [MSAPI-SHAREPOINT-BLUEDOT] FolderCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005188
+5005189 || [MSAPI-SHAREPOINT-BLUEDOT] FolderDeleted from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005189
+5005190 || [MSAPI-SHAREPOINT-BLUEDOT] FolderModified from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005190
+5005191 || [MSAPI-SHAREPOINT-BLUEDOT] FolderMoved from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005191
+5005192 || [MSAPI-SHAREPOINT-BLUEDOT] FolderRenamed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005192
+5005193 || [MSAPI-SHAREPOINT-BLUEDOT] GroupAdded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005193
+5005194 || [MSAPI-SHAREPOINT-BLUEDOT] GroupUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005194
+5005195 || [MSAPI-SHAREPOINT-BLUEDOT] ListColumnCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005195
+5005196 || [MSAPI-SHAREPOINT-BLUEDOT] ListColumnDeleted from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005196
+5005197 || [MSAPI-SHAREPOINT-BLUEDOT] ListColumnUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005197
+5005198 || [MSAPI-SHAREPOINT-BLUEDOT] ListContentTypeDeleted from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005198
+5005199 || [MSAPI-SHAREPOINT-BLUEDOT] ListContentTypeUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005199
+5005200 || [MSAPI-SHAREPOINT-BLUEDOT] ListCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005200
+5005201 || [MSAPI-SHAREPOINT-BLUEDOT] ListDeleted from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005201
+5005202 || [MSAPI-SHAREPOINT-BLUEDOT] ListItemCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005202
+5005203 || [MSAPI-SHAREPOINT-BLUEDOT] ListItemRecycled from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005203
+5005204 || [MSAPI-SHAREPOINT-BLUEDOT] ListItemUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005204
+5005205 || [MSAPI-SHAREPOINT-BLUEDOT] ListItemViewed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005205
+5005206 || [MSAPI-SHAREPOINT-BLUEDOT] ListUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005206
+5005207 || [MSAPI-SHAREPOINT-BLUEDOT] ListViewUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005207
+5005208 || [MSAPI-SHAREPOINT-BLUEDOT] ListViewed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005208
+5005209 || [MSAPI-SHAREPOINT-BLUEDOT] PagePrefetched from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005209
+5005210 || [MSAPI-SHAREPOINT-BLUEDOT] PageViewed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005210
+5005211 || [MSAPI-SHAREPOINT-BLUEDOT] PageViewedExtended from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005211
+5005212 || [MSAPI-SHAREPOINT-BLUEDOT] PermissionLevelAdded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005212
+5005213 || [MSAPI-SHAREPOINT-BLUEDOT] RemovedFromGroup from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005213
+5005214 || [MSAPI-SHAREPOINT-BLUEDOT] SearchQueryPerformed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005214
+5005215 || [MSAPI-SHAREPOINT-BLUEDOT] SecureLinkCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005215
+5005216 || [MSAPI-SHAREPOINT-BLUEDOT] SecureLinkUpdated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005216
+5005217 || [MSAPI-SHAREPOINT-BLUEDOT] SecureLinkUsed from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005217
+5005218 || [MSAPI-SHAREPOINT-BLUEDOT] SharingInheritanceBroken from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005218
+5005219 || [MSAPI-SHAREPOINT-BLUEDOT] SharingInheritanceReset from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005219
+5005220 || [MSAPI-SHAREPOINT-BLUEDOT] SharingInvitationCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005220
+5005221 || [MSAPI-SHAREPOINT-BLUEDOT] SharingPolicyChanged from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005221
+5005222 || [MSAPI-SHAREPOINT-BLUEDOT] SharingRevoked from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005222
+5005223 || [MSAPI-SHAREPOINT-BLUEDOT] SharingSet from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005223
+5005224 || [MSAPI-SHAREPOINT-BLUEDOT] SiteCollectionAdminAdded from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005224
+5005225 || [MSAPI-SHAREPOINT-BLUEDOT] SiteCollectionAdminRemoved from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005225
+5005226 || [MSAPI-SHAREPOINT-BLUEDOT] SiteCollectionCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005226
+5005227 || [MSAPI-SHAREPOINT-BLUEDOT] SiteColumnCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005227
+5005228 || [MSAPI-SHAREPOINT-BLUEDOT] SiteContentTypeCreated from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005228
+5005229 || [MSAPI-SHAREPOINT-BLUEDOT] SiteDeleted from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005229
+5005230 || [MSAPI-SHAREPOINT-BLUEDOT] WACTokenShared from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005230
+5005231 || [MSAPI-SHAREPOINT-BLUEDOT] DLPRuleUndo from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005231
 5100000 || airportd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100001 || com.apple.xpc.launchd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100002 || powerd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
