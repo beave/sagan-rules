@@ -1,0 +1,180 @@
+# Sagan msapi-sharepoint-bluedot.rules
+# Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+# These rules work best with a JSON input map.  See the "msapi" mapping.  See the Sagan
+# JSON documentation for more information
+#
+
+# Catch all
+#
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] Catch all from Bluedot listed IP address"; json_content: "Workload","SharePoint"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005159; sid:5005159; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] AccessRequestApproved from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "AccessRequestApproved"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005160; sid:5005160; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] AccessRequestCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "AccessRequestCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005161; sid:5005161; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] AccessRequestUpdated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "AccessRequestUpdated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005162; sid:5005162; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] AddedToGroup from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "AddedToGroup"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005163; sid:5005163; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] AddedToSecureLink from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "AddedToSecureLink"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005164; sid:5005164; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] AnonymousLinkCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "AnonymousLinkCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005165; sid:5005165; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] AnonymousLinkUsed from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "AnonymousLinkUsed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005166; sid:5005166; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ClientViewSignaled from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ClientViewSignaled"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005167; sid:5005167; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] CompanyLinkCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "CompanyLinkCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005168; sid:5005168; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] CompanyLinkUsed from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "CompanyLinkUsed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005169; sid:5005169; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileAccessed from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileAccessed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005170; sid:5005170; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileAccessedExtended from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileAccessedExtended"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005171; sid:5005171; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileCheckOutDiscarded from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileCheckOutDiscarded"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005172; sid:5005172; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileCheckedIn from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileCheckedIn"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005173; sid:5005173; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileCheckedOut from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileCheckedOut"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005174; sid:5005174; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileCopied from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileCopied"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005175; sid:5005175; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileDeleted from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileDeleted"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005176; sid:5005176; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileDeletedFirstStageRecycleBin from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileDeletedFirstStageRecycleBin"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005177; sid:5005177; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileDownloaded from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileDownloaded"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005178; sid:5005178; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileModified from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileModified"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005179; sid:5005179; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileModifiedExtended from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileModifiedExtended"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005180; sid:5005180; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileMoved from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileMoved"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005181; sid:5005181; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FilePreviewed from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FilePreviewed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005182; sid:5005182; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileRenamed from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileRenamed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005183; sid:5005183; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileRestored from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileRestored"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005184; sid:5005184; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileSyncDownloadedFull from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileSyncDownloadedFull"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005185; sid:5005185; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileSyncUploadedFull from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileSyncUploadedFull"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005186; sid:5005186; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileUploaded from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileUploaded"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005187; sid:5005187; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FolderCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FolderCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005188; sid:5005188; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FolderDeleted from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FolderDeleted"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005189; sid:5005189; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FolderModified from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FolderModified"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005190; sid:5005190; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FolderMoved from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FolderMoved"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005191; sid:5005191; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FolderRenamed from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "FolderRenamed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005192; sid:5005192; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] GroupAdded from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "GroupAdded"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005193; sid:5005193; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] GroupUpdated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "GroupUpdated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005194; sid:5005194; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListColumnCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListColumnCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005195; sid:5005195; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListColumnDeleted from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListColumnDeleted"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005196; sid:5005196; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListColumnUpdated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListColumnUpdated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005197; sid:5005197; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListContentTypeDeleted from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListContentTypeDeleted"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005198; sid:5005198; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListContentTypeUpdated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListContentTypeUpdated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005199; sid:5005199; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005200; sid:5005200; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListDeleted from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListDeleted"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005201; sid:5005201; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListItemCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListItemCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005202; sid:5005202; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListItemRecycled from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListItemRecycled"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005203; sid:5005203; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListItemUpdated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListItemUpdated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005204; sid:5005204; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListItemViewed from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListItemViewed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005205; sid:5005205; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListUpdated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListUpdated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005206; sid:5005206; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListViewUpdated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListViewUpdated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005207; sid:5005207; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] ListViewed from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListViewed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005208; sid:5005208; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] PagePrefetched from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "PagePrefetched"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005209; sid:5005209; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] PageViewed from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "PageViewed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005210; sid:5005210; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] PageViewedExtended from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "PageViewedExtended"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005211; sid:5005211; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] PermissionLevelAdded from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "PermissionLevelAdded"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005212; sid:5005212; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] RemovedFromGroup from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "RemovedFromGroup"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005213; sid:5005213; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SearchQueryPerformed from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SearchQueryPerformed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005214; sid:5005214; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SecureLinkCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SecureLinkCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005215; sid:5005215; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SecureLinkUpdated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SecureLinkUpdated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005216; sid:5005216; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SecureLinkUsed from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SecureLinkUsed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005217; sid:5005217; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SharingInheritanceBroken from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingInheritanceBroken"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005218; sid:5005218; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SharingInheritanceReset from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingInheritanceReset"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005219; sid:5005219; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SharingInvitationCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingInvitationCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005220; sid:5005220; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SharingPolicyChanged from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingPolicyChanged"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005221; sid:5005221; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SharingRevoked from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingRevoked"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005222; sid:5005222; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SharingSet from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingSet"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005223; sid:5005223; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SiteCollectionAdminAdded from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteCollectionAdminAdded"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005224; sid:5005224; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SiteCollectionAdminRemoved from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteCollectionAdminRemoved"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005225; sid:5005225; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SiteCollectionCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteCollectionCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005226; sid:5005226; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SiteColumnCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteColumnCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005227; sid:5005227; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SiteContentTypeCreated from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteContentTypeCreated"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005228; sid:5005228; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] SiteDeleted from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteDeleted"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005229; sid:5005229; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] WACTokenShared from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "WACTokenShared"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005230; sid:5005230; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] DLPRuleUndo from Bluedot listed IP address"; json_content: "Workload","SharePoint"; json_content: "Operation", "DLPRuleUndo"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005231; sid:5005231; rev: 1;)
+
+

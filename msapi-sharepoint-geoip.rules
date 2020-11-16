@@ -1,0 +1,182 @@
+# Sagan msapi-sharepoint-geoip.rules
+# Copyright (c) 2009-2020. Quadrant Information Security <www.quadrantsec.com>
+# All rights reserved.
+#
+# Please submit any custom rules or ideas to sagan-submit@quadrantsec.com or the sagan-sigs mailing list
+#
+#*************************************************************
+#  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+#  following conditions are met:
+#
+#  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following
+#    disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+#    following disclaimer in the documentation and/or other materials provided with the distribution.
+#  * Neither the name of the nor the names of its contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS IS AND ANY EXPRESS OR IMPLIED WARRANTIES,
+#  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+#  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+#  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#*************************************************************
+#
+# These rules work best with a JSON input map.  See the "msapi" mapping.  See the Sagan
+# JSON documentation for more information
+#
+
+# Catch all
+#
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] Catch all from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005084; sid:5005084; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] AccessRequestApproved from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "AccessRequestApproved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005085; sid:5005085; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] AccessRequestCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "AccessRequestCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005086; sid:5005086; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] AccessRequestUpdated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "AccessRequestUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005087; sid:5005087; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] AddedToGroup from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "AddedToGroup"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005089; sid:5005089; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] AddedToSecureLink from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "AddedToSecureLink"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005090; sid:5005090; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] AnonymousLinkCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "AnonymousLinkCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005091; sid:5005091; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] AnonymousLinkUsed from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "AnonymousLinkUsed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005092; sid:5005092; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ClientViewSignaled from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ClientViewSignaled"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005093; sid:5005093; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] CompanyLinkCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "CompanyLinkCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005094; sid:5005094; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] CompanyLinkUsed from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "CompanyLinkUsed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005095; sid:5005095; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileAccessed from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileAccessed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005096; sid:5005096; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileAccessedExtended from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileAccessedExtended"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005097; sid:5005097; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileCheckOutDiscarded from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileCheckOutDiscarded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005098; sid:5005098; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileCheckedIn from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileCheckedIn"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005099; sid:5005099; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileCheckedOut from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileCheckedOut"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005100; sid:5005100; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileCopied from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileCopied"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005101; sid:5005101; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileDeleted from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileDeleted"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005102; sid:5005102; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileDeletedFirstStageRecycleBin from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileDeletedFirstStageRecycleBin"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005103; sid:5005103; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileDownloaded from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileDownloaded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005104; sid:5005104; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileModified from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileModified"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005105; sid:5005105; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileModifiedExtended from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileModifiedExtended"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005106; sid:5005106; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileMoved from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileMoved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005107; sid:5005107; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FilePreviewed from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FilePreviewed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005108; sid:5005108; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileRenamed from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileRenamed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005109; sid:5005109; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileRestored from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileRestored"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005110; sid:5005110; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileSyncDownloadedFull from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileSyncDownloadedFull"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005111; sid:5005111; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileSyncUploadedFull from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileSyncUploadedFull"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005112; sid:5005112; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileUploaded from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FileUploaded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005113; sid:5005113; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FolderCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FolderCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005114; sid:5005114; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FolderDeleted from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FolderDeleted"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005115; sid:5005115; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FolderModified from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FolderModified"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005116; sid:5005116; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FolderMoved from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FolderMoved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005117; sid:5005117; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FolderRenamed from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "FolderRenamed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005118; sid:5005118; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] GroupAdded from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "GroupAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005119; sid:5005119; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] GroupUpdated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "GroupUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005120; sid:5005120; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListColumnCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListColumnCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005121; sid:5005121; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListColumnDeleted from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListColumnDeleted"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005122; sid:5005122; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListColumnUpdated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListColumnUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005123; sid:5005123; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListContentTypeDeleted from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListContentTypeDeleted"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005124; sid:5005124; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListContentTypeUpdated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListContentTypeUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005125; sid:5005125; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005126; sid:5005126; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListDeleted from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListDeleted"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005127; sid:5005127; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListItemCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListItemCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005128; sid:5005128; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListItemRecycled from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListItemRecycled"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005129; sid:5005129; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListItemUpdated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListItemUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005130; sid:5005130; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListItemViewed from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListItemViewed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005131; sid:5005131; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListUpdated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005132; sid:5005132; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListViewUpdated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListViewUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005133; sid:5005133; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] ListViewed from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "ListViewed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005134; sid:5005134; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] PagePrefetched from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "PagePrefetched"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005135; sid:5005135; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] PageViewed from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "PageViewed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005136; sid:5005136; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] PageViewedExtended from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "PageViewedExtended"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005137; sid:5005137; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] PermissionLevelAdded from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "PermissionLevelAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005138; sid:5005138; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] RemovedFromGroup from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "RemovedFromGroup"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005139; sid:5005139; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SearchQueryPerformed from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SearchQueryPerformed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005140; sid:5005140; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SecureLinkCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SecureLinkCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005141; sid:5005141; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SecureLinkUpdated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SecureLinkUpdated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005142; sid:5005142; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SecureLinkUsed from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SecureLinkUsed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005143; sid:5005143; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SharingInheritanceBroken from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingInheritanceBroken"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005144; sid:5005144; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SharingInheritanceReset from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingInheritanceReset"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005145; sid:5005145; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SharingInvitationCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingInvitationCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005146; sid:5005146; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SharingPolicyChanged from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingPolicyChanged"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005147; sid:5005147; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SharingRevoked from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingRevoked"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005148; sid:5005148; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SharingSet from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SharingSet"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005149; sid:5005149; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SiteCollectionAdminAdded from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteCollectionAdminAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005150; sid:5005150; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SiteCollectionAdminRemoved from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteCollectionAdminRemoved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005151; sid:5005151; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SiteCollectionCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteCollectionCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005152; sid:5005152; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SiteColumnCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteColumnCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005153; sid:5005153; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SiteContentTypeCreated from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteContentTypeCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005154; sid:5005154; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] SiteDeleted from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "SiteDeleted"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005155; sid:5005155; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] WACTokenShared from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "WACTokenShared"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005156; sid:5005156; rev: 1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] DLPRuleUndo from outside HOME_COUNTRY"; json_content: "Workload","SharePoint"; json_content: "Operation", "DLPRuleUndo"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005157; sid:5005157; rev: 1;)
+
+
+
+
