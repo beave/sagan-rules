@@ -25,6 +25,9 @@
 #
 #*************************************************************
 #
+# These rules are for the Office 365 Management API
+# https://docs.microsoft.com/en-us/office/office-365-management-api/office-365-management-apis-overview
+#
 # These rules work best with a JSON input map.  See the "msapi" mapping.  See the Sagan
 # JSON documentation for more information
 #
