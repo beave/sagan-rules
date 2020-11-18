@@ -32,6 +32,6 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTSTREAM-GEOIP] Stream action from outside HOME_COUNTRY"; json_content: "Workload","MicrosoftStream"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004891; sid:5004891; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTSTREAM-GEOIP] Stream action from outside HOME_COUNTRY"; json_content: ".Workload","MicrosoftStream"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004891; sid:5004891; rev: 1;)
 
 

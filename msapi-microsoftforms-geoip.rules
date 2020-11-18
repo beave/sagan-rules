@@ -32,5 +32,5 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTFORMS-GEOIP] Action from outside from outside HOME_COUNTRY"; json_content: "Workload","MicrosoftForms"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004890; sid:5004890; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTFORMS-GEOIP] Action from outside from outside HOME_COUNTRY"; json_content: ".Workload","MicrosoftForms"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004890; sid:5004890; rev: 1;)
 

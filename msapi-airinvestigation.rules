@@ -32,5 +32,5 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-THREATINTEL] AirInvestigation Started"; json_content: "Workload","AirInvestigation"; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5004862; reference: url,docs.microsoft.com/en-us/microsoft-365/security/office-365-security/automated-investigation-response-office?view=o365-worldwide; sid:5004862; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-THREATINTEL] AirInvestigation Started"; json_content: ".Workload","AirInvestigation"; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5004862; reference: url,docs.microsoft.com/en-us/microsoft-365/security/office-365-security/automated-investigation-response-office?view=o365-worldwide; sid:5004862; rev: 1;)
 

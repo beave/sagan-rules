@@ -32,4 +32,4 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZUREAD] User Login Failed - Brute Force [10/1]"; json_content: "Workload","AzureActiveDirectory"; json_content:"Operation","UserLoginFailed"; after: track by_src, count 10, seconds 300; threshold: type suppress, track by_src, count 1, seconds 86400; xbits: set,brute_force,track ip_src,expire 21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5004858; classtype: unsuccessful-user; sid:5004858; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZUREAD] User Login Failed - Brute Force [10/1]"; json_content: ".Workload","AzureActiveDirectory"; json_content:".Operation","UserLoginFailed"; after: track by_src, count 10, seconds 300; threshold: type suppress, track by_src, count 1, seconds 86400; xbits: set,brute_force,track ip_src,expire 21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5004858; classtype: unsuccessful-user; sid:5004858; rev: 1;)

@@ -32,5 +32,5 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE] DLP Rule Match"; json_content: "Workload","OneDrive"; json_content: "Operation", "DLPRuleMatch"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005014; sid:5005014; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE] DLP Rule Match"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "DLPRuleMatch"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005014; sid:5005014; rev: 1;)
 

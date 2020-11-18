@@ -32,5 +32,5 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE] Data Loss Prevention Rule Match"; json_content: "Workload","Exchange"; json_content: "Operation", "DlpRuleMatch"; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5004863; sid:5004863; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE] Data Loss Prevention Rule Match"; json_content: ".Workload","Exchange"; json_content: ".Operation", "DlpRuleMatch"; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5004863; sid:5004863; rev: 1;)
 

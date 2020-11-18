@@ -32,7 +32,6 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTTEAMS-GEOIP] Teams session started from outside HOME_COUNTRY"; json_content: "Workload","MicrosoftTeams"; json_content: "Operation", "TeamsSessionStarted"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004895; sid:5004895; rev: 1;)
-
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTTEAMS-GEOIP] Teams session started from outside HOME_COUNTRY"; json_content: ".Workload","MicrosoftTeams"; json_content: ".Operation", "TeamsSessionStarted"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004895; sid:5004895; rev: 1;)
 
 

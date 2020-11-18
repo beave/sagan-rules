@@ -32,5 +32,5 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT] Data loss prevention rule match."; json_content: "Workload","SharePoint"; json_content: "Operation", "DlpRuleMatch"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005159; sid:5005158; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT] Data loss prevention rule match."; json_content: ".Workload","SharePoint"; json_content: ".Operation", "DlpRuleMatch"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005159; sid:5005158; rev: 1;)
 

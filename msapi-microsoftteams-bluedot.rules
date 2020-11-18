@@ -32,7 +32,7 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTTEAMS-BLUEDOT] Teams session started from Bluedot listed IP address"; json_content: "Workload","MicrosoftTeams"; json_content: "Operation", "TeamsSessionStarted"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004894; sid:5004894; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTTEAMS-BLUEDOT] Teams session started from Bluedot listed IP address"; json_content: ".Workload","MicrosoftTeams"; json_content: ".Operation", "TeamsSessionStarted"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004894; sid:5004894; rev: 1;)
 
 
 

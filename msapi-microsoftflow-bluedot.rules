@@ -32,7 +32,7 @@
 # JSON documentation for more information
 #
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTFLOW-BLUEDOT] Flow action from Bluedot listed IP address"; json_content: "Workload","MicrosoftFlow"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004887; sid:5004887; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-MICROSOFTFLOW-BLUEDOT] Flow action from Bluedot listed IP address"; json_content: ".Workload","MicrosoftFlow"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004887; sid:5004887; rev: 1;)
 
 
 
