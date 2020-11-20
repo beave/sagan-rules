@@ -54,7 +54,7 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-BLUEDOT] Com
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-BLUEDOT] CompanyLinkUsed from Bluedot listed IP address"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "CompanyLinkUsed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004965; sid:5004965; rev: 1;)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-BLUEDOT] FileAccessed from Bluedot listed IP address"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "FileAccessed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004966; sid:5004966; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-BLUEDOT] FileAccessed from Bluedot listed IP address"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "FileAccessed"; json_content:!".UserId","app@sharepoint"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004966; sid:5004966; rev: 1;)
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-BLUEDOT] FileAccessed from Bluedot listed IP address"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "FileAccessed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004967; sid:5004967; rev: 1;)
 

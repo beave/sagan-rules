@@ -54,7 +54,7 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] Compa
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] CompanyLinkUsed from outside HOME_COUNTRY"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "CompanyLinkUsed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004905; sid:5004905; rev: 1;)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileAccessed from outside HOME_COUNTRY"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "FileAccessed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004906; sid:5004906; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileAccessed from outside HOME_COUNTRY"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "FileAccessed"; json_content:!".UserId","app@sharepoint"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004906; sid:5004906; rev: 1;)
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FileAccessed from outside HOME_COUNTRY"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "FileAccessed"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004907; sid:5004907; rev: 1;)
 

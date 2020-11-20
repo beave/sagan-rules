@@ -56,7 +56,7 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] C
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] CompanyLinkUsed from Bluedot listed IP address"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "CompanyLinkUsed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005169; sid:5005169; rev: 1;)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileAccessed from Bluedot listed IP address"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileAccessed"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005170; sid:5005170; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileAccessed from Bluedot listed IP address"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileAccessed"; json_content:!".UserId","app@sharepoint"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005170; sid:5005170; rev: 1;)
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-BLUEDOT] FileAccessedExtended from Bluedot listed IP address"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileAccessedExtended"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005171; sid:5005171; rev: 1;)
 
