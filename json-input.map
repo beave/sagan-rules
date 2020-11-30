@@ -64,7 +64,7 @@
 # Microsoft Office365 API
 # ------------------------------------------
 
-{"software":"msapi", "program":".Workload", "time":".CreationTime", "date":".CreationTime", "message":"%JSON%", "src_ip":".ClientIP", "dst_ip":".ClientIP"," username":".UserId" }
+{"software":"msapi", "program":".Workload", "time":".CreationTime", "date":".CreationTime", "message":"%JSON%", "src_ip":".ClientIP|.SenderIp", "dst_ip":".ClientIP|.SenderIp"," username":".UserId" }
 
 # ------------------------------------------
 # Custom formats
