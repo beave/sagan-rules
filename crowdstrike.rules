@@ -39,4 +39,7 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Rem
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Remote Response Session End Event Reported"; content: "RemoteResponseSessionEndEvent"; nocase; parse_src_ip:1; classtype:suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004786; sid:5004786; rev:1;)
 
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Quarantine Files in Detection Summary Event reported"; content: "Quarantined Files In A Detection Summary Event"; nocase; parse_src_ip:1; classtype:suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005232; sid:5005232; rev:1;)
+
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Detection Summary Event Reported"; content: "DetectionSummaryEvent"; nocase; parse_src_ip:1; classtype:suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005233; sid:5005233; rev:1;)
 
