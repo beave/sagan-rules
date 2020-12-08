@@ -5046,6 +5046,8 @@
 5005229 || [MSAPI-SHAREPOINT-BLUEDOT] SiteDeleted from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005229
 5005230 || [MSAPI-SHAREPOINT-BLUEDOT] WACTokenShared from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005230
 5005231 || [MSAPI-SHAREPOINT-BLUEDOT] DLPRuleUndo from Bluedot listed IP address || url,wiki.quadrantsec.com/bin/view/Main/5005231
+5005232 || [CROWDSTRIKE] CrowdStrike Quarantine Files in Detection Summary Event reported || url,wiki.quadrantsec.com/bin/view/Main/5005232
+5005233 || [CROWDSTRIKE] CrowdStrike Detection Summary Event Reported || url,wiki.quadrantsec.com/bin/view/Main/5005233
 5100000 || airportd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100001 || com.apple.xpc.launchd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
 5100002 || powerd service detected || url,wiki.quadrantsec.com/bin/view/Main/5100003
