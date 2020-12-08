@@ -58,7 +58,7 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] Com
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileAccessed from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileAccessed"; json_content:!".UserId","app@sharepoint"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005096; sid:5005096; rev: 1;)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileAccessedExtended from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileAccessedExtended"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005097; sid:5005097; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileAccessedExtended from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileAccessedExtended"; json_content:!".UserId", "app@sharepoint"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005097; sid:5005097; rev: 2;)
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileCheckOutDiscarded from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileCheckOutDiscarded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005098; sid:5005098; rev: 1;)
 
@@ -74,9 +74,9 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] Fil
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileDownloaded from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileDownloaded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005104; sid:5005104; rev: 1;)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileModified from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileModified"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005105; sid:5005105; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileModified from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileModified"; json_content:!".UserId", "app@sharepoint"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005105; sid:5005105; rev: 2;)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileModifiedExtended from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileModifiedExtended"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005106; sid:5005106; rev: 1;)
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileModifiedExtended from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileModifiedExtended"; json_content:!".UserId", "app@sharepoint"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005106; sid:5005106; rev: 2;)
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] FileMoved from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "FileMoved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005107; sid:5005107; rev: 1;)
 
