@@ -49,7 +49,7 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] Remov
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] Send from outside HOME_COUNTRY"; json_content: ".Workload","Exchange"; json_content: ".Operation", "Send"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004870; sid:5004870; rev: 1;)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] SendAs from outside HOME_COUNTRY"; json_content: ".Workload","Exchange"; json_content: ".Operation", "SendAs"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004871; sid:5004871; rev: 1;)
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] SendAs from outside HOME_COUNTRY"; json_content: ".Workload","Exchange"; json_content: ".Operation", "SendAs"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004871; sid:5004871; rev: 1;)
 
 #alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-GEOIP] SendOnBehalf from outside HOME_COUNTRY"; json_content: ".Workload","Exchange"; json_content: ".Operation", "SendOnBehalf"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004872; sid:5004872; rev: 1;)
 

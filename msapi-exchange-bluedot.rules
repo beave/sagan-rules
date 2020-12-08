@@ -49,7 +49,7 @@ alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-BLUEDOT] Rem
 
 alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-BLUEDOT] Send from Bluedot listed IP address"; json_content: ".Workload","Exchange"; json_content: ".Operation", "Send"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004880; sid:5004880; rev: 1;)
 
-alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-BLUEDOT] SendAs from Bluedot listed IP address"; json_content: ".Workload","Exchange"; json_content: ".Operation", "SendAs"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004881; sid:5004881; rev: 1;)
+#alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-BLUEDOT] SendAs from Bluedot listed IP address"; json_content: ".Workload","Exchange"; json_content: ".Operation", "SendAs"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004881; sid:5004881; rev: 1;)
 
 #alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-EXCHANGE-BLUEDOT] SendOnBehalf from Bluedot listed IP address"; json_content: ".Workload","Exchange"; json_content: ".Operation", "SendOnBehalf"; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004882; sid:5004882; rev: 1;)
 
